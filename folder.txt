@@ -1,0 +1,35 @@
+Linux
+├── app
+│   ├── __init__.py
+│   ├── main.py
+│   ├── routes.py
+│   ├── static
+│   │   ├── css
+│   │   │   └── styles.css
+│   │   ├── favicon.ico
+│   │   └── js
+│   │       └── script.js
+│   ├── templates
+│   │   └── dashboard.html
+│   ├── utils.py
+│   └── websocket.py
+├── logs
+│   ├── alert.wav
+│   ├── kwnhashes.txt
+│   ├── prediction.log
+│   ├── real_log.csv
+│   └── review.csv
+├── model
+│   ├── last_update_checkpoint.txt
+│   ├── sentence_embedder.pkl
+│   └── sgd_embedder.pkl
+├── run.py
+├── scripts
+│   ├── epr.py
+│   ├── monitor.py
+│   ├── review.py
+│   ├── sim_ana.py
+│   ├── templates
+│   │   └── review.html
+│   └── update.py
+
