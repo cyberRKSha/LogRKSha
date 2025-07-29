@@ -1,0 +1,180 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Anomaly Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container mt-4">
+    <h2 class="mb-4">Log Anomaly Detector</h2>
+
+    <div class="row mb-3 g-2">
+        <div class="col-md stats-box">
+            <div>Total Logs</div>
+            <div id="totalLogs" class="fw-bold fs-4">{{ total_logs }}</div>
+        </div>
+        <div class="col-md stats-box">
+            <div>Normal</div>
+            <div id="normalCount" class="text-success fs-4">{{ normal_count }}</div>
+        </div>
+        <div class="col-md stats-box">
+            <div>Anomaly</div>
+            <div id="anomalyCount" class="text-danger fs-4">{{ anomaly_count }}</div>
+        </div>
+        <div class="col-md stats-box">
+            <div>Active Sessions</div>
+            <div id="sessionCount" class="fw-bold fs-4">0</div>
+        </div>
+    </div>
+
+    <div class="row mb-4 g-3">
+        <div class="col-md-6">
+            <canvas id="logChart"></canvas>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-secondary btn-sm mb-2" onclick="toggleDarkMode()">Dark Mode</button><br>
+            <div class="small text-muted">Last Updated: <span id="lastUpdated">{{ last_updated }}</span></div>
+            <select onchange="filterLogs(this.value)" class="form-select form-select-sm mt-2">
+                <option value="all">All Logs</option>
+                <option value="normal">Normal</option>
+                <option value="anomaly">Anomaly</option>
+            </select>
+        </div>
+    </div>
+
+    <h5>Logs</h5>
+    <div id="logsContainer" class="scrollable mb-4">
+        <table id="logsTable" class="table table-sm">
+        </table>
+    </div>
+
+    <h5>Critical Alerts</h5>
+    <div id="alertsContainer" class="scrollable mb-4"></div>
+
+    <footer class="mt-4">Powered by Log Anomaly Detector | <small>© 2025</small></footer>
+</div>
+
+<script>
+    // Initialize chart on page load with server values
+    window.onload = () => {
+        initChart({{ normal_count | default(0) }}, {{ anomaly_count | default(0) }});
+    };
+</script>
+<script src="/static/js/script.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Anomaly Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script> </head>
+<body>
+    <div class="dashboard-layout">
+        <header class="dashboard-header">
+            <h1>Log Anomaly Detector</h1>
+            <button id="darkModeToggle" class="control-button">Toggle Dark Mode</button>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-label">Total Logs</span>
+                <span id="totalLogs" class="stat-value">{{ total_logs }}</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Normal</span>
+                <span id="normalCount" class="stat-value normal-text">{{ normal_count }}</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Anomaly</span>
+                <span id="anomalyCount" class="stat-value anomaly-text">{{ anomaly_count }}</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Active Sessions</span>
+                <span id="sessionCount" class="stat-value">0</span>
+            </div>
+        </section>
+
+        <section class="controls-area">
+            <div class="chart-container">
+                <canvas id="logChart"></canvas>
+            </div>
+            <div class="filter-controls">
+                <span class="last-updated">Last Updated: <span id="lastUpdated">{{ last_updated }}</span></span>
+                <select id="logFilter" class="select-dropdown">
+                    <option value="all">All Logs</option>
+                    <option value="normal">Normal</option>
+                    <option value="anomaly">Anomaly</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="log-section">
+            <h2>Logs</h2>
+            <div id="logsContainer" class="scrollable-content">
+                <table id="logsTable" class="log-table">
+                    </table>
+            </div>
+        </section>
+
+        <section class="alerts-section">
+            <h2>Critical Alerts</h2>
+            <div id="alertsContainer" class="scrollable-content"></div>
+        </section>
+
+        <footer class="dashboard-footer">
+            <span>Powered by Log Anomaly Detector | &copy; 2025</span>
+        </footer>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+    <script>
+        // Initialize chart on page load with server values
+        window.onload = () => {
+            initChart({{ normal_count | default(0) }}, {{ anomaly_count | default(0) }});
+
+            // Initialize dark mode toggle based on body class
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            darkModeToggle.addEventListener('click', toggleDarkMode);
+
+            // Initialize log filter
+            const logFilter = document.getElementById('logFilter');
+            logFilter.addEventListener('change', (event) => {
+                filterLogs(event.target.value);
+            });
+
+            // Initialize Lenis for smooth scrolling
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54x4gmo
+                direction: 'vertical', // vertical, horizontal
+                gestureDirection: 'vertical', // vertical, horizontal, both
+                smooth: true,
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+                infinite: false,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+        };
+    </script>
+</body>
+</html>

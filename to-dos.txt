@@ -1,0 +1,4 @@
+Switch to real streaming ML (river) → no batch retrain
+✅ Add NLP methods (embeddings)
+Store data in SQLite instead of CSV
+✅ Build proper web panel

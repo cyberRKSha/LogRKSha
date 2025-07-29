@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <title>Log Review</title>
+  <style>
+    body { font-family: sans-serif; }
+    .anomaly { color: red; }
+    .normal { color: green; }
+  </style>
+</head>
+<body>
+  <h1>Pending Logs Review</h1>
+  <form method="POST" action="/update">
+    <table border="1" cellpadding="4">
+      <tr><th>Timestamp</th><th>Source</th><th>Content</th><th>Label (1=anomaly,0=normal)</th></tr>
+      {% for entry in entries %}
+      <tr>
+        <td>{{entry.timestamp}}</td>
+        <td>{{entry.source}}</td>
+        <td>{{entry.content}}</td>
+        <td>
+          <input type="text" name="label_{{entry.index}}" value="{{entry.label}}" size="1">
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br>
+    <button type="submit">✅ Save reviewed labels</button>
+  </form>
+</body>
+</html>
