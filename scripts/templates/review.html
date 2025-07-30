@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html>
 <head>
   <title>Log Review</title>
@@ -27,5 +27,66 @@
     <br>
     <button type="submit">✅ Save reviewed labels</button>
   </form>
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Log Review</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/r_styles.css') }}">
+</head>
+<body>
+  <div class="review-container">
+    <div class="review-header">
+      <h1>Pending Logs for Review</h1>
+      <div class="filter-buttons">
+        <a href="{{ url_for('index') }}" class="{{ 'active' if not sort_by else '' }}">Show All</a>
+        <a href="{{ url_for('index', sort_by=1) }}" class="{{ 'active' if sort_by == '1' else '' }}">Sort by Anomaly</a>
+        <a href="{{ url_for('index', sort_by=0) }}" class="{{ 'active' if sort_by == '0' else '' }}">Sort by Normal</a>
+      </div>
+    </div>
+
+    {% if entries %}
+    <form method="POST" action="{{ url_for('update') }}">
+      <table class="review-table">
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Source</th>
+            <th>Content</th>
+            <th style="width: 20%;">Correct Label? (Normal=0, Anomaly=1)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for entry in entries %}
+          <tr>
+            <td>{{ entry.timestamp }}</td>
+            <td>{{ entry.source }}</td>
+            <td class="log-content">{{ entry.content }}</td>
+            <td>
+              <div class="label-chooser">
+                <input type="radio" id="normal_{{ entry.index }}" name="label_{{ entry.index }}" value="0" {{ 'checked' if entry.label == 0 else '' }}>
+                <label for="normal_{{ entry.index }}" class="label-normal">Normal</label>
+                
+                <input type="radio" id="anomaly_{{ entry.index }}" name="label_{{ entry.index }}" value="1" {{ 'checked' if entry.label == 1 else '' }}>
+                <label for="anomaly_{{ entry.index }}" class="label-anomaly">Anomaly</label>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div style="text-align: right; margin-top: 25px;">
+        <button type="submit" class="submit-button">✅ Save All Reviewed Logs</button>
+      </div>
+    </form>
+    {% else %}
+      <p style="text-align: center; font-size: 1.2em; color: #666; padding: 50px;">
+        No pending logs to review. Great job!
+      </p>
+    {% endif %}
+  </div>
 </body>
 </html>

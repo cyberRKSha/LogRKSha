@@ -1,0 +1,142 @@
+/* Custom CSS Variables from dashboard */
+:root {
+    --primary-bg-light: #f0f2f5;
+    --secondary-bg-light: #ffffff;
+    --border-light: #e0e0e0;
+    --text-color-primary-light: #333;
+    --heading-color-light: #212529;
+    --button-primary-light: #007bff;
+    --button-primary-hover-light: #0056b3;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+
+    --primary-bg: var(--primary-bg-light);
+    --secondary-bg: var(--secondary-bg-light);
+    --border-color: var(--border-light);
+    --text-color-primary: var(--text-color-primary-light);
+    --heading-color: var(--heading-color-light);
+    --button-primary: var(--button-primary-light);
+    --button-primary-hover: var(--button-primary-hover-light);
+    --box-shadow: var(--shadow-light);
+}
+
+body {
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color-primary);
+    margin: 0;
+    padding: 20px;
+}
+
+.review-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: var(--secondary-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px var(--box-shadow);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.filter-buttons a, .submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.filter-buttons a {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.filter-buttons a.active {
+    background-color: var(--button-primary);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 12px 30px;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.review-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.review-table th, .review-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.review-table th {
+    background-color: var(--primary-bg);
+    font-weight: 600;
+}
+
+.log-content {
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-all;
+}
+
+/* Custom Radio Buttons for Labels */
+.label-chooser {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.label-chooser input[type="radio"] {
+    display: none; /* Hide original radio button */
+}
+
+.label-chooser label {
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.label-chooser input[type="radio"]:checked + label.label-normal {
+    background-color: rgba(40, 167, 69, 0.2);
+    border-color: #28a745;
+    color: #155724;
+}
+
+.label-chooser input[type="radio"]:checked + label.label-anomaly {
+    background-color: rgba(220, 53, 69, 0.2);
+    border-color: #dc3545;
+    color: #721c24;
+}

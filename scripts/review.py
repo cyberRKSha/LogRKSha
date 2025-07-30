@@ -1,51 +1,86 @@
-from flask import Flask, render_template, request, redirect
-import csv
+from flask import Flask, render_template, request, redirect, url_for
+import pandas as pd
 import os
 
-app = Flask(__name__)
+# Define the app and the static folder path
+app = Flask(__name__, static_folder='static', static_url_path='/static')
 
 PENDING_FILE = "/home/rksha/Documents/Projects/log-anamoly-detector/Linux/logs/review.csv"
 REAL_FILE = "/home/rksha/Documents/Projects/log-anamoly-detector/Linux/logs/real_log.csv"
 
+# This function will be used to clean labels in both display and saving logic
+def map_labels_to_numeric(df):
+    """Converts string labels ('anomaly', 'normal') to numeric (1, 0)"""
+    def map_val(label):
+        if isinstance(label, str):
+            if 'anomaly' in label.lower(): return 1
+            if 'normal' in label.lower(): return 0
+        if pd.to_numeric(label, errors='coerce') in [0, 1]:
+            return int(label)
+        return 0 # Default for any other case
+    
+    # Apply the mapping function safely
+    if 'label' in df.columns:
+        df['label'] = df['label'].apply(map_val)
+    return df
+
 @app.route('/')
 def index():
+    sort_by = request.args.get('sort_by')
     entries = []
-    if os.path.exists(PENDING_FILE):
-        with open(PENDING_FILE, newline='', encoding='utf-8') as f:
-            reader = list(csv.reader(f))
-            header, data = reader[0], reader[1:]
-            entries = [dict(timestamp=row[0], source=row[1], content=row[2], label=row[3], index=idx)
-                       for idx, row in enumerate(data)]
-    return render_template('review.html', entries=entries)
+    
+    if os.path.exists(PENDING_FILE) and os.path.getsize(PENDING_FILE) > 0:
+        try:
+            df = pd.read_csv(PENDING_FILE)
+            df.dropna(subset=['content'], inplace=True)
+
+            # Use the helper function to clean labels for display
+            df = map_labels_to_numeric(df)
+
+            if sort_by == '1':
+                df = df.sort_values(by='label', ascending=False)
+            elif sort_by == '0':
+                df = df.sort_values(by='label', ascending=True)
+
+            df['index'] = df.index
+            entries = df.to_dict('records')
+
+        except Exception as e:
+            print(f"Error in index function: {e}")
+
+    return render_template('review.html', entries=entries, sort_by=sort_by)
 
 @app.route('/update', methods=['POST'])
 def update():
-    updated_labels = request.form
-    with open(PENDING_FILE, newline='', encoding='utf-8') as f:
-        reader = list(csv.reader(f))
-        header, data = reader[0], reader[1:]
+    if not os.path.exists(PENDING_FILE) or os.path.getsize(PENDING_FILE) == 0:
+        return redirect(url_for('index'))
 
-    reviewed = []
-    for idx, row in enumerate(data):
-        new_label = updated_labels.get(f'label_{idx}')
-        if new_label in ['0', '1']:
-            row[3] = new_label
-        reviewed.append(row)
+    try:
+        df_pending = pd.read_csv(PENDING_FILE)
+        if df_pending.empty:
+            return redirect(url_for('index'))
 
-    # Append reviewed to real_log.csv
-    write_mode = 'a' if os.path.exists(REAL_FILE) else 'w'
-    with open(REAL_FILE, mode=write_mode, newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        if write_mode == 'w':
-            writer.writerow(header)
-        writer.writerows(reviewed)
+        df_pending = map_labels_to_numeric(df_pending)
 
-    # Clear pending review.csv (keep header)
-    with open(PENDING_FILE, mode='w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        writer.writerow(header)
+        updated_labels = request.form
+        for key, new_label in updated_labels.items():
+            if key.startswith('label_'):
+                idx = int(key.split('_')[1])
+                df_pending.loc[idx, 'label'] = int(new_label)
+        # === END: CRITICAL FIX ===
 
-    return redirect('/')
+        # Append the fully numeric DataFrame to the real log file.
+        header = not os.path.exists(REAL_FILE)
+        df_pending.to_csv(REAL_FILE, mode='a', header=header, index=False)
+
+        # Clear the review file
+        with open(PENDING_FILE, mode='w', newline='', encoding='utf-8') as f:
+            f.write('timestamp,source,content,label\n')
+
+    except Exception as e:
+        print(f"Error in update function: {e}")
+
+    return redirect(url_for('index'))
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

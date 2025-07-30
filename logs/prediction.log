@@ -11905,3 +11905,465 @@
 2025-07-30 18:01:17,normal,Jul 30 18:01:17	server	1981	Received disconnect from 50.129.142.172: 74: Bye Bye [preauth]
 2025-07-30 18:01:22,normal,Jul 30 18:01:22	prod1	16293	Received disconnect from 189.120.164.181: 90: disconnected by user
 2025-07-30 18:01:24,normal,Jul 30 18:01:24	testvm	19428	Connection closed by 51.59.202.96 [preauth]
+2025-07-30 18:01:29,normal,Jul 30 18:01:29	LabSZ	10640	Received disconnect from 13.66.54.95: 28: Bye Bye [preauth]
+2025-07-30 18:01:31,normal,Jul 30 18:01:31	prod1	28650	Connection closed by 24.249.135.79 [preauth]
+2025-07-30 18:01:36,anomaly,Jul 30 18:01:36	server	3983	sudo: user2: command not allowed ; TTY=pts/1 ; PWD=/home/user6 ; USER=root ; COMMAND=/bin/cat /etc/shadow
+2025-07-30 18:01:39,normal,Jul 30 18:01:39	server	5492	Received disconnect from 117.78.166.116: 94: disconnected by user
+2025-07-30 18:01:41,anomaly,Jul 30 18:01:41	server	10303	fatal: Read from socket failed: Connection reset by peer
+2025-07-30 18:01:43,normal,Jul 30 18:01:43	testvm	28351	pam_unix(sshd:session): session closed for user guest
+2025-07-30 18:01:45,normal,Jul 30 18:01:45	LabSZ	14444	Did not receive identification string from 156.52.81.55
+2025-07-30 18:01:50,normal,Jul 30 18:01:50	prod1	27287	pam_unix(sshd:session): session closed for user pgadmin
+2025-07-30 18:01:55,normal,Jul 30 18:01:55	testvm	6333	Received disconnect from 82.155.95.36: 31: Bye Bye [preauth]
+2025-07-30 18:01:57,normal,Jul 30 18:01:57	LabSZ	9977	Received disconnect from 137.104.31.246: 86: Bye Bye [preauth]
+2025-07-30 18:02:00,normal,Jul 30 18:02:00	testvm	18479	Did not receive identification string from 33.247.122.128
+2025-07-30 18:02:02,normal,Jul 30 18:02:02	testvm	3859	Received disconnect from 254.95.102.99: 62: Closed due to user request [preauth]
+2025-07-30 18:02:06,anomaly,Jul 30 18:02:06	testvm	11673	sudo: user1: command not allowed ; TTY=pts/1 ; PWD=/home/user4 ; USER=root ; COMMAND=/bin/cat /etc/shadow
+2025-07-30 18:02:09,normal,Jul 30 18:02:09	prod1	6209	Received disconnect from 77.193.146.194: 16: Bye Bye [preauth]
+2025-07-30 18:02:12,normal,Jul 30 18:02:12	prod1	12686	PAM service(sshd) ignoring max retries; 6 > 3
+2025-07-30 18:02:15,normal,Jul 30 18:02:15	LabSZ	14428	Accepted password for fztu from 77.15.55.39 port 19988 ssh6
+2025-07-30 18:02:18,anomaly,Jul 30 18:02:18	testvm	2253	fatal: Write failed: Connection reset by peer [preauth]
+2025-07-30 18:02:23,normal,Jul 30 18:02:23	server	8031	PAM service(sshd) ignoring max retries; 6 > 3
+2025-07-30 18:02:25,normal,Jul 30 18:02:25	prod1	29155	Connection closed by 88.125.116.19 [preauth]
+2025-07-30 18:02:28,normal,Jul 30 18:02:28	prod1	11352	pam_unix(sshd:session): session closed for user test
+2025-07-30 18:02:32,normal,Jul 30 18:02:32	server	23216	Did not receive identification string from 45.29.248.212
+2025-07-30 18:02:36,normal,Jul 30 18:02:36	prod1	17638	PAM service(sshd) ignoring max retries; 8 > 2
+2025-07-30 18:02:40,normal,Jul 30 18:02:40	server	5349	pam_unix(sshd:session): session opened for user webmaster by (uid=2)
+2025-07-30 18:02:42,normal,Jul 30 18:02:42	LabSZ	13772	Did not receive identification string from 193.144.96.127
+2025-07-30 18:02:46,normal,Jul 30 18:02:46	testvm	26477	Received disconnect from 7.10.37.124: 23: Bye Bye [preauth]
+2025-07-30 18:02:49,normal,Jul 30 18:02:49	testvm	27825	pam_unix(sshd:session): session opened for user matlab by (uid=3)
+2025-07-30 18:02:54,normal,Jul 30 18:02:54	server	1401	PAM service(sshd) ignoring max retries; 5 > 1
+2025-07-30 18:02:57,normal,Jul 30 18:02:57	server	24925	PAM service(sshd) ignoring max retries; 8 > 1
+2025-07-30 18:03:01,normal,Jul 30 18:03:01	testvm	5240	Received disconnect from 87.114.96.18: 92: Closed due to user request [preauth]
+2025-07-30 18:03:04,anomaly,Jul 30 18:03:04	prod1	19730	kernel: myapp[531523]: segfault at 7f0a00000000 ip 00007f0a4e4c0000 sp 00007ffde1e07000 error 2 in libpthread-1.44.so[7f0a4e480000+19000]
+2025-07-30 18:03:09,normal,Jul 30 18:03:09	LabSZ	4445	Received disconnect from 19.150.55.106: 76: Bye Bye [preauth]
+2025-07-30 18:03:14,normal,Jul 30 18:03:13	LabSZ	28203	Did not receive identification string from 167.67.13.180
+2025-07-30 18:03:18,anomaly,Jul 30 18:03:18	testvm	9907	pam_unix(sshd:auth): authentication failure; logname= uid=6 euid=1 tty=ssh ruser= rhost=28.195.167.62
+2025-07-30 18:03:22,normal,Jul 30 18:03:22	testvm	24532	Received disconnect from 242.124.166.231: 52: disconnected by user
+2025-07-30 18:03:25,normal,Jul 30 18:03:25	testvm	13547	PAM service(sshd) ignoring max retries; 7 > 3
+2025-07-30 18:03:29,normal,Jul 30 18:03:29	server	24904	Accepted password for pgadmin from 216.35.191.111 port 17236 ssh6
+2025-07-30 18:03:34,normal,Jul 30 18:03:34	testvm	13260	PAM service(sshd) ignoring max retries; 5 > 1
+2025-07-30 18:03:37,anomaly,Jul 30 18:03:37	LabSZ	22443	error: Received disconnect from 179.25.2.196: 18872: com.jcraft.jsch.JSchException: Auth fail [preauth]
+2025-07-30 18:03:41,normal,Jul 30 18:03:41	server	7341	Received disconnect from 189.23.33.255: 25: disconnected by user
+2025-07-30 18:03:46,normal,Jul 30 18:03:46	LabSZ	19634	pam_unix(sshd:session): session closed for user matlab
+2025-07-30 18:03:50,normal,Jul 30 18:03:50	testvm	10480	Received disconnect from 120.114.29.159: 24: Closed due to user request [preauth]
+2025-07-30 18:03:55,normal,Jul 30 18:03:55	LabSZ	14790	pam_unix(sshd:session): session opened for user admin by (uid=4)
+2025-07-30 18:03:58,normal,Jul 30 18:03:58	prod1	24720	Received disconnect from 74.139.180.195: 63: Closed due to user request [preauth]
+2025-07-30 18:04:03,normal,Jul 30 18:04:03	testvm	9952	Accepted password for fztu from 169.239.115.201 port 61710 ssh2
+2025-07-30 18:04:08,normal,Jul 30 18:04:08	prod1	10372	Did not receive identification string from 7.255.231.190
+2025-07-30 18:04:13,normal,Jul 30 18:04:13	LabSZ	16278	Connection closed by 96.95.43.97 [preauth]
+2025-07-30 18:04:16,normal,Jul 30 18:04:16	prod1	1901	Received disconnect from 185.34.145.149: 95: Closed due to user request [preauth]
+2025-07-30 18:04:19,normal,Jul 30 18:04:19	testvm	20163	Received disconnect from 242.114.44.61: 84: disconnected by user
+2025-07-30 18:04:23,normal,Jul 30 18:04:23	testvm	1880	PAM service(sshd) ignoring max retries; 6 > 4
+2025-07-30 18:04:26,normal,Jul 30 18:04:26	server	1135	Connection closed by 191.163.104.244 [preauth]
+2025-07-30 18:04:30,anomaly,Jul 30 18:04:29	LabSZ	5482	Failed password for user matlab from 115.83.51.79 port 50585 ssh9
+2025-07-30 18:04:34,normal,Jul 30 18:04:34	server	3576	Did not receive identification string from 224.3.39.114
+2025-07-30 18:04:37,normal,Jul 30 18:04:37	prod1	2184	Received disconnect from 75.114.23.115: 89: disconnected by user
+2025-07-30 18:04:40,normal,Jul 30 18:04:40	server	28265	Received disconnect from 179.28.242.126: 82: Bye Bye [preauth]
+2025-07-30 18:04:44,normal,Jul 30 18:04:44	LabSZ	13732	Received disconnect from 95.69.164.218: 38: Bye Bye [preauth]
+2025-07-30 18:04:49,normal,Jul 30 18:04:49	server	9612	Did not receive identification string from 42.27.29.96
+2025-07-30 18:04:51,anomaly,Jul 30 18:04:51	server	1579	error: Received disconnect from 178.249.13.130: 65264: No more user authentication methods available. [preauth]
+2025-07-30 18:04:56,anomaly,Jul 30 18:04:56	LabSZ	9209	Disconnecting: Too many authentication failures for oracle [preauth]
+2025-07-30 18:05:00,normal,Jul 30 18:05:00	LabSZ	3102	Received disconnect from 174.176.107.22: 15: Bye Bye [preauth]
+2025-07-30 18:05:05,normal,Jul 30 18:05:05	testvm	3005	pam_unix(sshd:session): session opened for user webmaster by (uid=1)
+2025-07-30 18:05:09,normal,Jul 30 18:05:09	prod1	15449	Received disconnect from 104.29.194.191: 90: disconnected by user
+2025-07-30 18:05:12,normal,Jul 30 18:05:12	prod1	2522	Connection closed by 21.204.224.206 [preauth]
+2025-07-30 18:05:15,normal,Jul 30 18:05:15	prod1	2400	pam_unix(sshd:session): session closed for user test
+2025-07-30 18:05:17,anomaly,Jul 30 18:05:17	prod1	23846	kernel: [12346.246278] Kernel panic - attempted to kill init! exitcode=0x00000009
+2025-07-30 18:05:21,normal,Jul 30 18:05:21	LabSZ	27339	Accepted password for test from 20.144.21.94 port 2963 ssh3
+2025-07-30 18:05:24,anomaly,Jul 30 18:05:24	LabSZ	11179	fatal: Read from socket failed: Connection reset by peer
+2025-07-30 18:05:28,normal,Jul 30 18:05:28	prod1	15989	Connection closed by 129.185.152.147 [preauth]
+2025-07-30 18:05:33,normal,Jul 30 18:05:33	LabSZ	17208	Did not receive identification string from 108.165.221.92
+2025-07-30 18:05:35,normal,Jul 30 18:05:35	prod1	16682	Connection closed by 99.225.118.22 [preauth]
+2025-07-30 18:05:40,normal,Jul 30 18:05:40	server	25469	Received disconnect from 240.2.168.65: 99: Bye Bye [preauth]
+2025-07-30 18:05:43,normal,Jul 30 18:05:43	LabSZ	4028	Did not receive identification string from 194.219.18.60
+2025-07-30 18:05:45,normal,Jul 30 18:05:45	server	12584	Received disconnect from 23.252.126.66: 49: Closed due to user request [preauth]
+2025-07-30 18:05:47,anomaly,Jul 30 18:05:47	testvm	10238	sudo: chen : 3 incorrect password attempts ; TTY=pts/2 ; PWD=/home/user2 ; USER=root ; COMMAND=/usr/bin/vim /etc/sudoers
+2025-07-30 18:05:51,normal,Jul 30 18:05:51	LabSZ	14814	Received disconnect from 44.215.187.199: 12: disconnected by user
+2025-07-30 18:05:54,normal,Jul 30 18:05:54	LabSZ	7963	Received disconnect from 247.131.214.181: 57: Bye Bye [preauth]
+2025-07-30 18:05:56,normal,Jul 30 18:05:56	server	23412	Received disconnect from 26.133.81.140: 50: Bye Bye [preauth]
+2025-07-30 18:06:01,normal,Jul 30 18:06:01	LabSZ	19097	Accepted password for root from 233.234.161.167 port 2913 ssh1
+2025-07-30 18:06:04,normal,Jul 30 18:06:04	LabSZ	11774	PAM service(sshd) ignoring max retries; 6 > 4
+2025-07-30 18:06:06,anomaly,Jul 30 18:06:06	server	23457	pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=41.93.103.254
+2025-07-30 18:06:10,normal,Jul 30 18:06:10	prod1	5820	Received disconnect from 173.180.229.148: 39: Closed due to user request [preauth]
+2025-07-30 18:06:13,anomaly,Jul 30 18:06:13	LabSZ	24271	error: Received disconnect from 186.105.39.52: 28731: com.jcraft.jsch.JSchException: Auth fail [preauth]
+2025-07-30 18:06:15,normal,Jul 30 18:06:15	prod1	16116	Accepted password for oracle from 83.86.233.98 port 29516 ssh7
+2025-07-30 18:06:18,normal,Jul 30 18:06:18	server	12378	Received disconnect from 111.49.199.63: 97: Closed due to user request [preauth]
+2025-07-30 18:06:21,normal,Jul 30 18:06:21	prod1	14277	pam_unix(sshd:session): session closed for user admin
+2025-07-30 18:06:26,normal,Jul 30 18:06:26	LabSZ	13613	pam_unix(sshd:session): session closed for user guest
+2025-07-30 18:06:30,normal,Jul 30 18:06:30	testvm	2856	Received disconnect from 245.5.154.41: 96: Closed due to user request [preauth]
+2025-07-30 18:06:35,normal,Jul 30 18:06:35	testvm	21001	Connection closed by 64.237.238.104 [preauth]
+2025-07-30 18:06:37,normal,Jul 30 18:06:37	LabSZ	2581	Connection closed by 96.118.119.33 [preauth]
+2025-07-30 18:06:42,normal,Jul 30 18:06:42	testvm	24445	pam_unix(sshd:session): session opened for user ubuntu by (uid=3)
+2025-07-30 18:06:44,normal,Jul 30 18:06:44	LabSZ	10924	Accepted password for 123 from 250.75.91.89 port 3417 ssh6
+2025-07-30 18:06:47,normal,Jul 30 18:06:47	testvm	25943	pam_unix(sshd:session): session closed for user webmaster
+2025-07-30 18:06:51,normal,Jul 30 18:06:51	LabSZ	26002	Received disconnect from 147.39.90.222: 82: Closed due to user request [preauth]
+2025-07-30 18:06:55,normal,Jul 30 18:06:55	prod1	7570	Received disconnect from 35.52.34.102: 83: disconnected by user
+2025-07-30 18:07:00,normal,Jul 30 18:07:00	LabSZ	2891	Received disconnect from 175.191.190.95: 21: disconnected by user
+2025-07-30 18:07:02,normal,Jul 30 18:07:02	testvm	18705	pam_unix(sshd:session): session closed for user matlab
+2025-07-30 18:07:05,anomaly,Jul 30 18:07:05	prod1	7122	Invalid user webmaster from 204.162.72.133
+2025-07-30 18:07:07,normal,Jul 30 18:07:07	prod1	25839	Connection closed by 37.47.167.50 [preauth]
+2025-07-30 18:07:10,normal,Jul 30 18:07:10	testvm	24474	Received disconnect from 48.66.88.16: 59: Closed due to user request [preauth]
+2025-07-30 18:07:14,normal,Jul 30 18:07:14	LabSZ	5291	Connection closed by 224.219.249.105 [preauth]
+2025-07-30 18:07:19,anomaly,Jul 30 18:07:19	LabSZ	12166	reverse mapping checking getaddrinfo for ns.randomdomain.com [244.133.249.223] failed - POSSIBLE BREAK-IN ATTEMPT!
+2025-07-30 18:07:24,normal,Jul 30 18:07:24	LabSZ	17182	PAM service(sshd) ignoring max retries; 7 > 1
+2025-07-30 18:07:26,normal,Jul 30 18:07:26	LabSZ	5541	PAM service(sshd) ignoring max retries; 6 > 3
+2025-07-30 18:07:31,normal,Jul 30 18:07:31	prod1	24210	Did not receive identification string from 167.18.209.154
+2025-07-30 18:07:34,normal,Jul 30 18:07:33	prod1	14197	Received disconnect from 35.29.198.163: 41: disconnected by user
+2025-07-30 18:07:38,normal,Jul 30 18:07:38	testvm	13098	Received disconnect from 72.138.59.250: 49: Closed due to user request [preauth]
+2025-07-30 18:07:41,normal,Jul 30 18:07:41	LabSZ	8536	Received disconnect from 72.29.244.153: 87: Bye Bye [preauth]
+2025-07-30 18:07:45,normal,Jul 30 18:07:45	server	17419	Accepted password for admin from 56.244.68.67 port 41934 ssh8
+2025-07-30 18:07:48,anomaly,Jul 30 18:07:47	testvm	15009	fatal: Read from socket failed: Connection reset by peer
+2025-07-30 18:07:51,normal,Jul 30 18:07:51	server	15521	Received disconnect from 251.187.5.203: 21: Bye Bye [preauth]
+2025-07-30 18:07:55,anomaly,Jul 30 18:07:55	LabSZ	21199	fatal: Write failed: Connection reset by peer [preauth]
+2025-07-30 18:07:59,normal,Jul 30 18:07:59	testvm	14120	Received disconnect from 150.59.39.173: 25: Closed due to user request [preauth]
+2025-07-30 18:08:03,normal,Jul 30 18:08:03	LabSZ	11890	pam_unix(sshd:session): session closed for user 123
+2025-07-30 18:08:06,normal,Jul 30 18:08:06	server	22267	Received disconnect from 215.117.151.151: 41: Closed due to user request [preauth]
+2025-07-30 18:08:08,normal,Jul 30 18:08:08	testvm	22331	Received disconnect from 81.121.158.61: 87: Bye Bye [preauth]
+2025-07-30 18:08:12,anomaly,Jul 30 18:08:12	prod1	2642	Disconnecting: Too many authentication failures for admin [preauth]
+2025-07-30 18:08:14,anomaly,Jul 30 18:08:14	prod1	12596	message repeated 7 times: [ Failed password for root from 11.118.150.251 port 17949 ssh8]
+2025-07-30 18:08:19,normal,Jul 30 18:08:19	testvm	12513	Received disconnect from 141.205.144.211: 16: disconnected by user
+2025-07-30 18:08:24,normal,Jul 30 18:08:24	server	2996	Did not receive identification string from 107.71.53.4
+2025-07-30 18:08:29,normal,Jul 30 18:08:29	testvm	25347	Did not receive identification string from 189.26.239.218
+2025-07-30 18:08:33,normal,Jul 30 18:08:33	testvm	29130	Did not receive identification string from 92.25.11.199
+2025-07-30 18:08:36,normal,Jul 30 18:08:36	server	25835	Received disconnect from 190.98.16.118: 83: Closed due to user request [preauth]
+2025-07-30 18:08:41,normal,Jul 30 18:08:41	testvm	16305	Accepted password for matlab from 101.81.155.87 port 56212 ssh8
+2025-07-30 18:08:46,normal,Jul 30 18:08:46	prod1	8319	Received disconnect from 169.176.24.219: 45: Bye Bye [preauth]
+2025-07-30 18:08:48,normal,Jul 30 18:08:48	LabSZ	15419	Received disconnect from 92.198.185.60: 22: disconnected by user
+2025-07-30 18:08:51,anomaly,Jul 30 18:08:51	testvm	3991	Invalid user webmaster from 185.240.215.194
+2025-07-30 18:08:56,normal,Jul 30 18:08:56	prod1	7214	pam_unix(sshd:session): session closed for user matlab
+2025-07-30 18:09:00,normal,Jul 30 18:08:59	testvm	20111	Connection closed by 197.246.37.155 [preauth]
+2025-07-30 18:09:02,normal,Jul 30 18:09:02	prod1	19988	Received disconnect from 219.87.150.141: 19: Closed due to user request [preauth]
+2025-07-30 18:09:06,anomaly,Jul 30 18:09:06	testvm	16341	kernel: [12345.723904] Kernel panic - not syncing: Fatal exception
+2025-07-30 18:09:08,normal,Jul 30 18:09:08	prod1	22713	Connection closed by 75.21.58.108 [preauth]
+2025-07-30 18:09:13,normal,Jul 30 18:09:13	server	8957	Connection closed by 77.228.46.188 [preauth]
+2025-07-30 18:09:15,normal,Jul 30 18:09:15	prod1	3999	Accepted password for oracle from 30.8.239.138 port 54238 ssh7
+2025-07-30 18:09:19,normal,Jul 30 18:09:19	testvm	20704	pam_unix(sshd:session): session closed for user oracle
+2025-07-30 18:09:23,normal,Jul 30 18:09:23	prod1	11152	Received disconnect from 171.25.232.81: 85: Bye Bye [preauth]
+2025-07-30 18:09:27,anomaly,Jul 30 18:09:27	LabSZ	27491	Failed password for invalid user guest from 55.25.212.4 port 53263 ssh6
+2025-07-30 18:09:29,normal,Jul 30 18:09:29	LabSZ	14551	Accepted password for fztu from 231.220.128.158 port 47782 ssh1
+2025-07-30 18:09:34,normal,Jul 30 18:09:34	LabSZ	13023	pam_unix(sshd:session): session opened for user webmaster by (uid=4)
+2025-07-30 18:09:39,normal,Jul 30 18:09:39	server	22261	Accepted password for 123 from 115.195.163.105 port 30994 ssh6
+2025-07-30 18:09:43,normal,Jul 30 18:09:43	testvm	14455	Received disconnect from 215.67.148.180: 34: Closed due to user request [preauth]
+2025-07-30 18:09:46,normal,Jul 30 18:09:46	prod1	20204	Accepted password for oracle from 139.21.57.70 port 55994 ssh1
+2025-07-30 18:09:50,normal,Jul 30 18:09:50	LabSZ	9407	Received disconnect from 207.111.241.140: 69: Bye Bye [preauth]
+2025-07-30 18:09:54,normal,Jul 30 18:09:54	testvm	14339	pam_unix(sshd:session): session closed for user 123
+2025-07-30 18:09:57,normal,Jul 30 18:09:57	testvm	6650	Received disconnect from 243.167.34.33: 53: Closed due to user request [preauth]
+2025-07-30 18:10:00,normal,Jul 30 18:10:00	prod1	29507	Received disconnect from 5.37.89.202: 20: Bye Bye [preauth]
+2025-07-30 18:10:03,anomaly,Jul 30 18:10:03	prod1	15324	myservice[356382]: segfault at 000000000000 ip 00007f0a4e4b623a sp 00007ffde1e08a50 error 2 in libc-6.14.so[356382]
+2025-07-30 18:10:08,normal,Jul 30 18:10:08	LabSZ	18304	pam_unix(sshd:session): session opened for user admin by (uid=2)
+2025-07-30 18:10:13,anomaly,Jul 30 18:10:13	prod1	3433	PAM 7 more authentication failures; logname= uid=2 euid=5 tty=ssh ruser= rhost=144.32.216.8  user=guest
+2025-07-30 18:10:15,normal,Jul 30 18:10:15	server	7210	Received disconnect from 92.166.10.238: 97: Bye Bye [preauth]
+2025-07-30 18:10:18,anomaly,Jul 30 18:10:18	LabSZ	19434	input_userauth_request: invalid user backup [preauth]
+2025-07-30 18:10:21,anomaly,Jul 30 18:10:20	testvm	4582	Failed none for invalid user 4 from 228.140.23.220 port 28591 ssh9
+2025-07-30 18:10:25,normal,Jul 30 18:10:25	LabSZ	19349	Received disconnect from 228.222.191.236: 24: Closed due to user request [preauth]
+2025-07-30 18:10:29,normal,Jul 30 18:10:29	server	26107	Accepted password for test from 174.188.120.110 port 17309 ssh1
+2025-07-30 18:10:34,anomaly,Jul 30 18:10:34	prod1	13563	message repeated 4 times: [ Failed password for root from 85.43.240.187 port 44263 ssh7]
+2025-07-30 18:10:39,normal,Jul 30 18:10:39	prod1	14994	Received disconnect from 219.204.90.97: 47: Closed due to user request [preauth]
+2025-07-30 18:10:42,normal,Jul 30 18:10:42	LabSZ	18850	Connection closed by 166.107.140.211 [preauth]
+2025-07-30 18:10:47,anomaly,Jul 30 18:10:47	testvm	26507	message repeated 8 times: [ Failed password for root from 5.110.35.75 port 4355 ssh4]
+2025-07-30 18:10:50,anomaly,Jul 30 18:10:50	server	16135	sudo: pam_unix(sudo:auth): authentication failure; logname=pgadmin4 uid=598549 euid=8 tty=/dev/pts/2 ruser=user1 rhost=  user=root
+2025-07-30 18:10:53,anomaly,Jul 30 18:10:53	LabSZ	7597	error: Received disconnect from 121.70.53.165: 57357: No more user authentication methods available. [preauth]
+2025-07-30 18:10:58,normal,Jul 30 18:10:58	server	28259	Accepted password for fztu from 59.85.50.133 port 26976 ssh6
+2025-07-30 18:11:02,anomaly,Jul 30 18:11:02	prod1	7884	kernel: myapp[747739]: segfault at 7f0a00000000 ip 00007f0a4e4c0000 sp 00007ffde1e07000 error 6 in libpthread-1.29.so[7f0a4e480000+19000]
+2025-07-30 18:11:05,normal,Jul 30 18:11:05	prod1	8067	Received disconnect from 145.28.233.142: 30: Closed due to user request [preauth]
+2025-07-30 18:11:08,anomaly,Jul 30 18:11:08	LabSZ	26882	sudo: pam_unix(sudo:auth): authentication failure; logname=1232 uid=959101 euid=4 tty=/dev/pts/2 ruser=user1 rhost=  user=root
+2025-07-30 18:11:12,normal,Jul 30 18:11:12	LabSZ	16628	Accepted password for 123 from 62.173.52.227 port 4506 ssh3
+2025-07-30 18:11:17,normal,Jul 30 18:11:17	LabSZ	19346	PAM service(sshd) ignoring max retries; 7 > 3
+2025-07-30 18:11:20,normal,Jul 30 18:11:20	testvm	22919	pam_unix(sshd:session): session closed for user root
+2025-07-30 18:11:24,anomaly,Jul 30 18:11:24	testvm	29827	sudo: user1: command not allowed ; TTY=pts/1 ; PWD=/home/user6 ; USER=root ; COMMAND=/bin/cat /etc/shadow
+2025-07-30 18:11:28,normal,Jul 30 18:11:28	server	17649	Accepted password for test from 72.169.35.56 port 58199 ssh9
+2025-07-30 18:11:31,normal,Jul 30 18:11:31	prod1	4431	Received disconnect from 212.117.77.123: 27: disconnected by user
+2025-07-30 18:11:35,normal,Jul 30 18:11:35	LabSZ	10641	systemd[1]: myapp.service: Main process exited, code=killed, status=50/SEGV
+2025-07-30 18:11:38,anomaly,Jul 30 18:11:38	testvm	10648	fatal: Write failed: Connection reset by peer [preauth]
+2025-07-30 18:11:43,normal,Jul 30 18:11:43	prod1	18703	pam_unix(sshd:session): session opened for user pgadmin by (uid=4)
+2025-07-30 18:11:47,normal,Jul 30 18:11:47	LabSZ	2820	Connection closed by 233.164.212.174 [preauth]
+2025-07-30 18:11:49,normal,Jul 30 18:11:49	LabSZ	29036	Connection closed by 136.58.52.53 [preauth]
+2025-07-30 18:11:54,normal,Jul 30 18:11:54	LabSZ	3633	pam_unix(sshd:session): session opened for user chen by (uid=1)
+2025-07-30 18:11:58,normal,Jul 30 18:11:58	testvm	7881	Received disconnect from 111.180.27.45: 47: disconnected by user
+2025-07-30 18:12:02,normal,Jul 30 18:12:02	prod1	7601	PAM service(sshd) ignoring max retries; 8 > 4
+2025-07-30 18:12:06,normal,Jul 30 18:12:06	LabSZ	2960	Did not receive identification string from 251.132.79.51
+2025-07-30 18:12:09,normal,Jul 30 18:12:09	prod1	15312	Received disconnect from 228.30.135.249: 13: Closed due to user request [preauth]
+2025-07-30 18:12:13,normal,Jul 30 18:12:13	server	6162	pam_unix(sshd:session): session closed for user chen
+2025-07-30 18:12:16,normal,Jul 30 18:12:16	server	8113	Connection closed by 195.129.219.153 [preauth]
+2025-07-30 18:12:18,normal,Jul 30 18:12:18	LabSZ	9963	Received disconnect from 239.202.233.58: 90: Bye Bye [preauth]
+2025-07-30 18:12:22,normal,Jul 30 18:12:22	prod1	15425	kernel: panic occurred, switching back to text console
+2025-07-30 18:12:26,normal,Jul 30 18:12:26	server	27137	Received disconnect from 121.81.11.216: 32: disconnected by user
+2025-07-30 18:12:29,anomaly,Jul 30 18:12:28	prod1	27414	fatal: Write failed: Connection reset by peer [preauth]
+2025-07-30 18:12:33,anomaly,Jul 30 18:12:33	testvm	28765	Failed none for invalid user 2 from 169.43.65.168 port 42576 ssh9
+2025-07-30 18:12:36,normal,Jul 30 18:12:36	prod1	16265	PAM service(sshd) ignoring max retries; 8 > 1
+2025-07-30 18:12:39,anomaly,Jul 30 18:12:39	prod1	20738	Disconnecting: Too many authentication failures for oracle [preauth]
+2025-07-30 18:12:43,normal,Jul 30 18:12:43	testvm	22818	PAM service(sshd) ignoring max retries; 8 > 3
+2025-07-30 18:12:47,normal,Jul 30 18:12:47	LabSZ	22259	pam_unix(sshd:session): session opened for user webmaster by (uid=4)
+2025-07-30 18:12:50,anomaly,Jul 30 18:12:49	testvm	6141	myservice[899785]: segfault at 000000000000 ip 00007f0a4e4b623a sp 00007ffde1e08a50 error 1 in libc-7.29.so[899785]
+2025-07-30 18:12:53,normal,Jul 30 18:12:53	prod1	11799	Received disconnect from 52.198.123.132: 18: Closed due to user request [preauth]
+2025-07-30 18:12:56,normal,Jul 30 18:12:56	LabSZ	3642	pam_unix(sshd:session): session opened for user backup by (uid=3)
+2025-07-30 18:12:59,anomaly,Jul 30 18:12:59	server	25891	error: Received disconnect from 25.130.11.189: 59788: No more user authentication methods available. [preauth]
+2025-07-30 18:13:03,normal,Jul 30 18:13:03	LabSZ	22171	pam_unix(sshd:session): session opened for user fztu by (uid=2)
+2025-07-30 18:13:06,normal,Jul 30 18:13:06	prod1	29445	systemd[1]: myapp.service: Main process exited, code=killed, status=86/SEGV
+2025-07-30 18:13:10,normal,Jul 30 18:13:10	prod1	10947	Received disconnect from 184.30.30.1: 66: Bye Bye [preauth]
+2025-07-30 18:13:15,normal,Jul 30 18:13:15	LabSZ	4499	Did not receive identification string from 179.48.172.253
+2025-07-30 18:13:20,normal,Jul 30 18:13:20	LabSZ	14334	Received disconnect from 179.179.52.34: 86: Bye Bye [preauth]
+2025-07-30 18:13:24,normal,Jul 30 18:13:24	LabSZ	6473	Received disconnect from 130.89.225.162: 45: Bye Bye [preauth]
+2025-07-30 18:13:28,anomaly,Jul 30 18:13:28	testvm	28948	message repeated 7 times: [ Failed password for root from 185.254.106.219 port 50816 ssh8]
+2025-07-30 18:13:31,anomaly,Jul 30 18:13:31	prod1	26584	message repeated 9 times: [ Failed password for root from 121.50.50.213 port 22704 ssh5]
+2025-07-30 18:13:34,normal,Jul 30 18:13:34	server	25071	PAM service(sshd) ignoring max retries; 8 > 2
+2025-07-30 18:13:39,normal,Jul 30 18:13:39	LabSZ	9932	Received disconnect from 206.152.200.180: 72: Closed due to user request [preauth]
+2025-07-30 18:13:42,anomaly,Jul 30 18:13:42	prod1	22310	Failed password for invalid user fztu from 73.163.13.36 port 4364 ssh1
+2025-07-30 18:13:47,anomaly,Jul 30 18:13:47	server	24920	pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=70.148.232.60
+2025-07-30 18:13:49,normal,Jul 30 18:13:49	server	6901	Received disconnect from 98.73.42.37: 57: disconnected by user
+2025-07-30 18:13:53,normal,Jul 30 18:13:53	testvm	10043	PAM service(sshd) ignoring max retries; 5 > 4
+2025-07-30 18:13:56,normal,Jul 30 18:13:56	testvm	8834	pam_unix(sshd:session): session opened for user admin by (uid=2)
+2025-07-30 18:14:01,normal,Jul 30 18:14:01	LabSZ	23135	Received disconnect from 204.34.30.99: 70: Closed due to user request [preauth]
+2025-07-30 18:14:05,normal,Jul 30 18:14:05	testvm	10118	pam_unix(sshd:session): session opened for user fztu by (uid=1)
+2025-07-30 18:14:08,anomaly,Jul 30 18:14:08	prod1	2682	fatal: Read from socket failed: Connection reset by peer
+2025-07-30 18:14:11,normal,Jul 30 18:14:11	prod1	6991	pam_unix(sshd:session): session closed for user chen
+2025-07-30 18:14:15,normal,Jul 30 18:14:15	LabSZ	28216	Did not receive identification string from 70.167.233.61
+2025-07-30 18:14:20,normal,Jul 30 18:14:20	testvm	3326	Received disconnect from 47.62.98.4: 73: Bye Bye [preauth]
+2025-07-30 18:14:23,normal,Jul 30 18:14:23	prod1	27471	Accepted password for oracle from 56.238.159.242 port 44745 ssh1
+2025-07-30 18:14:28,normal,Jul 30 18:14:28	prod1	10302	kernel: panic occurred, switching back to text console
+2025-07-30 18:14:31,normal,Jul 30 18:14:31	server	14290	Received disconnect from 89.211.65.173: 49: Bye Bye [preauth]
+2025-07-30 18:14:34,normal,Jul 30 18:14:34	server	18579	Received disconnect from 224.89.153.53: 78: disconnected by user
+2025-07-30 18:14:36,anomaly,Jul 30 18:14:36	LabSZ	25048	sudo: pam_unix(sudo:auth): authentication failure; logname=root1 uid=312938 euid=7 tty=/dev/pts/2 ruser=user1 rhost=  user=root
+2025-07-30 18:14:39,normal,Jul 30 18:14:39	prod1	28066	Received disconnect from 84.107.21.44: 97: Closed due to user request [preauth]
+2025-07-30 18:14:43,normal,Jul 30 18:14:43	testvm	25849	pam_unix(sshd:session): session opened for user pgadmin by (uid=4)
+2025-07-30 18:14:47,normal,Jul 30 18:14:47	LabSZ	25776	Accepted password for chen from 85.231.71.39 port 48706 ssh2
+2025-07-30 18:14:49,normal,Jul 30 18:14:49	testvm	14163	Did not receive identification string from 69.81.198.219
+2025-07-30 18:14:54,normal,Jul 30 18:14:54	server	18843	Accepted password for guest from 253.247.242.84 port 19318 ssh5
+2025-07-30 18:14:58,normal,Jul 30 18:14:58	prod1	18964	pam_unix(sshd:session): session closed for user pgadmin
+2025-07-30 18:15:01,anomaly,Jul 30 18:15:01	server	20363	sudo: user3: command not allowed ; TTY=pts/1 ; PWD=/home/user2 ; USER=root ; COMMAND=/bin/cat /etc/shadow
+2025-07-30 18:15:03,normal,Jul 30 18:15:03	prod1	1695	Received disconnect from 139.255.165.229: 77: Closed due to user request [preauth]
+2025-07-30 18:15:05,anomaly,Jul 30 18:15:05	server	7275	reverse mapping checking getaddrinfo for ns.randomdomain.com [77.126.168.41] failed - POSSIBLE BREAK-IN ATTEMPT!
+2025-07-30 18:15:08,anomaly,Jul 30 18:15:08	server	23698	Failed none for invalid user 3 from 170.97.196.200 port 44309 ssh5
+2025-07-30 18:15:12,normal,Jul 30 18:15:12	server	11033	PAM service(sshd) ignoring max retries; 6 > 4
+2025-07-30 18:15:15,normal,Jul 30 18:15:14	LabSZ	2936	pam_unix(sshd:session): session opened for user guest by (uid=2)
+2025-07-30 18:15:18,normal,Jul 30 18:15:18	LabSZ	26316	Received disconnect from 141.208.168.44: 57: Bye Bye [preauth]
+2025-07-30 18:15:23,anomaly,Jul 30 18:15:23	server	24375	input_userauth_request: invalid user 123 [preauth]
+2025-07-30 18:15:27,anomaly,Jul 30 18:15:26	testvm	22540	sudo: pam_unix(sudo:auth): authentication failure; logname=pgadmin2 uid=934566 euid=7 tty=/dev/pts/2 ruser=user1 rhost=  user=root
+2025-07-30 18:15:29,anomaly,Jul 30 18:15:29	prod1	8412	Failed none for invalid user 4 from 222.170.57.156 port 45785 ssh2
+2025-07-30 18:15:33,normal,Jul 30 18:15:33	testvm	15489	Accepted password for chen from 222.221.84.106 port 42304 ssh3
+2025-07-30 18:15:38,normal,Jul 30 18:15:38	LabSZ	9971	PAM service(sshd) ignoring max retries; 8 > 2
+2025-07-30 18:15:41,anomaly,Jul 30 18:15:41	server	22242	PAM 9 more authentication failures; logname= uid=3 euid=6 tty=ssh ruser= rhost=15.162.240.36  user=pgadmin
+2025-07-30 18:15:44,normal,Jul 30 18:15:44	LabSZ	20446	Connection closed by 36.113.89.190 [preauth]
+2025-07-30 18:15:48,normal,Jul 30 18:15:48	prod1	19282	kernel: panic occurred, switching back to text console
+2025-07-30 18:15:53,normal,Jul 30 18:15:52	prod1	27256	Received disconnect from 95.28.247.46: 11: Bye Bye [preauth]
+2025-07-30 18:15:57,normal,Jul 30 18:15:57	prod1	20345	Received disconnect from 210.208.200.142: 64: Closed due to user request [preauth]
+2025-07-30 18:16:00,normal,Jul 30 18:16:00	LabSZ	21767	systemd[1]: myapp.service: Main process exited, code=killed, status=58/SEGV
+2025-07-30 18:16:03,normal,Jul 30 18:16:03	server	25219	Accepted password for webmaster from 38.169.121.39 port 56558 ssh4
+2025-07-30 18:16:07,normal,Jul 30 18:16:07	prod1	1101	Received disconnect from 159.137.18.186: 50: disconnected by user
+2025-07-30 18:16:10,normal,Jul 30 18:16:10	LabSZ	28706	pam_unix(sshd:session): session closed for user fztu
+2025-07-30 18:16:13,normal,Jul 30 18:16:13	LabSZ	27445	pam_unix(sshd:session): session closed for user guest
+2025-07-30 18:16:18,normal,Jul 30 18:16:18	LabSZ	22032	PAM service(sshd) ignoring max retries; 8 > 3
+2025-07-30 18:16:21,normal,Jul 30 18:16:21	testvm	14477	Did not receive identification string from 65.51.186.213
+2025-07-30 18:16:24,normal,Jul 30 18:16:24	testvm	17200	Connection closed by 68.193.35.129 [preauth]
+2025-07-30 18:16:27,normal,Jul 30 18:16:27	server	4141	pam_unix(sshd:session): session opened for user webmaster by (uid=1)
+2025-07-30 18:16:29,normal,Jul 30 18:16:29	testvm	8164	pam_unix(sshd:session): session opened for user webmaster by (uid=3)
+2025-07-30 18:16:31,normal,Jul 30 18:16:31	server	5224	pam_unix(sshd:session): session opened for user root by (uid=3)
+2025-07-30 18:16:34,anomaly,Jul 30 18:16:34	prod1	20458	fatal: Read from socket failed: Connection reset by peer
+2025-07-30 18:16:36,anomaly,Jul 30 18:16:36	testvm	24388	Disconnecting: Too many authentication failures for ubuntu [preauth]
+2025-07-30 18:16:40,normal,Jul 30 18:16:39	server	20723	pam_unix(sshd:session): session opened for user guest by (uid=2)
+2025-07-30 18:16:43,normal,Jul 30 18:16:43	prod1	11378	Accepted password for pgadmin from 123.93.34.186 port 10249 ssh4
+2025-07-30 18:16:47,normal,Jul 30 18:16:47	testvm	29992	Received disconnect from 113.119.48.130: 87: disconnected by user
+2025-07-30 18:16:51,normal,Jul 30 18:16:51	LabSZ	4367	Connection closed by 35.220.97.218 [preauth]
+2025-07-30 18:16:56,normal,Jul 30 18:16:56	prod1	23568	Received disconnect from 230.14.52.1: 17: disconnected by user
+2025-07-30 18:16:59,normal,Jul 30 18:16:59	LabSZ	9623	PAM service(sshd) ignoring max retries; 9 > 4
+2025-07-30 18:17:04,normal,Jul 30 18:17:04	testvm	29697	Received disconnect from 128.205.45.62: 61: disconnected by user
+2025-07-30 18:17:08,anomaly,Jul 30 18:17:08	prod1	5118	reverse mapping checking getaddrinfo for ns.randomdomain.com [46.152.12.113] failed - POSSIBLE BREAK-IN ATTEMPT!
+2025-07-30 18:17:11,anomaly,Jul 30 18:17:11	prod1	9689	Failed none for invalid user 3 from 19.66.216.250 port 21332 ssh5
+2025-07-30 18:17:14,normal,Jul 30 18:17:14	server	25014	Connection closed by 171.85.191.213 [preauth]
+2025-07-30 18:17:17,anomaly,Jul 30 18:17:17	LabSZ	27036	Failed password for invalid user test from 198.67.58.146 port 9253 ssh6
+2025-07-30 18:17:20,normal,Jul 30 18:17:20	server	19735	Did not receive identification string from 173.226.33.252
+2025-07-30 18:17:22,normal,Jul 30 18:17:22	LabSZ	4588	Connection closed by 213.4.215.134 [preauth]
+2025-07-30 18:17:27,normal,Jul 30 18:17:27	prod1	9632	Did not receive identification string from 252.109.208.15
+2025-07-30 18:17:31,normal,Jul 30 18:17:31	prod1	24456	Did not receive identification string from 131.171.71.122
+2025-07-30 18:17:34,normal,Jul 30 18:17:34	server	20694	pam_unix(sshd:session): session opened for user ubuntu by (uid=3)
+2025-07-30 18:17:38,normal,Jul 30 18:17:37	LabSZ	29506	PAM service(sshd) ignoring max retries; 7 > 4
+2025-07-30 18:17:40,normal,Jul 30 18:17:40	LabSZ	22502	Received disconnect from 86.94.30.171: 54: disconnected by user
+2025-07-30 18:17:44,normal,Jul 30 18:17:44	prod1	10550	pam_unix(sshd:session): session opened for user webmaster by (uid=4)
+2025-07-30 18:17:48,normal,Jul 30 18:17:48	LabSZ	24020	Received disconnect from 229.161.125.11: 23: Closed due to user request [preauth]
+2025-07-30 18:17:52,normal,Jul 30 18:17:52	server	16170	pam_unix(sshd:session): session opened for user test by (uid=3)
+2025-07-30 18:17:56,anomaly,Jul 30 18:17:56	LabSZ	23368	sudo: user1: command not allowed ; TTY=pts/1 ; PWD=/home/user2 ; USER=root ; COMMAND=/bin/cat /etc/shadow
+2025-07-30 18:18:00,normal,Jul 30 18:18:00	server	12497	Received disconnect from 146.62.160.197: 33: Bye Bye [preauth]
+2025-07-30 18:18:02,normal,Jul 30 18:18:02	LabSZ	29310	pam_unix(sshd:session): session opened for user chen by (uid=4)
+2025-07-30 18:18:05,normal,Jul 30 18:18:05	prod1	8633	Received disconnect from 200.44.78.226: 83: Bye Bye [preauth]
+2025-07-30 18:18:10,normal,Jul 30 18:18:10	server	17612	Did not receive identification string from 216.205.181.245
+2025-07-30 18:18:12,anomaly,Jul 30 18:18:12	testvm	3738	Failed none for invalid user 4 from 116.122.170.26 port 63613 ssh9
+2025-07-30 18:18:16,normal,Jul 30 18:18:16	testvm	7901	Accepted password for test from 157.37.53.127 port 23615 ssh6
+2025-07-30 18:18:19,normal,Jul 30 18:18:19	testvm	17845	Accepted password for root from 26.74.12.72 port 19268 ssh2
+2025-07-30 18:18:23,normal,Jul 30 18:18:23	LabSZ	5216	Accepted password for ubuntu from 90.189.125.181 port 42526 ssh8
+2025-07-30 18:18:26,normal,Jul 30 18:18:26	server	3091	Received disconnect from 164.213.185.223: 72: Bye Bye [preauth]
+2025-07-30 18:18:31,normal,Jul 30 18:18:31	prod1	25968	Accepted password for 123 from 204.201.233.54 port 32339 ssh1
+2025-07-30 18:18:34,normal,Jul 30 18:18:34	testvm	24466	Received disconnect from 48.121.197.66: 72: disconnected by user
+2025-07-30 18:18:38,normal,Jul 30 18:18:38	LabSZ	27417	Received disconnect from 115.221.197.215: 97: Closed due to user request [preauth]
+2025-07-30 18:18:43,normal,Jul 30 18:18:43	prod1	13962	Received disconnect from 217.255.217.175: 91: Bye Bye [preauth]
+2025-07-30 18:18:45,normal,Jul 30 18:18:45	server	19051	Received disconnect from 183.9.166.230: 71: Bye Bye [preauth]
+2025-07-30 18:18:49,normal,Jul 30 18:18:49	server	16273	Received disconnect from 32.79.23.102: 93: Bye Bye [preauth]
+2025-07-30 18:18:52,normal,Jul 30 18:18:52	testvm	28698	pam_unix(sshd:session): session closed for user ubuntu
+2025-07-30 18:18:56,normal,Jul 30 18:18:56	testvm	14795	Received disconnect from 210.254.49.196: 36: Closed due to user request [preauth]
+2025-07-30 18:18:59,normal,Jul 30 18:18:59	server	12930	Received disconnect from 7.85.203.252: 91: disconnected by user
+2025-07-30 18:19:03,anomaly,Jul 30 18:19:03	testvm	15996	pam_unix(sshd:auth): authentication failure; logname= uid=8 euid=3 tty=ssh ruser= rhost=90.112.244.19
+2025-07-30 18:19:08,anomaly,Jul 30 18:19:07	testvm	24549	pam_unix(sshd:auth): authentication failure; logname= uid=8 euid=3 tty=ssh ruser= rhost=189.55.25.115
+2025-07-30 18:19:12,normal,Jul 30 18:19:12	testvm	26111	Received disconnect from 199.246.77.176: 69: Closed due to user request [preauth]
+2025-07-30 18:19:16,normal,Jul 30 18:19:16	server	23922	Received disconnect from 200.35.74.217: 67: Closed due to user request [preauth]
+2025-07-30 18:19:19,normal,Jul 30 18:19:19	testvm	2670	Did not receive identification string from 187.183.142.153
+2025-07-30 18:19:24,normal,Jul 30 18:19:24	testvm	1181	Connection closed by 236.8.81.12 [preauth]
+2025-07-30 18:19:28,normal,Jul 30 18:19:28	prod1	8870	Connection closed by 90.219.152.244 [preauth]
+2025-07-30 18:19:32,normal,Jul 30 18:19:32	testvm	15194	pam_unix(sshd:session): session closed for user fztu
+2025-07-30 18:19:37,normal,Jul 30 18:19:37	testvm	12306	Received disconnect from 236.41.11.249: 19: Bye Bye [preauth]
+2025-07-30 18:19:41,normal,Jul 30 18:19:41	server	22788	Connection closed by 213.109.34.198 [preauth]
+2025-07-30 18:19:46,anomaly,Jul 30 18:19:46	server	11854	message repeated 7 times: [ Failed password for root from 72.12.171.35 port 61454 ssh9]
+2025-07-30 18:19:48,normal,Jul 30 18:19:48	prod1	12125	Received disconnect from 179.218.163.222: 98: disconnected by user
+2025-07-30 18:19:50,anomaly,Jul 30 18:19:50	testvm	8851	Failed password for user 123 from 4.237.229.121 port 5141 ssh7
+2025-07-30 18:19:55,normal,Jul 30 18:19:55	LabSZ	13221	PAM service(sshd) ignoring max retries; 8 > 4
+2025-07-30 18:19:59,normal,Jul 30 18:19:59	prod1	17170	PAM service(sshd) ignoring max retries; 7 > 4
+2025-07-30 18:20:02,normal,Jul 30 18:20:02	prod1	27376	Received disconnect from 226.46.128.196: 49: disconnected by user
+2025-07-30 18:20:05,normal,Jul 30 18:20:05	testvm	24628	PAM service(sshd) ignoring max retries; 8 > 1
+2025-07-30 18:20:07,normal,Jul 30 18:20:07	LabSZ	17517	Did not receive identification string from 165.178.240.183
+2025-07-30 18:20:12,normal,Jul 30 18:20:12	testvm	22600	pam_unix(sshd:session): session closed for user matlab
+2025-07-30 18:20:16,anomaly,Jul 30 18:20:16	server	5515	Failed password for user admin from 5.11.98.172 port 46273 ssh8
+2025-07-30 18:20:20,normal,Jul 30 18:20:20	LabSZ	28274	Accepted password for oracle from 158.246.59.157 port 15242 ssh4
+2025-07-30 18:20:24,anomaly,Jul 30 18:20:24	server	13779	input_userauth_request: invalid user pgadmin [preauth]
+2025-07-30 18:20:28,anomaly,Jul 30 18:20:28	testvm	3578	error: Received disconnect from 122.32.214.205: 37446: com.jcraft.jsch.JSchException: Auth fail [preauth]
+2025-07-30 18:20:32,anomaly,Jul 30 18:20:32	server	25853	error: maximum authentication attempts exceeded for backup from 33.51.66.201 port 1925
+2025-07-30 18:20:35,normal,Jul 30 18:20:35	prod1	21162	pam_unix(sshd:session): session closed for user webmaster
+2025-07-30 18:20:40,normal,Jul 30 18:20:40	LabSZ	19229	PAM service(sshd) ignoring max retries; 8 > 3
+2025-07-30 18:20:44,normal,Jul 30 18:20:44	LabSZ	12281	pam_unix(sshd:session): session closed for user guest
+2025-07-30 18:20:49,normal,Jul 30 18:20:49	testvm	15875	Accepted password for admin from 177.127.63.29 port 40969 ssh3
+2025-07-30 18:20:51,normal,Jul 30 18:20:51	prod1	17590	Received disconnect from 244.172.14.37: 55: Closed due to user request [preauth]
+2025-07-30 18:20:54,anomaly,Jul 30 18:20:54	prod1	22480	sudo: user4: command not allowed ; TTY=pts/1 ; PWD=/home/user9 ; USER=root ; COMMAND=/bin/cat /etc/shadow
+2025-07-30 18:20:58,normal,Jul 30 18:20:58	LabSZ	26872	Did not receive identification string from 224.236.214.210
+2025-07-30 18:21:01,normal,Jul 30 18:21:01	testvm	21252	Connection closed by 74.157.51.27 [preauth]
+2025-07-30 18:21:06,normal,Jul 30 18:21:06	LabSZ	20916	pam_unix(sshd:session): session closed for user backup
+2025-07-30 18:21:10,normal,Jul 30 18:21:10	prod1	10311	pam_unix(sshd:session): session opened for user chen by (uid=3)
+2025-07-30 18:21:13,anomaly,Jul 30 18:21:13	prod1	27107	kernel: [12346.642024] Kernel panic - attempted to kill init! exitcode=0x00000009
+2025-07-30 18:21:16,normal,Jul 30 18:21:16	prod1	21864	Connection closed by 81.190.216.21 [preauth]
+2025-07-30 18:21:20,normal,Jul 30 18:21:20	server	13592	pam_unix(sshd:session): session closed for user pgadmin
+2025-07-30 18:21:25,normal,Jul 30 18:21:25	server	22623	Did not receive identification string from 71.244.172.78
+2025-07-30 18:21:28,normal,Jul 30 18:21:28	prod1	27000	Accepted password for matlab from 61.30.81.241 port 63276 ssh1
+2025-07-30 18:21:33,normal,Jul 30 18:21:33	LabSZ	17487	Accepted password for guest from 204.25.4.232 port 20505 ssh3
+2025-07-30 18:21:35,anomaly,Jul 30 18:21:35	server	11389	error: maximum authentication attempts exceeded for fztu from 168.174.168.96 port 16097
+2025-07-30 18:21:40,normal,Jul 30 18:21:40	testvm	4482	Received disconnect from 231.124.155.138: 49: Closed due to user request [preauth]
+2025-07-30 18:21:43,normal,Jul 30 18:21:43	prod1	1549	Received disconnect from 118.144.75.178: 28: Bye Bye [preauth]
+2025-07-30 18:21:46,anomaly,Jul 30 18:21:46	server	2178	fatal: Write failed: Connection reset by peer [preauth]
+2025-07-30 18:21:49,normal,Jul 30 18:21:49	testvm	19670	Received disconnect from 233.42.106.43: 99: disconnected by user
+2025-07-30 18:21:52,normal,Jul 30 18:21:52	prod1	10717	Received disconnect from 191.198.134.155: 12: Closed due to user request [preauth]
+2025-07-30 18:21:56,normal,Jul 30 18:21:56	testvm	19403	Connection closed by 251.248.215.149 [preauth]
+2025-07-30 18:22:01,normal,Jul 30 18:22:01	server	16659	Connection closed by 167.26.202.106 [preauth]
+2025-07-30 18:22:03,anomaly,Jul 30 18:22:03	testvm	11738	pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=90.3.228.234
+2025-07-30 18:22:07,normal,Jul 30 18:22:07	testvm	2626	Connection closed by 11.31.65.247 [preauth]
+2025-07-30 18:22:10,normal,Jul 30 18:22:10	LabSZ	7169	Received disconnect from 196.211.56.144: 12: disconnected by user
+2025-07-30 18:22:13,normal,Jul 30 18:22:13	LabSZ	4700	Accepted password for chen from 59.253.90.92 port 12309 ssh4
+2025-07-30 18:22:16,normal,Jul 30 18:22:16	server	16117	Received disconnect from 179.10.144.59: 31: Bye Bye [preauth]
+2025-07-30 18:22:20,normal,Jul 30 18:22:19	server	21272	Received disconnect from 129.172.69.83: 54: Bye Bye [preauth]
+2025-07-30 18:22:24,normal,Jul 30 18:22:24	prod1	25163	PAM service(sshd) ignoring max retries; 7 > 1
+2025-07-30 18:22:28,normal,Jul 30 18:22:28	testvm	5984	Received disconnect from 174.19.147.26: 50: disconnected by user
+2025-07-30 18:22:30,normal,Jul 30 18:22:30	server	18354	Received disconnect from 132.189.96.62: 32: Closed due to user request [preauth]
+2025-07-30 18:22:33,anomaly,Jul 30 18:22:33	LabSZ	11954	PAM 1 more authentication failures; logname= uid=3 euid=7 tty=ssh ruser= rhost=242.124.238.112  user=webmaster
+2025-07-30 18:22:36,normal,Jul 30 18:22:36	server	8047	Received disconnect from 37.250.149.147: 80: Closed due to user request [preauth]
+2025-07-30 18:22:38,normal,Jul 30 18:22:38	LabSZ	19720	Did not receive identification string from 135.151.58.131
+2025-07-30 18:22:42,normal,Jul 30 18:22:42	testvm	13994	Connection closed by 249.16.208.149 [preauth]
+2025-07-30 18:22:46,normal,Jul 30 18:22:46	LabSZ	20407	Connection closed by 187.47.143.230 [preauth]
+2025-07-30 18:22:48,normal,Jul 30 18:22:48	testvm	2619	pam_unix(sshd:session): session closed for user root
+2025-07-30 18:22:52,normal,Jul 30 18:22:52	server	12629	Did not receive identification string from 30.137.57.53
+2025-07-30 18:22:56,anomaly,Jul 30 18:22:56	LabSZ	3565	sudo: user3: command not allowed ; TTY=pts/1 ; PWD=/home/user3 ; USER=root ; COMMAND=/bin/cat /etc/shadow
+2025-07-30 18:23:00,normal,Jul 30 18:23:00	server	15834	Received disconnect from 10.84.75.139: 15: Closed due to user request [preauth]
+2025-07-30 18:23:02,normal,Jul 30 18:23:02	prod1	23676	Received disconnect from 24.63.132.121: 26: disconnected by user
+2025-07-30 18:23:06,normal,Jul 30 18:23:06	LabSZ	26030	PAM service(sshd) ignoring max retries; 5 > 1
+2025-07-30 18:23:09,normal,Jul 30 18:23:09	testvm	2317	PAM service(sshd) ignoring max retries; 9 > 2
+2025-07-30 18:23:13,normal,Jul 30 18:23:13	server	14117	Received disconnect from 59.71.52.242: 34: Closed due to user request [preauth]
+2025-07-30 18:23:15,normal,Jul 30 18:23:15	testvm	26748	PAM service(sshd) ignoring max retries; 8 > 3
+2025-07-30 18:23:18,normal,Jul 30 18:23:18	server	23696	Accepted password for ubuntu from 14.151.251.23 port 65212 ssh8
+2025-07-30 18:23:23,normal,Jul 30 18:23:23	prod1	13705	Received disconnect from 12.207.248.38: 79: disconnected by user
+2025-07-30 18:23:27,normal,Jul 30 18:23:27	prod1	25138	PAM service(sshd) ignoring max retries; 7 > 1
+2025-07-30 18:23:29,normal,Jul 30 18:23:29	prod1	17889	Connection closed by 107.154.204.95 [preauth]
+2025-07-30 18:23:32,anomaly,Jul 30 18:23:32	testvm	1187	Failed none for invalid user 2 from 98.65.160.135 port 37091 ssh5
+2025-07-30 18:23:36,normal,Jul 30 18:23:36	prod1	28229	PAM service(sshd) ignoring max retries; 8 > 3
+2025-07-30 18:23:41,normal,Jul 30 18:23:41	prod1	24530	pam_unix(sshd:session): session closed for user webmaster
+2025-07-30 18:23:46,anomaly,Jul 30 18:23:46	testvm	10537	fatal: Write failed: Connection reset by peer [preauth]
+2025-07-30 18:23:50,normal,Jul 30 18:23:50	LabSZ	20727	Received disconnect from 191.64.236.25: 56: Bye Bye [preauth]
+2025-07-30 18:23:53,normal,Jul 30 18:23:52	server	27473	Did not receive identification string from 137.200.237.242
+2025-07-30 18:23:57,normal,Jul 30 18:23:57	LabSZ	10788	Received disconnect from 147.4.169.186: 15: Closed due to user request [preauth]
+2025-07-30 18:24:01,normal,Jul 30 18:24:01	prod1	28091	Received disconnect from 105.200.234.116: 56: Bye Bye [preauth]
+2025-07-30 18:24:03,normal,Jul 30 18:24:03	testvm	14119	Accepted password for pgadmin from 98.247.44.76 port 50051 ssh3
+2025-07-30 18:24:07,normal,Jul 30 18:24:06	testvm	28901	pam_unix(sshd:session): session opened for user ubuntu by (uid=3)
+2025-07-30 18:24:08,normal,pam_unix(sudo:session): session closed for user root
+2025-07-30 20:14:46,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-22 noise=9999 txrate=72200
+2025-07-30 20:14:46,normal,<info>  [1753886604.2372] dhcp4 (wlp0s20f3): state changed new lease, address=10.200.59.18
+2025-07-30 20:14:46,normal,Starting Network Manager Script Dispatcher Service...
+2025-07-30 20:14:46,normal,Started Network Manager Script Dispatcher Service.
+2025-07-30 20:14:46,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-07-30 20:16:48,normal,Jul 30 20:16:48	prod1	5526	Did not receive identification string from 225.118.74.158
+2025-07-30 20:16:48,normal,rksha : TTY=pts/2 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/sim_ana.py
+2025-07-30 20:16:48,normal,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000)
+2025-07-30 20:16:51,anomaly,Jul 30 20:16:51	LabSZ	19299	pam_unix(sshd:auth): authentication failure; logname= uid=5 euid=3 tty=ssh ruser= rhost=64.91.92.81
+2025-07-30 20:16:55,normal,Jul 30 20:16:55	prod1	7815	Connection closed by 129.40.159.211 [preauth]
+2025-07-30 20:17:00,anomaly,Jul 30 20:17:00	testvm	22139	message repeated 1 times: [ Failed password for root from 135.154.177.189 port 3538 ssh3]
+2025-07-30 20:17:03,normal,Jul 30 20:17:03	prod1	15556	Received disconnect from 218.233.7.72: 57: Closed due to user request [preauth]
+2025-07-30 20:17:06,normal,Jul 30 20:17:06	testvm	10169	Received disconnect from 31.196.215.39: 47: Closed due to user request [preauth]
+2025-07-30 20:17:10,anomaly,Jul 30 20:17:10	LabSZ	7998	reverse mapping checking getaddrinfo for ns.randomdomain.com [122.89.199.109] failed - POSSIBLE BREAK-IN ATTEMPT!
+2025-07-30 20:17:14,normal,Jul 30 20:17:14	LabSZ	11982	Received disconnect from 15.68.38.35: 42: Closed due to user request [preauth]
+2025-07-30 20:17:17,normal,Jul 30 20:17:17	prod1	26502	Accepted password for root from 235.154.187.231 port 63324 ssh7
+2025-07-30 20:17:19,normal,Jul 30 20:17:19	server	21963	pam_unix(sshd:session): session opened for user ubuntu by (uid=4)
+2025-07-30 20:17:23,normal,Jul 30 20:17:23	prod1	10126	Received disconnect from 237.236.243.78: 88: Closed due to user request [preauth]
+2025-07-30 20:17:26,normal,Jul 30 20:17:26	prod1	28023	Received disconnect from 77.176.225.48: 36: Bye Bye [preauth]
+2025-07-30 20:17:28,normal,Jul 30 20:17:28	prod1	1528	PAM service(sshd) ignoring max retries; 8 > 1
+2025-07-30 20:17:31,anomaly,Jul 30 20:17:31	testvm	13917	Failed password for invalid user oracle from 83.165.162.250 port 36944 ssh7
+2025-07-30 20:17:35,normal,Jul 30 20:17:35	testvm	15892	pam_unix(sshd:session): session opened for user pgadmin by (uid=2)
+2025-07-30 20:17:37,normal,Jul 30 20:17:37	server	12485	Received disconnect from 196.134.56.164: 99: Bye Bye [preauth]
+2025-07-30 20:17:41,anomaly,Jul 30 20:17:41	server	25349	error: maximum authentication attempts exceeded for pgadmin from 39.105.190.21 port 38880
+2025-07-30 20:17:44,normal,Jul 30 20:17:44	LabSZ	16517	pam_unix(sshd:session): session closed for user fztu
+2025-07-30 20:17:49,normal,Jul 30 20:17:49	LabSZ	5407	Received disconnect from 187.42.236.68: 46: Bye Bye [preauth]
+2025-07-30 20:17:52,normal,Jul 30 20:17:52	prod1	23983	PAM service(sshd) ignoring max retries; 9 > 1
+2025-07-30 20:17:55,normal,Jul 30 20:17:55	LabSZ	7410	PAM service(sshd) ignoring max retries; 6 > 3
+2025-07-30 20:17:58,anomaly,Jul 30 20:17:58	server	5571	fatal: Write failed: Connection reset by peer [preauth]
+2025-07-30 20:18:02,normal,Jul 30 20:18:02	LabSZ	9753	PAM service(sshd) ignoring max retries; 5 > 2
+2025-07-30 20:18:05,anomaly,Jul 30 20:18:05	prod1	16246	Invalid user admin from 129.31.244.105
+2025-07-30 20:18:08,normal,Jul 30 20:18:08	testvm	10275	Did not receive identification string from 132.190.161.77
+2025-07-30 20:18:13,normal,Jul 30 20:18:13	prod1	28044	Received disconnect from 219.58.195.64: 37: Closed due to user request [preauth]
+2025-07-30 20:18:18,normal,Jul 30 20:18:18	testvm	11263	PAM service(sshd) ignoring max retries; 6 > 1
+2025-07-30 20:18:21,normal,Jul 30 20:18:21	prod1	14908	Accepted password for matlab from 250.113.128.22 port 14205 ssh1
+2025-07-30 20:18:24,normal,Jul 30 20:18:24	LabSZ	5799	Did not receive identification string from 223.14.254.17
+2025-07-30 20:18:28,normal,Jul 30 20:18:28	server	4130	Received disconnect from 255.61.106.15: 41: Closed due to user request [preauth]
+2025-07-30 20:18:32,anomaly,Jul 30 20:18:32	testvm	28826	Failed password for invalid user webmaster from 203.105.5.32 port 28680 ssh8
+2025-07-30 20:18:34,anomaly,Jul 30 20:18:34	testvm	10747	PAM 2 more authentication failures; logname= uid=2 euid=8 tty=ssh ruser= rhost=139.121.39.192  user=guest
+2025-07-30 20:18:37,normal,Jul 30 20:18:37	prod1	6994	Did not receive identification string from 249.232.77.234
+2025-07-30 20:18:40,normal,Jul 30 20:18:40	LabSZ	13751	Received disconnect from 129.252.36.121: 38: Closed due to user request [preauth]
+2025-07-30 20:18:42,normal,Jul 30 20:18:42	server	8210	Received disconnect from 61.8.52.127: 83: disconnected by user
+2025-07-30 20:18:46,normal,Jul 30 20:18:46	prod1	8747	Received disconnect from 130.27.203.199: 79: disconnected by user
+2025-07-30 20:18:48,normal,Jul 30 20:18:48	prod1	12757	Received disconnect from 19.244.19.58: 60: Closed due to user request [preauth]
+2025-07-30 20:18:51,normal,Jul 30 20:18:51	LabSZ	21086	pam_unix(sshd:session): session closed for user fztu
+2025-07-30 20:18:55,normal,Jul 30 20:18:55	server	29409	Received disconnect from 167.79.142.135: 59: Bye Bye [preauth]
+2025-07-30 20:19:00,normal,Jul 30 20:19:00	testvm	6571	Received disconnect from 111.217.83.102: 74: disconnected by user
+2025-07-30 20:19:02,anomaly,Jul 30 20:19:02	prod1	29197	kernel: [12346.374066] Kernel panic - attempted to kill init! exitcode=0x00000009
+2025-07-30 20:19:06,normal,Jul 30 20:19:06	LabSZ	14696	Did not receive identification string from 164.137.70.212
+2025-07-30 20:19:11,normal,Jul 30 20:19:11	server	20009	Received disconnect from 135.144.44.112: 63: Closed due to user request [preauth]
+2025-07-30 20:19:13,anomaly,Jul 30 20:19:13	server	19729	error: Received disconnect from 35.252.135.75: 50853: No more user authentication methods available. [preauth]
+2025-07-30 20:19:17,normal,Jul 30 20:19:17	testvm	9953	Did not receive identification string from 211.84.219.111
+2025-07-30 20:19:21,normal,Jul 30 20:19:21	prod1	14992	Received disconnect from 62.186.139.40: 16: Closed due to user request [preauth]
+2025-07-30 20:19:24,anomaly,Jul 30 20:19:24	prod1	20519	kernel: [12346.680429] Kernel panic - attempted to kill init! exitcode=0x00000009
+2025-07-30 20:19:28,normal,Jul 30 20:19:28	testvm	27283	Received disconnect from 14.248.72.155: 20: Bye Bye [preauth]
+2025-07-30 20:19:33,normal,Jul 30 20:19:33	testvm	2676	Received disconnect from 173.185.66.55: 49: Closed due to user request [preauth]
+2025-07-30 20:19:37,normal,Jul 30 20:19:37	testvm	8928	Did not receive identification string from 61.17.16.9
+2025-07-30 20:19:40,anomaly,Jul 30 20:19:40	LabSZ	4532	Failed password for user admin from 87.218.47.100 port 27647 ssh5
+2025-07-30 20:19:43,normal,Jul 30 20:19:43	server	29536	pam_unix(sshd:session): session closed for user admin
+2025-07-30 20:19:46,normal,Jul 30 20:19:46	LabSZ	12292	PAM service(sshd) ignoring max retries; 5 > 2
+2025-07-30 20:19:50,normal,Jul 30 20:19:50	server	11268	pam_unix(sshd:session): session opened for user guest by (uid=2)
+2025-07-30 20:19:55,normal,Jul 30 20:19:55	prod1	3481	PAM service(sshd) ignoring max retries; 6 > 2
+2025-07-30 20:19:58,normal,Jul 30 20:19:58	prod1	14795	Did not receive identification string from 155.55.107.82
+2025-07-30 20:20:02,normal,Jul 30 20:20:02	server	21881	Accepted password for matlab from 49.133.161.55 port 39676 ssh3
+2025-07-30 20:20:06,normal,Jul 30 20:20:06	testvm	1932	pam_unix(sshd:session): session closed for user chen
+2025-07-30 20:20:09,normal,Jul 30 20:20:09	LabSZ	9720	PAM service(sshd) ignoring max retries; 6 > 3
+2025-07-30 20:20:12,anomaly,Jul 30 20:20:12	prod1	24491	kernel: panic occurred, switching back to text console
+2025-07-30 20:20:17,normal,Jul 30 20:20:17	server	10848	Received disconnect from 225.219.100.101: 40: disconnected by user
+2025-07-30 20:20:21,normal,Jul 30 20:20:21	LabSZ	13918	Received disconnect from 81.60.72.255: 63: Closed due to user request [preauth]
+2025-07-30 20:20:24,anomaly,Jul 30 20:20:24	prod1	6221	sudo: admin : 3 incorrect password attempts ; TTY=pts/2 ; PWD=/home/user2 ; USER=root ; COMMAND=/usr/bin/vim /etc/sudoers
+2025-07-30 20:20:28,normal,Jul 30 20:20:28	prod1	24371	Did not receive identification string from 232.24.253.207
+2025-07-30 20:20:31,normal,Jul 30 20:20:31	LabSZ	9983	Received disconnect from 224.59.175.143: 49: disconnected by user
+2025-07-30 20:20:33,normal,Jul 30 20:20:33	LabSZ	18495	PAM service(sshd) ignoring max retries; 9 > 1
+2025-07-30 20:20:37,normal,Jul 30 20:20:37	testvm	13512	Did not receive identification string from 246.109.191.94
+2025-07-30 20:20:42,normal,Jul 30 20:20:42	testvm	1664	Accepted password for ubuntu from 56.102.50.172 port 63880 ssh5
+2025-07-30 20:20:45,anomaly,Jul 30 20:20:45	prod1	26336	fatal: Read from socket failed: Connection reset by peer
+2025-07-30 20:20:48,normal,Jul 30 20:20:48	server	25583	Received disconnect from 94.78.221.247: 95: Closed due to user request [preauth]
+2025-07-30 20:20:51,normal,Jul 30 20:20:51	server	6960	Received disconnect from 139.108.12.171: 46: Bye Bye [preauth]
+2025-07-30 20:20:54,normal,Jul 30 20:20:54	testvm	14993	pam_unix(sshd:session): session closed for user chen
+2025-07-30 20:20:56,normal,pam_unix(sudo:session): session closed for user root
+2025-07-30 20:21:00,normal,perf: interrupt took too long (3182 > 3147), lowering kernel.perf_event_max_sample_rate to 62000
