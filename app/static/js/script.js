@@ -165,11 +165,44 @@ let anomalyCount = 0;
 let totalCount = 0;
 let sessionCount = 0;
 
-// Initialize chart
-function initChart(initialNormal, initialAnomaly) {
-    normalCount = initialNormal || 0;
-    anomalyCount = initialAnomaly || 0;
-    totalCount = normalCount + anomalyCount;
+// // Initialize chart
+// function initChart(initialNormal, initialAnomaly) {
+//     normalCount = initialNormal || 0;
+//     anomalyCount = initialAnomaly || 0;
+//     totalCount = normalCount + anomalyCount;
+
+//     let ctx = document.getElementById('logChart').getContext('2d');
+//     chart = new Chart(ctx, {
+//         type: 'doughnut',
+//         data: {
+//             labels: ['Normal', 'Anomaly'],
+//             datasets: [{
+//                 data: [normalCount, anomalyCount],
+//                 backgroundColor: ['#28a745', '#dc3545'] // Use defined colors
+//             }]
+//         },
+//         options: {
+//             responsive: true,
+//             maintainAspectRatio: false, // Allow chart to fill container
+//             plugins: {
+//                 legend: {
+//                     position: 'bottom', // Move legend to bottom
+//                     labels: {
+//                         color: 'var(--text-color-primary)' // Dynamic text color
+//                     }
+//                 }
+//             }
+//         }
+//     });
+//
+//     updateStatsAndChart();
+// }
+
+function initChart() {
+    // Read initial counts directly from the HTML elements
+    totalCount = parseInt(document.getElementById('totalLogs').textContent) || 0;
+    normalCount = parseInt(document.getElementById('normalCount').textContent) || 0;
+    anomalyCount = parseInt(document.getElementById('anomalyCount').textContent) || 0;
 
     let ctx = document.getElementById('logChart').getContext('2d');
     chart = new Chart(ctx, {
@@ -177,29 +210,45 @@ function initChart(initialNormal, initialAnomaly) {
         data: {
             labels: ['Normal', 'Anomaly'],
             datasets: [{
-                data: [normalCount, anomalyCount],
-                backgroundColor: ['#28a745', '#dc3545'] // Use defined colors
+                data: [normalCount, anomalyCount], // Use initial counts for the chart
+                backgroundColor: ['#28a745', '#dc3545']
             }]
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false, // Allow chart to fill container
+            maintainAspectRatio: false,
             plugins: {
                 legend: {
-                    position: 'bottom', // Move legend to bottom
+                    position: 'bottom',
                     labels: {
-                        color: 'var(--text-color-primary)' // Dynamic text color
+                        color: 'var(--text-color-primary)'
                     }
                 }
             }
         }
     });
 
-    updateStatsAndChart();
+    updateStatsAndChart(); // Call once to set initial state
 }
 
-// Update stats text and chart
+// // Update stats text and chart
+// function updateStatsAndChart() {
+//     animateCount('totalLogs', totalCount);
+//     animateCount('normalCount', normalCount);
+//     animateCount('anomalyCount', anomalyCount);
+//     animateCount('sessionCount', sessionCount);
+
+//     if (chart) {
+//         chart.data.datasets[0].data = [normalCount, anomalyCount];
+//         chart.update();
+//     }
+
+//     document.getElementById("lastUpdated").textContent = new Date().toLocaleString();
+// }
+
+// Update stats text and chart (this function remains largely the same)
 function updateStatsAndChart() {
+    // This function will now update the numbers that were initially set by the server
     animateCount('totalLogs', totalCount);
     animateCount('normalCount', normalCount);
     animateCount('anomalyCount', anomalyCount);
@@ -258,13 +307,42 @@ ws.onmessage = function(event) {
     updateStatsAndChart(); // Update chart and stats after every message
 };
 
+// function addLogRow(data) {
+//     let table = document.getElementById("logsTable").getElementsByTagName('tbody')[0];
+//     if (!table) return;
+//     let row = table.insertRow(-1);  // append at bottom
+//     row.className = 'fade-in';
+
+//     let timestamp = data.timestamp ? new Date(data.timestamp).toLocaleString() : new Date().toLocaleString();
+//     let labelText = (data.label || '').toLowerCase().trim(); // Use pre-processed label
+//     let log = data.log || '-';
+
+//     row.innerHTML = `<td>${timestamp}</td><td>${labelText}</td><td>${log}</td>`;
+
+//     if (labelText === 'anomaly') {
+//         row.classList.add('log-anomaly');
+//         anomalyCount++;
+//     } else if (labelText === 'normal') {
+//         row.classList.add('log-normal');
+//         normalCount++;
+//     }
+
+//     totalCount++;
+//     // updateStatsAndChart(); // Called by ws.onmessage
+//     autoScroll('logsContainer');
+// }
+
+// REPLACE this function
 function addLogRow(data) {
-    let table = document.getElementById("logsTable");
-    let row = table.insertRow(-1);  // append at bottom
+    let table = document.getElementById("logsTable").getElementsByTagName('tbody')[0];
+    if (!table) return;
+
+    let row = table.insertRow(-1); // Insert at the top
     row.className = 'fade-in';
 
-    let timestamp = data.timestamp || '-';
-    let labelText = (data.label || '').toLowerCase().trim(); // Use pre-processed label
+    // Use the timestamp sent from the backend
+    let timestamp = data.timestamp ? new Date(data.timestamp).toLocaleString() : new Date().toLocaleString();
+    let labelText = (data.label || 'unknown').toLowerCase().trim();
     let log = data.log || '-';
 
     row.innerHTML = `<td>${timestamp}</td><td>${labelText}</td><td>${log}</td>`;
@@ -272,22 +350,40 @@ function addLogRow(data) {
     if (labelText === 'anomaly') {
         row.classList.add('log-anomaly');
         anomalyCount++;
-    } else if (labelText === 'normal') {
+    } else {
         row.classList.add('log-normal');
         normalCount++;
     }
 
     totalCount++;
-    // updateStatsAndChart(); // Called by ws.onmessage
     autoScroll('logsContainer');
 }
 
 // Add alert row
+// function addAlertRow(data) {
+//     let container = document.getElementById("alertsContainer");
+//     if (!container) return;
+//     let div = document.createElement('div');
+//     div.className = 'alert-critical fade-in';
+//     div.innerHTML = `<strong>Critical:</strong> ${data.advice}<br><small>Ref Log: ${data.log}</small>`;
+//     container.insertBefore(div, container.firstChild);
+//     autoScroll('alertsContainer');
+// }
+
+// REPLACE this function
 function addAlertRow(data) {
     let container = document.getElementById("alertsContainer");
+    if (!container) return;
+
     let div = document.createElement('div');
     div.className = 'alert-critical fade-in';
-    div.innerHTML = `<strong>Critical:</strong> ${data.advice}<br><small>Ref Log: ${data.log}</small>`;
+    
+    // Use the advice and log fields from the broadcasted data
+    let advice = data.advice || "No specific advice available.";
+    let logText = data.log || "No reference log.";
+
+    div.innerHTML = `<strong>Critical:</strong> ${advice}<br><small>Ref Log: ${logText}</small>`;
+    
     container.appendChild(div);
     autoScroll('alertsContainer');
 }
@@ -313,18 +409,91 @@ function toggleDarkMode() {
 }
 
 // Filter logs
-function filterLogs(type) {
-    let rows = document.querySelectorAll("#logsTable tr");
+// function filterLogs(type) {
+//     let rows = document.querySelectorAll("#logsTable tr");
+//     rows.forEach(row => {
+//         // Ensure row.cells[1] exists before accessing textContent
+//         if (row.cells.length > 1) {
+//             if (type === 'all' || row.cells[1].textContent === type) {
+//                 row.style.display = '';
+//             } else {
+//                 row.style.display = 'none';
+//             }
+//         }
+//     });
+// }
+
+// REPLACE this entire function
+function filterLogs() {
+    const keyword = document.getElementById('keywordSearch').value.toLowerCase();
+    const startTime = document.getElementById('startTime').value ? new Date(document.getElementById('startTime').value) : null;
+    const endTime = document.getElementById('endTime').value ? new Date(document.getElementById('endTime').value) : null;
+    const type = document.getElementById('logFilter').value;
+
+    const rows = document.querySelectorAll("#logsTable tr");
+
     rows.forEach(row => {
-        // Ensure row.cells[1] exists before accessing textContent
-        if (row.cells.length > 1) {
-            if (type === 'all' || row.cells[1].textContent === type) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
-            }
+        if (row.cells.length < 3) return; // Skip invalid rows
+
+        const logTimestampStr = row.cells[0].textContent;
+        const logType = row.cells[1].textContent.toLowerCase();
+        const logContent = row.cells[2].textContent.toLowerCase();
+        const logTimestamp = new Date(logTimestampStr);
+
+        const keywordMatch = logContent.includes(keyword);
+        const typeMatch = (type === 'all' || logType === type);
+        const startTimeMatch = (!startTime || logTimestamp >= startTime);
+        const endTimeMatch = (!endTime || logTimestamp <= endTime);
+
+        if (keywordMatch && typeMatch && startTimeMatch && endTimeMatch) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
         }
     });
+}
+
+// ADD this entire new function somewhere in script.js
+function initHistoricalChart() {
+    fetch('/api/historical-trends?interval=H')
+        .then(response => response.json())
+        .then(data => {
+            if (!data || data.length === 0) {
+                console.log("No historical data to display.");
+                return;
+            }
+            const labels = data.map(d => d.timestamp);
+            const anomalyData = data.map(d => d.anomalies);
+
+            const ctx = document.getElementById('historicalChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Anomalies',
+                        data: anomalyData,
+                        borderColor: '#dc3545',
+                        backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                // Ensure y-axis only shows whole numbers for counts
+                                stepSize: 1
+                            }
+                        }
+                    }
+                }
+            });
+        });
 }
 
 // Periodic timestamp update

@@ -113,24 +113,40 @@
             </div>
             <div class="filter-controls">
                 <span class="last-updated">Last Updated: <span id="lastUpdated">{{ last_updated }}</span></span>
+
+                <input type="text" id="keywordSearch" class="select-dropdown" placeholder="Search by keyword...">
+
+                <div style="display: flex; gap: 10px;">
+                    <input type="datetime-local" id="startTime" class="select-dropdown" title="Start Time">
+                    <input type="datetime-local" id="endTime" class="select-dropdown" title="End Time">
+                </div>
+
                 <select id="logFilter" class="select-dropdown">
-                    <option value="all">All Logs</option>
+                    <option value="all">All</option>
                     <option value="normal">Normal</option>
                     <option value="anomaly">Anomaly</option>
                 </select>
+                </div>
+        </section>
+
+        <section class="log-section">
+            <h3>Historical Trends (Anomalies per Hour)</h3>
+            <div class="chart-container" style="height: 350px; width: 100%; max-width: none;">
+                <canvas id="historicalChart"></canvas>
             </div>
         </section>
 
         <section class="log-section">
-            <h2>Logs</h2>
+            <h3>Logs</h3>
             <div id="logsContainer" class="scrollable-content">
                 <table id="logsTable" class="log-table">
-                    </table>
+                    <tbody></tbody>
+                </table>
             </div>
         </section>
 
         <section class="alerts-section">
-            <h2>Critical Alerts</h2>
+            <h3>Critical Alerts</h3>
             <div id="alertsContainer" class="scrollable-content"></div>
         </section>
 
@@ -143,17 +159,24 @@
     <script>
         // Initialize chart on page load with server values
         window.onload = () => {
-            initChart({{ normal_count | default(0) }}, {{ anomaly_count | default(0) }});
+            initChart();
+
+            initHistoricalChart();
 
             // Initialize dark mode toggle based on body class
             const darkModeToggle = document.getElementById('darkModeToggle');
             darkModeToggle.addEventListener('click', toggleDarkMode);
 
             // Initialize log filter
-            const logFilter = document.getElementById('logFilter');
-            logFilter.addEventListener('change', (event) => {
-                filterLogs(event.target.value);
-            });
+            // const logFilter = document.getElementById('logFilter');
+            // logFilter.addEventListener('change', (event) => {
+            //     filterLogs(event.target.value);
+            // });
+
+            document.getElementById('keywordSearch').addEventListener('keyup', filterLogs);
+            document.getElementById('startTime').addEventListener('change', filterLogs);
+            document.getElementById('endTime').addEventListener('change', filterLogs);
+            document.getElementById('logFilter').addEventListener('change', filterLogs);
 
             // Initialize Lenis for smooth scrolling
             const lenis = new Lenis({

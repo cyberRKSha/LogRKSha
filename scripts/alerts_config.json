@@ -1,0 +1,39 @@
+{
+  "rules": [
+    {
+      "name": "Failed Sudo Attempt",
+      "keyword": "command not allowed",
+      "source": "journalctl",
+      "enabled": true
+    },
+    {
+      "name": "Failed Password",
+      "keyword": "Failed password",
+      "enabled": true
+    },
+    {
+      "name": "Kernel Panic",
+      "keyword": "Kernel panic",
+      "enabled": true
+    },
+    {
+        "name": "Segmentation Fault",
+        "keyword": "segfault",
+        "enabled": true
+    }
+  ],
+  "notifications": {
+    "email": {
+      "enabled": false,
+      "recipient": "admin@example.com",
+      "smtp_server": "smtp.example.com",
+      "smtp_port": 587,
+      "smtp_user": "user@example.com",
+      "smtp_password": "YOUR_PASSWORD"
+    },
+    "slack": {
+      "enabled": false,
+      "webhook_url": "YOUR_SLACK_WEBHOOK_URL"
+    }
+  }
+}
