@@ -25640,3 +25640,65 @@ timestamp,source,content,label
 2025-07-30T20:20:51.606074,pacman.log,Jul 30 20:20:51	server	6960	Received disconnect from 139.108.12.171: 46: Bye Bye [preauth],0
 2025-07-30T20:20:54.366687,pacman.log,Jul 30 20:20:54	testvm	14993	pam_unix(sshd:session): session closed for user chen,0
 2025-07-30T20:21:00.166062,journalctl,"perf: interrupt took too long (3182 > 3147), lowering kernel.perf_event_max_sample_rate to 62000",0
+2025-07-30T21:25:58.310056,journalctl,ACPI action undefined: PNP0C0A:00,normal
+2025-07-30T21:25:58.404581,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-07-30T21:25:58.445619,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-07-30T21:25:58.485959,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-07-30T21:26:44.170135,journalctl,rksha : TTY=pts/2 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/sim_ana.py,normal
+2025-07-30T21:26:44.218013,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-30T21:31:41.920595,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-30T21:34:20.512885,journalctl,rksha : TTY=pts/2 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/sim_ana.py,normal
+2025-07-30T21:34:20.560689,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-30T21:34:20.608098,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-30T21:34:53.430240,journalctl,rksha : TTY=pts/2 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/sim_ana.py,normal
+2025-07-30T21:34:53.477223,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-30T21:43:21.942217,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-07-30T21:43:21.971282,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-07-30T21:43:31.924362,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-07-30T21:49:15.671261,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-30T21:54:49.044274,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-30T21:54:49.086963,journalctl,<info>  [1753891569.7018] policy: set 'NFSU' (wlp0s20f3) as default for IPv6 routing and DNS,normal
+2025-07-30T21:54:49.128590,journalctl,"<info>  [1753892001.4349] dhcp4 (wlp0s20f3): state changed new lease, address=10.200.59.18",normal
+2025-07-30T21:54:49.160806,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-07-30T21:54:49.199871,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-07-30T21:54:49.244414,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-07-30T21:54:49.295221,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-30T21:55:09.188018,journalctl,rksha : TTY=pts/2 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/sim_ana.py,normal
+2025-07-30T21:55:09.234421,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-30T22:00:39.410411,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-30T22:27:15.191214,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-07-30T22:27:46.418559,journalctl,rksha : TTY=pts/2 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/sim_ana.py,normal
+2025-07-30T22:27:46.460994,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-30T22:30:30.415213,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-30T22:42:10.658086,journalctl,rksha : TTY=pts/2 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/sim_ana.py,normal
+2025-07-30T22:42:10.702983,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-30T22:42:10.764128,journalctl,<info>  [1753894803.9120] policy: set 'NFSU' (wlp0s20f3) as default for IPv6 routing and DNS,normal
+2025-07-30T22:42:10.811452,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-30T22:42:10.856812,journalctl,ACPI action undefined: PNP0C0A:00,normal
+2025-07-30T22:42:42.436856,journalctl,rksha : TTY=pts/2 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/sim_ana.py,normal
+2025-07-30T22:42:42.477736,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-30T22:43:19.707082,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-07-30T22:43:19.744394,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-07-30T22:43:29.920523,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-07-30T23:13:18.711890,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-07-30T23:13:18.748770,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-07-30T23:13:28.669857,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-07-30T23:22:29.922861,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-30T23:28:22.076638,journalctl,"<info>  [1753897398.2564] dhcp4 (wlp0s20f3): state changed new lease, address=10.200.59.18",normal
+2025-07-30T23:28:22.116639,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-07-30T23:28:22.153723,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-07-30T23:28:22.200924,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-07-30T23:28:22.247080,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-30T23:30:15.436272,journalctl,rksha : TTY=pts/2 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/sim_ana.py,normal
+2025-07-30T23:30:15.482743,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-30T23:32:16.663257,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-31T09:46:36.471196,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-31T09:47:17.109577,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-31T09:47:17.153004,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-31T09:47:17.216680,journalctl,rksha : TTY=pts/1 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/monitor.py,normal
+2025-07-31T09:47:17.265881,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-07-31T09:47:17.314383,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-07-31T09:59:31.972299,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-07-31T09:59:32.009938,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-07-31T09:59:41.918681,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-07-31T10:01:33.685301,journalctl,pam_unix(sudo:session): session closed for user root,normal

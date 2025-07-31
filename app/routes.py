@@ -91,7 +91,7 @@ async def dashboard(request: Request):
 # In app/routes.py, REPLACE the existing /api/historical-trends function
 
 @router.get("/api/historical-trends")
-async def get_historical_trends(interval: str = 'H'):
+async def get_historical_trends(interval: str = 'h'):
 
     real_log_path = "/home/rksha/Documents/Projects/log-anamoly-detector/Linux/logs/real_log.csv"
     try:
@@ -102,10 +102,7 @@ async def get_historical_trends(interval: str = 'H'):
         if df.empty:
             return []
 
-        # Robust timestamp conversion
-        # The 'infer_datetime_format=True' is a performance boost and helps with common formats.
-        # 'errors='coerce'' will turn any unparseable dates into 'NaT' (Not a Time).
-        df['timestamp'] = pd.to_datetime(df['timestamp'], errors='coerce', infer_datetime_format=True)
+        df['timestamp'] = pd.to_datetime(df['timestamp'], errors='coerce')
 
         # Remove any rows that failed to parse
         df.dropna(subset=['timestamp'], inplace=True)
@@ -115,8 +112,6 @@ async def get_historical_trends(interval: str = 'H'):
 
         df.set_index('timestamp', inplace=True)
 
-        # Resample to get anomaly counts. Using 'label' column.
-        # Ensure label column is numeric for summing
         df['label'] = pd.to_numeric(df['label'], errors='coerce')
         anomaly_logs = df[df['label'] == 1]['label'].resample(interval).count()
 
@@ -134,3 +129,7 @@ async def get_historical_trends(interval: str = 'H'):
     except Exception as e:
         log_error(f"An error occurred while generating historical trends: {e}")
         return []
+    
+
+
+
