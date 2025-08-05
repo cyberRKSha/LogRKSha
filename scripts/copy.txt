@@ -598,4 +598,101 @@ html.lenis {
 
 
 
+# update.py
+import os
+import pandas as pd
+import joblib
+import numpy as np
+from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
+from sentence_transformers import SentenceTransformer
+import sqlite3
+
+# --- Configuration: File Paths ---
+BASE_DIR = "/home/rksha/Documents/Projects/log-anamoly-detector/Linux" # Example path
+DATABASE_FILE = os.path.join(BASE_DIR, "log_database.db")
+MODEL_PATH = os.path.join(BASE_DIR, "model/sgd_embedder.pkl")
+EMBEDDER_PATH = os.path.join(BASE_DIR, "model/sentence_embedder.pkl")
+CHECKPOINT_FILE = os.path.join(BASE_DIR, "model/last_processed_log_id.txt") # Checkpoint by ID now
+
+# --- (Keep your logging helpers) ---
+def log_info(msg): print(f"\033[94mℹ️ {msg}\033[0m")
+def log_success(msg): print(f"\032[92m✅ {msg}\033[0m")
+def log_warn(msg): print(f"\033[93m⚠️ {msg}\033[0m")
+def log_report(report): print(f"\033[96m{report}\033[0m")
+
+def run_update():
+    """
+    Main function to evaluate and incrementally update the model.
+    """
+    log_info("Starting model update process...")
+    # --- (Keep your pre-flight checks for model files) ---
+
+    log_info("Starting model update process...")
+    for path in [DATABASE_FILE, MODEL_PATH, EMBEDDER_PATH]:
+        if not os.path.exists(path):
+            log_error(f"Required file not found: {path}. Please run train.py first. Exiting.")
+            return
+
+    log_info("Loading existing model and embedder...")
+    model = joblib.load(MODEL_PATH)
+    embedder = joblib.load(EMBEDDER_PATH)
+
+    # --- Find New Data Using Checkpoint ---
+    last_processed_id = 0
+    if os.path.exists(CHECKPOINT_FILE):
+        with open(CHECKPOINT_FILE, "r") as f:
+            try: last_processed_id = int(f.read().strip())
+            except (ValueError, IOError): last_processed_id = 0
+
+    # --- NEW: Fetch new, reviewed data from the database ---
+    conn = sqlite3.connect(DATABASE_FILE)
+    query = f"SELECT id, content, final_label FROM logs WHERE is_reviewed = 1 AND id > {last_processed_id}"
+    new_logs_df = pd.read_sql_query(query, conn)
+    conn.close()
+
+    if new_logs_df.empty:
+        log_success("Model is already up-to-date. No new reviewed logs to train on.")
+        return
+
+    # Get the ID of the last log we are about to process
+    latest_id_in_batch = new_logs_df['id'].max()
+
+    log_info(f"Found {len(new_logs_df)} new reviewed logs to process.")
+
+    X_new_text = new_logs_df['content'].astype(str).tolist()
+    y_new = new_logs_df['final_label'].astype(int).values
+
+    # --- (Keep your model evaluation logic as is) ---
+    log_info("Evaluating current model performance on the new batch...")
+    X_eval = embedder.encode(X_new_text, show_progress_bar=True)
+    y_pred = model.predict(X_eval)
+    report = classification_report(y_new, y_pred, target_names=['Normal (0)', 'Anomaly (1)'], zero_division=0)
+    accuracy = accuracy_score(y_new, y_pred)
+    cm = confusion_matrix(y_new, y_pred, labels=defined_labels)
+
+    print("\n" + "="*50)
+    log_info("Performance of CURRENT model on the NEW data batch:")    
+    log_report(f"Accuracy on new batch: {accuracy:.2%}")
+    log_report(f"Confusion Matrix (Labels: {defined_labels}):\n{cm}")
+    log_report("Classification Report on new data:\n" + report)
+    
+    # --- Update (Incrementally Train) the Model ---
+    log_info("Proceeding with model update...")
+    idx = np.random.permutation(len(y_new))
+    X_to_fit = X_eval[idx]
+    y_to_fit = y_new[idx]
+
+    model.partial_fit(X_to_fit, y_to_fit, classes=np.array([0, 1]))
+    joblib.dump(model, MODEL_PATH)
+    log_success(f"Model successfully updated and saved to: {MODEL_PATH}")
+
+    # --- Update Checkpoint ---
+    with open(CHECKPOINT_FILE, "w") as f:
+        f.write(str(latest_id_in_batch))
+    log_success(f"Checkpoint updated. Last processed log ID: {latest_id_in_batch}")
+
+if __name__ == "__main__":
+    run_update()
+
+
 

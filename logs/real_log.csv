@@ -27540,3 +27540,359 @@ timestamp,source,content,label
 2025-08-01T14:42:27.728694,pacman.log,Aug 01 14:42:27	server	14787	error: Received disconnect from 90.117.143.176: 20626: com.jcraft.jsch.JSchException: Auth fail [preauth],1
 2025-08-01T14:42:31.091697,pacman.log,Aug 01 14:42:31	testvm	28392	Received disconnect from 182.63.138.181: 59: Closed due to user request [preauth],0
 2025-08-01T14:42:35.100937,pacman.log,Aug 01 14:42:35	LabSZ	15964	Connection closed by 74.160.180.178 [preauth],0
+2025-08-05T21:59:00.895216,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T21:59:01.009001,journalctl,man-db.service: Deactivated successfully.,normal
+2025-08-05T21:59:01.048892,journalctl,Finished Daily man-db regeneration.,normal
+2025-08-05T21:59:35.024539,journalctl,Starting Cleanup of Temporary Directories...,normal
+2025-08-05T21:59:35.071577,journalctl,systemd-tmpfiles-clean.service: Deactivated successfully.,normal
+2025-08-05T21:59:35.106384,journalctl,Finished Cleanup of Temporary Directories.,normal
+2025-08-05T21:59:37.038661,journalctl,rksha : TTY=pts/2 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/sim_ana.py,normal
+2025-08-05T21:59:37.086331,journalctl,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000),normal
+2025-08-05T22:00:48.786872,journalctl,pam_unix(sudo:session): session closed for user root,normal
+2025-08-05T22:07:31.438666,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:07:31.511212,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:07:37.047819,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:07:37.105581,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:07:37.962661,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:07:38.254570,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:07:38.357101,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:07:39.798151,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T22:11:45.291059,journalctl,ACPI action undefined: PNP0C0A:00,normal
+2025-08-05T22:11:45.331667,journalctl,ACPI action undefined: PNP0C0A:00,normal
+2025-08-05T22:12:38.287606,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:12:38.324691,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7,normal
+2025-08-05T22:12:38.803631,journalctl,<info>  [1754412157.8435] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:38.855367,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:12:38.893459,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:12:39.030154,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:12:39.059949,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:12:39.199703,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:12:39.242388,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=6),normal
+2025-08-05T22:12:39.279556,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a7,normal
+2025-08-05T22:12:39.308144,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:12:39.350374,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:12:39.475640,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:12:39.525257,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=],normal
+2025-08-05T22:12:40.022657,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7,normal
+2025-08-05T22:12:40.096126,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:12:40.134767,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:12:43.638890,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:12:43.672523,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:12:43.714307,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:12:43.771409,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6,normal
+2025-08-05T22:12:44.257308,journalctl,<info>  [1754412163.3465] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:44.316359,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:12:44.371290,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:12:44.547239,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:12:44.579574,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:12:44.750705,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:12:44.801211,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1),normal
+2025-08-05T22:12:44.847490,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a6,normal
+2025-08-05T22:12:44.876267,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:12:44.919583,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:12:45.064051,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:12:45.102518,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=],normal
+2025-08-05T22:12:45.620116,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6,normal
+2025-08-05T22:12:48.288750,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T22:13:12.043474,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-46 noise=9999 txrate=52000,normal
+2025-08-05T22:17:30.966121,journalctl,Starting Hostname Service...,normal
+2025-08-05T22:17:46.032647,journalctl,Started Hostname Service.,normal
+2025-08-05T22:17:47.227425,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:17:48.276125,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7,normal
+2025-08-05T22:17:59.647430,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:18:00.687546,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:18:03.788095,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:18:04.807477,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:18:05.834963,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:18:08.977412,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=6),normal
+2025-08-05T22:18:10.009970,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a7,normal
+2025-08-05T22:18:11.028676,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:18:12.054552,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:18:13.082941,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7,normal
+2025-08-05T22:18:16.183566,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:18:17.217531,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=],normal
+2025-08-05T22:18:30.926651,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:18:31.952090,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:18:35.065801,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:18:36.090070,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:18:37.121821,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:18:38.152549,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6,normal
+2025-08-05T22:18:43.294613,journalctl,<info>  [1754412467.5263] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:18:48.444703,journalctl,<info>  [1754412467.5265] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:18:49.477650,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:18:50.521658,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:18:53.633091,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:18:55.684680,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:18:57.744542,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:18:58.774653,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1),normal
+2025-08-05T22:18:59.801796,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a6,normal
+2025-08-05T22:19:00.826611,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:19:01.849370,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:19:04.962670,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:19:06.003572,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=],normal
+2025-08-05T22:19:09.100152,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6,normal
+2025-08-05T22:19:21.478558,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-47 noise=9999 txrate=52000,normal
+2025-08-05T22:19:22.506567,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-46 noise=9999 txrate=52000,normal
+2025-08-05T22:19:23.536413,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=52000,normal
+2025-08-05T22:19:24.566614,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=52000,normal
+2025-08-05T22:19:25.591701,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T22:19:26.619597,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=52000,normal
+2025-08-05T22:19:27.659063,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=52000,normal
+2025-08-05T22:19:28.690556,journalctl,systemd-hostnamed.service: Deactivated successfully.,normal
+2025-08-05T22:26:28.944073,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:26:29.978671,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:26:31.019315,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:26:32.057632,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7,normal
+2025-08-05T22:26:43.426542,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:26:44.456310,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:26:47.542393,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:26:48.562452,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:26:51.656705,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:26:52.686609,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=6),normal
+2025-08-05T22:26:53.706282,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:26:54.732651,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a7,normal
+2025-08-05T22:26:55.765660,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:26:58.856263,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:26:59.886933,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=],normal
+2025-08-05T22:27:02.984659,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7,normal
+2025-08-05T22:27:13.272547,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:27:14.297662,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:27:18.435520,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:27:19.461555,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:27:20.500525,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:27:23.607622,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6,normal
+2025-08-05T22:27:33.938636,journalctl,<info>  [1754412995.4405] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:27:34.972753,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:27:36.000476,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:27:37.034645,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:27:38.057680,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:27:41.184347,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:27:42.229395,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1),normal
+2025-08-05T22:27:43.249624,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:27:44.276136,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a6,normal
+2025-08-05T22:27:45.310736,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:27:48.447710,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:27:49.535664,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=],normal
+2025-08-05T22:28:01.936836,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6,normal
+2025-08-05T22:28:06.083734,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T22:28:08.165917,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-44 noise=9999 txrate=52000,normal
+2025-08-05T22:30:59.282713,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:31:00.309576,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:33:09.940644,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:33:10.977966,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:33:12.021950,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:33:13.069541,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7,normal
+2025-08-05T22:33:23.434591,journalctl,<info>  [1754413388.7200] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:33:24.464670,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:33:25.502539,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:33:28.607556,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:33:29.627239,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:33:30.653584,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:33:34.778753,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a7,normal
+2025-08-05T22:33:35.814715,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:33:36.833313,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:33:39.965269,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:33:40.994595,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=],normal
+2025-08-05T22:33:44.101724,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7,normal
+2025-08-05T22:33:54.471764,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:33:55.496581,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:33:59.630578,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:34:00.655350,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:34:01.684533,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:34:02.715580,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6,normal
+2025-08-05T22:34:14.103780,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:34:17.239573,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:34:18.285533,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:34:19.309646,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:34:20.344393,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:34:23.471623,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1),normal
+2025-08-05T22:34:24.499964,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:34:25.537545,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a6,normal
+2025-08-05T22:34:26.570323,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:34:29.678205,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:34:30.717591,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=],normal
+2025-08-05T22:34:43.115661,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6,normal
+2025-08-05T22:34:47.254064,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T22:35:36.041149,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-52 noise=9999 txrate=52000,normal
+2025-08-05T22:38:21.285644,journalctl,ACPI action undefined: PNP0C0A:00,normal
+2025-08-05T22:38:22.329633,journalctl,ACPI action undefined: PNP0C0A:00,normal
+2025-08-05T22:38:23.370686,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:38:24.401564,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7,normal
+2025-08-05T22:38:35.779506,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:38:36.819640,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:38:39.928715,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:38:40.947831,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:38:41.974628,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:38:43.021970,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=7),normal
+2025-08-05T22:38:46.131420,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:38:47.167603,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a7,normal
+2025-08-05T22:38:48.200568,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:38:51.310678,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:38:52.345899,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=],normal
+2025-08-05T22:39:04.816038,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7,normal
+2025-08-05T22:39:05.841983,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:39:06.873642,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:39:11.025684,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T22:39:19.533320,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-56 noise=9999 txrate=234000,normal
+2025-08-05T22:39:20.560375,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:39:21.589622,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:39:22.633501,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:39:23.673680,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6,normal
+2025-08-05T22:39:35.161725,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:39:36.192902,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:39:39.272099,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:39:40.306654,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:39:41.339288,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:39:44.440687,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1),normal
+2025-08-05T22:39:45.467533,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a6,normal
+2025-08-05T22:39:46.492760,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:39:47.517588,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:39:50.648602,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:39:51.693686,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=],normal
+2025-08-05T22:39:54.819586,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6,normal
+2025-08-05T22:40:05.200807,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:40:06.220845,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:40:07.258504,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-49 noise=9999 txrate=52000,normal
+2025-08-05T22:40:10.348706,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T22:42:11.529966,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-43 noise=9999 txrate=52000,normal
+2025-08-05T22:42:26.888601,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:42:27.915073,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:42:28.952639,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:42:29.995286,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7,normal
+2025-08-05T22:42:40.297576,journalctl,<info>  [1754413945.6894] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:42:41.341026,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:42:42.368685,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:42:45.465988,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:42:46.486966,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:42:47.514496,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:42:48.544521,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=7),normal
+2025-08-05T22:42:51.623484,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:42:52.650595,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a7,normal
+2025-08-05T22:42:53.677402,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:42:56.769029,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:42:57.798708,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=],normal
+2025-08-05T22:43:09.146917,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7,normal
+2025-08-05T22:43:11.195711,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:43:12.217221,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:43:16.407657,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:43:17.433518,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:43:18.468036,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:43:19.498566,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6,normal
+2025-08-05T22:43:24.665574,journalctl,<info>  [1754413953.5383] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:43:30.902699,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:43:31.932625,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:43:35.030557,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:43:38.125201,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:43:39.152047,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:43:40.182484,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1),normal
+2025-08-05T22:43:41.208638,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a6,normal
+2025-08-05T22:43:42.228574,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:43:43.257216,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6,normal
+2025-08-05T22:43:44.283353,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:43:47.394706,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:43:48.423866,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=],normal
+2025-08-05T22:43:50.481518,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-43 noise=9999 txrate=52000,normal
+2025-08-05T22:44:01.819159,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T22:44:04.912967,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:44:05.932933,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:44:06.960113,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-43 noise=9999 txrate=52000,normal
+2025-08-05T22:44:07.984594,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T22:47:37.033968,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:47:38.065321,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7,normal
+2025-08-05T22:47:49.436489,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:47:50.474806,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:47:53.573497,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:47:54.593746,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:47:55.620647,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:47:57.703894,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a7,normal
+2025-08-05T22:47:58.728773,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:47:59.755337,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:48:04.939823,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:48:05.969782,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=],normal
+2025-08-05T22:48:17.396345,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7,normal
+2025-08-05T22:48:19.459633,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:48:20.479957,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:48:23.568266,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-51 noise=9999 txrate=234000,normal
+2025-08-05T22:48:24.592708,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T22:53:58.590664,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:53:59.618275,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:54:00.649054,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:54:03.739702,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6,normal
+2025-08-05T22:54:14.103772,journalctl,<info>  [1754414637.5350] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:54:15.144557,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:54:16.177690,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:54:17.210623,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:54:18.242624,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:54:19.289558,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:54:23.440650,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:54:24.471589,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a6,normal
+2025-08-05T22:54:25.507105,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:54:28.607626,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6,normal
+2025-08-05T22:54:29.642633,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:54:30.676488,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=],normal
+2025-08-05T22:54:32.738438,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-47 noise=9999 txrate=52000,normal
+2025-08-05T22:54:44.112611,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:54:45.141657,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:54:48.258650,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T22:54:49.299598,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-49 noise=9999 txrate=52000,normal
+2025-08-05T22:54:50.330851,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=52000,normal
+2025-08-05T22:57:47.277583,journalctl,ACPI group/action undefined: wmi / PNP0C14:00,normal
+2025-08-05T22:59:00.828675,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:59:01.859721,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7,normal
+2025-08-05T22:59:13.215023,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:59:14.252849,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:59:17.341502,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:59:18.361479,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:59:19.388574,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:59:23.506710,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:59:24.545975,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a7,normal
+2025-08-05T22:59:25.572584,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:59:28.674991,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:59:29.706094,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=],normal
+2025-08-05T22:59:42.173791,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7,normal
+2025-08-05T22:59:43.196574,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T22:59:44.223280,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T22:59:50.426711,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T23:07:21.913283,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T23:07:22.945556,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T23:07:23.976532,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T23:07:25.007270,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6,normal
+2025-08-05T23:07:35.334950,journalctl,<info>  [1754415440.7768] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:07:36.363273,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02),normal
+2025-08-05T23:07:37.401522,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T23:07:40.521402,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T23:07:41.546645,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T23:07:42.584570,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T23:07:45.675972,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=3),normal
+2025-08-05T23:07:46.695660,journalctl,wlp0s20f3: associated,normal
+2025-08-05T23:07:47.733803,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a6,normal
+2025-08-05T23:07:48.768019,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T23:07:49.797633,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6,normal
+2025-08-05T23:07:52.916534,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T23:07:53.949796,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=],normal
+2025-08-05T23:07:56.022597,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-50 noise=9999 txrate=52000,normal
+2025-08-05T23:08:07.336609,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T23:08:08.356061,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T23:08:11.446292,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=52000,normal
+2025-08-05T23:08:12.473546,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=52000,normal
+2025-08-05T23:08:13.502105,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=52000,normal
+2025-08-05T23:08:14.537874,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T23:11:49.032545,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-51 noise=9999 txrate=52000,normal
+2025-08-05T23:12:26.177637,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T23:12:27.210799,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7,normal
+2025-08-05T23:12:38.548926,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02),normal
+2025-08-05T23:12:39.588271,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T23:12:42.700880,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T23:12:43.748075,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T23:12:44.785119,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T23:12:45.832651,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=3),normal
+2025-08-05T23:12:48.922302,journalctl,wlp0s20f3: associated,normal
+2025-08-05T23:12:49.948717,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a7,normal
+2025-08-05T23:12:50.977616,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T23:12:54.104785,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T23:12:55.138721,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=],normal
+2025-08-05T23:13:06.524653,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7,normal
+2025-08-05T23:13:08.599100,journalctl,Starting Network Manager Script Dispatcher Service...,normal
+2025-08-05T23:13:09.623632,journalctl,Started Network Manager Script Dispatcher Service.,normal
+2025-08-05T23:13:13.760095,journalctl,NetworkManager-dispatcher.service: Deactivated successfully.,normal
+2025-08-05T23:13:16.850047,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=117000,normal

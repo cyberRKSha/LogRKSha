@@ -14267,3 +14267,991 @@
 2025-08-01 14:42:31,normal,Aug 01 14:42:31	testvm	28392	Received disconnect from 182.63.138.181: 59: Closed due to user request [preauth]
 2025-08-01 14:42:35,normal,Aug 01 14:42:35	LabSZ	15964	Connection closed by 74.160.180.178 [preauth]
 2025-08-01 14:42:36,normal,pam_unix(sudo:session): session closed for user root
+2025-08-05 21:59:00,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=52000
+2025-08-05 21:59:00,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 21:59:00,normal,Starting Daily man-db regeneration...
+2025-08-05 21:59:00,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-62 noise=9999 txrate=52000
+2025-08-05 21:59:01,normal,man-db.service: Deactivated successfully.
+2025-08-05 21:59:01,normal,Finished Daily man-db regeneration.
+2025-08-05 21:59:01,normal,man-db.service: Consumed 14.782s CPU time, 231.8M memory peak.
+2025-08-05 21:59:16,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-52 noise=9999 txrate=52000
+2025-08-05 21:59:35,normal,Starting Cleanup of Temporary Directories...
+2025-08-05 21:59:35,normal,systemd-tmpfiles-clean.service: Deactivated successfully.
+2025-08-05 21:59:35,normal,Finished Cleanup of Temporary Directories.
+2025-08-05 21:59:36,anomaly,Aug 05 21:59:36	testvm	29478	error: Received disconnect from 250.253.136.241: 28222: No more user authentication methods available. [preauth]
+2025-08-05 21:59:37,normal,rksha : TTY=pts/2 ; PWD=/home/rksha/Documents/Projects/log-anamoly-detector/Linux ; USER=root ; COMMAND=/usr/bin/python scripts/sim_ana.py
+2025-08-05 21:59:37,normal,pam_unix(sudo:session): session opened for user root(uid=0) by rksha(uid=1000)
+2025-08-05 21:59:38,anomaly,Aug 05 21:59:38	LabSZ	18685	kernel: panic occurred, switching back to text console
+2025-08-05 21:59:40,normal,Aug 05 21:59:40	LabSZ	11546	Received disconnect from 7.192.128.140: 76: Closed due to user request [preauth]
+2025-08-05 21:59:44,normal,Aug 05 21:59:44	testvm	23847	Accepted password for fztu from 41.100.201.126 port 42185 ssh3
+2025-08-05 21:59:48,normal,Aug 05 21:59:48	prod1	11743	Did not receive identification string from 7.103.9.60
+2025-08-05 21:59:52,normal,Aug 05 21:59:52	LabSZ	17097	Received disconnect from 92.223.37.255: 21: disconnected by user
+2025-08-05 21:59:56,normal,Aug 05 21:59:56	server	18771	Received disconnect from 153.62.166.106: 40: Closed due to user request [preauth]
+2025-08-05 21:59:58,normal,Aug 05 21:59:58	LabSZ	19755	Received disconnect from 114.180.8.235: 39: disconnected by user
+2025-08-05 22:00:02,normal,Aug 05 22:00:02	server	26503	PAM service(sshd) ignoring max retries; 7 > 4
+2025-08-05 22:00:06,normal,Aug 05 22:00:06	server	4548	pam_unix(sshd:session): session opened for user backup by (uid=1)
+2025-08-05 22:00:10,normal,Aug 05 22:00:10	server	19954	Accepted password for chen from 166.138.145.197 port 5170 ssh4
+2025-08-05 22:00:14,anomaly,Aug 05 22:00:14	testvm	23465	sudo: pam_unix(sudo:auth): authentication failure; logname=ubuntu4 uid=329928 euid=1 tty=/dev/pts/2 ruser=user1 rhost=  user=root
+2025-08-05 22:00:18,normal,Aug 05 22:00:18	LabSZ	6228	pam_unix(sshd:session): session opened for user chen by (uid=1)
+2025-08-05 22:00:21,anomaly,Aug 05 22:00:21	prod1	17364	error: maximum authentication attempts exceeded for chen from 11.253.180.194 port 36789
+2025-08-05 22:00:24,normal,Aug 05 22:00:24	prod1	2008	Received disconnect from 176.69.11.8: 80: Bye Bye [preauth]
+2025-08-05 22:00:28,normal,Aug 05 22:00:28	testvm	28022	Received disconnect from 7.46.235.33: 26: Closed due to user request [preauth]
+2025-08-05 22:00:32,normal,Aug 05 22:00:32	LabSZ	8572	Accepted password for 123 from 224.166.103.201 port 4035 ssh5
+2025-08-05 22:00:37,normal,Aug 05 22:00:37	prod1	22126	pam_unix(sshd:session): session opened for user matlab by (uid=4)
+2025-08-05 22:00:39,normal,Aug 05 22:00:39	LabSZ	6507	Connection closed by 169.114.180.137 [preauth]
+2025-08-05 22:00:44,anomaly,Aug 05 22:00:44	testvm	2091	error: maximum authentication attempts exceeded for backup from 145.55.65.57 port 5526
+2025-08-05 22:00:48,normal,pam_unix(sudo:session): session closed for user root
+2025-08-05 22:01:36,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-46 noise=9999 txrate=57800
+2025-08-05 22:02:27,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:02:27,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:02:52,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=57800
+2025-08-05 22:07:29,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:07:29,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7
+2025-08-05 22:07:29,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02)
+2025-08-05 22:07:29,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:07:29,normal,<info>  [1754411849.1178] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:07:29,normal,<info>  [1754411849.1179] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:07:29,normal,<info>  [1754411849.1180] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:29,normal,<info>  [1754411849.1180] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:07:29,normal,<info>  [1754411849.1181] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:30,normal,<info>  [1754411849.1387] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:07:30,normal,<info>  [1754411849.1388] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:07:30,normal,<info>  [1754411849.1389] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:30,normal,<info>  [1754411849.1389] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:07:30,normal,<info>  [1754411849.1390] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:30,normal,<info>  [1754411849.1509] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:07:30,normal,<info>  [1754411849.1563] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:07:30,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:07:30,normal,wlp0s20f3: authenticated
+2025-08-05 22:07:30,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:07:30,normal,<info>  [1754411849.1771] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:07:30,normal,<info>  [1754411849.1771] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:07:30,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=6)
+2025-08-05 22:07:30,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a7
+2025-08-05 22:07:30,normal,wlp0s20f3: associated
+2025-08-05 22:07:30,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:07:30,normal,<info>  [1754411849.1913] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:07:30,normal,<info>  [1754411849.1914] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:07:30,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7
+2025-08-05 22:07:30,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:07:30,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=]
+2025-08-05 22:07:30,normal,<info>  [1754411849.2059] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:07:30,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-51 noise=9999 txrate=234000
+2025-08-05 22:07:31,normal,<info>  [1754411849.2064] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:07:31,normal,<info>  [1754411849.2152] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:07:31,normal,<info>  [1754411849.2152] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:07:31,normal,<info>  [1754411849.2153] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:31,normal,<info>  [1754411849.2154] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:07:31,normal,<info>  [1754411849.2154] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:07:31,normal,<info>  [1754411849.2154] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:07:31,normal,<info>  [1754411849.2154] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:31,normal,<info>  [1754411849.2155] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:07:31,normal,<info>  [1754411849.2443] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:07:31,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:07:31,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:07:31,normal,<info>  [1754411850.2983] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:07:31,normal,<info>  [1754411850.2990] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:07:37,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:07:37,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:07:37,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:07:37,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6
+2025-08-05 22:07:37,normal,<info>  [1754411856.7136] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:07:37,normal,<info>  [1754411856.7222] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:07:37,normal,<info>  [1754411856.7222] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:37,normal,<info>  [1754411856.7223] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:07:37,normal,<info>  [1754411856.7223] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:37,normal,<info>  [1754411856.7225] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:07:37,normal,<info>  [1754411856.7225] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:07:37,normal,<info>  [1754411856.7225] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:37,normal,<info>  [1754411856.7225] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:07:37,normal,<info>  [1754411856.7226] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:37,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02)
+2025-08-05 22:07:37,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:07:37,normal,<info>  [1754411856.7459] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:07:37,normal,<info>  [1754411856.7460] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:07:37,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:07:37,normal,wlp0s20f3: authenticated
+2025-08-05 22:07:38,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:07:38,normal,<info>  [1754411856.7782] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:07:38,normal,<info>  [1754411856.7782] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:07:38,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1)
+2025-08-05 22:07:38,normal,wlp0s20f3: associated
+2025-08-05 22:07:38,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a6
+2025-08-05 22:07:38,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:07:38,normal,<info>  [1754411856.7957] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:07:38,normal,<info>  [1754411856.7958] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:07:38,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6
+2025-08-05 22:07:38,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:07:38,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=]
+2025-08-05 22:07:38,normal,<info>  [1754411856.8192] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:07:38,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-46 noise=9999 txrate=52000
+2025-08-05 22:07:38,normal,<info>  [1754411856.8201] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:07:38,normal,<info>  [1754411856.8302] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:07:38,normal,<info>  [1754411856.8302] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:07:38,normal,<info>  [1754411856.8303] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:39,normal,<info>  [1754411856.8304] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:07:39,normal,<info>  [1754411856.8305] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:07:39,normal,<info>  [1754411856.8305] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:07:39,normal,<info>  [1754411856.8306] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:07:39,normal,<info>  [1754411856.8307] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:07:39,normal,<info>  [1754411856.8750] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:07:39,normal,<info>  [1754411856.9135] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:07:39,normal,<info>  [1754411856.9139] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:07:39,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 22:07:58,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-49 noise=9999 txrate=52000
+2025-08-05 22:07:58,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-47 noise=9999 txrate=65000
+2025-08-05 22:09:26,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-44 noise=9999 txrate=117000
+2025-08-05 22:11:45,normal,ACPI action undefined: PNP0C0A:00
+2025-08-05 22:11:45,normal,ACPI action undefined: PNP0C0A:00
+2025-08-05 22:12:01,normal,src/adv_monitor.c:btd_adv_monitor_power_down() Unexpected NULL btd_adv_monitor_manager object upon power down
+2025-08-05 22:12:38,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:12:38,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7
+2025-08-05 22:12:38,normal,<info>  [1754412157.8428] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:12:38,normal,<info>  [1754412157.8429] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:12:38,normal,<info>  [1754412157.8429] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:38,normal,<info>  [1754412157.8432] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:12:38,normal,<info>  [1754412157.8433] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:38,normal,<info>  [1754412157.8434] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:12:38,normal,<info>  [1754412157.8435] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:12:38,normal,<info>  [1754412157.8435] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:38,normal,<info>  [1754412157.8435] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:12:38,normal,<info>  [1754412157.8435] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:38,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02)
+2025-08-05 22:12:38,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:12:38,normal,<info>  [1754412157.8696] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:12:38,normal,<info>  [1754412157.8696] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:12:39,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:12:39,normal,wlp0s20f3: authenticated
+2025-08-05 22:12:39,normal,<info>  [1754412157.8944] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:12:39,normal,<info>  [1754412157.8944] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:12:39,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:12:39,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=6)
+2025-08-05 22:12:39,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a7
+2025-08-05 22:12:39,normal,wlp0s20f3: associated
+2025-08-05 22:12:39,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:12:39,normal,<info>  [1754412157.9092] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:12:39,normal,<info>  [1754412157.9093] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:12:39,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:12:39,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=]
+2025-08-05 22:12:39,normal,<info>  [1754412157.9215] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:12:39,normal,<info>  [1754412157.9220] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:12:39,normal,<info>  [1754412157.9282] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:12:39,normal,<info>  [1754412157.9282] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:12:39,normal,<info>  [1754412157.9283] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:39,normal,<info>  [1754412157.9284] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:12:39,normal,<info>  [1754412157.9285] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:12:39,normal,<info>  [1754412157.9285] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:12:39,normal,<info>  [1754412157.9285] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:39,normal,<info>  [1754412157.9286] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:12:40,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7
+2025-08-05 22:12:40,normal,<info>  [1754412157.9513] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:12:40,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:12:40,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:12:40,normal,<info>  [1754412157.9898] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:12:40,normal,<info>  [1754412157.9901] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:12:40,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-50 noise=9999 txrate=234000
+2025-08-05 22:12:43,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:12:43,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:12:43,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:12:43,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6
+2025-08-05 22:12:43,normal,<info>  [1754412163.3348] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:12:43,normal,<info>  [1754412163.3462] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:12:43,normal,<info>  [1754412163.3462] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:43,normal,<info>  [1754412163.3462] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:12:43,normal,<info>  [1754412163.3463] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:44,normal,<info>  [1754412163.3465] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:12:44,normal,<info>  [1754412163.3465] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:12:44,normal,<info>  [1754412163.3465] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:44,normal,<info>  [1754412163.3465] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:12:44,normal,<info>  [1754412163.3465] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:44,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02)
+2025-08-05 22:12:44,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:12:44,normal,<info>  [1754412163.3621] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:12:44,normal,<info>  [1754412163.3622] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:12:44,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:12:44,normal,wlp0s20f3: authenticated
+2025-08-05 22:12:44,normal,<info>  [1754412163.3947] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:12:44,normal,<info>  [1754412163.3948] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:12:44,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:12:44,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1)
+2025-08-05 22:12:44,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a6
+2025-08-05 22:12:44,normal,wlp0s20f3: associated
+2025-08-05 22:12:44,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:12:44,normal,<info>  [1754412163.4204] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:12:45,normal,<info>  [1754412163.4204] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:12:45,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:12:45,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=]
+2025-08-05 22:12:45,normal,<info>  [1754412163.4470] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:12:45,normal,<info>  [1754412163.4485] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:12:45,normal,<info>  [1754412163.4582] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:12:45,normal,<info>  [1754412163.4582] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:12:45,normal,<info>  [1754412163.4583] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:45,normal,<info>  [1754412163.4584] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:12:45,normal,<info>  [1754412163.4584] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:12:45,normal,<info>  [1754412163.4584] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:12:45,normal,<info>  [1754412163.4585] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:12:45,normal,<info>  [1754412163.4585] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:12:45,normal,<info>  [1754412163.4685] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:12:45,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6
+2025-08-05 22:12:45,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-47 noise=9999 txrate=52000
+2025-08-05 22:12:46,normal,<info>  [1754412165.6603] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:12:46,normal,<info>  [1754412165.6608] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:12:48,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 22:13:12,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-46 noise=9999 txrate=52000
+2025-08-05 22:13:12,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=52000
+2025-08-05 22:15:34,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-44 noise=9999 txrate=130000
+2025-08-05 22:17:27,normal,Unhandled parent window type
+2025-08-05 22:17:28,normal,Failed to associate portal window with parent window
+2025-08-05 22:17:29,normal,Starting Hostname Service...
+2025-08-05 22:17:45,normal,Started Hostname Service.
+2025-08-05 22:17:46,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:17:47,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7
+2025-08-05 22:17:48,normal,<info>  [1754412464.5581] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:17:49,normal,<info>  [1754412464.5582] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:17:50,normal,<info>  [1754412464.5582] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:17:51,normal,<info>  [1754412464.5582] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:17:52,normal,<info>  [1754412464.5583] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:17:53,normal,<info>  [1754412464.5604] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:17:54,normal,<info>  [1754412464.5605] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:17:55,normal,<info>  [1754412464.5605] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:17:56,normal,<info>  [1754412464.5605] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:17:57,normal,<info>  [1754412464.5606] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:17:58,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02)
+2025-08-05 22:17:59,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:18:00,normal,<info>  [1754412464.5986] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:18:01,normal,<info>  [1754412464.5991] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:18:02,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:18:03,normal,wlp0s20f3: authenticated
+2025-08-05 22:18:04,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:18:05,normal,<info>  [1754412464.6218] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:18:06,normal,<info>  [1754412464.6220] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:18:07,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=6)
+2025-08-05 22:18:09,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a7
+2025-08-05 22:18:10,normal,wlp0s20f3: associated
+2025-08-05 22:18:11,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:18:12,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7
+2025-08-05 22:18:13,normal,<info>  [1754412464.6358] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:18:14,normal,<info>  [1754412464.6359] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:18:15,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:18:16,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=]
+2025-08-05 22:18:17,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-56 noise=9999 txrate=234000
+2025-08-05 22:18:18,normal,<info>  [1754412464.6516] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:18:19,normal,<info>  [1754412464.6535] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:18:20,normal,<info>  [1754412464.6652] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:18:21,normal,<info>  [1754412464.6652] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:18:22,normal,<info>  [1754412464.6653] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:18:23,normal,<info>  [1754412464.6655] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:18:24,normal,<info>  [1754412464.6655] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:18:25,normal,<info>  [1754412464.6655] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:18:26,normal,<info>  [1754412464.6656] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:18:27,normal,<info>  [1754412464.6657] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:18:28,normal,<info>  [1754412464.6864] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:18:29,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:18:30,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:18:31,normal,<info>  [1754412464.7387] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:18:33,normal,<info>  [1754412464.7390] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:18:34,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:18:35,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:18:36,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:18:37,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6
+2025-08-05 22:18:38,normal,<info>  [1754412467.5174] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:18:39,normal,<info>  [1754412467.5262] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:18:40,normal,<info>  [1754412467.5263] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:18:41,normal,<info>  [1754412467.5263] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:18:42,normal,<info>  [1754412467.5263] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:18:43,normal,<info>  [1754412467.5264] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:18:44,normal,<info>  [1754412467.5265] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:18:45,normal,<info>  [1754412467.5265] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:18:46,normal,<info>  [1754412467.5265] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:18:47,normal,<info>  [1754412467.5265] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:18:48,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02)
+2025-08-05 22:18:49,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:18:50,normal,<info>  [1754412467.5513] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:18:51,normal,<info>  [1754412467.5514] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:18:52,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:18:53,normal,<info>  [1754412467.5840] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:18:54,normal,wlp0s20f3: authenticated
+2025-08-05 22:18:55,normal,<info>  [1754412467.5840] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:18:56,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:18:57,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1)
+2025-08-05 22:18:58,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a6
+2025-08-05 22:18:59,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:19:00,normal,wlp0s20f3: associated
+2025-08-05 22:19:01,normal,<info>  [1754412467.6054] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:19:02,normal,<info>  [1754412467.6055] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:19:03,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:19:04,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=]
+2025-08-05 22:19:06,normal,<info>  [1754412467.6376] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:19:07,normal,<info>  [1754412467.6420] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:19:08,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6
+2025-08-05 22:19:09,normal,<info>  [1754412467.6512] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:19:10,normal,<info>  [1754412467.6512] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:19:11,normal,<info>  [1754412467.6514] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:19:12,normal,<info>  [1754412467.6515] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:19:13,normal,<info>  [1754412467.6515] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:19:14,normal,<info>  [1754412467.6515] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:19:15,normal,<info>  [1754412467.6516] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:19:16,normal,<info>  [1754412467.6516] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:19:17,normal,<info>  [1754412467.6860] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:19:18,normal,<info>  [1754412467.7231] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:19:19,normal,<info>  [1754412467.7234] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:19:20,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-47 noise=9999 txrate=52000
+2025-08-05 22:19:21,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-46 noise=9999 txrate=52000
+2025-08-05 22:19:22,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=52000
+2025-08-05 22:19:23,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=52000
+2025-08-05 22:19:24,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 22:19:25,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=52000
+2025-08-05 22:19:26,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=52000
+2025-08-05 22:19:27,normal,systemd-hostnamed.service: Deactivated successfully.
+2025-08-05 22:26:27,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:26:28,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:26:30,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:26:31,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7
+2025-08-05 22:26:32,normal,<info>  [1754412987.7218] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:26:33,normal,<info>  [1754412987.7219] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:26:34,normal,<info>  [1754412987.7219] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:26:35,normal,<info>  [1754412987.7220] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:26:36,normal,<info>  [1754412987.7220] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:26:37,normal,<info>  [1754412987.7226] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:26:38,normal,<info>  [1754412987.7227] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:26:39,normal,<info>  [1754412987.7227] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:26:40,normal,<info>  [1754412987.7227] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:26:41,normal,<info>  [1754412987.7228] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:26:42,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02)
+2025-08-05 22:26:43,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:26:44,normal,<info>  [1754412987.7447] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:26:45,normal,<info>  [1754412987.7447] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:26:46,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:26:47,normal,wlp0s20f3: authenticated
+2025-08-05 22:26:48,normal,<info>  [1754412987.7708] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:26:49,normal,<info>  [1754412987.7709] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:26:50,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:26:51,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=6)
+2025-08-05 22:26:52,normal,wlp0s20f3: associated
+2025-08-05 22:26:53,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a7
+2025-08-05 22:26:54,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:26:55,normal,<info>  [1754412987.7869] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:26:56,normal,<info>  [1754412987.7870] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:26:57,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:26:58,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=]
+2025-08-05 22:26:59,normal,<info>  [1754412987.7998] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:27:00,normal,<info>  [1754412987.8003] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:27:01,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7
+2025-08-05 22:27:03,normal,<info>  [1754412987.8072] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:27:04,normal,<info>  [1754412987.8073] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:27:05,normal,<info>  [1754412987.8073] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:27:06,normal,<info>  [1754412987.8075] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:27:07,normal,<info>  [1754412987.8075] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:27:08,normal,<info>  [1754412987.8075] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:27:09,normal,<info>  [1754412987.8075] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:27:10,normal,<info>  [1754412987.8076] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:27:11,normal,<info>  [1754412987.8307] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:27:12,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:27:13,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:27:14,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-59 noise=9999 txrate=26000
+2025-08-05 22:27:15,normal,<info>  [1754412987.9225] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:27:16,normal,<info>  [1754412987.9230] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:27:17,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:27:18,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:27:19,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:27:20,normal,<info>  [1754412995.3269] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:27:21,normal,<info>  [1754412995.3269] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:27:22,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6
+2025-08-05 22:27:23,normal,<info>  [1754412995.4295] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:27:24,normal,<info>  [1754412995.4402] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:27:25,normal,<info>  [1754412995.4403] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:27:26,normal,<info>  [1754412995.4403] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:27:27,normal,<info>  [1754412995.4404] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:27:28,normal,<info>  [1754412995.4405] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:27:29,normal,<info>  [1754412995.4405] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:27:30,normal,<info>  [1754412995.4405] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:27:31,normal,<info>  [1754412995.4405] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:27:32,normal,<info>  [1754412995.4405] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:27:33,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02)
+2025-08-05 22:27:34,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:27:36,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:27:37,normal,wlp0s20f3: authenticated
+2025-08-05 22:27:38,normal,<info>  [1754412995.4926] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:27:39,normal,<info>  [1754412995.4927] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:27:40,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:27:41,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1)
+2025-08-05 22:27:42,normal,wlp0s20f3: associated
+2025-08-05 22:27:43,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a6
+2025-08-05 22:27:44,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:27:45,normal,<info>  [1754412995.5137] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:27:46,normal,<info>  [1754412995.5137] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:27:47,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:27:48,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=]
+2025-08-05 22:27:49,normal,<info>  [1754412995.5392] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:27:50,normal,<info>  [1754412995.5401] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:27:51,normal,<info>  [1754412995.5533] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:27:52,normal,<info>  [1754412995.5533] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:27:53,normal,<info>  [1754412995.5534] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:27:54,normal,<info>  [1754412995.5535] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:27:55,normal,<info>  [1754412995.5535] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:27:56,normal,<info>  [1754412995.5535] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:27:57,normal,<info>  [1754412995.5536] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:27:58,normal,<info>  [1754412995.5536] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:27:59,normal,<info>  [1754412995.5722] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:28:00,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6
+2025-08-05 22:28:01,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-42 noise=9999 txrate=52000
+2025-08-05 22:28:03,normal,<info>  [1754412997.7752] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:28:04,normal,<info>  [1754412997.7756] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:28:05,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 22:28:06,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-44 noise=9999 txrate=52000
+2025-08-05 22:28:07,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-44 noise=9999 txrate=52000
+2025-08-05 22:30:58,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:30:59,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:33:08,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:33:09,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:33:11,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:33:12,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7
+2025-08-05 22:33:13,normal,<info>  [1754413388.7196] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:33:14,normal,<info>  [1754413388.7197] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:33:15,normal,<info>  [1754413388.7197] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:33:16,normal,<info>  [1754413388.7197] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:33:17,normal,<info>  [1754413388.7198] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:33:18,normal,<info>  [1754413388.7199] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:33:19,normal,<info>  [1754413388.7200] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:33:20,normal,<info>  [1754413388.7200] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:33:21,normal,<info>  [1754413388.7200] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:33:22,normal,<info>  [1754413388.7200] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:33:23,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02)
+2025-08-05 22:33:24,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:33:25,normal,<info>  [1754413388.7473] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:33:26,normal,<info>  [1754413388.7473] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:33:27,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:33:28,normal,wlp0s20f3: authenticated
+2025-08-05 22:33:29,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:33:30,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=7)
+2025-08-05 22:33:31,normal,<info>  [1754413388.7757] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:33:32,normal,<info>  [1754413388.7757] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:33:33,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a7
+2025-08-05 22:33:34,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:33:35,normal,wlp0s20f3: associated
+2025-08-05 22:33:36,normal,<info>  [1754413388.7872] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:33:37,normal,<info>  [1754413388.7872] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:33:38,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:33:39,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=]
+2025-08-05 22:33:41,normal,<info>  [1754413388.7993] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:33:42,normal,<info>  [1754413388.8000] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:33:43,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7
+2025-08-05 22:33:44,normal,<info>  [1754413388.8132] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:33:45,normal,<info>  [1754413388.8132] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:33:46,normal,<info>  [1754413388.8133] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:33:47,normal,<info>  [1754413388.8134] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:33:48,normal,<info>  [1754413388.8135] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:33:49,normal,<info>  [1754413388.8135] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:33:50,normal,<info>  [1754413388.8135] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:33:51,normal,<info>  [1754413388.8136] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:33:52,normal,<info>  [1754413388.8236] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:33:53,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:33:54,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:33:55,normal,<info>  [1754413388.8814] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:33:56,normal,<info>  [1754413388.8817] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:33:57,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-57 noise=9999 txrate=234000
+2025-08-05 22:33:58,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:33:59,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:34:00,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:34:01,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6
+2025-08-05 22:34:02,normal,<info>  [1754413396.4827] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:34:03,normal,<info>  [1754413396.4912] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:34:04,normal,<info>  [1754413396.4912] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:34:05,normal,<info>  [1754413396.4912] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:34:06,normal,<info>  [1754413396.4913] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:34:07,normal,<info>  [1754413396.4914] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:34:08,normal,<info>  [1754413396.4914] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:34:10,normal,<info>  [1754413396.4914] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:34:11,normal,<info>  [1754413396.4915] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:34:12,normal,<info>  [1754413396.4915] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:34:13,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02)
+2025-08-05 22:34:14,normal,<info>  [1754413396.5198] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:34:15,normal,<info>  [1754413396.5198] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:34:16,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:34:17,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:34:18,normal,wlp0s20f3: authenticated
+2025-08-05 22:34:19,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:34:20,normal,<info>  [1754413396.5499] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:34:21,normal,<info>  [1754413396.5500] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:34:22,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1)
+2025-08-05 22:34:23,normal,wlp0s20f3: associated
+2025-08-05 22:34:24,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a6
+2025-08-05 22:34:25,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:34:26,normal,<info>  [1754413396.5702] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:34:27,normal,<info>  [1754413396.5702] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:34:28,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:34:29,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=]
+2025-08-05 22:34:30,normal,<info>  [1754413396.5959] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:34:31,normal,<info>  [1754413396.5964] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:34:32,normal,<info>  [1754413396.6032] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:34:33,normal,<info>  [1754413396.6032] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:34:34,normal,<info>  [1754413396.6033] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:34:35,normal,<info>  [1754413396.6035] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:34:36,normal,<info>  [1754413396.6035] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:34:37,normal,<info>  [1754413396.6035] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:34:39,normal,<info>  [1754413396.6036] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:34:40,normal,<info>  [1754413396.6037] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:34:41,normal,<info>  [1754413396.6214] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:34:42,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6
+2025-08-05 22:34:43,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-43 noise=9999 txrate=52000
+2025-08-05 22:34:44,normal,<info>  [1754413398.7610] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:34:45,normal,<info>  [1754413398.7614] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:34:46,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 22:34:47,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-51 noise=9999 txrate=52000
+2025-08-05 22:35:35,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-52 noise=9999 txrate=52000
+2025-08-05 22:38:20,normal,ACPI action undefined: PNP0C0A:00
+2025-08-05 22:38:21,normal,ACPI action undefined: PNP0C0A:00
+2025-08-05 22:38:22,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:38:23,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7
+2025-08-05 22:38:24,normal,<info>  [1754413701.2288] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:38:25,normal,<info>  [1754413701.2295] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:38:26,normal,<info>  [1754413701.2295] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:38:27,normal,<info>  [1754413701.2295] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:38:28,normal,<info>  [1754413701.2296] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:38:29,normal,<info>  [1754413701.2297] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:38:30,normal,<info>  [1754413701.2297] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:38:31,normal,<info>  [1754413701.2297] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:38:32,normal,<info>  [1754413701.2298] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:38:33,normal,<info>  [1754413701.2298] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:38:34,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02)
+2025-08-05 22:38:35,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:38:36,normal,<info>  [1754413701.2555] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:38:37,normal,<info>  [1754413701.2556] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:38:38,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:38:39,normal,wlp0s20f3: authenticated
+2025-08-05 22:38:40,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:38:42,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=7)
+2025-08-05 22:38:43,normal,<info>  [1754413701.2893] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:38:44,normal,<info>  [1754413701.2894] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:38:45,normal,wlp0s20f3: associated
+2025-08-05 22:38:46,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a7
+2025-08-05 22:38:47,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:38:48,normal,<info>  [1754413701.2969] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:38:49,normal,<info>  [1754413701.2970] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:38:50,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:38:51,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=]
+2025-08-05 22:38:52,normal,<info>  [1754413701.3104] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:38:53,normal,<info>  [1754413701.3113] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:38:54,normal,<info>  [1754413701.3222] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:38:55,normal,<info>  [1754413701.3223] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:38:56,normal,<info>  [1754413701.3224] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:38:57,normal,<info>  [1754413701.3225] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:38:58,normal,<info>  [1754413701.3226] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:38:59,normal,<info>  [1754413701.3226] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:39:00,normal,<info>  [1754413701.3227] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:39:01,normal,<info>  [1754413701.3228] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:39:02,normal,<info>  [1754413701.3424] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:39:03,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7
+2025-08-05 22:39:04,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:39:05,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:39:06,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-54 noise=9999 txrate=234000
+2025-08-05 22:39:07,normal,<info>  [1754413703.5484] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:39:08,normal,<info>  [1754413703.5488] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:39:10,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 22:39:12,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=0 signal=-64 noise=9999 txrate=234000
+2025-08-05 22:39:18,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-56 noise=9999 txrate=234000
+2025-08-05 22:39:19,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:39:20,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:39:21,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:39:22,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6
+2025-08-05 22:39:23,normal,<info>  [1754413759.0278] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:39:24,normal,<info>  [1754413759.0279] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:39:25,normal,<info>  [1754413759.0279] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:39:26,normal,<info>  [1754413759.0279] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:39:27,normal,<info>  [1754413759.0280] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:39:28,normal,<info>  [1754413759.0281] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:39:30,normal,<info>  [1754413759.0281] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:39:31,normal,<info>  [1754413759.0281] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:39:32,normal,<info>  [1754413759.0281] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:39:33,normal,<info>  [1754413759.0282] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:39:34,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02)
+2025-08-05 22:39:35,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:39:36,normal,<info>  [1754413759.0561] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:39:37,normal,<info>  [1754413759.0562] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:39:38,normal,wlp0s20f3: authenticated
+2025-08-05 22:39:39,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:39:40,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:39:41,normal,<info>  [1754413759.0863] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:39:42,normal,<info>  [1754413759.0863] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:39:43,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1)
+2025-08-05 22:39:44,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a6
+2025-08-05 22:39:45,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:39:46,normal,wlp0s20f3: associated
+2025-08-05 22:39:47,normal,<info>  [1754413759.1040] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:39:48,normal,<info>  [1754413759.1041] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:39:49,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:39:50,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=]
+2025-08-05 22:39:51,normal,<info>  [1754413759.1258] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:39:52,normal,<info>  [1754413759.1264] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:39:53,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6
+2025-08-05 22:39:54,normal,<info>  [1754413759.1403] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:39:55,normal,<info>  [1754413759.1403] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:39:56,normal,<info>  [1754413759.1404] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:39:57,normal,<info>  [1754413759.1405] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:39:59,normal,<info>  [1754413759.1406] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:40:00,normal,<info>  [1754413759.1406] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:40:01,normal,<info>  [1754413759.1406] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:40:02,normal,<info>  [1754413759.1407] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:40:03,normal,<info>  [1754413759.1595] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:40:04,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:40:05,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:40:06,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-49 noise=9999 txrate=52000
+2025-08-05 22:40:07,normal,<info>  [1754413760.0601] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:40:08,normal,<info>  [1754413760.0604] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:40:09,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 22:40:10,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-50 noise=9999 txrate=52000
+2025-08-05 22:42:10,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-43 noise=9999 txrate=52000
+2025-08-05 22:42:25,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:42:26,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:42:27,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:42:28,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7
+2025-08-05 22:42:30,normal,<info>  [1754413945.6890] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:42:31,normal,<info>  [1754413945.6891] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:42:32,normal,<info>  [1754413945.6891] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:42:33,normal,<info>  [1754413945.6891] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:42:34,normal,<info>  [1754413945.6892] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:42:35,normal,<info>  [1754413945.6893] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:42:36,normal,<info>  [1754413945.6894] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:42:37,normal,<info>  [1754413945.6894] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:42:38,normal,<info>  [1754413945.6894] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:42:39,normal,<info>  [1754413945.6894] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:42:40,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02)
+2025-08-05 22:42:41,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:42:42,normal,<info>  [1754413945.7144] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:42:43,normal,<info>  [1754413945.7145] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:42:44,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:42:45,normal,wlp0s20f3: authenticated
+2025-08-05 22:42:46,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:42:47,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=7)
+2025-08-05 22:42:48,normal,<info>  [1754413945.7435] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:42:49,normal,<info>  [1754413945.7435] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:42:50,normal,wlp0s20f3: associated
+2025-08-05 22:42:51,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a7
+2025-08-05 22:42:52,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:42:53,normal,<info>  [1754413945.7535] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:42:54,normal,<info>  [1754413945.7535] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:42:55,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:42:56,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=]
+2025-08-05 22:42:57,normal,<info>  [1754413945.7691] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:42:58,normal,<info>  [1754413945.7697] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:42:59,normal,<info>  [1754413945.7753] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:43:00,normal,<info>  [1754413945.7753] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:43:01,normal,<info>  [1754413945.7754] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:43:02,normal,<info>  [1754413945.7755] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:43:04,normal,<info>  [1754413945.7755] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:43:05,normal,<info>  [1754413945.7755] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:43:06,normal,<info>  [1754413945.7755] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:43:07,normal,<info>  [1754413945.7756] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:43:08,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7
+2025-08-05 22:43:09,normal,<info>  [1754413945.8315] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:43:10,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:43:11,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:43:12,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-60 noise=9999 txrate=234000
+2025-08-05 22:43:13,normal,<info>  [1754413946.7878] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:43:14,normal,<info>  [1754413946.7881] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:43:15,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:43:16,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:43:17,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:43:18,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6
+2025-08-05 22:43:19,normal,<info>  [1754413953.5285] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:43:20,normal,<info>  [1754413953.5382] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:43:21,normal,<info>  [1754413953.5383] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:43:22,normal,<info>  [1754413953.5383] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:43:23,normal,<info>  [1754413953.5383] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:43:24,normal,<info>  [1754413953.5385] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:43:25,normal,<info>  [1754413953.5385] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:43:26,normal,<info>  [1754413953.5385] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:43:27,normal,<info>  [1754413953.5385] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:43:28,normal,<info>  [1754413953.5386] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:43:29,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02)
+2025-08-05 22:43:30,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:43:31,normal,<info>  [1754413953.5565] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:43:32,normal,<info>  [1754413953.5566] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:43:34,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:43:35,normal,<info>  [1754413953.5819] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:43:36,normal,<info>  [1754413953.5819] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:43:37,normal,wlp0s20f3: authenticated
+2025-08-05 22:43:38,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:43:39,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1)
+2025-08-05 22:43:40,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a6
+2025-08-05 22:43:41,normal,wlp0s20f3: associated
+2025-08-05 22:43:42,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6
+2025-08-05 22:43:43,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:43:44,normal,<info>  [1754413953.6062] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:43:45,normal,<info>  [1754413953.6063] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:43:46,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:43:47,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=]
+2025-08-05 22:43:48,normal,<info>  [1754413953.6274] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:43:49,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-43 noise=9999 txrate=52000
+2025-08-05 22:43:50,normal,<info>  [1754413953.6292] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:43:51,normal,<info>  [1754413953.6442] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:43:52,normal,<info>  [1754413953.6442] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:43:53,normal,<info>  [1754413953.6443] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:43:54,normal,<info>  [1754413953.6444] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:43:55,normal,<info>  [1754413953.6444] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:43:56,normal,<info>  [1754413953.6444] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:43:57,normal,<info>  [1754413953.6444] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:43:58,normal,<info>  [1754413953.6445] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:43:59,normal,<info>  [1754413953.6623] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:44:00,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 22:44:01,normal,<info>  [1754413955.8937] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:44:02,normal,<info>  [1754413955.8940] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:44:03,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:44:04,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:44:05,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-43 noise=9999 txrate=52000
+2025-08-05 22:44:06,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 22:44:10,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-53 noise=9999 txrate=52000
+2025-08-05 22:47:36,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:47:37,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7
+2025-08-05 22:47:38,normal,<info>  [1754414255.6369] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:47:39,normal,<info>  [1754414255.6370] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:47:40,normal,<info>  [1754414255.6370] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:47:41,normal,<info>  [1754414255.6371] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:47:42,normal,<info>  [1754414255.6371] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:47:43,normal,<info>  [1754414255.6373] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:47:44,normal,<info>  [1754414255.6374] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:47:45,normal,<info>  [1754414255.6374] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:47:46,normal,<info>  [1754414255.6374] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:47:47,normal,<info>  [1754414255.6375] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:47:48,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02)
+2025-08-05 22:47:49,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:47:50,normal,<info>  [1754414255.6667] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:47:51,normal,<info>  [1754414255.6668] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:47:52,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:47:53,normal,wlp0s20f3: authenticated
+2025-08-05 22:47:54,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:47:55,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=4)
+2025-08-05 22:47:56,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a7
+2025-08-05 22:47:57,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:47:58,normal,wlp0s20f3: associated
+2025-08-05 22:47:59,normal,<info>  [1754414255.7011] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:48:00,normal,<info>  [1754414255.7011] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:48:01,normal,<info>  [1754414255.7061] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:48:02,normal,<info>  [1754414255.7062] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:48:03,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:48:04,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=]
+2025-08-05 22:48:05,normal,<info>  [1754414255.7186] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:48:07,normal,<info>  [1754414255.7191] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:48:08,normal,<info>  [1754414255.7342] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:48:09,normal,<info>  [1754414255.7342] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:48:10,normal,<info>  [1754414255.7343] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:48:11,normal,<info>  [1754414255.7344] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:48:12,normal,<info>  [1754414255.7344] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:48:13,normal,<info>  [1754414255.7344] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:48:14,normal,<info>  [1754414255.7345] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:48:15,normal,<info>  [1754414255.7346] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:48:16,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7
+2025-08-05 22:48:17,normal,<info>  [1754414255.7537] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:48:18,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:48:19,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:48:20,normal,<info>  [1754414255.7933] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:48:21,normal,<info>  [1754414255.7935] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:48:22,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-51 noise=9999 txrate=234000
+2025-08-05 22:48:23,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 22:51:15,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-46 noise=9999 txrate=234000
+2025-08-05 22:53:57,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 22:53:58,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 22:53:59,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:54:00,normal,<info>  [1754414637.4709] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:54:01,normal,<info>  [1754414637.4710] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:54:02,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6
+2025-08-05 22:54:03,normal,<info>  [1754414637.5346] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:54:04,normal,<info>  [1754414637.5347] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:54:05,normal,<info>  [1754414637.5347] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:54:06,normal,<info>  [1754414637.5347] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:54:07,normal,<info>  [1754414637.5348] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:54:08,normal,<info>  [1754414637.5349] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:54:09,normal,<info>  [1754414637.5350] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:54:11,normal,<info>  [1754414637.5350] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:54:12,normal,<info>  [1754414637.5350] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:54:13,normal,<info>  [1754414637.5350] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:54:14,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02)
+2025-08-05 22:54:15,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:54:16,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 22:54:17,normal,wlp0s20f3: authenticated
+2025-08-05 22:54:18,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 22:54:19,normal,<info>  [1754414637.6135] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:54:20,normal,<info>  [1754414637.6136] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:54:21,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=3)
+2025-08-05 22:54:22,normal,wlp0s20f3: associated
+2025-08-05 22:54:23,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a6
+2025-08-05 22:54:24,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:54:25,normal,<info>  [1754414637.6353] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:54:26,normal,<info>  [1754414637.6354] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:54:27,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6
+2025-08-05 22:54:28,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:54:29,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=]
+2025-08-05 22:54:30,normal,<info>  [1754414637.6638] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:54:31,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-47 noise=9999 txrate=52000
+2025-08-05 22:54:32,normal,<info>  [1754414637.6698] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:54:33,normal,<info>  [1754414637.6772] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:54:34,normal,<info>  [1754414637.6773] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:54:35,normal,<info>  [1754414637.6774] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:54:36,normal,<info>  [1754414637.6775] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:54:37,normal,<info>  [1754414637.6775] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:54:38,normal,<info>  [1754414637.6775] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:54:40,normal,<info>  [1754414637.6776] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:54:41,normal,<info>  [1754414637.6777] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:54:42,normal,<info>  [1754414637.7068] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:54:43,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:54:44,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:54:45,normal,<info>  [1754414638.5809] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:54:46,normal,<info>  [1754414638.5812] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:54:47,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 22:54:48,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-49 noise=9999 txrate=52000
+2025-08-05 22:54:49,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=52000
+2025-08-05 22:57:45,normal,ACPI group/action undefined: wmi / PNP0C14:00
+2025-08-05 22:57:46,normal,ACPI group/action undefined: wmi / PNP0C14:00
+2025-08-05 22:58:59,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:59:00,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7
+2025-08-05 22:59:01,normal,<info>  [1754414939.5638] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:59:02,normal,<info>  [1754414939.5640] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:59:03,normal,<info>  [1754414939.5640] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:59:04,normal,<info>  [1754414939.5641] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:59:06,normal,<info>  [1754414939.5642] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:59:07,normal,<info>  [1754414939.5644] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:59:08,normal,<info>  [1754414939.5645] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:59:09,normal,<info>  [1754414939.5645] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:59:10,normal,<info>  [1754414939.5645] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:59:11,normal,<info>  [1754414939.5646] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:59:12,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02)
+2025-08-05 22:59:13,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:59:14,normal,<info>  [1754414939.5967] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 22:59:15,normal,<info>  [1754414939.5967] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 22:59:16,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 22:59:17,normal,wlp0s20f3: authenticated
+2025-08-05 22:59:18,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 22:59:19,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=3)
+2025-08-05 22:59:20,normal,<info>  [1754414939.6275] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 22:59:21,normal,<info>  [1754414939.6275] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 22:59:22,normal,wlp0s20f3: associated
+2025-08-05 22:59:23,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a7
+2025-08-05 22:59:24,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 22:59:25,normal,<info>  [1754414939.6356] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 22:59:26,normal,<info>  [1754414939.6357] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 22:59:27,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP]
+2025-08-05 22:59:28,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=]
+2025-08-05 22:59:29,normal,<info>  [1754414939.6486] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 22:59:30,normal,<info>  [1754414939.6494] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 22:59:31,normal,<info>  [1754414939.6552] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:59:32,normal,<info>  [1754414939.6553] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 22:59:33,normal,<info>  [1754414939.6554] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:59:34,normal,<info>  [1754414939.6556] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 22:59:35,normal,<info>  [1754414939.6557] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 22:59:37,normal,<info>  [1754414939.6557] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 22:59:38,normal,<info>  [1754414939.6557] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 22:59:39,normal,<info>  [1754414939.6559] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 22:59:40,normal,<info>  [1754414939.6753] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 22:59:41,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7
+2025-08-05 22:59:42,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 22:59:43,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 22:59:44,normal,<info>  [1754414939.7248] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 22:59:45,normal,<info>  [1754414939.7251] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 22:59:46,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-62 noise=9999 txrate=26000
+2025-08-05 22:59:47,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-50 noise=9999 txrate=26000
+2025-08-05 22:59:48,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-49 noise=9999 txrate=26000
+2025-08-05 22:59:49,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 23:07:20,normal,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40
+2025-08-05 23:07:21,normal,wlp0s20f3: WNM: Preferred List Available
+2025-08-05 23:07:22,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 23:07:24,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6
+2025-08-05 23:07:25,normal,<info>  [1754415440.7764] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 23:07:26,normal,<info>  [1754415440.7765] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 23:07:27,normal,<info>  [1754415440.7765] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:07:28,normal,<info>  [1754415440.7765] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 23:07:29,normal,<info>  [1754415440.7766] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:07:30,normal,<info>  [1754415440.7767] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 23:07:31,normal,<info>  [1754415440.7768] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 23:07:32,normal,<info>  [1754415440.7768] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:07:33,normal,<info>  [1754415440.7768] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 23:07:34,normal,<info>  [1754415440.7768] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:07:35,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02)
+2025-08-05 23:07:36,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 23:07:37,normal,<info>  [1754415440.8019] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 23:07:38,normal,<info>  [1754415440.8019] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 23:07:39,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz)
+2025-08-05 23:07:40,normal,wlp0s20f3: authenticated
+2025-08-05 23:07:41,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3)
+2025-08-05 23:07:42,normal,<info>  [1754415440.8314] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 23:07:43,normal,<info>  [1754415440.8315] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 23:07:44,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=3)
+2025-08-05 23:07:45,normal,wlp0s20f3: associated
+2025-08-05 23:07:46,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a6
+2025-08-05 23:07:47,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 23:07:48,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6
+2025-08-05 23:07:49,normal,<info>  [1754415440.8511] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 23:07:50,normal,<info>  [1754415440.8512] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 23:07:51,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP]
+2025-08-05 23:07:52,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=]
+2025-08-05 23:07:53,normal,<info>  [1754415440.8796] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 23:07:55,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-50 noise=9999 txrate=52000
+2025-08-05 23:07:56,normal,<info>  [1754415440.8803] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 23:07:57,normal,<info>  [1754415440.8882] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 23:07:58,normal,<info>  [1754415440.8883] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 23:07:59,normal,<info>  [1754415440.8884] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:08:00,normal,<info>  [1754415440.8885] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 23:08:01,normal,<info>  [1754415440.8886] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 23:08:02,normal,<info>  [1754415440.8886] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 23:08:03,normal,<info>  [1754415440.8887] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:08:04,normal,<info>  [1754415440.8888] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 23:08:05,normal,<info>  [1754415440.9084] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 23:08:06,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 23:08:07,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 23:08:08,normal,<info>  [1754415443.1497] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 23:08:09,normal,<info>  [1754415443.1500] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 23:08:10,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=52000
+2025-08-05 23:08:11,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=52000
+2025-08-05 23:08:12,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=52000
+2025-08-05 23:08:13,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 23:11:48,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-51 noise=9999 txrate=52000
+2025-08-05 23:12:25,normal,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 23:12:26,normal,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7
+2025-08-05 23:12:27,normal,<info>  [1754415744.8309] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 23:12:28,normal,<info>  [1754415744.8310] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 23:12:29,normal,<info>  [1754415744.8310] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:12:30,normal,<info>  [1754415744.8311] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 23:12:31,normal,<info>  [1754415744.8311] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:12:32,normal,<info>  [1754415744.8313] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 23:12:33,normal,<info>  [1754415744.8313] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 23:12:34,normal,<info>  [1754415744.8313] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:12:35,normal,<info>  [1754415744.8313] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 23:12:36,normal,<info>  [1754415744.8314] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:12:37,normal,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02)
+2025-08-05 23:12:38,normal,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 23:12:39,normal,<info>  [1754415744.8562] device (wlp0s20f3): supplicant interface state: completed -> authenticating
+2025-08-05 23:12:40,normal,<info>  [1754415744.8562] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating
+2025-08-05 23:12:41,normal,wlp0s20f3: authenticated
+2025-08-05 23:12:42,normal,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz)
+2025-08-05 23:12:43,normal,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3)
+2025-08-05 23:12:44,normal,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=3)
+2025-08-05 23:12:45,normal,<info>  [1754415744.8923] device (wlp0s20f3): supplicant interface state: authenticating -> associating
+2025-08-05 23:12:46,normal,<info>  [1754415744.8923] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating
+2025-08-05 23:12:47,normal,wlp0s20f3: associated
+2025-08-05 23:12:48,normal,wlp0s20f3: Associated with 14:33:75:6f:3c:a7
+2025-08-05 23:12:49,normal,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+2025-08-05 23:12:51,normal,<info>  [1754415744.9038] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake
+2025-08-05 23:12:52,normal,<info>  [1754415744.9038] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake
+2025-08-05 23:12:53,normal,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP]
+2025-08-05 23:12:54,normal,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=]
+2025-08-05 23:12:55,normal,<info>  [1754415744.9166] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed
+2025-08-05 23:12:56,normal,<info>  [1754415744.9173] device (wlp0s20f3): ip:dhcp4: restarting
+2025-08-05 23:12:57,normal,<info>  [1754415744.9252] dhcp4 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 23:12:58,normal,<info>  [1754415744.9252] dhcp4 (wlp0s20f3): state changed no lease
+2025-08-05 23:12:59,normal,<info>  [1754415744.9254] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:13:00,normal,<info>  [1754415744.9255] device (wlp0s20f3): ip:dhcp6: restarting
+2025-08-05 23:13:01,normal,<info>  [1754415744.9255] dhcp6 (wlp0s20f3): canceled DHCP transaction
+2025-08-05 23:13:02,normal,<info>  [1754415744.9256] dhcp6 (wlp0s20f3): state changed no lease
+2025-08-05 23:13:03,normal,<info>  [1754415744.9256] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds)
+2025-08-05 23:13:04,normal,<info>  [1754415744.9257] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed
+2025-08-05 23:13:05,normal,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7
+2025-08-05 23:13:06,normal,<info>  [1754415744.9423] dhcp6 (wlp0s20f3): state changed new lease
+2025-08-05 23:13:07,normal,Starting Network Manager Script Dispatcher Service...
+2025-08-05 23:13:08,normal,Started Network Manager Script Dispatcher Service.
+2025-08-05 23:13:09,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=234000
+2025-08-05 23:13:10,normal,<info>  [1754415747.1490] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending
+2025-08-05 23:13:11,normal,<info>  [1754415747.1494] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10
+2025-08-05 23:13:12,normal,NetworkManager-dispatcher.service: Deactivated successfully.
+2025-08-05 23:13:13,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=0 signal=-50 noise=9999 txrate=117000
+2025-08-05 23:13:14,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=117000
+2025-08-05 23:13:15,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=117000
+2025-08-05 23:13:34,normal,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-47 noise=9999 txrate=117000

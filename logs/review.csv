@@ -1,1 +1,633 @@
 timestamp,source,content,label
+2025-08-05T21:59:00.852930,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=52000,normal
+2025-08-05T21:59:00.926508,journalctl,Starting Daily man-db regeneration...,normal
+2025-08-05T21:59:00.971613,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-62 noise=9999 txrate=52000,normal
+2025-08-05T21:59:01.095493,journalctl,"man-db.service: Consumed 14.782s CPU time, 231.8M memory peak.",normal
+2025-08-05T21:59:16.533362,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-52 noise=9999 txrate=52000,normal
+2025-08-05T21:59:36.606895,pacman.log,Aug 05 21:59:36	testvm	29478	error: Received disconnect from 250.253.136.241: 28222: No more user authentication methods available. [preauth],anomaly
+2025-08-05T21:59:38.660779,pacman.log,"Aug 05 21:59:38	LabSZ	18685	kernel: panic occurred, switching back to text console",anomaly
+2025-08-05T21:59:40.781209,pacman.log,Aug 05 21:59:40	LabSZ	11546	Received disconnect from 7.192.128.140: 76: Closed due to user request [preauth],normal
+2025-08-05T21:59:44.791317,pacman.log,Aug 05 21:59:44	testvm	23847	Accepted password for fztu from 41.100.201.126 port 42185 ssh3,normal
+2025-08-05T21:59:48.099082,pacman.log,Aug 05 21:59:48	prod1	11743	Did not receive identification string from 7.103.9.60,normal
+2025-08-05T21:59:52.186258,pacman.log,Aug 05 21:59:52	LabSZ	17097	Received disconnect from 92.223.37.255: 21: disconnected by user,normal
+2025-08-05T21:59:56.403781,pacman.log,Aug 05 21:59:56	server	18771	Received disconnect from 153.62.166.106: 40: Closed due to user request [preauth],normal
+2025-08-05T21:59:58.967698,pacman.log,Aug 05 21:59:58	LabSZ	19755	Received disconnect from 114.180.8.235: 39: disconnected by user,normal
+2025-08-05T22:00:02.265768,pacman.log,Aug 05 22:00:02	server	26503	PAM service(sshd) ignoring max retries; 7 > 4,normal
+2025-08-05T22:00:06.438267,pacman.log,Aug 05 22:00:06	server	4548	pam_unix(sshd:session): session opened for user backup by (uid=1),normal
+2025-08-05T22:00:10.206550,pacman.log,Aug 05 22:00:10	server	19954	Accepted password for chen from 166.138.145.197 port 5170 ssh4,normal
+2025-08-05T22:00:14.306628,pacman.log,Aug 05 22:00:14	testvm	23465	sudo: pam_unix(sudo:auth): authentication failure; logname=ubuntu4 uid=329928 euid=1 tty=/dev/pts/2 ruser=user1 rhost=  user=root,anomaly
+2025-08-05T22:00:18.885370,pacman.log,Aug 05 22:00:18	LabSZ	6228	pam_unix(sshd:session): session opened for user chen by (uid=1),normal
+2025-08-05T22:00:21.872925,pacman.log,Aug 05 22:00:21	prod1	17364	error: maximum authentication attempts exceeded for chen from 11.253.180.194 port 36789,anomaly
+2025-08-05T22:00:24.458870,pacman.log,Aug 05 22:00:24	prod1	2008	Received disconnect from 176.69.11.8: 80: Bye Bye [preauth],normal
+2025-08-05T22:00:28.329198,pacman.log,Aug 05 22:00:28	testvm	28022	Received disconnect from 7.46.235.33: 26: Closed due to user request [preauth],normal
+2025-08-05T22:00:32.943707,pacman.log,Aug 05 22:00:32	LabSZ	8572	Accepted password for 123 from 224.166.103.201 port 4035 ssh5,normal
+2025-08-05T22:00:37.045886,pacman.log,Aug 05 22:00:37	prod1	22126	pam_unix(sshd:session): session opened for user matlab by (uid=4),normal
+2025-08-05T22:00:39.608277,pacman.log,Aug 05 22:00:39	LabSZ	6507	Connection closed by 169.114.180.137 [preauth],normal
+2025-08-05T22:00:44.267350,pacman.log,Aug 05 22:00:44	testvm	2091	error: maximum authentication attempts exceeded for backup from 145.55.65.57 port 5526,anomaly
+2025-08-05T22:01:36.075507,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-46 noise=9999 txrate=57800,normal
+2025-08-05T22:02:27.780323,journalctl,wlp0s20f3: WNM: Disassociation Imminent - Disassociation Timer 40,normal
+2025-08-05T22:02:27.821148,journalctl,wlp0s20f3: WNM: Preferred List Available,normal
+2025-08-05T22:02:52.534558,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=9999 txrate=57800,normal
+2025-08-05T22:07:29.583985,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:07:29.649430,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a6 for new auth to 14:33:75:6f:3c:a7,normal
+2025-08-05T22:07:29.708373,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a7 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:07:29.751659,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:07:29.791751,journalctl,<info>  [1754411849.1178] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:07:29.844111,journalctl,<info>  [1754411849.1179] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:07:29.891935,journalctl,<info>  [1754411849.1180] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:29.943012,journalctl,<info>  [1754411849.1180] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:07:29.994470,journalctl,<info>  [1754411849.1181] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:30.044047,journalctl,<info>  [1754411849.1387] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:07:30.095265,journalctl,<info>  [1754411849.1388] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:07:30.156232,journalctl,<info>  [1754411849.1389] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:30.205301,journalctl,<info>  [1754411849.1389] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:07:30.256149,journalctl,<info>  [1754411849.1390] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:30.307221,journalctl,<info>  [1754411849.1509] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:07:30.345926,journalctl,<info>  [1754411849.1563] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:07:30.388149,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a7 (SSID='Airtel_RKS' freq=5785 MHz),normal
+2025-08-05T22:07:30.416466,journalctl,wlp0s20f3: authenticated,normal
+2025-08-05T22:07:30.456299,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a7 (try 1/3),normal
+2025-08-05T22:07:30.497217,journalctl,<info>  [1754411849.1771] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:07:30.544829,journalctl,<info>  [1754411849.1771] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:07:30.589321,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=6),normal
+2025-08-05T22:07:30.624913,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a7,normal
+2025-08-05T22:07:30.658646,journalctl,wlp0s20f3: associated,normal
+2025-08-05T22:07:30.698487,journalctl,wlp0s20f3: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0,normal
+2025-08-05T22:07:30.738076,journalctl,<info>  [1754411849.1913] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:07:30.777677,journalctl,<info>  [1754411849.1914] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:07:30.820159,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a7,normal
+2025-08-05T22:07:30.864686,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a7 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:07:30.903852,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a7 completed [id=0 id_str=],normal
+2025-08-05T22:07:30.946995,journalctl,<info>  [1754411849.2059] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:07:30.982498,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-51 noise=9999 txrate=234000,normal
+2025-08-05T22:07:31.018790,journalctl,<info>  [1754411849.2064] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:07:31.070400,journalctl,<info>  [1754411849.2152] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:07:31.121810,journalctl,<info>  [1754411849.2152] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:07:31.169959,journalctl,<info>  [1754411849.2153] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:31.210622,journalctl,<info>  [1754411849.2154] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:07:31.250842,journalctl,<info>  [1754411849.2154] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:07:31.288236,journalctl,<info>  [1754411849.2154] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:07:31.328388,journalctl,<info>  [1754411849.2154] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:31.371589,journalctl,<info>  [1754411849.2155] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:07:31.409439,journalctl,<info>  [1754411849.2443] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:07:31.570820,journalctl,"<info>  [1754411850.2983] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:07:31.617320,journalctl,"<info>  [1754411850.2990] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:07:37.177443,journalctl,wlp0s20f3: SME: Trying to authenticate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:07:37.226515,journalctl,wlp0s20f3: disconnect from AP 14:33:75:6f:3c:a7 for new auth to 14:33:75:6f:3c:a6,normal
+2025-08-05T22:07:37.276371,journalctl,<info>  [1754411856.7136] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:07:37.332826,journalctl,<info>  [1754411856.7222] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:07:37.388317,journalctl,<info>  [1754411856.7222] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:37.432504,journalctl,<info>  [1754411856.7223] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:07:37.477935,journalctl,<info>  [1754411856.7223] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:37.529529,journalctl,<info>  [1754411856.7225] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:07:37.581728,journalctl,<info>  [1754411856.7225] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:07:37.628435,journalctl,<info>  [1754411856.7225] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:37.670976,journalctl,<info>  [1754411856.7225] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:07:37.711498,journalctl,<info>  [1754411856.7226] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:37.753299,journalctl,wlp0s20f3: authenticate with 14:33:75:6f:3c:a6 (local address=80:38:fb:29:34:02),normal
+2025-08-05T22:07:37.791184,journalctl,wlp0s20f3: send auth to 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:07:37.832953,journalctl,<info>  [1754411856.7459] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:07:37.880032,journalctl,<info>  [1754411856.7460] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:07:37.926840,journalctl,wlp0s20f3: Trying to associate with 14:33:75:6f:3c:a6 (SSID='Airtel_RKS' freq=2462 MHz),normal
+2025-08-05T22:07:38.020897,journalctl,wlp0s20f3: associate with 14:33:75:6f:3c:a6 (try 1/3),normal
+2025-08-05T22:07:38.085769,journalctl,<info>  [1754411856.7782] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:07:38.149108,journalctl,<info>  [1754411856.7782] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:07:38.217179,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=1),normal
+2025-08-05T22:07:38.304720,journalctl,wlp0s20f3: Associated with 14:33:75:6f:3c:a6,normal
+2025-08-05T22:07:38.417675,journalctl,<info>  [1754411856.7957] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:07:38.484411,journalctl,<info>  [1754411856.7958] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:07:38.544096,journalctl,wlp0s20f3: Limiting TX power to 30 (30 - 0) dBm as advertised by 14:33:75:6f:3c:a6,normal
+2025-08-05T22:07:38.598699,journalctl,wlp0s20f3: WPA: Key negotiation completed with 14:33:75:6f:3c:a6 [PTK=CCMP GTK=TKIP],normal
+2025-08-05T22:07:38.659211,journalctl,wlp0s20f3: CTRL-EVENT-CONNECTED - Connection to 14:33:75:6f:3c:a6 completed [id=0 id_str=],normal
+2025-08-05T22:07:38.720824,journalctl,<info>  [1754411856.8192] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:07:38.768056,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-46 noise=9999 txrate=52000,normal
+2025-08-05T22:07:38.814429,journalctl,<info>  [1754411856.8201] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:07:38.872615,journalctl,<info>  [1754411856.8302] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:07:38.931600,journalctl,<info>  [1754411856.8302] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:07:38.994536,journalctl,<info>  [1754411856.8303] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:39.055274,journalctl,<info>  [1754411856.8304] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:07:39.118768,journalctl,<info>  [1754411856.8305] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:07:39.184545,journalctl,<info>  [1754411856.8305] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:07:39.247782,journalctl,<info>  [1754411856.8306] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:07:39.301677,journalctl,<info>  [1754411856.8307] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:07:39.359321,journalctl,<info>  [1754411856.8750] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:07:39.428038,journalctl,"<info>  [1754411856.9135] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:07:39.494855,journalctl,"<info>  [1754411856.9139] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:07:58.315909,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-49 noise=9999 txrate=52000,normal
+2025-08-05T22:07:58.372830,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-47 noise=9999 txrate=65000,normal
+2025-08-05T22:09:26.543189,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-44 noise=9999 txrate=117000,normal
+2025-08-05T22:12:01.055645,journalctl,src/adv_monitor.c:btd_adv_monitor_power_down() Unexpected NULL btd_adv_monitor_manager object upon power down,normal
+2025-08-05T22:12:38.369476,journalctl,<info>  [1754412157.8428] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:12:38.414547,journalctl,<info>  [1754412157.8429] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:12:38.466692,journalctl,<info>  [1754412157.8429] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:38.514415,journalctl,<info>  [1754412157.8432] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:12:38.568700,journalctl,<info>  [1754412157.8433] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:38.622337,journalctl,<info>  [1754412157.8434] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:12:38.681543,journalctl,<info>  [1754412157.8435] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:12:38.715695,journalctl,<info>  [1754412157.8435] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:38.754477,journalctl,<info>  [1754412157.8435] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:12:38.933060,journalctl,<info>  [1754412157.8696] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:12:38.976460,journalctl,<info>  [1754412157.8696] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:12:39.104383,journalctl,<info>  [1754412157.8944] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:12:39.158572,journalctl,<info>  [1754412157.8944] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:12:39.393692,journalctl,<info>  [1754412157.9092] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:12:39.435950,journalctl,<info>  [1754412157.9093] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:12:39.564548,journalctl,<info>  [1754412157.9215] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:12:39.601863,journalctl,<info>  [1754412157.9220] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:12:39.655482,journalctl,<info>  [1754412157.9282] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:12:39.702410,journalctl,<info>  [1754412157.9282] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:12:39.750792,journalctl,<info>  [1754412157.9283] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:39.796483,journalctl,<info>  [1754412157.9284] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:12:39.837952,journalctl,<info>  [1754412157.9285] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:12:39.879923,journalctl,<info>  [1754412157.9285] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:12:39.925888,journalctl,<info>  [1754412157.9285] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:39.967412,journalctl,<info>  [1754412157.9286] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:12:40.061482,journalctl,<info>  [1754412157.9513] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:12:40.188849,journalctl,"<info>  [1754412157.9898] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:12:40.231846,journalctl,"<info>  [1754412157.9901] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:12:40.270450,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-50 noise=9999 txrate=234000,normal
+2025-08-05T22:12:43.820626,journalctl,<info>  [1754412163.3348] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:12:43.861736,journalctl,<info>  [1754412163.3462] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:12:43.901385,journalctl,<info>  [1754412163.3462] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:43.939361,journalctl,<info>  [1754412163.3462] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:12:43.980718,journalctl,<info>  [1754412163.3463] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:44.034237,journalctl,<info>  [1754412163.3465] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:12:44.090416,journalctl,<info>  [1754412163.3465] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:12:44.148124,journalctl,<info>  [1754412163.3465] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:44.200915,journalctl,<info>  [1754412163.3465] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:12:44.427854,journalctl,<info>  [1754412163.3621] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:12:44.488185,journalctl,<info>  [1754412163.3622] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:12:44.636890,journalctl,<info>  [1754412163.3947] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:12:44.699506,journalctl,<info>  [1754412163.3948] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:12:44.978517,journalctl,<info>  [1754412163.4204] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:12:45.021157,journalctl,<info>  [1754412163.4204] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:12:45.141456,journalctl,<info>  [1754412163.4470] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:12:45.177742,journalctl,<info>  [1754412163.4485] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:12:45.217388,journalctl,<info>  [1754412163.4582] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:12:45.253061,journalctl,<info>  [1754412163.4582] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:12:45.291219,journalctl,<info>  [1754412163.4583] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:45.327908,journalctl,<info>  [1754412163.4584] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:12:45.369505,journalctl,<info>  [1754412163.4584] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:12:45.412977,journalctl,<info>  [1754412163.4584] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:12:45.458883,journalctl,<info>  [1754412163.4585] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:12:45.519204,journalctl,<info>  [1754412163.4585] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:12:45.568095,journalctl,<info>  [1754412163.4685] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:12:45.660650,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-47 noise=9999 txrate=52000,normal
+2025-08-05T22:12:46.035182,journalctl,"<info>  [1754412165.6603] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:12:46.079948,journalctl,"<info>  [1754412165.6608] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:13:12.081290,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=52000,normal
+2025-08-05T22:15:35.534779,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-44 noise=9999 txrate=130000,normal
+2025-08-05T22:17:28.923828,journalctl,Unhandled parent window type,normal
+2025-08-05T22:17:29.945752,journalctl,Failed to associate portal window with parent window,normal
+2025-08-05T22:17:49.315661,journalctl,<info>  [1754412464.5581] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:17:50.354355,journalctl,<info>  [1754412464.5582] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:17:51.396198,journalctl,<info>  [1754412464.5582] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:17:52.423490,journalctl,<info>  [1754412464.5582] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:17:53.452472,journalctl,<info>  [1754412464.5583] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:17:54.479669,journalctl,<info>  [1754412464.5604] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:17:55.509695,journalctl,<info>  [1754412464.5605] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:17:56.538619,journalctl,<info>  [1754412464.5605] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:17:57.565772,journalctl,<info>  [1754412464.5605] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:17:58.605651,journalctl,<info>  [1754412464.5606] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:18:01.727547,journalctl,<info>  [1754412464.5986] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:18:02.756762,journalctl,<info>  [1754412464.5991] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:18:06.886457,journalctl,<info>  [1754412464.6218] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:18:07.933666,journalctl,<info>  [1754412464.6220] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:18:14.111727,journalctl,<info>  [1754412464.6358] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:18:15.142066,journalctl,<info>  [1754412464.6359] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:18:18.248881,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-56 noise=9999 txrate=234000,normal
+2025-08-05T22:18:19.277838,journalctl,<info>  [1754412464.6516] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:18:20.306749,journalctl,<info>  [1754412464.6535] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:18:21.348787,journalctl,<info>  [1754412464.6652] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:18:22.400709,journalctl,<info>  [1754412464.6652] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:18:23.496660,journalctl,<info>  [1754412464.6653] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:18:24.532640,journalctl,<info>  [1754412464.6655] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:18:25.567665,journalctl,<info>  [1754412464.6655] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:18:26.603892,journalctl,<info>  [1754412464.6655] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:18:27.815623,journalctl,<info>  [1754412464.6656] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:18:28.858790,journalctl,<info>  [1754412464.6657] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:18:29.900763,journalctl,<info>  [1754412464.6864] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:18:32.997637,journalctl,"<info>  [1754412464.7387] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:18:34.039364,journalctl,"<info>  [1754412464.7390] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:18:39.181111,journalctl,<info>  [1754412467.5174] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:18:40.208037,journalctl,<info>  [1754412467.5262] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:18:41.236827,journalctl,<info>  [1754412467.5263] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:18:42.264860,journalctl,<info>  [1754412467.5263] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:18:44.323254,journalctl,<info>  [1754412467.5264] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:18:45.352853,journalctl,<info>  [1754412467.5265] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:18:46.384683,journalctl,<info>  [1754412467.5265] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:18:47.416641,journalctl,<info>  [1754412467.5265] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:18:51.563785,journalctl,<info>  [1754412467.5513] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:18:52.598682,journalctl,<info>  [1754412467.5514] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:18:54.665422,journalctl,<info>  [1754412467.5840] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:18:56.715216,journalctl,<info>  [1754412467.5840] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:19:02.894656,journalctl,<info>  [1754412467.6054] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:19:03.927934,journalctl,<info>  [1754412467.6055] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:19:07.033361,journalctl,<info>  [1754412467.6376] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:19:08.070988,journalctl,<info>  [1754412467.6420] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:19:10.127671,journalctl,<info>  [1754412467.6512] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:19:11.155429,journalctl,<info>  [1754412467.6512] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:19:12.183933,journalctl,<info>  [1754412467.6514] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:19:13.213241,journalctl,<info>  [1754412467.6515] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:19:14.241809,journalctl,<info>  [1754412467.6515] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:19:15.269787,journalctl,<info>  [1754412467.6515] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:19:16.306633,journalctl,<info>  [1754412467.6516] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:19:17.337217,journalctl,<info>  [1754412467.6516] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:19:18.364693,journalctl,<info>  [1754412467.6860] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:19:19.394660,journalctl,"<info>  [1754412467.7231] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:19:20.438732,journalctl,"<info>  [1754412467.7234] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:26:33.086566,journalctl,<info>  [1754412987.7218] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:26:34.113550,journalctl,<info>  [1754412987.7219] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:26:35.147762,journalctl,<info>  [1754412987.7219] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:26:36.186797,journalctl,<info>  [1754412987.7220] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:26:37.224838,journalctl,<info>  [1754412987.7220] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:26:38.254618,journalctl,<info>  [1754412987.7226] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:26:39.290315,journalctl,<info>  [1754412987.7227] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:26:40.331577,journalctl,<info>  [1754412987.7227] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:26:41.369425,journalctl,<info>  [1754412987.7227] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:26:42.396669,journalctl,<info>  [1754412987.7228] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:26:45.483894,journalctl,<info>  [1754412987.7447] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:26:46.512966,journalctl,<info>  [1754412987.7447] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:26:49.591606,journalctl,<info>  [1754412987.7708] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:26:50.621807,journalctl,<info>  [1754412987.7709] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:26:56.794748,journalctl,<info>  [1754412987.7869] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:26:57.825547,journalctl,<info>  [1754412987.7870] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:27:00.917707,journalctl,<info>  [1754412987.7998] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:27:01.945666,journalctl,<info>  [1754412987.8003] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:27:04.015096,journalctl,<info>  [1754412987.8072] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:27:05.045689,journalctl,<info>  [1754412987.8073] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:27:06.076488,journalctl,<info>  [1754412987.8073] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:27:07.104310,journalctl,<info>  [1754412987.8075] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:27:08.131777,journalctl,<info>  [1754412987.8075] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:27:09.158919,journalctl,<info>  [1754412987.8075] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:27:10.187559,journalctl,<info>  [1754412987.8075] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:27:11.218051,journalctl,<info>  [1754412987.8076] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:27:12.244714,journalctl,<info>  [1754412987.8307] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:27:15.337639,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-59 noise=9999 txrate=26000,normal
+2025-08-05T22:27:16.374807,journalctl,"<info>  [1754412987.9225] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:27:17.406705,journalctl,"<info>  [1754412987.9230] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:27:21.538053,journalctl,<info>  [1754412995.3269] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:27:22.566822,journalctl,<info>  [1754412995.3269] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:27:24.637727,journalctl,<info>  [1754412995.4295] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:27:25.669799,journalctl,<info>  [1754412995.4402] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:27:26.698699,journalctl,<info>  [1754412995.4403] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:27:27.737807,journalctl,<info>  [1754412995.4403] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:27:28.780714,journalctl,<info>  [1754412995.4404] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:27:29.817741,journalctl,<info>  [1754412995.4405] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:27:30.855591,journalctl,<info>  [1754412995.4405] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:27:31.883697,journalctl,<info>  [1754412995.4405] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:27:32.910720,journalctl,<info>  [1754412995.4405] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:27:39.100691,journalctl,<info>  [1754412995.4926] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:27:40.143553,journalctl,<info>  [1754412995.4927] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:27:46.353810,journalctl,<info>  [1754412995.5137] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:27:47.399766,journalctl,<info>  [1754412995.5137] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:27:50.581739,journalctl,<info>  [1754412995.5392] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:27:51.621871,journalctl,<info>  [1754412995.5401] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:27:52.649652,journalctl,<info>  [1754412995.5533] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:27:53.675695,journalctl,<info>  [1754412995.5533] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:27:54.709693,journalctl,<info>  [1754412995.5534] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:27:55.744649,journalctl,<info>  [1754412995.5535] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:27:56.773297,journalctl,<info>  [1754412995.5535] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:27:57.801850,journalctl,<info>  [1754412995.5535] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:27:58.830881,journalctl,<info>  [1754412995.5536] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:27:59.870030,journalctl,<info>  [1754412995.5536] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:28:00.907647,journalctl,<info>  [1754412995.5722] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:28:02.975756,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-42 noise=9999 txrate=52000,normal
+2025-08-05T22:28:04.019621,journalctl,"<info>  [1754412997.7752] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:28:05.049726,journalctl,"<info>  [1754412997.7756] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:28:07.123930,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-44 noise=9999 txrate=52000,normal
+2025-08-05T22:33:14.109672,journalctl,<info>  [1754413388.7196] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:33:15.149400,journalctl,<info>  [1754413388.7197] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:33:16.189699,journalctl,<info>  [1754413388.7197] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:33:17.217767,journalctl,<info>  [1754413388.7197] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:33:18.246694,journalctl,<info>  [1754413388.7198] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:33:19.276784,journalctl,<info>  [1754413388.7199] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:33:20.304975,journalctl,<info>  [1754413388.7200] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:33:21.349789,journalctl,<info>  [1754413388.7200] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:33:22.391838,journalctl,<info>  [1754413388.7200] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:33:26.536614,journalctl,<info>  [1754413388.7473] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:33:27.577421,journalctl,<info>  [1754413388.7473] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:33:31.694228,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=7),normal
+2025-08-05T22:33:32.723422,journalctl,<info>  [1754413388.7757] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:33:33.752781,journalctl,<info>  [1754413388.7757] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:33:37.876240,journalctl,<info>  [1754413388.7872] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:33:38.924528,journalctl,<info>  [1754413388.7872] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:33:42.034073,journalctl,<info>  [1754413388.7993] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:33:43.072837,journalctl,<info>  [1754413388.8000] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:33:45.132794,journalctl,<info>  [1754413388.8132] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:33:46.159634,journalctl,<info>  [1754413388.8132] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:33:47.197801,journalctl,<info>  [1754413388.8133] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:33:48.237264,journalctl,<info>  [1754413388.8134] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:33:49.276267,journalctl,<info>  [1754413388.8135] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:33:50.315711,journalctl,<info>  [1754413388.8135] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:33:51.357562,journalctl,<info>  [1754413388.8135] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:33:52.405901,journalctl,<info>  [1754413388.8136] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:33:53.446713,journalctl,<info>  [1754413388.8236] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:33:56.538807,journalctl,"<info>  [1754413388.8814] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:33:57.571788,journalctl,"<info>  [1754413388.8817] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:33:58.603603,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-57 noise=9999 txrate=234000,normal
+2025-08-05T22:34:03.745924,journalctl,<info>  [1754413396.4827] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:34:04.774100,journalctl,<info>  [1754413396.4912] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:34:05.809708,journalctl,<info>  [1754413396.4912] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:34:06.844162,journalctl,<info>  [1754413396.4912] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:34:07.886661,journalctl,<info>  [1754413396.4913] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:34:08.924831,journalctl,<info>  [1754413396.4914] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:34:09.965782,journalctl,<info>  [1754413396.4914] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:34:11.009151,journalctl,<info>  [1754413396.4914] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:34:12.036748,journalctl,<info>  [1754413396.4915] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:34:13.064704,journalctl,<info>  [1754413396.4915] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:34:15.148797,journalctl,<info>  [1754413396.5198] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:34:16.197670,journalctl,<info>  [1754413396.5198] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:34:21.382934,journalctl,<info>  [1754413396.5499] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:34:22.425164,journalctl,<info>  [1754413396.5500] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:34:27.612781,journalctl,<info>  [1754413396.5702] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:34:28.645137,journalctl,<info>  [1754413396.5702] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:34:31.755277,journalctl,<info>  [1754413396.5959] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:34:32.794748,journalctl,<info>  [1754413396.5964] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:34:33.833257,journalctl,<info>  [1754413396.6032] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:34:34.871868,journalctl,<info>  [1754413396.6032] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:34:35.913201,journalctl,<info>  [1754413396.6033] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:34:36.941876,journalctl,<info>  [1754413396.6035] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:34:37.970723,journalctl,<info>  [1754413396.6035] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:34:38.997709,journalctl,<info>  [1754413396.6035] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:34:40.027388,journalctl,<info>  [1754413396.6036] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:34:41.058949,journalctl,<info>  [1754413396.6037] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:34:42.085970,journalctl,<info>  [1754413396.6214] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:34:44.148787,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-43 noise=9999 txrate=52000,normal
+2025-08-05T22:34:45.178907,journalctl,"<info>  [1754413398.7610] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:34:46.221578,journalctl,"<info>  [1754413398.7614] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:34:48.282423,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-51 noise=9999 txrate=52000,normal
+2025-08-05T22:38:25.442349,journalctl,<info>  [1754413701.2288] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:38:26.469141,journalctl,<info>  [1754413701.2295] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:38:27.496615,journalctl,<info>  [1754413701.2295] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:38:28.532738,journalctl,<info>  [1754413701.2295] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:38:29.574774,journalctl,<info>  [1754413701.2296] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:38:30.601802,journalctl,<info>  [1754413701.2297] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:38:31.628639,journalctl,<info>  [1754413701.2297] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:38:32.662877,journalctl,<info>  [1754413701.2297] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:38:33.696648,journalctl,<info>  [1754413701.2298] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:38:34.737882,journalctl,<info>  [1754413701.2298] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:38:37.858658,journalctl,<info>  [1754413701.2555] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:38:38.896938,journalctl,<info>  [1754413701.2556] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:38:44.058811,journalctl,<info>  [1754413701.2893] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:38:45.105729,journalctl,<info>  [1754413701.2894] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:38:49.244684,journalctl,<info>  [1754413701.2969] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:38:50.279783,journalctl,<info>  [1754413701.2970] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:38:53.408754,journalctl,<info>  [1754413701.3104] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:38:54.449520,journalctl,<info>  [1754413701.3113] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:38:55.488699,journalctl,<info>  [1754413701.3222] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:38:56.527763,journalctl,<info>  [1754413701.3223] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:38:57.556733,journalctl,<info>  [1754413701.3224] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:38:58.588688,journalctl,<info>  [1754413701.3225] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:38:59.630581,journalctl,<info>  [1754413701.3226] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:39:00.672006,journalctl,<info>  [1754413701.3226] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:39:01.713776,journalctl,<info>  [1754413701.3227] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:39:02.759138,journalctl,<info>  [1754413701.3228] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:39:03.787631,journalctl,<info>  [1754413701.3424] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:39:07.914818,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-54 noise=9999 txrate=234000,normal
+2025-08-05T22:39:08.960000,journalctl,"<info>  [1754413703.5484] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:39:10.000913,journalctl,"<info>  [1754413703.5488] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:39:13.530849,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=0 signal=-64 noise=9999 txrate=234000,normal
+2025-08-05T22:39:24.713770,journalctl,<info>  [1754413759.0278] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:39:25.752719,journalctl,<info>  [1754413759.0279] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:39:26.788735,journalctl,<info>  [1754413759.0279] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:39:27.920634,journalctl,<info>  [1754413759.0279] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:39:28.958746,journalctl,<info>  [1754413759.0280] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:39:29.998795,journalctl,<info>  [1754413759.0281] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:39:31.039710,journalctl,<info>  [1754413759.0281] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:39:32.069665,journalctl,<info>  [1754413759.0281] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:39:33.097758,journalctl,<info>  [1754413759.0281] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:39:34.126833,journalctl,<info>  [1754413759.0282] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:39:37.222087,journalctl,<info>  [1754413759.0561] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:39:38.253690,journalctl,<info>  [1754413759.0562] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:39:42.374040,journalctl,<info>  [1754413759.0863] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:39:43.410673,journalctl,<info>  [1754413759.0863] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:39:48.561513,journalctl,<info>  [1754413759.1040] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:39:49.601345,journalctl,<info>  [1754413759.1041] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:39:52.738391,journalctl,<info>  [1754413759.1258] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:39:53.777239,journalctl,<info>  [1754413759.1264] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:39:55.856647,journalctl,<info>  [1754413759.1403] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:39:56.893727,journalctl,<info>  [1754413759.1403] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:39:57.936617,journalctl,<info>  [1754413759.1404] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:39:58.976437,journalctl,<info>  [1754413759.1405] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:40:00.015876,journalctl,<info>  [1754413759.1406] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:40:01.055240,journalctl,<info>  [1754413759.1406] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:40:02.096494,journalctl,<info>  [1754413759.1406] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:40:03.141792,journalctl,<info>  [1754413759.1407] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:40:04.178482,journalctl,<info>  [1754413759.1595] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:40:08.289871,journalctl,"<info>  [1754413760.0601] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:40:09.320690,journalctl,"<info>  [1754413760.0604] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:40:11.386688,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-50 noise=9999 txrate=52000,normal
+2025-08-05T22:42:31.023913,journalctl,<info>  [1754413945.6890] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:42:32.050966,journalctl,<info>  [1754413945.6891] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:42:33.079614,journalctl,<info>  [1754413945.6891] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:42:34.106976,journalctl,<info>  [1754413945.6891] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:42:35.135655,journalctl,<info>  [1754413945.6892] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:42:36.166054,journalctl,<info>  [1754413945.6893] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:42:37.193974,journalctl,<info>  [1754413945.6894] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:42:38.228285,journalctl,<info>  [1754413945.6894] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:42:39.255098,journalctl,<info>  [1754413945.6894] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:42:43.397060,journalctl,<info>  [1754413945.7144] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:42:44.426881,journalctl,<info>  [1754413945.7145] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:42:49.572989,journalctl,<info>  [1754413945.7435] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:42:50.602693,journalctl,<info>  [1754413945.7435] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:42:54.709710,journalctl,<info>  [1754413945.7535] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:42:55.739720,journalctl,<info>  [1754413945.7535] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:42:58.828059,journalctl,<info>  [1754413945.7691] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:42:59.855007,journalctl,<info>  [1754413945.7697] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:43:00.881814,journalctl,<info>  [1754413945.7753] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:43:01.909404,journalctl,<info>  [1754413945.7753] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:43:02.938494,journalctl,<info>  [1754413945.7754] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:43:03.970684,journalctl,<info>  [1754413945.7755] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:43:05.005678,journalctl,<info>  [1754413945.7755] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:43:06.044548,journalctl,<info>  [1754413945.7755] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:43:07.087564,journalctl,<info>  [1754413945.7755] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:43:08.118231,journalctl,<info>  [1754413945.7756] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:43:10.174358,journalctl,<info>  [1754413945.8315] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:43:13.269920,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-60 noise=9999 txrate=234000,normal
+2025-08-05T22:43:14.335244,journalctl,"<info>  [1754413946.7878] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:43:15.379159,journalctl,"<info>  [1754413946.7881] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:43:20.526486,journalctl,<info>  [1754413953.5285] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:43:21.554949,journalctl,<info>  [1754413953.5382] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:43:22.589019,journalctl,<info>  [1754413953.5383] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:43:23.632547,journalctl,<info>  [1754413953.5383] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:43:25.696856,journalctl,<info>  [1754413953.5385] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:43:26.741159,journalctl,<info>  [1754413953.5385] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:43:27.788796,journalctl,<info>  [1754413953.5385] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:43:28.829853,journalctl,<info>  [1754413953.5385] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:43:29.870731,journalctl,<info>  [1754413953.5386] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:43:32.963356,journalctl,<info>  [1754413953.5565] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:43:33.998775,journalctl,<info>  [1754413953.5566] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:43:36.060742,journalctl,<info>  [1754413953.5819] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:43:37.105287,journalctl,<info>  [1754413953.5819] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:43:45.313332,journalctl,<info>  [1754413953.6062] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:43:46.346987,journalctl,<info>  [1754413953.6063] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:43:49.453343,journalctl,<info>  [1754413953.6274] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:43:51.508878,journalctl,<info>  [1754413953.6292] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:43:52.546681,journalctl,<info>  [1754413953.6442] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:43:53.574731,journalctl,<info>  [1754413953.6442] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:43:54.603680,journalctl,<info>  [1754413953.6443] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:43:55.631384,journalctl,<info>  [1754413953.6444] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:43:56.658093,journalctl,<info>  [1754413953.6444] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:43:57.697404,journalctl,<info>  [1754413953.6444] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:43:58.736509,journalctl,<info>  [1754413953.6444] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:43:59.766692,journalctl,<info>  [1754413953.6445] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:44:00.793911,journalctl,<info>  [1754413953.6623] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:44:02.848749,journalctl,"<info>  [1754413955.8937] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:44:03.890702,journalctl,"<info>  [1754413955.8940] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:44:11.530505,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-53 noise=9999 txrate=52000,normal
+2025-08-05T22:47:39.092717,journalctl,<info>  [1754414255.6369] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:47:40.118703,journalctl,<info>  [1754414255.6370] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:47:41.145897,journalctl,<info>  [1754414255.6370] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:47:42.186604,journalctl,<info>  [1754414255.6371] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:47:43.214717,journalctl,<info>  [1754414255.6371] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:47:44.243715,journalctl,<info>  [1754414255.6373] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:47:45.283778,journalctl,<info>  [1754414255.6374] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:47:46.326157,journalctl,<info>  [1754414255.6374] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:47:47.358770,journalctl,<info>  [1754414255.6374] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:47:48.395026,journalctl,<info>  [1754414255.6375] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:47:51.503789,journalctl,<info>  [1754414255.6667] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:47:52.534051,journalctl,<info>  [1754414255.6668] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:47:56.666706,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=4),normal
+2025-08-05T22:48:00.801119,journalctl,<info>  [1754414255.7011] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:48:01.848013,journalctl,<info>  [1754414255.7011] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:48:02.878570,journalctl,<info>  [1754414255.7061] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:48:03.909760,journalctl,<info>  [1754414255.7062] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:48:06.998808,journalctl,<info>  [1754414255.7186] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:48:08.037681,journalctl,<info>  [1754414255.7191] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:48:09.066831,journalctl,<info>  [1754414255.7342] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:48:10.113919,journalctl,<info>  [1754414255.7342] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:48:11.155293,journalctl,<info>  [1754414255.7343] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:48:12.188202,journalctl,<info>  [1754414255.7344] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:48:13.217865,journalctl,<info>  [1754414255.7344] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:48:14.265874,journalctl,<info>  [1754414255.7344] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:48:15.322649,journalctl,<info>  [1754414255.7345] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:48:16.367298,journalctl,<info>  [1754414255.7346] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:48:18.433645,journalctl,<info>  [1754414255.7537] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:48:21.510711,journalctl,"<info>  [1754414255.7933] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:48:22.540492,journalctl,"<info>  [1754414255.7935] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:51:16.530531,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-46 noise=9999 txrate=234000,normal
+2025-08-05T22:54:01.679351,journalctl,<info>  [1754414637.4709] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:54:02.709706,journalctl,<info>  [1754414637.4710] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:54:04.766719,journalctl,<info>  [1754414637.5346] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:54:05.804128,journalctl,<info>  [1754414637.5347] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:54:06.843886,journalctl,<info>  [1754414637.5347] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:54:07.872855,journalctl,<info>  [1754414637.5347] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:54:08.901725,journalctl,<info>  [1754414637.5348] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:54:09.931869,journalctl,<info>  [1754414637.5349] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:54:10.977931,journalctl,<info>  [1754414637.5350] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:54:12.017951,journalctl,<info>  [1754414637.5350] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:54:13.057099,journalctl,<info>  [1754414637.5350] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:54:20.331237,journalctl,<info>  [1754414637.6135] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:54:21.372790,journalctl,<info>  [1754414637.6136] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:54:22.410702,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a6 (capab=0x1411 status=0 aid=3),normal
+2025-08-05T22:54:26.537150,journalctl,<info>  [1754414637.6353] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:54:27.574704,journalctl,<info>  [1754414637.6354] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:54:31.707661,journalctl,<info>  [1754414637.6638] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:54:33.770692,journalctl,<info>  [1754414637.6698] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:54:34.799681,journalctl,<info>  [1754414637.6772] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:54:35.829810,journalctl,<info>  [1754414637.6773] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:54:36.864637,journalctl,<info>  [1754414637.6774] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:54:37.891882,journalctl,<info>  [1754414637.6775] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:54:38.931998,journalctl,<info>  [1754414637.6775] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:54:39.976093,journalctl,<info>  [1754414637.6775] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:54:41.016697,journalctl,<info>  [1754414637.6776] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:54:42.047744,journalctl,<info>  [1754414637.6777] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:54:43.088842,journalctl,<info>  [1754414637.7068] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:54:46.187681,journalctl,"<info>  [1754414638.5809] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:54:47.228800,journalctl,"<info>  [1754414638.5812] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:57:46.027714,journalctl,ACPI group/action undefined: wmi / PNP0C14:00,normal
+2025-08-05T22:59:02.888234,journalctl,<info>  [1754414939.5638] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:59:03.915619,journalctl,<info>  [1754414939.5640] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:59:04.945233,journalctl,<info>  [1754414939.5640] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:59:05.977787,journalctl,<info>  [1754414939.5641] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:59:07.008706,journalctl,<info>  [1754414939.5642] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:59:08.041786,journalctl,<info>  [1754414939.5644] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:59:09.072773,journalctl,<info>  [1754414939.5645] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:59:10.108695,journalctl,<info>  [1754414939.5645] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:59:11.152133,journalctl,<info>  [1754414939.5645] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:59:12.179735,journalctl,<info>  [1754414939.5646] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:59:15.281722,journalctl,<info>  [1754414939.5967] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T22:59:16.311417,journalctl,<info>  [1754414939.5967] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T22:59:20.419883,journalctl,wlp0s20f3: RX ReassocResp from 14:33:75:6f:3c:a7 (capab=0x1411 status=0 aid=3),normal
+2025-08-05T22:59:21.450024,journalctl,<info>  [1754414939.6275] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T22:59:22.479836,journalctl,<info>  [1754414939.6275] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T22:59:26.606205,journalctl,<info>  [1754414939.6356] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T22:59:27.644949,journalctl,<info>  [1754414939.6357] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T22:59:30.747791,journalctl,<info>  [1754414939.6486] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T22:59:31.777625,journalctl,<info>  [1754414939.6494] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T22:59:32.814721,journalctl,<info>  [1754414939.6552] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:59:33.843687,journalctl,<info>  [1754414939.6553] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:59:34.872832,journalctl,<info>  [1754414939.6554] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:59:35.937728,journalctl,<info>  [1754414939.6556] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T22:59:36.978725,journalctl,<info>  [1754414939.6557] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T22:59:38.017707,journalctl,<info>  [1754414939.6557] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T22:59:39.060800,journalctl,<info>  [1754414939.6557] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T22:59:40.107145,journalctl,<info>  [1754414939.6559] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T22:59:41.143400,journalctl,<info>  [1754414939.6753] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T22:59:45.269056,journalctl,"<info>  [1754414939.7248] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T22:59:46.302349,journalctl,"<info>  [1754414939.7251] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T22:59:47.330621,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-62 noise=9999 txrate=26000,normal
+2025-08-05T22:59:48.358818,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-50 noise=9999 txrate=26000,normal
+2025-08-05T22:59:49.392805,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-49 noise=9999 txrate=26000,normal
+2025-08-05T23:07:26.034835,journalctl,<info>  [1754415440.7764] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T23:07:27.070831,journalctl,<info>  [1754415440.7765] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T23:07:28.118880,journalctl,<info>  [1754415440.7765] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:07:29.157815,journalctl,<info>  [1754415440.7765] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T23:07:30.188700,journalctl,<info>  [1754415440.7766] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:07:31.218737,journalctl,<info>  [1754415440.7767] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T23:07:32.250261,journalctl,<info>  [1754415440.7768] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T23:07:33.278011,journalctl,<info>  [1754415440.7768] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:07:34.305263,journalctl,<info>  [1754415440.7768] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T23:07:38.431794,journalctl,<info>  [1754415440.8019] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T23:07:39.478085,journalctl,<info>  [1754415440.8019] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T23:07:43.614699,journalctl,<info>  [1754415440.8314] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T23:07:44.645898,journalctl,<info>  [1754415440.8315] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T23:07:50.844593,journalctl,<info>  [1754415440.8511] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T23:07:51.883741,journalctl,<info>  [1754415440.8512] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T23:07:54.992762,journalctl,<info>  [1754415440.8796] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T23:07:57.048748,journalctl,<info>  [1754415440.8803] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T23:07:58.077445,journalctl,<info>  [1754415440.8882] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T23:07:59.104905,journalctl,<info>  [1754415440.8883] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T23:08:00.133741,journalctl,<info>  [1754415440.8884] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:08:01.161892,journalctl,<info>  [1754415440.8885] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T23:08:02.189685,journalctl,<info>  [1754415440.8886] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T23:08:03.223220,journalctl,<info>  [1754415440.8886] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T23:08:04.254063,journalctl,<info>  [1754415440.8887] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:08:05.287211,journalctl,<info>  [1754415440.8888] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T23:08:06.317120,journalctl,<info>  [1754415440.9084] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T23:08:09.385814,journalctl,"<info>  [1754415443.1497] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T23:08:10.414795,journalctl,"<info>  [1754415443.1500] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T23:12:28.242199,journalctl,<info>  [1754415744.8309] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T23:12:29.269719,journalctl,<info>  [1754415744.8310] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T23:12:30.301852,journalctl,<info>  [1754415744.8310] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:12:31.333831,journalctl,<info>  [1754415744.8311] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T23:12:32.365270,journalctl,<info>  [1754415744.8311] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:12:33.393259,journalctl,<info>  [1754415744.8313] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T23:12:34.420272,journalctl,<info>  [1754415744.8313] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T23:12:35.457888,journalctl,<info>  [1754415744.8313] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:12:36.492274,journalctl,<info>  [1754415744.8313] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T23:12:37.520293,journalctl,<info>  [1754415744.8314] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:12:40.629806,journalctl,<info>  [1754415744.8562] device (wlp0s20f3): supplicant interface state: completed -> authenticating,normal
+2025-08-05T23:12:41.674443,journalctl,<info>  [1754415744.8562] device (p2p-dev-wlp0s20f3): supplicant management interface state: completed -> authenticating,normal
+2025-08-05T23:12:46.867755,journalctl,<info>  [1754415744.8923] device (wlp0s20f3): supplicant interface state: authenticating -> associating,normal
+2025-08-05T23:12:47.903256,journalctl,<info>  [1754415744.8923] device (p2p-dev-wlp0s20f3): supplicant management interface state: authenticating -> associating,normal
+2025-08-05T23:12:52.019713,journalctl,<info>  [1754415744.9038] device (wlp0s20f3): supplicant interface state: associating -> 4way_handshake,normal
+2025-08-05T23:12:53.061039,journalctl,<info>  [1754415744.9038] device (p2p-dev-wlp0s20f3): supplicant management interface state: associating -> 4way_handshake,normal
+2025-08-05T23:12:56.172778,journalctl,<info>  [1754415744.9166] device (wlp0s20f3): supplicant interface state: 4way_handshake -> completed,normal
+2025-08-05T23:12:57.213707,journalctl,<info>  [1754415744.9173] device (wlp0s20f3): ip:dhcp4: restarting,normal
+2025-08-05T23:12:58.241753,journalctl,<info>  [1754415744.9252] dhcp4 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T23:12:59.268786,journalctl,<info>  [1754415744.9252] dhcp4 (wlp0s20f3): state changed no lease,normal
+2025-08-05T23:13:00.312822,journalctl,<info>  [1754415744.9254] dhcp4 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:13:01.342543,journalctl,<info>  [1754415744.9255] device (wlp0s20f3): ip:dhcp6: restarting,normal
+2025-08-05T23:13:02.369756,journalctl,<info>  [1754415744.9255] dhcp6 (wlp0s20f3): canceled DHCP transaction,normal
+2025-08-05T23:13:03.398266,journalctl,<info>  [1754415744.9256] dhcp6 (wlp0s20f3): state changed no lease,normal
+2025-08-05T23:13:04.438873,journalctl,<info>  [1754415744.9256] dhcp6 (wlp0s20f3): activation: beginning transaction (timeout in 45 seconds),normal
+2025-08-05T23:13:05.491627,journalctl,<info>  [1754415744.9257] device (p2p-dev-wlp0s20f3): supplicant management interface state: 4way_handshake -> completed,normal
+2025-08-05T23:13:07.573778,journalctl,<info>  [1754415744.9423] dhcp6 (wlp0s20f3): state changed new lease,normal
+2025-08-05T23:13:10.663817,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=234000,normal
+2025-08-05T23:13:11.705873,journalctl,"<info>  [1754415747.1490] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10, acd pending",normal
+2025-08-05T23:13:12.735244,journalctl,"<info>  [1754415747.1494] dhcp4 (wlp0s20f3): state changed new lease, address=192.168.1.10",normal
+2025-08-05T23:13:14.789797,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=0 signal=-50 noise=9999 txrate=117000,normal
+2025-08-05T23:13:15.816734,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=117000,normal
+2025-08-05T23:13:35.533978,journalctl,wlp0s20f3: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-47 noise=9999 txrate=117000,normal
