@@ -1,0 +1,22 @@
+# requirements.txt
+
+# --- Core ML Stack (Pinned for Stability and Compatibility) ---
+# These specific versions are known to work well together.
+tensorflow==2.15.0
+keras==2.15.0
+transformers==4.36.2
+sentence-transformers==2.2.2
+# Note: A compatible version of numpy (<2.0) will be installed automatically by tensorflow.
+
+# --- Application Frameworks & Utilities ---
+# We don't need to pin these as pip can find compatible versions.
+pandas
+scikit-learn
+flask
+fastapi
+uvicorn[standard]
+python-dotenv
+requests
+watchdog
+drain3
+joblib

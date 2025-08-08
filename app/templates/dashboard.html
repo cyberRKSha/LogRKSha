@@ -6,7 +6,8 @@
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="/static/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script> </head>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+</head>
 <body>
     <div class="dashboard-layout">
         <header class="dashboard-header">
@@ -32,39 +33,10 @@
                 <span id="sessionCount" class="stat-value">0</span>
             </div>
         </section>
-
-        <section class="controls-area">
-            <div class="chart-container">
-                <canvas id="logChart"></canvas>
-            </div>
-            <div class="filter-controls">
-                <span class="last-updated">Last Updated: <span id="lastUpdated">{{ last_updated }}</span></span>
-
-                <input type="text" id="keywordSearch" class="select-dropdown" placeholder="Search by keyword...">
-
-                <div style="display: flex; gap: 10px;">
-                    <input type="datetime-local" id="startTime" class="select-dropdown" title="Start Time">
-                    <input type="datetime-local" id="endTime" class="select-dropdown" title="End Time">
-                </div>
-
-                <select id="logFilter" class="select-dropdown">
-                    <option value="all">All</option>
-                    <option value="normal">Normal</option>
-                    <option value="anomaly">Anomaly</option>
-                </select>
-                </div>
-        </section>
-
+        
         <section class="log-section">
-            <h3>Historical Trends (Anomalies per Hour)</h3>
-            <div class="chart-container" style="height: 350px; width: 100%; max-width: none;">
-                <canvas id="historicalChart"></canvas>
-            </div>
-        </section>
-
-        <section class="log-section">
-            <h3>Logs</h3>
-            <div id="logsContainer" class="scrollable-content">
+            <h2>Live Log Feed</h2>
+            <div id="logsContainer" class="scrollable-content" style="max-height: 350px;">
                 <table id="logsTable" class="log-table">
                     <tbody></tbody>
                 </table>
@@ -72,61 +44,99 @@
         </section>
 
         <section class="alerts-section">
-            <h3>Critical Alerts</h3>
-            <div id="alertsContainer" class="scrollable-content"></div>
+            <h2>Critical Alerts</h2>
+            <div id="alertsContainer" class="scrollable-content" style="max-height: 250px;"></div>
+        </section>
+
+        <section class="controls-area">
+            <div class="chart-container" style="height: 280px;">
+                <canvas id="logChart"></canvas>
+            </div>
+            <div class="filter-controls">
+                <h3>Filter Logs</h3>
+                <input type="text" id="keywordSearch" class="select-dropdown" placeholder="Search by keyword...">
+                <label for="startTime">From:</label>
+                <input type="datetime-local" id="startTime" class="select-dropdown" title="Start Time">
+                <label for="endTime">To:</label>
+                <input type="datetime-local" id="endTime" class="select-dropdown" title="End Time">
+                <select id="logFilter" class="select-dropdown">
+                    <option value="all">All Log Types</option>
+                    <option value="normal">Normal</option>
+                    <option value="anomaly">Anomaly</option>
+                </select>
+                <button id="applyFiltersBtn" class="control-button">Apply Filters</button>
+            </div>
+        </section>
+
+        <section class="log-section">
+            <h2>Historical Trends (Anomalies per Hour)</h2>
+            <div class="horizontal-scroll-wrapper">
+                <div class="chart-container-wide">
+                    <canvas id="historicalChart"></canvas>
+                </div>
+            </div>
         </section>
 
         <footer class="dashboard-footer">
-            <span>Powered by Log Anomaly Detector | &copy; 2025</span>
+            <div class="last-updated">Last Updated: <span id="lastUpdated">{{ last_updated }}</span></div>
+            <span>Powered by cyberRKSha | &copy; 2025</span>
         </footer>
     </div>
 
     <script src="/static/js/script.js"></script>
     <script>
-        // Initialize chart on page load with server values
+        // This script block remains the same
         window.onload = () => {
             initChart();
-
             initHistoricalChart();
+            setupEventListeners(); 
 
-            // Initialize dark mode toggle based on body class
-            const darkModeToggle = document.getElementById('darkModeToggle');
-            darkModeToggle.addEventListener('click', toggleDarkMode);
-
-            // Initialize log filter
-            // const logFilter = document.getElementById('logFilter');
-            // logFilter.addEventListener('change', (event) => {
-            //     filterLogs(event.target.value);
-            // });
-
-            document.getElementById('keywordSearch').addEventListener('keyup', filterLogs);
-            document.getElementById('startTime').addEventListener('change', filterLogs);
-            document.getElementById('endTime').addEventListener('change', filterLogs);
-            document.getElementById('logFilter').addEventListener('change', filterLogs);
-
-            // Initialize Lenis for smooth scrolling
-            const lenis = new Lenis({
-                duration: 1.2,
-                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54x4gmo
-                direction: 'vertical', // vertical, horizontal
-                gestureDirection: 'vertical', // vertical, horizontal, both
-                smooth: true,
-                mouseMultiplier: 1,
-                smoothTouch: false,
-                touchMultiplier: 2,
-                infinite: false,
-            });
-
+            const lenis = new Lenis({ duration: 1.2 });
             function raf(time) {
                 lenis.raf(time);
                 requestAnimationFrame(raf);
             }
-
             requestAnimationFrame(raf);
         };
     </script>
 </body>
 </html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -178,6 +188,15 @@
             <h2>Live Log Feed</h2>
             <div id="logsContainer" class="scrollable-content" style="max-height: 350px;">
                 <table id="logsTable" class="log-table">
+                    <!-- ADD A NEW HEADER FOR THE VERDICT -->
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Label</th>
+                            <th>Verdict</th>
+                            <th>Content</th>
+                        </tr>
+                    </thead>
                     <tbody></tbody>
                 </table>
             </div>
