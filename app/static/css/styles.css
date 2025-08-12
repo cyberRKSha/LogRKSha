@@ -559,3 +559,222 @@ html.lenis {
     }
 }
 
+/* ===================================================================== */
+/* === 11. LOG CONTEXT MODAL & TIMELINE === */
+/* ===================================================================== */
+
+/* Action Cell Styling */
+/* .log-table th:last-child, .log-table td:last-child {
+    text-align: center;
+    width: 60px;
+}
+
+.context-icon {
+    cursor: pointer;
+    color: var(--text-color-secondary);
+    transition: color 0.2s ease;
+    opacity: 0.6;
+}
+
+.context-icon:hover {
+    color: var(--button-primary);
+    opacity: 1;
+} */
+
+.log-row-clickable {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.log-row-clickable:hover {
+    /* Use the card background color for a subtle hover effect */
+    background-color: var(--card-bg) !important;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: var(--secondary-bg);
+    padding: 25px 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.modal-close-button {
+    background: none;
+    border: none;
+    font-size: 2.5em;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text-color-secondary);
+    transition: color 0.2s ease;
+}
+.modal-close-button:hover {
+    color: var(--text-color-primary);
+}
+
+.modal-body {
+    overflow-y: auto;
+    padding-right: 15px; /* For scrollbar */
+}
+
+/* Timeline Styling */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -40px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    border: 3px solid var(--secondary-bg);
+}
+
+.timeline-item.target .timeline-dot {
+    background-color: var(--button-primary);
+}
+
+.timeline-time {
+    font-size: 0.9em;
+    color: var(--text-color-secondary);
+    margin-bottom: 5px;
+}
+
+.timeline-source {
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    margin-left: 10px;
+}
+
+.timeline-item.target .timeline-content {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.dashboard-header {
+    align-items: center;
+}
+
+/* ===================================================================== */
+/* === 12. TOAST NOTIFICATION SYSTEM === */
+/* ===================================================================== */
+
+#toast-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.toast {
+    min-width: 300px;
+    padding: 18px 22px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    animation: slideInFadeIn 0.5s ease-out forwards;
+    overflow: hidden; /* Important for the progress bar */
+    position: relative; /* Important for the progress bar */
+}
+
+/* Toast Color Themes */
+.toast.success { background-color: #28a745; }
+.toast.error { background-color: #dc3545; }
+.toast.info { background-color: #007bff; }
+
+/* Progress Bar Styling */
+.toast-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+}
+.toast-progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.7);
+    /* Indeterminate progress bar animation */
+    animation: indeterminate-progress 1.5s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes slideInFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutFadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes indeterminate-progress {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}

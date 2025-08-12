@@ -1,11 +1,11 @@
 # app/routes.py (Final Fixes for Timezones and Paths)
-from fastapi import APIRouter, Request, Response
+from fastapi import APIRouter, Request, Response, BackgroundTasks
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from fastapi.concurrency import run_in_threadpool
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+from scripts.update import trigger_model_update
 import sqlite3
-from typing import Optional, List
 import pandas as pd
 from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
@@ -33,6 +33,18 @@ def flexible_date_parser(date_string):
         except (ValueError, TypeError):
             # If all attempts fail, return NaT (Not a Time) so it can be dropped.
             return pd.NaT
+
+task_status = {
+    "retrain": {"status": "idle", "message": "No active task."}
+}
+
+def run_update_and_set_status():
+    try:
+        trigger_model_update()
+        task_status["retrain"] = {"status": "completed", "message": "Model retraining completed successfully."}
+    except Exception as e:
+        log_error(f"Model retraining failed: {e}")
+        task_status["retrain"] = {"status": "failed", "message": f"Error during retraining: {e}"}
 
 router = APIRouter()
 templates = Jinja2Templates(directory=TEMPLATES_PATH)
@@ -85,13 +97,13 @@ async def search_logs(query: SearchQuery):
             sql_query += " AND content LIKE ?"
             params.append(f"%{query.keyword}%")
         if query.start_time:
-            start_utc = datetime.fromisoformat(query.start_time).astimezone(timezone.utc)
             sql_query += " AND timestamp >= ?"
-            params.append(start_utc.isoformat())
+            # We pass the naive local time string directly to the query
+            params.append(query.start_time)
         if query.end_time:
-            end_utc = datetime.fromisoformat(query.end_time).astimezone(timezone.utc)
             sql_query += " AND timestamp <= ?"
-            params.append(end_utc.isoformat())
+            # We pass the naive local time string directly to the query
+            params.append(query.end_time)
         if query.label is not None:
             sql_query += " AND final_label = ?"
             params.append(query.label)
@@ -208,3 +220,50 @@ async def update_reviews_api(updates: List[ReviewUpdateItem]):
 
     return await run_in_threadpool(update_database)
 
+
+@router.get("/api/logs/context", response_model=List[Dict[str, Any]])
+async def get_log_context(timestamp: str):
+
+    def get_context_from_db():
+        try:
+            
+            center_time = datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
+            
+            # Define the 20-second window
+            start_time = center_time - timedelta(seconds=10)
+            end_time = center_time + timedelta(seconds=10)
+
+            conn = sqlite3.connect(DATABASE_FILE)
+            conn.row_factory = sqlite3.Row
+            
+            # Query for all logs within the time window, sorted chronologically
+            query = "SELECT * FROM logs WHERE timestamp BETWEEN ? AND ? ORDER BY timestamp ASC"
+            params = (start_time.isoformat(), end_time.isoformat())
+            
+            # Convert the database rows to a list of dictionaries
+            entries = [dict(row) for row in conn.execute(query, params).fetchall()]
+            conn.close()
+            return entries
+        except Exception as e:
+            log_error(f"Error fetching log context: {e}")
+            return []
+
+    return await run_in_threadpool(get_context_from_db)
+
+@router.post("/api/model/retrain")
+async def retrain_model(background_tasks: BackgroundTasks):
+
+    if task_status["retrain"]["status"] == "running":
+        return {"message": "Retraining is already in progress."}
+    
+    log_info("Received request to retrain model. Starting as a background task.")
+    task_status["retrain"] = {"status": "running", "message": "Retraining in progress..."}
+    
+    background_tasks.add_task(run_update_and_set_status)
+    
+    return {"message": "Model retraining has been initiated."}
+
+@router.get("/api/model/retrain/status")
+async def get_retrain_status():
+
+    return task_status["retrain"]

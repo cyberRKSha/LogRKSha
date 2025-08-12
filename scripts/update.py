@@ -227,7 +227,7 @@ def log_warn(msg): print(f"\033[93m⚠️ {msg}\033[0m")
 def log_report(report): print(f"\033[96m{report}\033[0m")
 def log_error(msg): print(f"\033[91m❗ {msg}\033[0m")
 
-def run_hybrid_update():
+def trigger_model_update():
     """
     Main function to incrementally update both the supervised and unsupervised models.
     """
@@ -316,4 +316,4 @@ def run_hybrid_update():
     log_success(f"Checkpoint updated. Last processed log ID: {latest_id_in_batch}")
 
 if __name__ == "__main__":
-    run_hybrid_update()
+    trigger_model_update()

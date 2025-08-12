@@ -154,7 +154,10 @@ function renderLogRow(data) {
     const tableBody = document.getElementById("logsTableBody");
     if (!tableBody) return;
     const row = tableBody.insertRow(0);
-    row.className = 'fade-in';
+
+    row.className = 'fade-in log-row-clickable';
+    const escapedContent = (data.log || '-').replace(/'/g, "\\'");
+    row.setAttribute('onclick', `showLogContext('${data.timestamp}', '${escapedContent}')`);
     const labelText = (data.label || 'unknown').toLowerCase().trim();
     
     row.insertCell(0).textContent = new Date(data.timestamp).toLocaleString();
@@ -176,8 +179,10 @@ function renderAnomalyFeedRow(data, isNew) {
     const tableBody = document.getElementById("anomalyFeedTableBody");
     if (!tableBody) return;
     const row = tableBody.insertRow(0);
-    if (isNew) row.className = 'fade-in';
-    row.classList.add('log-anomaly');
+
+    row.className = 'fade-in log-anomaly log-row-clickable';
+    const escapedContent = (data.log || '-').replace(/'/g, "\\'");
+    row.setAttribute('onclick', `showLogContext('${data.timestamp}', '${escapedContent}')`);
     row.insertCell(0).textContent = new Date(data.timestamp).toLocaleString();
     row.insertCell(1).textContent = data.verdict || 'N/A';
     row.insertCell(2).textContent = data.log || '-';
@@ -226,6 +231,19 @@ function setupEventListeners() {
         });
     });
     setupReviewInterfaceListeners();
+
+    document.getElementById('retrainBtn')?.addEventListener('click', handleRetrainClick);
+
+    const modal = document.getElementById('log-context-modal');
+    const closeBtn = document.getElementById('modal-close-btn');
+    if (modal && closeBtn) {
+        closeBtn.onclick = () => { modal.style.display = 'none'; };
+        modal.onclick = (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    }
 }
 
 function handleQuickSearch(event) {
@@ -256,6 +274,7 @@ function handleQuickSearch(event) {
     if (hours) {
         const now = new Date();
         const startTime = new Date(now.getTime() - hours * 60 * 60 * 1000);
+        const endTime = new Date(now.getTime() + 60 * 1000);
         const formatForInput = (date) => {
             const tzoffset = date.getTimezoneOffset() * 60000;
             const localISOTime = (new Date(date - tzoffset)).toISOString().slice(0, 16);
@@ -299,11 +318,15 @@ async function searchLogs() {
         }
         results.forEach(log => {
             let row = resultsBody.insertRow();
+            row.className = 'log-row-clickable';
+            const escapedContent = log.content.replace(/'/g, "\\'");
+            row.setAttribute('onclick', `showLogContext('${log.timestamp}', '${escapedContent}')`);
             let labelText = log.final_label === 1 ? 'anomaly' : 'normal';
             row.insertCell(0).textContent = new Date(log.timestamp).toLocaleString();
             row.insertCell(1).innerHTML = `<span class="label-${labelText}">${labelText}</span>`;
             row.insertCell(2).textContent = log.source;
             row.insertCell(3).textContent = log.content;
+            
             if (log.final_label === 1) row.classList.add('log-anomaly');
         });
     } catch (error) {
@@ -452,4 +475,171 @@ async function saveReviews() {
         saveBtn.textContent = 'Save';
         saveBtn.disabled = false;
     }
+}
+
+
+
+
+
+// ===============================================================
+// ===       NEW INTERACTIVE LOG CORRELATION (MODAL)           ===
+// ===============================================================
+
+/**
+ * Shows the log context modal and fetches the relevant log data.
+ * @param {string} timestamp - The ISO format timestamp of the log to center on.
+ */
+async function showLogContext(timestamp, originalLogContent) {
+    const modal = document.getElementById('log-context-modal');
+    const modalBody = document.getElementById('modal-body');
+    if (!modal || !modalBody) return;
+
+    modalBody.innerHTML = '<p>Loading context...</p>';
+    modal.style.display = 'flex';
+
+    try {
+        const response = await fetch(`/api/logs/context?timestamp=${encodeURIComponent(timestamp)}`);
+        const contextLogs = await response.json();
+        
+        if (contextLogs.length === 0) {
+            modalBody.innerHTML = '<p>No surrounding log entries found.</p>';
+            return;
+        }
+
+        let timelineHTML = '<div class="timeline">';
+        contextLogs.forEach(log => {
+            const isTarget = log.content === originalLogContent;
+            const labelText = log.final_label === 1 ? 'anomaly' : 'normal';
+            const time = new Date(log.timestamp).toLocaleTimeString('en-US', { hour12: false });
+
+            timelineHTML += `
+                <div class="timeline-item ${isTarget ? 'target' : ''}">
+                    <div class="timeline-time">${time}</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="label-${labelText}">${labelText}</span>
+                        <span class="timeline-source">[${log.source}]</span>
+                        <p class="log-content">${log.content}</p>
+                    </div>
+                </div>
+            `;
+        });
+        timelineHTML += '</div>';
+        modalBody.innerHTML = timelineHTML;
+
+    } catch (error) {
+        modalBody.innerHTML = '<p>Error loading log context.</p>';
+        console.error('Error in showLogContext:', error);
+    }
+}
+
+/**
+ * Creates the HTML for the action cell, including the context icon.
+ * @param {string} timestamp - The ISO timestamp for the log.
+ * @param {string} logContent - The raw content of the log.
+ */
+// function createActionCell(timestamp, logContent) {
+//     // We escape single quotes in the log content to prevent breaking the onclick attribute
+//     const escapedContent = logContent.replace(/'/g, "\\'");
+//     return `
+//         <span class="context-icon" onclick="showLogContext('${timestamp}', '${escapedContent}')" title="Show Context">
+//             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+//         </span>
+//     `;
+// }
+
+
+
+async function handleRetrainClick() {
+    const retrainBtn = document.getElementById('retrainBtn');
+    retrainBtn.disabled = true;
+
+    try {
+        const response = await fetch('/api/model/retrain', { method: 'POST' });
+        const result = await response.json();
+
+        // Use our new toast system to show progress
+        showToast(result.message, 'info', 'retrain');
+
+    } catch (error) {
+        showToast('Error starting retraining.', 'error');
+        console.error('Retraining request failed:', error);
+    } finally {
+        // Re-enable the button after a short delay to prevent spamming
+        setTimeout(() => {
+            retrainBtn.disabled = false;
+        }, 3000);
+    }
+}
+
+/**
+ * Displays a toast notification with an optional progress bar.
+ * @param {string} message - The message to display.
+ * @param {string} type - 'success', 'error', or 'info'.
+ * @param {string|null} taskId - An ID for a task to poll for progress.
+ */
+function showToast(message, type = 'info', taskId = null) {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+
+    let progressBarHTML = '';
+    if (taskId) {
+        progressBarHTML = `<div class="toast-progress-bar" id="progress-${taskId}"></div>`;
+    }
+
+    toast.innerHTML = `
+        <span id="toast-message-${taskId}">${message}</span>
+        ${progressBarHTML}
+    `;
+    
+    container.appendChild(toast);
+
+    if (taskId) {
+        pollTaskStatus(taskId);
+    } else {
+        // Auto-dismiss non-progress toasts after 5 seconds
+        setTimeout(() => {
+            toast.style.animation = 'slideOutFadeOut 0.5s ease forwards';
+            setTimeout(() => toast.remove(), 500);
+        }, 5000);
+    }
+}
+
+/**
+ * Periodically checks the status of a background task.
+ * @param {string} taskId - The ID of the task to poll.
+ */
+function pollTaskStatus(taskId) {
+    const intervalId = setInterval(async () => {
+        try {
+            const response = await fetch(`/api/model/retrain/status`);
+            const data = await response.json();
+            
+            const progressBar = document.getElementById(`progress-${taskId}`);
+            const toastMessage = document.getElementById(`toast-message-${taskId}`);
+
+            if (data.status === 'completed' || data.status === 'failed') {
+                clearInterval(intervalId); // Stop polling
+                if (progressBar) {
+                    progressBar.style.display = 'none'; // Hide progress bar
+                }
+                if (toastMessage) {
+                    toastMessage.textContent = data.message;
+                    // Change toast color based on final status
+                    const toast = toastMessage.parentElement;
+                    toast.className = `toast ${data.status === 'completed' ? 'success' : 'error'}`;
+                }
+                // Auto-dismiss the final status message
+                setTimeout(() => {
+                    const toast = toastMessage.parentElement;
+                    toast.style.animation = 'slideOutFadeOut 0.5s ease forwards';
+                    setTimeout(() => toast.remove(), 500);
+                }, 7000);
+            }
+        } catch (error) {
+            console.error('Polling failed:', error);
+            clearInterval(intervalId); // Stop polling on error
+        }
+    }, 2000); // Check status every 2 seconds
 }
