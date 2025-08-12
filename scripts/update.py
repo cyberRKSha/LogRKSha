@@ -222,7 +222,7 @@ CHECKPOINT_FILE = os.path.join(BASE_DIR, "model/last_processed_log_id.txt")
 
 # --- Logging Helpers ---
 def log_info(msg): print(f"\033[94mℹ️ {msg}\033[0m")
-def log_success(msg): print(f"\032[92m✅ {msg}\033[0m")
+def log_success(msg): print(f"\033[92m✅ {msg}\033[0m")
 def log_warn(msg): print(f"\033[93m⚠️ {msg}\033[0m")
 def log_report(report): print(f"\033[96m{report}\033[0m")
 def log_error(msg): print(f"\033[91m❗ {msg}\033[0m")
@@ -294,7 +294,7 @@ def run_hybrid_update():
 
         # OPTIONAL BUT RECOMMENDED: Recalculate the threshold
         log_info("Recalculating anomaly threshold...")
-        all_normal_query = "SELECT content FROM logs WHERE final_label = 0"
+        all_normal_query = "SELECT content FROM logs WHERE final_label = 0 ORDER BY RANDOM() LIMIT 20000"
         conn = sqlite3.connect(DATABASE_FILE)
         df_all_normal = pd.read_sql_query(all_normal_query, conn)
         conn.close()

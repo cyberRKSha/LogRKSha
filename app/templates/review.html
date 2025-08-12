@@ -110,7 +110,7 @@
     <div class="review-header">
       <h1>Pending Logs for Review</h1>
       <div class="filter-buttons">
-        <a href="{{ url_for('index') }}" class="{{ 'active' if not sort_by else '' }}">Show All</a>
+        <a href="{{ url_for('index')}}" class="{{ 'active' if not sort_by else '' }}">Show All</a>
         <a href="{{ url_for('index', sort_by=1) }}" class="{{ 'active' if sort_by == '1' else '' }}">Sort by Anomaly</a>
         <a href="{{ url_for('index', sort_by=0) }}" class="{{ 'active' if sort_by == '0' else '' }}">Sort by Normal</a>
       </div>
@@ -147,7 +147,7 @@
         </tbody>
       </table>
       <div style="text-align: right; margin-top: 25px;">
-        <button type="submit" class="submit-button">✅ Save All Reviewed Logs</button>
+        <button type="submit" class="submit-button">Save</button>
       </div>
     </form>
     {% else %}

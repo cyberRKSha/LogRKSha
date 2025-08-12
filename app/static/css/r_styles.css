@@ -1,0 +1,249 @@
+/*
+=====================================================================
+=== 1. GLOBAL STYLES & THEME VARIABLES ===
+=====================================================================
+*/
+:root {
+    --primary-bg-light: #f0f2f5;
+    --secondary-bg-light: #ffffff;
+    --card-bg-light: #f5f8fa;
+    --border-light: #e0e0e0;
+    --text-color-primary-light: #333;
+    --text-color-secondary-light: #666;
+    --heading-color-light: #212529;
+    --button-primary-light: #007bff;
+    --button-primary-hover-light: #0056b3;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+
+    --primary-bg-dark: #1a1a2e;
+    --secondary-bg-dark: #2a2a4a;
+    --card-bg-dark: #3b3b6b;
+    --border-dark: #3a3a5e;
+    --text-color-primary-dark: #e0e0e0;
+    --text-color-secondary-dark: #bbb;
+    --heading-color-dark: #e0e0e0;
+    --button-primary-dark: #5a5acb;
+    --button-primary-hover-dark: #4545b3;
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+
+    --primary-bg: var(--primary-bg-light);
+    --secondary-bg: var(--secondary-bg-light);
+    --card-bg: var(--card-bg-light);
+    --border-color: var(--border-light);
+    --text-color-primary: var(--text-color-primary-light);
+    --text-color-secondary: var(--text-color-secondary-light);
+    --heading-color: var(--heading-color-light);
+    --button-primary: var(--button-primary-light);
+    --button-primary-hover: var(--button-primary-hover-light);
+    --box-shadow: var(--shadow-light);
+}
+
+body.dark-mode {
+    --primary-bg: var(--primary-bg-dark);
+    --secondary-bg: var(--secondary-bg-dark);
+    --card-bg: var(--card-bg-dark);
+    --border-color: var(--border-dark);
+    --text-color-primary: var(--text-color-primary-dark);
+    --text-color-secondary: var(--text-color-secondary-dark);
+    --heading-color: var(--heading-color-dark);
+    --button-primary: var(--button-primary-dark);
+    --button-primary-hover: var(--button-primary-hover-dark);
+    --box-shadow: var(--shadow-dark);
+}
+
+/*
+=====================================================================
+=== 2. MAIN LAYOUT & HEADER ===
+=====================================================================
+*/
+body {
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color-primary);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.review-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: var(--secondary-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px var(--box-shadow);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--heading-color);
+}
+
+/*
+=====================================================================
+=== 3. FILTER & ACTION BUTTONS ===
+=====================================================================
+*/
+
+/* Container for the sort buttons */
+.filter-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* FIX: Adds space between buttons and table heading */
+    margin-top: 20px; 
+}
+
+/* FIX: Base style for sort buttons, now matching the dashboard's Quick Search */
+.filter-buttons .control-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    /* Default state that works in light/dark mode */
+    background-color: var(--card-bg);
+    color: var(--text-color-secondary);
+}
+
+/* FIX: Hover and Active states are now identical to the dashboard */
+.filter-buttons .control-button:hover,
+.filter-buttons .control-button.active {
+    background-color: var(--button-primary);
+    color: #fff;
+    border-color: var(--button-primary);
+    transform: translateY(-2px);
+}
+
+/* "Save" button style */
+.submit-button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    background-color: #28a745;
+    color: #fff;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+
+/*
+=====================================================================
+=== 4. REVIEW TABLE & CONTENT ===
+=====================================================================
+*/
+.review-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+    margin-top: 20px;
+}
+
+.review-table th, .review-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.review-table th {
+    background-color: var(--primary-bg);
+    font-weight: 600;
+}
+
+.log-content {
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-all;
+}
+
+.review-no-logs, .review-actions {
+    margin-top: 25px;
+}
+
+.review-no-logs {
+    text-align: center; 
+    font-size: 1.2em; 
+    color: var(--text-color-secondary); 
+    padding: 50px;
+}
+
+.review-actions {
+    text-align: right; 
+}
+
+
+/*
+=====================================================================
+=== 5. CUSTOM RADIO BUTTONS (LABEL CHOOSER) ===
+=====================================================================
+*/
+.label-chooser {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.label-chooser input[type="radio"] {
+    display: none;
+}
+
+.label-chooser label {
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.label-chooser input[type="radio"]:checked + label.label-normal {
+    background-color: rgba(40, 167, 69, 0.2);
+    border-color: #28a745;
+    color: #155724;
+}
+
+.label-chooser input[type="radio"]:checked + label.label-anomaly {
+    background-color: rgba(220, 53, 69, 0.2);
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+/*
+=====================================================================
+=== 6. DARK MODE FIX FOR CHECKED LABELS ===
+=====================================================================
+*/
+
+/* Overrides for the "Normal" label when selected in dark mode */
+body.dark-mode .label-chooser input[type="radio"]:checked + label.label-normal {
+    background-color: rgba(117, 183, 152, 0.2); /* Light green transparent background */
+    border-color: var(--green-dark);
+    color: var(--green-dark); /* Bright green text */
+}
+
+/* Overrides for the "Anomaly" label when selected in dark mode */
+body.dark-mode .label-chooser input[type="radio"]:checked + label.label-anomaly {
+    background-color: rgba(255, 138, 138, 0.2); /* Light red transparent background */
+    border-color: var(--red-dark);
+    color: var(--red-dark); /* Bright red text */
+}

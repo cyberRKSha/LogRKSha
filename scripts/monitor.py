@@ -645,7 +645,7 @@ IGNORED_PATTERNS = [
 
 # --- Logging Helpers ---
 def log_info(msg): print(f"\033[94mℹ️ {msg}\033[0m")
-def log_success(msg): print(f"\032[92m✅ {msg}\033[0m")
+def log_success(msg): print(f"\033[92m✅ {msg}\033[0m")
 def log_error(msg): print(f"\033[91m❗ {msg}\033[0m")
 def log_dim(msg): print(f"\033[90m{msg}\033[0m")
 def log_warning(msg): print(f"\033[93m⚠️ {msg}\033[0m")
@@ -681,6 +681,7 @@ def insert_log_to_db(source: str, content: str, predicted_label: int):
         conn.close()
     except Exception as e:
         log_error(f"Database write failed: {e}")
+
 
 def play_alert_sound():
     try:

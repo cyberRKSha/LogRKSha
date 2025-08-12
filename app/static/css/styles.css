@@ -1,4 +1,6 @@
-/* Custom CSS Variables */
+/* ===================================================================== */
+/* === 1. GLOBAL STYLES & CSS VARIABLES === */
+/* ===================================================================== */
 :root {
     --primary-bg-light: #f0f2f5;
     --secondary-bg-light: #ffffff;
@@ -11,10 +13,8 @@
     --button-primary-hover-light: #0056b3;
     --shadow-light: rgba(0, 0, 0, 0.08);
     --card-shadow-light: rgba(0, 0, 0, 0.05);
-    /* Added variables for bright text colors */
     --green-light: #1c6c36;
     --red-light: #842029;
-
 
     --primary-bg-dark: #1a1a2e;
     --secondary-bg-dark: #2a2a4a;
@@ -27,7 +27,6 @@
     --button-primary-hover-dark: #4545b3;
     --shadow-dark: rgba(0, 0, 0, 0.3);
     --card-shadow-dark: rgba(0, 0, 0, 0.2);
-    /* Added variables for bright text colors */
     --green-dark: #75b798;
     --red-dark: #ff8a8a;
 
@@ -43,7 +42,6 @@
     --button-primary-hover: var(--button-primary-hover-light);
     --box-shadow: var(--shadow-light);
     --card-box-shadow: var(--card-shadow-light);
-    /* Added active text color variables */
     --text-green: var(--green-light);
     --text-red: var(--red-light);
 }
@@ -60,13 +58,10 @@ body.dark-mode {
     --button-primary-hover: var(--button-primary-hover-dark);
     --box-shadow: var(--shadow-dark);
     --card-box-shadow: var(--card-shadow-dark);
-    /* Added active text color variables */
     --text-green: var(--green-dark);
     --text-red: var(--red-dark);
 }
 
-
-/* General Body & Typography ------------------*/
 body {
     font-family: 'Segoe UI', 'Inter', sans-serif;
     background-color: var(--primary-bg);
@@ -76,31 +71,28 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease;
     line-height: 1.6;
     min-height: 100vh;
-    display: flex; /* For full height layout */
-    flex-direction: column;
-    -webkit-font-smoothing: antialiased; /* Smoother fonts */
-    -moz-osx-font-smoothing: grayscale; /* Smoother fonts */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--heading-color);
     margin-top: 0;
-    margin-bottom: 15px;
     font-weight: 600;
 }
 
-/* Dashboard Layout ---------------------------*/
+/* ===================================================================== */
+/* === 2. MAIN LAYOUT & HEADER === */
+/* ===================================================================== */
 .dashboard-layout {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 30px auto;
     padding: 30px;
     background-color: var(--secondary-bg);
     border-radius: 16px;
     box-shadow: 0 10px 40px var(--box-shadow);
-    flex-grow: 1;
 }
 
-/* Header */
 .dashboard-header {
     display: flex;
     justify-content: space-between;
@@ -115,12 +107,24 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-/* Stats Grid ----------------------*/  
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* ===================================================================== */
+/* === 3. STATISTICS CARDS === */
+/* ===================================================================== */
+.stats-section {
+    margin-bottom: 40px;
+}
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
-    margin-bottom: 50px; 
 }
 
 .stat-card {
@@ -132,55 +136,292 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.stat-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px var(--card-box-shadow); }
-.stat-label { font-size: 0.95em; color: var(--text-color-secondary); display: block; margin-bottom: 10px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; }
-.stat-value { font-size: 3em; font-weight: 700; color: var(--heading-color); }
-.stat-card .normal-text { color: #28a745; }
-.stat-card .anomaly-text { color: #dc3545; }
-
-/* === START: UPDATED Controls Area Layout === */
-.controls-area {
-    display: grid; /* Changed from flex */
-    grid-template-columns: 2fr 1fr; /* Make donut chart column wider */
-    gap: 35px;
-    align-items: flex-start; /* Align items to top */
-    padding: 25px;
-    background-color: var(--primary-bg); /* Add background */
-    border-radius: 16px; /* Add border radius */
+.stat-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 25px var(--card-box-shadow); 
 }
 
-.chart-container {
-    position: relative; /* Keep for chart responsiveness */
+.stat-label { 
+    font-size: 0.95em; 
+    color: var(--text-color-secondary); 
+    display: block; 
+    margin-bottom: 10px; 
+    font-weight: 500; 
+    letter-spacing: 0.5px; 
+    text-transform: uppercase; 
+}
+
+.stat-value { 
+    font-size: 3em; 
+    font-weight: 700; 
+    color: var(--heading-color); 
+}
+
+.stat-card .normal-text, .stat-card-small .normal-text { color: var(--text-green); }
+.stat-card .anomaly-text, .stat-card-small .anomaly-text { color: var(--text-red); }
+
+/* Smaller Stat Cards for Training Stats */
+.stats-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card-small {
     background-color: var(--card-bg);
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 6px 20px var(--card-box-shadow);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px var(--card-box-shadow);
 }
-/* === END: UPDATED Controls Area Layout === */
 
+.stat-card-small .stat-value {
+    font-size: 2.2em;
+}
 
-.filter-controls { display: flex; flex-direction: column; justify-content: center; gap: 12px; }
-.last-updated { font-size: 0.95em; color: var(--text-color-secondary); }
+/* ===================================================================== */
+/* === 4. LIVE FEEDS & TABLES === */
+/* ===================================================================== */
+.live-feeds-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
 
-/* Buttons */
+.log-section, .alerts-section {
+    margin-bottom: 40px;
+}
+
+.log-section h2, .alerts-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.scrollable-content {
+    height: 400px;
+    overflow-y: auto;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.log-table { 
+    width: 100%; 
+    border-collapse: separate; 
+    border-spacing: 0; 
+}
+
+.log-table th, .log-table td { 
+    padding: 12px 18px;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: left; 
+    border-bottom: 1px solid var(--border-color); 
+}
+
+.log-table th { 
+    background-color: var(--primary-bg); 
+    font-weight: 600; 
+    color: var(--heading-color); 
+    position: sticky; 
+    top: -20px; 
+    z-index: 1; 
+}
+
+.log-table tr:hover { 
+    background-color: rgba(0, 123, 255, 0.1) !important; 
+}
+
+.log-table tr.log-normal { 
+    background-color: rgba(40, 167, 69, 0.05); 
+}
+.log-table tr.log-anomaly { 
+    background-color: rgba(220, 53, 69, 0.05); 
+}
+
+.log-table .label-normal { color: var(--text-green); font-weight: 600; }
+.log-table .label-anomaly { color: var(--text-red); font-weight: 600; }
+
+/* ===================================================================== */
+/* === 5. THREAT HUNTING & INVESTIGATION PANEL === */
+/* ===================================================================== */
+.investigation-section {
+    background-color: var(--primary-bg);
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+body.dark-mode .investigation-section {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.investigation-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.investigation-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.6em;
+    margin: 0;
+}
+
+.investigation-header svg {
+    color: var(--button-primary);
+}
+
+.quick-searches {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.quick-search-label {
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    margin-right: 10px;
+}
+
+.investigation-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-group label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    padding-left: 10px;
+}
+
+.time-range-group {
+    grid-column: span 2;
+}
+
+.time-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.time-inputs span {
+    color: var(--text-color-secondary);
+}
+
+.action-group {
+    justify-self: end;
+}
+
+.investigation-controls.manual-search-active input,
+.investigation-controls.manual-search-active select {
+    border-color: var(--button-primary);
+}
+
+/* ===================================================================== */
+/* === 6. CHARTS === */
+/* ===================================================================== */
+.chart-container-full {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px var(--card-box-shadow);
+    min-width: 800px;
+}
+
+.horizontal-scroll-wrapper {
+    overflow-x: auto;
+    padding-bottom: 15px;
+}
+
+#historicalChartMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-color-secondary);
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+    z-index: 10; 
+}
+
+/* ===================================================================== */
+/* === 7. GENERAL COMPONENTS (Buttons, Alerts, etc.) === */
+/* ===================================================================== */
 .control-button, .select-dropdown {
     padding: 12px 25px;
     border-radius: 50px;
-    font-size: 1.05em;
+    font-size: 1em;
     cursor: pointer;
     transition: all 0.2s ease;
     font-weight: 600;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.control-button { background-color: var(--button-primary); color: #fff; border: none; }
-.control-button:hover { background-color: var(--button-primary-hover); transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4); }
-
-/* Select Dropdown */
-.select-dropdown {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
     background-color: var(--card-bg);
     color: var(--text-color-primary);
-    border: 1px solid var(--border-color);
+}
+
+.control-button { 
+    background-color: var(--button-primary); 
+    color: #fff; 
+    border: none; 
+}
+
+.control-button:hover { 
+    background-color: var(--button-primary-hover); 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); 
+}
+
+.quick-search-btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+}
+
+.quick-search-btn:hover, .quick-search-btn.active {
+    background-color: var(--button-primary);
+    color: #fff;
+    border-color: var(--button-primary);
+    transform: translateY(-2px);
+}
+
+.clear-btn {
+    background-color: #6c757d !important;
+    color: #fff !important;
+    border-color: #6c757d !important;
+}
+.clear-btn:hover {
+    background-color: #5a6268 !important;
+    border-color: #545b62 !important;
+}
+
+.select-dropdown {
     appearance: none;
     background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2C197.398L146.2%2C56.602L5.4%2C197.398c-11.9%2C11.9-31.1%2C11.9-43%2C0s-11.9-31.1%2C0-43L123.1%2C6.602c11.9-11.9%2C31.1-11.9%2C43%2C0L287%2C154.398C298.9%2C166.298%2C298.9%2C185.498%2C287%2C197.398z%22%2F%3E%3C%2Fsvg%3E');
     background-repeat: no-repeat;
@@ -189,96 +430,58 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 40px;
 }
 
-body.dark-mode .select-dropdown { background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e0e0e0%22%20d%3D%22M287%2C197.398L146.2%2C56.602L5.4%2C197.398c-11.9%2C11.9-31.1%2C11.9-43%2C0s-11.9-31.1%2C0-43L123.1%2C6.602c11.9-11.9%2C31.1-11.9%2C43%2C0L287%2C154.398C298.9%2C166.298%2C298.9%2C185.498%2C287%2C197.398z%22%2F%3E%3C%2Fsvg%3E'); }
-
-/* === START: UPDATED Section Headers and Spacing === */
-.log-section, .alerts-section, .stats-grid, .controls-area { margin-bottom: 40px; }
-.log-section h2, .alerts-section h2, .controls-area h2 { font-size: 1.5em; margin-bottom: 25px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; }
-.filter-controls label { font-size: 0.9em; color: var(--text-color-secondary); margin-top: 5px; margin-bottom: 0px; font-weight: 500; }
-/* === END: UPDATED Section Headers and Spacing === */
-
-
-/* === START: PRESERVED WORKING SCROLLABLE CONTENT === */
-.scrollable-content {
-    max-height: 350px;
-    overflow-y: auto;
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-/* === END: PRESERVED WORKING SCROLLABLE CONTENT === */
-
-
-/* Log Table */
-.log-table { width: 100%; border-collapse: separate; border-spacing: 0; }
-.log-table th, .log-table td { text-align: left; border-bottom: 1px solid var(--border-color); }
-
-/* === START: UPDATED Log Entry Styling === */
-.log-table td, .log-table th {
-    padding: 12px 18px;
-    font-size: 1.05em;
-    font-weight: 500;
-}
-.log-table tr:hover { background-color: rgba(0, 123, 255, 0.1) !important; }
-.log-table tr.log-normal { background-color: rgba(40, 167, 69, 0.2); color: var(--text-green); }
-.log-table tr.log-anomaly { background-color: rgba(220, 53, 69, 0.2); color: var(--text-red); }
-/* === END: UPDATED Log Entry Styling === */
-
-
-.log-table th { background-color: var(--primary-bg); font-weight: 600; color: var(--heading-color); position: sticky; top: -20px; z-index: 1; }
-.log-table thead tr:first-child th:first-child { border-top-left-radius: 8px; }
-.log-table thead tr:first-child th:last-child { border-top-right-radius: 8px; }
-
-
-/* Alert Boxes */
-.alert-critical { background-color: #f8d7da; color: #721c24; padding: 18px; border-radius: 10px; margin: 0 10px 18px 10px; border-left: 5px solid #dc3545; box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2); transition: all 0.3s ease; }
-body.dark-mode .alert-critical { background-color: #5b2121; color: #ffc2c2; border-color: #7a2d2d; border-left-color: #f5c6cb; box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4); }
-.alert-critical:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(220, 53, 69, 0.3); }
-.alert-critical strong { font-weight: 700; }
-.alert-critical small { font-size: 0.85em; color: #a04040; display: block; margin-top: 8px; }
-body.dark-mode .alert-critical small { color: #ff8888; }
-
-
-/* Footer */
-.dashboard-footer { text-align: center; padding-top: 35px; margin-top: 40px; border-top: 1px solid var(--border-color); font-size: 0.9em; color: var(--text-color-secondary); }
-
-/* === START: UPDATED Horizontal Scroll for Chart === */
-.horizontal-scroll-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 15px;
-}
-.chart-container-wide {
-    position: relative;
-    height: 300px;
-    width: 1200px; /* Make the chart content wider than the screen */
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 12px;
-}
-/* === END: UPDATED Horizontal Scroll for Chart === */
-
-
-/* Responsiveness */
-@media (max-width: 992px) {
-    .controls-area { grid-template-columns: 1fr; }
+body.dark-mode .select-dropdown { 
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e0e0e0%22%20d%3D%22M287%2C197.398L146.2%2C56.602L5.4%2C197.398c-11.9%2C11.9-31.1%2C11.9-43%2C0s-11.9-31.1%2C0-43L123.1%2C6.602c11.9-11.9%2C31.1-11.9%2C43%2C0L287%2C154.398C298.9%2C166.298%2C298.9%2C185.498%2C287%2C197.398z%22%2F%3E%3C%2Fsvg%3E'); 
 }
 
-@media (max-width: 768px) {
-    .dashboard-layout { margin: 15px; padding: 20px; }
-    .dashboard-header { flex-direction: column; align-items: flex-start; gap: 15px; }
-    .dashboard-header h1 { font-size: 2em; }
-    .stats-grid { grid-template-columns: 1fr; }
-    .chart-container { min-width: unset; width: 100%; max-width: 100%; height: 300px; }
-    .controls-area { flex-direction: column; align-items: stretch; gap: 20px; }
-    .control-button, .select-dropdown { width: 100%; }
-    .log-table th, .log-table td { padding: 10px 12px; font-size: 0.88em; }
+#searchBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 140px;
 }
 
-/* Animation */
+.spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 3px solid #fff;
+    width: 18px;
+    height: 18px;
+    animation: spin 1s linear infinite;
+}
+
+.alert-critical { 
+    background-color: #f8d7da; 
+    color: #721c24; 
+    padding: 18px; 
+    border-radius: 10px; 
+    margin-bottom: 18px; 
+    border-left: 5px solid #dc3545; 
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2); 
+    transition: all 0.3s ease; 
+}
+body.dark-mode .alert-critical { 
+    background-color: #5b2121; 
+    color: #ffc2c2; 
+    border-left-color: #f5c6cb; 
+}
+
+/* ===================================================================== */
+/* === 8. FOOTER === */
+/* ===================================================================== */
+.dashboard-footer { 
+    text-align: center; 
+    padding-top: 35px; 
+    margin-top: 40px; 
+    border-top: 1px solid var(--border-color); 
+    font-size: 0.9em; 
+    color: var(--text-color-secondary); 
+}
+
+/* ===================================================================== */
+/* === 9. ANIMATIONS & UTILITIES === */
+/* ===================================================================== */
 .fade-in {
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -288,7 +491,11 @@ body.dark-mode .alert-critical small { color: #ff8888; }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Lenis smooth scrolling (basic styling for effect) - Keep as is */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 html.lenis {
   height: auto;
 }
@@ -308,3 +515,47 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* ===================================================================== */
+/* === 10. RESPONSIVENESS === */
+/* ===================================================================== */
+@media (max-width: 1200px) {
+    .live-feeds-grid {
+        grid-template-columns: 1fr;
+    }
+    .time-range-group {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-layout { 
+        margin: 15px; 
+        padding: 20px; 
+    }
+    .dashboard-header { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 15px; 
+    }
+    .dashboard-header h1 { 
+        font-size: 2em; 
+    }
+    .stats-grid, .stats-grid-small { 
+        grid-template-columns: 1fr; 
+    }
+    .investigation-controls {
+        grid-template-columns: 1fr;
+    }
+    .action-group {
+        justify-self: stretch;
+    }
+    .control-button, .select-dropdown { 
+        width: 100%; 
+    }
+    .log-table th, .log-table td { 
+        padding: 10px 12px; 
+        font-size: 0.88em; 
+    }
+}
+

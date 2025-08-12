@@ -1,0 +1,171 @@
+Switch to real streaming ML (river) → no batch retrain
+✅ Add NLP methods (embeddings)
+
+
+Priority #5: Build the Threat Hunting Interface
+What it is: Create a new page on your dashboard that allows analysts to write complex queries against the log database.
+
+Why now: This is the first major user-facing feature that is enabled by your foundational database work in Phase 1. It transforms your tool from a passive viewer into an active investigation platform.
+
+Your First Steps:
+
+Design a simple UI with fields for time range, keywords, and other parameters you've extracted (like log template, source IP, etc.).
+
+Write the backend API endpoint in FastAPI that takes these inputs, constructs a SQL query, and returns the results from your database.
+
+By following this roadmap, you ensure that each step you take logically builds upon the last, creating a powerful, scalable, and highly effective security platform.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🧠 Machine Learning & Intelligence
+The core of your project is its detection capability. Here's how to make it significantly smarter.
+
+1. Explainable AI (XAI) for Alerts
+What it is: Instead of just saying a log is an anomaly, show why. Implement a system using libraries like SHAP or LIME to highlight the specific words or phrases in a log message that most contributed to the model's "anomaly" score.
+
+Why it's an upgrade: This transforms the system from a "black box" into a transparent diagnostic tool. Analysts can instantly see if an alert for "Failed password for user admin" was triggered by "Failed password" or by "admin," allowing them to understand the model's reasoning and trust its output more.
+
+How to implement: In monitor.py, after a log is flagged as an anomaly, you would pass the log and your ML model to a SHAP/LIME explainer function. The output (the influential words) would be sent to the dashboard as part of the alert payload.
+
+2. Advanced Risk Scoring
+What it is: Move beyond a binary 0 (normal) or 1 (anomaly) label. Calculate a continuous risk score from 0.0 to 1.0. The autoencoder's reconstruction error from monitor.py is a perfect starting point for this. You can normalize this error to produce a clear score.
+
+Why it's an upgrade: This allows for alert prioritization. An alert with a score of 0.98 is far more critical than one with a score of 0.65. This helps analysts focus on the most severe threats first.
+
+How to implement: In monitor.py, capture the autoencoder's reconstruction loss. Normalize it and send it to the dashboard. The UI in dashboard.html can then use color-coding (e.g., yellow, orange, red) for rows based on the score.
+
+3. Log Sequence Analysis with LSTMs
+What it is: Analyze logs not in isolation, but as a sequence. An "invalid user" log followed by a "failed password" log and then a "session opened for root" log tells a much more dangerous story than any single log on its own.
+
+Why it's an upgrade: This is a massive leap in intelligence. It allows the model to understand the "tactics" of an attack by recognizing patterns over time, drastically reducing false positives and detecting complex, multi-step intrusions.
+
+How to implement: This is a major advancement. You would need to train a new model, likely a Long Short-Term Memory (LSTM) network, that takes sequences of log embeddings as input. This model would work in parallel with your existing ones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+💻 User Interface & Experience (UI/UX)
+Making the dashboard more interactive and powerful will make the entire system more effective.
+
+1. Integrated Review Workflow
+What it is: Merge the Flask-based review tool (review.py) directly into your main FastAPI dashboard. Add a "Review" tab or page to the main UI.
+
+Why it's an upgrade: This is a huge quality-of-life improvement. Analysts no longer need to switch between two different applications and ports (:8000 and :5000). It creates a seamless, unified experience.
+
+How to implement: Create new routes in routes.py to serve a review template and handle the POST request for updates. You can reuse much of the logic from review.py within your main FastAPI application.
+
+2. Interactive Log Correlation
+What it is: When an analyst clicks on a log in the dashboard feed, automatically populate a side panel or modal with related logs.
+
+Why it's an upgrade: This provides instant context for investigations. If an anomaly is flagged, the analyst can immediately see what happened just before and after it, or see all other activity from the same user or IP address within the last minute.
+
+How to implement: Enhance the script.js file. When a log row is clicked, grab its timestamp and source, then fire a new API call to the backend. The backend would have a new endpoint (e.g., /api/correlate_logs) that queries the database for logs within a +/- 30-second window of the clicked log's timestamp.
+
+3. Dashboard-Driven Model Retraining
+What it is: Add a "Retrain Model" button to the dashboard settings area.
+
+Why it's an upgrade: This empowers the analyst to improve the model without ever needing to access the server's command line to run update.py.
+
+How to implement: Create a new API endpoint in routes.py (e.g., /api/retrain) that, when called, uses subprocess or a background task library to execute the update.py script. The UI can show a "retraining in progress" spinner.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+⚙️ System Architecture & Deployment
+To make the project truly "ultimate," its architecture needs to be ready for real-world deployment.
+
+1. Decouple with a Message Queue
+What it is: Instead of processing logs inside monitor.py, have it act as a lightweight producer that simply pushes new log lines into a message queue like RabbitMQ or Redis. Separate "worker" processes would then consume from this queue to perform the heavy ML analysis and database writes.
+
+Why it's an upgrade: This makes the system incredibly resilient and scalable. If the ML model is slow, the queue backs up but the log collection never stops. You can easily add more workers to handle higher log volumes. It prevents a single point of failure.
+
+How to implement: You would introduce a new library (like pika for RabbitMQ) and refactor monitor.py to be a producer. You'd create a new worker.py script for the ML logic and database interaction.
+
+2. Containerization with Docker & Docker Compose
+What it is: Package every component of your application (the FastAPI server, the review UI, the workers, the message queue, a PostgreSQL database) into Docker containers. Use docker-compose to define and run this multi-container application with a single command.
+
+Why it's an upgrade: This is the modern standard for deployment. It guarantees that your application runs the same way on your machine, a teammate's machine, or a cloud server. It solves the "it works on my machine" problem forever.
+
+How to implement: You would write a Dockerfile for your Python application and a docker-compose.yml file to orchestrate all the services.
+
+

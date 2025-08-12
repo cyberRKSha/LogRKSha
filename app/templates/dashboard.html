@@ -1,153 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Log Anomaly Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
-</head>
-<body>
-    <div class="dashboard-layout">
-        <header class="dashboard-header">
-            <h1>Log Anomaly Detector</h1>
-            <button id="darkModeToggle" class="control-button">Toggle Dark Mode</button>
-        </header>
-
-        <section class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-label">Total Logs</span>
-                <span id="totalLogs" class="stat-value">{{ total_logs }}</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Normal</span>
-                <span id="normalCount" class="stat-value normal-text">{{ normal_count }}</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Anomaly</span>
-                <span id="anomalyCount" class="stat-value anomaly-text">{{ anomaly_count }}</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Active Sessions</span>
-                <span id="sessionCount" class="stat-value">0</span>
-            </div>
-        </section>
-        
-        <section class="log-section">
-            <h2>Live Log Feed</h2>
-            <div id="logsContainer" class="scrollable-content" style="max-height: 350px;">
-                <table id="logsTable" class="log-table">
-                    <tbody></tbody>
-                </table>
-            </div>
-        </section>
-
-        <section class="alerts-section">
-            <h2>Critical Alerts</h2>
-            <div id="alertsContainer" class="scrollable-content" style="max-height: 250px;"></div>
-        </section>
-
-        <section class="controls-area">
-            <div class="chart-container" style="height: 280px;">
-                <canvas id="logChart"></canvas>
-            </div>
-            <div class="filter-controls">
-                <h3>Filter Logs</h3>
-                <input type="text" id="keywordSearch" class="select-dropdown" placeholder="Search by keyword...">
-                <label for="startTime">From:</label>
-                <input type="datetime-local" id="startTime" class="select-dropdown" title="Start Time">
-                <label for="endTime">To:</label>
-                <input type="datetime-local" id="endTime" class="select-dropdown" title="End Time">
-                <select id="logFilter" class="select-dropdown">
-                    <option value="all">All Log Types</option>
-                    <option value="normal">Normal</option>
-                    <option value="anomaly">Anomaly</option>
-                </select>
-                <button id="applyFiltersBtn" class="control-button">Apply Filters</button>
-            </div>
-        </section>
-
-        <section class="log-section">
-            <h2>Historical Trends (Anomalies per Hour)</h2>
-            <div class="horizontal-scroll-wrapper">
-                <div class="chart-container-wide">
-                    <canvas id="historicalChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <footer class="dashboard-footer">
-            <div class="last-updated">Last Updated: <span id="lastUpdated">{{ last_updated }}</span></div>
-            <span>Powered by cyberRKSha | &copy; 2025</span>
-        </footer>
-    </div>
-
-    <script src="/static/js/script.js"></script>
-    <script>
-        // This script block remains the same
-        window.onload = () => {
-            initChart();
-            initHistoricalChart();
-            setupEventListeners(); 
-
-            const lenis = new Lenis({ duration: 1.2 });
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-            requestAnimationFrame(raf);
-        };
-    </script>
-</body>
-</html> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -155,6 +5,7 @@
     <title>Log Anomaly Dashboard</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/r_styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 </head>
@@ -162,75 +13,171 @@
     <div class="dashboard-layout">
         <header class="dashboard-header">
             <h1>Log Anomaly Detector</h1>
-            <button id="darkModeToggle" class="control-button">Toggle Dark Mode</button>
+            <div>
+                <button id="reviewLogsBtn" class="control-button">Review Logs</button>
+                <button id="darkModeToggle" class="control-button">Toggle Mode</button>
+            </div>
         </header>
 
-        <section class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-label">Total Logs</span>
-                <span id="totalLogs" class="stat-value">{{ total_logs }}</span>
+        <!-- Live Session Statistics -->
+        <section class="stats-section">
+            <h2 class="section-title">Live Session Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Total Logs (Session)</span>
+                    <span id="totalLogs" class="stat-value">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Normal (Session)</span>
+                    <span id="normalCount" class="stat-value normal-text">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Anomalies (Session)</span>
+                    <span id="anomalyCount" class="stat-value anomaly-text">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Active Connections</span>
+                    <span id="sessionCount" class="stat-value">0</span>
+                </div>
             </div>
-            <div class="stat-card">
-                <span class="stat-label">Normal</span>
-                <span id="normalCount" class="stat-value normal-text">{{ normal_count }}</span>
+        </section>
+
+        <!-- Model Training Statistics -->
+        <section class="stats-section">
+            <h2 class="section-title">Model Training Statistics</h2>
+            <div class="stats-grid-small">
+                <div class="stat-card-small">
+                    <span class="stat-label">Total Trained Logs</span>
+                    <span id="trainedTotal" class="stat-value">0</span>
+                </div>
+                <div class="stat-card-small">
+                    <span class="stat-label">Trained Normal</span>
+                    <span id="trainedNormal" class="stat-value normal-text">0</span>
+                </div>
+                <div class="stat-card-small">
+                    <span class="stat-label">Trained Anomalies</span>
+                    <span id="trainedAnomaly" class="stat-value anomaly-text">0</span>
+                </div>
             </div>
-            <div class="stat-card">
-                <span class="stat-label">Anomaly</span>
-                <span id="anomalyCount" class="stat-value anomaly-text">{{ anomaly_count }}</span>
+        </section>
+
+        <!-- Live Feeds Section -->
+        <section class="live-feeds-grid">
+            <div class="log-section">
+                <h2>Live Log Feed (All Logs)</h2>
+                <div id="logsContainer" class="scrollable-content">
+                    <table id="logsTable" class="log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Label</th>
+                                <th>Verdict</th>
+                                <th>Content</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logsTableBody"></tbody>
+                    </table>
+                </div>
             </div>
-            <div class="stat-card">
-                <span class="stat-label">Active Sessions</span>
-                <span id="sessionCount" class="stat-value">0</span>
+            <div class="log-section">
+                <h2>Live Anomaly Feed</h2>
+                <div id="anomalyFeedContainer" class="scrollable-content">
+                    <table id="anomalyFeedTable" class="log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Verdict</th>
+                                <th>Content</th>
+                            </tr>
+                        </thead>
+                        <tbody id="anomalyFeedTableBody"></tbody>
+                    </table>
+                </div>
             </div>
         </section>
         
-        <section class="log-section">
-            <h2>Live Log Feed</h2>
-            <div id="logsContainer" class="scrollable-content" style="max-height: 350px;">
-                <table id="logsTable" class="log-table">
-                    <!-- ADD A NEW HEADER FOR THE VERDICT -->
-                    <thead>
-                        <tr>
-                            <th>Timestamp</th>
-                            <th>Label</th>
-                            <th>Verdict</th>
-                            <th>Content</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </section>
-
         <section class="alerts-section">
             <h2>Critical Alerts</h2>
             <div id="alertsContainer" class="scrollable-content" style="max-height: 250px;"></div>
         </section>
 
-        <section class="controls-area">
-            <div class="chart-container" style="height: 280px;">
-                <canvas id="logChart"></canvas>
+        <!-- Threat Hunting Section (as before) -->
+        <section class="investigation-section">
+            <div class="investigation-header">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Threat Hunting & Investigation
+                </h2>
             </div>
-            <div class="filter-controls">
-                <h3>Filter Logs</h3>
-                <input type="text" id="keywordSearch" class="select-dropdown" placeholder="Search by keyword...">
-                <label for="startTime">From:</label>
-                <input type="datetime-local" id="startTime" class="select-dropdown" title="Start Time">
-                <label for="endTime">To:</label>
-                <input type="datetime-local" id="endTime" class="select-dropdown" title="End Time">
-                <select id="logFilter" class="select-dropdown">
-                    <option value="all">All Log Types</option>
-                    <option value="normal">Normal</option>
-                    <option value="anomaly">Anomaly</option>
-                </select>
-                <button id="applyFiltersBtn" class="control-button">Apply Filters</button>
+            <div class="investigation-panel">
+                 <div class="quick-searches">
+                    <span class="quick-search-label">Quick Searches:</span>
+                    <button class="quick-search-btn" data-label="1" data-hours="1">Anomalies (Last Hour)</button>
+                    <button class="quick-search-btn" data-label="1" data-hours="24">Anomalies (Last 24 Hours)</button>
+                    <button class="quick-search-btn" data-keyword="failed password" data-label="1">Failed Passwords</button>
+                    <button class="quick-search-btn" data-keyword="sudo" data-label="1">Sudo Anomalies</button>
+                    <button class="quick-search-btn" data-keyword="invalid user" data-label="1">Invalid User Attempts</button>
+                    <button class="quick-search-btn" data-keyword="kernel" data-label="1">Kernel Anomalies</button>
+                    <button class="quick-search-btn" data-keyword="segfault" data-label="1">Segmentation Faults</button>
+                    <button class="quick-search-btn" data-keyword="pacman" data-label="1">Pacman Anomalies</button>
+                    <button class="quick-search-btn" data-keyword="(EE)" data-label="1">Xorg Errors</button>
+                    <button class="quick-search-btn clear-btn">Clear Filters</button>
+                </div>
+                <div class="investigation-controls">
+                    <div class="control-group">
+                        <label for="searchKeyword">Keyword</label>
+                        <input type="text" id="searchKeyword" class="select-dropdown" placeholder="Search log content...">
+                    </div>
+                     <div class="control-group">
+                        <label for="searchSource">Source</label>
+                        <input type="text" id="searchSource" class="select-dropdown" placeholder="e.g., journalctl, pacman.log">
+                    </div>
+                    <div class="control-group">
+                        <label for="searchLabel">Label</label>
+                        <select id="searchLabel" class="select-dropdown">
+                            <option value="">Any Label</option>
+                            <option value="1">Anomaly</option>
+                            <option value="0">Normal</option>
+                        </select>
+                    </div>
+                    <div class="control-group time-range-group">
+                        <label>Time Range</label>
+                        <div class="time-inputs">
+                            <input type="datetime-local" id="searchStartTime" class="select-dropdown" title="Start Time">
+                            <span>to</span>
+                            <input type="datetime-local" id="searchEndTime" class="select-dropdown" title="End Time">
+                        </div>
+                    </div>
+                    <div class="control-group action-group">
+                         <button id="searchBtn" class="control-button">
+                            <span class="search-text">Search Logs</span>
+                            <div class="spinner" style="display: none;"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="searchResultsContainer" class="scrollable-content" style="max-height: 400px; margin-top: 20px;">
+                <table id="searchResultsTable" class="log-table">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Label</th>
+                            <th>Source</th>
+                            <th>Content</th>
+                        </tr>
+                    </thead>
+                    <tbody id="searchResultsBody"></tbody>
+                </table>
             </div>
         </section>
 
+        <!-- Historical Trends Section (as before) -->
         <section class="log-section">
-            <h2>Historical Trends (Anomalies per Hour)</h2>
+            <h2>Historical Trends</h2>
             <div class="horizontal-scroll-wrapper">
-                <div class="chart-container-wide">
+                <div class="chart-container-full">
+                    <div id="historicalChartMessage" style="display: none;">
+                    </div>
                     <canvas id="historicalChart"></canvas>
                 </div>
             </div>
@@ -242,15 +189,17 @@
         </footer>
     </div>
 
+    <div id="review-interface-container" class="review-container" style="display: none;"></div>
+
     <script src="/static/js/script.js"></script>
     <script>
-        // This script block remains the same
         window.onload = () => {
-            initChart();
+            fetchTrainingStats();
             initHistoricalChart();
-            setupEventListeners(); 
+            setupEventListeners();
+            connectWebSocket(); // Establishes the live connection
 
-            const lenis = new Lenis({ duration: 1.2 });
+            const lenis = new Lenis();
             function raf(time) {
                 lenis.raf(time);
                 requestAnimationFrame(raf);
