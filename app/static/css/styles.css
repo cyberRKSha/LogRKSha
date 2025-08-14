@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 /* === 2. MAIN LAYOUT & HEADER === */
 /* ===================================================================== */
 .dashboard-layout {
-    max-width: 1400px;
+    max-width: 95%;
     margin: 30px auto;
     padding: 30px;
     background-color: var(--secondary-bg);
@@ -451,6 +451,13 @@ body.dark-mode .select-dropdown {
     animation: spin 1s linear infinite;
 }
 
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
 .alert-critical { 
     background-color: #f8d7da; 
     color: #721c24; 
@@ -673,9 +680,8 @@ html.lenis {
     border: 3px solid var(--secondary-bg);
 }
 
-.timeline-item.target .timeline-dot {
-    background-color: var(--button-primary);
-}
+.timeline-item.label-normal .timeline-dot { background-color: #28a745; }
+.timeline-item.label-anomaly .timeline-dot { background-color: #dc3545; }
 
 .timeline-time {
     font-size: 0.9em;
@@ -693,10 +699,22 @@ html.lenis {
     background-color: var(--card-bg);
     border-radius: 8px;
     padding: 10px;
+    border: 1px solid var(--border-color);
 }
 
 .dashboard-header {
     align-items: center;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.timeline-risk {
+    font-weight: 700;
 }
 
 /* ===================================================================== */
@@ -778,3 +796,155 @@ html.lenis {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
+
+/* ===================================================================== */
+/* === 13. RISK SCORE === */
+/* ===================================================================== */
+
+.risk-low {
+    font-weight: 500;
+    color: var(--text-color-secondary);
+}
+.risk-low-medium {
+    font-weight: 600;
+    color: #ffc107; /* Yellow */
+}
+.risk-high {
+    font-weight: 700;
+    color: #fd7e14; /* Orange */
+}
+.risk-critical {
+    font-weight: 700;
+    color: #dc3545; /* Red */
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ===================================================================== */
+/* === 14. STATUS BADGE AND ACTIONS === */
+/* ===================================================================== */
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    color: #fff;
+}
+.status-new { background-color: #fd7e14; } /* Orange */
+.status-acknowledged { background-color: #007bff; } /* Blue */
+.status-closed-text {
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    font-style: italic;
+}
+.actions-cell {
+    text-align: right;
+}
+.action-btn {
+    padding: 5px 12px;
+    font-size: 0.85em;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color-primary);
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.2s ease;
+}
+.action-btn:hover { background-color: var(--border-color); }
+
+
+/* ===================================================================== */
+/* === 15. EXPLAINER CONTENT === */
+/* ===================================================================== */
+
+.explanation-container {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+.explanation-container h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.explanation-container p {
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-word;
+    white-space: pre-wrap;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.explanation-status, .explanation-error {
+    font-style: italic;
+    color: var(--text-color-secondary);
+}
+
+
+/* .log-table tr.risk-row-yellow, .review-table tr.risk-row-yellow { 
+    background-color: #fff3cd; 
+    color: #664d03; 
+}
+.log-table tr.risk-row-orange, .review-table tr.risk-row-orange { 
+    background-color: #ffe5d0; 
+    color: #85450d;
+}
+.log-table tr.risk-row-critical, .review-table tr.risk-row-critical { 
+    background-color: #f8d7da; 
+    color: #58151c;
+}
+
+
+body.dark-mode .log-table tr.risk-row-yellow, 
+body.dark-mode .review-table tr.risk-row-yellow { 
+    background-color: #3b310a; 
+    color: #ffda60;
+}
+body.dark-mode .log-table tr.risk-row-orange, 
+body.dark-mode .review-table tr.risk-row-orange { 
+    background-color: #4d2a0c; 
+    color: #ffc999; 
+}
+body.dark-mode .log-table tr.risk-row-critical, 
+body.dark-mode .review-table tr.risk-row-critical { 
+    background-color: #5b2121; 
+    color: #ffc2c2;
+}
+
+
+.log-table tr.risk-row-yellow:hover, .review-table tr.risk-row-yellow:hover { background-color: #fceec4 !important; }
+.log-table tr.risk-row-orange:hover, .review-table tr.risk-row-orange:hover { background-color: #fedec8 !important; }
+.log-table tr.risk-row-critical:hover, .review-table tr.risk-row-critical:hover { background-color: #f5c2c7 !important; }
+
+body.dark-mode .log-table tr.risk-row-yellow:hover, 
+body.dark-mode .review-table tr.risk-row-yellow:hover { background-color: #524515 !important; }
+
+body.dark-mode .log-table tr.risk-row-orange:hover, 
+body.dark-mode .review-table tr.risk-row-orange:hover { background-color: #693b14 !important; }
+
+body.dark-mode .log-table tr.risk-row-critical:hover, 
+body.dark-mode .review-table tr.risk-row-critical:hover { background-color: #843030 !important; }
+
+.risk-row-yellow td:nth-last-child(2),
+.risk-row-orange td:nth-last-child(2),
+.risk-row-critical td:nth-last-child(2) {
+    font-weight: 700;
+}
+.log-table tr td:nth-last-child(1),
+.anomalyFeedTable tr td:nth-last-child(1) {
+    font-weight: 700;
+} */

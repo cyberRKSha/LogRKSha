@@ -66,7 +66,7 @@ body {
 }
 
 .review-container {
-    max-width: 1200px;
+    max-width: 90%;
     margin: 20px auto;
     padding: 30px;
     background-color: var(--secondary-bg);
@@ -191,6 +191,11 @@ h1 {
     text-align: right; 
 }
 
+.review-table th:nth-child(1) { width: 180px; } /* Timestamp */
+.review-table th:nth-child(2) { width: 120px; } /* Source */
+.review-table th:nth-child(3) { width: 120px; } /* Status */
+.review-table th:nth-child(5) { width: 120px; } /* Risk Score */
+.review-table th:nth-child(6) { width: 200px; } /* Correct Label */
 
 /*
 =====================================================================
@@ -246,4 +251,72 @@ body.dark-mode .label-chooser input[type="radio"]:checked + label.label-anomaly 
     background-color: rgba(255, 138, 138, 0.2); /* Light red transparent background */
     border-color: var(--red-dark);
     color: var(--red-dark); /* Bright red text */
+}
+
+/*
+=====================================================================
+=== 7. RISK SCORE ===
+=====================================================================
+*/
+
+.review-table th:nth-child(4),
+.review-table td:nth-child(4) {
+    text-align: center;
+    width: 120px;
+}
+
+/* --- Light Mode Row Colors & Text --- */
+.log-table tr.risk-row-yellow, .review-table tr.risk-row-yellow { 
+    background-color: #fff3cd; 
+    color: #664d03; /* Dark yellow text for readability */
+}
+.log-table tr.risk-row-orange, .review-table tr.risk-row-orange { 
+    background-color: #ffe5d0; 
+    color: #85450d; /* Dark orange text */
+}
+.log-table tr.risk-row-critical, .review-table tr.risk-row-critical { 
+    background-color: #f8d7da; 
+    color: #58151c; /* Dark red text */
+}
+
+/* --- Dark Mode Row Colors & Text --- */
+body.dark-mode .log-table tr.risk-row-yellow, 
+body.dark-mode .review-table tr.risk-row-yellow { 
+    background-color: #3b310a; 
+    color: #ffda60; /* Bright yellow text for readability */
+}
+body.dark-mode .log-table tr.risk-row-orange, 
+body.dark-mode .review-table tr.risk-row-orange { 
+    background-color: #4d2a0c; 
+    color: #ffc999; /* Bright orange text */
+}
+body.dark-mode .log-table tr.risk-row-critical, 
+body.dark-mode .review-table tr.risk-row-critical { 
+    background-color: #5b2121; 
+    color: #ffc2c2; /* Bright red text */
+}
+
+/* --- Hover Effects for Colored Rows --- */
+.log-table tr.risk-row-yellow:hover, .review-table tr.risk-row-yellow:hover { background-color: #fceec4 !important; }
+.log-table tr.risk-row-orange:hover, .review-table tr.risk-row-orange:hover { background-color: #fedec8 !important; }
+.log-table tr.risk-row-critical:hover, .review-table tr.risk-row-critical:hover { background-color: #f5c2c7 !important; }
+
+body.dark-mode .log-table tr.risk-row-yellow:hover, 
+body.dark-mode .review-table tr.risk-row-yellow:hover { background-color: #524515 !important; }
+
+body.dark-mode .log-table tr.risk-row-orange:hover, 
+body.dark-mode .review-table tr.risk-row-orange:hover { background-color: #693b14 !important; }
+
+body.dark-mode .log-table tr.risk-row-critical:hover, 
+body.dark-mode .review-table tr.risk-row-critical:hover { background-color: #843030 !important; }
+
+/* --- Ensure Risk Score text itself is bold --- */
+.risk-row-yellow td:nth-last-child(2),
+.risk-row-orange td:nth-last-child(2),
+.risk-row-critical td:nth-last-child(2) {
+    font-weight: 700;
+}
+.log-table tr td:nth-last-child(1),
+.anomalyFeedTable tr td:nth-last-child(1) {
+    font-weight: 700;
 }

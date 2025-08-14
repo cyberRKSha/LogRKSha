@@ -11,10 +11,21 @@ class LogData(BaseModel):
     label: str
     timestamp: str
     verdict: Optional[str] = None
+    risk_score: Optional[float] = 0.0
+    explanation: Optional[str] = ""
 
 class AlertData(BaseModel):
     log: str
     advice: str
+    status: Optional[str] = None
+
+class AlertEntryData(BaseModel):
+    id: int
+    status: str
+    rule_name: str
+    timestamp: str
+    content: str
+    risk_score: float
 
 async def broadcast(message: dict):
     disconnected_clients = set()
@@ -47,7 +58,11 @@ async def new_alert(data: AlertData):
     await broadcast({"type": "alert", "data": data.dict()})
     return {"status": "ok"}
 
-
+@router.post("/api/new_alert_entry")
+async def new_alert_entry(data: AlertEntryData):
+    """Receives a new actionable alert and broadcasts it to the anomaly feed."""
+    await broadcast({"type": "new_actionable_alert", "data": data.dict()})
+    return {"status": "ok"}
 
 
 

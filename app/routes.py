@@ -3,6 +3,7 @@ from fastapi import APIRouter, Request, Response, BackgroundTasks
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from fastapi.concurrency import run_in_threadpool
+from app.websocket import broadcast
 from datetime import datetime, timezone, timedelta
 from scripts.update import trigger_model_update
 import sqlite3
@@ -10,16 +11,47 @@ import pandas as pd
 from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
 from pathlib import Path
+import dill
+from sklearn.pipeline import make_pipeline
+import joblib
+import traceback
 
 # --- DYNAMIC PATH CONFIGURATION ---
 current_dir = Path(__file__).parent
 project_root = current_dir.parent
 DATABASE_FILE = project_root / "log_database.db"
 TEMPLATES_PATH = current_dir / "templates"
+EMBEDDER_PATH = project_root / "model/sentence_embedder.pkl"
+SUPERVISED_MODEL_PATH = project_root / "model/sgd_embedder.pkl"
+EXPLAINER_PATH = project_root / "model/lime_explainer.pkl"
+
+embedder = joblib.load(EMBEDDER_PATH)
+supervised_model = joblib.load(SUPERVISED_MODEL_PATH)
+with open(EXPLAINER_PATH, 'rb') as f:
+    explainer = dill.load(f)
 
 # --- Logging Helpers ---
 def log_info(msg): print(f"\033[94mℹ️ {msg}\033[0m")
 def log_error(msg): print(f"\033[91m❗ {msg}\033[0m")
+
+
+router = APIRouter()
+templates = Jinja2Templates(directory=TEMPLATES_PATH)
+
+# --- Pydantic Models ---
+class SearchQuery(BaseModel):
+    keyword: Optional[str] = None
+    start_time: Optional[str] = None
+    end_time: Optional[str] = None
+    label: Optional[int] = None
+    source: Optional[str] = None
+
+class ReviewUpdateItem(BaseModel):
+    id: int
+    new_label: int
+
+class AlertStatusUpdate(BaseModel):
+    status: str
 
 def flexible_date_parser(date_string):
     try:
@@ -46,20 +78,26 @@ def run_update_and_set_status():
         log_error(f"Model retraining failed: {e}")
         task_status["retrain"] = {"status": "failed", "message": f"Error during retraining: {e}"}
 
-router = APIRouter()
-templates = Jinja2Templates(directory=TEMPLATES_PATH)
+def generate_simple_explanation_html(explanation_list: list) -> str:
+    """Takes a LIME explanation list and returns a simple, clean HTML snippet."""
+    if not explanation_list:
+        return "<p class='explanation-error'>LIME was unable to find significant features for this log.</p>"
 
-# --- Pydantic Models ---
-class SearchQuery(BaseModel):
-    keyword: Optional[str] = None
-    start_time: Optional[str] = None
-    end_time: Optional[str] = None
-    label: Optional[int] = None
-    source: Optional[str] = None
+    # Filter for only the words that POSITIVELY contribute to the anomaly score
+    positive_contributors = [item for item in explanation_list if item[1] > 0]
+    positive_contributors.sort(key=lambda x: x[1], reverse=True)
 
-class ReviewUpdateItem(BaseModel):
-    id: int
-    new_label: int
+    if not positive_contributors:
+        return "<p class='explanation-error'>LIME found no features that point towards an anomaly.</p>"
+
+    html = "<div><p>The model flagged this log as an anomaly primarily because of these words:</p>"
+    html += '<div class="explanation-words">'
+    for word, score in positive_contributors:
+        # Use opacity to show the "weight" or importance of the word
+        opacity = max(0.2, min(1.0, score * 5))
+        html += f'<span style="background-color: rgba(220, 53, 69, {opacity}); padding: 2px 5px; border-radius: 4px; margin: 2px; display: inline-block; color: white;">{word}</span>'
+    html += "</div></div>"
+    return html
 
 # --- Main Dashboard Route ---
 @router.get("/", response_class=HTMLResponse)
@@ -86,36 +124,79 @@ async def dashboard(request: Request):
     })
 
 # --- Search API Route ---
+# @router.post("/api/search_logs", response_model=List[dict])
+# async def search_logs(query: SearchQuery):
+#     try:
+#         conn = sqlite3.connect(DATABASE_FILE)
+#         conn.row_factory = sqlite3.Row
+#         sql_query = "SELECT id, timestamp, source, content, final_label, risk_score FROM logs WHERE 1=1"
+#         params = []
+#         if query.keyword:
+#             sql_query += " AND content LIKE ?"
+#             params.append(f"%{query.keyword}%")
+#         if query.start_time:
+#             sql_query += " AND timestamp >= ?"
+#             # We pass the naive local time string directly to the query
+#             params.append(query.start_time)
+#         if query.end_time:
+#             sql_query += " AND timestamp <= ?"
+#             # We pass the naive local time string directly to the query
+#             params.append(query.end_time)
+#         if query.label is not None:
+#             sql_query += " AND final_label = ?"
+#             params.append(query.label)
+#         if query.source:
+#             sql_query += " AND source LIKE ?"
+#             params.append(f"%{query.source}%")
+#         sql_query += " ORDER BY timestamp DESC LIMIT 500;"
+#         cursor = conn.cursor()
+#         cursor.execute(sql_query, params)
+#         results = [dict(row) for row in cursor.fetchall()]
+#         conn.close()
+#         return results
+#     except Exception as e:
+#         log_error(f"Error during log search: {e}")
+#         return []
+
 @router.post("/api/search_logs", response_model=List[dict])
 async def search_logs(query: SearchQuery):
-    try:
+    def get_search_results():
         conn = sqlite3.connect(DATABASE_FILE)
         conn.row_factory = sqlite3.Row
-        sql_query = "SELECT id, timestamp, source, content, final_label FROM logs WHERE 1=1"
+        # THE FIX: Use a LEFT JOIN to get the alert status if it exists
+        sql_query = """
+            SELECT l.id, l.timestamp, l.source, l.content, l.final_label, l.risk_score, a.status
+            FROM logs l
+            LEFT JOIN alerts a ON l.id = a.log_id
+            WHERE 1=1
+        """
         params = []
+        
+        # ... (The rest of the query building with params is the same as before)
         if query.keyword:
-            sql_query += " AND content LIKE ?"
+            sql_query += " AND l.content LIKE ?"
             params.append(f"%{query.keyword}%")
         if query.start_time:
-            sql_query += " AND timestamp >= ?"
-            # We pass the naive local time string directly to the query
+            sql_query += " AND l.timestamp >= ?"
             params.append(query.start_time)
         if query.end_time:
-            sql_query += " AND timestamp <= ?"
-            # We pass the naive local time string directly to the query
+            sql_query += " AND l.timestamp <= ?"
             params.append(query.end_time)
         if query.label is not None:
-            sql_query += " AND final_label = ?"
+            sql_query += " AND l.final_label = ?"
             params.append(query.label)
         if query.source:
-            sql_query += " AND source LIKE ?"
+            sql_query += " AND l.source LIKE ?"
             params.append(f"%{query.source}%")
-        sql_query += " ORDER BY timestamp DESC LIMIT 500;"
-        cursor = conn.cursor()
-        cursor.execute(sql_query, params)
-        results = [dict(row) for row in cursor.fetchall()]
+
+        sql_query += " ORDER BY l.timestamp DESC LIMIT 500;"
+        
+        results = [dict(row) for row in conn.execute(sql_query, params).fetchall()]
         conn.close()
         return results
+
+    try:
+        return await run_in_threadpool(get_search_results)
     except Exception as e:
         log_error(f"Error during log search: {e}")
         return []
@@ -186,7 +267,14 @@ async def get_pending_logs_api(sort_by: Optional[str] = None):
     def get_logs_from_db():
         conn = sqlite3.connect(DATABASE_FILE)
         conn.row_factory = sqlite3.Row
-        query = "SELECT id, timestamp, source, content, predicted_label, final_label FROM logs WHERE is_reviewed = 0"
+        # query = "SELECT id, timestamp, source, content, predicted_label, final_label, risk_score FROM logs WHERE is_reviewed = 0"
+        
+        query = """
+            SELECT l.*, a.status
+            FROM logs l
+            LEFT JOIN alerts a ON l.id = a.log_id
+            WHERE l.is_reviewed = 0
+        """
         if sort_by == '1':
             query += " ORDER BY predicted_label DESC, timestamp DESC"
         elif sort_by == '0':
@@ -226,12 +314,18 @@ async def get_log_context(timestamp: str):
 
     def get_context_from_db():
         try:
+            # Step 1: Parse the incoming UTC timestamp string from the browser
+            center_time_utc = datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
             
-            center_time = datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
+            # Step 2: Convert the UTC time to the server's local timezone (e.g., IST)
+            center_time_local_aware = center_time_utc.astimezone()
             
-            # Define the 20-second window
-            start_time = center_time - timedelta(seconds=10)
-            end_time = center_time + timedelta(seconds=10)
+            # Step 3: Make it timezone-naive to match the strings stored in the database
+            center_time_local_naive = center_time_local_aware.replace(tzinfo=None)
+
+            # Step 4: Define the time window using the corrected local time
+            start_time = center_time_local_naive - timedelta(seconds=10)
+            end_time = center_time_local_naive + timedelta(seconds=10)
 
             conn = sqlite3.connect(DATABASE_FILE)
             conn.row_factory = sqlite3.Row
@@ -267,3 +361,96 @@ async def retrain_model(background_tasks: BackgroundTasks):
 async def get_retrain_status():
 
     return task_status["retrain"]
+
+@router.get("/api/alerts")
+async def get_alerts():
+    """Fetches all open alerts (status is 'New' or 'Acknowledged')."""
+    def get_alerts_from_db():
+        conn = sqlite3.connect(DATABASE_FILE, timeout=10)
+        conn.row_factory = sqlite3.Row
+        query = """
+            SELECT a.id, a.status, a.rule_name, l.timestamp, l.content, l.risk_score
+            FROM alerts a JOIN logs l ON a.log_id = l.id
+            WHERE a.status IN ('New', 'Acknowledged')
+            ORDER BY l.timestamp DESC LIMIT 100
+        """
+        alerts = [dict(row) for row in conn.execute(query).fetchall()]
+        conn.close()
+        return alerts
+    return await run_in_threadpool(get_alerts_from_db)
+
+@router.post("/api/alerts/{alert_id}/status")
+async def update_alert_status(alert_id: int, update: AlertStatusUpdate):
+    """Updates an alert's status and broadcasts the change."""
+    
+    def update_and_get_log_id():
+        conn = sqlite3.connect(DATABASE_FILE, timeout=10)
+        # First, update the status
+        conn.execute("UPDATE alerts SET status = ? WHERE id = ?", (update.status, alert_id))
+        conn.commit()
+        # Now, get the associated log_id to broadcast it
+        log_id = conn.execute("SELECT log_id FROM alerts WHERE id = ?", (alert_id,)).fetchone()
+        conn.close()
+        return log_id[0] if log_id else None
+
+    log_id = await run_in_threadpool(update_and_get_log_id)
+    
+    # After updating the database, broadcast the change to all clients
+    await broadcast({
+        "type": "alert_status_update",
+        "data": {
+            "alert_id": alert_id,
+            "log_id": log_id,
+            "new_status": update.status
+        }
+    })
+    
+    return {"message": "Alert status updated successfully"}
+
+
+@router.get("/api/logs/{log_id}/explain")
+async def get_explanation(log_id: int):
+
+    def generate_lime_explanation():
+        conn = sqlite3.connect(DATABASE_FILE, timeout=10)
+        
+        try:
+            log_content = conn.execute("SELECT content FROM logs WHERE id = ?", (log_id,)).fetchone()
+
+            if not log_content:
+                return {"error": "Log not found"}
+
+            line = log_content[0]
+        
+        
+            log_info(f"Generating LIME explanation for log ID: {log_id}")
+            def predictor_fn(text_list):
+                embeddings = embedder.encode(text_list)
+                return supervised_model.predict_proba(embeddings)
+
+            exp = explainer.explain_instance(
+                line, 
+                predictor_fn, 
+                num_features=6, 
+                labels=[1]
+            )
+            explanation_list = exp.as_list(label=1)
+            html = generate_simple_explanation_html(explanation_list)
+
+            if html:
+                conn.execute("UPDATE logs SET explanation = ? WHERE id = ?", (html, log_id))
+                conn.commit()
+                # log_info(f"Saved new explanation for log ID: {log_id}")
+
+            return {"explanation_html": html}
+        
+        except Exception as e:
+            log_error(f"Error generating LIME explanation for log ID {log_id}: {e}")
+            traceback.print_exc()
+            return {"error": f"Could not generate explanation: {e}"}
+        finally:
+            if conn:
+                conn.close()
+                log_info(f"Database connection closed for log ID: {log_id}.")
+
+    return await run_in_threadpool(generate_lime_explanation)

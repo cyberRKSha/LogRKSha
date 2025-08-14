@@ -179,7 +179,7 @@ def generate_anomaly_log():
 
 def generate_logs():
     # make anomalies rarer
-    if random.random() < 0.2:
+    if random.random() < 0.4:
         return generate_anomaly_log()
     else:
         return generate_normal_log()

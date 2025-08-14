@@ -12,6 +12,7 @@ window.onload = () => {
     fetchTrainingStats();
     initHistoricalChart();
     setupEventListeners();
+    loadInitialAnomalies();
 };
 
 function connectWebSocket() {
@@ -127,9 +128,16 @@ function handleWebSocketMessage(event) {
             // This part was correct.
             renderLogRow(msg.data);
             break;
+        case "new_actionable_alert":
+            // This handles adding new rows to our actionable anomaly feed
+            renderAnomalyFeedRow(msg.data, true); 
+            break;
         case "alert":
             // This part was correct.
             renderAlertRow(msg.data, true); // Pass 'isNew' flag
+            break;
+        case "alert_status_update":
+            handleStatusUpdate(msg.data);
             break;
     }
     // This call will now work correctly because of the fix in updateStatsUI.
@@ -155,6 +163,8 @@ function renderLogRow(data) {
     if (!tableBody) return;
     const row = tableBody.insertRow(0);
 
+    row.setAttribute('data-log-id', data.id);
+
     row.className = 'fade-in log-row-clickable';
     const escapedContent = (data.log || '-').replace(/'/g, "\\'");
     row.setAttribute('onclick', `showLogContext('${data.timestamp}', '${escapedContent}')`);
@@ -164,38 +174,87 @@ function renderLogRow(data) {
     row.insertCell(1).innerHTML = `<span class="label-${labelText}">${labelText}</span>`;
     row.insertCell(2).textContent = data.verdict || 'N/A';
     row.insertCell(3).textContent = data.log || '-';
+    row.insertCell(4).innerHTML = formatRiskScore(data.risk_score);
 
     if (labelText === 'anomaly') {
         row.classList.add('log-anomaly');
         anomalyCount++;
+        totalCount++;
         renderAnomalyFeedRow(data);
     } else {
         normalCount++;
     }
     totalCount++;
+    updateStatsUI()
 }
 
-function renderAnomalyFeedRow(data, isNew) {
+function renderAnomalyFeedRow(alert, isNew) {
     const tableBody = document.getElementById("anomalyFeedTableBody");
     if (!tableBody) return;
+    
+    const riskClass = getRiskRowClass(alert.risk_score);
     const row = tableBody.insertRow(0);
+    row.id = `alert-row-${alert.id}`;
+    // row.className = 'fade-in log-anomaly log-row-clickable ${riskClass}';
+    row.className = `${isNew ? 'fade-in' : ''} log-row-clickable ${riskClass}`;
+    row.setAttribute('onclick', `if (event.target.tagName !== 'BUTTON') showLogContext('${alert.timestamp}', '${alert.content.replace(/'/g, "\\'")}')`);
 
-    row.className = 'fade-in log-anomaly log-row-clickable';
-    const escapedContent = (data.log || '-').replace(/'/g, "\\'");
-    row.setAttribute('onclick', `showLogContext('${data.timestamp}', '${escapedContent}')`);
-    row.insertCell(0).textContent = new Date(data.timestamp).toLocaleString();
-    row.insertCell(1).textContent = data.verdict || 'N/A';
-    row.insertCell(2).textContent = data.log || '-';
+    // const escapedContent = (data.log || '-').replace(/'/g, "\\'");
+    // row.setAttribute('onclick', `showLogContext('${data.timestamp}', '${escapedContent}')`);
+    // row.insertCell(0).textContent = new Date(data.timestamp).toLocaleString();
+    // row.insertCell(1).textContent = data.verdict || 'N/A';
+    // row.insertCell(2).textContent = data.log || '-';
+    // row.insertCell(3).innerHTML = formatRiskScore(data.risk_score);
+
+    // Cell for Status
+    row.insertCell(0).innerHTML = `<span class="status-badge status-${alert.status.toLowerCase()}">${alert.status}</span>`;
+    // Cell for Risk
+    row.insertCell(1).innerHTML = formatRiskScore(alert.risk_score);
+    // Cell for Content
+    const contentCell = row.insertCell(2);
+    contentCell.className = 'log-content';
+    contentCell.textContent = alert.content;
+    // Cell for Actions
+    const actionsCell = row.insertCell(3);
+    actionsCell.className = 'actions-cell';
+    if (alert.status !== 'Closed') {
+        actionsCell.innerHTML = `
+            ${alert.status === 'New' ? `<button class="action-btn" onclick="updateAlertStatus(${alert.id}, 'Acknowledged')">Acknowledge</button>` : ''}
+            <button class="action-btn" onclick="updateAlertStatus(${alert.id}, 'Closed')">Close</button>
+        `;
+    } else {
+        actionsCell.innerHTML = '<span class="status-closed-text">Closed</span>';
+    }
+
 }
 
-function renderAlertRow(data, isNew) {
+// function renderAlertRow(data, isNew) {
+//     const container = document.getElementById("alertsContainer");
+//     if (!container) return;
+//     const div = document.createElement('div');
+//     div.className = isNew ? 'alert-critical fade-in' : 'alert-critical';
+//     div.innerHTML = `<strong>Critical:</strong> ${data.advice || "No advice."}<br><small>Ref Log: ${data.log || "N/A"}</small>`;
+//     container.appendChild(div);
+//     if (isNew) autoScroll(container);
+// }
+
+function renderAlertRow(data) {
     const container = document.getElementById("alertsContainer");
     if (!container) return;
     const div = document.createElement('div');
-    div.className = isNew ? 'alert-critical fade-in' : 'alert-critical';
-    div.innerHTML = `<strong>Critical:</strong> ${data.advice || "No advice."}<br><small>Ref Log: ${data.log || "N/A"}</small>`;
-    container.appendChild(div);
-    if (isNew) autoScroll(container);
+    div.className = 'alert-critical fade-in';
+    
+    const statusHTML = data.status ? formatStatusBadge(data.status) : '';
+    
+    div.innerHTML = `
+        <div class="alert-header">
+            <strong>Critical Alert</strong>
+            ${statusHTML}
+        </div>
+        ${data.advice || "No advice."}<br>
+        <small>Ref Log: ${data.log || "N/A"}</small>
+    `;
+    container.prepend(div);
 }
 
 function updateStatsUI() {
@@ -318,20 +377,27 @@ async function searchLogs() {
         }
         results.forEach(log => {
             let row = resultsBody.insertRow();
-            row.className = 'log-row-clickable';
+            const riskClass = getRiskRowClass(log.risk_score);
+
+            row.className = 'log-row-clickable ${riskClass}';
             const escapedContent = log.content.replace(/'/g, "\\'");
             row.setAttribute('onclick', `showLogContext('${log.timestamp}', '${escapedContent}')`);
             let labelText = log.final_label === 1 ? 'anomaly' : 'normal';
             row.insertCell(0).textContent = new Date(log.timestamp).toLocaleString();
-            row.insertCell(1).innerHTML = `<span class="label-${labelText}">${labelText}</span>`;
-            row.insertCell(2).textContent = log.source;
-            row.insertCell(3).textContent = log.content;
+            row.insertCell(1).innerHTML = `<div class="status-badge-cell">${formatStatusBadge(log.status)}</div>`;
+            // row.insertCell(1).innerHTML = `<div class="status-badge-cell">${formatStatusBadge(log.status)}</div>'; 
+            row.insertCell(2).innerHTML = `<span class="label-${labelText}">${labelText}</span>`;
+            row.insertCell(3).textContent = log.source;
+            row.insertCell(4).textContent = log.content;
+            row.insertCell(5).innerHTML = formatRiskScore(log.risk_score);
             
-            if (log.final_label === 1) row.classList.add('log-anomaly');
+            if (log.final_label === 1 && !riskClass) {
+                row.classList.add('risk-row-yellow');
+            }
         });
     } catch (error) {
         console.error('Error fetching search results:', error);
-        resultsBody.innerHTML = '<tr><td colspan="4">An error occurred while searching.</td></tr>';
+        resultsBody.innerHTML = '<tr><td colspan="5">An error occurred while searching.</td></tr>';
     } finally {
         searchBtnText.style.display = 'inline';
         spinner.style.display = 'none';
@@ -358,14 +424,13 @@ async function loadReviewInterface(sortBy = '1') {
     
     if (!reviewContainer) return;
 
-    // Hide the main dashboard and show the review container
     mainDashboard.style.display = 'none';
     reviewContainer.style.display = 'block';
     reviewContainer.innerHTML = '<h2>Loading logs for review...</h2>';
 
     try {
         let url = '/api/review/pending';
-        if (sortBy !== null) { // Only add the sort_by parameter if it's not null
+        if (sortBy !== null) {
             url += `?sort_by=${sortBy}`;
         }
         const response = await fetch(url);
@@ -379,47 +444,63 @@ async function loadReviewInterface(sortBy = '1') {
             </div>
         `;
 
+        let contentHTML;
         if (entries.length === 0) {
-            reviewContainer.innerHTML = `
-                <div class="review-header"><h1>Log Review</h1><button id="close-review-btn" class="control-button">Back to Dashboard</button></div>
-                ${sortButtonsHTML}
-                <p class="review-no-logs">No pending logs to review. Great job!</p>
+            contentHTML = `<p class="review-no-logs">No pending logs to review. Great job!</p>`;
+        } else {
+            let tableRows = '';
+            entries.forEach(entry => {
+                // The risk_score is now available in the 'entry' object from the API
+                const riskClass = getRiskRowClass(entry.risk_score);
+                tableRows += `
+                    <tr class="${riskClass}" data-log-id="${entry.id}">
+                        <td>${new Date(entry.timestamp).toLocaleString()}</td>
+                        <td>${entry.source}</td>
+                        <td><div class="status-badge-cell">${formatStatusBadge(entry.status)}</div></td>
+                        <td class="log-content">${entry.content}</td>
+                        <td>${formatRiskScore(entry.risk_score)}</td>
+                        <td>
+                          <div class="label-chooser" data-log-id="${entry.id}">
+                            <input type="radio" id="normal_${entry.id}" name="label_${entry.id}" value="0" ${entry.final_label == 0 ? 'checked' : ''}>
+                            <label for="normal_${entry.id}" class="label-normal">Normal</label>
+                            <input type="radio" id="anomaly_${entry.id}" name="label_${entry.id}" value="1" ${entry.final_label == 1 ? 'checked' : ''}>
+                            <label for="anomaly_${entry.id}" class="label-anomaly">Anomaly</label>
+                          </div>
+                        </td>
+                    </tr>
+                `;
+            });
+            contentHTML = `
+                <table class="review-table">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Source</th>
+                            <th>Status</th>
+                            <th>Content</th>
+                            <th>Risk Score</th>
+                            <th>Correct Label?</th>
+                        </tr>
+                    </thead>
+                    <tbody>${tableRows}</tbody>
+                </table>
+                <div class="review-actions"><button id="save-reviews-btn" class="submit-button">Save</button></div>
             `;
-            document.getElementById('close-review-btn').addEventListener('click', closeReviewInterface);
-            return;
         }
 
-        let tableRows = '';
-        entries.forEach(entry => {
-            tableRows += `
-                <tr>
-                    <td>${new Date(entry.timestamp).toLocaleString()}</td>
-                    <td>${entry.source}</td>
-                    <td class="log-content">${entry.content}</td>
-                    <td>
-                      <div class="label-chooser" data-log-id="${entry.id}">
-                        <input type="radio" id="normal_${entry.id}" name="label_${entry.id}" value="0" ${entry.final_label == 0 ? 'checked' : ''}>
-                        <label for="normal_${entry.id}" class="label-normal">Normal</label>
-                        <input type="radio" id="anomaly_${entry.id}" name="label_${entry.id}" value="1" ${entry.final_label == 1 ? 'checked' : ''}>
-                        <label for="anomaly_${entry.id}" class="label-anomaly">Anomaly</label>
-                      </div>
-                    </td>
-                </tr>
-            `;
-        });
-
         reviewContainer.innerHTML = `
-            <div class="review-header"><h1>Pending Logs for Review</h1><button id="close-review-btn" class="control-button">Back to Dashboard</button></div>
+            <div class="review-header">
+                <h1>Log Review</h1>
+                <button id="close-review-btn" class="control-button">Back to Dashboard</button>
+            </div>
             ${sortButtonsHTML}
-            <table class="review-table">
-                <thead><tr><th>Timestamp</th><th>Source</th><th>Content</th><th>Correct Label?</th></tr></thead>
-                <tbody>${tableRows}</tbody>
-            </table>
-            <div class="review-actions"><button id="save-reviews-btn" class="submit-button">Save</button></div>
+            ${contentHTML}
         `;
 
         document.getElementById('close-review-btn').addEventListener('click', closeReviewInterface);
-        document.getElementById('save-reviews-btn').addEventListener('click', saveReviews);
+        if (entries.length > 0) {
+            document.getElementById('save-reviews-btn').addEventListener('click', saveReviews);
+        }
 
     } catch (error) {
         reviewContainer.innerHTML = '<h2>Error loading logs. Please try again later.</h2>';
@@ -506,6 +587,39 @@ async function showLogContext(timestamp, originalLogContent) {
             return;
         }
 
+        const targetLog = contextLogs.find(log => log.content === originalLogContent);
+        
+        let explanationHTML = '';
+        if (targetLog && targetLog.final_label === 1) { // Only explain anomalies
+            if (targetLog.explanation) {
+                // If it exists, display it immediately.
+                explanationHTML = `
+                    <div class="explanation-container">
+                        <h4>Model Explanation (LIME)</h4>
+                        ${targetLog.explanation}
+                    </div>
+                `;
+            } else {
+                explanationHTML = `
+                    <div class="explanation-container" id="explanation-for-${targetLog.id}">
+                        <h4>Model Explanation (LIME)</h4>
+                        <p class="explanation-status">Generating explanation, please wait...</p>
+                    </div>
+                `;
+                // Fetch the explanation asynchronously after the modal is visible
+                fetch(`/api/logs/${targetLog.id}/explain`)
+                    .then(res => res.json())
+                    .then(data => {
+                        const explanationContainer = document.getElementById(`explanation-for-${targetLog.id}`);
+                        if (data.explanation_html) {
+                            explanationContainer.innerHTML = `<h4>Model Explanation (LIME)</h4>${data.explanation_html}`;
+                        } else {
+                            explanationContainer.innerHTML = `<h4>Model Explanation (LIME)</h4><p class="explanation-error">Explanation not available for this log.</p>`;
+                        }
+                    });
+            }
+        }
+
         let timelineHTML = '<div class="timeline">';
         contextLogs.forEach(log => {
             const isTarget = log.content === originalLogContent;
@@ -513,19 +627,22 @@ async function showLogContext(timestamp, originalLogContent) {
             const time = new Date(log.timestamp).toLocaleTimeString('en-US', { hour12: false });
 
             timelineHTML += `
-                <div class="timeline-item ${isTarget ? 'target' : ''}">
+                <div class="timeline-item ${isTarget ? 'target' : ''} label-${labelText}">
                     <div class="timeline-time">${time}</div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span class="label-${labelText}">${labelText}</span>
-                        <span class="timeline-source">[${log.source}]</span>
+                        <div class="timeline-header">
+                            <span class="label-${labelText}">${labelText}</span>
+                            <span class="timeline-risk">${formatRiskScore(log.risk_score)}</span>
+                            <span class="timeline-source">[${log.source}]</span>
+                        </div>
                         <p class="log-content">${log.content}</p>
                     </div>
                 </div>
             `;
         });
         timelineHTML += '</div>';
-        modalBody.innerHTML = timelineHTML;
+        modalBody.innerHTML = explanationHTML + timelineHTML;
 
     } catch (error) {
         modalBody.innerHTML = '<p>Error loading log context.</p>';
@@ -548,7 +665,17 @@ async function showLogContext(timestamp, originalLogContent) {
 //     `;
 // }
 
-
+/**
+ * Creates a styled HTML span for an alert's status.
+ * @param {string} status - The status text (e.g., 'New', 'Acknowledged', 'Closed').
+ */
+function formatStatusBadge(status) {
+    if (!status) {
+        return ''; // Return an empty string if there's no status
+    }
+    const statusClass = status.toLowerCase();
+    return `<span class="status-badge status-${statusClass}">${status}</span>`;
+}
 
 async function handleRetrainClick() {
     const retrainBtn = document.getElementById('retrainBtn');
@@ -642,4 +769,100 @@ function pollTaskStatus(taskId) {
             clearInterval(intervalId); // Stop polling on error
         }
     }, 2000); // Check status every 2 seconds
+}
+
+
+/**
+ * Formats the risk score with color-coding.
+ * @param {number} score - The risk score from 0.0 to 1.0.
+ */
+function formatRiskScore(score) {
+    const finalScore = score || 0;
+    // The span no longer needs a class; the parent <tr>'s class will style it.
+    return `<span>${finalScore.toFixed(2)}</span>`;
+}
+
+function getRiskRowClass(score) {
+    if (score === undefined || score === null || score === 0) return '';
+    if (score > 0.8) return 'risk-row-critical'; // Red background
+    if (score >= 0.7) return 'risk-row-orange';  // Orange background
+    // Any remaining anomaly will be yellow. The check for 'anomaly' is done in the calling function.
+    return 'risk-row-yellow';   
+}
+
+
+async function loadInitialAnomalies() {
+    const tableBody = document.getElementById('anomalyFeedTableBody');
+    if (!tableBody) return;
+    tableBody.innerHTML = '<tr><td colspan="4" class="no-alerts-row">Loading alerts...</td></tr>';
+    
+    try {
+        const response = await fetch('/api/alerts');
+        const alerts = await response.json();
+        
+        tableBody.innerHTML = ''; // Clear loading message
+        if (alerts.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="4" class="no-alerts-row">No open alerts. System is clear.</td></tr>';
+            return;
+        }
+        alerts.forEach(alert => renderAnomalyFeedRow(alert, false)); 
+
+    } catch (error) {
+        console.error("Failed to load initial anomalies:", error);
+        tableBody.innerHTML = '<tr><td colspan="4" class="no-alerts-row">Failed to load alerts.</td></tr>';
+    }
+}
+
+async function updateAlertStatus(alertId, newStatus) {
+    try {
+        await fetch(`/api/alerts/${alertId}/status`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: newStatus })
+        });
+        // Visually update the row without a full refresh
+        const row = document.getElementById(`alert-row-${alertId}`);
+        if (newStatus === 'Closed') {
+            row.style.opacity = '0.5';
+            row.querySelector('.actions-cell').innerHTML = '<span class="status-closed-text">Closed</span>';
+        } else if (newStatus === 'Acknowledged') {
+            row.querySelector('.actions-cell').innerHTML = `<button class="action-btn" onclick="updateAlertStatus(${alertId}, 'Closed')">Close</button>`;
+            row.querySelector('.status-badge').className = 'status-badge status-acknowledged';
+            row.querySelector('.status-badge').textContent = 'Acknowledged';
+        } else {
+            loadInitialAnomalies(); // Refresh the list for other changes
+        }
+    } catch (error) {
+        console.error("Failed to update alert status:", error);
+    }
+}
+
+function handleStatusUpdate(data) {
+    const { alert_id, log_id, new_status } = data;
+
+    // Update the main anomaly feed row
+    const anomalyRow = document.getElementById(`alert-row-${alert_id}`);
+    if (anomalyRow) {
+        const statusBadge = anomalyRow.querySelector('.status-badge');
+        const actionsCell = anomalyRow.querySelector('.actions-cell');
+        
+        statusBadge.className = `status-badge status-${new_status.toLowerCase()}`;
+        statusBadge.textContent = new_status;
+
+        if (new_status === 'Closed') {
+            anomalyRow.style.opacity = '0.5';
+            actionsCell.innerHTML = '<span class="status-closed-text">Closed</span>';
+        } else if (new_status === 'Acknowledged') {
+            actionsCell.innerHTML = `<button class="action-btn" onclick="updateAlertStatus(${alert_id}, 'Closed')">Close</button>`;
+        }
+    }
+
+    // Find and update all other instances of this log (e.g., in search or review)
+    const otherLogRows = document.querySelectorAll(`tr[data-log-id='${log_id}']`);
+    otherLogRows.forEach(row => {
+        const statusCell = row.querySelector('.status-badge-cell'); // We will add this class
+        if (statusCell) {
+            statusCell.innerHTML = formatStatusBadge(new_status);
+        }
+    });
 }

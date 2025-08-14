@@ -63,42 +63,42 @@
         </section>
 
         <!-- Live Feeds Section -->
-        <section class="live-feeds-grid">
-            <div class="log-section">
-                <h2>Live Log Feed (All Logs)</h2>
-                <div id="logsContainer" class="scrollable-content">
-                    <table id="logsTable" class="log-table">
-                        <thead>
-                            <tr>
-                                <th>Timestamp</th>
-                                <th>Label</th>
-                                <th>Verdict</th>
-                                <th>Content</th>
-                            </tr>
-                        </thead>
-                        <tbody id="logsTableBody"></tbody>
-                    </table>
-                </div>
+        <div class="log-section">
+            <h2>Live Session</h2>
+            <div id="logsContainer" class="scrollable-content">
+                <table id="logsTable" class="log-table">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Label</th>
+                            <th>Verdict</th>
+                            <th>Content</th>
+                            <th>Risk</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logsTableBody"></tbody>
+                </table>
             </div>
-            <div class="log-section">
-                <h2>Live Anomaly Feed</h2>
-                <div id="anomalyFeedContainer" class="scrollable-content">
-                    <table id="anomalyFeedTable" class="log-table">
-                        <thead>
-                            <tr>
-                                <th>Timestamp</th>
-                                <th>Verdict</th>
-                                <th>Content</th>
-                            </tr>
-                        </thead>
-                        <tbody id="anomalyFeedTableBody"></tbody>
-                    </table>
-                </div>
+        </div>
+        <div class="log-section">
+            <h2>Flagged</h2>
+            <div id="anomalyFeedContainer" class="scrollable-content">
+                <table id="anomalyFeedTable" class="log-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 120px;">Status</th>
+                            <th style="width: 80px;">Risk</th>
+                            <th>Log Content</th>
+                            <th style="width: 200px;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="anomalyFeedTableBody"></tbody>
+                </table>
             </div>
-        </section>
+        </div>
         
         <section class="alerts-section">
-            <h2>Critical Alerts</h2>
+            <h2>Alerts</h2>
             <div id="alertsContainer" class="scrollable-content" style="max-height: 250px;"></div>
         </section>
 
@@ -162,9 +162,11 @@
                     <thead>
                         <tr>
                             <th>Timestamp</th>
+                            <th>Status</th>
                             <th>Label</th>
                             <th>Source</th>
                             <th>Content</th>
+                            <th>Risk</th>
                         </tr>
                     </thead>
                     <tbody id="searchResultsBody"></tbody>
