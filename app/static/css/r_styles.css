@@ -320,3 +320,231 @@ body.dark-mode .review-table tr.risk-row-critical:hover { background-color: #843
 .anomalyFeedTable tr td:nth-last-child(1) {
     font-weight: 700;
 }
+
+
+/*
+=====================================================================
+=== 7. RISK SCORE ===
+=====================================================================
+*/
+
+
+/* STYLES FOR REVIEW PAGE TABS */
+.review-tabs {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 20px;
+}
+.tab-btn {
+    padding: 12px 25px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    margin-bottom: -2px;
+}
+.tab-btn:hover {
+    color: var(--text-color-primary);
+}
+.tab-btn.active {
+    color: var(--button-primary);
+    border-bottom-color: var(--button-primary);
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+/* STYLES FOR CLUSTER CARDS */
+.clusters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.cluster-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.cluster-card:focus {
+    outline: none;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--button-primary);
+}
+body.dark-mode .cluster-card:focus {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+.cluster-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.cluster-title {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2em;
+}
+.cluster-log-count {
+    background-color: var(--primary-bg);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+.cluster-representative-log {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    padding: 10px;
+    background-color: var(--primary-bg);
+    border-radius: 6px;
+    word-break: break-all;
+    margin-bottom: 15px;
+    border-left: 3px solid var(--button-primary);
+}
+.cluster-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.cluster-actions button {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cluster-actions button.active {
+    box-shadow: 0 0 0 3px var(--button-primary-hover);
+    transform: translateY(-2px);
+}
+
+.cluster-meta {
+    font-size: 0.8em;
+    color: var(--text-color-secondary);
+    margin-top: 10px;
+}
+.cluster-actions .save-cluster-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--button-primary);
+    color: #fff;
+}
+.cluster-actions .save-cluster-btn:hover {
+    background-color: var(--button-primary-hover);
+}
+
+.smart-review-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: var(--primary-bg);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.mark-normal-btn { background-color: rgba(40, 167, 69, 0.8); color: white; }
+.mark-anomaly-btn { background-color: rgba(220, 53, 69, 0.8); color: white; }
+.mark-normal-btn:hover { background-color: #28a745; }
+.mark-anomaly-btn:hover { background-color: #dc3545; }
+
+
+.manual-review-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: var(--primary-bg);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.manual-review-controls div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.manual-review-controls label {
+    font-weight: 600;
+}
+
+
+.cluster-card.model-normal {
+    border-left: 5px solid #28a745;
+}
+.cluster-card.model-anomaly {
+    border-left: 5px solid #dc3545;
+}
+
+/* New Label Toggle Switch */
+.label-toggle-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    width: 150px;
+    overflow: hidden; /* Important for the glow effect */
+}
+
+/* The 'active' class will now be used for the glow */
+.label-toggle-switch.active {
+    transform: translateY(-2px);
+}
+
+/* NORMAL STATE STYLES */
+.label-toggle-switch:not(.is-anomaly) {
+    background-color: var(--card-bg);
+    color: var(--text-color-primary);
+}
+.label-toggle-switch:not(.is-anomaly).active {
+    color: #28a745;
+    border-color: #28a745;
+    /* The Gradient Glow Effect */
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.4), 0 0 5px rgba(40, 167, 69, 0.6);
+}
+.label-toggle-switch:not(.is-anomaly)::before {
+    content: 'Normal';
+}
+
+/* ANOMALY STATE STYLES */
+.label-toggle-switch.is-anomaly {
+    background-color: #dc3545;
+    color: white;
+    border-color: #c82333;
+}
+.label-toggle-switch.is-anomaly.active {
+    border-color: #ff8a8a;
+    /* The Gradient Glow Effect */
+    box-shadow: 0 0 15px rgba(220, 53, 69, 0.4), 0 0 5px rgba(220, 53, 69, 0.6);
+}
+.label-toggle-switch.is-anomaly::before {
+    content: 'Anomaly';
+}

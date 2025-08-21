@@ -24,5 +24,4 @@ echo "Starting monitor with root privileges to read system logs..."
 echo "Your password may be required."
 echo "Press Ctrl+C to stop the monitor."
 
-# Execute the monitor script using the venv's Python with sudo
 sudo "$VENV_PYTHON" "$MONITOR_SCRIPT"

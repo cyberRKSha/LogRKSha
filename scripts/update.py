@@ -1,203 +1,3 @@
-# # update.py
-# import os
-# import pandas as pd
-# import joblib
-# import numpy as np
-# from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
-# from sentence_transformers import SentenceTransformer
-# import sqlite3
-
-# # --- Configuration: File Paths ---
-# BASE_DIR = "/home/rksha/Documents/Projects/log-anamoly-detector/Linux" # Example path
-# DATABASE_FILE = os.path.join(BASE_DIR, "log_database.db")
-# MODEL_PATH = os.path.join(BASE_DIR, "model/sgd_embedder.pkl")
-# EMBEDDER_PATH = os.path.join(BASE_DIR, "model/sentence_embedder.pkl")
-# CHECKPOINT_FILE = os.path.join(BASE_DIR, "model/last_processed_log_id.txt") # Checkpoint by ID now
-
-# # --- (Keep your logging helpers) ---
-# def log_info(msg): print(f"\033[94mℹ️ {msg}\033[0m")
-# def log_success(msg): print(f"\032[92m✅ {msg}\033[0m")
-# def log_warn(msg): print(f"\033[93m⚠️ {msg}\033[0m")
-# def log_report(report): print(f"\033[96m{report}\033[0m")
-# def log_error(msg): print(f"\033[91m❗ {msg}\033[0m")
-
-# def run_update():
-#     """
-#     Main function to evaluate and incrementally update the model.
-#     """
-#     log_info("Starting model update process...")
-#     # --- (Keep your pre-flight checks for model files) ---
-
-#     log_info("Starting model update process...")
-#     for path in [DATABASE_FILE, MODEL_PATH, EMBEDDER_PATH]:
-#         if not os.path.exists(path):
-#             log_error(f"Required file not found: {path}. Please run train.py first. Exiting.")
-#             return
-
-#     log_info("Loading existing model and embedder...")
-#     model = joblib.load(MODEL_PATH)
-#     embedder = joblib.load(EMBEDDER_PATH)
-
-#     # --- Find New Data Using Checkpoint ---
-#     last_processed_id = 0
-#     if os.path.exists(CHECKPOINT_FILE):
-#         with open(CHECKPOINT_FILE, "r") as f:
-#             try: last_processed_id = int(f.read().strip())
-#             except (ValueError, IOError): last_processed_id = 0
-
-#     # --- NEW: Fetch new, reviewed data from the database ---
-#     conn = sqlite3.connect(DATABASE_FILE)
-#     query = f"SELECT id, content, final_label FROM logs WHERE is_reviewed = 1 AND id > {last_processed_id}"
-#     new_logs_df = pd.read_sql_query(query, conn)
-#     conn.close()
-
-#     if new_logs_df.empty:
-#         log_success("Model is already up-to-date. No new reviewed logs to train on.")
-#         return
-
-#     # Get the ID of the last log we are about to process
-#     latest_id_in_batch = new_logs_df['id'].max()
-
-#     log_info(f"Found {len(new_logs_df)} new reviewed logs to process.")
-
-#     log_info("Cleaning and mapping labels...")
-#     # Define a mapping for all possible correct values (string and int)
-#     label_map = {'normal': 0, 'anomaly': 1, 0: 0, 1: 1, '0': 0, '1': 1}
-
-#     # Use the .map() function to apply this mapping.
-#     # This safely converts 'normal' to 0, 'anomaly' to 1, and keeps existing integers as they are.
-#     new_logs_df['final_label'] = new_logs_df['final_label'].map(label_map)
-
-#     # Drop any rows where the label could not be mapped (e.g., it was NaN or some other string)
-#     new_logs_df.dropna(subset=['final_label'], inplace=True)
-
-#     # Now, the 'final_label' column is clean and ready for type conversion.
-#     X_new_text = new_logs_df['content'].astype(str).tolist()
-#     y_new = new_logs_df['final_label'].astype(int).values
-
-#     defined_labels = [0, 1]
-
-#     # --- (Keep your model evaluation logic as is) ---
-#     log_info("Evaluating current model performance on the new batch...")
-#     X_eval = embedder.encode(X_new_text, show_progress_bar=True)
-#     y_pred = model.predict(X_eval)
-#     report = classification_report(y_new, y_pred, target_names=['Normal (0)', 'Anomaly (1)'], zero_division=0)
-#     accuracy = accuracy_score(y_new, y_pred)
-#     cm = confusion_matrix(y_new, y_pred, labels=defined_labels)
-
-#     print("\n" + "="*50)
-#     log_info("Performance of CURRENT model on the NEW data batch:")    
-#     log_report(f"Accuracy on new batch: {accuracy:.2%}")
-#     log_report(f"Confusion Matrix (Labels: {defined_labels}):\n{cm}")
-#     log_report("Classification Report on new data:\n" + report)
-    
-#     # --- Update (Incrementally Train) the Model ---
-#     log_info("Proceeding with model update...")
-#     idx = np.random.permutation(len(y_new))
-#     X_to_fit = X_eval[idx]
-#     y_to_fit = y_new[idx]
-
-#     model.partial_fit(X_to_fit, y_to_fit, classes=np.array([0, 1]))
-#     joblib.dump(model, MODEL_PATH)
-#     log_success(f"Model successfully updated and saved to: {MODEL_PATH}")
-
-#     # --- Update Checkpoint ---
-#     with open(CHECKPOINT_FILE, "w") as f:
-#         f.write(str(latest_id_in_batch))
-#     log_success(f"Checkpoint updated. Last processed log ID: {latest_id_in_batch}")
-
-# if __name__ == "__main__":
-#     run_update()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # update.py (ULTIMATE HYBRID VERSION)
 import os
 import pandas as pd
@@ -205,8 +5,11 @@ import joblib
 import numpy as np
 from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 from sentence_transformers import SentenceTransformer
+from sklearn.linear_model import SGDClassifier
 import sqlite3
 import tensorflow as tf
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Dense
 import json
 
 # --- Configuration ---
@@ -227,17 +30,26 @@ def log_warn(msg): print(f"\033[93m⚠️ {msg}\033[0m")
 def log_report(report): print(f"\033[96m{report}\033[0m")
 def log_error(msg): print(f"\033[91m❗ {msg}\033[0m")
 
+def create_new_autoencoder(input_dim):
+    """Defines and compiles a new autoencoder model architecture."""
+    input_layer = Input(shape=(input_dim,))
+    encoded = Dense(128, activation='relu')(input_layer)
+    encoded = Dense(64, activation='relu')(encoded)
+    decoded = Dense(128, activation='relu')(encoded)
+    decoded = Dense(input_dim, activation='sigmoid')(decoded)
+    autoencoder = Model(input_layer, decoded)
+    autoencoder.compile(optimizer='adam', loss='mae')
+    log_info("Created a new autoencoder model architecture.")
+    return autoencoder
+
 def trigger_model_update():
-    """
-    Main function to incrementally update both the supervised and unsupervised models.
-    """
+
     log_info("Starting HYBRID model update process...")
     
     # --- 1. Load all models and data ---
-    log_info("Loading existing models and embedder...")
-    supervised_model = joblib.load(SUPERVISED_MODEL_PATH)
-    unsupervised_model = tf.keras.models.load_model(AUTOENCODER_PATH)
-    embedder = joblib.load(EMBEDDER_PATH)
+    # log_info("Loading existing models and embedder...")
+    # supervised_model = joblib.load(SUPERVISED_MODEL_PATH)
+    # embedder = SentenceTransformer(str(EMBEDDER_PATH))
 
     # --- 2. Find new, reviewed data using the checkpoint ---
     last_processed_id = 0
@@ -260,11 +72,20 @@ def trigger_model_update():
 
     # --- 3. Generate Embeddings for the new data ---
     log_info("Generating embeddings for the new batch...")
+    embedder = SentenceTransformer(str(EMBEDDER_PATH))
     X_new_text = new_logs_df['content'].astype(str).tolist()
     X_eval = embedder.encode(X_new_text, show_progress_bar=True)
     y_new = new_logs_df['final_label'].astype(int).values
+    embedding_dim = X_eval.shape[1]
 
     # --- 4. Update the SUPERVISED Model ---
+    if os.path.exists(SUPERVISED_MODEL_PATH):
+        log_info("Loading existing supervised model...")
+        supervised_model = joblib.load(SUPERVISED_MODEL_PATH)
+    else:
+        log_warn("No supervised model found. Creating a new one.")
+        supervised_model = SGDClassifier(loss='log_loss', random_state=42)
+
     log_info("--- Updating Supervised Model (sgd_embedder.pkl) ---")
     # Evaluate performance before updating
     y_pred = supervised_model.predict(X_eval)
@@ -282,15 +103,31 @@ def trigger_model_update():
     normal_logs_mask = (y_new == 0)
     X_normal_eval = X_eval[normal_logs_mask]
 
-    if len(X_normal_eval) > 0:
+    if len(X_normal_eval) < 10:
+        log_warn(f"Not enough new normal logs ({len(X_normal_eval)}) to train/refine the Autoencoder. Skipping.")
+    else:
+        if os.path.exists(AUTOENCODER_PATH):
+            log_info("Loading existing autoencoder model...")
+            unsupervised_model = tf.keras.models.load_model(AUTOENCODER_PATH)
+        else:
+            log_warn("No autoencoder model found. Creating a new one.")
+            unsupervised_model = create_new_autoencoder(input_dim=embedding_dim)
+
         log_info(f"Found {len(X_normal_eval)} new normal logs to refine the Autoencoder.")
         # Continue training the autoencoder for a few epochs on the new normal data
+        # unsupervised_model = tf.keras.models.load_model(AUTOENCODER_PATH)
         unsupervised_model.fit(X_normal_eval, X_normal_eval,
                                epochs=10,
                                batch_size=32,
                                shuffle=True,
                                verbose=0) # verbose=0 for cleaner output
-        unsupervised_model.save(AUTOENCODER_PATH)
+        try:
+            unsupervised_model.save(AUTOENCODER_PATH)
+            log_success("Unsupervised model refined and saved successfully.")
+        except Exception as e:
+            log_error(f"CRITICAL: Failed to save the autoencoder model! Error: {e}")
+            # Do not proceed if saving fails, as it could corrupt the file
+            return
 
         # OPTIONAL BUT RECOMMENDED: Recalculate the threshold
         log_info("Recalculating anomaly threshold...")
@@ -305,10 +142,7 @@ def trigger_model_update():
         
         with open(THRESHOLD_PATH, 'w') as f:
             json.dump({'threshold': new_threshold}, f)
-
         log_success(f"Unsupervised model refined and new threshold ({new_threshold:.6f}) saved.")
-    else:
-        log_warn("No new normal logs found in this batch. Skipping Autoencoder update.")
 
     # --- 6. Update Checkpoint ---
     with open(CHECKPOINT_FILE, "w") as f:

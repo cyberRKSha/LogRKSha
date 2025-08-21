@@ -117,7 +117,6 @@ def generate_normal_log():
     tpl = random.choice(templates)
 
     return [
-        datetime.datetime.now().strftime("%b %d %H:%M:%S"),
         random_hostname(),
         random_pid(),
         tpl.format(
@@ -161,7 +160,6 @@ def generate_anomaly_log():
     ]
     tpl = random.choice(templates)
     return [
-        datetime.datetime.now().strftime("%b %d %H:%M:%S"),
         random_hostname(),
         random_pid(),
         tpl.format(
@@ -196,3 +194,4 @@ if __name__ == "__main__":
             time.sleep(random.uniform(2, 5))  # write every few seconds
     except KeyboardInterrupt:
         print("\n🛑 Stopped anomaly simulation.")
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Settings - Log Anomaly Detector</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/css/a_styles.css">
+</head>
+<body class="dark-mode">
+    <div class="background-shapes"></div>
+    <div class="auth-card">
+        <a href="/" class="control-button secondary back-to-dashboard">Back</a>
+        
+        <h1>Security Settings</h1>
+        <div class="security-content">
+            
+            <h2>Two-Factor Authentication (2FA)</h2>
+
+            {% if user.is_two_factor_enabled %}
+                <p class="success-message">2FA enabled.</p>
+                <form action="/security/2fa/disable" method="post">
+                    <button type="submit" class="control-button" style="background-color: #dc3545;">Disable 2FA</button>
+                </form>
+            {% else %}
+                <p>Scan the QR code with authenticator app, then enter the 6-digit code to verify.</p>
+                
+                <div class="qr-code">
+                    <img src="/security/2fa/qr-code" alt="2FA QR Code">
+                </div>
+                <p>Or enter this key manually: <strong>{{ secret_key }}</strong></p>
+
+                <form action="/security/2fa/enable" method="post">
+                    <input type="hidden" name="secret_key" value="{{ secret_key }}">
+                    <div class="input-group">
+                        <input type="text" name="code" id="code" placeholder=" " required autocomplete="off" inputmode="numeric" pattern="[0-9]{6}">
+                        <label for="code">6-Digit Code</label>
+                    </div>
+                    <button type="submit" class="control-button">Verify & Enable</button>
+                </form>
+                {% if error %}
+                <p class="error-message">{{ error }}</p>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

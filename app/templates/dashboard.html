@@ -15,14 +15,23 @@
             <h1>Log Anomaly Detector</h1>
             <div>
                 <button id="retrainBtn" class="control-button">Train Model</button>
-                <button id="reviewLogsBtn" class="control-button">Review Logs</button>
+                <button id="openReviewPageBtn" class="control-button">Review Logs</button>
                 <button id="darkModeToggle" class="control-button">Toggle Mode</button>
+                <button id="securityBtn" class="control-button">Security</button>
+                <button id="logoutBtn" class="control-button">Logout</button>
+                <!-- <a href="/logout" id="logoutBtn" class="control-button">Logout</a> -->
             </div>
         </header>
 
         <!-- Live Session Statistics -->
         <section class="stats-section">
-            <h2 class="section-title">Live Session Statistics</h2>
+            <div class="section-header">
+                <h2 class="section-title">Live Session Statistics</h2>
+                <button id="monitoring-toggle-btn" class="monitoring-button">
+                    <span class="icon"></span>
+                    <span class="text">Loading Status...</span>
+                </button>
+            </div>
             <div class="stats-grid">
                 <div class="stat-card">
                     <span class="stat-label">Total Logs (Session)</span>
@@ -74,6 +83,7 @@
                             <th>Verdict</th>
                             <th>Content</th>
                             <th>Risk</th>
+                            <th>Sequence Risk</th>
                         </tr>
                     </thead>
                     <tbody id="logsTableBody"></tbody>
@@ -98,7 +108,10 @@
         </div>
         
         <section class="alerts-section">
-            <h2>Alerts</h2>
+            <div class="alerts-header">
+                <h2>Alerts</h2>
+                <button id="refresh-alerts-btn" class="control-button" title="Refresh Alerts">🔄</button>
+            </div>
             <div id="alertsContainer" class="scrollable-content" style="max-height: 250px;"></div>
         </section>
 
@@ -167,6 +180,7 @@
                             <th>Source</th>
                             <th>Content</th>
                             <th>Risk</th>
+                            <th>Sequence Risk</th>
                         </tr>
                     </thead>
                     <tbody id="searchResultsBody"></tbody>
@@ -192,6 +206,68 @@
         </footer>
     </div>
 
+
+    <div id="review-interface-container" class="review-container" style="display: none;">
+        <div class="review-header">
+            <h1>Log Review</h1>
+            <button id="close-review-btn" class="control-button">Back to Dashboard</button>
+        </div>
+
+        <div class="review-tabs">
+            <button class="tab-btn active" data-tab="smart-review">Smart Review</button>
+            <button class="tab-btn" data-tab="manual-review">Manual Review</button>
+        </div>
+
+        <div id="smart-review" class="tab-content active">
+            <div class="review-header">
+                <h2>Review by Cluster</h2>
+                <button id="prepare-clusters-btn" class="control-button">Prepare Clusters</button>
+            </div>
+            <div class="smart-review-controls">
+                <div>
+                    <label for="clusterSortBy">Sort Clusters By:</label>
+                    <select id="clusterSortBy" class="select-dropdown">
+                        <option value="log_count">Quantity</option>
+                        <option value="confidence">Lowest Confidence</option>
+                        <option value="last_seen">Most Recent</option>
+                        <option value="name">Name</option>
+                    </select>
+                </div>
+            </div>
+            <div id="cluster-container" class="clusters-grid">
+                </div>
+            <div class="review-header" style="margin-top: 40px;">
+                <h2>Unclustered Logs (Noise Bin)</h2>
+            </div>
+            <div id="noise-container" class="clusters-grid">
+                </div>
+        </div>
+
+        <div id="manual-review" class="tab-content">
+            <div class="manual-review-controls">
+                <div>
+                    <label for="sortBySelect">Sort By:</label>
+                    <select id="sortBySelect" class="select-dropdown">
+                        <option value="timestamp">Timestamp</option>
+                        <option value="risk_score">Risk Score</option>
+                        <option value="source">Log Source</option>
+                        <option value="predicted_label">Model Prediction</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="sortOrderSelect">Order:</label>
+                    <select id="sortOrderSelect" class="select-dropdown">
+                        <option value="desc">Descending</option>
+                        <option value="asc">Ascending</option>
+                    </select>
+                </div>
+                <button id="applySortBtn" class="control-button">Apply</button>
+            </div>
+            <div id="manual-log-table-container">
+            </div>
+        </div>
+    </div>
+
     <div id="review-interface-container" class="review-container" style="display: none;"></div>
 
     <div id="log-context-modal" class="modal-overlay" style="display: none;">
@@ -205,22 +281,38 @@
         </div>
     </div>
 
+    <div id="cluster-detail-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" style="max-width: 1200px;">
+            <div class="modal-header">
+                <h2 id="cluster-modal-title">Cluster Details</h2>
+                <button id="cluster-modal-close-btn" class="modal-close-button">&times;</button>
+            </div>
+            <div id="cluster-modal-body" class="modal-body">
+                </div>
+        </div>
+    </div>
+
      <div id="toast-container"></div>
 
     <script src="/static/js/script.js"></script>
     <script>
         window.onload = () => {
+            initializeMonitoringStatus();
+            restoreSessionStats();
+            restoreCriticalAlerts();
+            setupEventListeners();
+            connectWebSocket();
             fetchTrainingStats();
             initHistoricalChart();
-            setupEventListeners();
-            connectWebSocket(); // Establishes the live connection
-
-            const lenis = new Lenis();
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-            requestAnimationFrame(raf);
+            loadInitialAnomalies();
+            setupKeyboardShortcuts();
+            
+            // const lenis = new Lenis();
+            // function raf(time) {
+            //     lenis.raf(time);
+            //     requestAnimationFrame(raf);
+            // }
+            // requestAnimationFrame(raf);
         };
     </script>
 </body>

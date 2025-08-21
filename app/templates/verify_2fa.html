@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify 2FA - Log Anomaly Detector</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/css/a_styles.css">
+</head>
+<body class="dark-mode">
+    <div class="background-shapes"></div>
+    <div class="auth-card">
+        <h1>Two-Factor Verification</h1>
+        <p>Enter the 6-digit code from your authenticator app.</p>
+        <form method="post">
+            <div class="input-group">
+                <input type="text" name="code" id="code" placeholder=" " required autocomplete="off" inputmode="numeric" pattern="[0-9]{6}" style="text-align: center; font-size: 1.5em; letter-spacing: 5px;">
+                <label for="code">6-Digit Code</label>
+            </div>
+            <button type="submit" class="control-button">Verify</button>
+        </form>
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
