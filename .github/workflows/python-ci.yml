@@ -25,6 +25,11 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libsystemd-dev pkg-config
+
       # 3. Installs your project's dependencies from requirements.txt
       - name: Install dependencies
         run: |
