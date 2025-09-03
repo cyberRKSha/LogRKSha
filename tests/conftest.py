@@ -4,6 +4,29 @@ from fastapi.testclient import TestClient
 from app.main import app
 from app import auth_utils
 
+@pytest.fixture(autouse=True)
+def mock_geoip_reader(monkeypatch):
+
+    class MockReader:
+        def __init__(self, *args, **kwargs):
+            pass  # Ignore the path argument
+
+        def city(self, ip_address):
+            # A fake city object
+            class MockCity:
+                def __init__(self):
+                    self.city = type("City", (), {"name": "Test City"})()
+                    self.country = type("Country", (), {"name": "Testland"})()
+                    self.location = type("Location", (), {"latitude": 0, "longitude": 0})()
+            return MockCity()
+
+        def close(self):
+            pass
+
+    # Tell pytest to replace the real Reader with our fake one
+    monkeypatch.setattr("geoip2.database.Reader", MockReader)
+
+
 @pytest.fixture(scope="function")
 def client():
     """ A fixture that creates a new, unauthenticated TestClient for each test. """
