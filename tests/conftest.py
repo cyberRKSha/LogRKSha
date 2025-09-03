@@ -1,5 +1,5 @@
 # tests/conftest.py
-import pytest
+import pytest, numpy as np
 from fastapi.testclient import TestClient
 from app.main import app
 from app import auth_utils
@@ -26,6 +26,25 @@ def mock_geoip_reader(monkeypatch):
     # Tell pytest to replace the real Reader with our fake one
     monkeypatch.setattr("geoip2.database.Reader", MockReader)
 
+@pytest.fixture(autouse=True)
+def mock_sentence_transformer(monkeypatch):
+    """
+    Mocks the SentenceTransformer to prevent downloading and loading the large model
+    during tests. It returns a correctly-shaped dummy vector.
+    """
+    class MockSentenceTransformer:
+        def __init__(self, *args, **kwargs):
+            pass
+        def encode(self, sentences, **kwargs):
+            # The real model produces a 384-dimensional vector. We'll mimic that.
+            # If sentences is a list of strings, return a list of vectors.
+            if isinstance(sentences, list):
+                return np.zeros((len(sentences), 384), dtype=np.float32)
+            # If it's a single string, return a single vector.
+            return np.zeros(384, dtype=np.float32)
+
+    # Tell pytest to replace the real SentenceTransformer with our fake one
+    monkeypatch.setattr("sentence_transformers.SentenceTransformer", MockSentenceTransformer)
 
 @pytest.fixture(scope="function")
 def client():
