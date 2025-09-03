@@ -37,22 +37,51 @@ IGNORED_PATTERNS = [
     "ACPI group/action undefined: video/",
 ]
 
-logger.info("Worker starting up. Loading models...")
+# logger.info("Worker starting up. Loading models...")
 
-registry_path = os.path.join(settings.PROJECT_ROOT, "model_registry.json")
-with open(registry_path, 'r') as f:
-    active_models = json.load(f)
+embedder = None
+supervised_model = None
+unsupervised_model = None
+lstm_model = None
+unsupervised_threshold = None
+explainer = None
 
-embedder = SentenceTransformer(str(settings.EMBEDDER_PATH))
-supervised_model = joblib.load(active_models["supervised_model"])
-unsupervised_model = tf.keras.models.load_model(active_models["autoencoder_model"])
-lstm_model = tf.keras.models.load_model(active_models["lstm_model"])
-with open(settings.THRESHOLD_PATH, 'r') as f:
-    unsupervised_threshold = json.load(f)['threshold']
-with open(settings.EXPLAINER_PATH, 'rb') as f:
-    explainer = dill.load(f)
+def load_models():
+    """Loads all ML models on first use and caches them in global variables."""
+    global embedder, supervised_model, unsupervised_model, lstm_model, unsupervised_threshold, explainer
+    
+    if embedder is None:
+        logger.info("Loading ML models for the worker...")
+        registry_path = os.path.join(settings.PROJECT_ROOT, "model_registry.json")
+        with open(registry_path, 'r') as f:
+            active_models = json.load(f)
+
+        embedder = SentenceTransformer(str(settings.EMBEDDER_PATH))
+        supervised_model = joblib.load(active_models["supervised_model"])
+        unsupervised_model = tf.keras.models.load_model(active_models["autoencoder_model"])
+        lstm_model = tf.keras.models.load_model(active_models["lstm_model"])
+        
+        with open(settings.THRESHOLD_PATH, 'r') as f:
+            unsupervised_threshold = json.load(f)['threshold']
+
+        with open(settings.EXPLAINER_PATH, 'rb') as f:
+            explainer = dill.load(f)
+
+        logger.info("All worker models loaded successfully.")
+
+# registry_path = os.path.join(settings.PROJECT_ROOT, "model_registry.json")
+# with open(registry_path, 'r') as f:
+#     active_models = json.load(f)
+# embedder = SentenceTransformer(str(settings.EMBEDDER_PATH))
+# supervised_model = joblib.load(active_models["supervised_model"])
+# unsupervised_model = tf.keras.models.load_model(active_models["autoencoder_model"])
+# lstm_model = tf.keras.models.load_model(active_models["lstm_model"])
+# with open(settings.THRESHOLD_PATH, 'r') as f:
+#     unsupervised_threshold = json.load(f)['threshold']
+# with open(settings.EXPLAINER_PATH, 'rb') as f:
+#     explainer = dill.load(f)
 # lstm_model = tf.keras.models.load_model(settings.LSTM_MODEL_PATH)
-logger.info("✅ All models loaded successfully.")
+# logger.info("✅ All models loaded successfully.")
 
 if os.path.exists(settings.KNOWN_HASHES_FILE):
     with open(settings.KNOWN_HASHES_FILE, 'r') as f:
@@ -64,18 +93,23 @@ else:
 SEQUENCE_LEN = 20
 
 # --- REDIS CONNECTION ---
-try:
-    redis_client = redis.Redis(
-        host=settings.REDIS_HOST,
-        port=settings.REDIS_PORT,
-        db=settings.REDIS_DB,
-        decode_responses=False # We will handle decoding/encoding with pickle
-    )
-    redis_client.ping() # Check if the connection is successful
-    logger.info("✅ Connected to Redis successfully.")
-except redis.exceptions.ConnectionError as e:
-    logger.error(f"❗ Could not connect to Redis: {e}")
-    sys.exit(1)
+redis_client = None
+def get_redis_client():
+    global redis_client
+    if redis_client is None:
+        try:
+            redis_client = redis.Redis(
+                host=settings.REDIS_HOST,
+                port=settings.REDIS_PORT,
+                db=settings.REDIS_DB,
+                decode_responses=False # We will handle decoding/encoding with pickle
+            )
+            redis_client.ping() # Check if the connection is successful
+            logger.info("✅ Connected to Redis successfully.")
+        except redis.exceptions.ConnectionError as e:
+            logger.error(f"❗ Could not connect to Redis: {e}")
+            sys.exit(1)
+    return redis_client
 
 # --- All Processing Logic (moved from monitor.py) ---
 
@@ -250,9 +284,10 @@ def update_and_predict_sequence(log_line, embedding):
     return float(sequence_risk_score)
 
 def process_log(source, line):
+    load_models()
     if line.startswith("[LOG-WORKER]"):
         return
-
+    
     line = line.replace('%', '%%')
 
     if any(p in line for p in IGNORED_PATTERNS):
@@ -357,6 +392,7 @@ def process_log(source, line):
 
 # --- Main Worker Loop ---
 def main():
+    get_redis_client()
     while True:
         try:
             connection = pika.BlockingConnection(pika.ConnectionParameters(host=settings.RABBITMQ_HOST))
@@ -407,6 +443,8 @@ def main():
 
 if __name__ == '__main__':
     setup_logging()
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+    tf.get_logger().setLevel('ERROR')
     try:
         main()
     except KeyboardInterrupt:
