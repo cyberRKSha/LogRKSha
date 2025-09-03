@@ -1,160 +1,86 @@
-<!-- <!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Log Review</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/r_styles.css') }}">
+    <meta charset="UTF-8">
+    <title>Review Logs - Log Anomaly Detector</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/r_styles.css">
+    <link rel="stylesheet" href="/static/css/m_styles.css">
 </head>
 <body>
-  <div class="review-container">
-    <div class="review-header">
-      <h1>Pending Logs for Review</h1>
-      <div class="filter-buttons">
-        <a href="{{ url_for('index') }}" class="{{ 'active' if not sort_by else '' }}">Show All</a>
-        <a href="{{ url_for('index', sort_by=1) }}" class="{{ 'active' if sort_by == '1' else '' }}">Sort by Anomaly</a>
-        <a href="{{ url_for('index', sort_by=0) }}" class="{{ 'active' if sort_by == '0' else '' }}">Sort by Normal</a>
-      </div>
+    <div id="review-interface-container" class="review-container">
+        <div class="review-header">
+            <h1>Log Review</h1>
+            <a href="/" id="close-review-btn" class="control-button">Back to Dashboard</a>
+        </div>
+
+        <div class="review-tabs">
+            <button class="tab-btn active" data-tab="smart-review">Smart Review</button>
+            <button class="tab-btn" data-tab="manual-review">Manual Review</button>
+        </div>
+
+        <div id="smart-review" class="tab-content active">
+            <div class="review-header">
+                <h2>Review by Cluster</h2>
+                <button id="prepare-clusters-btn" class="control-button">Prepare Clusters</button>
+            </div>
+            <div class="smart-review-controls">
+                <div>
+                    <label for="clusterSortBy">Sort Clusters By:</label>
+                    <select id="clusterSortBy" class="select-dropdown">
+                        <option value="log_count">Quantity</option>
+                        <option value="confidence">Lowest Confidence</option>
+                        <option value="last_seen">Most Recent</option>
+                        <option value="name">Name</option>
+                    </select>
+                </div>
+            </div>
+            <div id="cluster-container" class="clusters-grid">
+                </div>
+            <div class="review-header" style="margin-top: 40px;">
+                <h2>Unclustered Logs (Noise Bin)</h2>
+            </div>
+            <div id="noise-container" class="clusters-grid">
+                </div>
+        </div>
+
+        <div id="manual-review" class="tab-content">
+            <div class="manual-review-controls">
+                <div>
+                    <label for="sortBySelect">Sort By:</label>
+                    <select id="sortBySelect" class="select-dropdown">
+                        <option value="timestamp">Timestamp</option>
+                        <option value="risk_score">Risk Score</option>
+                        <option value="source">Log Source</option>
+                        <option value="predicted_label">Model Prediction</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="sortOrderSelect">Order:</label>
+                    <select id="sortOrderSelect" class="select-dropdown">
+                        <option value="desc">Descending</option>
+                        <option value="asc">Ascending</option>
+                    </select>
+                </div>
+                <button id="applySortBtn" class="control-button">Apply</button>
+            </div>
+            <div id="manual-log-table-container">
+                </div>
+        </div>
     </div>
 
-    {% if entries %}
-    <form method="POST" action="{{ url_for('update') }}">
-      <table class="review-table">
-        <thead>
-          <tr>
-            <th>Timestamp</th>
-            <th>Source</th>
-            <th>Content</th>
-            <th style="width: 20%;">Correct Label? (Normal=0, Anomaly=1)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for entry in entries %}
-          <tr>
-            <td>{{ entry.timestamp }}</td>
-            <td>{{ entry.source }}</td>
-            <td class="log-content">{{ entry.content }}</td>
-            <td>
-              <div class="label-chooser">
-                <input type="radio" id="normal_{{ entry.index }}" name="label_{{ entry.index }}" value="0" {{ 'checked' if entry.label == 0 else '' }}>
-                <label for="normal_{{ entry.index }}" class="label-normal">Normal</label>
-                
-                <input type="radio" id="anomaly_{{ entry.index }}" name="label_{{ entry.index }}" value="1" {{ 'checked' if entry.label == 1 else '' }}>
-                <label for="anomaly_{{ entry.index }}" class="label-anomaly">Anomaly</label>
-              </div>
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-      <div style="text-align: right; margin-top: 25px;">
-        <button type="submit" class="submit-button">✅ Save All Reviewed Logs</button>
-      </div>
-    </form>
-    {% else %}
-      <p style="text-align: center; font-size: 1.2em; color: #666; padding: 50px;">
-        No pending logs to review. Great job!
-      </p>
-    {% endif %}
-  </div>
-</body>
-</html> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Log Review</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/r_styles.css') }}">
-</head>
-<body>
-  <div class="review-container">
-    <div class="review-header">
-      <h1>Pending Logs for Review</h1>
-      <div class="filter-buttons">
-        <a href="{{ url_for('index')}}" class="{{ 'active' if not sort_by else '' }}">Show All</a>
-        <a href="{{ url_for('index', sort_by=1) }}" class="{{ 'active' if sort_by == '1' else '' }}">Sort by Anomaly</a>
-        <a href="{{ url_for('index', sort_by=0) }}" class="{{ 'active' if sort_by == '0' else '' }}">Sort by Normal</a>
-      </div>
+    <div id="cluster-detail-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" style="max-width: 1200px;">
+            <div class="modal-header">
+                <h2 id="cluster-modal-title">Cluster Details</h2>
+                <button id="cluster-modal-close-btn" class="modal-close-button">&times;</button>
+            </div>
+            <div id="cluster-modal-body" class="modal-body"></div>
+        </div>
     </div>
+    <div id="toast-container"></div>
 
-    {% if entries %}
-    <form method="POST" action="{{ url_for('update') }}">
-      <table class="review-table">
-        <thead>
-          <tr>
-            <th>Timestamp</th>
-            <th>Source</th>
-            <th>Content</th>
-            <th style="width: 20%;">Correct Label? (Normal=0, Anomaly=1)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for entry in entries %}
-          <tr>
-            <td>{{ entry['timestamp'] }}</td>
-            <td>{{ entry['source'] }}</td>
-            <td class="log-content">{{ entry['content'] }}</td>
-            <td>
-              <div class="label-chooser">
-                <input type="radio" id="normal_{{ entry['id'] }}" name="label_{{ entry['id'] }}" value="0" {{ 'checked' if entry['final_label'] == 0 else '' }}>
-                <label for="normal_{{ entry['id'] }}" class="label-normal">Normal</label>
-
-                <input type="radio" id="anomaly_{{ entry['id'] }}" name="label_{{ entry['id'] }}" value="1" {{ 'checked' if entry['final_label'] == 1 else '' }}>
-                <label for="anomaly_{{ entry['id'] }}" class="label-anomaly">Anomaly</label>
-              </div>
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-      <div style="text-align: right; margin-top: 25px;">
-        <button type="submit" class="submit-button">Save</button>
-      </div>
-    </form>
-    {% else %}
-      <p style="text-align: center; font-size: 1.2em; color: #666; padding: 50px;">
-        No pending logs to review. Great job!
-      </p>
-    {% endif %}
-  </div>
+    <script src="/static/js/main.js" type="module"></script>
 </body>
 </html>

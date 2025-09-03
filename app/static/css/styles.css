@@ -86,6 +86,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===================================================================== */
 .dashboard-layout {
     max-width: 95%;
+    min-width: 1200px;
     margin: 30px auto;
     padding: 30px;
     background-color: var(--secondary-bg);
@@ -105,6 +106,12 @@ h1, h2, h3, h4, h5, h6 {
 .dashboard-header h1 {
     font-size: 2.5em;
     font-weight: 700;
+}
+
+.dashboard-main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* This reliably creates a 40px space between every section */
 }
 
 .section-title {
@@ -127,9 +134,10 @@ h1, h2, h3, h4, h5, h6 {
 /* ===================================================================== */
 /* === 3. STATISTICS CARDS === */
 /* ===================================================================== */
-.stats-section {
+
+/* .stats-section {
     margin-bottom: 40px;
-}
+} */
 
 .stats-grid {
     display: grid;
@@ -358,6 +366,58 @@ body.dark-mode .investigation-section {
 .investigation-controls.manual-search-active input,
 .investigation-controls.manual-search-active select {
     border-color: var(--button-primary);
+}
+
+.filter-logic-selector {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: var(--primary-bg);
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.filter-logic-selector label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.investigation-controls {
+    display: grid;
+    /* This creates 4 equal columns, which will wrap on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    align-items: flex-end;
+}
+
+.action-buttons-container {
+    display: flex;
+    justify-content: space-between; /* This pushes the groups apart */
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-color);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px; /* This keeps the space between buttons within a group */
+}
+
+.control-button.secondary-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color-primary);
+    border: 1px solid var(--border-color);
+}
+
+.control-button.secondary-btn:hover {
+    background-color: var(--border-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px var(--card-box-shadow);
 }
 
 /* ===================================================================== */
@@ -1097,3 +1157,189 @@ body.dark-mode .monitoring-button:hover {
 .risk-bar-fill.medium { background-color: #ffc107; } /* Yellow */
 .risk-bar-fill.high { background-color: #fd7e14; } /* Orange */
 .risk-bar-fill.critical { background-color: #dc3545; } /* Red */
+
+
+/* ===================================================================== */
+/* === 17. WIDGETS SECTION === */
+/* ===================================================================== */
+
+.activity-grid {
+    display: grid;
+    /* Creates three equal columns, reducing to one on smaller screens */
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.top-n-widget {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 15px var(--card-box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* This is the fix for the expanding issue. We give the container a height. */
+    height: 350px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.top-n-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--card-box-shadow);
+}
+
+.widget-header {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+    flex-shrink: 0; /* Prevents the header from shrinking */
+}
+
+.widget-chart-container {
+    position: relative;
+    flex-grow: 1; /* Allows the container to fill the available space */
+}
+
+.widget-no-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-color-secondary);
+    font-style: italic;
+}
+
+.full-width-widget {
+    grid-column: 1 / -1; /* This makes the widget span all 3 columns */
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 15px var(--card-box-shadow);
+    height: 500px; /* Give it a fixed height for the map */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===================================================================== */
+/* === LIVE ACTIVITY SPARKLINE WIDGET === */
+/* ===================================================================== */
+
+/* .live-activity-section {
+    margin-bottom: 40px; 
+} */
+
+.sparkline-widget {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 15px var(--card-box-shadow);
+    
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Chart (flexible), Footer */
+    grid-template-columns: 100%;
+    gap: 10px; /* Space between header, chart, and footer */
+    height: 180px; /* A taller, more stable height */
+}
+
+.sparkline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.sparkline-legend {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9em;
+}
+
+.legend-item {
+    width: 12px; height: 12px; border-radius: 50%;
+}
+.legend-item.normal { background-color: #28a745; }
+.legend-item.anomaly { background-color: #dc3545; }
+
+.sparkline-chart-container {
+    position: relative; /* This is crucial for positioning the overlay */
+    flex-grow: 1;
+}
+
+.sparkline-stats-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px; /* <-- Pushes it to the left corner */
+    /* REMOVED left: 15px; to stop it from stretching */
+    
+    display: flex;
+    gap: 20px; /* <-- Reduced the gap */
+    padding: 5px 15px; /* <-- Reduced the padding to make it smaller */
+    background-color: rgba(235, 235, 235, 0.3); /* A slightly stronger background */
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.sparkline-footer {
+    display: flex;
+    justify-content: space-evenly; /* Evenly space the counters */
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-stat {
+    text-align: center;
+}
+
+.footer-stat-value {
+    font-size: 1em;
+    font-weight: 700;
+    /* A subtle shadow makes the text pop */
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    color: var(--text-color-primary); /* Use theme color */
+}
+
+.footer-stat-label {
+    display: block;
+    font-size: 0.5em;
+    color: var(--text-color-secondary); /* Use theme color */
+}
+
+/* ===================================================================== */
+/* === EXPORT BUTTON === */
+/* ===================================================================== */
+
+.control-button.export-pdf-btn {
+    background-color: #c82333; /* A distinct color for PDF export */
+    color: white;
+    border: none;
+}
+
+.control-button.export-pdf-btn:hover {
+    background-color: #a31221;
+    box-shadow: 0 6px 15px rgba(220, 53, 69, 0.3);
+}
+
+/* Style for when the button is in a loading state */
+.control-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.control-button .spinner {
+    display: none; /* Hidden by default */
+    border-width: 2px; /* Make it a bit smaller for a button */
+    width: 16px;
+    height: 16px;
+}

@@ -6,7 +6,10 @@
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/r_styles.css">
+    <link rel="stylesheet" href="/static/css/m_styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 </head>
 <body>
@@ -22,7 +25,7 @@
                 <!-- <a href="/logout" id="logoutBtn" class="control-button">Logout</a> -->
             </div>
         </header>
-
+        <main class="dashboard-main"> 
         <!-- Live Session Statistics -->
         <section class="stats-section">
             <div class="section-header">
@@ -48,6 +51,32 @@
                 <div class="stat-card">
                     <span class="stat-label">Active Connections</span>
                     <span id="sessionCount" class="stat-value">0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="live-activity-section">
+            <div class="sparkline-widget">
+                <div class="sparkline-header">
+                    <span class="widget-title">Live Activity Feed</span>
+                    <div class="sparkline-legend">
+                        <span class="legend-item normal"></span> Normal
+                        <span class="legend-item anomaly"></span> Anomaly
+                    </div>
+                </div>
+                <div class="sparkline-chart-container">
+                    <canvas id="liveSparklineChart"></canvas>
+                
+                    <div class="sparkline-stats-overlay">
+                        <div class="footer-stat">
+                            <span class="footer-stat-value" id="normal-lps">0.0</span>
+                            <span class="footer-stat-label">Normal Logs/Sec</span>
+                        </div>
+                        <div class="footer-stat">
+                            <span class="footer-stat-value" id="anomaly-lps">0.0</span>
+                            <span class="footer-stat-label">Anomaly Logs/Sec</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -123,7 +152,7 @@
                     Threat Hunting & Investigation
                 </h2>
             </div>
-            <div class="investigation-panel">
+            <!-- <div class="investigation-panel">
                  <div class="quick-searches">
                     <span class="quick-search-label">Quick Searches:</span>
                     <button class="quick-search-btn" data-label="1" data-hours="1">Anomalies (Last Hour)</button>
@@ -169,7 +198,70 @@
                         </button>
                     </div>
                 </div>
+            </div> -->
+
+            <div class="investigation-panel">
+                <div class="filter-logic-selector">
+                    <label><input type="radio" name="filter_logic" value="and" checked> Match ALL filters (AND)</label>
+                    <label><input type="radio" name="filter_logic" value="or"> Match ANY filter (OR)</label>
+                </div>
+            
+                <div class="investigation-controls">
+                    <div class="control-group">
+                        <label for="searchKeyword">Keyword(s)</label>
+                        <input type="text" id="searchKeyword" class="select-dropdown" placeholder="e.g., failed sshd">
+                    </div>
+                    <div class="control-group">
+                        <label for="searchIpAddress">IP Address</label>
+                        <input type="text" id="searchIpAddress" class="select-dropdown" placeholder="e.g., 193.42.109.42">
+                    </div>
+                
+                    <div class="control-group">
+                        <label for="searchSource">Log Source</label>
+                        <input type="text" id="searchSource" class="select-dropdown" placeholder="e.g., auth.log">
+                    </div>
+                    <div class="control-group">
+                        <label for="searchDetectionMethod">Detection Method</label>
+                        <select id="searchDetectionMethod" class="select-dropdown">
+                            <option value="">Any Method</option>
+                            <option value="Supervised">Supervised</option>
+                            <option value="Novelty Detected">Unsupervised</option>
+                            <option value="Malicious Sequence">Sequential (LSTM)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="searchRiskScore">Risk Score (Greater Than)</label>
+                        <input type="number" id="searchRiskScore" class="select-dropdown" placeholder="e.g., 0.7" step="0.1" min="0" max="1">
+                    </div>
+                    <div class="control-group time-range-group">
+                        <label>Time Range</label>
+                        <div class="time-inputs">
+                            <input type="datetime-local" id="searchStartTime" class="select-dropdown" title="Start Time">
+                            <span>to</span>
+                            <input type="datetime-local" id="searchEndTime" class="select-dropdown" title="End Time">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons-container">
+                    <div class="button-group">
+                        <button id="searchBtn" class="control-button">
+                            <span class="search-text">Search Logs</span>
+                            <div class="spinner" style="display: none;"></div>
+                        </button>
+                        <button id="clearFiltersBtn" class="control-button clear-btn">Clear Filters</button>
+                    </div>
+                    <div class="button-group">
+                        <button id="exportCsvBtn" class="control-button secondary-btn">Export to CSV</button>
+                        <button id="exportPdfBtn" class="control-button export-pdf-btn">
+                            <span class="btn-text">Export PDF</span>
+                            <div class="spinner"></div>
+                        </button>
+                    </div>
+                </div>
             </div>
+
             <div id="searchResultsContainer" class="scrollable-content" style="max-height: 400px; margin-top: 20px;">
                 <table id="searchResultsTable" class="log-table">
                     <thead>
@@ -188,6 +280,39 @@
             </div>
         </section>
 
+        <h2 class="section-title">Widgets</h2>
+        <section class="activity-grid">
+            <div class="top-n-widget">
+                <div class="widget-header">Top Anomaly Verdicts</div>
+                <div class="widget-chart-container">
+                    <canvas id="topVerdictsChart"></canvas>
+                </div>
+            </div>
+            <div class="top-n-widget">
+                <div class="widget-header">Top Anomalous IPs</div>
+                <div class="widget-chart-container">
+                    <canvas id="topAnomalousIpsChart"></canvas>
+                </div>
+            </div>
+            <div class="top-n-widget">
+                <div class="widget-header">Top Anomaly Sources</div>
+                <div class="widget-chart-container">
+                    <canvas id="topSourcesChart"></canvas>
+                </div>
+            </div>
+            <div class="top-n-widget">
+                <div class="widget-header">Detection Method Breakdown</div>
+                <div class="widget-chart-container">
+                    <canvas id="detectionMethodChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="full-width-widget">
+            <div class="widget-header">Geographic Threat Map</div>
+            <div id="threatMap" style="flex-grow: 1; border-radius: 8px;"></div>
+        </section>
+
         <!-- Historical Trends Section (as before) -->
         <section class="log-section">
             <h2>Historical Trends</h2>
@@ -199,7 +324,7 @@
                 </div>
             </div>
         </section>
-
+        </main>
         <footer class="dashboard-footer">
             <div class="last-updated">Last Updated: <span id="lastUpdated">{{ last_updated }}</span></div>
             <span>Powered by cyberRKSha | &copy; 2025</span>
@@ -292,28 +417,8 @@
         </div>
     </div>
 
-     <div id="toast-container"></div>
+    <div id="toast-container"></div>
 
-    <script src="/static/js/script.js"></script>
-    <script>
-        window.onload = () => {
-            initializeMonitoringStatus();
-            restoreSessionStats();
-            restoreCriticalAlerts();
-            setupEventListeners();
-            connectWebSocket();
-            fetchTrainingStats();
-            initHistoricalChart();
-            loadInitialAnomalies();
-            setupKeyboardShortcuts();
-            
-            // const lenis = new Lenis();
-            // function raf(time) {
-            //     lenis.raf(time);
-            //     requestAnimationFrame(raf);
-            // }
-            // requestAnimationFrame(raf);
-        };
-    </script>
+    <script src="/static/js/main.js" type="module"></script>
 </body>
 </html>

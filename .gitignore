@@ -1,1 +1,28 @@
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
 venv-s/
+
+# Docker
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Misc
+to-dos.txt
+req.txt
+folder*.txt
+*.sql
+.vscode/
+.trash/
+.pytest_cache/
+logs/
+geoip/
+simulation/
+monitoring_status.json
+app.log

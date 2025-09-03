@@ -1,1144 +1,707 @@
-Aug 17 03:48:34	ADM	Xorg.0.log[22973]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 17 03:50:20	testvm	Xorg.0.log[24053]:	pam_unix(sshd:session): session closed for user pgadmin
-Aug 17 03:51:52	RUfus	Xorg.0.log[21724]:	Connection closed by 44.180.57.13 [preauth]
-Aug 17 04:12:51	LabSZ	Xorg.0.log[9369]:	kernel: usb 1-65: USB disconnect, device number 2
-Aug 17 04:12:55	testvm	Xorg.0.log[21177]:	Accepted password for chen from 147.188.36.99 port 23881 ssh65
-Aug 17 04:13:02	testvm	Xorg.0.log[23498]:	systemd: Started User Session 11582 of user pgadmin.
-Aug 17 04:13:42	archive	Xorg.0.log[8386]:	pam_unix(sshd:session): session closed for user admin
-Aug 17 04:14:05	server	Xorg.0.log[9496]:	event35  - Sleep Button: is tagged by udev as: Keyboard
-Aug 17 04:14:29	testvm	Xorg.0.log[7479]:	Connection closed by 75.47.182.159 [preauth]
-Aug 17 04:14:36	ADM	Xorg.0.log[7265]:	Received disconnect from 83.16.112.251: 93: disconnected by user
-Aug 17 04:15:02	archive	Xorg.0.log[13052]:	Did not receive identification string from 97.215.117.231
-Aug 17 15:59:09	archive	Xorg.0.log[17654]:	Connection closed by 155.201.161.187 [preauth]
-Aug 17 15:59:26	archive	Xorg.0.log[12814]:	event66  - Sleep Button: is tagged by udev as: Keyboard
-Aug 17 16:01:15	ADM	Xorg.0.log[26791]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event90)
-Aug 17 16:01:20	RUfus	Xorg.0.log[26049]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event33)
-Aug 17 16:02:00	prod1	Xorg.0.log[7388]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:36.0/usb3/3-4/3-4:1.0/0003:1EA7:00366.0001/input/input36/event36
-Aug 17 16:02:19	archive	Xorg.0.log[23021]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 17 16:02:25	RUfus	Xorg.0.log[24967]:	Accepted password for test from 156.5.70.110 port 59614 ssh37
-Aug 17 16:03:16	prod1	Xorg.0.log[6585]:	pam_unix(sshd:session): session closed for user ubuntu
-Aug 17 16:03:34	prod1	Xorg.0.log[25811]:	Connection closed by 249.208.24.212 [preauth]
-Aug 17 16:03:41	server	Xorg.0.log[27399]:	Connection closed by 158.38.27.167 [preauth]
-Aug 17 16:04:16	LabSZ	Xorg.0.log[16231]:	Received disconnect from 195.216.84.62: 21: disconnected by user
-Aug 17 16:05:42	RUfus	Xorg.0.log[28474]:	kernel: usb 1-30: USB disconnect, device number 2
-Aug 17 16:05:50	archive	Xorg.0.log[24641]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:73.0/usb3/3-4/3-4:1.0/0003:1EA7:00736.0001/input/input73/event73
-Aug 17 16:05:59	server	Xorg.0.log[5570]:	systemd: Started User Session 5860 of user admin.
-Aug 17 16:06:49	testvm	Xorg.0.log[24698]:	(EE) Backtrace:
-Aug 17 16:06:50	archive	Xorg.0.log[15926]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 17 16:07:24	LabSZ	Xorg.0.log[3587]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=31)
-Aug 17 16:07:26	prod1	Xorg.0.log[5242]:	Accepted password for oracle from 49.135.30.89 port 56857 ssh57
-Aug 17 16:07:53	RUfus	Xorg.0.log[27611]:	Accepted password for fztu from 249.108.11.231 port 59378 ssh40
-Aug 17 16:08:12	RUfus	Xorg.0.log[29665]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event98)
-Aug 17 16:08:16	prod1	Xorg.0.log[7718]:	Did not receive identification string from 138.126.45.231
-Aug 17 16:08:35	RUfus	Xorg.0.log[28494]:	pam_unix(sshd:session): session closed for user test
-Aug 17 16:09:33	server	Xorg.0.log[8329]:	Connection closed by 7.240.169.47 [preauth]
-Aug 17 16:10:00	RUfus	Xorg.0.log[11452]:	(EE) Backtrace:
-Aug 17 16:10:01	archive	Xorg.0.log[2515]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 17 16:10:12	ADM	Xorg.0.log[12538]:	Connection closed by 237.206.245.126 [preauth]
-Aug 17 16:10:52	server	Xorg.0.log[12000]:	Received disconnect from 16.63.10.221: 99: Bye Bye [preauth]
-Aug 17 16:11:47	testvm	Xorg.0.log[25115]:	Received disconnect from 47.85.155.206: 77: Bye Bye [preauth]
-Aug 17 16:12:15	prod1	Xorg.0.log[23878]:	Disconnecting: Too many authentication failures for root [preauth]
-Aug 17 16:12:36	archive	Xorg.0.log[2586]:	Received disconnect from 14.213.127.188: 74: Closed due to user request [preauth]
-Aug 17 16:13:45	ADM	Xorg.0.log[21627]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=32)
-Aug 17 16:14:24	server	Xorg.0.log[8746]:	Received disconnect from 83.208.189.22: 64: Closed due to user request [preauth]
-Aug 17 16:38:47	LabSZ	Xorg.0.log[15012]:	Accepted password for pgadmin from 22.11.10.89 port 49866 ssh53
-Aug 17 16:39:13	LabSZ	Xorg.0.log[22092]:	(EE) Backtrace:
-Aug 17 16:39:15	LabSZ	Xorg.0.log[21657]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 17 16:39:27	archive	Xorg.0.log[14821]:	pam_unix(sshd:session): session closed for user test
-Aug 17 16:39:38	ADM	Xorg.0.log[27504]:	Received disconnect from 136.74.38.185: 66: Bye Bye [preauth]
-Aug 17 16:39:45	archive	Xorg.0.log[22463]:	Received disconnect from 170.57.61.122: 23: Bye Bye [preauth]
-Aug 17 16:40:12	testvm	Xorg.0.log[25104]:	Received disconnect from 221.206.126.24: 60: disconnected by user
-Aug 17 16:40:15	prod1	Xorg.0.log[10664]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:8.0/usb3/3-4/3-4:1.0/0003:1EA7:0086.0001/input/input8/event8
-Aug 17 16:40:20	RUfus	Xorg.0.log[28697]:	Received disconnect from 107.115.107.245: 99: Closed due to user request [preauth]
-Aug 17 16:41:33	testvm	Xorg.0.log[3783]:	(EE) Backtrace:
-Aug 17 16:41:35	prod1	Xorg.0.log[16025]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 17 16:42:01	LabSZ	Xorg.0.log[7120]:	kernel: usb 1-2: USB disconnect, device number 2
-Aug 17 16:43:17	RUfus	Xorg.0.log[10710]:	event86  - Sleep Button: is tagged by udev as: Keyboard
-Aug 17 16:43:36	ADM	Xorg.0.log[21574]:	Did not receive identification string from 86.244.38.2
-Aug 17 19:30:09	ADM	Xorg.0.log[25500]:	Received disconnect from 51.135.248.49: 44: Closed due to user request [preauth]
-Aug 17 19:30:14	testvm	Xorg.0.log[14781]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 17 19:30:17	prod1	Xorg.0.log[20317]:	systemd: Started User Session 20833 of user test.
-Aug 17 19:30:26	testvm	Xorg.0.log[4928]:	event60  - Sleep Button: is tagged by udev as: Keyboard
-Aug 17 19:30:47	LabSZ	Xorg.0.log[13242]:	event8  - Sleep Button: is tagged by udev as: Keyboard
-Aug 17 19:30:50	LabSZ	Xorg.0.log[23319]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event55)
-Aug 17 19:30:52	RUfus	Xorg.0.log[27893]:	systemd: Started User Session 25050 of user guest.
-Aug 17 19:30:59	LabSZ	Xorg.0.log[10534]:	Connection closed by 205.18.42.253 [preauth]
-Aug 17 19:31:02	testvm	Xorg.0.log[2499]:	Received disconnect from 113.121.244.238: 83: Bye Bye [preauth]
-Aug 17 19:31:09	ADM	Xorg.0.log[1966]:	Received disconnect from 51.161.53.11: 41: disconnected by user
-Aug 17 19:31:24	server	Xorg.0.log[17792]:	kernel: usb 1-54: USB disconnect, device number 2
-Aug 17 19:31:27	prod1	Xorg.0.log[18984]:	event99  - Sleep Button: is tagged by udev as: Keyboard
-Aug 17 19:31:48	testvm	Xorg.0.log[11864]:	pam_unix(sshd:session): session opened for user fztu by (uid=64)
-Aug 17 19:31:55	server	Xorg.0.log[16375]:	Did not receive identification string from 67.253.5.214
-Aug 17 19:32:02	ADM	Xorg.0.log[15827]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 17 19:32:32	prod1	Xorg.0.log[4808]:	Connection closed by 78.146.114.61 [preauth]
-Aug 17 19:32:49	archive	Xorg.0.log[25525]:	Received disconnect from 97.73.119.233: 40: disconnected by user
-Aug 17 19:47:28	server	Xorg.0.log[13211]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event14)
-Aug 17 19:48:13	server	Xorg.0.log[14991]:	Received disconnect from 90.209.80.187: 23: disconnected by user
-Aug 17 19:48:22	testvm	Xorg.0.log[4877]:	Connection closed by 183.116.204.147 [preauth]
-Aug 17 19:49:04	LabSZ	Xorg.0.log[15459]:	pam_unix(sshd:session): session opened for user fztu by (uid=94)
-Aug 17 19:49:27	prod1	Xorg.0.log[25278]:	Received disconnect from 100.91.224.184: 45: disconnected by user
-Aug 17 19:49:38	prod1	Xorg.0.log[29982]:	Did not receive identification string from 116.72.212.47
-Aug 17 19:51:39	RUfus	Xorg.0.log[29915]:	pam_unix(sshd:session): session closed for user pgadmin
-Aug 17 19:52:42	archive	Xorg.0.log[6859]:	pam_unix(sshd:session): session opened for user matlab by (uid=55)
-Aug 17 19:53:09	LabSZ	Xorg.0.log[29613]:	PAM 77 more authentication failures; logname= uid=3 euid=6 tty=ssh ruser= rhost=28.81.7.206  user=fztu
-Aug 17 19:54:04	archive	Xorg.0.log[26953]:	systemd: Started User Session 6588 of user admin.
-Aug 17 19:54:09	prod1	Xorg.0.log[11307]:	pam_unix(sshd:session): session closed for user admin
-Aug 17 19:54:28	server	Xorg.0.log[16615]:	systemd: Started User Session 28219 of user 123.
-Aug 17 19:54:32	server	Xorg.0.log[24623]:	pam_unix(sshd:session): session closed for user root
-Aug 17 19:54:36	ADM	Xorg.0.log[13750]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event46)
-Aug 17 19:55:58	server	Xorg.0.log[29875]:	pam_unix(sshd:session): session opened for user admin by (uid=67)
-Aug 17 19:56:06	testvm	Xorg.0.log[15238]:	event14  - Sleep Button: is tagged by udev as: Keyboard
-Aug 17 19:56:32	archive	Xorg.0.log[17750]:	Did not receive identification string from 200.166.201.57
-Aug 17 19:57:42	LabSZ	Xorg.0.log[5578]:	event97  - Sleep Button: is tagged by udev as: Keyboard
-Aug 17 19:58:27	RUfus	Xorg.0.log[27115]:	pam_unix(sshd:session): session closed for user chen
-Aug 17 19:58:32	LabSZ	Xorg.0.log[11328]:	Connection closed by 223.178.32.243 [preauth]
-Aug 17 19:58:35	prod1	Xorg.0.log[3360]:	Received disconnect from 14.48.144.66: 93: Closed due to user request [preauth]
-Aug 17 19:59:05	archive	Xorg.0.log[9398]:	pam_unix(sshd:session): session closed for user root
-Aug 17 20:00:24	prod1	Xorg.0.log[20960]:	Received disconnect from 182.9.155.255: 83: disconnected by user
-Aug 17 20:00:39	RUfus	Xorg.0.log[6702]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:4.0/usb3/3-4/3-4:1.0/0003:1EA7:0046.0001/input/input4/event4
-Aug 17 20:00:52	LabSZ	Xorg.0.log[29423]:	event90  - Sleep Button: is tagged by udev as: Keyboard
-Aug 17 20:01:01	archive	Xorg.0.log[16870]:	pam_unix(sshd:session): session opened for user chen by (uid=93)
-Aug 17 20:01:14	LabSZ	Xorg.0.log[16653]:	sudo: pam_unix(sudo:auth): authentication failure; logname=chen4 uid=897779 euid=9 tty=/dev/pts/2 ruser=user1 rhost=  user=root
-Aug 17 20:01:38	server	Xorg.0.log[4611]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event75)
-Aug 17 20:01:53	LabSZ	Xorg.0.log[7412]:	pam_unix(sshd:session): session closed for user 123
-Aug 17 20:01:56	prod1	Xorg.0.log[22486]:	pam_unix(sshd:session): session closed for user fztu
-Aug 17 20:02:08	prod1	Xorg.0.log[29380]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event78)
-Aug 17 20:02:23	LabSZ	Xorg.0.log[18604]:	Received disconnect from 164.89.28.248: 39: Closed due to user request [preauth]
-Aug 17 20:02:24	testvm	Xorg.0.log[28330]:	Received disconnect from 203.19.246.227: 68: Bye Bye [preauth]
-Aug 17 20:25:45	archive	Xorg.0.log[1389]:	systemd: Started User Session 3132 of user backup.
-Aug 17 22:56:16	server	Xorg.0.log[4249]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:45.0/usb3/3-4/3-4:1.0/0003:1EA7:00456.0001/input/input45/event45
-Aug 17 22:56:28	RUfus	Xorg.0.log[10186]:	Accepted password for admin from 41.126.220.249 port 56963 ssh87
-Aug 17 22:56:43	archive	Xorg.0.log[26905]:	Received disconnect from 146.83.150.224: 25: Bye Bye [preauth]
-Aug 17 22:57:51	testvm	Xorg.0.log[17278]:	Received disconnect from 205.52.97.130: 83: Bye Bye [preauth]
-Aug 17 22:57:57	LabSZ	Xorg.0.log[27706]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:70.0/usb3/3-4/3-4:1.0/0003:1EA7:00706.0001/input/input70/event70
-Aug 17 22:58:49	testvm	Xorg.0.log[8421]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event33)
-Aug 17 22:58:59	prod1	Xorg.0.log[13493]:	Did not receive identification string from 140.64.125.27
-Aug 17 22:59:48	prod1	Xorg.0.log[15478]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event43)
-Aug 17 23:00:14	archive	Xorg.0.log[22294]:	systemd: Started User Session 17928 of user backup.
-Aug 17 23:00:35	prod1	Xorg.0.log[4791]:	systemd: Started User Session 10448 of user webmaster.
-Aug 17 23:01:01	prod1	Xorg.0.log[13675]:	Received disconnect from 231.49.128.49: 90: Closed due to user request [preauth]
-Aug 17 23:01:19	prod1	Xorg.0.log[12631]:	systemd: Started User Session 13337 of user root.
-Aug 17 23:01:35	archive	Xorg.0.log[11288]:	Accepted password for fztu from 217.234.234.171 port 11224 ssh16
-Aug 17 23:01:38	prod1	Xorg.0.log[5253]:	Accepted password for fztu from 46.232.195.54 port 48284 ssh97
-Aug 17 23:01:54	LabSZ	Xorg.0.log[18895]:	pam_unix(sshd:session): session opened for user chen by (uid=12)
-Aug 17 23:02:19	LabSZ	Xorg.0.log[20580]:	Received disconnect from 130.18.219.55: 87: disconnected by user
-Aug 17 23:02:36	testvm	Xorg.0.log[26068]:	Received disconnect from 42.91.98.64: 94: disconnected by user
-Aug 17 23:02:52	archive	Xorg.0.log[14197]:	pam_unix(sshd:session): session closed for user chen
-Aug 17 23:03:07	server	Xorg.0.log[23707]:	Accepted password for chen from 48.193.222.70 port 6699 ssh62
-Aug 17 23:03:34	RUfus	Xorg.0.log[4481]:	Accepted password for pgadmin from 216.231.33.188 port 32672 ssh50
-Aug 17 23:03:50	server	Xorg.0.log[22002]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event60)
-Aug 17 23:03:56	LabSZ	Xorg.0.log[18843]:	Received disconnect from 56.168.175.113: 38: Bye Bye [preauth]
-Aug 17 23:03:58	prod1	Xorg.0.log[8232]:	Received disconnect from 100.18.55.123: 66: Closed due to user request [preauth]
-Aug 17 23:04:04	LabSZ	Xorg.0.log[12664]:	Received disconnect from 197.249.15.194: 77: Closed due to user request [preauth]
-Aug 17 23:04:17	archive	Xorg.0.log[22915]:	systemd: Started User Session 19532 of user test.
-Aug 17 23:04:48	prod1	Xorg.0.log[9787]:	Accepted password for test from 67.112.118.212 port 48110 ssh16
-Aug 17 23:04:52	prod1	Xorg.0.log[14543]:	event8  - Sleep Button: is tagged by udev as: Keyboard
-Aug 17 23:04:59	LabSZ	Xorg.0.log[1873]:	Connection closed by 176.179.112.119 [preauth]
-Aug 17 23:05:02	LabSZ	Xorg.0.log[19457]:	(EE) Backtrace:
-Aug 17 23:05:03	RUfus	Xorg.0.log[29064]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 17 23:05:14	RUfus	Xorg.0.log[28747]:	Did not receive identification string from 159.130.190.53
-Aug 17 23:05:17	server	Xorg.0.log[2429]:	pam_unix(sshd:session): session closed for user guest
-Aug 17 23:06:31	ADM	Xorg.0.log[20032]:	kernel: usb 1-74: USB disconnect, device number 2
-Aug 17 23:06:34	server	Xorg.0.log[6801]:	Did not receive identification string from 130.208.177.230
-Aug 17 23:06:47	LabSZ	Xorg.0.log[13802]:	pam_unix(sshd:session): session opened for user test by (uid=43)
-Aug 17 23:06:49	ADM	Xorg.0.log[7835]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:47.0/usb3/3-4/3-4:1.0/0003:1EA7:00476.0001/input/input47/event47
-Aug 17 23:07:29	RUfus	Xorg.0.log[17194]:	Received disconnect from 7.238.112.117: 39: Closed due to user request [preauth]
-Aug 17 23:08:03	LabSZ	Xorg.0.log[9651]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 17 23:08:07	testvm	Xorg.0.log[1521]:	Received disconnect from 200.238.19.11: 68: Closed due to user request [preauth]
-Aug 17 23:08:12	server	Xorg.0.log[6017]:	Did not receive identification string from 159.142.124.75
-Aug 17 23:09:08	prod1	Xorg.0.log[27409]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event14)
-Aug 17 23:09:26	archive	Xorg.0.log[26316]:	Received disconnect from 222.173.228.127: 93: disconnected by user
-Aug 17 23:09:48	RUfus	Xorg.0.log[12721]:	pam_unix(sshd:session): session opened for user 123 by (uid=18)
-Aug 17 23:10:04	ADM	Xorg.0.log[27430]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event59)
-Aug 17 23:11:09	server	Xorg.0.log[8868]:	Accepted password for matlab from 151.211.46.56 port 38058 ssh64
-Aug 17 23:11:16	LabSZ	Xorg.0.log[6360]:	pam_unix(sshd:session): session opened for user guest by (uid=5)
-Aug 17 23:12:04	LabSZ	Xorg.0.log[5553]:	pam_unix(sshd:session): session closed for user matlab
-Aug 17 23:12:06	server	Xorg.0.log[15717]:	kernel: usb 1-49: USB disconnect, device number 2
-Aug 17 23:12:10	server	Xorg.0.log[4331]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event86)
-Aug 17 23:22:59	archive	Xorg.0.log[4479]:	Received disconnect from 180.225.229.100: 87: disconnected by user
-Aug 17 23:23:06	prod1	Xorg.0.log[17101]:	event46  - Sleep Button: is tagged by udev as: Keyboard
-Aug 17 23:23:08	archive	Xorg.0.log[5044]:	Accepted password for test from 200.96.148.202 port 42747 ssh71
-Aug 17 23:25:10	archive	Xorg.0.log[21496]:	Received disconnect from 125.119.137.161: 32: Bye Bye [preauth]
-Aug 17 23:25:17	RUfus	Xorg.0.log[24715]:	systemd: Started User Session 28509 of user admin.
-Aug 17 23:25:28	archive	Xorg.0.log[27308]:	Accepted password for root from 90.170.168.19 port 33693 ssh92
-Aug 17 23:25:48	prod1	Xorg.0.log[24051]:	Received disconnect from 187.6.223.177: 8: Bye Bye [preauth]
-Aug 17 23:25:51	testvm	Xorg.0.log[12484]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:66.0/usb3/3-4/3-4:1.0/0003:1EA7:00666.0001/input/input66/event66
-Aug 17 23:25:58	prod1	Xorg.0.log[11987]:	Accepted password for 123 from 147.26.202.151 port 26399 ssh90
-Aug 17 23:33:48	LabSZ	Xorg.0.log[7583]:	Received disconnect from 116.187.201.153: 73: Closed due to user request [preauth]
-Aug 17 23:34:18	prod1	Xorg.0.log[23964]:	kernel: usb 1-44: USB disconnect, device number 2
-Aug 18 00:17:52	server	Xorg.0.log[25424]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 17:39:31	prod1	Xorg.0.log[15117]:	systemd: Started User Session 29772 of user oracle.
-Aug 18 17:39:58	RUfus	Xorg.0.log[19852]:	pam_unix(sshd:session): session closed for user root
-Aug 18 17:40:01	ADM	Xorg.0.log[18469]:	pam_unix(sshd:session): session closed for user ubuntu
-Aug 18 17:40:03	testvm	Xorg.0.log[24418]:	pam_unix(sshd:session): session opened for user matlab by (uid=10)
-Aug 18 17:40:07	server	Xorg.0.log[27460]:	event18  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 17:40:15	RUfus	Xorg.0.log[1415]:	Received disconnect from 201.138.147.176: 9: Bye Bye [preauth]
-Aug 18 17:40:30	testvm	Xorg.0.log[16303]:	systemd: Started User Session 28462 of user admin.
-Aug 18 17:40:32	LabSZ	Xorg.0.log[20126]:	Received disconnect from 75.29.127.213: 27: Closed due to user request [preauth]
-Aug 18 17:40:39	ADM	Xorg.0.log[11742]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=11)
-Aug 18 17:40:46	prod1	Xorg.0.log[11363]:	event9  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 17:40:52	prod1	Xorg.0.log[25337]:	Accepted password for oracle from 27.208.61.5 port 46859 ssh76
-Aug 18 17:41:15	ADM	Xorg.0.log[11994]:	Accepted password for fztu from 107.113.50.173 port 45999 ssh14
-Aug 18 17:41:30	server	Xorg.0.log[5845]:	pam_unix(sshd:session): session closed for user chen
-Aug 18 17:41:34	ADM	Xorg.0.log[12441]:	systemd: Started User Session 5921 of user chen.
-Aug 18 17:42:06	testvm	Xorg.0.log[8889]:	systemd: Started User Session 1199 of user webmaster.
-Aug 18 17:42:11	prod1	Xorg.0.log[12473]:	Accepted password for matlab from 137.222.120.17 port 52948 ssh48
-Aug 18 17:42:13	prod1	Xorg.0.log[26940]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event12)
-Aug 18 17:42:18	server	Xorg.0.log[15645]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:94.0/usb3/3-4/3-4:1.0/0003:1EA7:00946.0001/input/input94/event94
-Aug 18 17:42:40	testvm	Xorg.0.log[20541]:	event51  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 17:43:13	ADM	Xorg.0.log[9780]:	Connection closed by 182.75.194.161 [preauth]
-Aug 18 17:43:29	archive	Xorg.0.log[21472]:	pam_unix(sshd:session): session closed for user chen
-Aug 18 17:43:36	ADM	Xorg.0.log[26875]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 17:43:43	ADM	Xorg.0.log[15507]:	Received disconnect from 163.165.32.176: 65: Bye Bye [preauth]
-Aug 18 17:44:12	prod1	Xorg.0.log[9474]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:82.0/usb3/3-4/3-4:1.0/0003:1EA7:00826.0001/input/input82/event82
-Aug 18 17:44:15	RUfus	Xorg.0.log[29178]:	Accepted password for webmaster from 162.17.15.232 port 35201 ssh4
-Aug 18 17:44:20	prod1	Xorg.0.log[12023]:	(EE) Backtrace:
-Aug 18 17:44:20	RUfus	Xorg.0.log[18420]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 18 17:44:36	server	Xorg.0.log[7389]:	Received disconnect from 124.126.235.203: 56: Closed due to user request [preauth]
-Aug 18 17:44:53	testvm	Xorg.0.log[21581]:	pam_unix(sshd:session): session opened for user admin by (uid=73)
-Aug 18 17:45:07	archive	Xorg.0.log[20029]:	event24  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 17:45:33	LabSZ	Xorg.0.log[12740]:	Received disconnect from 226.76.149.209: 75: Closed due to user request [preauth]
-Aug 18 17:45:45	testvm	Xorg.0.log[20568]:	Did not receive identification string from 193.86.224.81
-Aug 18 17:45:47	archive	Xorg.0.log[10534]:	Received disconnect from 80.10.33.179: 68: Bye Bye [preauth]
-Aug 18 17:45:51	ADM	Xorg.0.log[5691]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:44.0/usb3/3-4/3-4:1.0/0003:1EA7:00446.0001/input/input44/event44
-Aug 18 17:45:55	server	Xorg.0.log[5778]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 17:46:23	LabSZ	Xorg.0.log[19419]:	Received disconnect from 168.10.113.206: 89: Closed due to user request [preauth]
-Aug 18 17:46:26	archive	Xorg.0.log[20027]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=60)
-Aug 18 17:46:50	server	Xorg.0.log[22625]:	event87  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 17:47:57	testvm	Xorg.0.log[1397]:	pam_unix(sshd:session): session closed for user admin
-Aug 18 19:45:24	LabSZ	Xorg.0.log[28298]:	pam_unix(sshd:session): session opened for user backup by (uid=73)
-Aug 18 19:45:31	ADM	Xorg.0.log[8682]:	systemd: Started User Session 5210 of user oracle.
-Aug 18 19:45:33	prod1	Xorg.0.log[14332]:	kernel: usb 1-73: USB disconnect, device number 2
-Aug 18 19:45:57	ADM	Xorg.0.log[16846]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 19:46:00	server	Xorg.0.log[28784]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 19:46:07	RUfus	Xorg.0.log[3071]:	Accepted password for fztu from 72.150.114.170 port 18644 ssh21
-Aug 18 19:46:16	ADM	Xorg.0.log[4821]:	Received disconnect from 217.56.109.227: 68: disconnected by user
-Aug 18 19:46:20	LabSZ	Xorg.0.log[26430]:	pam_unix(sshd:session): session opened for user admin by (uid=72)
-Aug 18 19:46:32	LabSZ	Xorg.0.log[14210]:	(EE) Backtrace:
-Aug 18 19:46:33	server	Xorg.0.log[18560]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 18 19:47:21	archive	Xorg.0.log[27178]:	systemd: Started User Session 20830 of user root.
-Aug 18 19:47:43	LabSZ	Xorg.0.log[8048]:	Received disconnect from 254.30.63.8: 85: Bye Bye [preauth]
-Aug 18 19:48:30	prod1	Xorg.0.log[2987]:	Accepted password for 123 from 231.66.218.13 port 31065 ssh61
-Aug 18 19:48:53	server	Xorg.0.log[14127]:	pam_unix(sshd:session): session opened for user test by (uid=52)
-Aug 18 19:48:56	testvm	Xorg.0.log[7348]:	kernel: usb 1-80: USB disconnect, device number 2
-Aug 18 19:49:50	ADM	Xorg.0.log[9592]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 19:51:17	RUfus	Xorg.0.log[17482]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 19:52:01	testvm	Xorg.0.log[6513]:	Received disconnect from 160.77.129.254: 87: Bye Bye [preauth]
-Aug 18 20:06:09	RUfus	Xorg.0.log[27692]:	Connection closed by 48.45.92.230 [preauth]
-Aug 18 20:06:12	RUfus	Xorg.0.log[12792]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:11.0/usb3/3-4/3-4:1.0/0003:1EA7:00116.0001/input/input11/event11
-Aug 18 20:07:51	testvm	Xorg.0.log[2432]:	Received disconnect from 221.245.17.131: 15: Bye Bye [preauth]
-Aug 18 20:07:54	testvm	Xorg.0.log[23484]:	Accepted password for guest from 181.246.176.165 port 35676 ssh2
-Aug 18 20:08:01	testvm	Xorg.0.log[7458]:	systemd: Started User Session 25180 of user webmaster.
-Aug 18 20:08:55	prod1	Xorg.0.log[8069]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event35)
-Aug 18 20:09:21	RUfus	Xorg.0.log[19796]:	Received disconnect from 2.1.220.181: 37: Closed due to user request [preauth]
-Aug 18 20:10:11	server	Xorg.0.log[3577]:	event94  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 20:10:14	prod1	Xorg.0.log[6636]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event91)
-Aug 18 20:10:38	prod1	Xorg.0.log[10846]:	Did not receive identification string from 116.231.99.145
-Aug 18 20:11:00	server	Xorg.0.log[25786]:	Received disconnect from 70.169.172.136: 91: Bye Bye [preauth]
-Aug 18 20:36:21	RUfus	Xorg.0.log[22914]:	systemd: Started User Session 19652 of user root.
-Aug 18 20:36:41	LabSZ	Xorg.0.log[18295]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event69)
-Aug 18 20:37:57	ADM	Xorg.0.log[4902]:	pam_unix(sshd:session): session opened for user 123 by (uid=58)
-Aug 18 20:38:41	LabSZ	Xorg.0.log[26355]:	Did not receive identification string from 194.227.191.82
-Aug 18 20:39:42	prod1	Xorg.0.log[14668]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:72.0/usb3/3-4/3-4:1.0/0003:1EA7:00726.0001/input/input72/event72
-Aug 18 20:40:53	server	Xorg.0.log[8806]:	Did not receive identification string from 182.148.119.80
-Aug 18 20:41:11	RUfus	Xorg.0.log[25444]:	Connection closed by 167.158.73.102 [preauth]
-Aug 18 20:41:33	RUfus	Xorg.0.log[27942]:	event66  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 20:41:36	server	Xorg.0.log[29994]:	Received disconnect from 235.168.151.57: 11: disconnected by user
-Aug 18 20:41:56	archive	Xorg.0.log[3762]:	Did not receive identification string from 225.90.126.99
-Aug 18 20:42:23	server	Xorg.0.log[7195]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 20:43:03	ADM	Xorg.0.log[17246]:	pam_unix(sshd:session): session closed for user fztu
-Aug 18 20:43:09	RUfus	Xorg.0.log[27770]:	pam_unix(sshd:session): session closed for user fztu
-Aug 18 20:44:06	prod1	Xorg.0.log[12852]:	pam_unix(sshd:session): session closed for user ubuntu
-Aug 18 20:44:15	LabSZ	Xorg.0.log[16831]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:58.0/usb3/3-4/3-4:1.0/0003:1EA7:00586.0001/input/input58/event58
-Aug 18 20:44:20	testvm	Xorg.0.log[23834]:	event16  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 20:44:41	prod1	Xorg.0.log[12724]:	Did not receive identification string from 150.236.1.189
-Aug 18 20:46:26	archive	Xorg.0.log[11533]:	Received disconnect from 140.76.36.102: 41: Bye Bye [preauth]
-Aug 18 20:46:31	ADM	Xorg.0.log[27586]:	pam_unix(sshd:session): session closed for user root
-Aug 18 20:46:34	RUfus	Xorg.0.log[29505]:	pam_unix(sshd:session): session closed for user admin
-Aug 18 20:47:54	ADM	Xorg.0.log[23099]:	Did not receive identification string from 142.251.159.198
-Aug 18 20:47:57	server	Xorg.0.log[2536]:	Received disconnect from 217.28.103.31: 87: disconnected by user
-Aug 18 20:48:34	testvm	Xorg.0.log[4277]:	Received disconnect from 213.197.198.212: 62: Closed due to user request [preauth]
-Aug 18 20:48:39	archive	Xorg.0.log[4345]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event26)
-Aug 18 20:48:42	LabSZ	Xorg.0.log[8605]:	kernel: usb 1-32: USB disconnect, device number 2
-Aug 18 20:48:45	server	Xorg.0.log[11882]:	Did not receive identification string from 223.160.172.79
-Aug 18 20:48:49	server	Xorg.0.log[11520]:	kernel: usb 1-6: USB disconnect, device number 2
-Aug 18 20:48:51	prod1	Xorg.0.log[20626]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:33.0/usb3/3-4/3-4:1.0/0003:1EA7:00336.0001/input/input33/event33
-Aug 18 20:49:02	server	Xorg.0.log[23201]:	Received disconnect from 4.162.87.188: 32: Bye Bye [preauth]
-Aug 18 20:49:06	testvm	Xorg.0.log[6492]:	(EE) Backtrace:
-Aug 18 20:49:07	ADM	Xorg.0.log[12486]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 18 20:49:16	RUfus	Xorg.0.log[23499]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event3)
-Aug 18 20:49:18	prod1	Xorg.0.log[27173]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 20:56:01	LabSZ	Xorg.0.log[25377]:	Received disconnect from 141.54.233.139: 58: Bye Bye [preauth]
-Aug 18 20:56:05	LabSZ	Xorg.0.log[2209]:	kernel: usb 1-4: USB disconnect, device number 2
-Aug 18 20:56:35	archive	Xorg.0.log[29259]:	Received disconnect from 163.67.186.97: 58: Closed due to user request [preauth]
-Aug 18 20:56:58	archive	Xorg.0.log[15172]:	Connection closed by 105.27.92.92 [preauth]
-Aug 18 20:57:55	ADM	Xorg.0.log[24989]:	Received disconnect from 181.1.96.189: 82: Closed due to user request [preauth]
-Aug 18 20:58:51	server	Xorg.0.log[17383]:	Received disconnect from 196.175.43.47: 59: Closed due to user request [preauth]
-Aug 18 20:58:55	LabSZ	Xorg.0.log[21762]:	systemd: Started User Session 17011 of user 123.
-Aug 18 20:58:59	testvm	Xorg.0.log[7885]:	Received disconnect from 203.142.23.61: 98: Bye Bye [preauth]
-Aug 18 20:59:25	testvm	Xorg.0.log[23943]:	Did not receive identification string from 45.206.121.144
-Aug 18 20:59:56	prod1	Xorg.0.log[6347]:	kernel: usb 1-38: USB disconnect, device number 2
-Aug 18 21:01:20	archive	Xorg.0.log[3284]:	Did not receive identification string from 130.83.8.223
-Aug 18 21:01:53	RUfus	Xorg.0.log[13617]:	(EE) Backtrace:
-Aug 18 21:01:54	testvm	Xorg.0.log[1085]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 18 21:02:28	server	Xorg.0.log[7683]:	Connection closed by 165.109.220.72 [preauth]
-Aug 18 21:02:34	LabSZ	Xorg.0.log[8815]:	pam_unix(sshd:session): session closed for user backup
-Aug 18 21:02:47	LabSZ	Xorg.0.log[8839]:	pam_unix(sshd:session): session closed for user root
-Aug 18 21:02:58	testvm	Xorg.0.log[23037]:	Did not receive identification string from 146.19.240.113
-Aug 18 21:03:18	prod1	Xorg.0.log[26830]:	Did not receive identification string from 211.129.63.44
-Aug 18 21:03:50	archive	Xorg.0.log[23947]:	event39  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 21:04:07	LabSZ	Xorg.0.log[23737]:	Received disconnect from 39.255.8.102: 40: disconnected by user
-Aug 18 21:06:04	server	Xorg.0.log[10173]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 21:06:08	RUfus	Xorg.0.log[8509]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:22.0/usb3/3-4/3-4:1.0/0003:1EA7:00226.0001/input/input22/event22
-Aug 18 21:07:13	RUfus	Xorg.0.log[21779]:	pam_unix(sshd:session): session opened for user guest by (uid=43)
-Aug 18 21:07:41	RUfus	Xorg.0.log[28277]:	(EE) Backtrace:
-Aug 18 21:07:42	server	Xorg.0.log[6500]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 18 21:08:41	server	Xorg.0.log[3211]:	Received disconnect from 21.191.122.196: 34: Bye Bye [preauth]
-Aug 18 21:09:35	archive	Xorg.0.log[16371]:	Did not receive identification string from 99.35.77.116
-Aug 18 21:09:51	prod1	Xorg.0.log[29156]:	kernel: usb 1-28: USB disconnect, device number 2
-Aug 18 21:09:54	prod1	Xorg.0.log[1457]:	Connection closed by 146.16.226.5 [preauth]
-Aug 18 21:10:48	prod1	Xorg.0.log[13169]:	event94  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 21:11:36	LabSZ	Xorg.0.log[26353]:	Did not receive identification string from 245.39.255.212
-Aug 18 21:11:57	server	Xorg.0.log[17669]:	pam_unix(sshd:session): session closed for user webmaster
-Aug 18 21:12:00	server	Xorg.0.log[24946]:	event36  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 21:12:04	testvm	Xorg.0.log[17959]:	Accepted password for fztu from 222.231.49.206 port 30032 ssh87
-Aug 18 21:12:12	testvm	Xorg.0.log[4972]:	Did not receive identification string from 172.158.70.206
-Aug 18 21:12:29	LabSZ	Xorg.0.log[11375]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:88.0/usb3/3-4/3-4:1.0/0003:1EA7:00886.0001/input/input88/event88
-Aug 18 21:12:39	archive	Xorg.0.log[27104]:	pam_unix(sshd:session): session closed for user test
-Aug 18 21:13:05	LabSZ	Xorg.0.log[17606]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event31)
-Aug 18 21:13:08	ADM	Xorg.0.log[22076]:	kernel: usb 1-12: USB disconnect, device number 2
-Aug 18 21:13:42	prod1	Xorg.0.log[4788]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event61)
-Aug 18 21:13:53	prod1	Xorg.0.log[20410]:	pam_unix(sshd:session): session closed for user admin
-Aug 18 21:14:26	ADM	Xorg.0.log[6290]:	Accepted password for 123 from 38.106.254.180 port 42500 ssh77
-Aug 18 21:14:47	LabSZ	Xorg.0.log[21994]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event94)
-Aug 18 21:16:55	prod1	Xorg.0.log[28048]:	kernel: usb 1-56: USB disconnect, device number 2
-Aug 18 21:19:07	archive	Xorg.0.log[26175]:	Accepted password for webmaster from 160.147.171.233 port 52423 ssh58
-Aug 18 21:19:49	testvm	Xorg.0.log[12403]:	Received disconnect from 220.198.189.251: 31: disconnected by user
-Aug 18 21:20:06	RUfus	Xorg.0.log[3236]:	event16  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 21:20:10	testvm	Xorg.0.log[14921]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event62)
-Aug 18 21:20:51	prod1	Xorg.0.log[2909]:	(EE) Backtrace:
-Aug 18 21:20:52	ADM	Xorg.0.log[16914]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 18 21:21:37	LabSZ	Xorg.0.log[11723]:	pam_unix(sshd:session): session closed for user webmaster
-Aug 18 21:22:05	LabSZ	Xorg.0.log[22557]:	kernel: usb 1-82: USB disconnect, device number 2
-Aug 18 21:22:08	prod1	Xorg.0.log[18805]:	Connection closed by 93.173.243.101 [preauth]
-Aug 18 21:22:31	LabSZ	Xorg.0.log[5406]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event90)
-Aug 18 21:24:07	prod1	Xorg.0.log[17567]:	Received disconnect from 22.37.135.145: 38: Bye Bye [preauth]
-Aug 18 21:24:21	server	Xorg.0.log[27789]:	Accepted password for ubuntu from 98.216.208.25 port 6807 ssh64
-Aug 18 21:26:25	ADM	Xorg.0.log[15809]:	kernel: usb 1-31: USB disconnect, device number 2
-Aug 18 21:26:33	RUfus	Xorg.0.log[27725]:	event97  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 21:26:44	prod1	Xorg.0.log[26693]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:55.0/usb3/3-4/3-4:1.0/0003:1EA7:00556.0001/input/input55/event55
-Aug 18 21:27:09	RUfus	Xorg.0.log[29860]:	pam_unix(sshd:session): session opened for user admin by (uid=27)
-Aug 18 21:28:40	server	Xorg.0.log[9499]:	Did not receive identification string from 47.23.198.65
-Aug 18 21:30:35	RUfus	Xorg.0.log[23283]:	systemd: Started User Session 5930 of user test.
-Aug 18 21:30:56	ADM	Xorg.0.log[17614]:	pam_unix(sshd:session): session opened for user test by (uid=99)
-Aug 18 21:31:03	testvm	Xorg.0.log[13468]:	Received disconnect from 98.91.220.52: 12: disconnected by user
-Aug 18 21:31:06	ADM	Xorg.0.log[6586]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=58)
-Aug 18 21:31:08	archive	Xorg.0.log[5783]:	Did not receive identification string from 113.213.190.222
-Aug 18 21:31:39	RUfus	Xorg.0.log[18291]:	systemd: Started User Session 23198 of user test.
-Aug 18 21:31:48	RUfus	Xorg.0.log[14762]:	pam_unix(sshd:session): session opened for user test by (uid=25)
-Aug 18 21:33:04	LabSZ	Xorg.0.log[28857]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:16.0/usb3/3-4/3-4:1.0/0003:1EA7:00166.0001/input/input16/event16
-Aug 18 21:34:11	ADM	Xorg.0.log[6535]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event52)
-Aug 18 21:34:13	ADM	Xorg.0.log[9785]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event22)
-Aug 18 21:34:53	prod1	Xorg.0.log[11397]:	Received disconnect from 66.71.246.98: 80: Closed due to user request [preauth]
-Aug 18 21:36:37	RUfus	Xorg.0.log[5802]:	kernel: usb 1-62: USB disconnect, device number 2
-Aug 18 21:36:42	server	Xorg.0.log[20129]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:27.0/usb3/3-4/3-4:1.0/0003:1EA7:00276.0001/input/input27/event27
-Aug 18 21:36:45	prod1	Xorg.0.log[18205]:	pam_unix(sshd:session): session closed for user fztu
-Aug 18 21:36:52	archive	Xorg.0.log[24761]:	pam_unix(sshd:session): session opened for user admin by (uid=80)
-Aug 18 21:37:09	ADM	Xorg.0.log[2473]:	Received disconnect from 84.252.102.13: 21: disconnected by user
-Aug 18 21:37:35	server	Xorg.0.log[10077]:	pam_unix(sshd:session): session closed for user admin
-Aug 18 21:37:41	RUfus	Xorg.0.log[28885]:	Received disconnect from 236.250.206.212: 38: Closed due to user request [preauth]
-Aug 18 21:37:52	RUfus	Xorg.0.log[9285]:	Received disconnect from 118.50.36.252: 35: disconnected by user
-Aug 18 21:38:08	archive	Xorg.0.log[16536]:	Connection closed by 133.57.106.188 [preauth]
-Aug 18 21:38:34	RUfus	Xorg.0.log[4408]:	systemd: Started User Session 22217 of user admin.
-Aug 18 21:38:49	ADM	Xorg.0.log[5387]:	Received disconnect from 98.251.157.102: 40: Closed due to user request [preauth]
-Aug 18 21:39:03	prod1	Xorg.0.log[17218]:	kernel: usb 1-9: USB disconnect, device number 2
-Aug 18 21:39:13	RUfus	Xorg.0.log[6026]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event66)
-Aug 18 21:39:45	archive	Xorg.0.log[6351]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 21:39:48	prod1	Xorg.0.log[21105]:	pam_unix(sshd:session): session opened for user 123 by (uid=12)
-Aug 18 21:40:04	server	Xorg.0.log[4513]:	pam_unix(sshd:session): session closed for user webmaster
-Aug 18 21:40:14	RUfus	Xorg.0.log[2878]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event51)
-Aug 18 21:40:34	testvm	Xorg.0.log[10069]:	(EE) Backtrace:
-Aug 18 21:40:35	server	Xorg.0.log[24640]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 18 21:42:03	prod1	Xorg.0.log[4196]:	Did not receive identification string from 3.111.5.24
-Aug 18 21:42:09	RUfus	Xorg.0.log[2770]:	pam_unix(sshd:session): session closed for user oracle
-Aug 18 21:42:14	LabSZ	Xorg.0.log[3454]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event83)
-Aug 18 21:42:21	server	Xorg.0.log[9108]:	event98  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 21:43:25	RUfus	Xorg.0.log[10958]:	pam_unix(sshd:session): session opened for user root by (uid=44)
-Aug 18 21:43:27	archive	Xorg.0.log[11147]:	kernel: usb 1-32: USB disconnect, device number 2
-Aug 18 21:43:42	ADM	Xorg.0.log[29310]:	Connection closed by 240.223.27.19 [preauth]
-Aug 18 21:44:15	testvm	Xorg.0.log[1671]:	systemd: Started User Session 4901 of user oracle.
-Aug 18 21:44:18	ADM	Xorg.0.log[23269]:	Received disconnect from 21.148.113.252: 26: Bye Bye [preauth]
-Aug 18 21:44:22	ADM	Xorg.0.log[24406]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 21:45:04	prod1	Xorg.0.log[15883]:	Received disconnect from 240.113.195.238: 24: Bye Bye [preauth]
-Aug 18 21:45:07	archive	Xorg.0.log[5800]:	myservice[770590]: segfault at 000000000000 ip 00007f0a4e4b623a sp 00007ffde1e08a50 error 1 in libc-5.68.so[770590]
-Aug 18 21:45:14	RUfus	Xorg.0.log[13784]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event48)
-Aug 18 21:46:18	LabSZ	Xorg.0.log[17295]:	Did not receive identification string from 99.228.98.241
-Aug 18 21:46:30	LabSZ	Xorg.0.log[19238]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 21:47:02	LabSZ	Xorg.0.log[19464]:	event46  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 21:47:58	LabSZ	Xorg.0.log[2207]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=11)
-Aug 18 21:50:05	archive	Xorg.0.log[1170]:	Did not receive identification string from 227.59.42.114
-Aug 18 21:50:10	testvm	Xorg.0.log[27365]:	Received disconnect from 173.194.242.223: 26: Bye Bye [preauth]
-Aug 18 21:50:24	LabSZ	Xorg.0.log[28063]:	systemd: Started User Session 25659 of user pgadmin.
-Aug 18 21:50:45	testvm	Xorg.0.log[5152]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 21:50:48	archive	Xorg.0.log[21491]:	Received disconnect from 234.179.227.217: 93: Closed due to user request [preauth]
-Aug 18 21:50:54	archive	Xorg.0.log[16639]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:87.0/usb3/3-4/3-4:1.0/0003:1EA7:00876.0001/input/input87/event87
-Aug 18 21:51:41	ADM	Xorg.0.log[25269]:	Accepted password for guest from 169.100.149.64 port 19400 ssh59
-Aug 18 21:51:47	RUfus	Xorg.0.log[18334]:	Did not receive identification string from 77.254.129.39
-Aug 18 21:53:44	server	Xorg.0.log[24419]:	Accepted password for pgadmin from 239.144.162.171 port 15670 ssh74
-Aug 18 21:54:13	server	Xorg.0.log[9782]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event16)
-Aug 18 21:54:52	LabSZ	Xorg.0.log[8167]:	Received disconnect from 102.181.63.120: 24: Bye Bye [preauth]
-Aug 18 21:55:08	prod1	Xorg.0.log[23932]:	pam_unix(sshd:session): session opened for user root by (uid=79)
-Aug 18 21:56:41	archive	Xorg.0.log[9336]:	Accepted password for fztu from 135.210.108.226 port 4119 ssh74
-Aug 18 21:57:12	server	Xorg.0.log[20031]:	Received disconnect from 56.75.166.254: 13: disconnected by user
-Aug 18 21:57:29	RUfus	Xorg.0.log[19643]:	Did not receive identification string from 146.63.137.199
-Aug 18 21:57:58	ADM	Xorg.0.log[8289]:	Did not receive identification string from 78.122.76.150
-Aug 18 21:58:01	testvm	Xorg.0.log[15619]:	Received disconnect from 77.36.5.155: 68: Bye Bye [preauth]
-Aug 18 21:58:04	RUfus	Xorg.0.log[15722]:	Received disconnect from 144.89.142.237: 38: Bye Bye [preauth]
-Aug 18 21:58:07	archive	Xorg.0.log[7147]:	pam_unix(sshd:session): session closed for user ubuntu
-Aug 18 21:58:41	prod1	Xorg.0.log[2105]:	event19  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 21:59:02	server	Xorg.0.log[1970]:	kernel: usb 1-10: USB disconnect, device number 2
-Aug 18 21:59:05	LabSZ	Xorg.0.log[3571]:	Accepted password for guest from 176.53.15.13 port 34584 ssh23
-Aug 18 21:59:24	RUfus	Xorg.0.log[14899]:	systemd: Started User Session 28864 of user test.
-Aug 18 21:59:44	LabSZ	Xorg.0.log[15045]:	Received disconnect from 42.43.40.206: 48: Closed due to user request [preauth]
-Aug 18 23:25:59	prod1	Xorg.0.log[19092]:	pam_unix(sshd:session): session opened for user 123 by (uid=55)
-Aug 18 23:26:12	testvm	Xorg.0.log[13852]:	Received disconnect from 160.174.97.138: 31: disconnected by user
-Aug 18 23:26:15	ADM	Xorg.0.log[1475]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event27)
-Aug 18 23:26:29	LabSZ	Xorg.0.log[28160]:	event19  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 23:26:32	prod1	Xorg.0.log[16474]:	Did not receive identification string from 13.185.200.212
-Aug 18 23:26:38	ADM	Xorg.0.log[15037]:	kernel: usb 1-90: USB disconnect, device number 2
-Aug 18 23:26:53	ADM	Xorg.0.log[3492]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event28)
-Aug 18 23:27:09	testvm	Xorg.0.log[7784]:	Did not receive identification string from 92.65.192.100
-Aug 18 23:27:12	testvm	Xorg.0.log[6334]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event33)
-Aug 18 23:27:16	archive	Xorg.0.log[8678]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 23:28:12	server	Xorg.0.log[9068]:	(EE) Backtrace:
-Aug 18 23:28:13	archive	Xorg.0.log[9436]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 18 23:28:41	prod1	Xorg.0.log[29565]:	Connection closed by 54.149.8.127 [preauth]
-Aug 18 23:28:44	server	Xorg.0.log[1667]:	systemd: Started User Session 23988 of user chen.
-Aug 18 23:28:46	testvm	Xorg.0.log[17883]:	Accepted password for pgadmin from 198.109.177.90 port 56387 ssh8
-Aug 18 23:29:26	LabSZ	Xorg.0.log[15483]:	event6  - Sleep Button: is tagged by udev as: Keyboard
-Aug 18 23:30:26	RUfus	Xorg.0.log[16104]:	systemd: Started User Session 14821 of user chen.
-Aug 18 23:30:29	RUfus	Xorg.0.log[18394]:	(EE) Backtrace:
-Aug 18 23:30:30	archive	Xorg.0.log[10711]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 18 23:30:50	archive	Xorg.0.log[4925]:	kernel: usb 1-61: USB disconnect, device number 2
-Aug 18 23:31:05	testvm	Xorg.0.log[8247]:	(EE) Backtrace:
-Aug 18 23:31:05	testvm	Xorg.0.log[11512]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 18 23:31:12	RUfus	Xorg.0.log[2087]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 18 23:31:49	RUfus	Xorg.0.log[17269]:	Accepted password for fztu from 250.240.188.190 port 9491 ssh86
-Aug 18 23:33:14	testvm	Xorg.0.log[24541]:	Did not receive identification string from 168.200.67.205
-Aug 18 23:33:47	testvm	Xorg.0.log[19945]:	Received disconnect from 126.78.155.36: 24: Closed due to user request [preauth]
-Aug 18 23:35:42	LabSZ	Xorg.0.log[25879]:	Received disconnect from 137.114.238.147: 39: disconnected by user
-Aug 18 23:36:10	RUfus	Xorg.0.log[19077]:	Accepted password for webmaster from 248.76.63.167 port 57970 ssh14
-Aug 18 23:37:17	prod1	Xorg.0.log[28356]:	pam_unix(sshd:session): session closed for user test
-Aug 18 23:37:20	server	Xorg.0.log[23608]:	Received disconnect from 198.129.86.243: 14: Closed due to user request [preauth]
-Aug 18 23:37:23	server	Xorg.0.log[17563]:	Did not receive identification string from 150.254.7.235
-Aug 18 23:40:22	LabSZ	Xorg.0.log[10029]:	pam_unix(sshd:session): session opened for user matlab by (uid=22)
-Aug 19 00:45:23	archive	Xorg.0.log[27027]:	Received disconnect from 89.85.140.75: 96: Closed due to user request [preauth]
-Aug 19 00:45:26	testvm	Xorg.0.log[24442]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event54)
-Aug 19 00:46:21	ADM	Xorg.0.log[12362]:	pam_unix(sshd:session): session closed for user test
-Aug 19 00:46:28	testvm	Xorg.0.log[20047]:	(EE) Backtrace:
-Aug 19 00:46:29	LabSZ	Xorg.0.log[12815]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 19 00:47:44	RUfus	Xorg.0.log[22037]:	systemd: Started User Session 26403 of user fztu.
-Aug 19 00:48:05	archive	Xorg.0.log[22128]:	event93  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 00:48:26	testvm	Xorg.0.log[26837]:	Received disconnect from 226.71.112.181: 3: Bye Bye [preauth]
-Aug 19 00:50:13	server	Xorg.0.log[8516]:	systemd: Started User Session 19560 of user chen.
-Aug 19 00:51:17	LabSZ	Xorg.0.log[2936]:	Received disconnect from 242.53.12.110: 22: Bye Bye [preauth]
-Aug 19 00:52:26	server	Xorg.0.log[15263]:	Received disconnect from 138.86.28.132: 12: disconnected by user
-Aug 19 00:52:40	prod1	Xorg.0.log[24777]:	Received disconnect from 102.120.85.177: 21: disconnected by user
-Aug 19 00:53:19	RUfus	Xorg.0.log[16202]:	Connection closed by 111.140.69.226 [preauth]
-Aug 19 00:53:40	LabSZ	Xorg.0.log[21853]:	Connection closed by 2.126.116.119 [preauth]
-Aug 19 00:54:22	testvm	Xorg.0.log[20372]:	pam_unix(sshd:session): session closed for user fztu
-Aug 19 00:54:40	prod1	Xorg.0.log[7892]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:7.0/usb3/3-4/3-4:1.0/0003:1EA7:0076.0001/input/input7/event7
-Aug 19 00:55:50	ADM	Xorg.0.log[21386]:	Did not receive identification string from 190.127.86.25
-Aug 19 00:56:13	ADM	Xorg.0.log[19676]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 19 00:56:43	LabSZ	Xorg.0.log[22769]:	Received disconnect from 221.54.247.206: 59: disconnected by user
-Aug 19 00:57:14	server	Xorg.0.log[21495]:	(EE) Backtrace:
-Aug 19 00:57:15	ADM	Xorg.0.log[8337]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 19 10:35:20	LabSZ	Xorg.0.log[5507]:	Accepted password for oracle from 154.42.252.21 port 23442 ssh99
-Aug 19 10:36:24	server	Xorg.0.log[26482]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event19)
-Aug 19 10:36:50	LabSZ	Xorg.0.log[4307]:	Received disconnect from 251.246.149.233: 8: disconnected by user
-Aug 19 10:36:58	LabSZ	Xorg.0.log[24222]:	pam_unix(sshd:session): session closed for user oracle
-Aug 19 10:37:04	RUfus	Xorg.0.log[18868]:	(EE) Backtrace:
-Aug 19 10:37:05	server	Xorg.0.log[5605]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 19 10:39:32	RUfus	Xorg.0.log[18316]:	Received disconnect from 250.148.244.225: 41: disconnected by user
-Aug 19 10:40:56	ADM	Xorg.0.log[9204]:	Connection closed by 241.245.79.155 [preauth]
-Aug 19 10:41:34	testvm	Xorg.0.log[19819]:	Received disconnect from 159.19.95.243: 36: Closed due to user request [preauth]
-Aug 19 10:41:39	archive	Xorg.0.log[23513]:	Received disconnect from 102.1.155.26: 38: Bye Bye [preauth]
-Aug 19 10:41:42	LabSZ	Xorg.0.log[4857]:	Received disconnect from 201.38.179.124: 79: Bye Bye [preauth]
-Aug 19 10:42:07	testvm	Xorg.0.log[16706]:	Received disconnect from 110.105.77.130: 74: Closed due to user request [preauth]
-Aug 19 10:43:36	prod1	Xorg.0.log[21293]:	Did not receive identification string from 48.91.11.18
-Aug 19 10:43:43	RUfus	Xorg.0.log[17524]:	event65  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 10:43:59	ADM	Xorg.0.log[17958]:	Connection closed by 115.146.51.109 [preauth]
-Aug 19 10:44:05	prod1	Xorg.0.log[12275]:	Connection closed by 6.136.97.224 [preauth]
-Aug 19 10:45:05	archive	Xorg.0.log[13316]:	Received disconnect from 10.64.43.130: 88: Bye Bye [preauth]
-Aug 19 10:45:14	prod1	Xorg.0.log[26171]:	Connection closed by 164.154.62.95 [preauth]
-Aug 19 10:45:21	LabSZ	Xorg.0.log[23970]:	kernel: usb 1-11: USB disconnect, device number 2
-Aug 19 10:46:07	prod1	Xorg.0.log[12403]:	Received disconnect from 25.227.167.174: 63: disconnected by user
-Aug 19 10:46:32	testvm	Xorg.0.log[13408]:	Did not receive identification string from 55.128.45.109
-Aug 19 10:47:01	server	Xorg.0.log[10541]:	Received disconnect from 188.137.150.245: 1: Bye Bye [preauth]
-Aug 19 10:47:04	testvm	Xorg.0.log[12682]:	systemd: Started User Session 4942 of user guest.
-Aug 19 10:48:13	server	Xorg.0.log[9847]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:15.0/usb3/3-4/3-4:1.0/0003:1EA7:00156.0001/input/input15/event15
-Aug 19 10:49:39	ADM	Xorg.0.log[22263]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event33)
-Aug 19 10:49:49	LabSZ	Xorg.0.log[22147]:	Received disconnect from 164.232.183.127: 99: Bye Bye [preauth]
-Aug 19 10:51:08	RUfus	Xorg.0.log[15138]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event16)
-Aug 19 10:51:38	testvm	Xorg.0.log[23125]:	Connection closed by 245.139.8.71 [preauth]
-Aug 19 10:51:41	LabSZ	Xorg.0.log[18275]:	Received disconnect from 162.69.194.97: 16: Bye Bye [preauth]
-Aug 19 10:52:04	archive	Xorg.0.log[25718]:	Received disconnect from 37.178.2.39: 40: Bye Bye [preauth]
-Aug 19 10:54:54	LabSZ	Xorg.0.log[21391]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 19 10:54:57	ADM	Xorg.0.log[27540]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event17)
-Aug 19 10:55:47	LabSZ	Xorg.0.log[1825]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event4)
-Aug 19 10:55:52	RUfus	Xorg.0.log[20657]:	pam_unix(sshd:auth): authentication failure; logname= uid=6 euid=3 tty=ssh ruser= rhost=154.231.203.79
-Aug 19 10:56:11	LabSZ	Xorg.0.log[28749]:	pam_unix(sshd:session): session opened for user fztu by (uid=94)
-Aug 19 10:56:31	prod1	Xorg.0.log[7851]:	Received disconnect from 1.8.101.15: 46: Closed due to user request [preauth]
-Aug 19 10:56:40	archive	Xorg.0.log[22047]:	Accepted password for guest from 19.106.84.182 port 47551 ssh18
-Aug 19 10:56:58	prod1	Xorg.0.log[11337]:	Did not receive identification string from 148.45.171.129
-Aug 19 10:57:01	testvm	Xorg.0.log[11730]:	Connection closed by 49.244.201.164 [preauth]
-Aug 19 10:57:07	archive	Xorg.0.log[26693]:	Received disconnect from 194.154.101.158: 28: Closed due to user request [preauth]
-Aug 19 10:58:08	LabSZ	Xorg.0.log[5117]:	(EE) Backtrace:
-Aug 19 10:58:09	ADM	Xorg.0.log[3499]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 19 10:58:46	archive	Xorg.0.log[9348]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event80)
-Aug 19 10:59:09	server	Xorg.0.log[2292]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:97.0/usb3/3-4/3-4:1.0/0003:1EA7:00976.0001/input/input97/event97
-Aug 19 10:59:23	ADM	Xorg.0.log[3273]:	Received disconnect from 169.106.147.172: 41: disconnected by user
-Aug 19 10:59:36	testvm	Xorg.0.log[24806]:	Received disconnect from 39.77.53.77: 64: Closed due to user request [preauth]
-Aug 19 11:00:05	ADM	Xorg.0.log[23122]:	Connection closed by 123.49.179.75 [preauth]
-Aug 19 11:00:10	testvm	Xorg.0.log[25951]:	Connection closed by 47.249.75.75 [preauth]
-Aug 19 11:00:21	prod1	Xorg.0.log[1050]:	Accepted password for fztu from 162.234.151.110 port 52365 ssh4
-Aug 19 11:00:34	prod1	Xorg.0.log[7073]:	event86  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 11:01:13	testvm	Xorg.0.log[11147]:	Received disconnect from 164.215.197.163: 13: Bye Bye [preauth]
-Aug 19 11:01:51	LabSZ	Xorg.0.log[26964]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 19 11:01:57	server	Xorg.0.log[16274]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event46)
-Aug 19 11:02:14	testvm	Xorg.0.log[6076]:	pam_unix(sshd:session): session opened for user oracle by (uid=74)
-Aug 19 11:02:28	ADM	Xorg.0.log[29579]:	event6  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 11:02:32	ADM	Xorg.0.log[23290]:	Connection closed by 76.185.86.75 [preauth]
-Aug 19 11:02:34	server	Xorg.0.log[17352]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event4)
-Aug 19 11:02:54	archive	Xorg.0.log[17290]:	Accepted password for fztu from 221.200.149.51 port 64679 ssh22
-Aug 19 11:03:36	prod1	Xorg.0.log[15663]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=54)
-Aug 19 11:05:26	server	Xorg.0.log[14777]:	systemd: Started User Session 1142 of user pgadmin.
-Aug 19 11:06:06	archive	Xorg.0.log[26146]:	pam_unix(sshd:session): session opened for user guest by (uid=63)
-Aug 19 11:07:40	prod1	Xorg.0.log[16395]:	pam_unix(sshd:session): session opened for user test by (uid=42)
-Aug 19 11:07:54	LabSZ	Xorg.0.log[24480]:	Did not receive identification string from 120.86.41.23
-Aug 19 11:08:10	LabSZ	Xorg.0.log[27491]:	event58  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 11:08:14	ADM	Xorg.0.log[11046]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:22.0/usb3/3-4/3-4:1.0/0003:1EA7:00226.0001/input/input22/event22
-Aug 19 11:08:16	testvm	Xorg.0.log[10388]:	Received disconnect from 195.82.46.213: 4: disconnected by user
-Aug 19 11:08:22	archive	Xorg.0.log[14655]:	Received disconnect from 21.29.72.251: 2: Closed due to user request [preauth]
-Aug 19 11:08:40	LabSZ	Xorg.0.log[28553]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event73)
-Aug 19 11:09:06	ADM	Xorg.0.log[28168]:	Received disconnect from 45.193.185.176: 38: Closed due to user request [preauth]
-Aug 19 11:09:21	prod1	Xorg.0.log[1559]:	Connection closed by 129.53.103.254 [preauth]
-Aug 19 11:09:51	prod1	Xorg.0.log[29484]:	Received disconnect from 117.203.129.213: 74: disconnected by user
-Aug 19 11:09:57	LabSZ	Xorg.0.log[25141]:	Did not receive identification string from 95.240.193.255
-Aug 19 11:10:15	server	Xorg.0.log[5257]:	systemd: Started User Session 17276 of user guest.
-Aug 19 11:10:18	testvm	Xorg.0.log[17318]:	Accepted password for ubuntu from 226.43.175.21 port 37418 ssh5
-Aug 19 11:10:33	ADM	Xorg.0.log[3414]:	Received disconnect from 136.234.54.174: 94: disconnected by user
-Aug 19 11:10:36	LabSZ	Xorg.0.log[9946]:	kernel: usb 1-32: USB disconnect, device number 2
-Aug 19 11:11:13	testvm	Xorg.0.log[29358]:	Did not receive identification string from 69.82.166.64
-Aug 19 11:12:20	prod1	Xorg.0.log[6815]:	event61  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 11:13:00	testvm	Xorg.0.log[12820]:	kernel: usb 1-4: USB disconnect, device number 2
-Aug 19 11:13:17	ADM	Xorg.0.log[19298]:	event15  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 11:13:21	LabSZ	Xorg.0.log[3390]:	Did not receive identification string from 52.142.127.158
-Aug 19 11:13:38	LabSZ	Xorg.0.log[11434]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 19 11:13:40	archive	Xorg.0.log[1485]:	(EE) Backtrace:
-Aug 19 11:13:41	ADM	Xorg.0.log[24210]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 19 11:14:33	prod1	Xorg.0.log[25490]:	systemd: Started User Session 29373 of user oracle.
-Aug 19 11:14:51	ADM	Xorg.0.log[1725]:	systemd: Started User Session 21208 of user root.
-Aug 19 11:15:04	testvm	Xorg.0.log[5365]:	Received disconnect from 112.124.139.216: 48: Closed due to user request [preauth]
-Aug 19 11:16:34	RUfus	Xorg.0.log[6198]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=24)
-Aug 19 11:16:51	server	Xorg.0.log[11590]:	Received disconnect from 160.23.206.189: 34: disconnected by user
-Aug 19 11:17:25	LabSZ	Xorg.0.log[21611]:	Received disconnect from 19.81.33.193: 48: disconnected by user
-Aug 19 11:17:27	ADM	Xorg.0.log[24262]:	event7  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 11:17:55	LabSZ	Xorg.0.log[17198]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event18)
-Aug 19 11:18:16	ADM	Xorg.0.log[16521]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event22)
-Aug 19 11:18:20	ADM	Xorg.0.log[29859]:	Received disconnect from 40.141.174.167: 97: disconnected by user
-Aug 19 11:18:39	prod1	Xorg.0.log[22930]:	systemd: Started User Session 21837 of user root.
-Aug 19 11:18:42	testvm	Xorg.0.log[12164]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 19 11:18:44	archive	Xorg.0.log[16018]:	systemd: Started User Session 11081 of user webmaster.
-Aug 19 11:19:42	testvm	Xorg.0.log[16960]:	pam_unix(sshd:session): session opened for user admin by (uid=82)
-Aug 19 11:19:44	LabSZ	Xorg.0.log[1496]:	Did not receive identification string from 202.107.182.94
-Aug 19 11:20:24	archive	Xorg.0.log[12955]:	Received disconnect from 89.242.19.246: 54: disconnected by user
-Aug 19 11:20:30	prod1	Xorg.0.log[9220]:	Received disconnect from 213.48.134.223: 93: Bye Bye [preauth]
-Aug 19 11:20:33	prod1	Xorg.0.log[14714]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:55.0/usb3/3-4/3-4:1.0/0003:1EA7:00556.0001/input/input55/event55
-Aug 19 11:20:37	server	Xorg.0.log[2595]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:69.0/usb3/3-4/3-4:1.0/0003:1EA7:00696.0001/input/input69/event69
-Aug 19 11:20:53	RUfus	Xorg.0.log[21944]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:6.0/usb3/3-4/3-4:1.0/0003:1EA7:0066.0001/input/input6/event6
-Aug 19 11:21:48	server	Xorg.0.log[17673]:	pam_unix(sshd:session): session opened for user test by (uid=78)
-Aug 19 11:21:50	ADM	Xorg.0.log[18631]:	Received disconnect from 24.249.111.96: 13: Closed due to user request [preauth]
-Aug 19 11:21:59	prod1	Xorg.0.log[24615]:	pam_unix(sshd:session): session opened for user webmaster by (uid=29)
-Aug 19 11:22:02	testvm	Xorg.0.log[27692]:	event43  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 11:23:03	archive	Xorg.0.log[5530]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 19 11:23:07	RUfus	Xorg.0.log[16535]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:23.0/usb3/3-4/3-4:1.0/0003:1EA7:00236.0001/input/input23/event23
-Aug 19 11:23:27	archive	Xorg.0.log[5153]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:35.0/usb3/3-4/3-4:1.0/0003:1EA7:00356.0001/input/input35/event35
-Aug 19 23:46:55	testvm	Xorg.0.log[2214]:	Received disconnect from 188.246.11.81: 54: Closed due to user request [preauth]
-Aug 19 23:47:15	ADM	Xorg.0.log[22176]:	systemd: Started User Session 11499 of user root.
-Aug 19 23:47:18	server	Xorg.0.log[22660]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:24.0/usb3/3-4/3-4:1.0/0003:1EA7:00246.0001/input/input24/event24
-Aug 19 23:47:35	prod1	Xorg.0.log[11627]:	pam_unix(sshd:session): session closed for user admin
-Aug 19 23:48:03	RUfus	Xorg.0.log[12081]:	Received disconnect from 40.233.97.192: 29: Closed due to user request [preauth]
-Aug 19 23:48:07	archive	Xorg.0.log[10256]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 19 23:48:10	ADM	Xorg.0.log[2822]:	Received disconnect from 252.41.69.27: 51: Closed due to user request [preauth]
-Aug 19 23:49:32	RUfus	Xorg.0.log[2290]:	Connection closed by 244.73.168.209 [preauth]
-Aug 19 23:50:04	ADM	Xorg.0.log[23937]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event62)
-Aug 19 23:50:16	server	Xorg.0.log[4135]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 19 23:51:19	server	Xorg.0.log[12893]:	Did not receive identification string from 128.76.185.152
-Aug 19 23:51:52	prod1	Xorg.0.log[4304]:	kernel: usb 1-57: USB disconnect, device number 2
-Aug 19 23:51:55	prod1	Xorg.0.log[3861]:	Accepted password for backup from 14.137.171.48 port 6888 ssh31
-Aug 19 23:52:00	archive	Xorg.0.log[16409]:	systemd: Started User Session 6963 of user oracle.
-Aug 19 23:52:17	RUfus	Xorg.0.log[25966]:	Received disconnect from 27.226.199.3: 4: Bye Bye [preauth]
-Aug 19 23:52:19	testvm	Xorg.0.log[3368]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:22.0/usb3/3-4/3-4:1.0/0003:1EA7:00226.0001/input/input22/event22
-Aug 19 23:52:21	ADM	Xorg.0.log[20502]:	event29  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 23:52:25	server	Xorg.0.log[23231]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 19 23:53:04	archive	Xorg.0.log[3259]:	event33  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 23:53:12	archive	Xorg.0.log[4900]:	event65  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 23:53:15	LabSZ	Xorg.0.log[8364]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event90)
-Aug 19 23:53:45	server	Xorg.0.log[27591]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 19 23:53:51	ADM	Xorg.0.log[2061]:	Did not receive identification string from 203.153.59.224
-Aug 19 23:54:17	RUfus	Xorg.0.log[18580]:	(EE) Backtrace:
-Aug 19 23:54:18	archive	Xorg.0.log[16825]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 19 23:54:48	prod1	Xorg.0.log[28651]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:71.0/usb3/3-4/3-4:1.0/0003:1EA7:00716.0001/input/input71/event71
-Aug 19 23:56:26	archive	Xorg.0.log[13516]:	pam_unix(sshd:session): session opened for user guest by (uid=22)
-Aug 19 23:56:53	archive	Xorg.0.log[4901]:	event44  - Sleep Button: is tagged by udev as: Keyboard
-Aug 19 23:57:04	LabSZ	Xorg.0.log[3344]:	kernel: usb 1-57: USB disconnect, device number 2
-Aug 19 23:57:35	ADM	Xorg.0.log[17035]:	systemd: Started User Session 9000 of user 123.
-Aug 19 23:57:46	ADM	Xorg.0.log[7970]:	pam_unix(sshd:session): session closed for user admin
-Aug 20 01:25:23	prod1	Xorg.0.log[11413]:	Did not receive identification string from 182.27.186.2
-Aug 20 01:25:29	server	Xorg.0.log[15012]:	(EE) Backtrace:
-Aug 20 01:25:31	server	Xorg.0.log[29103]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 20 01:26:03	ADM	Xorg.0.log[25977]:	kernel: usb 1-45: USB disconnect, device number 2
-Aug 20 01:26:17	RUfus	Xorg.0.log[4907]:	Did not receive identification string from 170.40.60.190
-Aug 20 01:26:19	testvm	Xorg.0.log[8939]:	Did not receive identification string from 17.154.128.88
-Aug 20 01:26:37	LabSZ	Xorg.0.log[3457]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event66)
-Aug 20 01:26:54	testvm	Xorg.0.log[3074]:	Connection closed by 9.234.130.254 [preauth]
-Aug 20 01:27:15	server	Xorg.0.log[17255]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 20 01:27:18	server	Xorg.0.log[19731]:	pam_unix(sshd:session): session opened for user webmaster by (uid=93)
-Aug 20 01:28:09	RUfus	Xorg.0.log[19092]:	pam_unix(sshd:session): session closed for user guest
-Aug 20 01:28:15	server	Xorg.0.log[22779]:	kernel: usb 1-24: USB disconnect, device number 2
-Aug 20 01:28:18	ADM	Xorg.0.log[2334]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 20 01:29:16	ADM	Xorg.0.log[19691]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:85.0/usb3/3-4/3-4:1.0/0003:1EA7:00856.0001/input/input85/event85
-Aug 20 03:49:56	testvm	Xorg.0.log[26416]:	Received disconnect from 51.159.186.102: 96: Bye Bye [preauth]
-Aug 20 03:50:28	server	Xorg.0.log[6287]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 20 03:50:52	prod1	Xorg.0.log[6760]:	systemd: Started User Session 12565 of user chen.
-Aug 20 03:51:08	prod1	Xorg.0.log[17753]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event27)
-Aug 20 03:51:54	archive	Xorg.0.log[2185]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 20 03:53:24	ADM	Xorg.0.log[19850]:	Did not receive identification string from 230.103.178.157
-Aug 20 03:53:38	server	Xorg.0.log[1496]:	Connection closed by 227.173.199.82 [preauth]
-Aug 20 03:53:58	server	Xorg.0.log[29309]:	kernel: usb 1-41: USB disconnect, device number 2
-Aug 20 03:54:49	testvm	Xorg.0.log[22676]:	Accepted password for test from 132.146.133.212 port 58530 ssh87
-Aug 20 03:55:08	testvm	Xorg.0.log[7838]:	Connection closed by 59.85.207.66 [preauth]
-Aug 20 03:55:33	LabSZ	Xorg.0.log[21654]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event52)
-Aug 20 03:55:36	LabSZ	Xorg.0.log[13538]:	kernel: usb 1-33: USB disconnect, device number 2
-Aug 20 03:55:50	archive	Xorg.0.log[20499]:	Connection closed by 160.146.136.106 [preauth]
-Aug 20 03:55:56	server	Xorg.0.log[9950]:	Received disconnect from 168.156.23.230: 58: disconnected by user
-Aug 20 03:56:07	prod1	Xorg.0.log[19826]:	Received disconnect from 244.140.144.174: 95: Bye Bye [preauth]
-Aug 20 03:56:29	prod1	Xorg.0.log[25530]:	pam_unix(sshd:session): session opened for user chen by (uid=87)
-Aug 20 03:56:41	LabSZ	Xorg.0.log[22082]:	pam_unix(sshd:session): session closed for user fztu
-Aug 20 03:57:50	LabSZ	Xorg.0.log[28154]:	event3  - Sleep Button: is tagged by udev as: Keyboard
-Aug 20 03:58:05	server	Xorg.0.log[11167]:	Received disconnect from 237.193.238.248: 31: Bye Bye [preauth]
-Aug 20 03:58:11	server	Xorg.0.log[6902]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 20 03:58:15	server	Xorg.0.log[4274]:	Did not receive identification string from 11.78.244.45
-Aug 20 03:59:01	prod1	Xorg.0.log[23442]:	Did not receive identification string from 214.243.115.107
-Aug 20 03:59:03	server	Xorg.0.log[4698]:	Received disconnect from 80.55.230.191: 38: Closed due to user request [preauth]
-Aug 20 03:59:04	archive	Xorg.0.log[17369]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event78)
-Aug 20 03:59:31	RUfus	Xorg.0.log[6029]:	(EE) Backtrace:
-Aug 20 03:59:32	RUfus	Xorg.0.log[9260]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 20 03:59:44	LabSZ	Xorg.0.log[17854]:	error: maximum authentication attempts exceeded for pgadmin from 91.72.151.222 port 34685
-Aug 20 03:59:54	prod1	Xorg.0.log[8901]:	pam_unix(sshd:session): session closed for user ubuntu
-Aug 20 04:00:00	RUfus	Xorg.0.log[14638]:	pam_unix(sshd:session): session closed for user webmaster
-Aug 20 04:00:12	ADM	Xorg.0.log[12335]:	pam_unix(sshd:session): session closed for user fztu
-Aug 20 04:01:02	server	Xorg.0.log[16202]:	(EE) Backtrace:
-Aug 20 04:01:03	RUfus	Xorg.0.log[12226]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 20 04:01:21	archive	Xorg.0.log[23269]:	Did not receive identification string from 2.223.174.180
-Aug 20 04:01:59	ADM	Xorg.0.log[16675]:	Received disconnect from 75.135.45.167: 94: Bye Bye [preauth]
-Aug 20 04:02:57	testvm	Xorg.0.log[2864]:	pam_unix(sshd:session): session opened for user root by (uid=2)
-Aug 20 04:04:11	testvm	Xorg.0.log[12710]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event3)
-Aug 20 04:04:31	RUfus	Xorg.0.log[7434]:	Received disconnect from 236.231.12.7: 26: Closed due to user request [preauth]
-Aug 20 04:04:34	ADM	Xorg.0.log[4362]:	Accepted password for oracle from 114.12.125.43 port 49872 ssh33
-Aug 20 04:05:01	server	Xorg.0.log[16954]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event29)
-Aug 20 04:05:55	testvm	Xorg.0.log[20012]:	Received disconnect from 33.202.53.80: 25: Closed due to user request [preauth]
-Aug 20 04:06:19	LabSZ	Xorg.0.log[2695]:	Connection closed by 23.185.204.203 [preauth]
-Aug 20 04:06:25	LabSZ	Xorg.0.log[28580]:	Connection closed by 101.198.83.93 [preauth]
-Aug 20 04:06:31	prod1	Xorg.0.log[26027]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 20 04:06:42	LabSZ	Xorg.0.log[16097]:	kernel: usb 1-46: USB disconnect, device number 2
-Aug 20 04:06:45	testvm	Xorg.0.log[5399]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 20 04:06:48	archive	Xorg.0.log[6888]:	pam_unix(sshd:session): session opened for user 123 by (uid=51)
-Aug 20 04:07:26	ADM	Xorg.0.log[5400]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event92)
-Aug 20 04:07:29	prod1	Xorg.0.log[7020]:	Received disconnect from 147.222.21.193: 48: disconnected by user
-Aug 20 04:07:48	testvm	Xorg.0.log[2171]:	Connection closed by 249.88.87.165 [preauth]
-Aug 20 04:08:31	prod1	Xorg.0.log[25041]:	kernel: usb 1-97: USB disconnect, device number 2
-Aug 20 04:08:54	prod1	Xorg.0.log[28178]:	kernel: usb 1-31: USB disconnect, device number 2
-Aug 20 04:09:03	prod1	Xorg.0.log[8084]:	Received disconnect from 80.230.219.127: 86: disconnected by user
-Aug 20 04:09:23	RUfus	Xorg.0.log[11583]:	pam_unix(sshd:session): session closed for user fztu
-Aug 20 04:09:52	ADM	Xorg.0.log[1650]:	(EE) Backtrace:
-Aug 20 04:09:53	server	Xorg.0.log[17730]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 20 04:10:23	prod1	Xorg.0.log[29316]:	Received disconnect from 53.143.166.131: 30: Bye Bye [preauth]
-Aug 20 04:11:17	LabSZ	Xorg.0.log[29352]:	kernel: usb 1-16: USB disconnect, device number 2
-Aug 20 04:11:38	prod1	Xorg.0.log[23377]:	event7  - Sleep Button: is tagged by udev as: Keyboard
-Aug 20 04:14:14	LabSZ	Xorg.0.log[29378]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 20 04:14:17	prod1	Xorg.0.log[21498]:	Connection closed by 8.83.150.93 [preauth]
-Aug 20 04:14:29	LabSZ	Xorg.0.log[26389]:	event91  - Sleep Button: is tagged by udev as: Keyboard
-Aug 20 04:15:26	prod1	Xorg.0.log[3322]:	event42  - Sleep Button: is tagged by udev as: Keyboard
-Aug 20 04:15:34	LabSZ	Xorg.0.log[14454]:	event55  - Sleep Button: is tagged by udev as: Keyboard
-Aug 20 04:15:56	ADM	Xorg.0.log[11585]:	systemd: Started User Session 23086 of user guest.
-Aug 20 04:16:17	prod1	Xorg.0.log[12542]:	pam_unix(sshd:session): session closed for user ubuntu
-Aug 20 04:16:26	prod1	Xorg.0.log[4796]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=40)
-Aug 20 04:17:02	archive	Xorg.0.log[4242]:	Connection closed by 2.121.149.126 [preauth]
-Aug 20 04:17:38	ADM	Xorg.0.log[2570]:	event41  - Sleep Button: is tagged by udev as: Keyboard
-Aug 20 04:17:50	testvm	Xorg.0.log[22857]:	Received disconnect from 114.67.255.82: 98: Closed due to user request [preauth]
-Aug 20 04:18:33	archive	Xorg.0.log[25052]:	pam_unix(sshd:session): session opened for user fztu by (uid=80)
-Aug 20 04:19:06	ADM	Xorg.0.log[3236]:	Did not receive identification string from 21.39.146.4
-Aug 20 04:19:09	prod1	Xorg.0.log[7116]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 20 04:19:13	LabSZ	Xorg.0.log[12397]:	pam_unix(sshd:session): session opened for user test by (uid=73)
-Aug 21 00:45:23	LabSZ	Xorg.0.log[19912]:	Received disconnect from 179.142.162.45: 44: Bye Bye [preauth]
-Aug 21 00:45:50	RUfus	Xorg.0.log[7626]:	Received disconnect from 170.76.177.139: 28: disconnected by user
-Aug 21 00:45:56	testvm	Xorg.0.log[20850]:	Received disconnect from 181.202.14.18: 55: Bye Bye [preauth]
-Aug 21 00:46:39	ADM	Xorg.0.log[27694]:	Did not receive identification string from 227.29.230.150
-Aug 21 00:46:50	server	Xorg.0.log[26630]:	Accepted password for oracle from 139.233.185.192 port 58578 ssh77
-Aug 21 00:47:41	archive	Xorg.0.log[25721]:	pam_unix(sshd:session): session closed for user root
-Aug 21 00:47:47	archive	Xorg.0.log[20985]:	Did not receive identification string from 49.132.80.212
-Aug 21 00:49:22	LabSZ	Xorg.0.log[18243]:	event50  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 00:49:32	archive	Xorg.0.log[21831]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 00:49:35	testvm	Xorg.0.log[27749]:	Did not receive identification string from 200.24.231.160
-Aug 21 00:50:25	LabSZ	Xorg.0.log[2453]:	Received disconnect from 171.253.102.58: 86: Closed due to user request [preauth]
-Aug 21 00:50:38	ADM	Xorg.0.log[24911]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:64.0/usb3/3-4/3-4:1.0/0003:1EA7:00646.0001/input/input64/event64
-Aug 21 00:51:14	testvm	Xorg.0.log[3863]:	systemd: Started User Session 9922 of user pgadmin.
-Aug 21 00:52:15	LabSZ	Xorg.0.log[6302]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event58)
-Aug 21 00:52:18	LabSZ	Xorg.0.log[23506]:	systemd: Started User Session 24534 of user ubuntu.
-Aug 21 00:52:46	archive	Xorg.0.log[22665]:	event93  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 00:53:07	prod1	Xorg.0.log[17723]:	kernel: usb 1-22: USB disconnect, device number 2
-Aug 21 00:53:16	ADM	Xorg.0.log[6046]:	Received disconnect from 148.215.117.239: 15: Closed due to user request [preauth]
-Aug 21 00:53:43	server	Xorg.0.log[1863]:	Did not receive identification string from 116.166.63.172
-Aug 21 00:53:46	ADM	Xorg.0.log[7408]:	kernel: usb 1-7: USB disconnect, device number 2
-Aug 21 00:54:02	ADM	Xorg.0.log[6873]:	systemd: Started User Session 15119 of user admin.
-Aug 21 00:54:09	LabSZ	Xorg.0.log[2252]:	Accepted password for matlab from 121.212.92.103 port 63365 ssh86
-Aug 21 00:55:49	archive	Xorg.0.log[3209]:	kernel: usb 1-25: USB disconnect, device number 2
-Aug 21 00:56:00	testvm	Xorg.0.log[20472]:	pam_unix(sshd:session): session opened for user chen by (uid=18)
-Aug 21 00:56:24	archive	Xorg.0.log[5417]:	Connection closed by 173.226.89.2 [preauth]
-Aug 21 00:56:37	LabSZ	Xorg.0.log[1242]:	Accepted password for webmaster from 170.159.85.144 port 58231 ssh50
-Aug 21 00:56:46	testvm	Xorg.0.log[15012]:	Received disconnect from 29.195.79.112: 38: disconnected by user
-Aug 21 00:57:02	testvm	Xorg.0.log[11436]:	pam_unix(sshd:session): session closed for user matlab
-Aug 21 00:57:05	testvm	Xorg.0.log[8990]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event41)
-Aug 21 00:57:49	prod1	Xorg.0.log[8513]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:99.0/usb3/3-4/3-4:1.0/0003:1EA7:00996.0001/input/input99/event99
-Aug 21 00:58:44	archive	Xorg.0.log[25596]:	Received disconnect from 42.233.92.62: 67: Closed due to user request [preauth]
-Aug 21 00:58:50	prod1	Xorg.0.log[9172]:	Received disconnect from 45.179.201.242: 30: disconnected by user
-Aug 21 00:59:04	prod1	Xorg.0.log[28560]:	Connection closed by 119.131.56.145 [preauth]
-Aug 21 00:59:14	prod1	Xorg.0.log[18538]:	systemd: Started User Session 17229 of user guest.
-Aug 21 00:59:34	RUfus	Xorg.0.log[20417]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:00:06	ADM	Xorg.0.log[8104]:	systemd: Started User Session 23201 of user oracle.
-Aug 21 01:00:09	server	Xorg.0.log[6850]:	Received disconnect from 132.246.143.25: 21: Closed due to user request [preauth]
-Aug 21 01:01:20	RUfus	Xorg.0.log[3138]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:51.0/usb3/3-4/3-4:1.0/0003:1EA7:00516.0001/input/input51/event51
-Aug 21 01:01:54	server	Xorg.0.log[25412]:	(EE) Backtrace:
-Aug 21 01:01:55	archive	Xorg.0.log[25389]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 01:02:39	ADM	Xorg.0.log[20396]:	Received disconnect from 79.190.163.97: 77: Bye Bye [preauth]
-Aug 21 01:02:44	LabSZ	Xorg.0.log[26100]:	Connection closed by 29.243.141.86 [preauth]
-Aug 21 01:03:12	LabSZ	Xorg.0.log[7485]:	Connection closed by 11.46.77.93 [preauth]
-Aug 21 01:24:02	archive	Xorg.0.log[29319]:	Accepted password for backup from 210.222.120.52 port 2148 ssh63
-Aug 21 01:24:34	RUfus	Xorg.0.log[25961]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event93)
-Aug 21 01:25:10	LabSZ	Xorg.0.log[24710]:	systemd: Started User Session 23357 of user admin.
-Aug 21 01:25:16	archive	Xorg.0.log[10996]:	Connection closed by 189.72.229.204 [preauth]
-Aug 21 01:25:47	RUfus	Xorg.0.log[21856]:	Received disconnect from 159.166.222.234: 27: Closed due to user request [preauth]
-Aug 21 01:27:34	RUfus	Xorg.0.log[16479]:	event19  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 01:27:37	testvm	Xorg.0.log[29498]:	Accepted password for backup from 234.95.255.201 port 48130 ssh50
-Aug 21 01:28:21	testvm	Xorg.0.log[22634]:	event97  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 01:28:28	RUfus	Xorg.0.log[8440]:	Received disconnect from 37.248.108.174: 54: Closed due to user request [preauth]
-Aug 21 01:28:35	archive	Xorg.0.log[2454]:	Connection closed by 198.227.184.210 [preauth]
-Aug 21 01:28:57	LabSZ	Xorg.0.log[27093]:	Received disconnect from 248.13.133.82: 42: disconnected by user
-Aug 21 01:29:01	server	Xorg.0.log[11918]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:30:12	prod1	Xorg.0.log[10234]:	kernel: usb 1-98: USB disconnect, device number 2
-Aug 21 01:31:22	RUfus	Xorg.0.log[6957]:	pam_unix(sshd:session): session closed for user oracle
-Aug 21 01:31:32	LabSZ	Xorg.0.log[3327]:	systemd: Started User Session 27199 of user 123.
-Aug 21 01:31:43	archive	Xorg.0.log[2734]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:34:41	prod1	Xorg.0.log[10572]:	systemd: Started User Session 12460 of user backup.
-Aug 21 01:35:14	archive	Xorg.0.log[18083]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:35:26	ADM	Xorg.0.log[14462]:	Did not receive identification string from 209.162.232.76
-Aug 21 01:37:08	ADM	Xorg.0.log[1837]:	Received disconnect from 208.48.106.52: 40: Bye Bye [preauth]
-Aug 21 01:37:33	server	Xorg.0.log[16222]:	event37  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 01:37:42	prod1	Xorg.0.log[5969]:	Received disconnect from 121.195.221.230: 13: Closed due to user request [preauth]
-Aug 21 01:37:45	archive	Xorg.0.log[24311]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event66)
-Aug 21 01:37:48	ADM	Xorg.0.log[10772]:	Received disconnect from 68.71.32.248: 81: Closed due to user request [preauth]
-Aug 21 01:38:13	RUfus	Xorg.0.log[3343]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:38:19	testvm	Xorg.0.log[18456]:	kernel: usb 1-36: USB disconnect, device number 2
-Aug 21 01:38:58	archive	Xorg.0.log[18950]:	event89  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 01:39:27	LabSZ	Xorg.0.log[10719]:	Received disconnect from 6.117.140.67: 90: Closed due to user request [preauth]
-Aug 21 01:39:30	prod1	Xorg.0.log[5765]:	Received disconnect from 119.113.54.23: 8: Closed due to user request [preauth]
-Aug 21 01:40:48	LabSZ	Xorg.0.log[11434]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event74)
-Aug 21 01:41:20	RUfus	Xorg.0.log[25797]:	Received disconnect from 212.230.144.218: 25: disconnected by user
-Aug 21 01:41:22	ADM	Xorg.0.log[9824]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:42:38	server	Xorg.0.log[6222]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:42:42	LabSZ	Xorg.0.log[24966]:	Received disconnect from 177.243.67.89: 59: disconnected by user
-Aug 21 01:43:42	testvm	Xorg.0.log[24430]:	pam_unix(sshd:session): session opened for user admin by (uid=19)
-Aug 21 01:43:59	LabSZ	Xorg.0.log[17956]:	event87  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 01:44:01	RUfus	Xorg.0.log[20689]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:17.0/usb3/3-4/3-4:1.0/0003:1EA7:00176.0001/input/input17/event17
-Aug 21 01:44:05	RUfus	Xorg.0.log[17249]:	Did not receive identification string from 255.39.48.168
-Aug 21 01:44:58	server	Xorg.0.log[25366]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:45:19	ADM	Xorg.0.log[25673]:	systemd: Started User Session 28439 of user ubuntu.
-Aug 21 01:45:34	testvm	Xorg.0.log[27379]:	Connection closed by 200.82.57.245 [preauth]
-Aug 21 01:45:44	testvm	Xorg.0.log[13460]:	Received disconnect from 12.116.205.45: 11: disconnected by user
-Aug 21 01:45:48	ADM	Xorg.0.log[17204]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event74)
-Aug 21 01:45:53	server	Xorg.0.log[29000]:	Received disconnect from 224.14.151.208: 93: disconnected by user
-Aug 21 01:46:00	archive	Xorg.0.log[8226]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:46:02	testvm	Xorg.0.log[22146]:	Received disconnect from 181.191.192.42: 88: Bye Bye [preauth]
-Aug 21 01:46:28	ADM	Xorg.0.log[29679]:	Connection closed by 70.35.17.181 [preauth]
-Aug 21 01:46:31	testvm	Xorg.0.log[18656]:	Received disconnect from 37.239.45.236: 65: disconnected by user
-Aug 21 01:46:37	LabSZ	Xorg.0.log[8012]:	pam_unix(sshd:session): session closed for user matlab
-Aug 21 01:47:07	server	Xorg.0.log[14643]:	Received disconnect from 173.174.4.228: 5: disconnected by user
-Aug 21 01:47:37	archive	Xorg.0.log[2115]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:48:24	server	Xorg.0.log[27593]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:48:43	testvm	Xorg.0.log[12135]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event56)
-Aug 21 01:52:43	ADM	Xorg.0.log[23769]:	pam_unix(sshd:session): session closed for user chen
-Aug 21 01:52:47	prod1	Xorg.0.log[7522]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:54:15	archive	Xorg.0.log[6983]:	systemd: Started User Session 11295 of user matlab.
-Aug 21 01:55:30	archive	Xorg.0.log[2255]:	event98  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 01:55:44	testvm	Xorg.0.log[3413]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:55:55	prod1	Xorg.0.log[15695]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:97.0/usb3/3-4/3-4:1.0/0003:1EA7:00976.0001/input/input97/event97
-Aug 21 01:57:04	RUfus	Xorg.0.log[11770]:	systemd: Started User Session 4992 of user matlab.
-Aug 21 01:58:03	archive	Xorg.0.log[10618]:	Connection closed by 184.43.188.50 [preauth]
-Aug 21 01:58:07	LabSZ	Xorg.0.log[26972]:	Connection closed by 56.254.64.34 [preauth]
-Aug 21 01:58:11	prod1	Xorg.0.log[14005]:	pam_unix(sshd:session): session closed for user test
-Aug 21 01:58:14	testvm	Xorg.0.log[1774]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 01:58:34	prod1	Xorg.0.log[4404]:	Received disconnect from 208.71.174.130: 97: Closed due to user request [preauth]
-Aug 21 01:59:35	RUfus	Xorg.0.log[8966]:	Received disconnect from 255.230.115.134: 47: Closed due to user request [preauth]
-Aug 21 01:59:58	ADM	Xorg.0.log[2616]:	Did not receive identification string from 106.172.96.132
-Aug 21 02:00:01	server	Xorg.0.log[12683]:	Received disconnect from 184.96.165.57: 43: disconnected by user
-Aug 21 02:00:18	RUfus	Xorg.0.log[5494]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:30.0/usb3/3-4/3-4:1.0/0003:1EA7:00306.0001/input/input30/event30
-Aug 21 02:00:21	LabSZ	Xorg.0.log[24992]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event97)
-Aug 21 02:00:38	server	Xorg.0.log[24447]:	Connection closed by 221.11.39.210 [preauth]
-Aug 21 02:00:52	prod1	Xorg.0.log[15024]:	event76  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 02:02:03	ADM	Xorg.0.log[18583]:	Received disconnect from 251.53.48.251: 37: disconnected by user
-Aug 21 02:02:13	ADM	Xorg.0.log[13371]:	pam_unix(sshd:session): session opened for user test by (uid=9)
-Aug 21 02:02:18	ADM	Xorg.0.log[28711]:	Received disconnect from 51.162.134.177: 83: Bye Bye [preauth]
-Aug 21 02:02:20	archive	Xorg.0.log[25337]:	Received disconnect from 135.83.134.199: 83: Bye Bye [preauth]
-Aug 21 02:02:40	LabSZ	Xorg.0.log[7334]:	Received disconnect from 104.49.60.147: 88: Closed due to user request [preauth]
-Aug 21 02:02:52	RUfus	Xorg.0.log[13045]:	kernel: usb 1-98: USB disconnect, device number 2
-Aug 21 02:03:31	ADM	Xorg.0.log[22645]:	Received disconnect from 121.144.157.64: 73: Closed due to user request [preauth]
-Aug 21 02:03:35	ADM	Xorg.0.log[5722]:	event24  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 02:04:36	LabSZ	Xorg.0.log[25622]:	Received disconnect from 15.158.208.114: 53: disconnected by user
-Aug 21 02:04:42	RUfus	Xorg.0.log[12007]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 02:04:45	testvm	Xorg.0.log[26926]:	kernel: usb 1-35: USB disconnect, device number 2
-Aug 21 02:05:16	prod1	Xorg.0.log[24575]:	(EE) Backtrace:
-Aug 21 02:05:17	server	Xorg.0.log[7499]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 02:05:37	server	Xorg.0.log[1712]:	event81  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 02:05:53	LabSZ	Xorg.0.log[8624]:	event79  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 02:06:11	archive	Xorg.0.log[16973]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 02:06:15	archive	Xorg.0.log[20728]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event50)
-Aug 21 02:06:24	archive	Xorg.0.log[20889]:	kernel: usb 1-39: USB disconnect, device number 2
-Aug 21 02:06:32	testvm	Xorg.0.log[3807]:	(EE) Backtrace:
-Aug 21 02:06:33	ADM	Xorg.0.log[21452]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 02:06:47	ADM	Xorg.0.log[2092]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:75.0/usb3/3-4/3-4:1.0/0003:1EA7:00756.0001/input/input75/event75
-Aug 21 02:06:50	ADM	Xorg.0.log[28269]:	(EE) Backtrace:
-Aug 21 02:06:51	prod1	Xorg.0.log[6593]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 02:09:05	prod1	Xorg.0.log[11292]:	kernel: usb 1-66: USB disconnect, device number 2
-Aug 21 02:09:26	RUfus	Xorg.0.log[6788]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 02:09:34	archive	Xorg.0.log[8308]:	Connection closed by 56.80.159.225 [preauth]
-Aug 21 02:09:46	archive	Xorg.0.log[2530]:	pam_unix(sshd:session): session opened for user 123 by (uid=61)
-Aug 21 02:09:49	testvm	Xorg.0.log[16706]:	event9  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 02:10:50	server	Xorg.0.log[4188]:	event46  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 02:11:31	LabSZ	Xorg.0.log[28368]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 02:11:34	RUfus	Xorg.0.log[5035]:	Received disconnect from 66.108.249.160: 80: disconnected by user
-Aug 21 02:12:59	ADM	Xorg.0.log[10841]:	systemd: Started User Session 15934 of user matlab.
-Aug 21 02:13:03	archive	Xorg.0.log[1056]:	Connection closed by 35.20.62.72 [preauth]
-Aug 21 02:13:23	server	Xorg.0.log[5360]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event73)
-Aug 21 02:13:33	server	Xorg.0.log[26588]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=44)
-Aug 21 02:13:46	ADM	Xorg.0.log[1655]:	Received disconnect from 170.83.32.112: 6: Closed due to user request [preauth]
-Aug 21 02:13:53	LabSZ	Xorg.0.log[25669]:	pam_unix(sshd:session): session opened for user oracle by (uid=83)
-Aug 21 02:13:56	prod1	Xorg.0.log[21723]:	Accepted password for backup from 204.54.233.8 port 26956 ssh15
-Aug 21 02:14:01	server	Xorg.0.log[19267]:	kernel: usb 1-8: USB disconnect, device number 2
-Aug 21 02:14:03	testvm	Xorg.0.log[14862]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 02:14:42	RUfus	Xorg.0.log[28661]:	Accepted password for ubuntu from 82.91.252.162 port 53161 ssh87
-Aug 21 02:14:59	prod1	Xorg.0.log[6431]:	Connection closed by 55.147.106.235 [preauth]
-Aug 21 02:15:21	server	Xorg.0.log[18054]:	(EE) Backtrace:
-Aug 21 02:15:23	prod1	Xorg.0.log[14251]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 02:15:53	testvm	Xorg.0.log[17150]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event59)
-Aug 21 02:16:35	RUfus	Xorg.0.log[28873]:	kernel: usb 1-88: USB disconnect, device number 2
-Aug 21 02:17:45	LabSZ	Xorg.0.log[7530]:	pam_unix(sshd:session): session opened for user chen by (uid=40)
-Aug 21 02:17:47	RUfus	Xorg.0.log[18257]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:57.0/usb3/3-4/3-4:1.0/0003:1EA7:00576.0001/input/input57/event57
-Aug 21 02:17:50	server	Xorg.0.log[29750]:	pam_unix(sshd:session): session closed for user backup
-Aug 21 02:18:26	testvm	Xorg.0.log[25892]:	Received disconnect from 136.99.225.21: 97: Closed due to user request [preauth]
-Aug 21 02:18:37	LabSZ	Xorg.0.log[14928]:	event12  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 02:19:16	prod1	Xorg.0.log[19563]:	Accepted password for oracle from 148.237.27.116 port 8913 ssh66
-Aug 21 02:19:43	testvm	Xorg.0.log[19621]:	Received disconnect from 78.226.142.213: 85: Bye Bye [preauth]
-Aug 21 02:20:13	testvm	Xorg.0.log[20367]:	Accepted password for pgadmin from 212.52.158.128 port 35338 ssh69
-Aug 21 02:20:15	prod1	Xorg.0.log[28861]:	Received disconnect from 90.50.172.127: 18: disconnected by user
-Aug 21 02:20:47	prod1	Xorg.0.log[3774]:	Received disconnect from 209.214.57.133: 70: disconnected by user
-Aug 21 02:21:00	prod1	Xorg.0.log[22287]:	Connection closed by 203.33.215.102 [preauth]
-Aug 21 02:21:50	RUfus	Xorg.0.log[8056]:	Received disconnect from 41.122.174.183: 49: Closed due to user request [preauth]
-Aug 21 02:21:53	ADM	Xorg.0.log[28282]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 02:21:58	RUfus	Xorg.0.log[19258]:	Received disconnect from 76.111.27.158: 30: Bye Bye [preauth]
-Aug 21 02:22:24	LabSZ	Xorg.0.log[27269]:	Did not receive identification string from 88.1.216.139
-Aug 21 02:23:17	RUfus	Xorg.0.log[23103]:	kernel: usb 1-26: USB disconnect, device number 2
-Aug 21 02:23:34	ADM	Xorg.0.log[1754]:	kernel: usb 1-40: USB disconnect, device number 2
-Aug 21 02:23:44	ADM	Xorg.0.log[18482]:	Received disconnect from 67.45.20.79: 78: disconnected by user
-Aug 21 02:24:36	RUfus	Xorg.0.log[9953]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 02:24:39	LabSZ	Xorg.0.log[17660]:	Connection closed by 8.141.96.93 [preauth]
-Aug 21 02:24:41	server	Xorg.0.log[26780]:	systemd: Started User Session 7371 of user fztu.
-Aug 21 02:25:33	LabSZ	Xorg.0.log[20924]:	kernel: usb 1-72: USB disconnect, device number 2
-Aug 21 02:25:44	ADM	Xorg.0.log[26484]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event71)
-Aug 21 02:26:15	RUfus	Xorg.0.log[16336]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:91.0/usb3/3-4/3-4:1.0/0003:1EA7:00916.0001/input/input91/event91
-Aug 21 02:26:31	prod1	Xorg.0.log[11674]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 02:26:46	ADM	Xorg.0.log[23611]:	Received disconnect from 73.169.58.52: 83: Closed due to user request [preauth]
-Aug 21 02:27:06	LabSZ	Xorg.0.log[22094]:	kernel: usb 1-63: USB disconnect, device number 2
-Aug 21 02:27:10	prod1	Xorg.0.log[6286]:	Received disconnect from 135.25.40.142: 71: Bye Bye [preauth]
-Aug 21 19:05:53	archive	Xorg.0.log[1429]:	event18  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 19:06:33	prod1	Xorg.0.log[15410]:	kernel: usb 1-92: USB disconnect, device number 2
-Aug 21 19:06:52	testvm	Xorg.0.log[11500]:	kernel: usb 1-91: USB disconnect, device number 2
-Aug 21 19:07:12	testvm	Xorg.0.log[24909]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event64)
-Aug 21 19:07:28	LabSZ	Xorg.0.log[17629]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=41)
-Aug 21 19:07:57	RUfus	Xorg.0.log[25590]:	Did not receive identification string from 79.204.170.22
-Aug 21 19:09:49	testvm	Xorg.0.log[13919]:	systemd: Started User Session 17193 of user pgadmin.
-Aug 21 19:09:55	server	Xorg.0.log[21475]:	Received disconnect from 138.114.115.146: 47: Closed due to user request [preauth]
-Aug 21 19:10:12	LabSZ	Xorg.0.log[25811]:	Received disconnect from 29.48.51.30: 35: disconnected by user
-Aug 21 19:10:26	prod1	Xorg.0.log[10647]:	systemd: Started User Session 29442 of user chen.
-Aug 21 19:10:33	RUfus	Xorg.0.log[29132]:	pam_unix(sshd:session): session opened for user oracle by (uid=8)
-Aug 21 19:10:39	prod1	Xorg.0.log[12256]:	Accepted password for chen from 164.72.109.96 port 40386 ssh65
-Aug 21 19:10:59	LabSZ	Xorg.0.log[14793]:	systemd: Started User Session 11744 of user test.
-Aug 21 19:11:20	LabSZ	Xorg.0.log[4444]:	pam_unix(sshd:session): session closed for user root
-Aug 21 19:12:16	RUfus	Xorg.0.log[21738]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:48.0/usb3/3-4/3-4:1.0/0003:1EA7:00486.0001/input/input48/event48
-Aug 21 19:13:04	LabSZ	Xorg.0.log[18962]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 19:13:15	RUfus	Xorg.0.log[28207]:	Accepted password for webmaster from 242.236.215.137 port 26145 ssh32
-Aug 21 19:13:52	RUfus	Xorg.0.log[24864]:	Did not receive identification string from 145.94.96.35
-Aug 21 19:15:00	server	Xorg.0.log[13179]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:10.0/usb3/3-4/3-4:1.0/0003:1EA7:00106.0001/input/input10/event10
-Aug 21 19:15:03	archive	Xorg.0.log[11106]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event66)
-Aug 21 19:15:13	LabSZ	Xorg.0.log[8830]:	event87  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 19:15:15	testvm	Xorg.0.log[21360]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:46.0/usb3/3-4/3-4:1.0/0003:1EA7:00466.0001/input/input46/event46
-Aug 21 19:15:21	ADM	Xorg.0.log[1016]:	systemd: Started User Session 2151 of user admin.
-Aug 21 19:15:24	archive	Xorg.0.log[27764]:	Received disconnect from 202.100.102.12: 93: Closed due to user request [preauth]
-Aug 21 19:15:32	server	Xorg.0.log[10675]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 19:15:38	ADM	Xorg.0.log[20342]:	Received disconnect from 52.179.82.190: 17: disconnected by user
-Aug 21 19:15:47	RUfus	Xorg.0.log[29527]:	event70  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 19:16:14	archive	Xorg.0.log[11333]:	pam_unix(sshd:session): session opened for user test by (uid=25)
-Aug 21 19:18:48	testvm	Xorg.0.log[8309]:	Received disconnect from 244.4.33.96: 83: Bye Bye [preauth]
-Aug 21 19:18:55	testvm	Xorg.0.log[16488]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 19:19:00	ADM	Xorg.0.log[11003]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event79)
-Aug 21 19:20:17	RUfus	Xorg.0.log[1996]:	Did not receive identification string from 27.103.81.140
-Aug 21 19:20:20	LabSZ	Xorg.0.log[17419]:	event4  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 19:20:23	testvm	Xorg.0.log[15972]:	Received disconnect from 171.252.172.216: 18: Closed due to user request [preauth]
-Aug 21 19:20:25	server	Xorg.0.log[10389]:	event49  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 19:20:29	ADM	Xorg.0.log[2436]:	Connection closed by 245.39.88.42 [preauth]
-Aug 21 19:20:39	archive	Xorg.0.log[10234]:	(EE) Backtrace:
-Aug 21 19:20:40	testvm	Xorg.0.log[16439]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 19:20:50	prod1	Xorg.0.log[23841]:	pam_unix(sshd:session): session opened for user admin by (uid=61)
-Aug 21 19:22:08	prod1	Xorg.0.log[20148]:	systemd: Started User Session 27611 of user backup.
-Aug 21 19:23:05	prod1	Xorg.0.log[1421]:	event88  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 19:23:20	archive	Xorg.0.log[11840]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 19:23:30	server	Xorg.0.log[25180]:	Did not receive identification string from 95.122.232.122
-Aug 21 19:24:00	server	Xorg.0.log[18251]:	Accepted password for chen from 26.150.225.133 port 23431 ssh88
-Aug 21 19:24:04	testvm	Xorg.0.log[4268]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 19:24:09	RUfus	Xorg.0.log[13872]:	event17  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 19:24:22	archive	Xorg.0.log[9802]:	Received disconnect from 132.155.67.238: 89: Closed due to user request [preauth]
-Aug 21 19:24:34	archive	Xorg.0.log[28841]:	Received disconnect from 177.228.245.248: 25: Closed due to user request [preauth]
-Aug 21 19:25:01	server	Xorg.0.log[6528]:	Accepted password for test from 17.223.37.131 port 49048 ssh63
-Aug 21 19:25:47	testvm	Xorg.0.log[22082]:	Accepted password for fztu from 15.98.152.242 port 53456 ssh49
-Aug 21 19:26:08	testvm	Xorg.0.log[25744]:	Did not receive identification string from 104.235.79.195
-Aug 21 19:26:19	server	Xorg.0.log[26396]:	event83  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 19:26:31	prod1	Xorg.0.log[19931]:	Did not receive identification string from 165.17.117.100
-Aug 21 19:48:39	prod1	Xorg.0.log[16895]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event89)
-Aug 21 19:48:44	prod1	Xorg.0.log[20423]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:84.0/usb3/3-4/3-4:1.0/0003:1EA7:00846.0001/input/input84/event84
-Aug 21 19:48:50	testvm	Xorg.0.log[21882]:	systemd: Started User Session 11803 of user oracle.
-Aug 21 19:48:52	ADM	Xorg.0.log[23691]:	Received disconnect from 225.232.153.94: 40: Bye Bye [preauth]
-Aug 21 19:49:40	LabSZ	Xorg.0.log[19625]:	systemd: Started User Session 3508 of user pgadmin.
-Aug 21 19:49:44	RUfus	Xorg.0.log[15197]:	systemd: Started User Session 8306 of user fztu.
-Aug 21 19:50:11	prod1	Xorg.0.log[24801]:	(EE) Backtrace:
-Aug 21 19:50:13	testvm	Xorg.0.log[24921]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 19:51:53	testvm	Xorg.0.log[2654]:	Did not receive identification string from 126.227.201.126
-Aug 21 19:52:09	ADM	Xorg.0.log[13189]:	pam_unix(sshd:session): session closed for user admin
-Aug 21 19:52:12	RUfus	Xorg.0.log[14006]:	pam_unix(sshd:session): session opened for user fztu by (uid=8)
-Aug 21 19:52:18	prod1	Xorg.0.log[17122]:	event24  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 19:52:26	RUfus	Xorg.0.log[7710]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event54)
-Aug 21 19:53:00	prod1	Xorg.0.log[10465]:	Received disconnect from 170.69.48.155: 84: Bye Bye [preauth]
-Aug 21 19:53:02	ADM	Xorg.0.log[27842]:	Received disconnect from 125.253.175.81: 9: Closed due to user request [preauth]
-Aug 21 19:53:06	prod1	Xorg.0.log[22564]:	Received disconnect from 93.253.101.227: 48: Closed due to user request [preauth]
-Aug 21 19:54:18	LabSZ	Xorg.0.log[28125]:	pam_unix(sshd:session): session opened for user oracle by (uid=76)
-Aug 21 19:54:42	testvm	Xorg.0.log[22355]:	systemd: Started User Session 5291 of user webmaster.
-Aug 21 19:55:25	RUfus	Xorg.0.log[20680]:	Received disconnect from 194.131.232.205: 14: Closed due to user request [preauth]
-Aug 21 19:55:51	ADM	Xorg.0.log[4899]:	kernel: usb 1-66: USB disconnect, device number 2
-Aug 21 19:56:03	prod1	Xorg.0.log[26642]:	pam_unix(sshd:session): session closed for user root
-Aug 21 19:56:07	prod1	Xorg.0.log[8302]:	kernel: usb 1-85: USB disconnect, device number 2
-Aug 21 19:56:17	ADM	Xorg.0.log[27151]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event24)
-Aug 21 19:57:58	ADM	Xorg.0.log[14345]:	Did not receive identification string from 96.81.126.149
-Aug 21 19:58:00	ADM	Xorg.0.log[21634]:	kernel: usb 1-95: USB disconnect, device number 2
-Aug 21 19:58:06	archive	Xorg.0.log[4632]:	Received disconnect from 187.116.3.149: 12: Bye Bye [preauth]
-Aug 21 19:58:15	RUfus	Xorg.0.log[13185]:	Accepted password for ubuntu from 234.86.209.97 port 56234 ssh10
-Aug 21 19:59:03	archive	Xorg.0.log[19976]:	pam_unix(sshd:session): session closed for user ubuntu
-Aug 21 19:59:05	archive	Xorg.0.log[15490]:	Received disconnect from 163.89.100.249: 10: disconnected by user
-Aug 21 19:59:16	testvm	Xorg.0.log[6061]:	kernel: usb 1-73: USB disconnect, device number 2
-Aug 21 21:10:35	archive	Xorg.0.log[7775]:	kernel: usb 1-76: USB disconnect, device number 2
-Aug 21 21:13:17	testvm	Xorg.0.log[19699]:	Received disconnect from 61.166.226.142: 67: Bye Bye [preauth]
-Aug 21 21:14:02	server	Xorg.0.log[9903]:	Received disconnect from 233.92.210.176: 79: disconnected by user
-Aug 21 21:14:20	RUfus	Xorg.0.log[8160]:	kernel: usb 1-27: USB disconnect, device number 2
-Aug 21 21:14:27	prod1	Xorg.0.log[27346]:	Received disconnect from 117.64.241.127: 88: Closed due to user request [preauth]
-Aug 21 21:15:08	LabSZ	Xorg.0.log[16131]:	Accepted password for backup from 235.219.219.110 port 48697 ssh74
-Aug 21 21:15:11	ADM	Xorg.0.log[22264]:	kernel: usb 1-58: USB disconnect, device number 2
-Aug 21 21:15:36	archive	Xorg.0.log[28959]:	Accepted password for guest from 46.107.223.122 port 62757 ssh44
-Aug 21 21:16:31	RUfus	Xorg.0.log[1168]:	Did not receive identification string from 242.181.197.252
-Aug 21 21:16:35	ADM	Xorg.0.log[25229]:	Received disconnect from 106.38.125.137: 99: Bye Bye [preauth]
-Aug 21 21:16:48	archive	Xorg.0.log[9462]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 21:17:40	LabSZ	Xorg.0.log[25257]:	(EE) Backtrace:
-Aug 21 21:17:41	RUfus	Xorg.0.log[6165]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 21:18:12	ADM	Xorg.0.log[7902]:	Received disconnect from 105.155.93.61: 72: disconnected by user
-Aug 21 21:18:15	prod1	Xorg.0.log[29149]:	(EE) Backtrace:
-Aug 21 21:18:15	prod1	Xorg.0.log[17410]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 21:18:25	prod1	Xorg.0.log[2738]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 21:18:31	prod1	Xorg.0.log[20175]:	kernel: usb 1-87: USB disconnect, device number 2
-Aug 21 21:18:43	RUfus	Xorg.0.log[7159]:	Received disconnect from 1.129.198.67: 44: disconnected by user
-Aug 21 21:19:01	ADM	Xorg.0.log[23780]:	Received disconnect from 162.8.208.53: 56: disconnected by user
-Aug 21 21:19:04	testvm	Xorg.0.log[4508]:	Accepted password for fztu from 195.192.228.198 port 32697 ssh44
-Aug 21 21:20:45	server	Xorg.0.log[23314]:	systemd: Started User Session 5024 of user guest.
-Aug 21 21:21:26	RUfus	Xorg.0.log[23324]:	Received disconnect from 92.130.236.75: 34: disconnected by user
-Aug 21 21:21:31	server	Xorg.0.log[23798]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event98)
-Aug 21 21:21:36	prod1	Xorg.0.log[28276]:	systemd: Started User Session 25084 of user test.
-Aug 21 21:22:36	RUfus	Xorg.0.log[15403]:	Received disconnect from 247.19.99.237: 19: Closed due to user request [preauth]
-Aug 21 21:22:42	LabSZ	Xorg.0.log[8004]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event91)
-Aug 21 21:22:44	archive	Xorg.0.log[22239]:	(EE) Backtrace:
-Aug 21 21:22:44	LabSZ	Xorg.0.log[14461]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 21:22:56	testvm	Xorg.0.log[23664]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 21:23:03	RUfus	Xorg.0.log[16496]:	pam_unix(sshd:session): session closed for user oracle
-Aug 21 21:24:35	archive	Xorg.0.log[14202]:	Accepted password for webmaster from 217.73.83.235 port 8992 ssh13
-Aug 21 21:25:07	LabSZ	Xorg.0.log[21983]:	kernel: usb 1-77: USB disconnect, device number 2
-Aug 21 21:25:40	testvm	Xorg.0.log[18394]:	pam_unix(sshd:session): session closed for user test
-Aug 21 21:25:42	server	Xorg.0.log[4356]:	event62  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 21:25:48	prod1	Xorg.0.log[23951]:	Connection closed by 2.196.161.148 [preauth]
-Aug 21 21:26:23	ADM	Xorg.0.log[12666]:	Accepted password for backup from 184.125.188.74 port 28590 ssh69
-Aug 21 21:26:41	ADM	Xorg.0.log[15532]:	Received disconnect from 107.121.56.52: 23: Closed due to user request [preauth]
-Aug 21 21:27:20	testvm	Xorg.0.log[11389]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:96.0/usb3/3-4/3-4:1.0/0003:1EA7:00966.0001/input/input96/event96
-Aug 21 21:27:39	LabSZ	Xorg.0.log[10160]:	Accepted password for pgadmin from 61.129.95.176 port 23492 ssh35
-Aug 21 21:27:49	ADM	Xorg.0.log[28119]:	kernel: usb 1-72: USB disconnect, device number 2
-Aug 21 21:27:56	LabSZ	Xorg.0.log[23697]:	Received disconnect from 38.138.241.44: 71: disconnected by user
-Aug 21 21:28:09	LabSZ	Xorg.0.log[18984]:	pam_unix(sshd:session): session closed for user backup
-Aug 21 21:28:35	archive	Xorg.0.log[10326]:	Received disconnect from 53.251.195.203: 57: Closed due to user request [preauth]
-Aug 21 21:28:42	archive	Xorg.0.log[13581]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 21:29:00	RUfus	Xorg.0.log[28770]:	Received disconnect from 180.249.22.135: 22: disconnected by user
-Aug 21 21:29:48	LabSZ	Xorg.0.log[22346]:	Received disconnect from 177.240.184.214: 42: disconnected by user
-Aug 21 21:29:55	prod1	Xorg.0.log[21090]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:41.0/usb3/3-4/3-4:1.0/0003:1EA7:00416.0001/input/input41/event41
-Aug 21 21:30:37	prod1	Xorg.0.log[10806]:	kernel: usb 1-90: USB disconnect, device number 2
-Aug 21 21:30:40	RUfus	Xorg.0.log[15648]:	kernel: usb 1-32: USB disconnect, device number 2
-Aug 21 21:31:10	ADM	Xorg.0.log[16343]:	(EE) Backtrace:
-Aug 21 21:31:11	prod1	Xorg.0.log[18482]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 21:31:23	LabSZ	Xorg.0.log[16335]:	kernel: usb 1-8: USB disconnect, device number 2
-Aug 21 21:31:40	prod1	Xorg.0.log[9089]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event24)
-Aug 21 21:31:43	LabSZ	Xorg.0.log[2253]:	systemd: Started User Session 26220 of user oracle.
-Aug 21 21:32:06	ADM	Xorg.0.log[27006]:	Did not receive identification string from 32.85.9.108
-Aug 21 21:32:09	ADM	Xorg.0.log[19351]:	Received disconnect from 32.173.193.236: 90: Bye Bye [preauth]
-Aug 21 21:32:56	LabSZ	Xorg.0.log[11969]:	Received disconnect from 188.123.117.133: 31: Bye Bye [preauth]
-Aug 21 21:32:59	server	Xorg.0.log[4032]:	kernel: usb 1-82: USB disconnect, device number 2
-Aug 21 21:33:06	RUfus	Xorg.0.log[6761]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event72)
-Aug 21 21:33:14	LabSZ	Xorg.0.log[23853]:	Received disconnect from 14.113.187.31: 46: disconnected by user
-Aug 21 21:33:39	testvm	Xorg.0.log[6747]:	Connection closed by 134.85.183.101 [preauth]
-Aug 21 21:35:26	prod1	Xorg.0.log[1557]:	Did not receive identification string from 15.232.237.92
-Aug 21 21:35:59	server	Xorg.0.log[13997]:	event15  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 21:36:09	ADM	Xorg.0.log[3629]:	Connection closed by 198.101.218.98 [preauth]
-Aug 21 21:36:16	prod1	Xorg.0.log[2537]:	pam_unix(sshd:session): session closed for user fztu
-Aug 21 21:36:30	LabSZ	Xorg.0.log[8365]:	Received disconnect from 30.172.153.122: 35: Closed due to user request [preauth]
-Aug 21 21:36:37	testvm	Xorg.0.log[2588]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event46)
-Aug 21 21:36:40	prod1	Xorg.0.log[14805]:	Received disconnect from 148.231.186.185: 97: Bye Bye [preauth]
-Aug 21 21:36:53	prod1	Xorg.0.log[15062]:	Received disconnect from 52.68.203.193: 38: Bye Bye [preauth]
-Aug 21 21:36:57	server	Xorg.0.log[23887]:	pam_unix(sshd:session): session closed for user test
-Aug 21 21:37:01	testvm	Xorg.0.log[26817]:	Did not receive identification string from 21.165.63.243
-Aug 21 21:37:28	archive	Xorg.0.log[27846]:	kernel: usb 1-12: USB disconnect, device number 2
-Aug 21 21:38:02	archive	Xorg.0.log[22000]:	event35  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 21:38:04	server	Xorg.0.log[17605]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 21:38:16	testvm	Xorg.0.log[10238]:	Received disconnect from 167.10.180.42: 16: Closed due to user request [preauth]
-Aug 21 21:38:33	LabSZ	Xorg.0.log[2079]:	Accepted password for pgadmin from 110.71.29.57 port 22646 ssh71
-Aug 21 21:39:23	prod1	Xorg.0.log[27086]:	pam_unix(sshd:session): session closed for user admin
-Aug 21 21:39:28	LabSZ	Xorg.0.log[16598]:	pam_unix(sshd:session): session opened for user matlab by (uid=28)
-Aug 21 21:39:30	LabSZ	Xorg.0.log[12685]:	Received disconnect from 22.10.234.130: 75: Bye Bye [preauth]
-Aug 21 21:40:28	server	Xorg.0.log[27023]:	Connection closed by 226.81.70.96 [preauth]
-Aug 21 21:41:25	prod1	Xorg.0.log[17503]:	Connection closed by 192.210.98.223 [preauth]
-Aug 21 21:41:27	RUfus	Xorg.0.log[16102]:	pam_unix(sshd:session): session opened for user test by (uid=56)
-Aug 21 21:41:30	ADM	Xorg.0.log[19644]:	Received disconnect from 121.245.187.10: 21: disconnected by user
-Aug 21 21:41:43	server	Xorg.0.log[28622]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event38)
-Aug 21 21:42:14	ADM	Xorg.0.log[17250]:	Received disconnect from 202.240.135.247: 69: disconnected by user
-Aug 21 21:42:45	RUfus	Xorg.0.log[3033]:	Did not receive identification string from 201.66.130.139
-Aug 21 21:43:09	prod1	Xorg.0.log[13600]:	Did not receive identification string from 25.127.146.177
-Aug 21 21:43:24	LabSZ	Xorg.0.log[18763]:	event91  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 21:43:45	server	Xorg.0.log[7460]:	systemd: Started User Session 20181 of user admin.
-Aug 21 21:43:52	RUfus	Xorg.0.log[16321]:	Did not receive identification string from 194.247.163.170
-Aug 21 21:45:05	RUfus	Xorg.0.log[14425]:	event46  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 21:45:13	LabSZ	Xorg.0.log[15962]:	pam_unix(sshd:session): session opened for user oracle by (uid=62)
-Aug 21 21:46:03	testvm	Xorg.0.log[19288]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 21:46:09	RUfus	Xorg.0.log[24614]:	systemd: Started User Session 27474 of user 123.
-Aug 21 21:46:23	LabSZ	Xorg.0.log[12127]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:28.0/usb3/3-4/3-4:1.0/0003:1EA7:00286.0001/input/input28/event28
-Aug 21 21:46:26	RUfus	Xorg.0.log[13333]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 21:46:34	RUfus	Xorg.0.log[8763]:	Did not receive identification string from 149.63.100.166
-Aug 21 21:46:47	prod1	Xorg.0.log[17735]:	kernel: [12346.249362] Kernel panic - attempted to kill init! exitcode=0x00000009
-Aug 21 21:47:26	LabSZ	Xorg.0.log[15889]:	Received disconnect from 203.117.236.5: 13: Closed due to user request [preauth]
-Aug 21 21:48:35	server	Xorg.0.log[4544]:	PAM 61 more authentication failures; logname= uid=3 euid=7 tty=ssh ruser= rhost=170.124.191.111  user=webmaster
-Aug 21 21:48:48	ADM	Xorg.0.log[25824]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 21:48:51	LabSZ	Xorg.0.log[1647]:	systemd: Started User Session 25491 of user backup.
-Aug 21 21:50:01	LabSZ	Xorg.0.log[13793]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event63)
-Aug 21 21:50:41	LabSZ	Xorg.0.log[4052]:	(EE) Backtrace:
-Aug 21 21:50:41	prod1	Xorg.0.log[12227]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 21:51:34	RUfus	Xorg.0.log[4033]:	Received disconnect from 43.196.152.74: 95: disconnected by user
-Aug 21 21:51:42	ADM	Xorg.0.log[23618]:	Connection closed by 231.67.96.144 [preauth]
-Aug 21 21:51:58	archive	Xorg.0.log[15574]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event48)
-Aug 21 21:52:04	RUfus	Xorg.0.log[14287]:	event8  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 21:52:16	LabSZ	Xorg.0.log[28901]:	Accepted password for webmaster from 11.55.179.157 port 58584 ssh57
-Aug 21 21:53:31	LabSZ	Xorg.0.log[20639]:	Connection closed by 248.179.180.252 [preauth]
-Aug 21 21:53:39	server	Xorg.0.log[26589]:	(EE) Backtrace:
-Aug 21 21:53:39	LabSZ	Xorg.0.log[5332]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 21:53:54	testvm	Xorg.0.log[3286]:	Connection closed by 181.156.236.102 [preauth]
-Aug 21 21:54:12	prod1	Xorg.0.log[15971]:	pam_unix(sshd:session): session opened for user matlab by (uid=22)
-Aug 21 21:54:39	archive	Xorg.0.log[24731]:	kernel: usb 1-63: USB disconnect, device number 2
-Aug 21 21:54:47	ADM	Xorg.0.log[10777]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 21:55:30	server	Xorg.0.log[3877]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event58)
-Aug 21 21:55:32	LabSZ	Xorg.0.log[5392]:	pam_unix(sshd:session): session opened for user guest by (uid=27)
-Aug 21 21:55:42	RUfus	Xorg.0.log[26862]:	Received disconnect from 4.183.160.198: 22: disconnected by user
-Aug 21 21:55:59	testvm	Xorg.0.log[24093]:	systemd: Started User Session 29932 of user chen.
-Aug 21 21:56:19	testvm	Xorg.0.log[17018]:	event10  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 21:57:00	RUfus	Xorg.0.log[3739]:	Received disconnect from 132.73.242.112: 78: disconnected by user
-Aug 21 21:57:06	archive	Xorg.0.log[28670]:	Received disconnect from 115.145.185.64: 27: disconnected by user
-Aug 21 21:57:25	server	Xorg.0.log[27756]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:97.0/usb3/3-4/3-4:1.0/0003:1EA7:00976.0001/input/input97/event97
-Aug 21 21:57:30	RUfus	Xorg.0.log[20770]:	kernel: usb 1-26: USB disconnect, device number 2
-Aug 21 21:57:44	RUfus	Xorg.0.log[17269]:	Accepted password for matlab from 159.105.244.7 port 30863 ssh34
-Aug 21 21:57:46	server	Xorg.0.log[15547]:	pam_unix(sshd:session): session closed for user pgadmin
-Aug 21 21:58:05	archive	Xorg.0.log[15563]:	Connection closed by 3.54.82.57 [preauth]
-Aug 21 21:58:16	archive	Xorg.0.log[3921]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=47)
-Aug 21 21:58:54	LabSZ	Xorg.0.log[6946]:	systemd: Started User Session 20940 of user root.
-Aug 21 22:00:23	LabSZ	Xorg.0.log[11664]:	systemd: Started User Session 4242 of user oracle.
-Aug 21 22:00:41	LabSZ	Xorg.0.log[25910]:	pam_unix(sshd:session): session closed for user guest
-Aug 21 22:00:45	RUfus	Xorg.0.log[15882]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event51)
-Aug 21 22:01:14	prod1	Xorg.0.log[26634]:	kernel: usb 1-35: USB disconnect, device number 2
-Aug 21 22:02:41	prod1	Xorg.0.log[11494]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 22:02:53	server	Xorg.0.log[15457]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 22:03:15	ADM	Xorg.0.log[12721]:	Accepted password for chen from 154.70.4.188 port 61460 ssh23
-Aug 21 22:03:36	RUfus	Xorg.0.log[8312]:	kernel: usb 1-60: USB disconnect, device number 2
-Aug 21 22:03:56	RUfus	Xorg.0.log[25028]:	kernel: usb 1-10: USB disconnect, device number 2
-Aug 21 22:04:41	archive	Xorg.0.log[20228]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:75.0/usb3/3-4/3-4:1.0/0003:1EA7:00756.0001/input/input75/event75
-Aug 21 22:04:45	LabSZ	Xorg.0.log[8449]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 22:05:52	testvm	Xorg.0.log[21131]:	pam_unix(sshd:session): session closed for user root
-Aug 21 22:05:54	LabSZ	Xorg.0.log[22728]:	event94  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 22:06:08	server	Xorg.0.log[22650]:	Connection closed by 213.9.141.4 [preauth]
-Aug 21 22:06:20	LabSZ	Xorg.0.log[1065]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 22:06:56	server	Xorg.0.log[22502]:	Received disconnect from 27.71.30.237: 17: disconnected by user
-Aug 21 22:07:21	archive	Xorg.0.log[20961]:	pam_unix(sshd:session): session opened for user backup by (uid=64)
-Aug 21 22:07:37	testvm	Xorg.0.log[12462]:	Connection closed by 166.124.65.26 [preauth]
-Aug 21 22:07:40	prod1	Xorg.0.log[3474]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:82.0/usb3/3-4/3-4:1.0/0003:1EA7:00826.0001/input/input82/event82
-Aug 21 22:08:02	RUfus	Xorg.0.log[17819]:	pam_unix(sshd:session): session closed for user backup
-Aug 21 22:08:19	RUfus	Xorg.0.log[1596]:	systemd: Started User Session 28724 of user matlab.
-Aug 21 22:08:33	prod1	Xorg.0.log[20378]:	Received disconnect from 238.12.32.46: 84: disconnected by user
-Aug 21 22:08:46	testvm	Xorg.0.log[8309]:	Received disconnect from 219.211.14.185: 65: Closed due to user request [preauth]
-Aug 21 22:09:04	server	Xorg.0.log[28847]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:19.0/usb3/3-4/3-4:1.0/0003:1EA7:00196.0001/input/input19/event19
-Aug 21 22:10:03	server	Xorg.0.log[19563]:	Did not receive identification string from 136.31.189.65
-Aug 21 22:10:05	prod1	Xorg.0.log[14564]:	Received disconnect from 124.19.178.108: 74: Bye Bye [preauth]
-Aug 21 22:10:28	LabSZ	Xorg.0.log[29256]:	systemd: Started User Session 11779 of user backup.
-Aug 21 22:10:34	prod1	Xorg.0.log[12152]:	systemd: Started User Session 12073 of user guest.
-Aug 21 22:10:37	RUfus	Xorg.0.log[25087]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event78)
-Aug 21 22:11:37	ADM	Xorg.0.log[27372]:	Received disconnect from 60.214.198.140: 54: Closed due to user request [preauth]
-Aug 21 22:11:46	prod1	Xorg.0.log[18405]:	pam_unix(sshd:session): session closed for user guest
-Aug 21 22:12:56	testvm	Xorg.0.log[3499]:	Did not receive identification string from 143.47.29.76
-Aug 21 22:13:08	server	Xorg.0.log[18731]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event63)
-Aug 21 22:13:31	RUfus	Xorg.0.log[14753]:	Received disconnect from 50.46.119.15: 1: Bye Bye [preauth]
-Aug 21 22:13:45	server	Xorg.0.log[27628]:	pam_unix(sshd:session): session opened for user oracle by (uid=1)
-Aug 21 22:13:50	LabSZ	Xorg.0.log[5001]:	pam_unix(sshd:session): session closed for user webmaster
-Aug 21 22:13:55	RUfus	Xorg.0.log[5340]:	Connection closed by 159.108.82.231 [preauth]
-Aug 21 22:14:18	server	Xorg.0.log[6160]:	Received disconnect from 111.134.131.250: 41: Closed due to user request [preauth]
-Aug 21 22:14:44	archive	Xorg.0.log[28149]:	(EE) Backtrace:
-Aug 21 22:14:45	ADM	Xorg.0.log[10110]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
-Aug 21 22:14:58	server	Xorg.0.log[23292]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event17)
-Aug 21 22:16:20	LabSZ	Xorg.0.log[22900]:	event76  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 22:16:44	server	Xorg.0.log[25590]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:29.0/usb3/3-4/3-4:1.0/0003:1EA7:00296.0001/input/input29/event29
-Aug 21 22:17:02	LabSZ	Xorg.0.log[10199]:	Received disconnect from 162.79.248.133: 92: Bye Bye [preauth]
-Aug 21 22:17:05	testvm	Xorg.0.log[28658]:	Received disconnect from 138.76.220.73: 43: Bye Bye [preauth]
-Aug 21 22:17:47	ADM	Xorg.0.log[20771]:	Did not receive identification string from 216.240.183.97
-Aug 21 22:18:26	server	Xorg.0.log[2928]:	Received disconnect from 29.218.36.215: 23: Bye Bye [preauth]
-Aug 21 22:18:56	server	Xorg.0.log[11061]:	event16  - Sleep Button: is tagged by udev as: Keyboard
-Aug 21 22:18:59	prod1	Xorg.0.log[17479]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
-Aug 21 22:19:23	testvm	Xorg.0.log[17160]:	Received disconnect from 226.95.151.55: 50: Closed due to user request [preauth]
-Aug 21 22:19:49	RUfus	Xorg.0.log[8144]:	Connection closed by 20.135.128.238 [preauth]
-Aug 21 22:20:13	testvm	Xorg.0.log[3520]:	pam_unix(sshd:session): session closed for user pgadmin
-Aug 21 22:20:20	testvm	Xorg.0.log[2624]:	Received disconnect from 91.119.10.111: 27: Closed due to user request [preauth]
-Aug 21 22:20:24	testvm	Xorg.0.log[9163]:	Accepted password for chen from 156.62.42.11 port 18381 ssh97
-Aug 21 22:20:30	LabSZ	Xorg.0.log[18550]:	Received disconnect from 211.221.199.4: 37: disconnected by user
-Aug 21 22:20:36	testvm	Xorg.0.log[1464]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event82)
+Aug 29 00:45:06	testvm	Xorg.0.log[9184]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 00:45:08	ADM	Xorg.0.log[15867]:	Received disconnect from 28.230.247.42: 38: Closed due to user request [preauth]
+Aug 29 00:45:42	RUfus	Xorg.0.log[19055]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:91.0/usb3/3-4/3-4:1.0/0003:1EA7:00916.0001/input/input91/event91
+Aug 29 00:46:42	RUfus	Xorg.0.log[15497]:	Received disconnect from 242.142.178.66: 96: disconnected by user
+Aug 29 00:47:19	prod1	Xorg.0.log[9517]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:12.0/usb3/3-4/3-4:1.0/0003:1EA7:00126.0001/input/input12/event12
+Aug 29 00:47:21	prod1	Xorg.0.log[11546]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:45.0/usb3/3-4/3-4:1.0/0003:1EA7:00456.0001/input/input45/event45
+Aug 29 00:48:04	prod1	Xorg.0.log[9221]:	pam_unix(sshd:session): session opened for user oracle by (uid=31)
+Aug 29 00:48:06	server	Xorg.0.log[5603]:	Received disconnect from 91.241.170.226: 44: Bye Bye [preauth]
+Aug 29 00:48:29	prod1	Xorg.0.log[27580]:	Received disconnect from 132.7.253.210: 73: Bye Bye [preauth]
+Aug 29 00:48:33	archive	Xorg.0.log[22376]:	pam_unix(sshd:session): session closed for user fztu
+Aug 29 00:48:36	prod1	Xorg.0.log[11146]:	Received disconnect from 227.65.192.153: 38: disconnected by user
+Aug 29 00:49:22	prod1	Xorg.0.log[21168]:	Received disconnect from 168.239.88.32: 52: Closed due to user request [preauth]
+Aug 29 00:53:59	prod1	Xorg.0.log[10010]:	pam_unix(sshd:session): session opened for user matlab by (uid=60)
+Aug 29 00:54:01	LabSZ	Xorg.0.log[11859]:	pam_unix(sshd:session): session closed for user chen
+Aug 29 00:54:57	testvm	Xorg.0.log[2933]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event62)
+Aug 29 00:55:00	archive	Xorg.0.log[29202]:	Connection closed by 183.235.3.28 [preauth]
+Aug 29 00:55:01	server	Xorg.0.log[21972]:	pam_unix(sshd:session): session closed for user pgadmin
+Aug 29 01:07:36	LabSZ	Xorg.0.log[20379]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:08:10	LabSZ	Xorg.0.log[7329]:	Accepted password for ubuntu from 103.209.2.89 port 35738 ssh78
+Aug 29 01:09:29	server	Xorg.0.log[12818]:	Did not receive identification string from 150.187.143.18
+Aug 29 01:10:20	ADM	Xorg.0.log[9672]:	Connection closed by 239.37.60.243 [preauth]
+Aug 29 01:12:24	prod1	Xorg.0.log[17506]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event4)
+Aug 29 01:12:26	archive	Xorg.0.log[12982]:	kernel: usb 1-16: USB disconnect, device number 2
+Aug 29 01:12:31	RUfus	Xorg.0.log[1812]:	kernel: usb 1-21: USB disconnect, device number 2
+Aug 29 01:13:00	server	Xorg.0.log[1613]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:13:25	prod1	Xorg.0.log[7170]:	pam_unix(sshd:session): session closed for user root
+Aug 29 01:13:40	server	Xorg.0.log[21145]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event33)
+Aug 29 01:15:22	testvm	Xorg.0.log[16356]:	systemd: Started User Session 3814 of user backup.
+Aug 29 01:17:53	LabSZ	Xorg.0.log[1282]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:18:09	prod1	Xorg.0.log[23954]:	Received disconnect from 224.35.161.181: 31: Bye Bye [preauth]
+Aug 29 01:18:35	prod1	Xorg.0.log[25978]:	event50  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 01:18:54	RUfus	Xorg.0.log[9894]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event44)
+Aug 29 01:20:07	archive	Xorg.0.log[17200]:	Connection closed by 47.152.151.89 [preauth]
+Aug 29 01:20:10	testvm	Xorg.0.log[7387]:	Received disconnect from 25.40.6.206: 17: Closed due to user request [preauth]
+Aug 29 01:20:12	ADM	Xorg.0.log[2267]:	pam_unix(sshd:session): session closed for user guest
+Aug 29 01:21:25	testvm	Xorg.0.log[21638]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:22:08	ADM	Xorg.0.log[28581]:	Did not receive identification string from 219.200.42.206
+Aug 29 01:22:12	testvm	Xorg.0.log[15713]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:22:27	testvm	Xorg.0.log[28905]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:22:47	testvm	Xorg.0.log[18081]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:23:40	ADM	Xorg.0.log[24922]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event6)
+Aug 29 01:23:51	server	Xorg.0.log[5239]:	pam_unix(sshd:session): session closed for user oracle
+Aug 29 01:24:43	RUfus	Xorg.0.log[29438]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:88.0/usb3/3-4/3-4:1.0/0003:1EA7:00886.0001/input/input88/event88
+Aug 29 01:24:46	archive	Xorg.0.log[11859]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:53.0/usb3/3-4/3-4:1.0/0003:1EA7:00536.0001/input/input53/event53
+Aug 29 01:24:56	ADM	Xorg.0.log[14385]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:25:37	RUfus	Xorg.0.log[12746]:	pam_unix(sshd:session): session closed for user root
+Aug 29 01:25:40	ADM	Xorg.0.log[18568]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:26:22	RUfus	Xorg.0.log[12339]:	kernel: usb 1-96: USB disconnect, device number 2
+Aug 29 01:26:28	RUfus	Xorg.0.log[19275]:	kernel: usb 1-94: USB disconnect, device number 2
+Aug 29 01:26:51	RUfus	Xorg.0.log[25353]:	kernel: usb 1-42: USB disconnect, device number 2
+Aug 29 01:27:04	server	Xorg.0.log[6276]:	event55  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 01:27:07	testvm	Xorg.0.log[9446]:	event32  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 01:27:26	archive	Xorg.0.log[18066]:	Connection closed by 28.145.140.107 [preauth]
+Aug 29 01:28:21	ADM	Xorg.0.log[18389]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:28:58	ADM	Xorg.0.log[24232]:	pam_unix(sshd:session): session opened for user oracle by (uid=87)
+Aug 29 01:30:06	archive	Xorg.0.log[28197]:	Did not receive identification string from 31.56.38.71
+Aug 29 01:30:10	archive	Xorg.0.log[29129]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event12)
+Aug 29 01:31:49	archive	Xorg.0.log[1314]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event54)
+Aug 29 01:31:59	prod1	Xorg.0.log[11085]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event31)
+Aug 29 01:32:04	ADM	Xorg.0.log[18783]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:16.0/usb3/3-4/3-4:1.0/0003:1EA7:00166.0001/input/input16/event16
+Aug 29 01:32:19	server	Xorg.0.log[11762]:	Received disconnect from 86.164.47.101: 52: Bye Bye [preauth]
+Aug 29 01:32:23	RUfus	Xorg.0.log[1190]:	pam_unix(sshd:session): session opened for user backup by (uid=40)
+Aug 29 01:32:59	ADM	Xorg.0.log[14177]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event6)
+Aug 29 01:33:02	prod1	Xorg.0.log[22318]:	event41  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 01:35:09	prod1	Xorg.0.log[2670]:	kernel: [12345.267460] Kernel panic - not syncing: Fatal exception
+Aug 29 01:36:28	prod1	Xorg.0.log[11193]:	pam_unix(sshd:session): session closed for user oracle
+Aug 29 01:36:39	server	Xorg.0.log[20142]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:11.0/usb3/3-4/3-4:1.0/0003:1EA7:00116.0001/input/input11/event11
+Aug 29 01:36:46	ADM	Xorg.0.log[27739]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:67.0/usb3/3-4/3-4:1.0/0003:1EA7:00676.0001/input/input67/event67
+Aug 29 01:36:56	LabSZ	Xorg.0.log[24174]:	Received disconnect from 153.4.63.103: 85: disconnected by user
+Aug 29 01:37:22	testvm	Xorg.0.log[7980]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event84)
+Aug 29 01:37:28	LabSZ	Xorg.0.log[7611]:	event66  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 01:39:20	RUfus	Xorg.0.log[8782]:	systemd: Started User Session 16349 of user guest.
+Aug 29 01:39:28	server	Xorg.0.log[1339]:	systemd: Started User Session 14502 of user admin.
+Aug 29 01:39:31	prod1	Xorg.0.log[26261]:	Received disconnect from 193.182.13.140: 93: disconnected by user
+Aug 29 01:39:56	ADM	Xorg.0.log[1713]:	pam_unix(sshd:session): session closed for user guest
+Aug 29 01:41:17	server	Xorg.0.log[27133]:	Received disconnect from 4.70.225.185: 70: Bye Bye [preauth]
+Aug 29 01:42:06	archive	Xorg.0.log[5239]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:80.0/usb3/3-4/3-4:1.0/0003:1EA7:00806.0001/input/input80/event80
+Aug 29 01:42:24	LabSZ	Xorg.0.log[18336]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event97)
+Aug 29 01:42:26	server	Xorg.0.log[11449]:	Received disconnect from 14.17.57.78: 99: disconnected by user
+Aug 29 01:42:39	server	Xorg.0.log[17899]:	pam_unix(sshd:session): session closed for user webmaster
+Aug 29 01:43:03	LabSZ	Xorg.0.log[19119]:	Connection closed by 213.199.86.108 [preauth]
+Aug 29 01:45:13	RUfus	Xorg.0.log[15105]:	Connection closed by 165.153.243.20 [preauth]
+Aug 29 01:45:17	RUfus	Xorg.0.log[12290]:	Received disconnect from 3.23.98.63: 17: Closed due to user request [preauth]
+Aug 29 01:45:52	RUfus	Xorg.0.log[14425]:	(EE) Backtrace:
+Aug 29 01:45:54	LabSZ	Xorg.0.log[4399]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Aug 29 01:47:00	archive	Xorg.0.log[12304]:	kernel: usb 1-81: USB disconnect, device number 2
+Aug 29 01:47:48	testvm	Xorg.0.log[7109]:	Received disconnect from 29.114.48.101: 56: disconnected by user
+Aug 29 01:47:50	LabSZ	Xorg.0.log[2130]:	systemd: Started User Session 3362 of user 123.
+Aug 29 01:48:01	server	Xorg.0.log[1181]:	pam_unix(sshd:session): session opened for user admin by (uid=80)
+Aug 29 01:48:25	RUfus	Xorg.0.log[27107]:	kernel: usb 1-46: USB disconnect, device number 2
+Aug 29 01:48:49	testvm	Xorg.0.log[17929]:	Accepted password for pgadmin from 93.247.34.54 port 44723 ssh43
+Aug 29 01:50:07	RUfus	Xorg.0.log[4767]:	Accepted password for ubuntu from 165.91.140.57 port 50334 ssh80
+Aug 29 01:50:13	server	Xorg.0.log[11965]:	systemd: Started User Session 18993 of user test.
+Aug 29 01:50:16	LabSZ	Xorg.0.log[21268]:	Received disconnect from 67.249.215.79: 53: Bye Bye [preauth]
+Aug 29 01:50:23	testvm	Xorg.0.log[6396]:	Received disconnect from 247.91.37.2: 8: disconnected by user
+Aug 29 01:50:47	prod1	Xorg.0.log[28476]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:50:49	archive	Xorg.0.log[12723]:	Received disconnect from 128.231.173.70: 90: Bye Bye [preauth]
+Aug 29 01:50:52	prod1	Xorg.0.log[7429]:	pam_unix(sshd:session): session opened for user oracle by (uid=94)
+Aug 29 01:51:09	server	Xorg.0.log[12541]:	pam_unix(sshd:session): session closed for user ubuntu
+Aug 29 01:51:34	ADM	Xorg.0.log[1370]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:78.0/usb3/3-4/3-4:1.0/0003:1EA7:00786.0001/input/input78/event78
+Aug 29 01:52:02	LabSZ	Xorg.0.log[7497]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:97.0/usb3/3-4/3-4:1.0/0003:1EA7:00976.0001/input/input97/event97
+Aug 29 01:52:08	prod1	Xorg.0.log[8755]:	systemd: Started User Session 17065 of user fztu.
+Aug 29 01:52:25	RUfus	Xorg.0.log[18358]:	pam_unix(sshd:session): session opened for user oracle by (uid=86)
+Aug 29 01:53:20	archive	Xorg.0.log[3085]:	Received disconnect from 173.73.65.157: 17: Closed due to user request [preauth]
+Aug 29 01:53:22	LabSZ	Xorg.0.log[2698]:	Accepted password for fztu from 166.251.4.163 port 64452 ssh54
+Aug 29 01:53:26	server	Xorg.0.log[25241]:	Did not receive identification string from 82.242.78.244
+Aug 29 01:53:29	testvm	Xorg.0.log[27180]:	Connection closed by 250.18.14.253 [preauth]
+Aug 29 01:53:35	prod1	Xorg.0.log[27532]:	Received disconnect from 162.16.19.90: 57: disconnected by user
+Aug 29 01:53:37	ADM	Xorg.0.log[17151]:	Connection closed by 73.112.97.138 [preauth]
+Aug 29 01:54:07	RUfus	Xorg.0.log[13886]:	Connection closed by 230.191.26.157 [preauth]
+Aug 29 01:54:34	prod1	Xorg.0.log[29136]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event97)
+Aug 29 01:54:54	server	Xorg.0.log[1582]:	Accepted password for webmaster from 61.196.87.1 port 19557 ssh28
+Aug 29 01:55:16	LabSZ	Xorg.0.log[14902]:	pam_unix(sshd:session): session closed for user pgadmin
+Aug 29 01:55:23	RUfus	Xorg.0.log[14250]:	Received disconnect from 186.14.196.255: 12: disconnected by user
+Aug 29 01:55:29	ADM	Xorg.0.log[9239]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:55:36	testvm	Xorg.0.log[16571]:	Accepted password for fztu from 69.170.160.193 port 32571 ssh68
+Aug 29 01:56:08	archive	Xorg.0.log[4030]:	pam_unix(sshd:session): session closed for user chen
+Aug 29 01:56:11	prod1	Xorg.0.log[3400]:	systemd: Started User Session 27754 of user test.
+Aug 29 01:56:14	archive	Xorg.0.log[28600]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event3)
+Aug 29 01:56:42	server	Xorg.0.log[9268]:	event6  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 01:57:18	prod1	Xorg.0.log[12178]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:57:35	server	Xorg.0.log[22166]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 01:58:38	server	Xorg.0.log[18203]:	Accepted password for matlab from 64.174.85.1 port 15812 ssh94
+Aug 29 01:58:39	ADM	Xorg.0.log[15125]:	Did not receive identification string from 109.78.243.239
+Aug 29 01:59:04	testvm	Xorg.0.log[20630]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event24)
+Aug 29 01:59:10	ADM	Xorg.0.log[19579]:	event64  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 01:59:13	server	Xorg.0.log[8118]:	event25  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 02:00:29	prod1	Xorg.0.log[9181]:	Connection closed by 10.105.205.207 [preauth]
+Aug 29 02:00:37	ADM	Xorg.0.log[27732]:	Accepted password for root from 125.71.241.152 port 53493 ssh50
+Aug 29 02:01:35	testvm	Xorg.0.log[5508]:	Received disconnect from 131.10.121.107: 5: Closed due to user request [preauth]
+Aug 29 02:01:50	ADM	Xorg.0.log[25458]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 02:02:00	archive	Xorg.0.log[8713]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=59)
+Aug 29 02:02:11	LabSZ	Xorg.0.log[29529]:	event59  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 02:03:50	prod1	Xorg.0.log[3165]:	Received disconnect from 37.123.71.89: 2: Closed due to user request [preauth]
+Aug 29 02:03:56	ADM	Xorg.0.log[26327]:	Connection closed by 238.97.158.39 [preauth]
+Aug 29 02:04:07	testvm	Xorg.0.log[23937]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 02:06:39	LabSZ	Xorg.0.log[22973]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 02:07:00	ADM	Xorg.0.log[8361]:	kernel: usb 1-82: USB disconnect, device number 2
+Aug 29 02:07:47	server	Xorg.0.log[25576]:	Connection closed by 62.209.241.184 [preauth]
+Aug 29 02:08:12	archive	Xorg.0.log[24576]:	event74  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 02:08:32	server	Xorg.0.log[3377]:	Accepted password for matlab from 135.46.137.93 port 35226 ssh57
+Aug 29 02:10:44	server	Xorg.0.log[9177]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event90)
+Aug 29 02:11:58	RUfus	Xorg.0.log[5495]:	pam_unix(sshd:session): session opened for user matlab by (uid=51)
+Aug 29 02:12:07	testvm	Xorg.0.log[27819]:	Connection closed by 228.142.18.101 [preauth]
+Aug 29 02:12:32	archive	Xorg.0.log[24191]:	kernel: usb 1-18: USB disconnect, device number 2
+Aug 29 02:12:34	server	Xorg.0.log[27450]:	Connection closed by 214.178.65.35 [preauth]
+Aug 29 02:13:50	testvm	Xorg.0.log[2199]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:56.0/usb3/3-4/3-4:1.0/0003:1EA7:00566.0001/input/input56/event56
+Aug 29 02:14:35	ADM	Xorg.0.log[13574]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 02:14:47	ADM	Xorg.0.log[6817]:	Connection closed by 159.172.118.26 [preauth]
+Aug 29 02:14:55	RUfus	Xorg.0.log[3888]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event89)
+Aug 29 02:15:05	server	Xorg.0.log[11994]:	event24  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 02:15:09	archive	Xorg.0.log[25804]:	kernel: usb 1-56: USB disconnect, device number 2
+Aug 29 02:15:11	server	Xorg.0.log[18436]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event83)
+Aug 29 02:15:14	ADM	Xorg.0.log[11937]:	Failed password for user ubuntu from 187.183.35.208 port 59604 ssh7
+Aug 29 02:15:41	ADM	Xorg.0.log[28465]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:61.0/usb3/3-4/3-4:1.0/0003:1EA7:00616.0001/input/input61/event61
+Aug 29 02:16:02	server	Xorg.0.log[22165]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event45)
+Aug 29 02:16:04	testvm	Xorg.0.log[22106]:	Did not receive identification string from 62.107.67.229
+Aug 29 02:17:02	RUfus	Xorg.0.log[14454]:	Connection closed by 217.67.243.105 [preauth]
+Aug 29 02:17:09	prod1	Xorg.0.log[2245]:	Connection closed by 128.147.22.39 [preauth]
+Aug 29 02:17:17	testvm	Xorg.0.log[14014]:	Received disconnect from 151.88.31.23: 36: disconnected by user
+Aug 29 11:20:48	testvm	Xorg.0.log[10702]:	pam_unix(sshd:session): session closed for user matlab
+Aug 29 11:20:53	LabSZ	Xorg.0.log[2882]:	event11  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 11:20:56	ADM	Xorg.0.log[10075]:	kernel: usb 1-73: USB disconnect, device number 2
+Aug 29 11:21:03	RUfus	Xorg.0.log[8319]:	pam_unix(sshd:session): session closed for user admin
+Aug 29 11:22:06	RUfus	Xorg.0.log[11261]:	(EE) Backtrace:
+Aug 29 18:55:47	RUfus	Xorg.0.log[16031]:	Connection closed by 12.165.152.51 [preauth]
+Aug 29 18:56:55	testvm	Xorg.0.log[27742]:	Received disconnect from 217.211.52.58: 4: disconnected by user
+Aug 29 18:56:58	archive	Xorg.0.log[21305]:	Received disconnect from 89.169.22.16: 10: Closed due to user request [preauth]
+Aug 29 18:57:06	archive	Xorg.0.log[6595]:	Received disconnect from 72.226.57.198: 65: Bye Bye [preauth]
+Aug 29 18:57:41	server	Xorg.0.log[12041]:	pam_unix(sshd:session): session closed for user fztu
+Aug 29 19:00:58	RUfus	Xorg.0.log[15602]:	Connection closed by 211.23.113.52 [preauth]
+Aug 29 19:01:46	server	Xorg.0.log[13108]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:55.0/usb3/3-4/3-4:1.0/0003:1EA7:00556.0001/input/input55/event55
+Aug 29 19:02:54	testvm	Xorg.0.log[5030]:	Connection closed by 206.92.96.126 [preauth]
+Aug 29 19:02:56	ADM	Xorg.0.log[25977]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event18)
+Aug 29 19:03:20	server	Xorg.0.log[7093]:	Received disconnect from 36.39.59.223: 92: Bye Bye [preauth]
+Aug 29 19:03:48	LabSZ	Xorg.0.log[17492]:	Received disconnect from 159.108.250.23: 68: Closed due to user request [preauth]
+Aug 29 19:03:52	prod1	Xorg.0.log[12081]:	Accepted password for ubuntu from 226.185.196.160 port 62523 ssh77
+Aug 29 19:04:07	RUfus	Xorg.0.log[15491]:	(EE) Backtrace:
+Aug 29 19:04:08	ADM	Xorg.0.log[24253]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Aug 29 19:04:47	prod1	Xorg.0.log[8455]:	event1  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 19:05:26	ADM	Xorg.0.log[8799]:	kernel: usb 1-36: USB disconnect, device number 2
+Aug 29 19:05:39	ADM	Xorg.0.log[10706]:	pam_unix(sshd:session): session closed for user fztu
+Aug 29 19:06:05	prod1	Xorg.0.log[9829]:	Did not receive identification string from 159.42.239.246
+Aug 29 19:06:18	RUfus	Xorg.0.log[23319]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 19:06:35	prod1	Xorg.0.log[16163]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 19:07:39	prod1	Xorg.0.log[1764]:	kernel: usb 1-91: USB disconnect, device number 2
+Aug 29 19:08:12	testvm	Xorg.0.log[17815]:	Received disconnect from 92.57.141.48: 94: disconnected by user
+Aug 29 19:08:27	ADM	Xorg.0.log[6872]:	Accepted password for backup from 63.103.142.67 port 2887 ssh78
+Aug 29 19:08:39	prod1	Xorg.0.log[25702]:	pam_unix(sshd:session): session closed for user fztu
+Aug 29 19:08:42	ADM	Xorg.0.log[15972]:	Connection closed by 187.85.9.254 [preauth]
+Aug 29 19:09:08	ADM	Xorg.0.log[22285]:	Connection closed by 93.9.161.28 [preauth]
+Aug 29 19:09:19	archive	Xorg.0.log[9664]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 19:09:48	server	Xorg.0.log[22203]:	Received disconnect from 154.124.145.140: 32: Closed due to user request [preauth]
+Aug 29 19:09:53	testvm	Xorg.0.log[26611]:	Received disconnect from 64.248.139.179: 85: Bye Bye [preauth]
+Aug 29 19:10:48	server	Xorg.0.log[17696]:	event20  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 19:10:50	prod1	Xorg.0.log[20818]:	Received disconnect from 32.126.49.183: 34: Closed due to user request [preauth]
+Aug 29 19:11:01	ADM	Xorg.0.log[23989]:	Did not receive identification string from 182.164.157.45
+Aug 29 19:11:04	LabSZ	Xorg.0.log[1233]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event88)
+Aug 29 19:11:33	archive	Xorg.0.log[10055]:	Received disconnect from 224.181.58.201: 28: Bye Bye [preauth]
+Aug 29 19:12:07	archive	Xorg.0.log[11145]:	event83  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 19:12:24	testvm	Xorg.0.log[11706]:	Connection closed by 99.76.86.36 [preauth]
+Aug 29 19:13:48	testvm	Xorg.0.log[13763]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 19:13:52	prod1	Xorg.0.log[12299]:	Accepted password for ubuntu from 82.120.207.34 port 20382 ssh58
+Aug 29 19:16:44	RUfus	Xorg.0.log[1546]:	systemd: Started User Session 23417 of user 123.
+Aug 29 19:16:58	LabSZ	Xorg.0.log[8810]:	Received disconnect from 172.94.187.19: 42: Closed due to user request [preauth]
+Aug 29 19:17:04	server	Xorg.0.log[12539]:	pam_unix(sshd:session): session opened for user backup by (uid=33)
+Aug 29 19:17:19	prod1	Xorg.0.log[10138]:	systemd: Started User Session 18694 of user webmaster.
+Aug 29 19:18:44	ADM	Xorg.0.log[10321]:	(EE) Backtrace:
+Aug 29 19:18:45	ADM	Xorg.0.log[17159]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Aug 29 19:19:15	prod1	Xorg.0.log[21348]:	Received disconnect from 156.74.186.144: 73: Bye Bye [preauth]
+Aug 29 19:19:46	archive	Xorg.0.log[26707]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event10)
+Aug 29 19:23:08	prod1	Xorg.0.log[28825]:	kernel: usb 1-49: USB disconnect, device number 2
+Aug 29 19:23:53	RUfus	Xorg.0.log[1118]:	event24  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 19:25:06	testvm	Xorg.0.log[23217]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:80.0/usb3/3-4/3-4:1.0/0003:1EA7:00806.0001/input/input80/event80
+Aug 29 19:25:09	server	Xorg.0.log[26720]:	Received disconnect from 66.171.175.250: 78: Closed due to user request [preauth]
+Aug 29 19:25:34	LabSZ	Xorg.0.log[1860]:	pam_unix(sshd:session): session closed for user pgadmin
+Aug 29 19:27:20	testvm	Xorg.0.log[24240]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=98)
+Aug 29 19:27:26	prod1	Xorg.0.log[7849]:	Received disconnect from 108.177.77.217: 57: disconnected by user
+Aug 29 19:27:46	RUfus	Xorg.0.log[7015]:	Accepted password for ubuntu from 73.22.83.227 port 7644 ssh18
+Aug 29 19:27:51	archive	Xorg.0.log[28856]:	Received disconnect from 128.141.43.162: 78: disconnected by user
+Aug 29 19:28:12	archive	Xorg.0.log[12948]:	Accepted password for matlab from 136.183.81.23 port 30620 ssh91
+Aug 29 19:28:29	testvm	Xorg.0.log[20459]:	kernel: usb 1-51: USB disconnect, device number 2
+Aug 29 19:28:32	ADM	Xorg.0.log[6903]:	Connection closed by 131.185.143.241 [preauth]
+Aug 29 19:28:44	server	Xorg.0.log[9879]:	kernel: usb 1-19: USB disconnect, device number 2
+Aug 29 19:31:32	RUfus	Xorg.0.log[23915]:	systemd: Started User Session 7409 of user guest.
+Aug 29 19:31:40	prod1	Xorg.0.log[9893]:	Connection closed by 15.108.61.18 [preauth]
+Aug 29 19:32:11	server	Xorg.0.log[3348]:	Accepted password for root from 109.2.102.84 port 1847 ssh3
+Aug 29 19:32:17	RUfus	Xorg.0.log[29665]:	pam_unix(sshd:session): session closed for user matlab
+Aug 29 19:32:35	LabSZ	Xorg.0.log[17744]:	pam_unix(sshd:session): session closed for user ubuntu
+Aug 29 19:33:09	LabSZ	Xorg.0.log[26831]:	pam_unix(sshd:session): session opened for user root by (uid=12)
+Aug 29 19:33:33	RUfus	Xorg.0.log[11287]:	Accepted password for root from 197.154.76.8 port 44276 ssh76
+Aug 29 19:33:57	testvm	Xorg.0.log[10699]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 19:34:34	archive	Xorg.0.log[28051]:	pam_unix(sshd:session): session opened for user webmaster by (uid=84)
+Aug 29 19:35:09	archive	Xorg.0.log[4385]:	pam_unix(sshd:session): session closed for user chen
+Aug 29 19:35:23	server	Xorg.0.log[6637]:	event87  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 19:36:10	archive	Xorg.0.log[24415]:	systemd: Started User Session 7101 of user admin.
+Aug 29 19:36:14	archive	Xorg.0.log[26602]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 19:36:17	server	Xorg.0.log[22400]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:22.0/usb3/3-4/3-4:1.0/0003:1EA7:00226.0001/input/input22/event22
+Aug 29 19:36:19	RUfus	Xorg.0.log[27977]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event15)
+Aug 29 19:36:43	prod1	Xorg.0.log[8076]:	Connection closed by 186.111.191.99 [preauth]
+Aug 29 19:36:50	server	Xorg.0.log[21136]:	kernel: usb 1-53: USB disconnect, device number 2
+Aug 29 19:37:39	testvm	Xorg.0.log[18140]:	Did not receive identification string from 49.94.168.169
+Aug 29 19:38:01	ADM	Xorg.0.log[2393]:	kernel: usb 1-52: USB disconnect, device number 2
+Aug 29 19:38:03	RUfus	Xorg.0.log[22690]:	Received disconnect from 158.84.58.193: 30: Closed due to user request [preauth]
+Aug 29 19:38:22	RUfus	Xorg.0.log[10294]:	Accepted password for fztu from 23.50.208.80 port 4409 ssh28
+Aug 29 19:38:35	testvm	Xorg.0.log[18728]:	kernel: usb 1-54: USB disconnect, device number 2
+Aug 29 19:38:41	prod1	Xorg.0.log[7293]:	kernel: usb 1-38: USB disconnect, device number 2
+Aug 29 19:38:45	prod1	Xorg.0.log[25716]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:70.0/usb3/3-4/3-4:1.0/0003:1EA7:00706.0001/input/input70/event70
+Aug 29 19:39:14	ADM	Xorg.0.log[1817]:	Accepted password for chen from 1.56.47.14 port 63247 ssh85
+Aug 29 19:39:18	server	Xorg.0.log[15336]:	Connection closed by 60.204.130.38 [preauth]
+Aug 29 19:39:29	RUfus	Xorg.0.log[14629]:	Connection closed by 166.133.94.22 [preauth]
+Aug 29 19:39:38	testvm	Xorg.0.log[17911]:	Did not receive identification string from 31.231.38.203
+Aug 29 19:39:49	LabSZ	Xorg.0.log[17422]:	event31  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 19:39:53	prod1	Xorg.0.log[27670]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event25)
+Aug 29 19:40:10	RUfus	Xorg.0.log[1523]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event99)
+Aug 29 19:42:05	prod1	Xorg.0.log[14354]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event37)
+Aug 29 19:42:16	archive	Xorg.0.log[20524]:	pam_unix(sshd:session): session closed for user chen
+Aug 29 19:42:24	RUfus	Xorg.0.log[28256]:	kernel: usb 1-92: USB disconnect, device number 2
+Aug 29 19:42:26	ADM	Xorg.0.log[9328]:	Connection closed by 193.188.43.46 [preauth]
+Aug 29 19:45:16	ADM	Xorg.0.log[13688]:	pam_unix(sshd:session): session closed for user guest
+Aug 29 19:45:34	archive	Xorg.0.log[22893]:	Connection closed by 92.19.226.220 [preauth]
+Aug 29 19:46:29	archive	Xorg.0.log[14915]:	pam_unix(sshd:session): session closed for user backup
+Aug 29 19:47:09	LabSZ	Xorg.0.log[3854]:	Received disconnect from 225.33.151.52: 59: Closed due to user request [preauth]
+Aug 29 19:47:30	prod1	Xorg.0.log[11356]:	kernel: usb 1-37: USB disconnect, device number 2
+Aug 29 19:47:36	RUfus	Xorg.0.log[17384]:	systemd: Started User Session 15374 of user pgadmin.
+Aug 29 19:47:52	prod1	Xorg.0.log[11226]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event7)
+Aug 29 19:48:24	ADM	Xorg.0.log[17426]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 19:48:50	testvm	Xorg.0.log[17825]:	Accepted password for oracle from 170.127.1.46 port 43047 ssh26
+Aug 29 19:49:07	prod1	Xorg.0.log[18193]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:21.0/usb3/3-4/3-4:1.0/0003:1EA7:00216.0001/input/input21/event21
+Aug 29 19:49:19	ADM	Xorg.0.log[18394]:	Accepted password for chen from 6.99.105.181 port 54403 ssh30
+Aug 29 19:49:41	prod1	Xorg.0.log[28289]:	Did not receive identification string from 183.10.223.46
+Aug 29 19:49:44	LabSZ	Xorg.0.log[6966]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:24.0/usb3/3-4/3-4:1.0/0003:1EA7:00246.0001/input/input24/event24
+Aug 29 19:51:01	prod1	Xorg.0.log[2260]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 19:51:10	ADM	Xorg.0.log[13817]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 19:51:29	RUfus	Xorg.0.log[5071]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event29)
+Aug 29 19:51:42	LabSZ	Xorg.0.log[17772]:	Received disconnect from 13.232.170.72: 98: disconnected by user
+Aug 29 19:52:39	testvm	Xorg.0.log[23210]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:47.0/usb3/3-4/3-4:1.0/0003:1EA7:00476.0001/input/input47/event47
+Aug 29 19:52:50	testvm	Xorg.0.log[18012]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:40.0/usb3/3-4/3-4:1.0/0003:1EA7:00406.0001/input/input40/event40
+Aug 29 19:53:53	testvm	Xorg.0.log[12197]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event28)
+Aug 29 19:53:59	LabSZ	Xorg.0.log[8256]:	pam_unix(sshd:session): session closed for user fztu
+Aug 29 19:54:26	prod1	Xorg.0.log[21296]:	Connection closed by 198.6.119.150 [preauth]
+Aug 29 19:54:52	RUfus	Xorg.0.log[4310]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:97.0/usb3/3-4/3-4:1.0/0003:1EA7:00976.0001/input/input97/event97
+Aug 29 19:55:23	archive	Xorg.0.log[10595]:	Did not receive identification string from 36.27.26.36
+Aug 29 19:55:36	RUfus	Xorg.0.log[29339]:	Received disconnect from 103.136.45.233: 23: disconnected by user
+Aug 29 19:56:06	RUfus	Xorg.0.log[3639]:	Connection closed by 79.172.103.92 [preauth]
+Aug 29 19:56:23	testvm	Xorg.0.log[21473]:	Received disconnect from 32.121.221.13: 69: disconnected by user
+Aug 29 19:56:26	ADM	Xorg.0.log[26183]:	pam_unix(sshd:session): session opened for user chen by (uid=27)
+Aug 29 19:56:28	archive	Xorg.0.log[8597]:	Received disconnect from 142.50.121.210: 18: disconnected by user
+Aug 29 19:56:48	server	Xorg.0.log[22670]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 19:57:04	server	Xorg.0.log[1113]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 19:57:06	LabSZ	Xorg.0.log[26176]:	Connection closed by 11.88.1.145 [preauth]
+Aug 29 19:59:36	ADM	Xorg.0.log[17010]:	pam_unix(sshd:session): session closed for user backup
+Aug 29 19:59:40	RUfus	Xorg.0.log[7949]:	pam_unix(sshd:session): session opened for user backup by (uid=89)
+Aug 29 19:59:53	prod1	Xorg.0.log[9288]:	Connection closed by 156.105.227.186 [preauth]
+Aug 29 19:59:56	RUfus	Xorg.0.log[17493]:	Received disconnect from 191.29.229.193: 46: disconnected by user
+Aug 29 19:59:59	LabSZ	Xorg.0.log[15330]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 20:00:18	RUfus	Xorg.0.log[26086]:	Connection closed by 83.172.144.242 [preauth]
+Aug 29 20:00:28	server	Xorg.0.log[4919]:	Received disconnect from 137.162.116.9: 81: Bye Bye [preauth]
+Aug 29 20:00:46	ADM	Xorg.0.log[7021]:	kernel: usb 1-55: USB disconnect, device number 2
+Aug 29 20:01:16	RUfus	Xorg.0.log[11568]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event99)
+Aug 29 20:01:36	server	Xorg.0.log[11459]:	systemd: Started User Session 13397 of user ubuntu.
+Aug 29 20:02:07	archive	Xorg.0.log[17066]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event39)
+Aug 29 20:02:21	testvm	Xorg.0.log[18374]:	event99  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 20:02:27	server	Xorg.0.log[23472]:	Did not receive identification string from 222.198.21.158
+Aug 29 20:03:06	prod1	Xorg.0.log[21972]:	kernel: usb 1-61: USB disconnect, device number 2
+Aug 29 20:03:34	RUfus	Xorg.0.log[10790]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 20:04:22	LabSZ	Xorg.0.log[11919]:	Accepted password for ubuntu from 97.39.28.24 port 27315 ssh54
+Aug 29 20:04:25	archive	Xorg.0.log[11503]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event66)
+Aug 29 20:04:35	RUfus	Xorg.0.log[8944]:	Connection closed by 31.216.56.35 [preauth]
+Aug 29 20:04:40	RUfus	Xorg.0.log[11293]:	systemd: Started User Session 21085 of user webmaster.
+Aug 29 20:04:53	RUfus	Xorg.0.log[13891]:	Received disconnect from 5.117.21.120: 37: Closed due to user request [preauth]
+Aug 29 20:05:05	archive	Xorg.0.log[26432]:	Received disconnect from 189.227.62.211: 57: disconnected by user
+Aug 29 20:05:09	archive	Xorg.0.log[10679]:	Received disconnect from 2.82.234.236: 92: Closed due to user request [preauth]
+Aug 29 20:05:16	ADM	Xorg.0.log[10086]:	Received disconnect from 245.249.9.212: 11: Closed due to user request [preauth]
+Aug 29 20:05:19	server	Xorg.0.log[2248]:	event63  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 20:05:28	ADM	Xorg.0.log[4066]:	Accepted password for admin from 183.122.248.135 port 48013 ssh39
+Aug 29 20:05:38	ADM	Xorg.0.log[19858]:	Accepted password for pgadmin from 61.201.16.247 port 36092 ssh72
+Aug 29 20:06:07	LabSZ	Xorg.0.log[28535]:	Connection closed by 88.55.91.147 [preauth]
+Aug 29 20:06:13	ADM	Xorg.0.log[6152]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:27.0/usb3/3-4/3-4:1.0/0003:1EA7:00276.0001/input/input27/event27
+Aug 29 20:06:40	prod1	Xorg.0.log[19845]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 20:07:03	testvm	Xorg.0.log[20714]:	Accepted password for webmaster from 184.189.164.118 port 56214 ssh60
+Aug 29 20:07:34	LabSZ	Xorg.0.log[28892]:	Received disconnect from 32.95.95.84: 70: disconnected by user
+Aug 29 20:08:06	prod1	Xorg.0.log[17857]:	Received disconnect from 1.167.174.32: 31: Bye Bye [preauth]
+Aug 29 20:08:09	ADM	Xorg.0.log[13299]:	pam_unix(sshd:session): session opened for user admin by (uid=55)
+Aug 29 20:08:12	archive	Xorg.0.log[6052]:	Received disconnect from 48.44.189.94: 54: disconnected by user
+Aug 29 20:08:53	server	Xorg.0.log[6143]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 20:10:21	archive	Xorg.0.log[18444]:	Connection closed by 113.190.149.47 [preauth]
+Aug 29 20:10:23	ADM	Xorg.0.log[15670]:	Received disconnect from 63.220.152.24: 90: Bye Bye [preauth]
+Aug 29 20:11:03	prod1	Xorg.0.log[5003]:	Received disconnect from 132.58.248.163: 55: disconnected by user
+Aug 29 20:11:43	testvm	Xorg.0.log[18083]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 20:12:17	ADM	Xorg.0.log[13316]:	systemd: Started User Session 9520 of user chen.
+Aug 29 20:12:40	server	Xorg.0.log[2067]:	pam_unix(sshd:session): session opened for user backup by (uid=33)
+Aug 29 20:12:53	RUfus	Xorg.0.log[24064]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:21.0/usb3/3-4/3-4:1.0/0003:1EA7:00216.0001/input/input21/event21
+Aug 29 20:13:35	testvm	Xorg.0.log[17176]:	Connection closed by 3.24.182.245 [preauth]
+Aug 29 20:13:44	prod1	Xorg.0.log[13120]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:69.0/usb3/3-4/3-4:1.0/0003:1EA7:00696.0001/input/input69/event69
+Aug 29 20:13:59	server	Xorg.0.log[18341]:	Received disconnect from 192.6.54.97: 37: Bye Bye [preauth]
+Aug 29 20:14:59	server	Xorg.0.log[14045]:	pam_unix(sshd:session): session closed for user root
+Aug 29 20:15:11	archive	Xorg.0.log[2836]:	Accepted password for 123 from 134.88.47.99 port 45133 ssh92
+Aug 29 20:15:30	archive	Xorg.0.log[4426]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event38)
+Aug 29 20:15:32	prod1	Xorg.0.log[8668]:	pam_unix(sshd:session): session closed for user pgadmin
+Aug 29 20:15:36	archive	Xorg.0.log[21570]:	Accepted password for webmaster from 151.180.251.158 port 16299 ssh35
+Aug 29 20:15:40	archive	Xorg.0.log[17840]:	Connection closed by 56.191.95.166 [preauth]
+Aug 29 20:16:41	LabSZ	Xorg.0.log[8710]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event13)
+Aug 29 20:17:01	prod1	Xorg.0.log[10053]:	Accepted password for test from 162.119.242.83 port 31923 ssh19
+Aug 29 20:18:22	server	Xorg.0.log[2381]:	Received disconnect from 157.144.32.107: 16: disconnected by user
+Aug 29 20:18:52	archive	Xorg.0.log[13401]:	Received disconnect from 44.220.19.38: 52: disconnected by user
+Aug 29 20:19:33	LabSZ	Xorg.0.log[29783]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event37)
+Aug 29 20:19:39	RUfus	Xorg.0.log[2626]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:85.0/usb3/3-4/3-4:1.0/0003:1EA7:00856.0001/input/input85/event85
+Aug 29 20:20:02	ADM	Xorg.0.log[9295]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event10)
+Aug 29 20:20:12	LabSZ	Xorg.0.log[25726]:	Received disconnect from 205.226.140.27: 42: Bye Bye [preauth]
+Aug 29 20:20:41	testvm	Xorg.0.log[16231]:	kernel: usb 1-53: USB disconnect, device number 2
+Aug 29 20:21:19	archive	Xorg.0.log[15300]:	kernel: usb 1-12: USB disconnect, device number 2
+Aug 29 20:21:57	server	Xorg.0.log[4611]:	pam_unix(sshd:session): session opened for user 123 by (uid=11)
+Aug 29 20:22:57	server	Xorg.0.log[1987]:	Connection closed by 250.222.24.99 [preauth]
+Aug 29 20:23:00	ADM	Xorg.0.log[20205]:	pam_unix(sshd:session): session opened for user matlab by (uid=13)
+Aug 29 20:23:18	RUfus	Xorg.0.log[13517]:	kernel: usb 1-35: USB disconnect, device number 2
+Aug 29 20:23:22	RUfus	Xorg.0.log[22409]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:88.0/usb3/3-4/3-4:1.0/0003:1EA7:00886.0001/input/input88/event88
+Aug 29 20:23:29	RUfus	Xorg.0.log[20747]:	Did not receive identification string from 106.8.181.83
+Aug 29 20:23:31	archive	Xorg.0.log[11061]:	systemd: Started User Session 11766 of user backup.
+Aug 29 20:23:33	archive	Xorg.0.log[18609]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:65.0/usb3/3-4/3-4:1.0/0003:1EA7:00656.0001/input/input65/event65
+Aug 29 20:23:57	LabSZ	Xorg.0.log[25354]:	Did not receive identification string from 90.152.47.183
+Aug 29 20:24:16	archive	Xorg.0.log[7786]:	Received disconnect from 120.85.68.225: 57: Closed due to user request [preauth]
+Aug 29 20:24:37	RUfus	Xorg.0.log[22377]:	Received disconnect from 58.202.21.7: 26: Bye Bye [preauth]
+Aug 29 20:24:41	archive	Xorg.0.log[1413]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 20:24:53	prod1	Xorg.0.log[28894]:	Connection closed by 226.164.132.21 [preauth]
+Aug 29 20:25:42	RUfus	Xorg.0.log[24690]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 20:25:47	server	Xorg.0.log[24961]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:48.0/usb3/3-4/3-4:1.0/0003:1EA7:00486.0001/input/input48/event48
+Aug 29 20:26:17	archive	Xorg.0.log[7749]:	systemd: Started User Session 9396 of user oracle.
+Aug 29 20:26:20	archive	Xorg.0.log[28531]:	Connection closed by 114.242.64.8 [preauth]
+Aug 29 20:26:30	prod1	Xorg.0.log[10376]:	Did not receive identification string from 163.122.92.194
+Aug 29 20:27:33	archive	Xorg.0.log[7676]:	pam_unix(sshd:session): session closed for user webmaster
+Aug 29 20:28:01	prod1	Xorg.0.log[19440]:	(EE) Backtrace:
+Aug 29 20:28:02	archive	Xorg.0.log[23118]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Aug 29 20:28:09	ADM	Xorg.0.log[25823]:	pam_unix(sshd:session): session opened for user admin by (uid=44)
+Aug 29 20:28:30	prod1	Xorg.0.log[12396]:	event12  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 20:28:47	prod1	Xorg.0.log[16560]:	Received disconnect from 51.138.8.135: 70: disconnected by user
+Aug 29 20:29:23	testvm	Xorg.0.log[21452]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:41.0/usb3/3-4/3-4:1.0/0003:1EA7:00416.0001/input/input41/event41
+Aug 29 20:29:26	testvm	Xorg.0.log[17171]:	Received disconnect from 189.70.243.114: 57: Bye Bye [preauth]
+Aug 29 20:29:31	prod1	Xorg.0.log[16983]:	Received disconnect from 188.245.143.119: 52: Bye Bye [preauth]
+Aug 29 20:29:47	server	Xorg.0.log[9916]:	(EE) Backtrace:
+Aug 29 20:29:48	testvm	Xorg.0.log[2706]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Aug 29 20:30:23	archive	Xorg.0.log[13327]:	pam_unix(sshd:session): session closed for user webmaster
+Aug 29 20:30:33	prod1	Xorg.0.log[22449]:	pam_unix(sshd:session): session opened for user root by (uid=30)
+Aug 29 20:30:51	ADM	Xorg.0.log[29880]:	systemd: Started User Session 20824 of user backup.
+Aug 29 20:31:04	ADM	Xorg.0.log[11347]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=22)
+Aug 29 20:32:09	archive	Xorg.0.log[20765]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:11.0/usb3/3-4/3-4:1.0/0003:1EA7:00116.0001/input/input11/event11
+Aug 29 20:32:26	ADM	Xorg.0.log[11550]:	pam_unix(sshd:session): session opened for user root by (uid=24)
+Aug 29 20:32:41	server	Xorg.0.log[20281]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event33)
+Aug 29 20:34:22	prod1	Xorg.0.log[20287]:	Received disconnect from 11.112.237.10: 38: Bye Bye [preauth]
+Aug 29 20:34:57	ADM	Xorg.0.log[22414]:	pam_unix(sshd:session): session opened for user matlab by (uid=93)
+Aug 29 20:35:32	archive	Xorg.0.log[4203]:	Accepted password for fztu from 34.216.168.160 port 4398 ssh7
+Aug 29 20:35:36	server	Xorg.0.log[16244]:	pam_unix(sshd:session): session closed for user guest
+Aug 29 20:35:52	server	Xorg.0.log[23370]:	Accepted password for matlab from 148.218.118.55 port 55879 ssh93
+Aug 29 20:36:00	archive	Xorg.0.log[20249]:	Received disconnect from 159.25.191.209: 47: disconnected by user
+Aug 29 20:36:20	ADM	Xorg.0.log[11324]:	Accepted password for pgadmin from 211.44.15.212 port 2035 ssh4
+Aug 29 20:37:38	LabSZ	Xorg.0.log[16128]:	Did not receive identification string from 205.101.32.6
+Aug 29 20:37:51	server	Xorg.0.log[11314]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 20:38:01	server	Xorg.0.log[11879]:	systemd: Started User Session 20556 of user matlab.
+Aug 29 20:38:09	RUfus	Xorg.0.log[8542]:	Connection closed by 125.252.46.239 [preauth]
+Aug 29 20:38:32	server	Xorg.0.log[21027]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event23)
+Aug 29 20:38:36	LabSZ	Xorg.0.log[23896]:	Did not receive identification string from 77.239.28.33
+Aug 29 20:38:51	ADM	Xorg.0.log[13124]:	kernel: usb 1-12: USB disconnect, device number 2
+Aug 29 20:40:45	server	Xorg.0.log[24530]:	event69  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 20:40:47	prod1	Xorg.0.log[10054]:	event20  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 20:41:34	ADM	Xorg.0.log[16593]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 29 20:41:41	server	Xorg.0.log[18999]:	event56  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 20:41:46	LabSZ	Xorg.0.log[13666]:	event62  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 20:41:56	RUfus	Xorg.0.log[21346]:	Received disconnect from 89.2.177.158: 80: Bye Bye [preauth]
+Aug 29 20:42:14	RUfus	Xorg.0.log[19780]:	pam_unix(sshd:session): session closed for user admin
+Aug 29 20:42:18	prod1	Xorg.0.log[3851]:	(EE) Backtrace:
+Aug 29 20:42:20	testvm	Xorg.0.log[27657]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Aug 29 20:42:39	testvm	Xorg.0.log[20685]:	Received disconnect from 49.169.100.164: 3: disconnected by user
+Aug 29 20:43:27	LabSZ	Xorg.0.log[11488]:	event99  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 20:43:29	prod1	Xorg.0.log[4170]:	event42  - Sleep Button: is tagged by udev as: Keyboard
+Aug 29 20:43:36	server	Xorg.0.log[2097]:	pam_unix(sshd:session): session opened for user chen by (uid=70)
+Aug 29 20:47:18	LabSZ	Xorg.0.log[20623]:	Did not receive identification string from 55.185.196.113
+Aug 31 23:21:55	ADM	Xorg.0.log[26631]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 31 23:21:58	server	Xorg.0.log[12452]:	Did not receive identification string from 145.41.180.150
+Aug 31 23:22:47	testvm	Xorg.0.log[1637]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:84.0/usb3/3-4/3-4:1.0/0003:1EA7:00846.0001/input/input84/event84
+Aug 31 23:22:51	prod1	Xorg.0.log[10590]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:70.0/usb3/3-4/3-4:1.0/0003:1EA7:00706.0001/input/input70/event70
+Aug 31 23:22:53	archive	Xorg.0.log[24438]:	Connection closed by 94.194.75.111 [preauth]
+Aug 31 23:22:59	server	Xorg.0.log[2193]:	Received disconnect from 9.79.213.92: 56: disconnected by user
+Aug 31 23:23:05	RUfus	Xorg.0.log[13421]:	Accepted password for backup from 78.46.77.235 port 23662 ssh55
+Aug 31 23:23:12	archive	Xorg.0.log[29610]:	Did not receive identification string from 68.134.55.230
+Aug 31 23:25:05	RUfus	Xorg.0.log[26558]:	Received disconnect from 208.175.107.190: 42: Closed due to user request [preauth]
+Aug 31 23:26:18	RUfus	Xorg.0.log[4574]:	Connection closed by 101.122.215.15 [preauth]
+Aug 31 23:26:21	RUfus	Xorg.0.log[5703]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 31 23:26:48	server	Xorg.0.log[26146]:	pam_unix(sshd:session): session closed for user 123
+Aug 31 23:28:13	archive	Xorg.0.log[7002]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event89)
+Aug 31 23:30:32	RUfus	Xorg.0.log[16719]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event43)
+Aug 31 23:30:40	ADM	Xorg.0.log[12033]:	Accepted password for webmaster from 18.60.3.15 port 61447 ssh15
+Aug 31 23:31:21	ADM	Xorg.0.log[9746]:	kernel: usb 1-61: USB disconnect, device number 2
+Aug 31 23:31:24	prod1	Xorg.0.log[11949]:	event33  - Sleep Button: is tagged by udev as: Keyboard
+Aug 31 23:31:34	testvm	Xorg.0.log[15728]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:79.0/usb3/3-4/3-4:1.0/0003:1EA7:00796.0001/input/input79/event79
+Aug 31 23:31:38	LabSZ	Xorg.0.log[15143]:	Connection closed by 167.169.32.2 [preauth]
+Aug 31 23:31:44	ADM	Xorg.0.log[14755]:	Connection closed by 209.182.63.128 [preauth]
+Aug 31 23:32:10	server	Xorg.0.log[25084]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:59.0/usb3/3-4/3-4:1.0/0003:1EA7:00596.0001/input/input59/event59
+Aug 31 23:32:14	LabSZ	Xorg.0.log[8997]:	event37  - Sleep Button: is tagged by udev as: Keyboard
+Aug 31 23:32:45	server	Xorg.0.log[1479]:	pam_unix(sshd:session): session closed for user admin
+Aug 31 23:33:04	RUfus	Xorg.0.log[25560]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:69.0/usb3/3-4/3-4:1.0/0003:1EA7:00696.0001/input/input69/event69
+Aug 31 23:33:14	RUfus	Xorg.0.log[14579]:	event14  - Sleep Button: is tagged by udev as: Keyboard
+Aug 31 23:33:21	LabSZ	Xorg.0.log[9308]:	Connection closed by 199.139.41.225 [preauth]
+Aug 31 23:33:30	ADM	Xorg.0.log[4416]:	Received disconnect from 178.87.82.23: 66: disconnected by user
+Aug 31 23:34:19	server	Xorg.0.log[14263]:	pam_unix(sshd:session): session closed for user ubuntu
+Aug 31 23:34:26	LabSZ	Xorg.0.log[25515]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event98)
+Aug 31 23:36:24	server	Xorg.0.log[8697]:	event16  - Sleep Button: is tagged by udev as: Keyboard
+Aug 31 23:37:09	ADM	Xorg.0.log[2265]:	(EE) Backtrace:
+Aug 31 23:37:09	LabSZ	Xorg.0.log[15798]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Aug 31 23:37:51	server	Xorg.0.log[10371]:	(EE) Backtrace:
+Aug 31 23:37:53	archive	Xorg.0.log[22646]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Aug 31 23:38:53	prod1	Xorg.0.log[8093]:	Accepted password for matlab from 161.46.135.102 port 30818 ssh4
+Aug 31 23:39:35	RUfus	Xorg.0.log[29593]:	event99  - Sleep Button: is tagged by udev as: Keyboard
+Aug 31 23:40:02	server	Xorg.0.log[3650]:	event13  - Sleep Button: is tagged by udev as: Keyboard
+Aug 31 23:41:10	prod1	Xorg.0.log[27368]:	pam_unix(sshd:session): session closed for user matlab
+Aug 31 23:41:17	ADM	Xorg.0.log[19270]:	pam_unix(sshd:session): session closed for user matlab
+Aug 31 23:41:21	RUfus	Xorg.0.log[23594]:	Did not receive identification string from 251.163.213.2
+Aug 31 23:41:24	LabSZ	Xorg.0.log[25171]:	event80  - Sleep Button: is tagged by udev as: Keyboard
+Aug 31 23:41:27	server	Xorg.0.log[8652]:	Received disconnect from 155.25.76.129: 16: disconnected by user
+Aug 31 23:41:57	archive	Xorg.0.log[3083]:	Received disconnect from 47.74.51.105: 44: disconnected by user
+Aug 31 23:42:04	archive	Xorg.0.log[10280]:	pam_unix(sshd:session): session opened for user oracle by (uid=74)
+Aug 31 23:43:53	prod1	Xorg.0.log[13907]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:28.0/usb3/3-4/3-4:1.0/0003:1EA7:00286.0001/input/input28/event28
+Aug 31 23:44:39	server	Xorg.0.log[12634]:	kernel: usb 1-6: USB disconnect, device number 2
+Aug 31 23:45:03	archive	Xorg.0.log[20083]:	Received disconnect from 73.18.189.61: 2: Bye Bye [preauth]
+Aug 31 23:45:08	testvm	Xorg.0.log[12159]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:23.0/usb3/3-4/3-4:1.0/0003:1EA7:00236.0001/input/input23/event23
+Aug 31 23:45:18	testvm	Xorg.0.log[15473]:	Received disconnect from 228.21.122.67: 23: Bye Bye [preauth]
+Aug 31 23:45:24	RUfus	Xorg.0.log[29603]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event76)
+Aug 31 23:45:28	archive	Xorg.0.log[14142]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 31 23:45:43	archive	Xorg.0.log[6885]:	pam_unix(sshd:session): session closed for user matlab
+Aug 31 23:45:52	RUfus	Xorg.0.log[14448]:	Received disconnect from 7.135.184.6: 14: Closed due to user request [preauth]
+Aug 31 23:46:25	RUfus	Xorg.0.log[7233]:	pam_unix(sshd:session): session opened for user webmaster by (uid=90)
+Aug 31 23:46:27	archive	Xorg.0.log[15836]:	Accepted password for oracle from 88.79.249.118 port 11183 ssh43
+Aug 31 23:46:43	server	Xorg.0.log[15788]:	Did not receive identification string from 206.126.149.183
+Aug 31 23:48:09	server	Xorg.0.log[25280]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event54)
+Aug 31 23:48:23	testvm	Xorg.0.log[27407]:	Connection closed by 235.237.119.160 [preauth]
+Aug 31 23:49:26	archive	Xorg.0.log[1139]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:90.0/usb3/3-4/3-4:1.0/0003:1EA7:00906.0001/input/input90/event90
+Aug 31 23:49:34	server	Xorg.0.log[4285]:	kernel: myapp[612109]: segfault at 7f0a00000000 ip 00007f0a4e4c0000 sp 00007ffde1e07000 error 5 in libpthread-1.36.so[7f0a4e480000+19000]
+Aug 31 23:50:11	RUfus	Xorg.0.log[22237]:	Did not receive identification string from 58.50.246.13
+Aug 31 23:51:27	RUfus	Xorg.0.log[21506]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 31 23:51:36	testvm	Xorg.0.log[20612]:	pam_unix(sshd:session): session closed for user matlab
+Aug 31 23:52:23	testvm	Xorg.0.log[23452]:	Received disconnect from 9.218.222.240: 81: Bye Bye [preauth]
+Aug 31 23:52:43	RUfus	Xorg.0.log[18765]:	Received disconnect from 196.99.142.86: 36: disconnected by user
+Aug 31 23:52:47	archive	Xorg.0.log[21878]:	Accepted password for pgadmin from 2.251.4.210 port 38921 ssh24
+Aug 31 23:52:57	ADM	Xorg.0.log[12286]:	event85  - Sleep Button: is tagged by udev as: Keyboard
+Aug 31 23:53:04	prod1	Xorg.0.log[16283]:	Received disconnect from 184.223.207.194: 74: disconnected by user
+Aug 31 23:53:10	ADM	Xorg.0.log[29193]:	Received disconnect from 79.109.253.211: 33: Closed due to user request [preauth]
+Aug 31 23:53:45	archive	Xorg.0.log[3568]:	Received disconnect from 77.74.212.236: 77: Bye Bye [preauth]
+Aug 31 23:53:48	testvm	Xorg.0.log[13998]:	pam_unix(sshd:session): session closed for user fztu
+Aug 31 23:54:22	ADM	Xorg.0.log[9675]:	Received disconnect from 178.41.255.51: 90: Closed due to user request [preauth]
+Aug 31 23:54:55	testvm	Xorg.0.log[6831]:	Accepted password for oracle from 148.193.249.92 port 65074 ssh61
+Aug 31 23:55:25	ADM	Xorg.0.log[12595]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event39)
+Aug 31 23:55:49	RUfus	Xorg.0.log[6423]:	systemd: Started User Session 17132 of user root.
+Aug 31 23:55:55	ADM	Xorg.0.log[2962]:	Connection closed by 147.108.67.218 [preauth]
+Aug 31 23:56:17	server	Xorg.0.log[16465]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event9)
+Aug 31 23:56:27	testvm	Xorg.0.log[15252]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Aug 31 23:56:34	LabSZ	Xorg.0.log[1932]:	event13  - Sleep Button: is tagged by udev as: Keyboard
+Aug 31 23:57:13	RUfus	Xorg.0.log[15497]:	Received disconnect from 34.157.8.218: 34: Closed due to user request [preauth]
+Aug 31 23:57:28	testvm	Xorg.0.log[14706]:	Accepted password for test from 234.23.162.156 port 15826 ssh20
+Aug 31 23:58:23	prod1	Xorg.0.log[20203]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=91)
+Sep 01 01:20:04	RUfus	Xorg.0.log[27408]:	systemd: Started User Session 15846 of user fztu.
+Sep 01 01:20:08	prod1	Xorg.0.log[17623]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 01 01:20:11	ADM	Xorg.0.log[12033]:	Received disconnect from 1.0.0.1: 43: disconnected by user
+Sep 01 01:20:39	RUfus	Xorg.0.log[22245]:	Connection closed by 1.0.0.1 [preauth]
+Sep 01 01:21:15	testvm	Xorg.0.log[19304]:	systemd: Started User Session 3469 of user backup.
+Sep 01 01:21:24	RUfus	Xorg.0.log[29255]:	Received disconnect from 177.40.177.24: 16: Bye Bye [preauth]
+Sep 01 01:21:27	LabSZ	Xorg.0.log[10775]:	pam_unix(sshd:session): session closed for user fztu
+Sep 01 01:21:30	RUfus	Xorg.0.log[17699]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 01 01:21:39	testvm	Xorg.0.log[27387]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event72)
+Sep 01 01:22:04	server	Xorg.0.log[5914]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:14.0/usb3/3-4/3-4:1.0/0003:1EA7:00146.0001/input/input14/event14
+Sep 01 01:22:06	server	Xorg.0.log[17759]:	Received disconnect from 199.230.29.208: 69: Bye Bye [preauth]
+Sep 01 01:22:13	server	Xorg.0.log[15291]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:90.0/usb3/3-4/3-4:1.0/0003:1EA7:00906.0001/input/input90/event90
+Sep 01 01:22:22	LabSZ	Xorg.0.log[2160]:	pam_unix(sshd:session): session opened for user oracle by (uid=8)
+Sep 01 01:22:29	testvm	Xorg.0.log[20764]:	pam_unix(sshd:session): session opened for user root by (uid=50)
+Sep 01 01:23:15	LabSZ	Xorg.0.log[29186]:	event29  - Sleep Button: is tagged by udev as: Keyboard
+Sep 01 01:23:16	ADM	Xorg.0.log[4582]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 01 01:24:18	server	Xorg.0.log[29841]:	pam_unix(sshd:session): session opened for user 123 by (uid=95)
+Sep 01 01:24:29	RUfus	Xorg.0.log[14766]:	Received disconnect from 9.9.9.9: 35: disconnected by user
+Sep 01 01:24:42	server	Xorg.0.log[12646]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:66.0/usb3/3-4/3-4:1.0/0003:1EA7:00666.0001/input/input66/event66
+Sep 01 01:24:51	LabSZ	Xorg.0.log[17854]:	kernel: usb 1-10: USB disconnect, device number 2
+Sep 01 01:25:04	RUfus	Xorg.0.log[11083]:	(EE) Backtrace:
+Sep 01 01:25:05	RUfus	Xorg.0.log[5274]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Sep 01 01:25:13	LabSZ	Xorg.0.log[9898]:	Did not receive identification string from 8.8.8.8
+Sep 01 01:25:24	server	Xorg.0.log[17076]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 01 01:25:56	RUfus	Xorg.0.log[23841]:	Did not receive identification string from 1.1.1.1
+Sep 01 01:26:18	RUfus	Xorg.0.log[1911]:	pam_unix(sshd:session): session opened for user matlab by (uid=33)
+Sep 01 01:26:33	RUfus	Xorg.0.log[22537]:	Did not receive identification string from 8.8.4.4
+Sep 01 01:26:42	server	Xorg.0.log[20950]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:7.0/usb3/3-4/3-4:1.0/0003:1EA7:0076.0001/input/input7/event7
+Sep 01 01:26:48	prod1	Xorg.0.log[15566]:	Connection closed by 9.9.9.9 [preauth]
+Sep 01 01:26:54	ADM	Xorg.0.log[21750]:	pam_unix(sshd:session): session opened for user fztu by (uid=73)
+Sep 01 01:27:08	testvm	Xorg.0.log[22105]:	systemd: Started User Session 26848 of user 123.
+Sep 01 01:27:24	testvm	Xorg.0.log[3877]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event48)
+Sep 01 01:27:26	prod1	Xorg.0.log[15851]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:91.0/usb3/3-4/3-4:1.0/0003:1EA7:00916.0001/input/input91/event91
+Sep 01 01:27:31	testvm	Xorg.0.log[27307]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 01 01:27:34	ADM	Xorg.0.log[5996]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:63.0/usb3/3-4/3-4:1.0/0003:1EA7:00636.0001/input/input63/event63
+Sep 01 01:27:49	LabSZ	Xorg.0.log[5107]:	pam_unix(sshd:session): session opened for user webmaster by (uid=66)
+Sep 01 01:27:56	server	Xorg.0.log[29472]:	Accepted password for test from 99.188.184.152 port 27620 ssh87
+Sep 01 01:28:14	LabSZ	Xorg.0.log[27777]:	Received disconnect from 124.98.207.219: 3: Closed due to user request [preauth]
+Sep 01 01:28:34	ADM	Xorg.0.log[7309]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:48.0/usb3/3-4/3-4:1.0/0003:1EA7:00486.0001/input/input48/event48
+Sep 01 01:28:48	ADM	Xorg.0.log[29551]:	kernel: usb 1-83: USB disconnect, device number 2
+Sep 01 01:28:51	testvm	Xorg.0.log[22243]:	pam_unix(sshd:session): session opened for user matlab by (uid=25)
+Sep 02 00:02:23	prod1	Xorg.0.log[27281]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 02 00:02:26	prod1	Xorg.0.log[11831]:	Received disconnect from 148.250.201.136: 62: Bye Bye [preauth]
+Sep 02 00:02:42	archive	Xorg.0.log[22003]:	Did not receive identification string from 1.0.0.1
+Sep 02 00:02:53	archive	Xorg.0.log[13194]:	event47  - Sleep Button: is tagged by udev as: Keyboard
+Sep 02 00:03:21	prod1	Xorg.0.log[4221]:	(EE) Backtrace:
+Sep 02 00:03:22	testvm	Xorg.0.log[20366]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Sep 02 00:03:40	server	Xorg.0.log[27387]:	Received disconnect from 38.194.119.11: 29: Closed due to user request [preauth]
+Sep 02 00:03:42	prod1	Xorg.0.log[12002]:	Received disconnect from 45.235.153.91: 29: Closed due to user request [preauth]
+Sep 02 00:03:44	prod1	Xorg.0.log[21203]:	kernel: usb 1-21: USB disconnect, device number 2
+Sep 02 00:04:06	LabSZ	Xorg.0.log[14787]:	event84  - Sleep Button: is tagged by udev as: Keyboard
+Sep 02 00:04:14	ADM	Xorg.0.log[26469]:	(EE) Backtrace:
+Sep 02 00:04:15	ADM	Xorg.0.log[15882]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Sep 02 01:01:33	ADM	Xorg.0.log[24463]:	systemd: Started User Session 24805 of user backup.
+Sep 02 01:01:46	RUfus	Xorg.0.log[23350]:	systemd: Started User Session 10503 of user 123.
+Sep 02 01:02:20	testvm	Xorg.0.log[22983]:	Received disconnect from 8.8.4.4: 68: disconnected by user
+Sep 02 01:02:37	archive	Xorg.0.log[4504]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:36.0/usb3/3-4/3-4:1.0/0003:1EA7:00366.0001/input/input36/event36
+Sep 02 01:02:42	archive	Xorg.0.log[16636]:	Received disconnect from 99.63.118.24: 53: Bye Bye [preauth]
+Sep 02 01:03:13	prod1	Xorg.0.log[9057]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 02 01:03:22	server	Xorg.0.log[12238]:	Did not receive identification string from 9.9.9.9
+Sep 02 01:03:29	LabSZ	Xorg.0.log[25226]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event3)
+Sep 02 01:03:59	RUfus	Xorg.0.log[18926]:	Received disconnect from 74.247.97.73: 14: Closed due to user request [preauth]
+Sep 02 01:04:29	LabSZ	Xorg.0.log[3114]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 02 01:05:11	LabSZ	Xorg.0.log[2396]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 02 01:05:43	testvm	Xorg.0.log[28081]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 02 01:05:45	ADM	Xorg.0.log[20991]:	Received disconnect from 109.155.34.150: 50: Closed due to user request [preauth]
+Sep 02 01:06:27	LabSZ	Xorg.0.log[8432]:	Received disconnect from 170.237.86.230: 12: Closed due to user request [preauth]
+Sep 02 01:06:31	server	Xorg.0.log[19360]:	pam_unix(sshd:session): session closed for user chen
+Sep 02 01:06:37	server	Xorg.0.log[21251]:	Did not receive identification string from 8.8.8.8
+Sep 02 01:07:31	RUfus	Xorg.0.log[28731]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=27)
+Sep 02 01:07:38	archive	Xorg.0.log[29422]:	Accepted password for webmaster from 175.151.185.174 port 2255 ssh17
+Sep 02 01:08:07	RUfus	Xorg.0.log[15266]:	Received disconnect from 192.235.245.5: 71: Closed due to user request [preauth]
+Sep 02 01:08:11	RUfus	Xorg.0.log[1157]:	Did not receive identification string from 8.8.8.8
+Sep 02 01:08:42	RUfus	Xorg.0.log[19497]:	pam_unix(sshd:session): session closed for user test
+Sep 02 01:08:56	server	Xorg.0.log[27088]:	Connection closed by 9.9.9.9 [preauth]
+Sep 02 01:08:58	archive	Xorg.0.log[4265]:	Received disconnect from 67.52.32.251: 13: Closed due to user request [preauth]
+Sep 02 01:09:17	testvm	Xorg.0.log[19541]:	Accepted password for admin from 52.36.52.114 port 20328 ssh22
+Sep 02 01:09:20	LabSZ	Xorg.0.log[3947]:	pam_unix(sshd:session): session closed for user 123
+Sep 02 01:09:40	archive	Xorg.0.log[28251]:	Received disconnect from 112.117.151.131: 4: Bye Bye [preauth]
+Sep 02 01:09:43	RUfus	Xorg.0.log[8875]:	kernel: usb 1-87: USB disconnect, device number 2
+Sep 02 01:10:07	testvm	Xorg.0.log[5782]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event54)
+Sep 02 01:10:12	archive	Xorg.0.log[29406]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:13.0/usb3/3-4/3-4:1.0/0003:1EA7:00136.0001/input/input13/event13
+Sep 02 01:10:14	LabSZ	Xorg.0.log[23049]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:90.0/usb3/3-4/3-4:1.0/0003:1EA7:00906.0001/input/input90/event90
+Sep 02 01:10:31	testvm	Xorg.0.log[6052]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 02 11:49:10	archive	Xorg.0.log[8043]:	Accepted password for matlab from 132.197.168.34 port 54410 ssh10
+Sep 02 23:36:35	testvm	Xorg.0.log[10037]:	Connection closed by 1.0.0.1 [preauth]
+Sep 02 23:36:38	ADM	Xorg.0.log[29817]:	systemd: Started User Session 24354 of user matlab.
+Sep 02 23:36:41	LabSZ	Xorg.0.log[2804]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 02 23:52:52	archive	Xorg.0.log[18633]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:10.0/usb3/3-4/3-4:1.0/0003:1EA7:00106.0001/input/input10/event10
+Sep 03 00:21:03	LabSZ	Xorg.0.log[9636]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:83.0/usb3/3-4/3-4:1.0/0003:1EA7:00836.0001/input/input83/event83
+Sep 03 00:21:05	archive	Xorg.0.log[6905]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:39.0/usb3/3-4/3-4:1.0/0003:1EA7:00396.0001/input/input39/event39
+Sep 03 00:21:36	ADM	Xorg.0.log[11489]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 03 00:21:38	LabSZ	Xorg.0.log[24210]:	Connection closed by 1.0.0.1 [preauth]
+Sep 03 00:44:14	server	Xorg.0.log[1986]:	kernel: usb 1-73: USB disconnect, device number 2
+Sep 03 00:44:18	prod1	Xorg.0.log[18561]:	Did not receive identification string from 9.9.9.9
+Sep 03 00:44:25	RUfus	Xorg.0.log[12726]:	Received disconnect from 70.217.121.113: 37: Bye Bye [preauth]
+Sep 03 00:44:31	RUfus	Xorg.0.log[14979]:	Received disconnect from 112.80.11.150: 9: Closed due to user request [preauth]
+Sep 03 13:39:23	LabSZ	Xorg.0.log[16273]:	Connection closed by 8.8.4.4 [preauth]
+Sep 03 13:40:16	archive	Xorg.0.log[16855]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 03 13:40:22	server	Xorg.0.log[16643]:	event46  - Sleep Button: is tagged by udev as: Keyboard
+Sep 03 19:11:20	prod1	Xorg.0.log[21253]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:85.0/usb3/3-4/3-4:1.0/0003:1EA7:00856.0001/input/input85/event85
+Sep 03 19:11:27	ADM	Xorg.0.log[10894]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 03 20:03:02	LabSZ	Xorg.0.log[6493]:	Did not receive identification string from 9.9.9.9
+Sep 03 20:03:34	ADM	Xorg.0.log[12557]:	Connection closed by 1.1.1.1 [preauth]
+Sep 03 20:03:37	RUfus	Xorg.0.log[4458]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:10.0/usb3/3-4/3-4:1.0/0003:1EA7:00106.0001/input/input10/event10
+Sep 03 20:03:41	prod1	Xorg.0.log[12987]:	Connection closed by 8.8.8.8 [preauth]
+Sep 03 20:06:04	RUfus	Xorg.0.log[1701]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 03 20:06:07	prod1	Xorg.0.log[10851]:	event48  - Sleep Button: is tagged by udev as: Keyboard
+Sep 03 20:07:00	testvm	Xorg.0.log[23892]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event16)
+Sep 03 20:07:09	LabSZ	Xorg.0.log[18292]:	Received disconnect from 8.8.4.4: 95: disconnected by user
+Sep 03 20:07:13	testvm	Xorg.0.log[7697]:	event31  - Sleep Button: is tagged by udev as: Keyboard
+Sep 03 20:07:20	ADM	Xorg.0.log[15101]:	Received disconnect from 8.8.4.4: 4: disconnected by user
+Sep 03 20:07:23	server	Xorg.0.log[6638]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event94)
+Sep 03 20:07:31	LabSZ	Xorg.0.log[25329]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event64)
+Sep 03 20:07:37	RUfus	Xorg.0.log[26825]:	Did not receive identification string from 8.8.4.4
+Sep 03 20:07:43	RUfus	Xorg.0.log[17260]:	event33  - Sleep Button: is tagged by udev as: Keyboard
+Sep 03 20:08:38	archive	Xorg.0.log[25478]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:95.0/usb3/3-4/3-4:1.0/0003:1EA7:00956.0001/input/input95/event95
+Sep 03 20:09:29	server	Xorg.0.log[1598]:	Received disconnect from 209.44.157.55: 8: Bye Bye [preauth]
+Sep 03 20:16:32	testvm	Xorg.0.log[15746]:	Did not receive identification string from 9.9.9.9
+Sep 03 20:16:35	LabSZ	Xorg.0.log[12076]:	Received disconnect from 95.68.161.83: 1: Closed due to user request [preauth]
+Sep 03 20:18:05	testvm	Xorg.0.log[23089]:	Received disconnect from 8.8.8.8: 97: disconnected by user
+Sep 03 20:18:09	ADM	Xorg.0.log[13521]:	kernel: usb 1-35: USB disconnect, device number 2
+Sep 03 20:18:19	testvm	Xorg.0.log[11378]:	kernel: usb 1-67: USB disconnect, device number 2
+Sep 03 20:18:21	RUfus	Xorg.0.log[7165]:	pam_unix(sshd:session): session opened for user guest by (uid=15)
+Sep 03 20:18:24	server	Xorg.0.log[12658]:	Accepted password for guest from 120.166.46.43 port 64448 ssh79
+Sep 03 20:18:27	LabSZ	Xorg.0.log[25964]:	systemd: Started User Session 8948 of user admin.
+Sep 03 20:18:34	RUfus	Xorg.0.log[23043]:	Received disconnect from 167.166.211.126: 27: Closed due to user request [preauth]
+Sep 03 20:18:50	testvm	Xorg.0.log[8509]:	Received disconnect from 82.205.209.130: 48: Closed due to user request [preauth]
+Sep 03 20:21:42	server	Xorg.0.log[21104]:	Did not receive identification string from 1.0.0.1
+Sep 03 20:21:45	RUfus	Xorg.0.log[28084]:	Did not receive identification string from 9.9.9.9
+Sep 03 20:22:22	LabSZ	Xorg.0.log[21397]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:97.0/usb3/3-4/3-4:1.0/0003:1EA7:00976.0001/input/input97/event97
+Sep 03 20:22:29	ADM	Xorg.0.log[24510]:	Received disconnect from 197.203.58.66: 47: Closed due to user request [preauth]
+Sep 03 20:24:28	archive	Xorg.0.log[2941]:	Accepted password for admin from 155.24.68.149 port 35999 ssh9
+Sep 03 20:24:45	archive	Xorg.0.log[11594]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event9)
+Sep 03 20:24:51	ADM	Xorg.0.log[20504]:	Received disconnect from 9.9.9.9: 18: disconnected by user
+Sep 03 20:25:30	archive	Xorg.0.log[4949]:	Received disconnect from 182.20.194.195: 87: Bye Bye [preauth]
+Sep 03 20:25:56	RUfus	Xorg.0.log[26450]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 03 20:26:06	prod1	Xorg.0.log[26251]:	systemd: Started User Session 10224 of user admin.
+Sep 03 20:26:10	server	Xorg.0.log[4257]:	pam_unix(sshd:session): session opened for user admin by (uid=32)
+Sep 03 20:26:15	ADM	Xorg.0.log[15404]:	Connection closed by 8.8.8.8 [preauth]
+Sep 03 20:26:31	RUfus	Xorg.0.log[7390]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 03 20:27:46	LabSZ	Xorg.0.log[7373]:	Received disconnect from 1.0.0.1: 40: disconnected by user
+Sep 03 20:27:52	ADM	Xorg.0.log[9016]:	event9  - Sleep Button: is tagged by udev as: Keyboard
+Sep 03 20:28:15	LabSZ	Xorg.0.log[6831]:	Received disconnect from 8.8.4.4: 69: disconnected by user
+Sep 03 20:28:27	testvm	Xorg.0.log[5087]:	kernel: usb 1-15: USB disconnect, device number 2
+Sep 03 20:29:00	RUfus	Xorg.0.log[16154]:	Received disconnect from 78.117.73.31: 69: Bye Bye [preauth]
+Sep 03 20:29:04	testvm	Xorg.0.log[23329]:	Received disconnect from 90.220.252.70: 16: Bye Bye [preauth]
+Sep 03 20:29:27	LabSZ	Xorg.0.log[14051]:	Accepted password for matlab from 3.196.189.156 port 48283 ssh55
+Sep 03 20:29:31	archive	Xorg.0.log[22129]:	Received disconnect from 1.1.1.1: 12: disconnected by user
+Sep 03 20:30:20	RUfus	Xorg.0.log[19124]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event92)
+Sep 03 20:30:56	prod1	Xorg.0.log[9030]:	pam_unix(sshd:session): session opened for user webmaster by (uid=3)
+Sep 03 20:30:58	server	Xorg.0.log[9198]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:19.0/usb3/3-4/3-4:1.0/0003:1EA7:00196.0001/input/input19/event19
+Sep 03 20:31:01	prod1	Xorg.0.log[4665]:	systemd: Started User Session 15626 of user root.
+Sep 03 20:32:24	LabSZ	Xorg.0.log[14049]:	Accepted password for pgadmin from 61.164.200.198 port 24510 ssh31
+Sep 03 20:32:28	ADM	Xorg.0.log[10804]:	pam_unix(sshd:session): session opened for user fztu by (uid=13)
+Sep 03 20:32:57	testvm	Xorg.0.log[14576]:	pam_unix(sshd:session): session closed for user oracle
+Sep 03 20:33:31	LabSZ	Xorg.0.log[12681]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event25)
+Sep 03 20:35:13	testvm	Xorg.0.log[19577]:	Received disconnect from 207.226.17.226: 69: Bye Bye [preauth]
+Sep 03 20:35:15	testvm	Xorg.0.log[27070]:	Connection closed by 1.0.0.1 [preauth]
+Sep 03 20:35:33	RUfus	Xorg.0.log[17943]:	Did not receive identification string from 1.1.1.1
+Sep 03 20:35:35	prod1	Xorg.0.log[20510]:	Received disconnect from 8.8.4.4: 22: disconnected by user
+Sep 03 20:35:37	testvm	Xorg.0.log[20620]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:95.0/usb3/3-4/3-4:1.0/0003:1EA7:00956.0001/input/input95/event95
+Sep 03 20:35:40	archive	Xorg.0.log[26662]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event2)
+Sep 03 20:36:18	server	Xorg.0.log[9998]:	Connection closed by 8.8.4.4 [preauth]
+Sep 03 20:36:25	LabSZ	Xorg.0.log[18528]:	event49  - Sleep Button: is tagged by udev as: Keyboard
+Sep 03 20:36:49	prod1	Xorg.0.log[21544]:	pam_unix(sshd:session): session opened for user matlab by (uid=16)
+Sep 03 20:36:54	archive	Xorg.0.log[20674]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:79.0/usb3/3-4/3-4:1.0/0003:1EA7:00796.0001/input/input79/event79
+Sep 03 20:37:05	LabSZ	Xorg.0.log[7110]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event8)
+Sep 03 20:38:05	prod1	Xorg.0.log[24935]:	(EE) Backtrace:
+Sep 03 20:38:06	LabSZ	Xorg.0.log[6073]:	(EE) Caught signal 11 (Segmentation fault). Server aborting
+Sep 03 20:38:16	ADM	Xorg.0.log[4898]:	Received disconnect from 229.160.103.77: 77: Closed due to user request [preauth]
+Sep 03 20:38:19	ADM	Xorg.0.log[22149]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event82)
+Sep 03 20:38:31	archive	Xorg.0.log[23680]:	kernel: usb 1-56: USB disconnect, device number 2
+Sep 03 20:38:53	server	Xorg.0.log[9535]:	Did not receive identification string from 9.9.9.9
+Sep 03 20:40:22	prod1	Xorg.0.log[19622]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 03 20:40:47	testvm	Xorg.0.log[26668]:	pam_unix(sshd:session): session opened for user admin by (uid=12)
+Sep 03 20:40:54	archive	Xorg.0.log[22740]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 03 20:41:02	RUfus	Xorg.0.log[3002]:	systemd: Started User Session 19197 of user pgadmin.
+Sep 03 20:41:21	LabSZ	Xorg.0.log[8480]:	pam_unix(sshd:session): session opened for user backup by (uid=94)
+Sep 03 20:41:23	prod1	Xorg.0.log[27095]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:66.0/usb3/3-4/3-4:1.0/0003:1EA7:00666.0001/input/input66/event66
+Sep 03 20:41:39	testvm	Xorg.0.log[17970]:	Accepted password for backup from 80.239.111.112 port 42297 ssh23
+Sep 03 20:42:48	RUfus	Xorg.0.log[21969]:	Received disconnect from 9.9.9.9: 91: disconnected by user
+Sep 03 20:43:27	testvm	Xorg.0.log[14678]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=65)
+Sep 03 20:43:33	LabSZ	Xorg.0.log[20911]:	Disconnecting: Too many authentication failures for admin [preauth]
+Sep 03 20:43:44	ADM	Xorg.0.log[29995]:	systemd: Started User Session 18710 of user oracle.
+Sep 03 20:43:59	RUfus	Xorg.0.log[19531]:	pam_unix(sshd:session): session closed for user root
+Sep 03 20:44:06	RUfus	Xorg.0.log[24199]:	Did not receive identification string from 1.1.1.1
+Sep 03 20:44:12	RUfus	Xorg.0.log[19877]:	Received disconnect from 50.190.105.105: 88: Bye Bye [preauth]
+Sep 03 20:44:15	RUfus	Xorg.0.log[17675]:	Accepted password for guest from 93.229.29.167 port 33198 ssh78
+Sep 03 20:44:22	testvm	Xorg.0.log[20892]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:91.0/usb3/3-4/3-4:1.0/0003:1EA7:00916.0001/input/input91/event91
+Sep 03 20:44:38	prod1	Xorg.0.log[16171]:	Received disconnect from 75.136.83.232: 46: Bye Bye [preauth]
+Sep 03 20:44:42	server	Xorg.0.log[12234]:	Accepted password for fztu from 239.146.20.225 port 42886 ssh47
+Sep 03 20:44:58	LabSZ	Xorg.0.log[3652]:	Received disconnect from 1.1.1.1: 17: disconnected by user
+Sep 03 20:45:01	LabSZ	Xorg.0.log[5546]:	Received disconnect from 44.218.202.215: 52: Closed due to user request [preauth]
+Sep 03 20:45:08	ADM	Xorg.0.log[11654]:	kernel: usb 1-93: USB disconnect, device number 2
+Sep 03 20:46:28	ADM	Xorg.0.log[27528]:	kernel: usb 1-97: USB disconnect, device number 2
+Sep 03 20:46:42	RUfus	Xorg.0.log[4378]:	kernel: usb 1-59: USB disconnect, device number 2
+Sep 03 20:47:12	ADM	Xorg.0.log[14439]:	Received disconnect from 236.136.218.208: 51: Bye Bye [preauth]
+Sep 03 20:51:36	archive	Xorg.0.log[17738]:	Did not receive identification string from 1.0.0.1
+Sep 03 20:51:39	ADM	Xorg.0.log[4732]:	pam_unix(sshd:session): session opened for user webmaster by (uid=55)
+Sep 03 20:51:42	LabSZ	Xorg.0.log[27813]:	Did not receive identification string from 8.8.4.4
+Sep 03 20:51:45	testvm	Xorg.0.log[17797]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:32.0/usb3/3-4/3-4:1.0/0003:1EA7:00326.0001/input/input32/event32
+Sep 03 20:52:02	RUfus	Xorg.0.log[15291]:	Received disconnect from 8.8.8.8: 48: disconnected by user
+Sep 03 20:52:05	ADM	Xorg.0.log[25887]:	Accepted password for guest from 64.244.93.224 port 35226 ssh10
+Sep 03 20:52:23	archive	Xorg.0.log[10090]:	pam_unix(sshd:session): session opened for user fztu by (uid=11)
+Sep 03 20:52:51	testvm	Xorg.0.log[8160]:	event29  - Sleep Button: is tagged by udev as: Keyboard
+Sep 03 20:52:55	server	Xorg.0.log[16457]:	Received disconnect from 9.9.9.9: 80: disconnected by user
+Sep 03 20:52:58	server	Xorg.0.log[26442]:	Connection closed by 9.9.9.9 [preauth]
+Sep 03 20:53:22	ADM	Xorg.0.log[29622]:	Did not receive identification string from 1.1.1.1

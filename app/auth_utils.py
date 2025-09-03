@@ -7,15 +7,17 @@ from typing import Optional
 from fastapi import Depends, HTTPException, status, Request
 from jose import JWTError, jwt
 from passlib.context import CryptContext
-import sqlite3
+import psycopg2, psycopg2.extras
 from pathlib import Path
 from starlette.responses import StreamingResponse
+from app.config import settings
+from sqlalchemy import create_engine, text
 
 # --- Configuration ---
-DATABASE_FILE = Path(__file__).parent.parent / "log_database.db"
-SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60
+# DATABASE_FILE = Path(__file__).parent.parent / "log_database.db"
+# SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
+# ALGORITHM = "HS256"
+# ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 # --- Security & Auth Setup ---
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -33,9 +35,10 @@ async def get_current_user(request: Request):
     
     token = token.split("Bearer ")[1]
     try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        username: str = payload.get("sub")
-        if username is None: return None
+        payload = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])
+        username = payload.get("sub")
+        if not isinstance(username, str) or not username: 
+            return None
     except JWTError:
         return None
     
@@ -50,14 +53,30 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     to_encode = data.copy()
     expire = datetime.now(timezone.utc) + (expires_delta or timedelta(minutes=15))
     to_encode.update({"exp": expire})
-    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return jwt.encode(to_encode, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
+
+# def get_user(username: str):
+#     conn = psycopg2.connect(settings.DATABASE_FILE)
+#     conn.row_factory = psycopg2.Row
+#     user = conn.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
+#     conn.close()
+#     return dict(user) if user else None
 
 def get_user(username: str):
-    conn = sqlite3.connect(DATABASE_FILE)
-    conn.row_factory = sqlite3.Row
-    user = conn.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
-    conn.close()
-    return dict(user) if user else None
+
+    engine = create_engine(settings.DATABASE_URL)
+    sql_query = text("SELECT * FROM users WHERE username = :username")
+    
+    try:
+        with engine.connect() as connection:
+            result = connection.execute(sql_query, {"username": username}).fetchone()
+            if result:
+                # Convert the SQLAlchemy Row object to a dictionary
+                return dict(result._mapping)
+            return None
+    except Exception as error:
+        print(f"Database error in get_user: {error}")
+        return None
 
 # --- 2FA Utilities ---
 def generate_2fa_secret():

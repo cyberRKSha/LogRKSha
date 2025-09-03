@@ -1,27 +1,35 @@
 import os
-import re
 import sys
+from app.config import settings
+import re
 import dill
 import pika
 import json
 import time
+import redis
+import pickle
 import joblib
 import hashlib
-import sqlite3
+import psycopg2
 import requests
 import subprocess
 import numpy as np
 import tensorflow as tf
+import logging
+from app.log_config import setup_logging
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from datetime import datetime, timezone
 from sklearn.pipeline import make_pipeline
 from sentence_transformers import SentenceTransformer
+from sqlalchemy import create_engine, text
 
-# --- Configuration and Model Loading ---
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-DATABASE_FILE = os.path.join(BASE_DIR, "log_database.db")
-DASHBOARD_URL = "http://127.0.0.1:8000"
-RABBITMQ_HOST = 'localhost'
+logger = logging.getLogger(__name__)
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from app.config import settings
 LOG_QUEUE_NAME = 'log_queue'
 
 IGNORED_PATTERNS = [
@@ -29,42 +37,45 @@ IGNORED_PATTERNS = [
     "ACPI group/action undefined: video/",
 ]
 
-# --- Logging Helpers ---
-def log_info(msg): print(f"\033[94mℹ️ {msg}\033[0m")
-def log_success(msg): print(f"\033[92m✅ {msg}\033[0m")
-def log_warning(msg): print(f"\033[93m⚠️ {msg}\033[0m")
-def log_error(msg): print(f"\033[91m❗ {msg}\033[0m")
+logger.info("Worker starting up. Loading models...")
 
-# --- Load ALL Models at Startup ---
-log_info("Worker starting up. Loading models...")
-EMBEDDER_PATH = os.path.join(BASE_DIR, "model/sentence_embedder.pkl")
-SUPERVISED_MODEL_PATH = os.path.join(BASE_DIR, "model/sgd_embedder.pkl")
-AUTOENCODER_PATH = os.path.join(BASE_DIR, "model/autoencoder_model.keras")
-THRESHOLD_PATH = os.path.join(BASE_DIR, "model/autoencoder_threshold.json")
-EXPLAINER_PATH = os.path.join(BASE_DIR, "model/lime_explainer.pkl")
-KNOWN_HASHES_FILE = os.path.join(BASE_DIR, "logs/kwnhashes.txt")
-ALERT_SOUND = os.path.join(BASE_DIR, "logs/alert.wav")
-STATUS_FILE = os.path.join(BASE_DIR, "monitoring_status.json")
-LSTM_MODEL_PATH = os.path.join(BASE_DIR, "model/lstm_classifier_model.keras")
+registry_path = os.path.join(settings.PROJECT_ROOT, "model_registry.json")
+with open(registry_path, 'r') as f:
+    active_models = json.load(f)
 
-embedder = SentenceTransformer(str(EMBEDDER_PATH))
-supervised_model = joblib.load(SUPERVISED_MODEL_PATH)
-unsupervised_model = tf.keras.models.load_model(AUTOENCODER_PATH)
-with open(THRESHOLD_PATH, 'r') as f:
+embedder = SentenceTransformer(str(settings.EMBEDDER_PATH))
+supervised_model = joblib.load(active_models["supervised_model"])
+unsupervised_model = tf.keras.models.load_model(active_models["autoencoder_model"])
+lstm_model = tf.keras.models.load_model(active_models["lstm_model"])
+with open(settings.THRESHOLD_PATH, 'r') as f:
     unsupervised_threshold = json.load(f)['threshold']
-with open(EXPLAINER_PATH, 'rb') as f:
+with open(settings.EXPLAINER_PATH, 'rb') as f:
     explainer = dill.load(f)
-lstm_model = tf.keras.models.load_model(LSTM_MODEL_PATH)
-log_success("✅ All models loaded successfully.")
+# lstm_model = tf.keras.models.load_model(settings.LSTM_MODEL_PATH)
+logger.info("✅ All models loaded successfully.")
 
-if os.path.exists(KNOWN_HASHES_FILE):
-    with open(KNOWN_HASHES_FILE, 'r') as f:
+if os.path.exists(settings.KNOWN_HASHES_FILE):
+    with open(settings.KNOWN_HASHES_FILE, 'r') as f:
         known_hashes = set(line.strip() for line in f)
 else:
     known_hashes = set()
 
-active_sessions = {}
+# active_sessions = {}
 SEQUENCE_LEN = 20
+
+# --- REDIS CONNECTION ---
+try:
+    redis_client = redis.Redis(
+        host=settings.REDIS_HOST,
+        port=settings.REDIS_PORT,
+        db=settings.REDIS_DB,
+        decode_responses=False # We will handle decoding/encoding with pickle
+    )
+    redis_client.ping() # Check if the connection is successful
+    logger.info("✅ Connected to Redis successfully.")
+except redis.exceptions.ConnectionError as e:
+    logger.error(f"❗ Could not connect to Redis: {e}")
+    sys.exit(1)
 
 # --- All Processing Logic (moved from monitor.py) ---
 
@@ -94,36 +105,56 @@ def parse_timestamp_from_log(log_line: str) -> str:
 
 def is_monitoring_active():
     """Checks the status file. Defaults to True if file not found."""
-    if not os.path.exists(STATUS_FILE):
+    if not os.path.exists(settings.STATUS_FILE):
         return True
     try:
-        with open(STATUS_FILE, 'r') as f:
+        with open(settings.STATUS_FILE, 'r') as f:
             return json.load(f).get("is_active", True)
     except (json.JSONDecodeError, IOError):
         return True # Default to active on error
 
 def play_alert_sound():
     try:
-        subprocess.Popen(['paplay', ALERT_SOUND])
+        subprocess.Popen(['paplay', settings.ALERT_SOUND])
     except Exception as e:
-        log_warning(f"Sound playback failed: {e}")
+        logger.warning(f"Sound playback failed: {e}")
 
-def insert_log_to_db(source: str, content: str, p_label: int, risk: float, seq_risk: float, reviewed: int = 0, explanation: str = ""):
-    try:
-        conn = sqlite3.connect(DATABASE_FILE)
-        cursor = conn.cursor()
-        timestamp = datetime.now().isoformat(timespec="milliseconds")
-        cursor.execute("""
-            INSERT INTO logs (timestamp, source, content, predicted_label, final_label, is_reviewed, risk_score, sequence_risk, explanation)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (timestamp, source, content, p_label, p_label, reviewed, risk, seq_risk, explanation))
-        new_log_id = cursor.lastrowid
-        conn.commit()
-        conn.close()
-        return new_log_id
+def insert_log_to_db(source, content, p_label, risk, seq_risk, verdict_str, reviewed=0, explanation=""):
+    """Inserts a log into the database using SQLAlchemy."""
+    engine = create_engine(settings.DATABASE_URL)
+    query = text("""
+        INSERT INTO logs (timestamp, source, content, predicted_label, final_label, is_reviewed, risk_score, sequence_risk, verdict, explanation)
+        VALUES (:ts, :source, :content, :p_label, :f_label, :reviewed, :risk, :seq_risk, :verdict, :explanation)
+        RETURNING id, timestamp
+    """)
     
-    except Exception as e:
-        log_error(f"Database write failed: {e}")
+    try:
+        with engine.connect() as connection:
+            # Begin a transaction
+            with connection.begin() as transaction:
+                result = connection.execute(query, {
+                    "ts": datetime.now(timezone.utc),
+                    "source": source,
+                    "content": content,
+                    "p_label": p_label,
+                    "f_label": p_label, # final_label is same as predicted initially
+                    "reviewed": reviewed,
+                    "risk": risk,
+                    "seq_risk": seq_risk,
+                    "verdict": verdict_str,
+                    "explanation": explanation
+                }).fetchone()
+
+            if result:
+                # The result object can be accessed by index
+                return result[0], result[1]
+            else:
+                logger.error("Database insert did not return the new log ID and timestamp.")
+                return None, None
+                
+    except Exception as error:
+        logger.error(f"Database write failed: {error}")
+        return None, None
 
 def send_to_dashboard(payload: dict):
     try:    
@@ -135,18 +166,18 @@ def send_to_dashboard(payload: dict):
         #     # "risk_score": risk_score,
         # }
         # payload["timestamp"] = datetime.now(timezone.utc).isoformat(timespec="milliseconds")
-        requests.post(f"{DASHBOARD_URL}/api/new_log", json=payload, timeout=2)
+        requests.post(f"{settings.DASHBOARD_URL}/api/new_log", json=payload, timeout=2)
 
     except TypeError as e:
-        log_error(f"Failed to serialize payload to JSON: {e}. Payload: {payload}")
+        logger.error(f"Failed to serialize payload to JSON: {e}. Payload: {payload}")
     except Exception as e:
-        log_warning(f"Failed to send to dashboard: {e}")
+        logger.warning(f"Failed to send to dashboard: {e}")
 
 def is_new_log_and_save_hash(log_text):
     h = hashlib.sha256(log_text.encode('utf-8')).hexdigest()
     if h not in known_hashes:
         known_hashes.add(h)
-        with open(KNOWN_HASHES_FILE, 'a') as f:
+        with open(settings.KNOWN_HASHES_FILE, 'a') as f:
             f.write(h + '\n')
         return True
     return False
@@ -164,7 +195,7 @@ def get_session_key(log_line: str) -> str | None:
         return f"ip_{ip_match.group(0)}"
 
     # 2. If no IP, try to find a common username pattern
-    user_match = re.search(r"\buser[= ](\w+)", log_line) # e.g., "user=root" or "user root"
+    user_match = re.search(r"\b(?:user=|for user )\b(\w+)", log_line) # e.g., "user=root" or "user root"
     if user_match:
         return f"user_{user_match.group(1)}"
         
@@ -177,59 +208,64 @@ def get_session_key(log_line: str) -> str | None:
 
 def update_and_predict_sequence(log_line, embedding):
     """
-    Manages active log sequences and predicts anomaly score using the LSTM model.
+    Manages active log sequences in Redis and predicts anomaly score using the LSTM model.
     """
     session_key = get_session_key(log_line)
     if not session_key:
-        return 0.0 # Cannot perform sequence analysis without a session key (IP)
+        return 0.0  # Cannot perform sequence analysis without a key
 
-    now = datetime.now()
+    # 1. Get the current sequence from Redis
+    raw_sequence = redis_client.get(session_key)
     
-    # Get the current session for this IP or create a new one
-    session = active_sessions.get(session_key, {'embeddings': [], 'last_seen': now})
+    if raw_sequence:
+        # If a sequence exists, decode it from bytes to a list of embeddings
+        session_embeddings = pickle.loads(raw_sequence)
+    else:
+        # Otherwise, start a new empty list for the sequence
+        session_embeddings = []
+
+    # 2. Add the new log's embedding to the sequence
+    # embedding is shape (1, 384), we want to append the inner array (384,)
+    session_embeddings.append(embedding[0])
     
-    # Add the new log's embedding to the sequence
-    session['embeddings'].append(embedding[0]) # embedding is shape (1, 384), we want (384,)
-    session['last_seen'] = now
+    # 3. Keep the sequence at the maximum length defined in your settings
+    if len(session_embeddings) > settings.SEQUENCE_LEN:
+        session_embeddings.pop(0)
+
+    # 4. Save the updated sequence back to Redis
+    # We use pickle.dumps to turn the Python list of arrays into bytes
+    encoded_sequence = pickle.dumps(session_embeddings)
+    # setex saves the value and sets an automatic expiration (timeout)
+    redis_client.setex(session_key, settings.SESSION_TIMEOUT_SECONDS, encoded_sequence)
     
-    # Keep the sequence at a maximum length
-    if len(session['embeddings']) > SEQUENCE_LEN:
-        session['embeddings'].pop(0)
+    # 5. Prepare the sequence for the model (this part is the same as before)
+    padded_sequence = pad_sequences([session_embeddings], maxlen=settings.SEQUENCE_LEN, dtype='float32', padding='pre')
     
-    active_sessions[session_key] = session
-    
-    # Prepare the sequence for the model
-    sequence_for_model = [session['embeddings']] # Model expects a batch
-    padded_sequence = pad_sequences(sequence_for_model, maxlen=SEQUENCE_LEN, dtype='float32', padding='pre')
-    
-    # Predict with the LSTM model
+    # 6. Predict with the LSTM model
     sequence_risk_score = lstm_model.predict(padded_sequence, verbose=0)[0][0]
-
-    # --- Cleanup: Periodically remove old, inactive sessions to save memory ---
-    # (This is a simple cleanup, a more robust version might use a separate thread)
-    if np.random.rand() < 0.1: # Run cleanup randomly on 10% of calls
-        inactive_ips = [
-            k for k, v in active_sessions.items() 
-            if (now - v['last_seen']).total_seconds() > 300 # 5-minute timeout
-        ]
-        for k in inactive_ips:
-            del active_sessions[k]
+    
+    # NOTE: The manual cleanup loop is no longer needed.
+    # Redis's `setex` command automatically handles the expiration of old sessions.
             
     return float(sequence_risk_score)
 
 def process_log(source, line):
+    if line.startswith("[LOG-WORKER]"):
+        return
+
+    line = line.replace('%', '%%')
 
     if any(p in line for p in IGNORED_PATTERNS):
         return
     
     h = hashlib.sha256(line.encode('utf-8')).hexdigest()
     if h in known_hashes:
-        log_info(f"Skipping duplicate log: {line}")
+        logger.info(f"Skipping duplicate log: {line}")
         return # Exit the function early
 
     # If it's new, add it to our known hashes and proceed with processing.
     known_hashes.add(h)
-    with open(KNOWN_HASHES_FILE, 'a') as f:
+    with open(settings.KNOWN_HASHES_FILE, 'a') as f:
         f.write(h + '\n')
 
     # This is the full, final version of your processing logic
@@ -276,34 +312,46 @@ def process_log(source, line):
     
     # is_unique_for_review = is_new_log_and_save_hash(line)
     # log_is_reviewed_status = 0 if is_unique_for_review else 1
-    new_log_id = insert_log_to_db(source, line, int(is_anomaly), risk_score, sequence_risk, 0, "")
+    new_log_id, new_log_timestamp = insert_log_to_db(source, line, int(is_anomaly), risk_score, sequence_risk, verdict, 0, "")
     
-    if is_anomaly:
+    if is_anomaly and new_log_id and new_log_timestamp:
         try:
-            conn = sqlite3.connect(DATABASE_FILE)
-            cursor = conn.cursor()
-            cursor.execute("INSERT INTO alerts (log_id, timestamp, rule_name, status) VALUES (?, ?, ?, 'New')",
-                         (new_log_id, datetime.now(timezone.utc).isoformat(), verdict))
-            alert_id = cursor.lastrowid
-            conn.commit()
-            conn.close()
+            engine = create_engine(settings.DATABASE_URL)
+            alert_query = text("""
+                INSERT INTO alerts (log_id, log_timestamp, timestamp, rule_name, status) 
+                VALUES (:log_id, :log_ts, :now_ts, :rule_name, 'New')
+                RETURNING id
+            """)
 
+            with engine.connect() as connection:
+                with connection.begin() as transaction:
+                    alert_result = connection.execute(alert_query, {
+                        "log_id": new_log_id,
+                        "log_ts": new_log_timestamp,
+                        "now_ts": datetime.now(timezone.utc),
+                        "rule_name": verdict
+                    }).scalar_one_or_none() # .scalar_one_or_none() is great for single-value returns
+            
+            alert_id = alert_result
+
+            # Update the dashboard payload with the new alert info
             dashboard_payload["is_alert"] = True
             dashboard_payload["alert_info"] = {
-            "id": alert_id, "status": "New", "rule_name": verdict,
-            "timestamp": original_timestamp,
-            "content": line, "risk_score": risk_score
+                "id": alert_id, "status": "New", "rule_name": verdict,
+                "timestamp": original_timestamp, "log_id": new_log_id,
+                "content": line, "risk_score": risk_score
             }
-            # requests.post(f"{DASHBOARD_URL}/api/new_alert_entry", json=dashboard_payload, timeout=1)
 
-            if risk_score >= 0.75:
+            if risk_score >= 0.79:
                 advice = f"({verdict}) | Risk: {risk_score:.2f}"
-                requests.post(f"{DASHBOARD_URL}/api/new_alert", json={"log": line, "advice": advice, "status": "New", "id": alert_id}, timeout=1)
+                # This part for sending notifications remains the same
+                requests.post(f"{settings.DASHBOARD_URL}/api/new_alert", json={"log": line, "advice": advice, "status": "New", "id": alert_id}, timeout=1)
                 play_alert_sound()
-        except Exception as e:
-            log_warning(f"Failed to send alert to dashboard: {e}")
 
-    log_info(f"Verdict: [{verdict}] | RiskScore: {risk_score} | Loss: {reconstruction_loss:.4f} | Log: {line}")
+        except Exception as e:
+            logger.warning(f"Failed to create alert or send to dashboard: {e}")
+
+    logger.info(f" [LOG-WORKER] Verdict: [{verdict}] | RiskScore: {risk_score} | Loss: {reconstruction_loss:.4f} | Log: {line}")
     # send_to_dashboard(line, label_str, verdict, risk_score)
     send_to_dashboard(dashboard_payload)
 
@@ -311,7 +359,7 @@ def process_log(source, line):
 def main():
     while True:
         try:
-            connection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST))
+            connection = pika.BlockingConnection(pika.ConnectionParameters(host=settings.RABBITMQ_HOST))
             channel = connection.channel()
             channel.queue_declare(queue=LOG_QUEUE_NAME, durable=True)
 
@@ -320,14 +368,14 @@ def main():
                     message = json.loads(body)
                     process_log(message.get('source'), message.get('content'))
                 except Exception as e:
-                    log_warning(f"Error processing message: {e}")
+                    logger.warning(f"Error processing message: {e}")
                 finally:
                     ch.basic_ack(delivery_tag=method.delivery_tag)
 
             channel.basic_qos(prefetch_count=1)
             # channel.basic_consume(queue=LOG_QUEUE_NAME, on_message_callback=callback)
-            log_success('Worker connected to RabbitMQ.')
-            log_info(' [*] Worker is waiting for logs. To exit press CTRL+C')
+            logger.info('Worker connected to RabbitMQ.')
+            logger.info(' [*] Worker is waiting for logs. To exit press CTRL+C')
             # channel.start_consuming()
             while True:
                 if is_monitoring_active():
@@ -345,7 +393,7 @@ def main():
 
         except (pika.exceptions.StreamLostError, pika.exceptions.AMQPConnectionError) as e:
                 # 3. Catch connection errors and wait before retrying
-                log_error(f"❗ Connection to RabbitMQ lost: {e}. Retrying in 5 seconds...")
+                logger.error(f"❗ Connection to RabbitMQ lost: {e}. Retrying in 5 seconds...")
                 time.sleep(5)
 
         except KeyboardInterrupt:
@@ -354,452 +402,15 @@ def main():
 
         except Exception as e:
             # Catch any other unexpected errors
-            log_error(f"❗ An unexpected error occurred: {e}. Retrying in 10 seconds...")
+            logger.error(f"❗ An unexpected error occurred: {e}. Retrying in 10 seconds...")
             time.sleep(10)
 
 if __name__ == '__main__':
+    setup_logging()
     try:
         main()
     except KeyboardInterrupt:
-        print('Interrupted')
+        logger.info('Interrupted')
         sys.exit(0)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def insert_logs_batch(log_batch):
-#     """Inserts a batch of logs into the database."""
-#     conn = sqlite3.connect(DATABASE_FILE, timeout=10)
-#     cursor = conn.cursor()
-#     # executemany is much faster for bulk inserts
-#     cursor.executemany("""
-#         INSERT INTO logs (timestamp, source, content, predicted_label, final_label, is_reviewed, risk_score, explanation)
-#         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-#     """, log_batch)
-#     conn.commit()
-#     conn.close()
-
-# def create_alerts_batch(alert_batch):
-#     """Inserts a batch of alerts into the database."""
-#     conn = sqlite3.connect(DATABASE_FILE, timeout=10)
-#     cursor = conn.cursor()
-#     cursor.executemany("""
-#         INSERT INTO alerts (log_id, timestamp, rule_name, status)
-#         VALUES (?, ?, ?, 'New')
-#     """, alert_batch)
-#     conn.commit()
-#     conn.close()
-
-# # The main processing logic, now for a BATCH of logs
-# def process_batch(batch):
-#     if not batch:
-#         return
-
-#     log_info(f"Processing a batch of {len(batch)} logs...")
-    
-#     # 1. Prepare batch data
-#     log_contents = [item['content'] for item in batch]
-#     log_sources = [item['source'] for item in batch]
-
-#     # 2. Run ML models ONCE on the entire batch
-#     embeddings = embedder.encode(log_contents, batch_size=len(batch))
-#     supervised_preds = supervised_model.predict(embeddings)
-#     reconstructions = unsupervised_model.predict(embeddings, verbose=0)
-#     reconstruction_losses = tf.keras.losses.mae(reconstructions, embeddings).numpy()
-    
-#     # 3. Process results for each log in the batch
-#     logs_to_db = []
-#     alerts_to_db = []
-    
-#     for i in range(len(batch)):
-#         risk_score = min(1.0, reconstruction_losses[i] / unsupervised_threshold)
-#         unsupervised_pred = 1 if reconstruction_losses[i] > unsupervised_threshold else 0
-        
-#         verdict = "Normal"
-#         is_anomaly = False
-#         if supervised_preds[i] == 1:
-#             is_anomaly, verdict = True, "Known Anomaly (Supervised)"
-#         elif unsupervised_pred == 1:
-#             is_anomaly, verdict = True, "Novelty Detected (Unsupervised)"
-        
-#         if not is_anomaly: risk_score = 0.0
-#         label_str = 'anomaly' if is_anomaly else 'normal'
-
-#         # Send individual logs to the dashboard in real-time
-#         send_to_dashboard(log_contents[i], label_str, verdict, risk_score)
-
-#         # Prepare data for bulk database insert
-#         logs_to_db.append((
-#             datetime.now(timezone.utc).isoformat(), log_sources[i], log_contents[i],
-#             int(is_anomaly), int(is_anomaly), 0, risk_score, ""
-#         ))
-        
-#     # 4. Insert logs into DB to get their IDs
-#     # This part is slower as we need IDs back. We'll do it one by one for now.
-#     # A more advanced solution would use a different DB that supports returning IDs from bulk inserts.
-#     for i in range(len(logs_to_db)):
-#         new_log_id = insert_log_to_db(*logs_to_db[i][1:]) # Pass tuple elements
-        
-#         # Check if this log should generate an alert
-#         is_anomaly = logs_to_db[i][3] == 1
-#         risk_score = logs_to_db[i][6]
-#         verdict = "Anomaly Detected" # Simplified
-#         if is_anomaly and risk_score >= 0.7:
-#              alerts_to_db.append((new_log_id, datetime.now(timezone.utc).isoformat(), verdict))
-
-#     # 5. Bulk insert alerts
-#     if alerts_to_db:
-#         create_alerts_batch(alerts_to_db)
-
-#     log_success(f"Finished processing batch of {len(batch)} logs.")
-
-
-# # --- Main Worker Loop (Now batch-oriented) ---
-# def main():
-#     connection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST))
-#     channel = connection.channel()
-#     channel.queue_declare(queue=LOG_QUEUE_NAME, durable=True)
-#     channel.basic_qos(prefetch_count=64) # Fetch up to 64 messages at once
-
-#     log_info(' [*] Worker is waiting for logs. To exit press CTRL+C')
-
-#     while True:
-#         batch = []
-#         batch_size = 32 # Process logs in batches of 32
-        
-#         # Try to gather a batch of logs for up to 2 seconds
-#         start_time = time.time()
-#         while len(batch) < batch_size and (time.time() - start_time) < 2:
-#             method_frame, header_frame, body = channel.basic_get(queue=LOG_QUEUE_NAME)
-#             if method_frame:
-#                 batch.append(json.loads(body))
-#                 channel.basic_ack(method_frame.delivery_tag)
-#             else:
-#                 break # No more messages in the queue
-        
-#         if batch:
-#             process_batch(batch)
-#         else:
-#             time.sleep(1) # Wait a bit if the queue is empty
-
-
-# if __name__ == '__main__':
-#     try:
-#         main()
-#     except KeyboardInterrupt:
-#         print('Interrupted')
-#         sys.exit(0)
 
 
