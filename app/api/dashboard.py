@@ -27,10 +27,32 @@ from .models import SearchQuery, AlertStatusUpdate
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["Dashboard"])
 
-embedder = SentenceTransformer(str(settings.EMBEDDER_PATH))
-supervised_model = joblib.load(settings.SUPERVISED_MODEL_PATH)
-with open(settings.EXPLAINER_PATH, 'rb') as f:
-    explainer = dill.load(f)
+embedder = None
+supervised_model = None
+explainer = None
+
+def get_models():
+    """Loads the ML models on first use and caches them."""
+    global embedder, supervised_model, explainer
+
+    if embedder is None:
+        logger.info("Loading SentenceTransformer model for the first time...")
+        embedder = SentenceTransformer(str(settings.EMBEDDER_PATH))
+        logger.info("Model loaded.")
+
+    if supervised_model is None:
+        supervised_model = joblib.load(settings.SUPERVISED_MODEL_PATH)
+
+    if explainer is None:
+        with open(settings.EXPLAINER_PATH, 'rb') as f:
+            explainer = dill.load(f)
+
+    return embedder, supervised_model, explainer
+
+# embedder = SentenceTransformer(str(settings.EMBEDDER_PATH))
+# supervised_model = joblib.load(settings.SUPERVISED_MODEL_PATH)
+# with open(settings.EXPLAINER_PATH, 'rb') as f:
+#     explainer = dill.load(f)
 templates = Jinja2Templates(directory=settings.TEMPLATES_PATH)
 GEOIP_DB_PATH = settings.GEOIP_PATH
 try:
@@ -394,6 +416,7 @@ async def get_explanation(log_id: int, user: dict = Depends(auth_utils.get_curre
         return RedirectResponse(url="/login")
 
     def get_explanation_from_db():
+        embedder, supervised_model, explainer = get_models()
         engine = create_engine(settings.DATABASE_URL)
         line = None
         
