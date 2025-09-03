@@ -34,5 +34,19 @@ jobs:
       # 4. Runs your test suite using pytest
       # This is the step that passes or fails.
       - name: Run tests with pytest
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          ALGORITHM: ${{ secrets.ALGORITHM }}
+          ACCESS_TOKEN_EXPIRE_MINUTES: ${{ secrets.ACCESS_TOKEN_EXPIRE_MINUTES }}
+          RABBITMQ_HOST: ${{ secrets.RABBITMQ_HOST }}
+          DASHBOARD_URL: ${{ secrets.DASHBOARD_URL }}
+          REDIS_HOST: ${{ secrets.REDIS_HOST }}
+          REDIS_PORT: ${{ secrets.REDIS_PORT }}
+          REDIS_DB: ${{ secrets.REDIS_DB }}
+          SESSION_TIMEOUT_SECONDS: ${{ secrets.SESSION_TIMEOUT_SECONDS }}
+          SEQUENCE_LEN: ${{ secrets.SEQUENCE_LEN }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          LOG_FILES_STR: ${{ secrets.LOG_FILES_STR }}
+          SIMILARITY_THRESHOLD: ${{ secrets.SIMILARITY_THRESHOLD }}
         run: |
           pytest
