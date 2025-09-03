@@ -5,9 +5,9 @@ name: Python Application Test
 # This workflow runs on any push or pull request to the main branch
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build:
