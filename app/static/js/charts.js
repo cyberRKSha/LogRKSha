@@ -148,11 +148,15 @@ export function updateAllChartColors() {
 
     const updateChart = (chart) => {
         if (!chart) return;
-        chart.options.scales.x.ticks.color = textColorSecondary;
-        chart.options.scales.y.ticks.color = textColorPrimary;
-        chart.options.scales.x.grid.color = borderColor;
         
-        if (chart.options.plugins.legend.display) {
+        if (chart.options.scales && chart.options.scales.x && chart.options.scales.y) {
+            chart.options.scales.x.ticks.color = textColorSecondary;
+            chart.options.scales.y.ticks.color = textColorPrimary;
+            chart.options.scales.x.grid.color = borderColor;
+            chart.options.scales.y.grid.color = borderColor; // Also good to update the Y grid color
+        }
+        
+        if (chart.options.plugins && chart.options.plugins.legend && chart.options.plugins.legend.display) {
             chart.options.plugins.legend.labels.color = textColorPrimary;
         }
         

@@ -994,3 +994,1193 @@ Sep 03 20:53:29	ADM	systemd[24122]:	Connection closed by 1.1.1.1 [preauth]
 Sep 03 20:53:32	LabSZ	systemd[6883]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
 Sep 03 20:53:33	archive	systemd[27947]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
 Sep 03 20:53:40	server	systemd[19987]:	event36  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 00:47:23	prod1	systemd[28828]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 04 00:47:53	server	systemd[8212]:	kernel: usb 1-99: USB disconnect, device number 2
+Sep 04 00:47:58	prod1	systemd[26901]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 04 00:48:21	prod1	systemd[8705]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 04 01:08:54	archive	systemd[3514]:	Accepted password for pgadmin from 66.142.222.224 port 39695 ssh71
+Sep 04 01:09:01	testvm	systemd[5037]:	pam_unix(sshd:session): session closed for user chen
+Sep 04 01:09:32	RUfus	systemd[9481]:	Connection closed by 1.1.1.1 [preauth]
+Sep 04 01:09:35	LabSZ	systemd[5535]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 04 01:09:49	archive	systemd[4474]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 04 01:09:50	ADM	systemd[4378]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 04 01:10:38	testvm	systemd[29417]:	Accepted password for oracle from 137.15.135.33 port 51261 ssh92
+Sep 04 01:10:40	LabSZ	systemd[27668]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 04 01:10:49	RUfus	systemd[27765]:	event19  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:10:52	LabSZ	systemd[21144]:	Accepted password for backup from 86.164.244.172 port 53204 ssh27
+Sep 04 01:10:58	server	systemd[7003]:	Received disconnect from 89.174.95.55: 7: Closed due to user request [preauth]
+Sep 04 01:11:10	prod1	systemd[16808]:	Connection closed by 9.9.9.9 [preauth]
+Sep 04 01:11:16	archive	bash[2629]:	history -c
+Sep 04 01:11:33	server	systemd[8162]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 04 01:11:46	server	systemd[5278]:	Received disconnect from 241.48.23.149: 89: Bye Bye [preauth]
+Sep 04 01:11:48	RUfus	systemd[17783]:	Received disconnect from 8.8.8.8: 28: disconnected by user
+Sep 04 01:12:04	RUfus	systemd[22408]:	User chen added a new cron job: /tmp/backdoor.sh
+Sep 04 01:12:12	ADM	systemd[8111]:	kernel: usb 1-76: USB disconnect, device number 2
+Sep 04 01:12:23	testvm	systemd[17506]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:93.0/usb3/3-4/3-4:1.0/0003:1EA7:00936.0001/input/input93/event93
+Sep 04 01:12:42	prod1	systemd[25295]:	pam_unix(sshd:session): session opened for user admin by (uid=80)
+Sep 04 01:12:48	server	systemd[14422]:	Received disconnect from 161.156.221.10: 51: Closed due to user request [preauth]
+Sep 04 01:13:21	prod1	systemd[8472]:	Did not receive identification string from 1.0.0.1
+Sep 04 01:13:25	archive	systemd[20432]:	kernel: usb 1-66: USB disconnect, device number 2
+Sep 04 01:13:34	archive	systemd[11881]:	User backup added a new cron job: /tmp/backdoor.sh
+Sep 04 01:13:47	prod1	systemd[13226]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 04 01:13:48	archive	systemd[2536]:	PsExec service started on DB-PROD-01
+Sep 04 01:13:56	server	bash[17408]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 04 01:14:15	RUfus	systemd[13670]:	Received disconnect from 244.76.84.46: 86: Bye Bye [preauth]
+Sep 04 01:14:28	ADM	systemd[25034]:	Received disconnect from 89.77.37.111: 29: Bye Bye [preauth]
+Sep 04 01:14:30	LabSZ	systemd[3982]:	kernel: usb 1-22: USB disconnect, device number 2
+Sep 04 01:15:02	server	systemd[21824]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 04 01:15:12	server	systemd[15170]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 04 01:15:13	testvm	systemd[13483]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 04 01:15:23	prod1	systemd[25502]:	systemd: Started User Session 20177 of user admin.
+Sep 04 01:15:31	LabSZ	systemd[14992]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 04 01:15:45	server	systemd[20080]:	pam_unix(sshd:session): session opened for user oracle by (uid=72)
+Sep 04 01:15:54	prod1	systemd[9941]:	Received disconnect from 57.217.67.197: 57: Bye Bye [preauth]
+Sep 04 01:15:58	server	systemd[3549]:	pam_unix(sshd:session): session closed for user guest
+Sep 04 01:16:23	archive	systemd[15246]:	kernel: usb 1-75: USB disconnect, device number 2
+Sep 04 01:16:31	server	systemd[26978]:	systemd: Started User Session 26581 of user fztu.
+Sep 04 01:17:19	archive	systemd[25832]:	Received disconnect from 1.1.1.1: 25: disconnected by user
+Sep 04 01:17:22	testvm	systemd[8558]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 04 01:17:47	LabSZ	systemd[29251]:	pam_unix(sshd:session): session opened for user webmaster by (uid=45)
+Sep 04 01:18:37	testvm	systemd[4492]:	kernel: usb 1-95: USB disconnect, device number 2
+Sep 04 01:18:40	LabSZ	systemd[29558]:	Did not receive identification string from 9.9.9.9
+Sep 04 01:18:44	LabSZ	systemd[14087]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 04 01:18:59	RUfus	systemd[13472]:	Received disconnect from 9.9.9.9: 75: disconnected by user
+Sep 04 01:19:04	prod1	bash[19706]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 04 01:19:13	prod1	systemd[15977]:	systemd: Started User Session 27206 of user chen.
+Sep 04 01:19:22	LabSZ	systemd[11963]:	Connection closed by 1.0.0.1 [preauth]
+Sep 04 01:19:32	RUfus	systemd[5370]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:88.0/usb3/3-4/3-4:1.0/0003:1EA7:00886.0001/input/input88/event88
+Sep 04 01:19:44	RUfus	systemd[3026]:	Received disconnect from 136.109.191.36: 77: Closed due to user request [preauth]
+Sep 04 01:20:02	RUfus	systemd[3342]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event75)
+Sep 04 01:20:25	archive	systemd[9730]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 04 01:20:33	prod1	systemd[18178]:	kernel: usb 1-47: USB disconnect, device number 2
+Sep 04 01:20:35	archive	systemd[12909]:	Connection closed by 1.0.0.1 [preauth]
+Sep 04 01:20:37	ADM	systemd[15467]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:20:43	prod1	systemd[22350]:	Did not receive identification string from 8.8.4.4
+Sep 04 01:21:16	server	systemd[9523]:	pam_unix(sshd:session): session opened for user oracle by (uid=28)
+Sep 04 01:22:12	RUfus	systemd[14422]:	User backup sent 1.5GB of data to 193.42.109.42
+Sep 04 01:22:31	prod1	systemd[7907]:	User webmaster sent 1.5GB of data to 129.215.17.15
+Sep 04 01:22:43	testvm	systemd[15603]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 04 01:22:43	prod1	systemd[7643]:	PsExec service started on DB-PROD-01
+Sep 04 01:23:15	LabSZ	systemd[27309]:	Received disconnect from 184.82.161.229: 37: Closed due to user request [preauth]
+Sep 04 01:23:52	testvm	systemd[27750]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 04 01:23:53	LabSZ	systemd[11664]:	PsExec service started on DB-PROD-01
+Sep 04 01:24:04	prod1	systemd[20261]:	kernel: usb 1-65: USB disconnect, device number 2
+Sep 04 01:24:10	testvm	bash[7434]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 04 01:24:22	prod1	systemd[16837]:	Received disconnect from 230.46.131.168: 14: Closed due to user request [preauth]
+Sep 04 01:24:26	archive	systemd[8053]:	event66  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:24:28	archive	systemd[15992]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event61)
+Sep 04 01:26:26	prod1	systemd[29559]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 04 01:26:32	ADM	systemd[25483]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 04 01:26:34	ADM	systemd[22807]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 04 01:26:49	server	systemd[23647]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:54.0/usb3/3-4/3-4:1.0/0003:1EA7:00546.0001/input/input54/event54
+Sep 04 01:27:35	archive	systemd[28477]:	Did not receive identification string from 1.1.1.1
+Sep 04 01:27:43	prod1	systemd[13486]:	Received disconnect from 65.245.13.13: 4: Closed due to user request [preauth]
+Sep 04 01:27:49	ADM	systemd[25150]:	pam_unix(sshd:session): session opened for user admin by (uid=16)
+Sep 04 01:27:54	prod1	systemd[14819]:	Received disconnect from 8.8.8.8: 4: disconnected by user
+Sep 04 01:28:47	LabSZ	systemd[4028]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 04 01:28:48	server	systemd[22309]:	PsExec service started on DB-PROD-01
+Sep 04 01:29:22	prod1	systemd[22728]:	Accepted password for root from 232.151.11.81 port 19785 ssh61
+Sep 04 01:29:39	LabSZ	systemd[20829]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:29:42	RUfus	systemd[20416]:	pam_unix(sshd:session): session opened for user matlab by (uid=92)
+Sep 04 01:30:11	prod1	systemd[5974]:	Received disconnect from 8.8.4.4: 30: disconnected by user
+Sep 04 01:31:33	testvm	systemd[8089]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:6.0/usb3/3-4/3-4:1.0/0003:1EA7:0066.0001/input/input6/event6
+Sep 04 01:32:26	testvm	systemd[5258]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 04 01:32:36	server	systemd[15897]:	Received disconnect from 191.145.148.156: 26: Bye Bye [preauth]
+Sep 04 01:32:44	server	systemd[14089]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=8)
+Sep 04 01:33:01	LabSZ	bash[5263]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 04 01:33:43	archive	systemd[20451]:	event53  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:33:47	LabSZ	systemd[7872]:	systemd: Started User Session 12855 of user pgadmin.
+Sep 04 01:33:56	RUfus	systemd[23383]:	Connection closed by 1.1.1.1 [preauth]
+Sep 04 01:35:01	testvm	bash[26604]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 04 01:35:22	LabSZ	systemd[26044]:	Received disconnect from 106.14.103.201: 83: Closed due to user request [preauth]
+Sep 04 01:35:25	server	systemd[17190]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 04 01:35:27	testvm	systemd[3680]:	PsExec service started on DB-PROD-01
+Sep 04 01:36:01	ADM	systemd[8990]:	kernel: usb 1-66: USB disconnect, device number 2
+Sep 04 01:36:49	server	bash[8477]:	history -c
+Sep 04 01:38:11	testvm	bash[21022]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 04 01:38:27	ADM	systemd[13045]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 04 01:38:27	LabSZ	systemd[10849]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 04 01:38:43	testvm	systemd[26318]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:72.0/usb3/3-4/3-4:1.0/0003:1EA7:00726.0001/input/input72/event72
+Sep 04 01:38:50	prod1	systemd[28426]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 04 01:38:51	archive	systemd[15854]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 04 01:38:59	archive	systemd[4209]:	pam_unix(sshd:session): session opened for user backup by (uid=93)
+Sep 04 01:39:09	archive	systemd[1496]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event81)
+Sep 04 01:39:37	LabSZ	systemd[7622]:	kernel: usb 1-71: USB disconnect, device number 2
+Sep 04 01:39:42	prod1	systemd[10329]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 04 01:39:52	testvm	systemd[28062]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 04 01:40:30	ADM	systemd[24385]:	User guest sent 1.5GB of data to 45.33.32.156
+Sep 04 01:40:56	prod1	systemd[12140]:	kernel: usb 1-9: USB disconnect, device number 2
+Sep 04 01:41:20	ADM	systemd[23135]:	kernel: usb 1-31: USB disconnect, device number 2
+Sep 04 01:41:39	prod1	systemd[4351]:	Received disconnect from 241.242.64.172: 75: Closed due to user request [preauth]
+Sep 04 01:41:50	ADM	systemd[27956]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 04 01:41:51	RUfus	systemd[29747]:	PsExec service started on DB-PROD-01
+Sep 04 01:42:22	RUfus	systemd[13517]:	pam_unix(sshd:session): session opened for user guest by (uid=63)
+Sep 04 01:42:44	prod1	systemd[27113]:	User ubuntu sent 1.5GB of data to 103.197.144.1
+Sep 04 01:43:52	prod1	systemd[18689]:	error: maximum authentication attempts exceeded for fztu from 45.33.32.156 port 43397
+Sep 04 01:44:02	ADM	systemd[23521]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 04 01:44:03	LabSZ	systemd[8311]:	PsExec service started on DB-PROD-01
+Sep 04 01:44:14	prod1	systemd[13803]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:20.0/usb3/3-4/3-4:1.0/0003:1EA7:00206.0001/input/input20/event20
+Sep 04 01:44:19	archive	systemd[14673]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:46.0/usb3/3-4/3-4:1.0/0003:1EA7:00466.0001/input/input46/event46
+Sep 04 01:44:22	prod1	systemd[13218]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:44:28	LabSZ	systemd[27910]:	event6  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:44:36	LabSZ	bash[29110]:	history -c
+Sep 04 01:45:28	server	bash[29696]:	history -c
+Sep 04 01:46:02	RUfus	systemd[11108]:	kernel: usb 1-54: USB disconnect, device number 2
+Sep 04 01:46:22	RUfus	systemd[8793]:	Received disconnect from 242.127.43.255: 46: Closed due to user request [preauth]
+Sep 04 01:46:38	archive	systemd[21763]:	Did not receive identification string from 9.9.9.9
+Sep 04 01:46:41	LabSZ	systemd[13575]:	pam_unix(sshd:session): session closed for user chen
+Sep 04 01:46:58	ADM	systemd[20839]:	Received disconnect from 245.27.227.195: 30: Closed due to user request [preauth]
+Sep 04 01:47:13	server	systemd[24178]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:24.0/usb3/3-4/3-4:1.0/0003:1EA7:00246.0001/input/input24/event24
+Sep 04 01:47:24	RUfus	systemd[26130]:	kernel: usb 1-4: USB disconnect, device number 2
+Sep 04 01:47:58	ADM	systemd[21429]:	systemd: Started User Session 18063 of user fztu.
+Sep 04 01:48:04	prod1	bash[22009]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 04 01:49:08	prod1	systemd[13559]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:49:12	prod1	systemd[13558]:	User root sent 1.5GB of data to 131.103.24.238
+Sep 04 01:49:50	ADM	systemd[15770]:	systemd: Started User Session 20755 of user webmaster.
+Sep 04 01:50:32	archive	systemd[24681]:	Received disconnect from 176.51.192.42: 93: Bye Bye [preauth]
+Sep 04 01:50:56	ADM	systemd[8736]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event33)
+Sep 04 01:52:24	RUfus	systemd[23159]:	systemd: Started User Session 9010 of user chen.
+Sep 04 01:52:35	ADM	systemd[23445]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 04 01:52:37	RUfus	systemd[4180]:	Received disconnect from 64.245.201.173: 10: Bye Bye [preauth]
+Sep 04 01:53:35	server	systemd[12926]:	Received disconnect from 18.249.74.116: 42: Bye Bye [preauth]
+Sep 04 01:54:08	LabSZ	systemd[29009]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 04 01:54:31	archive	systemd[1685]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:41.0/usb3/3-4/3-4:1.0/0003:1EA7:00416.0001/input/input41/event41
+Sep 04 01:54:50	prod1	systemd[17696]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 04 01:54:51	LabSZ	systemd[17034]:	PsExec service started on DB-PROD-01
+Sep 04 01:55:45	prod1	systemd[27512]:	Received disconnect from 155.122.252.54: 3: Closed due to user request [preauth]
+Sep 04 01:55:49	prod1	systemd[13216]:	event3  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 19:51:41	RUfus	systemd[2156]:	Received disconnect from 51.15.197.130: 49: Closed due to user request [preauth]
+Sep 04 19:51:44	RUfus	systemd[16266]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event80)
+Sep 04 20:21:17	testvm	systemd[17088]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=22)
+Sep 04 20:21:24	RUfus	systemd[18262]:	event50  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 20:21:41	prod1	systemd[25683]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:76.0/usb3/3-4/3-4:1.0/0003:1EA7:00766.0001/input/input76/event76
+Sep 04 20:21:49	archive	systemd[28893]:	kernel: usb 1-86: USB disconnect, device number 2
+Sep 04 20:22:07	server	systemd[25939]:	Did not receive identification string from 8.8.8.8
+Sep 04 20:22:11	prod1	systemd[17744]:	Accepted password for webmaster from 80.40.168.119 port 62269 ssh52
+Sep 04 20:22:27	testvm	systemd[20716]:	Accepted password for guest from 181.244.73.255 port 38113 ssh49
+Sep 04 20:22:47	ADM	bash[26173]:	history -c
+Sep 04 20:22:59	prod1	systemd[19303]:	Accepted password for admin from 202.238.116.7 port 32937 ssh39
+Sep 04 20:23:07	LabSZ	systemd[21900]:	User webmaster sent 1.5GB of data to 197.210.64.133
+Sep 04 20:24:01	LabSZ	systemd[20969]:	Accepted password for chen from 32.74.66.222 port 56567 ssh23
+Sep 05 00:02:15	ADM	systemd[11978]:	kernel: usb 1-9: USB disconnect, device number 2
+Sep 05 00:02:18	RUfus	systemd[19074]:	Received disconnect from 1.0.0.1: 45: disconnected by user
+Sep 05 00:02:22	LabSZ	systemd[26685]:	Received disconnect from 9.9.9.9: 2: disconnected by user
+Sep 05 00:02:28	prod1	systemd[22459]:	Received disconnect from 1.0.0.1: 25: disconnected by user
+Sep 05 00:02:45	RUfus	systemd[17550]:	User chen sent 1.5GB of data to 129.215.17.15
+Sep 05 00:02:57	RUfus	systemd[15448]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 00:02:58	archive	systemd[27849]:	PsExec service started on DB-PROD-01
+Sep 05 00:03:11	prod1	systemd[9464]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 00:03:15	ADM	systemd[25161]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 00:03:18	server	systemd[4473]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 00:03:20	LabSZ	systemd[16887]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 00:03:51	RUfus	systemd[27078]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event68)
+Sep 05 00:03:58	prod1	systemd[22295]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:04:01	testvm	systemd[15350]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 00:04:07	ADM	systemd[4625]:	User pgadmin sent 1.5GB of data to 193.42.109.42
+Sep 05 00:04:47	prod1	systemd[17551]:	event95  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 00:04:52	prod1	systemd[4919]:	pam_unix(sshd:session): session opened for user guest by (uid=76)
+Sep 05 00:05:27	LabSZ	systemd[23453]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 00:05:32	RUfus	bash[29565]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 00:30:18	LabSZ	systemd[22637]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 00:30:29	server	systemd[12767]:	User matlab sent 1.5GB of data to 197.210.64.133
+Sep 05 00:31:12	ADM	systemd[7800]:	pam_unix(sshd:session): session opened for user 123 by (uid=56)
+Sep 05 00:31:55	prod1	systemd[20108]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:31:58	server	systemd[13644]:	Received disconnect from 85.57.92.210: 67: Bye Bye [preauth]
+Sep 05 00:32:07	ADM	systemd[17585]:	Received disconnect from 89.189.56.224: 28: Closed due to user request [preauth]
+Sep 05 00:32:31	LabSZ	systemd[21417]:	Received disconnect from 8.8.4.4: 13: disconnected by user
+Sep 05 00:32:37	RUfus	systemd[13641]:	Received disconnect from 8.8.8.8: 32: disconnected by user
+Sep 05 00:32:47	prod1	systemd[27879]:	Received disconnect from 9.9.9.9: 43: disconnected by user
+Sep 05 00:32:54	LabSZ	systemd[28368]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:33:23	testvm	systemd[18083]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:33:26	RUfus	systemd[22072]:	Received disconnect from 8.8.4.4: 46: disconnected by user
+Sep 05 00:33:46	archive	systemd[3469]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event38)
+Sep 05 00:33:50	LabSZ	systemd[24336]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event62)
+Sep 05 00:33:54	LabSZ	systemd[7392]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 00:34:20	prod1	systemd[24662]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 00:34:59	server	systemd[14438]:	kernel: usb 1-88: USB disconnect, device number 2
+Sep 05 00:35:03	ADM	systemd[22129]:	Accepted password for matlab from 84.58.28.214 port 50344 ssh63
+Sep 05 00:35:06	testvm	systemd[9919]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 00:35:23	RUfus	systemd[11013]:	Received disconnect from 115.108.176.115: 97: Closed due to user request [preauth]
+Sep 05 00:35:34	testvm	systemd[27346]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 00:36:06	RUfus	systemd[9620]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 00:36:07	RUfus	systemd[11424]:	PsExec service started on DB-PROD-01
+Sep 05 00:36:33	RUfus	systemd[25192]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 00:36:34	prod1	systemd[27305]:	PsExec service started on DB-PROD-01
+Sep 05 00:36:41	LabSZ	systemd[27134]:	User pgadmin added a new cron job: /tmp/backdoor.sh
+Sep 05 00:36:52	testvm	systemd[19821]:	Received disconnect from 9.168.190.135: 88: Bye Bye [preauth]
+Sep 05 00:37:00	server	systemd[21486]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 00:37:10	archive	systemd[7647]:	Accepted password for test from 38.182.33.232 port 9061 ssh11
+Sep 05 00:37:23	archive	systemd[23077]:	User fztu sent 1.5GB of data to 197.210.64.133
+Sep 05 00:37:39	RUfus	systemd[25935]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 00:38:40	prod1	systemd[24111]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 00:38:41	testvm	systemd[22128]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 00:39:03	server	systemd[11365]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:18.0/usb3/3-4/3-4:1.0/0003:1EA7:00186.0001/input/input18/event18
+Sep 05 00:39:06	server	systemd[23962]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:40:18	RUfus	systemd[27127]:	systemd: Started User Session 1968 of user ubuntu.
+Sep 05 00:41:13	ADM	systemd[24095]:	systemd: Started User Session 2807 of user ubuntu.
+Sep 05 00:41:16	server	systemd[18766]:	systemd: Started User Session 2399 of user guest.
+Sep 05 00:41:23	server	systemd[29369]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 00:41:50	archive	systemd[16439]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:42:04	server	systemd[8490]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 00:42:17	prod1	bash[8253]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 00:42:35	prod1	bash[18825]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 00:43:05	ADM	systemd[27308]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 00:43:16	RUfus	systemd[9077]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 00:43:29	prod1	systemd[18379]:	Received disconnect from 126.104.225.204: 30: Bye Bye [preauth]
+Sep 05 00:43:36	prod1	bash[3541]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 00:43:45	ADM	systemd[15392]:	Accepted password for admin from 250.232.148.178 port 42536 ssh86
+Sep 05 00:44:11	ADM	systemd[19675]:	event19  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 00:45:06	prod1	systemd[17198]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 00:45:33	LabSZ	systemd[6507]:	systemd: Started User Session 6595 of user chen.
+Sep 05 00:45:45	ADM	systemd[7817]:	kernel: usb 1-81: USB disconnect, device number 2
+Sep 05 00:45:52	prod1	systemd[22032]:	Received disconnect from 136.84.22.219: 32: Closed due to user request [preauth]
+Sep 05 00:45:59	RUfus	bash[2588]:	history -c
+Sep 05 00:46:13	server	systemd[23910]:	event48  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 00:46:24	prod1	systemd[10315]:	Received disconnect from 9.9.9.9: 25: disconnected by user
+Sep 05 00:46:44	testvm	bash[28286]:	history -c
+Sep 05 00:47:00	testvm	systemd[5772]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 00:47:01	ADM	systemd[9264]:	PsExec service started on DB-PROD-01
+Sep 05 00:47:13	RUfus	systemd[15164]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:47:29	ADM	systemd[21795]:	User guest added a new cron job: /tmp/backdoor.sh
+Sep 05 00:47:39	prod1	systemd[2268]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 00:48:05	archive	systemd[2844]:	User ubuntu sent 1.5GB of data to 129.215.17.15
+Sep 05 00:48:14	prod1	systemd[26098]:	kernel: usb 1-31: USB disconnect, device number 2
+Sep 05 00:48:31	server	systemd[22680]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:48:35	RUfus	systemd[9550]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 00:48:59	ADM	systemd[19249]:	pam_unix(sshd:session): session opened for user webmaster by (uid=65)
+Sep 05 00:49:03	testvm	systemd[24530]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 00:49:28	testvm	systemd[20463]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 00:49:41	archive	systemd[13696]:	pam_unix(sshd:session): session opened for user root by (uid=3)
+Sep 05 00:50:20	RUfus	systemd[12451]:	Did not receive identification string from 1.1.1.1
+Sep 05 00:50:34	testvm	bash[5113]:	history -c
+Sep 05 00:50:46	prod1	systemd[17547]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 00:50:47	RUfus	systemd[3979]:	PsExec service started on DB-PROD-01
+Sep 05 00:51:14	testvm	systemd[9120]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:51:17	prod1	systemd[6072]:	kernel: usb 1-59: USB disconnect, device number 2
+Sep 05 00:51:32	ADM	systemd[10465]:	Accepted password for oracle from 83.117.98.62 port 27171 ssh20
+Sep 05 00:51:34	server	systemd[3824]:	pam_unix(sshd:session): session closed for user oracle
+Sep 05 00:51:40	ADM	systemd[29037]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 00:51:54	RUfus	systemd[2406]:	Did not receive identification string from 8.8.4.4
+Sep 05 00:52:08	RUfus	systemd[4145]:	Accepted password for backup from 70.53.91.109 port 15321 ssh28
+Sep 05 00:52:24	ADM	systemd[18405]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 00:52:29	prod1	systemd[19350]:	Received disconnect from 1.0.0.1: 79: disconnected by user
+Sep 05 00:53:25	ADM	systemd[18946]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 00:53:37	server	systemd[1854]:	Received disconnect from 125.227.4.2: 47: Closed due to user request [preauth]
+Sep 05 00:53:44	archive	systemd[20485]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 00:53:50	RUfus	systemd[19952]:	systemd: Started User Session 1490 of user matlab.
+Sep 05 00:55:10	ADM	systemd[3894]:	pam_unix(sshd:session): session closed for user chen
+Sep 05 00:55:23	LabSZ	systemd[11585]:	systemd: Started User Session 15961 of user pgadmin.
+Sep 05 00:55:32	testvm	systemd[13184]:	event46  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 00:55:39	archive	systemd[16516]:	kernel: usb 1-87: USB disconnect, device number 2
+Sep 05 00:55:50	testvm	systemd[5121]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:56:41	RUfus	systemd[17849]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:30.0/usb3/3-4/3-4:1.0/0003:1EA7:00306.0001/input/input30/event30
+Sep 05 00:56:51	ADM	systemd[28129]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 00:56:53	ADM	systemd[17248]:	PsExec service started on DB-PROD-01
+Sep 05 00:57:09	LabSZ	systemd[16908]:	Received disconnect from 132.234.6.76: 66: Bye Bye [preauth]
+Sep 05 00:57:14	RUfus	systemd[22767]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 00:57:34	RUfus	systemd[28418]:	User 123 sent 1.5GB of data to 197.210.64.133
+Sep 05 00:57:47	testvm	systemd[10653]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 00:57:48	LabSZ	systemd[5882]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 00:58:25	testvm	systemd[16272]:	pam_unix(sshd:session): session opened for user oracle by (uid=52)
+Sep 05 00:58:37	server	systemd[14637]:	systemd: Started User Session 21861 of user ubuntu.
+Sep 05 00:58:42	server	systemd[7521]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:44.0/usb3/3-4/3-4:1.0/0003:1EA7:00446.0001/input/input44/event44
+Sep 05 00:58:57	archive	systemd[20803]:	Accepted password for oracle from 225.54.202.144 port 7616 ssh60
+Sep 05 00:59:03	archive	systemd[12885]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 00:59:17	prod1	systemd[6173]:	Received disconnect from 151.19.70.252: 64: Bye Bye [preauth]
+Sep 05 01:00:53	RUfus	systemd[15270]:	systemd: Started User Session 14782 of user root.
+Sep 05 01:00:56	archive	systemd[9215]:	Received disconnect from 1.1.1.1: 62: disconnected by user
+Sep 05 01:01:21	RUfus	systemd[19496]:	event19  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:01:26	server	systemd[28760]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 01:01:52	testvm	systemd[17888]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 01:03:19	prod1	systemd[4314]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 01:04:39	testvm	systemd[7242]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 01:04:48	LabSZ	systemd[26411]:	User fztu added a new cron job: /tmp/backdoor.sh
+Sep 05 01:04:56	archive	systemd[14091]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:04:58	LabSZ	systemd[5764]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event67)
+Sep 05 01:05:18	server	systemd[15978]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event65)
+Sep 05 01:05:24	testvm	systemd[16646]:	Received disconnect from 8.8.8.8: 98: disconnected by user
+Sep 05 01:05:27	LabSZ	systemd[20802]:	User fztu added a new cron job: /tmp/backdoor.sh
+Sep 05 01:06:44	LabSZ	systemd[2980]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:06:47	server	systemd[27212]:	event20  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:06:56	prod1	systemd[7366]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 01:07:22	testvm	systemd[26712]:	pam_unix(sshd:session): session opened for user 123 by (uid=32)
+Sep 05 01:07:26	ADM	systemd[29494]:	event65  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:07:28	RUfus	systemd[12496]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event3)
+Sep 05 01:07:34	server	systemd[20828]:	Received disconnect from 1.0.0.1: 99: disconnected by user
+Sep 05 01:07:46	archive	systemd[21289]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 01:07:59	LabSZ	systemd[7097]:	event52  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:08:25	server	systemd[4858]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event53)
+Sep 05 01:08:33	prod1	bash[3433]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 01:17:09	archive	systemd[24266]:	Did not receive identification string from 9.9.9.9
+Sep 05 01:17:13	prod1	systemd[3495]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:17:51	server	systemd[5025]:	kernel: usb 1-24: USB disconnect, device number 2
+Sep 05 01:18:20	ADM	systemd[29040]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event99)
+Sep 05 01:18:22	ADM	systemd[10284]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:18:44	archive	systemd[17794]:	Accepted password for fztu from 199.36.26.54 port 42617 ssh36
+Sep 05 01:18:47	server	systemd[20643]:	pam_unix(sshd:session): session opened for user 123 by (uid=59)
+Sep 05 01:19:05	server	systemd[5316]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event89)
+Sep 05 01:19:12	server	systemd[18824]:	Accepted password for root from 173.165.217.152 port 19495 ssh22
+Sep 05 01:19:40	testvm	systemd[24862]:	sudo: user2: command not allowed ; TTY=pts/1 ; PWD=/home/user8 ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Sep 05 01:21:15	RUfus	systemd[17240]:	kernel: usb 1-4: USB disconnect, device number 2
+Sep 05 01:21:17	RUfus	systemd[11164]:	Accepted password for 123 from 104.204.239.17 port 53983 ssh33
+Sep 05 01:22:01	RUfus	systemd[10977]:	Received disconnect from 137.113.147.46: 20: Bye Bye [preauth]
+Sep 05 01:22:03	prod1	systemd[8606]:	Accepted password for fztu from 137.111.155.197 port 16872 ssh45
+Sep 05 01:22:08	ADM	systemd[23181]:	Received disconnect from 195.207.119.47: 36: Bye Bye [preauth]
+Sep 05 01:22:27	prod1	bash[20656]:	history -c
+Sep 05 01:22:40	server	systemd[1508]:	Received disconnect from 1.0.0.1: 2: disconnected by user
+Sep 05 01:23:00	prod1	systemd[19079]:	pam_unix(sshd:session): session opened for user test by (uid=39)
+Sep 05 01:23:03	server	systemd[12705]:	systemd: Started User Session 27739 of user ubuntu.
+Sep 05 01:23:29	ADM	bash[5170]:	history -c
+Sep 05 01:25:01	archive	systemd[28027]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 01:25:14	RUfus	systemd[5797]:	Received disconnect from 1.0.0.1: 9: disconnected by user
+Sep 05 01:25:18	testvm	bash[29203]:	history -c
+Sep 05 01:25:40	testvm	systemd[10155]:	Received disconnect from 8.8.8.8: 4: disconnected by user
+Sep 05 01:25:43	LabSZ	systemd[1894]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 05 01:26:12	server	systemd[19414]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 01:26:22	archive	systemd[25427]:	Received disconnect from 120.98.161.147: 42: Bye Bye [preauth]
+Sep 05 01:26:28	archive	systemd[1949]:	event53  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:26:32	testvm	systemd[18285]:	Received disconnect from 203.154.195.208: 57: Bye Bye [preauth]
+Sep 05 01:26:46	RUfus	systemd[9174]:	pam_unix(sshd:session): session opened for user fztu by (uid=9)
+Sep 05 01:26:50	ADM	systemd[26620]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 01:27:16	archive	systemd[10696]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 01:27:17	server	systemd[9813]:	PsExec service started on DB-PROD-01
+Sep 05 01:27:41	RUfus	systemd[9454]:	Accepted password for oracle from 55.211.194.60 port 58105 ssh1
+Sep 05 01:27:54	testvm	systemd[11324]:	event24  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:29:16	testvm	systemd[3896]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:23.0/usb3/3-4/3-4:1.0/0003:1EA7:00236.0001/input/input23/event23
+Sep 05 01:32:04	RUfus	systemd[12224]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event76)
+Sep 05 01:32:33	ADM	systemd[25837]:	Received disconnect from 1.1.1.1: 48: disconnected by user
+Sep 05 01:32:36	ADM	systemd[23456]:	pam_unix(sshd:session): session closed for user oracle
+Sep 05 01:32:40	server	systemd[15514]:	Did not receive identification string from 9.9.9.9
+Sep 05 01:33:00	server	systemd[6066]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 01:33:37	testvm	systemd[20043]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 01:33:49	RUfus	systemd[29978]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 01:35:50	prod1	systemd[13277]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 01:35:56	archive	systemd[14778]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 01:36:07	testvm	systemd[6203]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 01:36:47	testvm	systemd[3518]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 01:36:55	prod1	systemd[26088]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event62)
+Sep 05 01:37:05	prod1	systemd[17340]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 01:37:28	LabSZ	systemd[18610]:	Received disconnect from 1.0.0.1: 66: disconnected by user
+Sep 05 01:37:34	testvm	systemd[25186]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 01:37:49	LabSZ	systemd[7923]:	Received disconnect from 240.223.5.192: 65: Bye Bye [preauth]
+Sep 05 01:38:32	LabSZ	systemd[26414]:	systemd: Started User Session 12864 of user guest.
+Sep 05 01:39:00	server	systemd[6197]:	Did not receive identification string from 8.8.8.8
+Sep 05 01:40:35	prod1	systemd[26729]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 01:40:43	archive	systemd[29982]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 01:41:23	testvm	systemd[13727]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event59)
+Sep 05 01:41:30	server	systemd[18732]:	Did not receive identification string from 8.8.4.4
+Sep 05 01:42:42	prod1	bash[3884]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 01:42:52	ADM	systemd[5687]:	Received disconnect from 228.12.123.163: 29: Closed due to user request [preauth]
+Sep 05 01:42:59	prod1	systemd[2048]:	pam_unix(sshd:session): session opened for user chen by (uid=65)
+Sep 05 01:43:02	server	systemd[22539]:	kernel: usb 1-12: USB disconnect, device number 2
+Sep 05 01:43:12	ADM	systemd[20217]:	systemd: Started User Session 15517 of user admin.
+Sep 05 01:43:26	ADM	systemd[19758]:	Received disconnect from 98.238.30.126: 10: Bye Bye [preauth]
+Sep 05 01:43:29	testvm	systemd[22078]:	pam_unix(sshd:session): session opened for user fztu by (uid=6)
+Sep 05 01:44:19	ADM	systemd[17078]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:89.0/usb3/3-4/3-4:1.0/0003:1EA7:00896.0001/input/input89/event89
+Sep 05 01:45:09	server	systemd[26652]:	Did not receive identification string from 1.0.0.1
+Sep 05 01:45:21	LabSZ	systemd[23228]:	event12  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:45:26	testvm	bash[18372]:	history -c
+Sep 05 01:45:33	testvm	systemd[9364]:	kernel: usb 1-81: USB disconnect, device number 2
+Sep 05 01:45:48	prod1	systemd[23647]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 01:45:49	server	systemd[28573]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 01:45:59	archive	systemd[27158]:	kernel: usb 1-4: USB disconnect, device number 2
+Sep 05 01:46:02	testvm	systemd[16062]:	Received disconnect from 186.28.1.173: 21: Closed due to user request [preauth]
+Sep 05 01:46:05	archive	systemd[11331]:	Accepted password for backup from 160.26.139.26 port 43169 ssh80
+Sep 05 01:47:06	ADM	systemd[21512]:	event10  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:47:20	server	systemd[3960]:	systemd: Started User Session 29155 of user root.
+Sep 05 01:47:26	archive	systemd[13560]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event9)
+Sep 05 01:47:47	LabSZ	systemd[12179]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 01:48:01	archive	bash[15928]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 01:48:16	archive	systemd[26868]:	systemd: Started User Session 20790 of user oracle.
+Sep 05 01:48:39	ADM	systemd[25516]:	Did not receive identification string from 8.8.4.4
+Sep 05 01:48:55	archive	bash[25062]:	history -c
+Sep 05 01:50:35	ADM	systemd[19841]:	Received disconnect from 230.6.58.222: 76: Closed due to user request [preauth]
+Sep 05 01:50:43	prod1	systemd[5924]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 01:50:46	archive	systemd[27224]:	input_userauth_request: invalid user admin [preauth]
+Sep 05 01:51:07	archive	systemd[17343]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 01:51:28	prod1	systemd[11875]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 01:52:00	archive	systemd[8941]:	Received disconnect from 8.8.8.8: 39: disconnected by user
+Sep 05 01:52:04	prod1	systemd[3466]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 01:52:32	LabSZ	systemd[25968]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 02:04:23	LabSZ	systemd[2867]:	Did not receive identification string from 8.8.8.8
+Sep 05 02:04:29	LabSZ	systemd[9240]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 02:04:30	prod1	systemd[18510]:	PsExec service started on DB-PROD-01
+Sep 05 02:04:44	prod1	systemd[11565]:	Accepted password for root from 44.129.52.186 port 19408 ssh58
+Sep 05 02:05:11	testvm	systemd[7893]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:05:12	testvm	systemd[17360]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:05:25	prod1	systemd[4750]:	pam_unix(sshd:session): session opened for user oracle by (uid=91)
+Sep 05 02:05:48	prod1	systemd[18465]:	Received disconnect from 119.158.148.214: 48: Closed due to user request [preauth]
+Sep 05 02:06:02	RUfus	systemd[27234]:	event23  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:06:10	RUfus	systemd[15638]:	Received disconnect from 227.29.58.226: 28: Bye Bye [preauth]
+Sep 05 02:06:27	LabSZ	systemd[13192]:	Received disconnect from 8.8.8.8: 54: disconnected by user
+Sep 05 02:06:30	RUfus	systemd[25701]:	pam_unix(sshd:session): session closed for user backup
+Sep 05 02:06:35	ADM	systemd[12415]:	User webmaster sent 1.5GB of data to 131.103.24.238
+Sep 05 02:06:58	server	systemd[8620]:	kernel: usb 1-63: USB disconnect, device number 2
+Sep 05 02:07:01	testvm	systemd[13324]:	Accepted password for matlab from 124.239.114.82 port 29709 ssh78
+Sep 05 02:07:03	LabSZ	systemd[7016]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event48)
+Sep 05 02:07:24	server	systemd[15259]:	Received disconnect from 66.9.97.161: 68: Closed due to user request [preauth]
+Sep 05 02:07:27	testvm	systemd[14156]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 02:07:51	server	systemd[24175]:	pam_unix(sshd:session): session opened for user admin by (uid=81)
+Sep 05 02:08:01	archive	systemd[16844]:	event58  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:08:05	testvm	systemd[21717]:	pam_unix(sshd:session): session opened for user chen by (uid=43)
+Sep 05 02:08:08	prod1	systemd[4415]:	event29  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:08:16	prod1	systemd[25217]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 02:08:33	prod1	systemd[2496]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event72)
+Sep 05 02:08:36	prod1	systemd[28099]:	event71  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:08:56	testvm	systemd[26644]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 02:08:56	prod1	systemd[14723]:	PsExec service started on DB-PROD-01
+Sep 05 02:09:10	LabSZ	systemd[5023]:	pam_unix(sshd:session): session opened for user webmaster by (uid=82)
+Sep 05 02:10:01	archive	systemd[5480]:	Received disconnect from 29.163.245.240: 4: Bye Bye [preauth]
+Sep 05 02:10:27	RUfus	systemd[2906]:	pam_unix(sshd:session): session closed for user test
+Sep 05 02:10:58	ADM	systemd[28856]:	Received disconnect from 9.9.9.9: 90: disconnected by user
+Sep 05 02:11:12	server	systemd[11359]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 02:12:03	ADM	systemd[19269]:	User chen sent 1.5GB of data to 131.103.24.238
+Sep 05 02:12:14	prod1	systemd[4833]:	pam_unix(sshd:session): session closed for user test
+Sep 05 02:12:24	testvm	systemd[9071]:	Received disconnect from 1.0.0.1: 37: disconnected by user
+Sep 05 02:12:40	server	systemd[19644]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 02:12:52	ADM	systemd[12508]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:13:39	LabSZ	systemd[14432]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 02:14:05	prod1	systemd[14572]:	Accepted password for ubuntu from 240.182.200.77 port 61365 ssh69
+Sep 05 02:14:54	ADM	bash[28477]:	history -c
+Sep 05 02:16:11	ADM	systemd[2109]:	Received disconnect from 8.8.4.4: 4: disconnected by user
+Sep 05 02:16:20	testvm	systemd[23928]:	Received disconnect from 214.32.223.26: 5: Bye Bye [preauth]
+Sep 05 02:16:30	server	systemd[24230]:	pam_unix(sshd:session): session opened for user test by (uid=24)
+Sep 05 02:16:37	archive	systemd[13229]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:16:56	prod1	systemd[3199]:	User ubuntu sent 1.5GB of data to 129.215.17.15
+Sep 05 02:18:31	testvm	systemd[22300]:	kernel: usb 1-45: USB disconnect, device number 2
+Sep 05 02:18:37	server	systemd[13021]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 02:18:44	RUfus	systemd[22814]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:18:46	LabSZ	systemd[26378]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:19:16	LabSZ	systemd[29066]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 02:19:36	LabSZ	systemd[20244]:	Received disconnect from 169.178.148.80: 89: Closed due to user request [preauth]
+Sep 05 02:19:39	archive	systemd[25378]:	event52  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:20:02	testvm	systemd[24230]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:20:02	archive	systemd[7671]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:20:09	ADM	systemd[23471]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 02:20:32	testvm	systemd[25808]:	systemd: Started User Session 16960 of user test.
+Sep 05 02:20:59	prod1	systemd[5607]:	pam_unix(sshd:session): session opened for user root by (uid=91)
+Sep 05 02:21:03	archive	systemd[11689]:	pam_unix(sshd:session): session opened for user backup by (uid=67)
+Sep 05 02:21:06	prod1	systemd[19943]:	event98  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:21:23	LabSZ	bash[13046]:	history -c
+Sep 05 02:22:10	RUfus	systemd[12078]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:42.0/usb3/3-4/3-4:1.0/0003:1EA7:00426.0001/input/input42/event42
+Sep 05 02:22:14	testvm	systemd[6708]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:22:15	RUfus	systemd[14802]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:22:39	prod1	systemd[20475]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 02:22:44	testvm	systemd[4238]:	Received disconnect from 220.176.25.200: 51: Closed due to user request [preauth]
+Sep 05 02:22:50	server	systemd[12884]:	systemd: Started User Session 16094 of user guest.
+Sep 05 02:22:53	testvm	systemd[7849]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:22:54	server	systemd[24064]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:24:50	RUfus	systemd[17252]:	systemd: Started User Session 13431 of user oracle.
+Sep 05 02:24:52	prod1	systemd[6187]:	Accepted password for pgadmin from 122.178.205.56 port 51049 ssh17
+Sep 05 02:26:05	prod1	systemd[12744]:	Accepted password for ubuntu from 212.213.203.50 port 27674 ssh86
+Sep 05 02:26:34	prod1	bash[8899]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 02:26:44	RUfus	systemd[19186]:	Received disconnect from 1.0.0.1: 56: disconnected by user
+Sep 05 02:26:52	ADM	systemd[4461]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 02:26:57	ADM	systemd[19117]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 02:27:00	RUfus	systemd[27177]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 02:27:02	ADM	systemd[24696]:	PsExec service started on DB-PROD-01
+Sep 05 02:27:16	server	systemd[29024]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:44.0/usb3/3-4/3-4:1.0/0003:1EA7:00446.0001/input/input44/event44
+Sep 05 02:27:20	server	systemd[18614]:	kernel: usb 1-40: USB disconnect, device number 2
+Sep 05 02:27:28	prod1	systemd[9663]:	event58  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:27:35	prod1	systemd[29567]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 05 02:28:02	LabSZ	systemd[3099]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 02:28:10	RUfus	systemd[18089]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:28:24	testvm	systemd[20341]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 02:28:45	RUfus	systemd[16746]:	kernel: usb 1-86: USB disconnect, device number 2
+Sep 05 02:28:49	ADM	systemd[25245]:	User guest added a new cron job: /tmp/backdoor.sh
+Sep 05 02:29:02	archive	systemd[24353]:	Received disconnect from 8.8.8.8: 73: disconnected by user
+Sep 05 02:29:18	RUfus	systemd[18526]:	Accepted password for root from 190.81.228.145 port 57429 ssh98
+Sep 05 02:29:38	server	bash[12570]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 02:29:44	archive	systemd[26177]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 02:31:32	RUfus	systemd[20228]:	event89  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:31:45	LabSZ	bash[10237]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 02:31:59	ADM	systemd[12051]:	event42  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:32:06	server	systemd[19894]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 02:32:16	prod1	systemd[10596]:	User pgadmin added a new cron job: /tmp/backdoor.sh
+Sep 05 02:32:27	testvm	systemd[1563]:	Accepted password for test from 153.82.80.237 port 45188 ssh54
+Sep 05 02:32:51	prod1	systemd[2624]:	Did not receive identification string from 9.9.9.9
+Sep 05 02:32:58	ADM	systemd[10676]:	Received disconnect from 14.2.219.83: 46: Closed due to user request [preauth]
+Sep 05 02:33:04	ADM	systemd[17668]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:33:45	RUfus	systemd[20384]:	event89  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:34:45	testvm	systemd[5510]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 02:35:19	LabSZ	systemd[21657]:	Accepted password for admin from 96.31.18.63 port 46414 ssh34
+Sep 05 02:35:44	testvm	systemd[12967]:	pam_unix(sshd:session): session opened for user 123 by (uid=15)
+Sep 05 02:35:50	RUfus	systemd[27315]:	event5  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:35:57	archive	systemd[8413]:	Received disconnect from 123.46.75.63: 60: Bye Bye [preauth]
+Sep 05 02:36:45	prod1	systemd[12870]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:36:52	archive	systemd[16485]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 02:36:56	prod1	systemd[12045]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:36:57	server	systemd[8967]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:37:10	server	systemd[19622]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 05 02:37:17	LabSZ	systemd[17560]:	Received disconnect from 168.239.217.106: 87: Bye Bye [preauth]
+Sep 05 02:37:23	prod1	systemd[12288]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event55)
+Sep 05 02:38:00	archive	systemd[11914]:	pam_unix(sshd:session): session closed for user guest
+Sep 05 02:38:14	LabSZ	systemd[2334]:	pam_unix(sshd:session): session closed for user oracle
+Sep 05 02:38:18	testvm	systemd[10543]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=52)
+Sep 05 02:38:44	ADM	systemd[4194]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event64)
+Sep 05 02:38:46	RUfus	systemd[29903]:	kernel: usb 1-1: USB disconnect, device number 2
+Sep 05 02:39:08	RUfus	systemd[25964]:	kernel: usb 1-24: USB disconnect, device number 2
+Sep 05 02:39:12	LabSZ	systemd[10134]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:15.0/usb3/3-4/3-4:1.0/0003:1EA7:00156.0001/input/input15/event15
+Sep 05 02:39:25	server	systemd[20159]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 02:39:40	LabSZ	bash[26406]:	history -c
+Sep 05 02:40:01	LabSZ	systemd[2002]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 02:40:02	prod1	systemd[6846]:	PsExec service started on DB-PROD-01
+Sep 05 02:40:16	prod1	systemd[11022]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:52.0/usb3/3-4/3-4:1.0/0003:1EA7:00526.0001/input/input52/event52
+Sep 05 02:40:45	testvm	systemd[19239]:	systemd: Started User Session 26922 of user webmaster.
+Sep 05 02:40:52	prod1	systemd[4541]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:19.0/usb3/3-4/3-4:1.0/0003:1EA7:00196.0001/input/input19/event19
+Sep 05 02:40:54	server	systemd[28667]:	Received disconnect from 156.128.25.8: 40: Bye Bye [preauth]
+Sep 05 02:41:06	prod1	systemd[19836]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:41:07	archive	systemd[26736]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:41:23	LabSZ	systemd[21429]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:64.0/usb3/3-4/3-4:1.0/0003:1EA7:00646.0001/input/input64/event64
+Sep 05 02:41:26	testvm	bash[12636]:	history -c
+Sep 05 02:41:33	ADM	systemd[15354]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event95)
+Sep 05 02:41:40	prod1	systemd[10957]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 02:42:11	ADM	systemd[28222]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:4.0/usb3/3-4/3-4:1.0/0003:1EA7:0046.0001/input/input4/event4
+Sep 05 02:42:17	server	systemd[25755]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:42:18	prod1	systemd[22510]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 02:42:28	testvm	systemd[5225]:	User ubuntu added a new cron job: /tmp/backdoor.sh
+Sep 05 02:42:40	archive	systemd[18736]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:82.0/usb3/3-4/3-4:1.0/0003:1EA7:00826.0001/input/input82/event82
+Sep 05 02:43:15	server	systemd[13321]:	Received disconnect from 1.1.1.1: 19: disconnected by user
+Sep 05 02:43:19	prod1	bash[1288]:	history -c
+Sep 05 02:43:39	ADM	systemd[3933]:	systemd: Started User Session 21446 of user admin.
+Sep 05 02:43:52	prod1	systemd[27735]:	Accepted password for matlab from 134.47.98.206 port 13112 ssh44
+Sep 05 02:43:58	prod1	systemd[23491]:	Received disconnect from 146.179.94.235: 43: Closed due to user request [preauth]
+Sep 05 02:44:05	ADM	systemd[4376]:	systemd: Started User Session 10042 of user oracle.
+Sep 05 02:44:18	RUfus	systemd[19630]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 02:44:20	server	systemd[19927]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:44:30	LabSZ	systemd[12216]:	Received disconnect from 212.136.57.171: 50: Closed due to user request [preauth]
+Sep 05 02:44:50	RUfus	systemd[6898]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 02:45:15	RUfus	bash[3537]:	history -c
+Sep 05 02:45:25	LabSZ	systemd[17451]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 02:45:26	testvm	systemd[20143]:	PsExec service started on DB-PROD-01
+Sep 05 02:46:06	server	systemd[9736]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:22.0/usb3/3-4/3-4:1.0/0003:1EA7:00226.0001/input/input22/event22
+Sep 05 02:46:18	archive	systemd[21737]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:15.0/usb3/3-4/3-4:1.0/0003:1EA7:00156.0001/input/input15/event15
+Sep 05 02:46:23	RUfus	bash[13225]:	history -c
+Sep 05 02:47:06	prod1	systemd[1503]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 02:47:06	ADM	systemd[10996]:	PsExec service started on DB-PROD-01
+Sep 05 02:47:18	archive	systemd[12903]:	Did not receive identification string from 8.8.4.4
+Sep 05 02:47:24	testvm	systemd[18453]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 02:47:53	archive	systemd[20479]:	Did not receive identification string from 1.1.1.1
+Sep 05 02:47:57	prod1	systemd[17975]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 02:48:01	testvm	systemd[21988]:	Received disconnect from 8.8.8.8: 11: disconnected by user
+Sep 05 02:48:14	RUfus	systemd[3255]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event69)
+Sep 05 02:48:57	testvm	systemd[1683]:	Received disconnect from 117.56.137.215: 46: Bye Bye [preauth]
+Sep 05 02:49:37	RUfus	systemd[15218]:	Accepted password for matlab from 175.98.62.92 port 35180 ssh47
+Sep 05 02:50:13	server	systemd[28054]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:50:44	ADM	systemd[2657]:	Received disconnect from 173.98.217.201: 72: Closed due to user request [preauth]
+Sep 05 02:50:47	LabSZ	systemd[24276]:	Received disconnect from 8.8.8.8: 9: disconnected by user
+Sep 05 02:51:10	archive	bash[10382]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 02:51:39	archive	systemd[8570]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 02:51:40	archive	systemd[1916]:	PsExec service started on DB-PROD-01
+Sep 05 02:52:34	archive	systemd[24034]:	Received disconnect from 159.131.74.41: 8: Closed due to user request [preauth]
+Sep 05 02:53:14	prod1	systemd[13495]:	pam_unix(sshd:session): session opened for user fztu by (uid=44)
+Sep 05 02:53:17	testvm	systemd[14249]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 02:53:38	testvm	systemd[14357]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event77)
+Sep 05 02:53:41	archive	systemd[24632]:	kernel: usb 1-3: USB disconnect, device number 2
+Sep 05 02:53:44	prod1	systemd[25660]:	Received disconnect from 154.39.105.236: 1: Bye Bye [preauth]
+Sep 05 02:53:46	LabSZ	systemd[4741]:	systemd: Started User Session 18747 of user test.
+Sep 05 02:54:50	archive	bash[14602]:	history -c
+Sep 05 02:56:04	server	systemd[13065]:	event99  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:56:31	RUfus	systemd[10653]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:61.0/usb3/3-4/3-4:1.0/0003:1EA7:00616.0001/input/input61/event61
+Sep 05 02:56:46	LabSZ	systemd[8529]:	Did not receive identification string from 1.0.0.1
+Sep 05 02:56:48	server	systemd[21626]:	Received disconnect from 151.219.38.233: 58: Bye Bye [preauth]
+Sep 05 02:57:01	archive	systemd[23935]:	Received disconnect from 139.222.122.165: 79: Bye Bye [preauth]
+Sep 05 02:57:42	ADM	bash[14859]:	history -c
+Sep 05 02:58:15	ADM	systemd[5604]:	Accepted password for oracle from 234.208.127.101 port 39065 ssh31
+Sep 05 02:58:19	RUfus	systemd[9101]:	event49  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:58:24	prod1	bash[3257]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 02:59:00	RUfus	systemd[12119]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 02:59:00	testvm	systemd[3665]:	PsExec service started on DB-PROD-01
+Sep 05 03:00:35	ADM	systemd[28158]:	kernel: usb 1-33: USB disconnect, device number 2
+Sep 05 03:01:17	testvm	systemd[9446]:	Did not receive identification string from 9.9.9.9
+Sep 05 03:01:24	archive	systemd[6434]:	Accepted password for root from 252.151.93.119 port 64150 ssh46
+Sep 05 03:01:35	ADM	systemd[9708]:	systemd: Started User Session 16941 of user ubuntu.
+Sep 05 03:01:41	archive	systemd[26139]:	Received disconnect from 95.74.65.182: 7: Bye Bye [preauth]
+Sep 05 03:02:00	testvm	systemd[9059]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 03:02:06	archive	systemd[1183]:	kernel: usb 1-96: USB disconnect, device number 2
+Sep 05 03:03:42	RUfus	systemd[26335]:	kernel: usb 1-81: USB disconnect, device number 2
+Sep 05 03:04:06	prod1	systemd[17364]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 03:32:35	server	systemd[9929]:	Accepted password for ubuntu from 170.249.105.198 port 19564 ssh82
+Sep 05 03:32:45	server	systemd[26627]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 03:32:50	ADM	systemd[16586]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:77.0/usb3/3-4/3-4:1.0/0003:1EA7:00776.0001/input/input77/event77
+Sep 05 03:32:56	LabSZ	systemd[8649]:	pam_unix(sshd:session): session opened for user chen by (uid=9)
+Sep 05 03:32:59	RUfus	systemd[10059]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:29.0/usb3/3-4/3-4:1.0/0003:1EA7:00296.0001/input/input29/event29
+Sep 05 03:33:01	archive	systemd[3322]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 03:33:02	archive	systemd[28270]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 03:33:13	server	systemd[18813]:	User root sent 1.5GB of data to 176.65.148.27
+Sep 05 03:33:21	testvm	systemd[2378]:	Received disconnect from 8.8.4.4: 70: disconnected by user
+Sep 05 03:33:31	archive	systemd[18443]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 03:33:33	LabSZ	systemd[6849]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 03:33:42	testvm	systemd[17622]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 03:33:43	LabSZ	systemd[10623]:	PsExec service started on DB-PROD-01
+Sep 05 03:34:02	LabSZ	systemd[24360]:	kernel: usb 1-76: USB disconnect, device number 2
+Sep 05 03:34:53	prod1	systemd[7975]:	systemd: Started User Session 25139 of user webmaster.
+Sep 05 03:35:05	testvm	systemd[16615]:	pam_unix(sshd:session): session opened for user admin by (uid=15)
+Sep 05 03:36:27	testvm	bash[12725]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 03:37:14	ADM	systemd[5943]:	event4  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 03:37:44	prod1	systemd[26666]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 03:38:42	ADM	systemd[7231]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 03:38:43	LabSZ	systemd[6933]:	PsExec service started on DB-PROD-01
+Sep 05 03:38:50	ADM	systemd[21254]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 03:39:00	LabSZ	systemd[26398]:	pam_unix(sshd:session): session opened for user backup by (uid=25)
+Sep 05 03:39:28	RUfus	systemd[13837]:	event74  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 08:58:06	testvm	systemd[22154]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:68.0/usb3/3-4/3-4:1.0/0003:1EA7:00686.0001/input/input68/event68
+Sep 05 08:58:17	archive	systemd[7841]:	Accepted password for root from 224.43.177.15 port 13311 ssh72
+Sep 05 08:58:19	RUfus	systemd[15094]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:55.0/usb3/3-4/3-4:1.0/0003:1EA7:00556.0001/input/input55/event55
+Sep 05 08:58:24	testvm	systemd[28238]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 08:59:49	ADM	bash[23024]:	history -c
+Sep 05 09:00:15	prod1	bash[24907]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 09:18:48	archive	systemd[13472]:	Accepted password for guest from 209.66.48.108 port 24092 ssh90
+Sep 05 09:18:59	LabSZ	bash[27076]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 09:19:10	server	systemd[28228]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event45)
+Sep 05 09:19:13	server	systemd[8494]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:27.0/usb3/3-4/3-4:1.0/0003:1EA7:00276.0001/input/input27/event27
+Sep 05 09:19:15	RUfus	systemd[1035]:	Received disconnect from 158.225.62.191: 36: Bye Bye [preauth]
+Sep 05 09:19:18	testvm	systemd[11154]:	Received disconnect from 81.101.60.96: 39: Bye Bye [preauth]
+Sep 05 09:19:27	ADM	systemd[16201]:	pam_unix(sshd:session): session opened for user fztu by (uid=70)
+Sep 05 09:19:51	server	systemd[24137]:	Did not receive identification string from 9.9.9.9
+Sep 05 09:19:58	archive	systemd[9853]:	systemd: Started User Session 1248 of user pgadmin.
+Sep 05 09:20:05	prod1	systemd[6409]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 09:20:33	prod1	systemd[15459]:	Received disconnect from 8.8.4.4: 78: disconnected by user
+Sep 05 09:21:43	testvm	systemd[14650]:	Accepted password for admin from 102.107.29.95 port 47207 ssh4
+Sep 05 09:22:00	LabSZ	systemd[14047]:	Received disconnect from 61.25.113.185: 63: Closed due to user request [preauth]
+Sep 05 09:22:18	LabSZ	systemd[17237]:	Did not receive identification string from 9.9.9.9
+Sep 05 09:22:25	testvm	systemd[5271]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 09:22:47	archive	systemd[29893]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 05 09:22:54	archive	systemd[25381]:	event69  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:23:43	archive	systemd[18678]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:23:54	prod1	systemd[9479]:	Received disconnect from 123.22.83.104: 35: Bye Bye [preauth]
+Sep 05 09:24:25	archive	systemd[24428]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:47.0/usb3/3-4/3-4:1.0/0003:1EA7:00476.0001/input/input47/event47
+Sep 05 09:24:28	RUfus	systemd[22589]:	Received disconnect from 8.8.4.4: 76: disconnected by user
+Sep 05 09:24:30	ADM	systemd[29522]:	pam_unix(sshd:session): session closed for user admin
+Sep 05 09:24:45	ADM	bash[9788]:	history -c
+Sep 05 09:25:20	testvm	bash[14477]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 09:25:31	server	systemd[2440]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:25:32	server	systemd[9560]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:25:57	LabSZ	systemd[27747]:	systemd: Started User Session 8180 of user pgadmin.
+Sep 05 09:26:26	server	systemd[11429]:	systemd: Started User Session 6019 of user oracle.
+Sep 05 09:26:29	archive	systemd[8484]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:26:39	testvm	systemd[14439]:	Received disconnect from 60.104.147.193: 48: Closed due to user request [preauth]
+Sep 05 09:26:50	ADM	systemd[20671]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event84)
+Sep 05 09:26:53	archive	systemd[6152]:	pam_unix(sshd:session): session opened for user test by (uid=31)
+Sep 05 09:27:55	LabSZ	bash[27976]:	history -c
+Sep 05 09:28:07	ADM	systemd[19157]:	Received disconnect from 63.192.129.80: 50: Closed due to user request [preauth]
+Sep 05 09:28:19	server	bash[8235]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 09:28:37	prod1	systemd[12004]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 09:28:53	RUfus	systemd[25329]:	User fztu added a new cron job: /tmp/backdoor.sh
+Sep 05 09:29:11	server	systemd[15970]:	Received disconnect from 57.133.243.154: 12: Bye Bye [preauth]
+Sep 05 09:29:15	ADM	systemd[21855]:	User test sent 1.5GB of data to 71.6.146.185
+Sep 05 09:29:53	testvm	systemd[15423]:	event85  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:30:11	ADM	systemd[7377]:	systemd: Started User Session 2236 of user webmaster.
+Sep 05 09:31:19	RUfus	systemd[4542]:	kernel: usb 1-74: USB disconnect, device number 2
+Sep 05 09:31:27	testvm	systemd[14818]:	Received disconnect from 224.50.109.90: 96: Closed due to user request [preauth]
+Sep 05 09:32:01	server	bash[20248]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 09:33:08	LabSZ	systemd[9287]:	pam_unix(sshd:session): session opened for user backup by (uid=27)
+Sep 05 09:33:23	server	systemd[3235]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:33:24	archive	systemd[16327]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:33:47	archive	systemd[15752]:	Accepted password for backup from 243.255.114.201 port 39947 ssh91
+Sep 05 09:34:03	RUfus	systemd[25978]:	User ubuntu added a new cron job: /tmp/backdoor.sh
+Sep 05 09:34:25	testvm	systemd[21758]:	systemd: Started User Session 7580 of user webmaster.
+Sep 05 09:34:33	prod1	systemd[11120]:	event21  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:34:37	RUfus	systemd[13316]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event11)
+Sep 05 09:34:39	testvm	systemd[11391]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:34:41	RUfus	systemd[4899]:	Received disconnect from 216.29.222.11: 2: Bye Bye [preauth]
+Sep 05 09:35:06	RUfus	systemd[16180]:	Received disconnect from 13.83.226.120: 37: Closed due to user request [preauth]
+Sep 05 09:35:20	ADM	systemd[29681]:	kernel: usb 1-93: USB disconnect, device number 2
+Sep 05 09:35:24	LabSZ	systemd[28833]:	systemd: Started User Session 24642 of user 123.
+Sep 05 09:37:05	server	systemd[13538]:	pam_unix(sshd:session): session opened for user test by (uid=39)
+Sep 05 09:38:30	ADM	systemd[9463]:	kernel: usb 1-43: USB disconnect, device number 2
+Sep 05 09:38:46	archive	systemd[16040]:	Received disconnect from 4.145.243.230: 52: Bye Bye [preauth]
+Sep 05 09:38:48	prod1	systemd[3965]:	Received disconnect from 131.70.160.52: 14: Closed due to user request [preauth]
+Sep 05 09:38:58	RUfus	systemd[26789]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 09:39:48	LabSZ	systemd[1236]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:2.0/usb3/3-4/3-4:1.0/0003:1EA7:0026.0001/input/input2/event2
+Sep 05 09:39:51	testvm	systemd[21332]:	Received disconnect from 32.7.135.254: 56: Bye Bye [preauth]
+Sep 05 09:39:55	prod1	systemd[6127]:	Received disconnect from 26.132.10.188: 98: Closed due to user request [preauth]
+Sep 05 09:40:02	archive	systemd[4837]:	Accepted password for 123 from 204.216.62.5 port 34951 ssh51
+Sep 05 09:40:41	testvm	systemd[23101]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 09:41:01	prod1	systemd[1977]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 09:41:01	ADM	systemd[26907]:	PsExec service started on DB-PROD-01
+Sep 05 09:41:27	ADM	systemd[11489]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 09:41:30	server	systemd[18982]:	kernel: usb 1-1: USB disconnect, device number 2
+Sep 05 09:41:59	LabSZ	systemd[18991]:	kernel: usb 1-42: USB disconnect, device number 2
+Sep 05 09:42:02	ADM	systemd[19861]:	Did not receive identification string from 1.1.1.1
+Sep 05 09:42:31	archive	systemd[27580]:	Received disconnect from 8.8.4.4: 46: disconnected by user
+Sep 05 09:43:03	RUfus	systemd[21003]:	Did not receive identification string from 9.9.9.9
+Sep 05 09:43:13	LabSZ	systemd[4990]:	kernel: usb 1-55: USB disconnect, device number 2
+Sep 05 09:43:49	server	systemd[20635]:	event22  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:44:16	archive	systemd[19426]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:44:17	RUfus	systemd[12375]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:45:02	ADM	systemd[22246]:	Accepted password for pgadmin from 135.230.152.151 port 15321 ssh45
+Sep 05 09:45:30	server	systemd[3188]:	systemd: Started User Session 13265 of user root.
+Sep 05 09:45:35	RUfus	bash[19446]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 09:45:50	ADM	systemd[19925]:	Did not receive identification string from 9.9.9.9
+Sep 05 09:46:08	server	systemd[19399]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 09:46:23	RUfus	systemd[23608]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 05 09:46:30	prod1	systemd[6558]:	Received disconnect from 1.1.1.1: 67: disconnected by user
+Sep 05 09:46:36	testvm	systemd[24376]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 09:46:45	ADM	systemd[13362]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 09:47:30	archive	systemd[28694]:	User guest added a new cron job: /tmp/backdoor.sh
+Sep 05 09:47:53	testvm	systemd[20741]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:47:54	testvm	systemd[29524]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:48:03	archive	systemd[27999]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:21.0/usb3/3-4/3-4:1.0/0003:1EA7:00216.0001/input/input21/event21
+Sep 05 09:48:05	ADM	systemd[6244]:	User admin added a new cron job: /tmp/backdoor.sh
+Sep 05 09:48:15	LabSZ	systemd[19884]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 09:48:26	testvm	systemd[22435]:	pam_unix(sshd:session): session closed for user admin
+Sep 05 09:48:30	prod1	systemd[16545]:	Received disconnect from 8.8.4.4: 49: disconnected by user
+Sep 05 09:48:34	LabSZ	systemd[23878]:	pam_unix(sshd:session): session opened for user chen by (uid=64)
+Sep 05 09:49:54	LabSZ	systemd[28826]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 05 09:50:12	RUfus	systemd[16529]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 09:50:23	server	systemd[11101]:	User ubuntu sent 1.5GB of data to 71.6.158.166
+Sep 05 09:50:52	archive	bash[12222]:	history -c
+Sep 05 09:51:04	testvm	systemd[12253]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:42.0/usb3/3-4/3-4:1.0/0003:1EA7:00426.0001/input/input42/event42
+Sep 05 09:51:11	LabSZ	systemd[18150]:	Received disconnect from 1.1.1.1: 29: disconnected by user
+Sep 05 09:51:18	server	systemd[23332]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:50.0/usb3/3-4/3-4:1.0/0003:1EA7:00506.0001/input/input50/event50
+Sep 05 09:51:26	archive	systemd[8493]:	Received disconnect from 143.23.142.85: 97: Bye Bye [preauth]
+Sep 05 09:51:29	server	systemd[8781]:	pam_unix(sshd:session): session opened for user backup by (uid=68)
+Sep 05 09:51:43	server	systemd[12526]:	Accepted password for webmaster from 168.28.187.68 port 20181 ssh98
+Sep 05 09:52:08	testvm	systemd[3180]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 09:53:15	ADM	systemd[22468]:	event53  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:53:40	testvm	systemd[19063]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 09:53:40	server	systemd[27960]:	PsExec service started on DB-PROD-01
+Sep 05 09:54:00	LabSZ	systemd[9773]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:54:01	archive	systemd[23032]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:54:17	server	systemd[12631]:	pam_unix(sshd:session): session opened for user matlab by (uid=85)
+Sep 05 09:54:23	RUfus	systemd[11913]:	pam_unix(sshd:session): session opened for user webmaster by (uid=87)
+Sep 05 09:54:29	server	systemd[5798]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 09:54:48	testvm	systemd[17620]:	Accepted password for oracle from 204.133.255.124 port 8466 ssh75
+Sep 05 09:54:51	archive	systemd[24770]:	event86  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:54:56	RUfus	systemd[17515]:	Received disconnect from 160.148.255.147: 76: Bye Bye [preauth]
+Sep 05 09:56:03	RUfus	systemd[2500]:	Accepted password for test from 67.62.68.110 port 2645 ssh86
+Sep 05 09:56:14	testvm	systemd[27903]:	kernel: usb 1-28: USB disconnect, device number 2
+Sep 05 09:56:17	RUfus	systemd[25651]:	Did not receive identification string from 9.9.9.9
+Sep 05 09:56:25	prod1	systemd[2734]:	pam_unix(sshd:session): session opened for user fztu by (uid=14)
+Sep 05 09:56:47	testvm	systemd[1371]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:62.0/usb3/3-4/3-4:1.0/0003:1EA7:00626.0001/input/input62/event62
+Sep 05 09:56:51	server	systemd[11074]:	kernel: usb 1-7: USB disconnect, device number 2
+Sep 05 09:56:54	testvm	systemd[5445]:	Accepted password for matlab from 51.239.49.233 port 19169 ssh13
+Sep 05 09:57:01	prod1	systemd[12945]:	kernel: usb 1-47: USB disconnect, device number 2
+Sep 05 09:57:04	server	systemd[15070]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:57:08	LabSZ	systemd[19201]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:57:09	server	systemd[19351]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 09:57:16	LabSZ	systemd[14801]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event33)
+Sep 05 09:57:32	LabSZ	systemd[24420]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 09:58:26	testvm	bash[15936]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 09:58:50	server	systemd[6702]:	User 123 added a new cron job: /tmp/backdoor.sh
+Sep 05 09:59:17	archive	systemd[1623]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=68)
+Sep 05 09:59:21	server	bash[28091]:	history -c
+Sep 05 09:59:44	LabSZ	systemd[2866]:	User test sent 1.5GB of data to 110.39.166.75
+Sep 05 09:59:49	RUfus	systemd[13669]:	pam_unix(sshd:session): session opened for user webmaster by (uid=51)
+Sep 05 10:00:01	RUfus	systemd[18124]:	systemd: Started User Session 28034 of user guest.
+Sep 05 10:00:05	prod1	systemd[12422]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event2)
+Sep 05 10:00:07	testvm	systemd[18416]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 10:00:08	testvm	systemd[25661]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 10:00:23	LabSZ	systemd[10718]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 10:00:38	server	systemd[9024]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 10:00:43	testvm	bash[22446]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 10:01:26	LabSZ	systemd[12531]:	systemd: Started User Session 29023 of user chen.
+Sep 05 10:01:32	prod1	systemd[10008]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:01:45	RUfus	systemd[13485]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 10:02:09	LabSZ	systemd[18515]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 10:02:11	archive	systemd[28914]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 10:02:12	archive	systemd[16516]:	PsExec service started on DB-PROD-01
+Sep 05 10:02:44	testvm	systemd[19057]:	Received disconnect from 167.160.220.45: 46: Closed due to user request [preauth]
+Sep 05 10:03:12	server	systemd[23545]:	pam_unix(sshd:session): session opened for user matlab by (uid=14)
+Sep 05 10:03:32	LabSZ	systemd[13148]:	pam_unix(sshd:session): session opened for user matlab by (uid=36)
+Sep 05 10:03:50	server	systemd[2943]:	pam_unix(sshd:session): session opened for user 123 by (uid=76)
+Sep 05 10:03:52	ADM	systemd[11051]:	kernel: usb 1-71: USB disconnect, device number 2
+Sep 05 10:04:01	prod1	systemd[14038]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 10:04:07	archive	systemd[23146]:	Received disconnect from 210.33.32.160: 16: Closed due to user request [preauth]
+Sep 05 10:04:49	RUfus	systemd[2588]:	pam_unix(sshd:session): session closed for user test
+Sep 05 10:04:58	prod1	systemd[10056]:	systemd: Started User Session 29908 of user fztu.
+Sep 05 10:05:00	archive	systemd[22695]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:05:15	RUfus	systemd[18285]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:34.0/usb3/3-4/3-4:1.0/0003:1EA7:00346.0001/input/input34/event34
+Sep 05 10:05:34	LabSZ	bash[24349]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 10:06:02	LabSZ	systemd[16138]:	Accepted password for root from 127.104.98.96 port 3543 ssh48
+Sep 05 10:06:26	ADM	bash[22124]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 10:07:13	testvm	systemd[14111]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:27.0/usb3/3-4/3-4:1.0/0003:1EA7:00276.0001/input/input27/event27
+Sep 05 10:07:19	ADM	systemd[27836]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 10:07:20	ADM	systemd[19833]:	PsExec service started on DB-PROD-01
+Sep 05 10:07:35	LabSZ	systemd[22366]:	kernel: usb 1-68: USB disconnect, device number 2
+Sep 05 10:07:54	testvm	systemd[29452]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event26)
+Sep 05 10:08:26	server	systemd[24504]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event60)
+Sep 05 10:08:30	prod1	systemd[1872]:	pam_unix(sshd:session): session opened for user guest by (uid=57)
+Sep 05 10:08:45	archive	systemd[7081]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 10:09:00	prod1	systemd[9451]:	event32  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:09:03	server	systemd[17532]:	Received disconnect from 227.78.144.26: 33: Closed due to user request [preauth]
+Sep 05 10:09:22	ADM	systemd[24262]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:9.0/usb3/3-4/3-4:1.0/0003:1EA7:0096.0001/input/input9/event9
+Sep 05 10:11:16	testvm	systemd[23145]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 10:11:52	archive	systemd[9815]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 10:11:59	server	systemd[23823]:	sudo: user3: command not allowed ; TTY=pts/1 ; PWD=/home/user9 ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Sep 05 10:12:16	RUfus	systemd[17134]:	Received disconnect from 63.84.195.158: 3: Bye Bye [preauth]
+Sep 05 10:12:24	testvm	systemd[2727]:	Did not receive identification string from 9.9.9.9
+Sep 05 10:12:27	LabSZ	systemd[1193]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event74)
+Sep 05 10:12:30	LabSZ	systemd[22024]:	Did not receive identification string from 8.8.4.4
+Sep 05 10:12:33	testvm	systemd[24637]:	Received disconnect from 23.187.196.154: 4: Bye Bye [preauth]
+Sep 05 10:12:37	testvm	systemd[18464]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 10:12:38	testvm	systemd[10146]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 10:13:25	RUfus	systemd[29194]:	Received disconnect from 34.11.51.27: 47: Bye Bye [preauth]
+Sep 05 10:13:34	RUfus	systemd[20213]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 10:13:36	archive	systemd[12498]:	PsExec service started on DB-PROD-01
+Sep 05 10:13:43	ADM	systemd[1253]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:13:46	testvm	systemd[4198]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 10:14:11	LabSZ	systemd[21768]:	systemd: Started User Session 23460 of user webmaster.
+Sep 05 10:14:14	LabSZ	systemd[17413]:	Did not receive identification string from 8.8.4.4
+Sep 05 10:14:29	LabSZ	systemd[13001]:	Received disconnect from 8.8.4.4: 33: disconnected by user
+Sep 05 10:14:32	prod1	systemd[17309]:	Received disconnect from 1.0.0.1: 23: disconnected by user
+Sep 05 10:15:16	archive	systemd[20585]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 10:15:33	ADM	bash[9401]:	history -c
+Sep 05 10:15:48	ADM	systemd[13620]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 10:15:50	RUfus	systemd[23676]:	PsExec service started on DB-PROD-01
+Sep 05 10:17:17	LabSZ	systemd[24639]:	pam_unix(sshd:session): session opened for user chen by (uid=40)
+Sep 05 10:17:37	server	systemd[15486]:	Received disconnect from 203.26.219.118: 66: Bye Bye [preauth]
+Sep 05 10:17:41	testvm	bash[8164]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 10:18:05	LabSZ	systemd[18106]:	pam_unix(sshd:session): session closed for user chen
+Sep 05 10:18:53	LabSZ	systemd[15738]:	User test added a new cron job: /tmp/backdoor.sh
+Sep 05 10:19:50	LabSZ	systemd[16874]:	kernel: usb 1-70: USB disconnect, device number 2
+Sep 05 10:20:11	RUfus	systemd[19570]:	Received disconnect from 8.8.8.8: 76: disconnected by user
+Sep 05 10:20:21	testvm	systemd[10739]:	User backup added a new cron job: /tmp/backdoor.sh
+Sep 05 10:21:02	LabSZ	systemd[5625]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:52.0/usb3/3-4/3-4:1.0/0003:1EA7:00526.0001/input/input52/event52
+Sep 05 10:21:09	testvm	systemd[28465]:	User admin sent 1.5GB of data to 45.146.165.111
+Sep 05 10:21:19	prod1	systemd[24516]:	Accepted password for root from 207.162.161.174 port 25281 ssh95
+Sep 05 10:21:24	LabSZ	systemd[19232]:	pam_unix(sshd:session): session opened for user matlab by (uid=9)
+Sep 05 10:21:30	archive	systemd[20642]:	User guest sent 1.5GB of data to 51.159.199.236
+Sep 05 10:21:45	testvm	systemd[20261]:	Received disconnect from 61.8.60.106: 27: Bye Bye [preauth]
+Sep 05 10:22:15	LabSZ	systemd[6833]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:6.0/usb3/3-4/3-4:1.0/0003:1EA7:0066.0001/input/input6/event6
+Sep 05 10:22:17	archive	systemd[27719]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 10:22:23	archive	systemd[22974]:	pam_unix(sshd:session): session opened for user root by (uid=64)
+Sep 05 10:22:34	testvm	systemd[25913]:	event28  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:22:44	server	systemd[24451]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 10:23:01	archive	systemd[6118]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 10:23:12	archive	systemd[27524]:	systemd: Started User Session 10240 of user chen.
+Sep 05 10:23:25	server	systemd[24816]:	event80  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:23:44	RUfus	systemd[9195]:	User chen added a new cron job: /tmp/backdoor.sh
+Sep 05 10:24:01	archive	systemd[29282]:	Received disconnect from 9.9.9.9: 30: disconnected by user
+Sep 05 10:24:47	RUfus	systemd[12177]:	Received disconnect from 246.71.187.50: 64: Bye Bye [preauth]
+Sep 05 10:24:52	testvm	systemd[19258]:	Did not receive identification string from 8.8.4.4
+Sep 05 10:25:12	RUfus	systemd[14612]:	Did not receive identification string from 1.1.1.1
+Sep 05 10:25:21	RUfus	systemd[12260]:	kernel: usb 1-96: USB disconnect, device number 2
+Sep 05 10:25:39	RUfus	systemd[16929]:	Accepted password for fztu from 213.169.69.105 port 32994 ssh59
+Sep 05 10:25:53	RUfus	systemd[18968]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event34)
+Sep 05 10:26:03	prod1	systemd[1256]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 10:26:12	prod1	systemd[9032]:	Received disconnect from 8.8.8.8: 57: disconnected by user
+Sep 05 10:26:16	RUfus	systemd[12243]:	systemd: Started User Session 12788 of user 123.
+Sep 05 10:26:19	ADM	systemd[25355]:	Did not receive identification string from 1.1.1.1
+Sep 05 10:26:36	testvm	systemd[18927]:	systemd: Started User Session 24878 of user oracle.
+Sep 05 10:26:41	testvm	systemd[27170]:	Received disconnect from 76.112.171.20: 67: Closed due to user request [preauth]
+Sep 05 10:27:00	ADM	systemd[24897]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:28:43	ADM	systemd[25642]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 10:29:00	server	systemd[12672]:	event89  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:29:02	testvm	systemd[9908]:	Received disconnect from 136.230.239.86: 54: Closed due to user request [preauth]
+Sep 05 10:29:04	RUfus	systemd[29097]:	Received disconnect from 8.8.4.4: 2: disconnected by user
+Sep 05 10:29:42	LabSZ	systemd[18142]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event43)
+Sep 05 10:29:49	LabSZ	systemd[2520]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event8)
+Sep 05 10:29:59	RUfus	bash[17650]:	history -c
+Sep 05 10:30:19	LabSZ	systemd[12174]:	systemd: Started User Session 3510 of user pgadmin.
+Sep 05 10:31:29	archive	systemd[6996]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 10:31:52	prod1	systemd[9389]:	Received disconnect from 8.8.4.4: 70: disconnected by user
+Sep 05 10:31:55	LabSZ	systemd[20010]:	Accepted password for ubuntu from 56.37.101.190 port 27816 ssh16
+Sep 05 10:32:01	archive	systemd[21008]:	Received disconnect from 33.235.117.124: 24: Closed due to user request [preauth]
+Sep 05 10:32:33	testvm	systemd[14820]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 10:33:02	testvm	systemd[27339]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event22)
+Sep 05 10:33:11	ADM	systemd[9708]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 10:33:27	LabSZ	systemd[5148]:	Accepted password for backup from 60.254.2.148 port 60175 ssh12
+Sep 05 10:33:31	ADM	systemd[11269]:	Accepted password for webmaster from 89.95.158.165 port 7891 ssh6
+Sep 05 10:33:57	archive	systemd[25255]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:33.0/usb3/3-4/3-4:1.0/0003:1EA7:00336.0001/input/input33/event33
+Sep 05 10:34:05	server	systemd[19084]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:34:11	prod1	systemd[15754]:	User test added a new cron job: /tmp/backdoor.sh
+Sep 05 10:34:25	server	systemd[5120]:	User root sent 1.5GB of data to 193.46.255.7
+Sep 05 10:34:36	server	systemd[18325]:	systemd: Started User Session 5427 of user root.
+Sep 05 10:34:59	ADM	systemd[17585]:	kernel: usb 1-56: USB disconnect, device number 2
+Sep 05 10:35:15	testvm	systemd[2542]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event29)
+Sep 05 10:35:22	LabSZ	systemd[19718]:	Received disconnect from 8.8.8.8: 66: disconnected by user
+Sep 05 10:35:32	server	systemd[17970]:	event71  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:35:35	ADM	systemd[28240]:	pam_unix(sshd:session): session opened for user guest by (uid=3)
+Sep 05 10:35:58	server	systemd[17498]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 10:36:06	prod1	systemd[12993]:	systemd: Started User Session 15280 of user root.
+Sep 05 10:36:14	testvm	systemd[2763]:	Accepted password for ubuntu from 5.187.115.73 port 36589 ssh75
+Sep 05 10:36:20	testvm	bash[1879]:	history -c
+Sep 05 10:37:26	server	systemd[19859]:	pam_unix(sshd:session): session closed for user root
+Sep 05 10:37:42	archive	systemd[18658]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 10:37:43	ADM	systemd[6442]:	PsExec service started on DB-PROD-01
+Sep 05 10:38:19	prod1	systemd[13423]:	User oracle sent 1.5GB of data to 87.120.191.13
+Sep 05 10:38:38	LabSZ	systemd[27203]:	Received disconnect from 196.163.64.121: 60: Bye Bye [preauth]
+Sep 05 10:38:45	LabSZ	systemd[17609]:	pam_unix(sshd:session): session closed for user chen
+Sep 05 10:38:47	prod1	systemd[20493]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 10:39:36	LabSZ	systemd[8513]:	Received disconnect from 135.31.93.151: 46: Bye Bye [preauth]
+Sep 05 10:39:53	prod1	systemd[24182]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:40:14	prod1	systemd[12058]:	event94  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:40:18	RUfus	systemd[17232]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 10:40:22	ADM	systemd[8725]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 10:40:24	testvm	systemd[4705]:	PsExec service started on DB-PROD-01
+Sep 05 10:40:41	ADM	systemd[22565]:	Did not receive identification string from 8.8.4.4
+Sep 05 10:41:06	server	systemd[3420]:	Accepted password for admin from 59.86.173.26 port 9134 ssh47
+Sep 05 10:41:10	RUfus	systemd[5267]:	systemd: Started User Session 11438 of user pgadmin.
+Sep 05 10:41:12	archive	systemd[5893]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:41:55	RUfus	systemd[23594]:	User fztu added a new cron job: /tmp/backdoor.sh
+Sep 05 10:42:12	prod1	systemd[24852]:	event95  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:42:41	server	systemd[29976]:	Received disconnect from 9.9.9.9: 26: disconnected by user
+Sep 05 10:42:44	archive	systemd[18097]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 10:42:45	testvm	systemd[2484]:	PsExec service started on DB-PROD-01
+Sep 05 10:42:58	archive	systemd[19290]:	event12  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:43:19	ADM	systemd[7686]:	systemd: Started User Session 6001 of user chen.
+Sep 05 10:43:41	server	bash[15484]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 10:45:07	RUfus	systemd[21987]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:45:10	testvm	bash[13418]:	history -c
+Sep 05 10:45:21	ADM	systemd[2656]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 10:45:22	RUfus	systemd[24602]:	PsExec service started on DB-PROD-01
+Sep 05 10:45:48	server	systemd[13056]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 10:45:58	archive	bash[29119]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 10:46:07	RUfus	systemd[14912]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 10:46:43	RUfus	bash[15467]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 10:46:53	server	systemd[2089]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event14)
+Sep 05 10:47:14	prod1	systemd[7245]:	event93  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:47:23	testvm	systemd[28012]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:48:17	LabSZ	systemd[6557]:	Did not receive identification string from 1.1.1.1
+Sep 05 10:48:21	ADM	systemd[4986]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 10:48:28	archive	systemd[21851]:	Did not receive identification string from 9.9.9.9
+Sep 05 10:48:35	testvm	systemd[26078]:	kernel: usb 1-62: USB disconnect, device number 2
+Sep 05 10:49:22	archive	systemd[26638]:	Received disconnect from 173.143.61.128: 91: Closed due to user request [preauth]
+Sep 05 10:49:24	archive	systemd[20050]:	Did not receive identification string from 8.8.8.8
+Sep 05 10:49:28	testvm	systemd[23788]:	Received disconnect from 142.197.21.74: 62: Bye Bye [preauth]
+Sep 05 10:49:53	RUfus	systemd[20294]:	User webmaster sent 1.5GB of data to 103.197.144.1
+Sep 05 10:50:07	LabSZ	systemd[7894]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 10:50:14	LabSZ	systemd[10325]:	User test sent 1.5GB of data to 113.160.235.150
+Sep 05 10:50:32	ADM	bash[13447]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 10:50:46	RUfus	systemd[20985]:	Accepted password for root from 154.97.47.209 port 58962 ssh92
+Sep 05 10:52:15	LabSZ	systemd[17202]:	User root sent 1.5GB of data to 91.224.92.32
+Sep 05 10:52:28	RUfus	systemd[13238]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:89.0/usb3/3-4/3-4:1.0/0003:1EA7:00896.0001/input/input89/event89
+Sep 05 10:52:47	server	systemd[3302]:	event66  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:52:50	testvm	systemd[22218]:	Did not receive identification string from 8.8.4.4
+Sep 05 10:53:05	prod1	systemd[23670]:	kernel: usb 1-42: USB disconnect, device number 2
+Sep 05 10:53:10	server	systemd[10527]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 10:53:55	LabSZ	systemd[25742]:	pam_unix(sshd:session): session opened for user admin by (uid=82)
+Sep 05 10:53:59	archive	systemd[1078]:	Received disconnect from 94.68.172.255: 86: Bye Bye [preauth]
+Sep 05 10:54:05	LabSZ	systemd[13522]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 10:54:06	LabSZ	systemd[25070]:	PsExec service started on DB-PROD-01
+Sep 05 10:55:05	prod1	systemd[25783]:	Accepted password for fztu from 9.38.101.254 port 46585 ssh38
+Sep 05 10:55:19	server	systemd[16537]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:55:23	LabSZ	systemd[29563]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:55:28	RUfus	systemd[28849]:	pam_unix(sshd:session): session opened for user webmaster by (uid=64)
+Sep 05 10:55:31	server	systemd[17063]:	Did not receive identification string from 1.0.0.1
+Sep 05 10:55:35	archive	systemd[13485]:	event50  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:55:40	testvm	systemd[29786]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 10:55:41	testvm	systemd[17137]:	PsExec service started on DB-PROD-01
+Sep 05 10:56:05	testvm	systemd[1077]:	Did not receive identification string from 1.0.0.1
+Sep 05 10:56:08	testvm	systemd[7850]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:56:16	RUfus	systemd[29626]:	event70  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:56:43	RUfus	systemd[5713]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 10:57:17	archive	systemd[19735]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:57:21	testvm	systemd[22300]:	event73  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:57:28	testvm	systemd[15356]:	Received disconnect from 129.116.44.224: 43: Bye Bye [preauth]
+Sep 05 10:57:52	archive	systemd[6807]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 10:57:57	ADM	systemd[9427]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:44.0/usb3/3-4/3-4:1.0/0003:1EA7:00446.0001/input/input44/event44
+Sep 05 10:57:59	prod1	systemd[19928]:	pam_unix(sshd:auth): authentication failure; logname= uid=5 euid=2 tty=ssh ruser= rhost=91.224.92.79
+Sep 05 10:58:06	ADM	systemd[1755]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 10:58:07	prod1	systemd[13909]:	PsExec service started on DB-PROD-01
+Sep 05 10:58:14	ADM	systemd[9005]:	pam_unix(sshd:session): session opened for user chen by (uid=69)
+Sep 05 10:58:25	ADM	systemd[16575]:	Received disconnect from 8.8.8.8: 12: disconnected by user
+Sep 05 10:58:37	server	systemd[9035]:	pam_unix(sshd:session): session opened for user backup by (uid=31)
+Sep 05 10:58:40	testvm	systemd[10889]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 10:58:42	archive	systemd[10747]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 10:58:58	server	systemd[17201]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 10:59:21	server	systemd[24651]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 10:59:27	testvm	systemd[22859]:	pam_unix(sshd:session): session closed for user root
+Sep 05 10:59:52	testvm	systemd[28367]:	pam_unix(sshd:session): session opened for user oracle by (uid=73)
+Sep 05 10:59:59	archive	systemd[14836]:	Received disconnect from 1.1.1.1: 57: disconnected by user
+Sep 05 11:00:04	server	bash[21063]:	history -c
+Sep 05 11:00:23	ADM	systemd[23925]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 11:00:32	ADM	systemd[16832]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 11:00:42	RUfus	systemd[27370]:	pam_unix(sshd:session): session opened for user chen by (uid=37)
+Sep 05 11:01:09	prod1	systemd[1596]:	Received disconnect from 97.206.58.56: 83: Closed due to user request [preauth]
+Sep 05 11:01:14	archive	systemd[18864]:	Received disconnect from 223.205.241.178: 75: Bye Bye [preauth]
+Sep 05 11:01:53	LabSZ	systemd[20600]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event68)
+Sep 05 11:01:56	RUfus	systemd[18061]:	kernel: myapp[670190]: segfault at 7f0a00000000 ip 00007f0a4e4c0000 sp 00007ffde1e07000 error 7 in libpthread-3.72.so[7f0a4e480000+19000]
+Sep 05 11:02:15	LabSZ	systemd[6003]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 11:02:21	testvm	systemd[1072]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 11:02:22	RUfus	systemd[1022]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 11:02:49	LabSZ	bash[9607]:	history -c
+Sep 05 11:03:07	archive	systemd[6292]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 11:03:19	prod1	systemd[28986]:	systemd: Started User Session 15396 of user webmaster.
+Sep 05 11:03:22	testvm	systemd[22897]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 11:03:22	server	systemd[3167]:	PsExec service started on DB-PROD-01
+Sep 05 11:03:52	server	systemd[20364]:	systemd: Started User Session 18580 of user backup.
+Sep 05 11:04:02	RUfus	systemd[5136]:	Received disconnect from 25.231.27.127: 15: Closed due to user request [preauth]
+Sep 05 11:04:19	LabSZ	systemd[14762]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 11:04:30	prod1	bash[24937]:	history -c
+Sep 05 11:04:52	testvm	systemd[3795]:	event14  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:06:17	testvm	systemd[25869]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:06:22	ADM	systemd[20206]:	kernel: usb 1-14: USB disconnect, device number 2
+Sep 05 11:06:28	prod1	systemd[29566]:	pam_unix(sshd:session): session opened for user webmaster by (uid=16)
+Sep 05 11:07:50	ADM	systemd[13991]:	event28  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:07:52	prod1	systemd[24366]:	Received disconnect from 8.8.8.8: 83: disconnected by user
+Sep 05 11:08:18	ADM	systemd[23694]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event22)
+Sep 05 11:08:37	testvm	systemd[13850]:	Shadow copies deleted by process 'encryptor.exe'
+Sep 05 11:09:29	testvm	systemd[5220]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:09:48	server	systemd[10169]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 11:10:36	RUfus	systemd[9855]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 11:10:37	LabSZ	systemd[12405]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 11:13:52	archive	systemd[15454]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:13:58	testvm	systemd[23026]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:6.0/usb3/3-4/3-4:1.0/0003:1EA7:0066.0001/input/input6/event6
+Sep 05 11:14:04	server	systemd[27703]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event99)
+Sep 05 11:14:07	archive	systemd[25851]:	event44  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:14:13	archive	systemd[15732]:	Accepted password for pgadmin from 94.67.204.64 port 62259 ssh92
+Sep 05 11:14:18	server	systemd[19241]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 11:15:16	RUfus	systemd[26034]:	kernel: usb 1-10: USB disconnect, device number 2
+Sep 05 11:15:22	server	systemd[20074]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 11:15:24	server	systemd[4957]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 11:15:31	LabSZ	systemd[6608]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:16:44	RUfus	systemd[11580]:	systemd: Started User Session 10150 of user backup.
+Sep 05 11:17:06	prod1	systemd[26934]:	Accepted password for chen from 4.41.88.13 port 49426 ssh37
+Sep 05 11:17:13	LabSZ	systemd[19163]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 11:17:23	RUfus	systemd[4432]:	pam_unix(sshd:session): session opened for user 123 by (uid=58)
+Sep 05 11:17:28	ADM	bash[22441]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 11:17:44	LabSZ	systemd[1702]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 11:17:57	LabSZ	systemd[16854]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:18:01	ADM	systemd[18599]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 11:18:24	RUfus	systemd[21104]:	Did not receive identification string from 1.1.1.1
+Sep 05 11:19:07	ADM	systemd[12184]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event59)
+Sep 05 11:19:14	testvm	bash[16285]:	history -c
+Sep 05 11:19:34	archive	systemd[14075]:	kernel: usb 1-54: USB disconnect, device number 2
+Sep 05 11:19:45	prod1	systemd[27961]:	User fztu added a new cron job: /tmp/backdoor.sh
+Sep 05 11:20:29	archive	systemd[10842]:	Did not receive identification string from 1.1.1.1
+Sep 05 11:21:01	ADM	systemd[14908]:	User oracle sent 1.5GB of data to 80.82.77.139
+Sep 05 11:21:16	RUfus	systemd[29429]:	Received disconnect from 40.75.128.203: 16: Bye Bye [preauth]
+Sep 05 11:21:24	ADM	bash[15867]:	history -c
+Sep 05 11:21:39	RUfus	bash[22752]:	history -c
+Sep 05 11:21:47	prod1	systemd[14732]:	event66  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:22:01	archive	systemd[6972]:	User backup added a new cron job: /tmp/backdoor.sh
+Sep 05 11:22:18	RUfus	systemd[24604]:	kernel: usb 1-15: USB disconnect, device number 2
+Sep 05 11:23:09	ADM	systemd[14537]:	systemd: Started User Session 8017 of user chen.
+Sep 05 11:23:23	server	systemd[4686]:	User webmaster added a new cron job: /tmp/backdoor.sh
+Sep 05 11:23:33	server	systemd[20139]:	Received disconnect from 124.227.23.189: 18: Closed due to user request [preauth]
+Sep 05 11:23:37	server	systemd[6299]:	Received disconnect from 3.47.70.1: 11: Bye Bye [preauth]
+Sep 05 11:23:43	server	systemd[19511]:	Received disconnect from 69.60.89.189: 86: Bye Bye [preauth]
+Sep 05 11:24:25	ADM	systemd[28245]:	kernel: usb 1-39: USB disconnect, device number 2
+Sep 05 11:24:29	prod1	systemd[19612]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:20.0/usb3/3-4/3-4:1.0/0003:1EA7:00206.0001/input/input20/event20
+Sep 05 11:24:34	RUfus	bash[26480]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 11:24:47	prod1	systemd[26697]:	Received disconnect from 202.143.180.131: 3: Closed due to user request [preauth]
+Sep 05 11:26:08	ADM	systemd[1092]:	User webmaster sent 1.5GB of data to 45.119.81.249
+Sep 05 11:26:36	archive	systemd[10624]:	Accepted password for admin from 35.124.63.126 port 29061 ssh29
+Sep 05 11:26:41	archive	systemd[1474]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=34)
+Sep 05 11:26:47	testvm	systemd[11161]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 11:26:57	testvm	systemd[9363]:	Did not receive identification string from 1.0.0.1
+Sep 05 11:26:59	ADM	systemd[28499]:	Received disconnect from 239.33.224.116: 28: Bye Bye [preauth]
+Sep 05 11:27:05	server	systemd[22656]:	event75  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:27:07	ADM	systemd[29213]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event49)
+Sep 05 11:27:15	prod1	systemd[29430]:	event20  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:27:18	prod1	systemd[23646]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:27:33	testvm	systemd[17061]:	Did not receive identification string from 1.0.0.1
+Sep 05 11:27:40	testvm	systemd[17058]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:65.0/usb3/3-4/3-4:1.0/0003:1EA7:00656.0001/input/input65/event65
+Sep 05 11:29:00	RUfus	systemd[21827]:	event58  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:29:06	archive	systemd[2982]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=36)
+Sep 05 11:29:08	server	systemd[1183]:	systemd: Started User Session 7051 of user root.
+Sep 05 11:30:02	ADM	systemd[19408]:	User webmaster sent 1.5GB of data to 80.94.95.112
+Sep 05 11:30:10	archive	systemd[9640]:	Accepted password for matlab from 143.30.76.55 port 4803 ssh26
+Sep 05 11:30:23	LabSZ	systemd[14869]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event75)
+Sep 05 11:31:02	server	bash[26909]:	history -c
+Sep 05 11:31:22	prod1	systemd[2380]:	kernel: usb 1-32: USB disconnect, device number 2
+Sep 05 11:31:30	ADM	bash[8421]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 11:31:39	archive	systemd[14150]:	pam_unix(sshd:session): session opened for user test by (uid=19)
+Sep 05 11:31:49	RUfus	systemd[17871]:	Received disconnect from 1.0.0.1: 53: disconnected by user
+Sep 05 11:32:38	testvm	systemd[17604]:	pam_unix(sshd:session): session opened for user test by (uid=61)
+Sep 05 12:06:18	archive	systemd[4227]:	User 123 added a new cron job: /tmp/backdoor.sh
+Sep 05 12:06:28	archive	systemd[18783]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:06:29	prod1	systemd[5362]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:06:44	ADM	systemd[1599]:	Received disconnect from 53.140.89.70: 95: Bye Bye [preauth]
+Sep 05 12:06:50	LabSZ	systemd[30000]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=54)
+Sep 05 12:08:42	testvm	systemd[26900]:	pam_unix(sshd:session): session closed for user backup
+Sep 05 12:08:53	LabSZ	systemd[27964]:	Did not receive identification string from 8.8.4.4
+Sep 05 12:09:08	testvm	systemd[24390]:	User oracle added a new cron job: /tmp/backdoor.sh
+Sep 05 12:09:39	archive	systemd[15468]:	kernel: usb 1-43: USB disconnect, device number 2
+Sep 05 12:09:48	testvm	systemd[21084]:	systemd: Started User Session 23666 of user fztu.
+Sep 05 12:09:52	archive	systemd[2000]:	pam_unix(sshd:session): session opened for user root by (uid=23)
+Sep 05 12:09:55	server	systemd[5121]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:57.0/usb3/3-4/3-4:1.0/0003:1EA7:00576.0001/input/input57/event57
+Sep 05 12:10:01	LabSZ	systemd[5700]:	event30  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:10:10	server	systemd[5792]:	Did not receive identification string from 8.8.8.8
+Sep 05 12:10:17	testvm	systemd[28925]:	User matlab sent 1.5GB of data to 198.12.114.232
+Sep 05 12:10:54	ADM	systemd[15001]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 12:11:05	testvm	systemd[20746]:	Received disconnect from 179.80.109.254: 66: Bye Bye [preauth]
+Sep 05 12:11:52	ADM	systemd[4333]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 12:12:35	ADM	systemd[27450]:	Received disconnect from 224.46.220.16: 21: Bye Bye [preauth]
+Sep 05 12:14:31	testvm	systemd[2506]:	User fztu added a new cron job: /tmp/backdoor.sh
+Sep 05 12:15:03	archive	systemd[16302]:	User fztu sent 1.5GB of data to 91.224.92.32
+Sep 05 12:15:27	RUfus	systemd[9901]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 12:15:32	LabSZ	systemd[14557]:	Received disconnect from 18.61.159.176: 86: Bye Bye [preauth]
+Sep 05 12:15:52	RUfus	systemd[7739]:	Accepted password for matlab from 21.189.175.116 port 38382 ssh91
+Sep 05 12:16:35	server	systemd[4433]:	Received disconnect from 8.8.4.4: 93: disconnected by user
+Sep 05 12:16:42	archive	systemd[2858]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:16:43	prod1	systemd[17029]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:16:48	prod1	systemd[13915]:	Did not receive identification string from 8.8.8.8
+Sep 05 12:17:16	LabSZ	systemd[7945]:	Did not receive identification string from 1.1.1.1
+Sep 05 12:17:18	testvm	systemd[29971]:	event42  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:17:27	server	systemd[3838]:	User webmaster sent 1.5GB of data to 197.210.64.133
+Sep 05 12:17:37	ADM	systemd[25547]:	User pgadmin sent 1.5GB of data to 193.46.255.103
+Sep 05 12:17:48	ADM	systemd[20543]:	event56  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:18:17	server	systemd[5991]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 12:18:28	server	systemd[25954]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:18:29	RUfus	systemd[12391]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:18:37	RUfus	systemd[12817]:	kernel: usb 1-2: USB disconnect, device number 2
+Sep 05 12:19:50	archive	systemd[23066]:	Received disconnect from 92.166.151.100: 91: Bye Bye [preauth]
+Sep 05 12:20:04	server	systemd[16482]:	Received disconnect from 39.143.220.90: 99: Closed due to user request [preauth]
+Sep 05 12:20:07	LabSZ	systemd[4973]:	pam_unix(sshd:session): session closed for user test
+Sep 05 12:20:13	testvm	systemd[19570]:	Received disconnect from 8.8.8.8: 43: disconnected by user
+Sep 05 12:20:17	archive	systemd[8990]:	Received disconnect from 1.0.0.1: 32: disconnected by user
+Sep 05 12:21:10	RUfus	systemd[29417]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event95)
+Sep 05 12:21:21	LabSZ	systemd[9972]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:21:22	ADM	systemd[11344]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:21:36	RUfus	systemd[2546]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:23:19	LabSZ	systemd[4354]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:23:21	prod1	bash[24434]:	history -c
+Sep 05 12:23:31	server	systemd[19552]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:95.0/usb3/3-4/3-4:1.0/0003:1EA7:00956.0001/input/input95/event95
+Sep 05 12:23:43	LabSZ	bash[12254]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Sep 05 12:24:16	archive	systemd[10791]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:24:17	RUfus	systemd[28865]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:24:47	LabSZ	systemd[23104]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:24:50	RUfus	systemd[23986]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 12:25:06	archive	systemd[27393]:	User ubuntu sent 1.5GB of data to 91.224.92.106
+Sep 05 12:25:18	prod1	systemd[1198]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:25:19	RUfus	systemd[1898]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:25:39	RUfus	systemd[26845]:	User backup sent 1.5GB of data to 45.176.12.6
+Sep 05 12:25:52	ADM	systemd[2159]:	event28  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:26:26	ADM	systemd[7297]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:26:27	prod1	systemd[6620]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:26:51	testvm	systemd[23726]:	event21  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:26:54	prod1	bash[21048]:	history -c
+Sep 05 12:27:54	testvm	systemd[6297]:	Accepted password for ubuntu from 206.119.199.127 port 39505 ssh2
+Sep 05 12:28:00	archive	systemd[12204]:	Did not receive identification string from 1.1.1.1
+Sep 05 12:28:14	RUfus	systemd[28356]:	pam_unix(sshd:session): session closed for user chen
+Sep 05 12:28:36	RUfus	systemd[15580]:	Received disconnect from 8.8.8.8: 13: disconnected by user
+Sep 05 12:29:17	RUfus	systemd[15335]:	Received disconnect from 227.53.71.185: 83: Closed due to user request [preauth]
+Sep 05 12:29:20	ADM	systemd[27678]:	kernel: usb 1-4: USB disconnect, device number 2
+Sep 05 12:29:36	ADM	systemd[26426]:	User webmaster sent 1.5GB of data to 167.94.146.58
+Sep 05 12:29:46	archive	systemd[15772]:	Accepted password for webmaster from 163.202.47.204 port 60145 ssh7
+Sep 05 12:29:51	testvm	systemd[28164]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:29.0/usb3/3-4/3-4:1.0/0003:1EA7:00296.0001/input/input29/event29
+Sep 05 12:30:17	testvm	systemd[27563]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:30:30	archive	systemd[10176]:	Accepted password for matlab from 176.98.119.155 port 28830 ssh30
+Sep 05 12:30:37	testvm	systemd[6110]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Sep 05 12:31:05	archive	systemd[10040]:	Received disconnect from 250.246.204.220: 23: Closed due to user request [preauth]
+Sep 05 12:31:23	server	systemd[27456]:	Received disconnect from 1.1.1.1: 28: disconnected by user
+Sep 05 12:31:26	prod1	systemd[2276]:	systemd: Started User Session 1617 of user admin.
+Sep 05 12:32:26	RUfus	systemd[25183]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 12:32:28	server	systemd[23636]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:32:29	server	systemd[22595]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:32:39	testvm	systemd[17199]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=92)
+Sep 05 12:32:48	archive	systemd[3919]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 12:32:52	ADM	systemd[19257]:	Received disconnect from 195.242.239.131: 47: Closed due to user request [preauth]
+Sep 05 12:33:30	LabSZ	systemd[13012]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:33:32	ADM	systemd[29640]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Sep 05 12:33:54	server	bash[13935]:	history -c
+Sep 05 12:34:07	LabSZ	systemd[9020]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 12:34:19	ADM	systemd[19936]:	Did not receive identification string from 9.9.9.9
+Sep 05 12:35:29	ADM	systemd[19075]:	Received disconnect from 2.188.176.180: 34: Closed due to user request [preauth]
+Sep 05 12:36:05	archive	systemd[7249]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Sep 05 12:36:12	LabSZ	systemd[22912]:	User guest added a new cron job: /tmp/backdoor.sh
+Sep 05 12:36:25	archive	systemd[23669]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:37:04	RUfus	systemd[2767]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:37.0/usb3/3-4/3-4:1.0/0003:1EA7:00376.0001/input/input37/event37
+Sep 05 12:37:11	testvm	systemd[19101]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 12:37:12	prod1	systemd[1737]:	PsExec service started on DB-PROD-01
+Sep 05 12:38:53	testvm	systemd[4092]:	Received disconnect from 236.189.86.44: 21: Closed due to user request [preauth]
+Sep 05 12:38:57	LabSZ	systemd[17136]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 12:39:00	ADM	systemd[12038]:	Received disconnect from 240.150.245.253: 93: Closed due to user request [preauth]
+Sep 05 12:39:23	LabSZ	systemd[2175]:	SMB connection attempt from WEB-PROD-01 to DB-PROD-01 as user ADMIN
+Sep 05 12:39:24	ADM	systemd[2162]:	PsExec service started on DB-PROD-01
+Sep 05 12:40:02	archive	systemd[22908]:	Received disconnect from 251.117.208.29: 90: Bye Bye [preauth]
+Sep 05 12:40:05	server	systemd[13398]:	Received disconnect from 145.17.202.194: 80: Bye Bye [preauth]

@@ -79,19 +79,24 @@ export function renderAnomalyFeedRow(alert, isNew) {
 
     row.addEventListener('click', (event) => {
         // Only trigger if the click was not on a button inside the row
-        if (event.target.tagName !== 'BUTTON') {
-            const logId = alert.log_id || alert.id; // Get the ID from the alert object
-            showLogContext(alert.timestamp, alert.content, alert.log_id || logId);
+        if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'A') {
+            showLogContext(alert.timestamp, alert.content, alert.log_id);
         }
     });
 
+    let techniqueLink = 'N/A';
+    if (alert.mitre_technique) {
+        const techniqueUrl = alert.mitre_technique.replace('.', '/');
+        techniqueLink = `<a href="https://attack.mitre.org/techniques/${techniqueUrl}/" target="_blank" title="View on MITRE ATT&CK®">${alert.mitre_technique}</a>`;
+    }
+
     row.insertCell(0).innerHTML = `<span class="status-badge status-${alert.status.toLowerCase()}">${alert.status}</span>`;
     row.insertCell(1).innerHTML = formatRiskScore(alert.risk_score);
-    const contentCell = row.insertCell(2);
-    contentCell.className = 'log-content';
-    contentCell.textContent = alert.content;
+    row.insertCell(2).textContent = alert.content;
+    row.insertCell(3).textContent = alert.rule_description || 'N/A';
+    row.insertCell(4).innerHTML = techniqueLink;
     // Cell for Actions
-    const actionsCell = row.insertCell(3);
+    const actionsCell = row.insertCell(5);
     actionsCell.className = 'actions-cell';
     if (alert.status !== 'Closed') {
         // Create the "Acknowledge" button if the status is 'New'
@@ -281,14 +286,30 @@ export async function showLogContext(timestamp, originalLogContent, logId) {
 
     try {
         const contextLogs = await api.fetchLogContext(timestamp);
+        const targetLog = contextLogs.find(log => log.id === logId);
         
         if (contextLogs.length === 0) {
             modalBody.innerHTML = '<p>No surrounding log entries found.</p>';
             return;
         }
 
-        const targetLog = contextLogs.find(log => log.content === originalLogContent);
+        if (!targetLog) {
+             modalBody.innerHTML = '<p>Could not find the specific log entry.</p>';
+             return;
+        }
         
+        let threatIntelHTML = '';
+        if (targetLog && targetLog.threat_intel) {
+            let intelObject = targetLog.threat_intel;
+
+            // If the data is a string, parse it. If it's already an object, use it directly.
+            if (typeof intelObject === 'string') {
+                intelObject = JSON.parse(intelObject);
+            }
+            console.log("Threat Intel Data:", intelObject); // For debugging
+            threatIntelHTML = createThreatIntelHTML(intelObject);
+        }
+
         let explanationHTML = '';
         if (targetLog && targetLog.final_label === 1) { // Only explain anomalies
             if (targetLog.explanation) {
@@ -349,7 +370,7 @@ export async function showLogContext(timestamp, originalLogContent, logId) {
             `;
         });
         timelineHTML += '</div>';
-        modalBody.innerHTML = explanationHTML + timelineHTML;
+        modalBody.innerHTML = threatIntelHTML + explanationHTML + timelineHTML;
 
     } catch (error) {
         modalBody.innerHTML = '<p>Error loading log context.</p>';
@@ -428,4 +449,30 @@ function pollTaskStatus(taskId) {
             clearInterval(intervalId); // Stop polling on error
         }
     }, 2000); // Check status every 2 seconds
+}
+
+function createThreatIntelHTML(intel) {
+    if (!intel) return '';
+
+    const score = intel.abuseConfidenceScore || 0;
+    let scoreClass = 'risk-low';
+    let scoreLabel = 'Low';
+    if (score > 80) { scoreClass = 'risk-critical'; scoreLabel = 'Critical'; }
+    else if (score > 60) { scoreClass = 'risk-high'; scoreLabel = 'High'; }
+    else if (score > 30) { scoreClass = 'risk-low-medium'; scoreLabel = 'Medium'; }
+    
+    return `
+        <div class="threat-intel-report">
+            <h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Threat Intelligence Report (AbuseIPDB)
+            </h4>
+            <div class="threat-intel-grid">
+                <div><strong>Abuse Score:</strong> <span class="${scoreClass}">${score}% (${scoreLabel})</span></div>
+                <div><strong>Country:</strong> ${escapeHTML(intel.countryCode || 'N/A')}</div>
+                <div><strong>ISP:</strong> ${escapeHTML(intel.isp || 'N/A')}</div>
+                <div><strong>Total Reports:</strong> ${intel.totalReports || 0}</div>
+            </div>
+        </div>
+    `;
 }

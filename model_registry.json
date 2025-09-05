@@ -1,5 +1,5 @@
 {
-    "supervised_model": "model/sgd_embedder_20250901_001025.pkl",
-    "autoencoder_model": "model/autoencoder_model_20250901_001025.keras",
+    "supervised_model": "model/sgd_embedder_20250905_130213.pkl",
+    "autoencoder_model": "model/autoencoder_model_20250905_130213.keras",
     "lstm_model": "model/lstm_classifier_model.keras"
 }

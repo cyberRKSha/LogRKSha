@@ -1,6 +1,7 @@
 # app/config.py
 import os
 from pathlib import Path
+from typing import Optional
 from pydantic_settings import BaseSettings
 from pydantic import ConfigDict
 
@@ -38,6 +39,7 @@ class Settings(BaseSettings):
     STATIC_PATH: Path = PROJECT_ROOT / "app" / "static"
     TEMPLATES_PATH: Path = PROJECT_ROOT / "app" / "templates"
     GEOIP_PATH: Path = PROJECT_ROOT / "geoip" / "GeoLite2-City.mmdb"
+    ABUSEIPDB_API_KEY: Optional[str] = None
 
     # --- Automatically constructed paths ---
     # This creates the full paths to your files from the settings above

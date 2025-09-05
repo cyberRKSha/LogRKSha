@@ -108,6 +108,12 @@ function handleWebSocketMessage(event) {
             updateLiveSparkline(msg.data.label); // <-- ADD THIS LINE
             updateStatsOnScreen(totalCount, normalCount, anomalyCount, sessionCount);
             saveSessionState();
+            if (msg.data.play_sound) {
+                const audio = new Audio('/static/audio/alert.wav');
+                audio.play().catch(error => {
+                    console.warn("Could not play alert sound, possibly due to browser restrictions.", error);
+                });
+            }
             break;
         case "new_actionable_alert":
             // This handles adding new rows to our actionable anomaly feed
@@ -436,7 +442,7 @@ async function fetchTrainingStats() {
 async function loadInitialAnomalies() {
     const tableBody = document.getElementById('anomalyFeedTableBody');
     if (!tableBody) return;
-    tableBody.innerHTML = '<tr><td colspan="4" class="no-alerts-row">Loading alerts...</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="6" class="no-alerts-row">Loading alerts...</td></tr>';
     
     try {
         const alerts = await api.fetchInitialAnomalies();
@@ -481,11 +487,12 @@ async function loadInitialAnomalies() {
             } else {
                 actionsCell.innerHTML = '<span class="status-closed-text">Closed</span>';
             }
+            renderAnomalyFeedRow(alert, false);
         });
 
     } catch (error) {
         console.error("Failed to load initial anomalies:", error);
-        tableBody.innerHTML = '<tr><td colspan="4" class="no-alerts-row">Failed to load alerts.</td></tr>';
+        tableBody.innerHTML = '<tr><td colspan="6" class="no-alerts-row">Failed to load alerts.</td></tr>';
     }
 }
 

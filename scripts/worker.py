@@ -1,24 +1,11 @@
-import os
-import sys
-from app.config import settings
-import re
-import dill
-import pika
-import json
-import time
-import redis
-import pickle
-import joblib
-import hashlib
-import psycopg2
-import requests
-import subprocess
+import os, re, sys, dill, pika, json, time, redis, pickle, joblib, hashlib, requests
 import numpy as np
 import tensorflow as tf
 import logging
+from typing import Dict, Any
 from app.log_config import setup_logging
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from sklearn.pipeline import make_pipeline
 from sentence_transformers import SentenceTransformer
 from sqlalchemy import create_engine, text
@@ -36,6 +23,8 @@ IGNORED_PATTERNS = [
     "ACPI group/action undefined: button/",
     "ACPI group/action undefined: video/",
 ]
+
+attack_mappings = []
 
 # logger.info("Worker starting up. Loading models...")
 
@@ -147,18 +136,12 @@ def is_monitoring_active():
     except (json.JSONDecodeError, IOError):
         return True # Default to active on error
 
-def play_alert_sound():
-    try:
-        subprocess.Popen(['paplay', settings.ALERT_SOUND])
-    except Exception as e:
-        logger.warning(f"Sound playback failed: {e}")
-
-def insert_log_to_db(source, content, p_label, risk, seq_risk, verdict_str, reviewed=0, explanation=""):
+def insert_log_to_db(source, content, p_label, risk, seq_risk, verdict_str, reviewed=0, explanation="", threat_intel=None):
     """Inserts a log into the database using SQLAlchemy."""
     engine = create_engine(settings.DATABASE_URL)
     query = text("""
-        INSERT INTO logs (timestamp, source, content, predicted_label, final_label, is_reviewed, risk_score, sequence_risk, verdict, explanation)
-        VALUES (:ts, :source, :content, :p_label, :f_label, :reviewed, :risk, :seq_risk, :verdict, :explanation)
+        INSERT INTO logs (timestamp, source, content, predicted_label, final_label, is_reviewed, risk_score, sequence_risk, verdict, explanation, threat_intel)
+        VALUES (:ts, :source, :content, :p_label, :f_label, :reviewed, :risk, :seq_risk, :verdict, :explanation, :threat_intel)
         RETURNING id, timestamp
     """)
     
@@ -176,7 +159,8 @@ def insert_log_to_db(source, content, p_label, risk, seq_risk, verdict_str, revi
                     "risk": risk,
                     "seq_risk": seq_risk,
                     "verdict": verdict_str,
-                    "explanation": explanation
+                    "explanation": explanation,
+                    "threat_intel": json.dumps(threat_intel) if threat_intel else None
                 }).fetchone()
 
             if result:
@@ -283,6 +267,92 @@ def update_and_predict_sequence(log_line, embedding):
             
     return float(sequence_risk_score)
 
+def load_attack_mappings():
+    """Loads the MITRE ATT&CK mapping rules from the JSON file."""
+    global attack_mappings
+    if not attack_mappings: # Only load once
+        try:
+            map_file_path = os.path.join(settings.PROJECT_ROOT, "attack_mapping.json")
+            with open(map_file_path, 'r') as f:
+                attack_mappings = json.load(f)
+            logger.info(f"Loaded {len(attack_mappings)} MITRE ATT&CK mapping rules.")
+        except Exception as e:
+            logger.error(f"Failed to load attack_mapping.json: {e}")
+
+def map_log_to_attack(log_content: str) -> Dict[str, Any] | None:
+    """Checks a log against the loaded rules and returns the first match."""
+    if not attack_mappings:
+        load_attack_mappings()
+
+    if not isinstance(log_content, str):
+        return None
+
+    log_content_lower = log_content.lower()
+    logger.info(f"--- Attempting to map log: '{log_content_lower}' ---")
+    for rule in attack_mappings:
+        if all(keyword.lower() in log_content_lower for keyword in rule["keywords"]):
+            logger.info(f"[+] SUCCESS: Log matched MITRE rule '{rule['name']}' (TTP: {rule['ttp']}).")
+            return {
+                "tactic": rule["tactic"],
+                "technique": rule["ttp"],
+                "description": rule["name"],
+            }
+    logger.warning(f"[-] FAILED: No MITRE rule matched for this log content.")
+    return None
+
+def extract_ip_from_log(log_line: str) -> str | None:
+    """Extracts the first valid IPv4 address from a log line."""
+    if not isinstance(log_line, str):
+        return None
+    match = re.search(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", log_line)
+    return match.group(0) if match else None
+
+def check_ip_abuseipdb(ip_address: str) -> dict | None:
+
+    if not settings.ABUSEIPDB_API_KEY:
+        logger.warning("AbuseIPDB API key is not set. Skipping threat intel check.")
+        return None # Don't proceed if no API key is set
+
+    r = get_redis_client()
+    cache_key = f"ip_intel:{ip_address}"
+
+    # 1. Check the cache first
+    cached_result = r.get(cache_key)
+    if cached_result:
+        logger.info(f"Threat intel cache HIT for IP: {ip_address}")
+        return json.loads(cached_result)
+
+    logger.info(f"Threat intel cache MISS for IP: {ip_address}. Querying API...")
+    
+    # 2. If not in cache, query the API
+    headers = {'Accept': 'application/json', 'Key': settings.ABUSEIPDB_API_KEY}
+    params = {'ipAddress': ip_address, 'maxAgeInDays': '90'}
+    
+    try:
+        response = requests.get('https://api.abuseipdb.com/api/v2/check', headers=headers, params=params, timeout=5)
+        response.raise_for_status() # Raise an exception for bad status codes
+        
+        data = response.json().get('data')
+        if not data:
+            return None
+
+        # 3. Store the result in Redis with a 24-hour expiration
+        # We store a simplified version of the result
+        result_to_cache = {
+            'abuseConfidenceScore': data.get('abuseConfidenceScore'),
+            'countryCode': data.get('countryCode'),
+            'isp': data.get('isp'),
+            'domain': data.get('domain'),
+            'totalReports': data.get('totalReports'),
+        }
+        r.setex(cache_key, timedelta(hours=24), json.dumps(result_to_cache))
+        
+        return result_to_cache
+
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Error querying AbuseIPDB API: {e}")
+        return None
+
 def process_log(source, line):
     load_models()
     if line.startswith("[LOG-WORKER]"):
@@ -333,6 +403,17 @@ def process_log(source, line):
     
     label_str = 'anomaly' if is_anomaly else 'normal'
 
+    threat_intel_data = None
+    if is_anomaly:
+        ip = extract_ip_from_log(line) # We can reuse this to find the IP
+        if ip:
+            logger.info(f"Found IP {ip} in anomalous log, checking threat intel...")
+            threat_intel_data = check_ip_abuseipdb(ip)
+            if threat_intel_data:
+                logger.info(f"Enriched log with threat intel for IP {ip}: Score {threat_intel_data.get('abuseConfidenceScore')}")
+        else:
+            logger.info("Anomalous log detected, but no IP address found to enrich.")
+
     original_timestamp = parse_timestamp_from_log(line)
     dashboard_payload = {
         "log": line,
@@ -341,20 +422,22 @@ def process_log(source, line):
         "risk_score": risk_score,
         "is_alert": False, # Default to false
         "timestamp": original_timestamp,
-        "sequence_risk": sequence_risk
+        "sequence_risk": sequence_risk,
+        "play_sound": False
     }
 
     
     # is_unique_for_review = is_new_log_and_save_hash(line)
     # log_is_reviewed_status = 0 if is_unique_for_review else 1
-    new_log_id, new_log_timestamp = insert_log_to_db(source, line, int(is_anomaly), risk_score, sequence_risk, verdict, 0, "")
+    new_log_id, new_log_timestamp = insert_log_to_db(source, line, int(is_anomaly), risk_score, sequence_risk, verdict, 0, "", threat_intel=threat_intel_data)
     
     if is_anomaly and new_log_id and new_log_timestamp:
         try:
+            attack_info = map_log_to_attack(line)
             engine = create_engine(settings.DATABASE_URL)
             alert_query = text("""
-                INSERT INTO alerts (log_id, log_timestamp, timestamp, rule_name, status) 
-                VALUES (:log_id, :log_ts, :now_ts, :rule_name, 'New')
+                INSERT INTO alerts (log_id, log_timestamp, timestamp, rule_name, status, mitre_tactic, mitre_technique, rule_description) 
+                VALUES (:log_id, :log_ts, :now_ts, :rule_name, 'New', :tactic, :technique, :desc)
                 RETURNING id
             """)
 
@@ -364,7 +447,10 @@ def process_log(source, line):
                         "log_id": new_log_id,
                         "log_ts": new_log_timestamp,
                         "now_ts": datetime.now(timezone.utc),
-                        "rule_name": verdict
+                        "rule_name": verdict,
+                        "tactic": attack_info.get("tactic") if attack_info else None,
+                        "technique": attack_info.get("technique") if attack_info else None,
+                        "desc": attack_info.get("description") if attack_info else None
                     }).scalar_one_or_none() # .scalar_one_or_none() is great for single-value returns
             
             alert_id = alert_result
@@ -374,14 +460,17 @@ def process_log(source, line):
             dashboard_payload["alert_info"] = {
                 "id": alert_id, "status": "New", "rule_name": verdict,
                 "timestamp": original_timestamp, "log_id": new_log_id,
-                "content": line, "risk_score": risk_score
+                "content": line, "risk_score": risk_score,
+                "rule_description": attack_info.get("description") if attack_info else None,
+                "mitre_tactic": attack_info.get("tactic") if attack_info else None,
+                "mitre_technique": attack_info.get("technique") if attack_info else None
             }
 
             if risk_score >= 0.79:
                 advice = f"({verdict}) | Risk: {risk_score:.2f}"
                 # This part for sending notifications remains the same
                 requests.post(f"{settings.DASHBOARD_URL}/api/new_alert", json={"log": line, "advice": advice, "status": "New", "id": alert_id}, timeout=1)
-                play_alert_sound()
+                dashboard_payload["play_sound"] = True
 
         except Exception as e:
             logger.warning(f"Failed to create alert or send to dashboard: {e}")

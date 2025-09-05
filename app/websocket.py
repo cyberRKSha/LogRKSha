@@ -22,6 +22,7 @@ class LogData(BaseModel):
     is_alert: bool = False # Add this
     alert_info: Optional[dict] = None
     sequence_risk: Optional[float] = 0.0
+    play_sound: Optional[bool] = False
 
 class AlertData(BaseModel):
     log: str

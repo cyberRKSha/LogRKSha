@@ -1,0 +1,116 @@
+[
+  {
+    "name": "SSH Brute Force / Guessing",
+    "keywords": ["failed password for", "from"],
+    "ttp": "T1110.003",
+    "tactic": "Credential Access"
+  },
+  {
+    "name": "Invalid User Enumeration",
+    "keywords": ["invalid user", "from"],
+    "ttp": "T1087.001",
+    "tactic": "Discovery"
+  },
+  {
+    "name": "Successful Sudo to Root",
+    "keywords": ["sudo", "user=root", "command="],
+    "ttp": "T1548.003",
+    "tactic": "Privilege Escalation"
+  },
+  {
+    "name": "Web Directory Traversal",
+    "keywords": ["../../", "get"],
+    "ttp": "T1083",
+    "tactic": "Discovery"
+  },
+  {
+    "name": "Web Shell Execution",
+    "keywords": ["shell.php", "cmd="],
+    "ttp": "T1505.003",
+    "tactic": "Persistence"
+  },
+  {
+    "name": "Kernel Panic (DoS)",
+    "keywords": ["kernel panic - not syncing"],
+    "ttp": "T1499",
+    "tactic": "Impact"
+  },
+  {
+    "name": "Application Crash (DoS)",
+    "keywords": ["segfault", "main process exited, code=killed"],
+    "ttp": "T1499.004",
+    "tactic": "Impact"
+  },
+  {
+    "name": "Suspicious Package Installation",
+    "keywords": ["installed nmap", "installed netcat"],
+    "ttp": "T1105",
+    "tactic": "Ingress Tool Transfer"
+  },
+  {
+    "name": "Network Service Scanning",
+    "keywords": ["firewall:", "tcp_in blocked", "dpt="],
+    "ttp": "T1046",
+    "tactic": "Discovery"
+  },
+  {
+    "name": "Data Exfiltration Prep",
+    "keywords": ["tar czf", "backup.tar.gz"],
+    "ttp": "T1074.001",
+    "tactic": "Collection"
+  },
+  {
+    "name": "Execution via Shell Script",
+    "keywords": ["chmod", "+x", ".sh"],
+    "ttp": "T1059.004",
+    "tactic": "Execution"
+  },
+  {
+    "name": "Indicator Removal on Host",
+    "keywords": ["rm /var/log/", "history -c"],
+    "ttp": "T1070",
+    "tactic": "Defense Evasion"
+  },
+  {
+    "name": "Create Local Account",
+    "keywords": ["useradd", "new user"],
+    "ttp": "T1136.001",
+    "tactic": "Persistence"
+  },
+  {
+    "name": "Log4Shell Exploitation Attempt",
+    "keywords": ["${jndi:ldap"],
+    "ttp": "T1190",
+    "tactic": "Initial Access"
+  },
+  {
+    "name": "Persistence via Cron Job",
+    "keywords": ["added a new cron job"],
+    "ttp": "T1053.003",
+    "tactic": "Persistence"
+  },
+  {
+    "name": "Process Injection Attempt",
+    "keywords": ["ptrace attach to process"],
+    "ttp": "T1055",
+    "tactic": "Defense Evasion"
+  },
+  {
+    "name": "Masquerading as System Process",
+    "keywords": ["masquerading", "kthreadd"],
+    "ttp": "T1036.005",
+    "tactic": "Defense Evasion"
+  },
+  {
+    "name": "Rootkit Installation",
+    "keywords": ["loading kernel module", ".ko"],
+    "ttp": "T1014",
+    "tactic": "Defense Evasion"
+  },
+  {
+    "name": "Ransomware Activity",
+    "keywords": [".encrypted' created", "shadow copies deleted"],
+    "ttp": "T1486",
+    "tactic": "Impact"
+  }
+]

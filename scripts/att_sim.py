@@ -4,22 +4,126 @@ import time
 import sys
 import os
 
+# IPs that will ONLY be used for ATTACK scenarios.
+ATTACKER_IPS = [
+    "113.160.235.150",
+    "87.120.191.13",
+    "45.146.165.111",
+    "118.175.93.155",
+    "193.42.109.42",
+    "129.215.17.15",
+    "103.197.144.1",
+    "45.33.32.156",
+    "131.103.24.238",
+    "197.210.64.133",
+    "87.120.191.13",
+    "91.224.92.28",
+    "91.224.92.32",
+    "93.174.95.106",
+    "141.98.10.225",
+    "193.46.255.7",
+    "193.46.255.103",
+    "198.98.53.110",
+    "80.82.77.139",
+    "80.94.93.119",
+    "80.94.93.233",
+    "91.224.92.79",
+    "91.224.92.106",
+    "91.224.92.108",
+    "193.32.162.157",
+    "193.46.255.20",
+    "193.46.255.33",
+    "193.46.255.99",
+    "193.46.255.159",
+    "193.46.255.217",
+    "193.46.255.244",
+    "197.220.93.115",
+    "3.131.215.38",
+    "12.156.67.18",
+    "34.142.110.144",
+    "38.211.193.130",
+    "45.132.1.172",
+    "45.148.10.240",
+    "62.193.106.227",
+    "64.227.174.243",
+    "80.82.77.33",
+    "80.82.77.202",
+    "103.251.93.98",
+    "110.39.166.75",
+    "117.6.44.221",
+    "136.228.161.66",
+    "162.142.125.42",
+    "162.142.125.116",
+    "162.142.125.122",
+    "167.94.146.58",
+    "171.243.148.31",
+    "171.243.148.209",
+    "176.65.148.27",
+    "182.93.50.90",
+    "195.178.110.133",
+    "198.12.114.232",
+    "211.253.10.96",
+    "1.55.33.86",
+    "2.59.22.234",
+    "3.130.96.91",
+    "3.132.23.201",
+    "3.143.33.63",
+    "5.101.64.6",
+    "8.154.1.148",
+    "14.29.198.130",
+    "14.63.160.31",
+    "14.63.196.175",
+    "27.111.32.174",
+    "27.185.52.202",
+    "27.254.149.199",
+    "27.254.235.2",
+    "31.58.87.34",
+    "34.123.181.51",
+    "34.175.118.185",
+    "36.134.79.140",
+    "36.251.194.42",
+    "42.200.78.78",
+    "43.156.245.48",
+    "45.33.80.243",
+    "45.79.181.179",
+    "45.79.181.223",
+    "45.119.81.249",
+    "45.121.147.47",
+    "45.135.232.92",
+    "45.169.200.254",
+    "45.172.152.74",
+    "45.175.157.53",
+    "45.176.12.6",
+    "47.236.76.100",
+    "50.6.7.7",
+    "51.158.120.121",
+    "51.159.199.236",
+    "51.178.43.161",
+    "58.49.26.202",
+    "60.199.224.2",
+    "64.62.156.52",
+    "66.175.213.4",
+    "66.240.192.138",
+    "66.240.219.146",
+    "68.233.116.124",
+    "71.6.146.185",
+    "71.6.158.166",
+    "77.83.240.47",
+    "80.94.95.15",
+    "80.94.95.112",
+    "80.94.95.214",
+    "81.192.87.130",
+    "82.199.197.245",
+    "85.18.236.229",
+    "86.54.31.42",
+]
+
 TRUSTED_IPS = [
     "8.8.8.8",
     "8.8.4.4",
     "1.1.1.1",
     "1.0.0.1",
     "9.9.9.9"
-]
-
-# IPs that will ONLY be used for ATTACK scenarios.
-ATTACKER_IPS = [
-    "193.42.109.42",   # Russia
-    "129.215.17.15",   # Germany
-    "103.197.144.1",   # Vietnam
-    "45.33.32.156",    # USA
-    "131.103.24.238",  # Brazil
-    "197.210.64.133"   # Nigeria
 ]
 
 # --- Helper Functions (from your original script) ---
@@ -253,9 +357,11 @@ def scenario_20_command_and_control_beaconing(writer: LogWriter):
 
 def scenario_21_masquerading_as_system_process(writer: LogWriter):
     print("\n--- 💣 Running Scenario 21: Masquerading ---")
+    attacker_ip = random.choice(ATTACKER_IPS)
+    pid = random_pid()
+    port = random_port()
     writer.write_log("systemd", "Starting process /usr/bin/kthreadd but it is not the real kthreadd")
-    # 
-    writer.write_log("kernel", "Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}")
+    writer.write_log("kernel", f"Process 'kthreadd' (PID {pid}) opened a network socket to {attacker_ip}:{port}")
 
 def scenario_22_log4shell_exploitation(writer: LogWriter):
     print("\n--- 💣 Running Scenario 22: Log4Shell Exploitation ---")
@@ -281,7 +387,8 @@ def scenario_24_rootkit_installation(writer: LogWriter):
 
 def scenario_25_ransomware_activity(writer: LogWriter):
     print("\n--- 💣 Running Scenario 25: Ransomware Activity ---")
-    writer.write_log("kernel", "Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents")
+    pid = random_pid()
+    writer.write_log("kernel", f"Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents")
     writer.write_log("kernel", "File 'document.pdf' deleted")
     # 
     writer.write_log("kernel", "File 'document.pdf.ENCRYPTED' created")

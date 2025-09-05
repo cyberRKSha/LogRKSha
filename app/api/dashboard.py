@@ -334,7 +334,7 @@ async def get_alerts(user: dict = Depends(auth_utils.get_current_user)):
         # 2. Create a cursor that returns dictionary-like rows
         # cursor = engine.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         query = """
-            SELECT a.id, a.status, a.rule_name, l.timestamp, l.content, l.risk_score
+            SELECT a.id, a.status, a.rule_name, a.rule_description, a.mitre_tactic, a.mitre_technique, l.timestamp, l.content, l.risk_score, l.id as log_id
             FROM alerts a JOIN logs l ON a.log_id = l.id
             WHERE a.status IN ('New', 'Acknowledged')
             ORDER BY l.timestamp DESC LIMIT 100
@@ -394,7 +394,7 @@ async def get_all_anomalies(user: dict = Depends(auth_utils.get_current_user)):
     def get_anomalies_from_db():
         engine = create_engine(settings.DATABASE_URL)
         query = text("""
-            SELECT a.id, a.status, a.rule_name, l.timestamp, l.content, l.risk_score
+            SELECT a.id, a.status, a.rule_name, a.rule_description, a.mitre_tactic, a.mitre_technique, l.timestamp, l.content, l.risk_score, l.id as log_id
             FROM alerts a JOIN logs l ON a.log_id = l.id
             WHERE a.status IN ('New', 'Acknowledged') AND l.risk_score >= 0.79
             ORDER BY l.timestamp DESC LIMIT 100

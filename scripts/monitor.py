@@ -158,7 +158,247 @@
 
 
 
-# scripts/monitor.py (UPGRADED VERSION)
+# # scripts/monitor.py (UPGRADED VERSION)
+# import os
+# import sys
+# import json
+# import pika
+# import time
+# import queue
+# import threading
+# import logging
+# from collections import defaultdict
+
+# # --- Path Fix ---
+# project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+# if project_root not in sys.path:
+#     sys.path.insert(0, project_root)
+
+# from app.config import settings
+# from app.log_config import setup_logging
+
+# # --- Third-party library imports ---
+# from watchdog.observers import Observer
+# from watchdog.events import FileSystemEventHandler
+# from systemd import journal
+
+# # --- Setup ---
+# setup_logging()
+# logger = logging.getLogger(__name__)
+# LOG_QUEUE_NAME = 'log_queue'
+# log_processing_queue = queue.Queue()
+
+# def rabbitmq_publisher(q: queue.Queue):
+#     """Takes messages from a local queue and publishes them to RabbitMQ."""
+#     while True:
+#         try:
+#             connection = pika.BlockingConnection(pika.ConnectionParameters(host=settings.RABBITMQ_HOST))
+#             channel = connection.channel()
+#             channel.queue_declare(queue=LOG_QUEUE_NAME, durable=True)
+#             logger.info("RabbitMQ publisher thread connected and ready.")
+
+#             while True:
+#                 message = q.get()
+#                 if message is None: # Sentinel to stop the thread
+#                     connection.close()
+#                     logger.info("Publisher thread shut down.")
+#                     return
+                
+#                 channel.basic_publish(
+#                     exchange='',
+#                     routing_key=LOG_QUEUE_NAME,
+#                     body=json.dumps(message),
+#                     properties=pika.BasicProperties(delivery_mode=2)
+#                 )
+#                 q.task_done()
+#         except (pika.exceptions.AMQPConnectionError, pika.exceptions.StreamLostError) as e:
+#             logger.error(f"RabbitMQ connection error: {e}. Retrying in 5 seconds...")
+#             time.sleep(5)
+#         except Exception as e:
+#             logger.error(f"An unexpected error occurred in publisher thread: {e}")
+#             time.sleep(5)
+
+# class MultiFileEventHandler(FileSystemEventHandler):
+#     """Handles events for a specific set of files within a directory."""
+#     def __init__(self, files_to_watch):
+#         super().__init__()
+#         self.files_to_watch = files_to_watch
+#         self.file_sizes = {f: os.path.getsize(f) if os.path.exists(f) else 0 for f in files_to_watch}
+
+#     def on_modified(self, event):
+#         if event.src_path in self.files_to_watch:
+#             try:
+#                 # Check for truncation (log rotation)
+#                 new_size = os.path.getsize(event.src_path)
+#                 last_size = self.file_sizes.get(event.src_path, 0)
+                
+#                 if new_size < last_size:
+#                     last_size = 0 # File was truncated, read from the start
+                
+#                 if new_size > last_size:
+#                     with open(event.src_path, 'r', encoding='utf-8', errors='ignore') as f:
+#                         f.seek(last_size)
+#                         for line in f:
+#                             if line.strip():
+#                                 log_processing_queue.put({
+#                                     'source': os.path.basename(event.src_path),
+#                                     'content': line.strip()
+#                                 })
+#                     self.file_sizes[event.src_path] = new_size
+#             except Exception as e:
+#                 logger.error(f"Error processing modified file {event.src_path}: {e}")
+
+# def watch_journald(log_queue):
+#     """Reads new logs directly from the systemd journal using a native library."""
+#     try:
+#         j = journal.Reader()
+#         j.add_match(_SYSTEMD_UNIT="sshd.service")
+#         j.add_match(_SYSTEMD_UNIT="sudo.service")
+#         j.add_match(_TRANSPORT="kernel") # This will capture kernel messages (like in kern.log)
+#         j.add_match(SYSLOG_FACILITY=4)   # auth
+#         j.add_match(SYSLOG_FACILITY=10)
+#         j.add_match(SYSLOG_IDENTIFIER="pacman") # For pacman logs
+#         j.add_match(SYSLOG_IDENTIFIER="kernel")  # For kernel messages
+#         j.add_match(_EXE="/usr/lib/X11/Xorg")     # For Xorg server errors
+        
+#         j.seek_tail()
+#         j.get_previous()
+        
+#         logger.info("Starting to monitor systemd journal with native library.")
+#         while True:
+#             if j.wait():
+#                 for entry in j:
+#                     log_queue.put({
+#                         'source': f"journald:{entry.get('SYSLOG_IDENTIFIER', 'unknown')}",
+#                         'content': entry.get('MESSAGE', '')
+#                     })
+#     except Exception as e:
+#         logger.error(f"Error in journald monitoring thread: {e}")
+
+
+# if __name__ == "__main__":
+#     setup_logging()
+#     if os.geteuid() != 0:
+#         logger.critical("Monitor must be run as root (using sudo) to access system logs. Exiting.")
+#         sys.exit(1)
+#     publisher_thread = threading.Thread(target=rabbitmq_publisher, args=(log_processing_queue,), daemon=True)
+#     publisher_thread.start()
+
+#     journal_thread = threading.Thread(target=watch_journald, args=(log_processing_queue,), daemon=True)
+#     journal_thread.start()
+
+#     # Group files by their parent directory for efficient watching
+#     files_by_dir = defaultdict(set)
+#     for file_path in settings.LOG_FILES:
+#         # settings.LOG_FILES now returns a list of absolute paths that are confirmed to exist
+#         dir_path = os.path.dirname(file_path)
+#         files_by_dir[dir_path].add(file_path)
+
+#     observer = Observer()
+#     for dir_path, files in files_by_dir.items():
+#         event_handler = MultiFileEventHandler(files)
+#         observer.schedule(event_handler, dir_path, recursive=False)
+#         logger.info(f"Watching directory '{dir_path}' for {len(files)} file(s).")
+    
+#     observer.start()
+#     logger.info("File and journal monitoring has started. Press CTRL+C to stop.")
+
+#     try:
+#         while True:
+#             time.sleep(1)
+#     except KeyboardInterrupt:
+#         logger.info("Shutting down monitor.")
+#         observer.stop()
+#         log_processing_queue.put(None) # Signal publisher to stop
+    
+#     observer.join()
+#     publisher_thread.join()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# scripts/monitor.py (FINAL SUBPROCESS VERSION)
 import os
 import sys
 import json
@@ -177,7 +417,6 @@ if project_root not in sys.path:
 from app.config import settings
 from app.log_config import setup_logging
 
-# --- Third-party library imports ---
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from systemd import journal
@@ -196,26 +435,18 @@ def rabbitmq_publisher(q: queue.Queue):
             channel = connection.channel()
             channel.queue_declare(queue=LOG_QUEUE_NAME, durable=True)
             logger.info("RabbitMQ publisher thread connected and ready.")
-
             while True:
                 message = q.get()
-                if message is None: # Sentinel to stop the thread
+                if message is None:
                     connection.close()
-                    logger.info("Publisher thread shut down.")
                     return
-                
                 channel.basic_publish(
-                    exchange='',
-                    routing_key=LOG_QUEUE_NAME,
-                    body=json.dumps(message),
+                    exchange='', routing_key=LOG_QUEUE_NAME, body=json.dumps(message),
                     properties=pika.BasicProperties(delivery_mode=2)
                 )
                 q.task_done()
         except (pika.exceptions.AMQPConnectionError, pika.exceptions.StreamLostError) as e:
             logger.error(f"RabbitMQ connection error: {e}. Retrying in 5 seconds...")
-            time.sleep(5)
-        except Exception as e:
-            logger.error(f"An unexpected error occurred in publisher thread: {e}")
             time.sleep(5)
 
 class MultiFileEventHandler(FileSystemEventHandler):
@@ -228,13 +459,9 @@ class MultiFileEventHandler(FileSystemEventHandler):
     def on_modified(self, event):
         if event.src_path in self.files_to_watch:
             try:
-                # Check for truncation (log rotation)
                 new_size = os.path.getsize(event.src_path)
                 last_size = self.file_sizes.get(event.src_path, 0)
-                
-                if new_size < last_size:
-                    last_size = 0 # File was truncated, read from the start
-                
+                if new_size < last_size: last_size = 0
                 if new_size > last_size:
                     with open(event.src_path, 'r', encoding='utf-8', errors='ignore') as f:
                         f.seek(last_size)
@@ -249,39 +476,52 @@ class MultiFileEventHandler(FileSystemEventHandler):
                 logger.error(f"Error processing modified file {event.src_path}: {e}")
 
 def watch_journald(log_queue):
-    """Reads new logs directly from the systemd journal using a native library."""
+    """Reads ALL new logs directly from the systemd journal."""
     try:
         j = journal.Reader()
-        j.add_match(_SYSTEMD_UNIT="sshd.service")
-        j.add_match(_SYSTEMD_UNIT="sudo.service")
-        
         j.seek_tail()
         j.get_previous()
-        
-        logger.info("Starting to monitor systemd journal with native library.")
+        logger.info("Starting to monitor ALL systemd journal entries.")
         while True:
-            if j.wait():
+            if j.wait(): # Blocks efficiently until a new message arrives
                 for entry in j:
-                    log_queue.put({
-                        'source': f"journald:{entry.get('SYSLOG_IDENTIFIER', 'unknown')}",
-                        'content': entry.get('MESSAGE', '')
-                    })
+                    # We get the message and the name of the program that sent it
+                    log_message = entry.get('MESSAGE', '')
+                    log_source = entry.get('SYSLOG_IDENTIFIER', 'journald')
+                    if log_message:
+                        log_queue.put({
+                            'source': f"journald:{log_source}",
+                            'content': str(log_message)
+                        })
     except Exception as e:
-        logger.error(f"Error in journald monitoring thread: {e}")
+        logger.error(f"Error in journald monitoring thread: {e}", exc_info=True)
 
+# def stream_watcher(command, source_name, q):
+#     """Runs a command as a subprocess and forwards its stdout to a queue."""
+#     logger.info(f"Starting watcher for '{source_name}' with command: {' '.join(command)}")
+#     try:
+#         process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+#         for line in iter(process.stdout.readline, ''):
+#             if line.strip():
+#                 q.put({'source': source_name, 'content': line.strip()})
+#     except FileNotFoundError:
+#         logger.error(f"Command not found for '{source_name}': {command[0]}. Please ensure it is installed.")
+#     except Exception as e:
+#         logger.error(f"Error in stream_watcher for '{source_name}': {e}", exc_info=True)
 
 if __name__ == "__main__":
-    setup_logging()
+    if os.geteuid() != 0:
+        logger.critical("Monitor must be run as root (using sudo) to access system logs. Please check your Procfile.")
+        sys.exit(1)
+
     publisher_thread = threading.Thread(target=rabbitmq_publisher, args=(log_processing_queue,), daemon=True)
     publisher_thread.start()
 
     journal_thread = threading.Thread(target=watch_journald, args=(log_processing_queue,), daemon=True)
     journal_thread.start()
 
-    # Group files by their parent directory for efficient watching
     files_by_dir = defaultdict(set)
     for file_path in settings.LOG_FILES:
-        # settings.LOG_FILES now returns a list of absolute paths that are confirmed to exist
         dir_path = os.path.dirname(file_path)
         files_by_dir[dir_path].add(file_path)
 
@@ -290,17 +530,15 @@ if __name__ == "__main__":
         event_handler = MultiFileEventHandler(files)
         observer.schedule(event_handler, dir_path, recursive=False)
         logger.info(f"Watching directory '{dir_path}' for {len(files)} file(s).")
-    
+
     observer.start()
-    logger.info("File and journal monitoring has started. Press CTRL+C to stop.")
+    logger.info("All monitoring threads have started. Press CTRL+C to stop.")
 
     try:
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
         logger.info("Shutting down monitor.")
-        observer.stop()
-        log_processing_queue.put(None) # Signal publisher to stop
-    
+        log_processing_queue.put(None)
+
     observer.join()
-    publisher_thread.join()

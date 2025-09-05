@@ -1505,3 +1505,1848 @@ Sep 03 20:52:20	server	sshd[21328]:	pam_unix(sshd:session): session opened for u
 Sep 03 20:53:05	testvm	sshd[16045]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:12.0/usb3/3-4/3-4:1.0/0003:1EA7:00126.0001/input/input12/event12
 Sep 03 20:53:08	server	sshd[17908]:	Received disconnect from 9.9.9.9: 16: disconnected by user
 Sep 03 20:53:11	archive	sshd[22055]:	Accepted password for guest from 135.70.70.98 port 22996 ssh2
+Sep 04 00:47:18	archive	sshd[1120]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:97.0/usb3/3-4/3-4:1.0/0003:1EA7:00976.0001/input/input97/event97
+Sep 04 00:47:38	RUfus	sshd[2313]:	Accepted password for pgadmin from 140.216.218.223 port 38130 ssh58
+Sep 04 00:48:14	archive	sshd[15211]:	pam_unix(sshd:session): session closed for user fztu
+Sep 04 00:48:17	testvm	sshd[19449]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=1)
+Sep 04 00:48:34	LabSZ	useradd[20289]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 04 00:48:34	ADM	passwd[22482]:	password for user 'hacker' changed
+Sep 04 00:48:41	server	sshd[17344]:	Did not receive identification string from 1.0.0.1
+Sep 04 00:48:47	testvm	sshd[29081]:	Accepted password for 123 from 131.103.24.238 port 22018
+Sep 04 00:48:48	prod1	sudo[17354]:	123 : TTY=pts/0 ; PWD=/home/123 ; USER=root ; COMMAND=/bin/bash
+Sep 04 01:08:49	prod1	sshd[16757]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event28)
+Sep 04 01:08:51	server	sshd[5521]:	Connection closed by 8.8.4.4 [preauth]
+Sep 04 01:09:04	archive	sshd[11553]:	Received disconnect from 123.71.240.181: 34: Closed due to user request [preauth]
+Sep 04 01:10:09	archive	sshd[8809]:	Received disconnect from 1.0.0.1: 21: disconnected by user
+Sep 04 01:10:15	testvm	sshd[13612]:	Received disconnect from 8.8.4.4: 98: disconnected by user
+Sep 04 01:10:26	testvm	sshd[12339]:	Accepted password for webmaster from 226.196.165.72 port 30526 ssh92
+Sep 04 01:10:28	server	sshd[9141]:	Received disconnect from 1.0.0.1: 39: disconnected by user
+Sep 04 01:11:00	testvm	sshd[17242]:	Connection closed by 9.9.9.9 [preauth]
+Sep 04 01:11:03	server	sshd[25148]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:46.0/usb3/3-4/3-4:1.0/0003:1EA7:00466.0001/input/input46/event46
+Sep 04 01:11:13	archive	sshd[22158]:	event20  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:11:15	prod1	sudo[8268]:	pgadmin : TTY=pts/2 ; PWD=/home/pgadmin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 04 01:12:15	testvm	sshd[9122]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:12:26	server	sshd[7407]:	Received disconnect from 8.8.4.4: 29: disconnected by user
+Sep 04 01:12:35	RUfus	sshd[15047]:	pam_unix(sshd:session): session opened for user admin by (uid=68)
+Sep 04 01:12:37	testvm	sshd[12477]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:12:45	ADM	sshd[1468]:	Received disconnect from 222.100.15.110: 16: Bye Bye [preauth]
+Sep 04 01:12:55	server	sshd[13542]:	Accepted password for matlab from 197.210.64.133 port 8511
+Sep 04 01:12:56	testvm	sudo[20488]:	matlab : TTY=pts/0 ; PWD=/home/matlab ; USER=root ; COMMAND=/bin/bash
+Sep 04 01:13:28	ADM	sshd[14759]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:14:04	ADM	sshd[28929]:	Accepted password for webmaster from 103.197.144.1 port 13964
+Sep 04 01:14:05	testvm	sudo[29327]:	webmaster : TTY=pts/0 ; PWD=/home/webmaster ; USER=root ; COMMAND=/bin/bash
+Sep 04 01:14:48	LabSZ	sshd[1577]:	Received disconnect from 50.28.81.254: 5: Bye Bye [preauth]
+Sep 04 01:15:25	LabSZ	sshd[19483]:	pam_unix(sshd:session): session closed for user admin
+Sep 04 01:15:52	archive	sshd[22031]:	pam_unix(sshd:session): session closed for user oracle
+Sep 04 01:16:03	server	useradd[22723]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 04 01:16:04	server	passwd[1354]:	password for user 'hacker' changed
+Sep 04 01:16:14	archive	sshd[8332]:	systemd: Started User Session 19386 of user guest.
+Sep 04 01:17:35	archive	sshd[16227]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:28.0/usb3/3-4/3-4:1.0/0003:1EA7:00286.0001/input/input28/event28
+Sep 04 01:17:53	prod1	sshd[23890]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:17:57	server	sshd[25576]:	Did not receive identification string from 1.1.1.1
+Sep 04 01:18:03	RUfus	sshd[21700]:	pam_unix(sshd:session): session closed for user guest
+Sep 04 01:18:05	testvm	sshd[24270]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:94.0/usb3/3-4/3-4:1.0/0003:1EA7:00946.0001/input/input94/event94
+Sep 04 01:18:15	testvm	sshd[10388]:	Accepted password for pgadmin from 193.42.109.42 port 42845
+Sep 04 01:18:16	archive	sudo[20397]:	pgadmin : TTY=pts/0 ; PWD=/home/pgadmin ; USER=root ; COMMAND=/bin/bash
+Sep 04 01:18:28	prod1	sshd[15573]:	Received disconnect from 42.82.185.146: 87: Closed due to user request [preauth]
+Sep 04 01:18:32	server	sshd[19322]:	pam_unix(sshd:session): session opened for user test by (uid=29)
+Sep 04 01:18:34	testvm	sshd[27884]:	Received disconnect from 245.195.215.124: 28: Closed due to user request [preauth]
+Sep 04 01:19:16	ADM	sshd[16974]:	Did not receive identification string from 8.8.8.8
+Sep 04 01:19:34	prod1	sshd[6140]:	Accepted password for admin from 31.185.192.126 port 64751 ssh5
+Sep 04 01:19:47	LabSZ	sshd[10629]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:20:11	server	sshd[28343]:	systemd: Started User Session 5035 of user pgadmin.
+Sep 04 01:20:13	archive	sshd[25114]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=30)
+Sep 04 01:20:16	server	sshd[7872]:	Accepted password for test from 83.235.206.134 port 26957 ssh8
+Sep 04 01:20:21	testvm	sshd[11214]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event11)
+Sep 04 01:20:29	LabSZ	sshd[26742]:	Connection closed by 8.8.8.8 [preauth]
+Sep 04 01:20:56	server	sshd[15458]:	pam_unix(sshd:session): session opened for user fztu by (uid=68)
+Sep 04 01:21:03	ADM	sshd[25059]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 04 01:21:06	testvm	sshd[17695]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 04 01:21:10	LabSZ	sshd[2252]:	kernel: usb 1-60: USB disconnect, device number 2
+Sep 04 01:21:18	testvm	sshd[22130]:	Accepted password for webmaster from 176.95.103.115 port 27796 ssh77
+Sep 04 01:21:28	RUfus	sshd[11555]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 04 01:21:34	LabSZ	sshd[24609]:	Failed password for invalid user webmaster from 193.42.109.42 port 38408
+Sep 04 01:21:35	LabSZ	sshd[8760]:	Failed password for invalid user guest from 193.42.109.42 port 40716
+Sep 04 01:21:35	server	sshd[10376]:	Failed password for invalid user matlab from 193.42.109.42 port 61466
+Sep 04 01:21:37	server	sshd[15301]:	Failed password for invalid user fztu from 193.42.109.42 port 38485
+Sep 04 01:21:38	server	sshd[10732]:	Failed password for invalid user matlab from 193.42.109.42 port 17111
+Sep 04 01:21:39	ADM	sshd[19177]:	Failed password for invalid user backup from 193.42.109.42 port 37313
+Sep 04 01:21:40	archive	sshd[25296]:	Failed password for invalid user 123 from 193.42.109.42 port 28926
+Sep 04 01:21:41	LabSZ	sshd[19660]:	Failed password for invalid user matlab from 193.42.109.42 port 7925
+Sep 04 01:21:43	server	sshd[18858]:	Failed password for invalid user matlab from 193.42.109.42 port 32649
+Sep 04 01:21:44	LabSZ	sshd[24234]:	Failed password for root from 193.42.109.42 port 42367
+Sep 04 01:21:44	prod1	sshd[3729]:	Failed password for root from 193.42.109.42 port 27957
+Sep 04 01:21:46	LabSZ	sshd[10485]:	Failed password for root from 193.42.109.42 port 1206
+Sep 04 01:21:47	ADM	sshd[8135]:	Accepted password for root from 193.42.109.42 port 57209
+Sep 04 01:21:54	testvm	sshd[24516]:	Received disconnect from 156.162.151.146: 50: Closed due to user request [preauth]
+Sep 04 01:22:10	ADM	sudo[6801]:	backup : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 04 01:22:29	server	sudo[28045]:	webmaster : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 04 01:22:58	ADM	sshd[19666]:	pam_unix(sshd:session): session opened for user admin by (uid=39)
+Sep 04 01:23:10	LabSZ	sshd[21257]:	pam_unix(sshd:session): session opened for user webmaster by (uid=21)
+Sep 04 01:23:24	prod1	sshd[25540]:	Received disconnect from 69.165.145.169: 49: Closed due to user request [preauth]
+Sep 04 01:23:47	RUfus	sshd[2377]:	event11  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:23:50	prod1	sshd[12350]:	kernel: usb 1-62: USB disconnect, device number 2
+Sep 04 01:26:44	prod1	sshd[26082]:	Received disconnect from 29.47.138.210: 78: Bye Bye [preauth]
+Sep 04 01:26:59	prod1	sshd[2349]:	event28  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:27:23	testvm	sshd[23708]:	Invalid user test from 193.42.109.42 port 19707
+Sep 04 01:27:23	server	sshd[19001]:	Invalid user guest from 193.42.109.42 port 64329
+Sep 04 01:27:24	LabSZ	sshd[15485]:	Invalid user oracle from 193.42.109.42 port 3869
+Sep 04 01:27:25	server	sshd[22073]:	Invalid user backup from 193.42.109.42 port 55514
+Sep 04 01:27:26	archive	sshd[28826]:	Invalid user deploy from 193.42.109.42 port 60895
+Sep 04 01:27:28	archive	sshd[26372]:	Invalid user user1 from 193.42.109.42 port 40560
+Sep 04 01:27:29	testvm	sshd[22539]:	Invalid user api from 193.42.109.42 port 38323
+Sep 04 01:27:29	LabSZ	sshd[22784]:	Invalid user dbuser from 193.42.109.42 port 9273
+Sep 04 01:27:45	server	sshd[6443]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:89.0/usb3/3-4/3-4:1.0/0003:1EA7:00896.0001/input/input89/event89
+Sep 04 01:27:52	ADM	sshd[1930]:	Received disconnect from 9.9.9.9: 66: disconnected by user
+Sep 04 01:28:10	archive	sshd[16076]:	event9  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:28:45	RUfus	sshd[10950]:	Did not receive identification string from 1.0.0.1
+Sep 04 01:29:11	server	sshd[5147]:	pam_unix(sshd:session): session closed for user guest
+Sep 04 01:29:25	prod1	sshd[12401]:	Accepted password for chen from 88.235.45.137 port 11803 ssh89
+Sep 04 01:30:03	RUfus	sshd[2276]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event95)
+Sep 04 01:30:07	ADM	sshd[15681]:	Accepted password for test from 67.189.199.98 port 58132 ssh17
+Sep 04 01:30:09	ADM	sshd[15291]:	systemd: Started User Session 5339 of user chen.
+Sep 04 01:31:31	archive	sshd[20742]:	Received disconnect from 1.0.0.1: 27: disconnected by user
+Sep 04 01:31:39	testvm	sshd[28822]:	Failed password for invalid user test from 45.33.32.156 port 42451
+Sep 04 01:31:40	LabSZ	sshd[26659]:	Failed password for invalid user chen from 45.33.32.156 port 57750
+Sep 04 01:31:41	testvm	sshd[9019]:	Failed password for invalid user root from 45.33.32.156 port 32697
+Sep 04 01:31:42	archive	sshd[9104]:	Failed password for invalid user test from 45.33.32.156 port 65128
+Sep 04 01:31:43	server	sshd[5417]:	Failed password for invalid user guest from 45.33.32.156 port 41427
+Sep 04 01:31:44	LabSZ	sshd[5521]:	Failed password for invalid user guest from 45.33.32.156 port 12014
+Sep 04 01:31:45	RUfus	sshd[21554]:	Failed password for invalid user admin from 45.33.32.156 port 15482
+Sep 04 01:31:46	testvm	sshd[16229]:	Failed password for invalid user chen from 45.33.32.156 port 17863
+Sep 04 01:31:47	server	sshd[1407]:	Failed password for invalid user ubuntu from 45.33.32.156 port 4475
+Sep 04 01:31:49	prod1	sshd[7015]:	Failed password for admin from 45.33.32.156 port 58070
+Sep 04 01:31:50	RUfus	sshd[28949]:	Failed password for admin from 45.33.32.156 port 62977
+Sep 04 01:31:50	server	sshd[26140]:	Failed password for admin from 45.33.32.156 port 40820
+Sep 04 01:31:51	testvm	sshd[14578]:	Failed password for admin from 45.33.32.156 port 27958
+Sep 04 01:31:52	archive	sshd[26981]:	Failed password for admin from 45.33.32.156 port 19451
+Sep 04 01:31:53	prod1	sshd[25507]:	Accepted password for admin from 45.33.32.156 port 18172
+Sep 04 01:32:01	archive	sshd[29657]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event52)
+Sep 04 01:32:19	testvm	sshd[25702]:	event31  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:32:38	RUfus	sshd[18454]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:70.0/usb3/3-4/3-4:1.0/0003:1EA7:00706.0001/input/input70/event70
+Sep 04 01:32:51	archive	sshd[25511]:	event88  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:32:56	ADM	sshd[19618]:	event89  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:33:10	RUfus	sshd[22158]:	Invalid user test from 45.33.32.156 port 53159
+Sep 04 01:33:11	LabSZ	sshd[26074]:	Invalid user guest from 45.33.32.156 port 8397
+Sep 04 01:33:12	LabSZ	sshd[13343]:	Invalid user oracle from 45.33.32.156 port 34806
+Sep 04 01:33:13	testvm	sshd[20001]:	Invalid user backup from 45.33.32.156 port 47700
+Sep 04 01:33:14	RUfus	sshd[28184]:	Invalid user deploy from 45.33.32.156 port 35934
+Sep 04 01:33:15	LabSZ	sshd[13144]:	Invalid user user1 from 45.33.32.156 port 57058
+Sep 04 01:33:15	LabSZ	sshd[5713]:	Invalid user api from 45.33.32.156 port 36278
+Sep 04 01:33:16	archive	sshd[18527]:	Invalid user dbuser from 45.33.32.156 port 62181
+Sep 04 01:33:28	archive	sshd[3450]:	Connection closed by 9.9.9.9 [preauth]
+Sep 04 01:33:32	archive	sshd[24660]:	Did not receive identification string from 1.1.1.1
+Sep 04 01:33:35	archive	sshd[26272]:	event20  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:33:37	ADM	sshd[22557]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event15)
+Sep 04 01:33:39	server	sshd[13163]:	Received disconnect from 151.34.58.86: 76: Closed due to user request [preauth]
+Sep 04 01:33:49	archive	sshd[19858]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event8)
+Sep 04 01:33:58	LabSZ	sshd[2194]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:34:04	RUfus	sshd[25386]:	event11  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:35:15	server	sshd[16713]:	event15  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:35:18	testvm	sshd[23063]:	event40  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:35:38	RUfus	sshd[8198]:	Received disconnect from 107.128.121.155: 12: Closed due to user request [preauth]
+Sep 04 01:36:12	testvm	sshd[24039]:	systemd: Started User Session 25756 of user backup.
+Sep 04 01:36:21	archive	sshd[8585]:	systemd: Started User Session 19762 of user chen.
+Sep 04 01:36:31	prod1	useradd[9483]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 04 01:36:32	ADM	passwd[16599]:	password for user 'hacker' changed
+Sep 04 01:36:48	archive	sudo[24107]:	guest : TTY=pts/2 ; PWD=/home/guest ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 04 01:37:01	testvm	sshd[14646]:	event24  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:38:48	server	sshd[7879]:	systemd: Started User Session 23175 of user chen.
+Sep 04 01:39:01	testvm	sshd[17287]:	Received disconnect from 1.0.0.1: 11: disconnected by user
+Sep 04 01:39:03	testvm	sshd[20182]:	Received disconnect from 121.252.99.18: 65: Bye Bye [preauth]
+Sep 04 01:39:05	server	sshd[28174]:	Did not receive identification string from 1.0.0.1
+Sep 04 01:39:12	RUfus	sshd[11014]:	Did not receive identification string from 1.0.0.1
+Sep 04 01:39:14	ADM	sshd[21410]:	Connection closed by 8.8.8.8 [preauth]
+Sep 04 01:39:16	prod1	sudo[11390]:	fatal: Write failed: Connection reset by peer [preauth]
+Sep 04 01:39:40	prod1	sshd[8335]:	Did not receive identification string from 1.0.0.1
+Sep 04 01:40:00	server	sshd[20395]:	pam_unix(sshd:session): session closed for user oracle
+Sep 04 01:40:02	server	sudo[9521]:	Failed password for invalid user 123 from 103.197.144.1 port 61134 ssh7
+Sep 04 01:40:12	RUfus	sshd[10002]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 04 01:40:15	LabSZ	sshd[1661]:	Connection closed by 8.8.8.8 [preauth]
+Sep 04 01:40:19	prod1	useradd[27261]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 04 01:40:20	archive	passwd[23172]:	password for user 'hacker' changed
+Sep 04 01:40:29	testvm	sudo[13422]:	guest : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 04 01:41:06	testvm	sshd[2056]:	Accepted password for fztu from 189.217.84.3 port 49130 ssh35
+Sep 04 01:41:23	prod1	sshd[10187]:	Received disconnect from 212.214.68.82: 27: Closed due to user request [preauth]
+Sep 04 01:41:35	testvm	sshd[6059]:	kernel: usb 1-99: USB disconnect, device number 2
+Sep 04 01:42:02	prod1	sshd[9516]:	Invalid user test from 103.197.144.1 port 42077
+Sep 04 01:42:03	server	sshd[26367]:	Invalid user guest from 103.197.144.1 port 15108
+Sep 04 01:42:04	ADM	sshd[21813]:	Invalid user oracle from 103.197.144.1 port 38439
+Sep 04 01:42:06	archive	sshd[19263]:	Invalid user backup from 103.197.144.1 port 21162
+Sep 04 01:42:07	archive	sshd[2959]:	Invalid user deploy from 103.197.144.1 port 54108
+Sep 04 01:42:08	prod1	sshd[2530]:	Invalid user user1 from 103.197.144.1 port 30475
+Sep 04 01:42:09	server	sshd[6141]:	Invalid user api from 103.197.144.1 port 50533
+Sep 04 01:42:10	LabSZ	sshd[22401]:	Invalid user dbuser from 103.197.144.1 port 9847
+Sep 04 01:42:42	testvm	sudo[24934]:	ubuntu : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 04 01:42:59	prod1	sshd[27229]:	systemd: Started User Session 15259 of user backup.
+Sep 04 01:43:02	RUfus	sshd[29700]:	Received disconnect from 201.113.39.76: 2: Bye Bye [preauth]
+Sep 04 01:43:15	server	sshd[9326]:	pam_unix(sshd:session): session closed for user test
+Sep 04 01:43:21	LabSZ	sshd[20265]:	Connection closed by 9.9.9.9 [preauth]
+Sep 04 01:43:23	prod1	sshd[22635]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:43:26	server	sshd[10399]:	Failed password for admin from 193.42.109.42 port 27242
+Sep 04 01:43:27	testvm	sshd[16186]:	Failed password for jdoe from 193.42.109.42 port 60342
+Sep 04 01:43:29	RUfus	sshd[15162]:	Failed password for support from 193.42.109.42 port 18156
+Sep 04 01:43:30	RUfus	sshd[5206]:	Failed password for dev from 193.42.109.42 port 25184
+Sep 04 01:43:32	RUfus	sshd[4747]:	Failed password for test from 193.42.109.42 port 45736
+Sep 04 01:43:34	LabSZ	sshd[27135]:	Accepted password for support from 193.42.109.42 port 2346
+Sep 04 01:43:43	archive	sshd[20534]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:43:50	LabSZ	sshd[13290]:	Accepted password for backup from 208.98.179.190 port 7936 ssh99
+Sep 04 01:44:35	ADM	sudo[7227]:	backup : TTY=pts/2 ; PWD=/home/backup ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 04 01:44:51	server	sshd[11585]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event87)
+Sep 04 01:44:54	archive	sshd[5549]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:18.0/usb3/3-4/3-4:1.0/0003:1EA7:00186.0001/input/input18/event18
+Sep 04 01:45:03	ADM	sshd[18924]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event70)
+Sep 04 01:45:12	RUfus	sshd[18800]:	Received disconnect from 169.153.178.72: 98: Closed due to user request [preauth]
+Sep 04 01:45:27	testvm	sudo[29959]:	123 : TTY=pts/2 ; PWD=/home/123 ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 04 01:45:37	RUfus	sshd[22479]:	Connection closed by 9.9.9.9 [preauth]
+Sep 04 01:45:58	server	sshd[23291]:	pam_unix(sshd:session): session closed for user oracle
+Sep 04 01:46:29	RUfus	sshd[13659]:	Accepted password for oracle from 255.123.233.11 port 57681 ssh45
+Sep 04 01:46:33	RUfus	sshd[16344]:	Received disconnect from 8.8.4.4: 80: disconnected by user
+Sep 04 01:46:35	LabSZ	sshd[16939]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event97)
+Sep 04 01:46:42	prod1	sshd[20489]:	Accepted password for test from 103.197.144.1 port 23756
+Sep 04 01:46:44	prod1	sudo[20958]:	test : TTY=pts/0 ; PWD=/home/test ; USER=root ; COMMAND=/bin/bash
+Sep 04 01:47:16	server	sshd[28795]:	pam_unix(sshd:session): session closed for user matlab
+Sep 04 01:48:35	archive	sshd[25482]:	Received disconnect from 79.242.184.178: 11: Bye Bye [preauth]
+Sep 04 01:48:43	server	sshd[20948]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:40.0/usb3/3-4/3-4:1.0/0003:1EA7:00406.0001/input/input40/event40
+Sep 04 01:49:00	prod1	sshd[13252]:	pam_unix(sshd:session): session closed for user guest
+Sep 04 01:49:10	server	sudo[26210]:	root : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 04 01:49:28	RUfus	sshd[13649]:	Invalid user test from 197.210.64.133 port 54875
+Sep 04 01:49:29	prod1	sshd[6271]:	Invalid user guest from 197.210.64.133 port 14289
+Sep 04 01:49:30	RUfus	sshd[13617]:	Invalid user oracle from 197.210.64.133 port 22569
+Sep 04 01:49:31	testvm	sshd[22848]:	Invalid user backup from 197.210.64.133 port 13122
+Sep 04 01:49:32	ADM	sshd[1250]:	Invalid user deploy from 197.210.64.133 port 52153
+Sep 04 01:49:33	RUfus	sshd[15303]:	Invalid user user1 from 197.210.64.133 port 4320
+Sep 04 01:49:34	ADM	sshd[5633]:	Invalid user api from 197.210.64.133 port 40417
+Sep 04 01:49:35	RUfus	sshd[6855]:	Invalid user dbuser from 197.210.64.133 port 49282
+Sep 04 01:50:24	archive	sshd[2588]:	systemd: Started User Session 21999 of user fztu.
+Sep 04 01:50:29	testvm	sshd[28389]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event99)
+Sep 04 01:50:37	prod1	sshd[18430]:	Connection closed by 1.0.0.1 [preauth]
+Sep 04 01:50:58	ADM	sshd[29993]:	Accepted password for root from 248.197.135.11 port 45596 ssh60
+Sep 04 01:52:21	testvm	sshd[10776]:	kernel: usb 1-24: USB disconnect, device number 2
+Sep 04 01:52:31	LabSZ	sshd[14547]:	Connection closed by 8.8.8.8 [preauth]
+Sep 04 01:52:45	ADM	sshd[9993]:	Failed password for invalid user pgadmin from 103.197.144.1 port 45695
+Sep 04 01:52:46	archive	sshd[7514]:	Failed password for invalid user ubuntu from 103.197.144.1 port 30168
+Sep 04 01:52:48	LabSZ	sshd[26925]:	Failed password for invalid user chen from 103.197.144.1 port 46164
+Sep 04 01:52:49	prod1	sshd[16327]:	Failed password for invalid user oracle from 103.197.144.1 port 3647
+Sep 04 01:52:50	ADM	sshd[14003]:	Failed password for invalid user root from 103.197.144.1 port 55752
+Sep 04 01:52:50	LabSZ	sshd[1080]:	Failed password for invalid user webmaster from 103.197.144.1 port 50517
+Sep 04 01:52:51	LabSZ	sshd[24675]:	Failed password for invalid user chen from 103.197.144.1 port 1422
+Sep 04 01:52:52	server	sshd[12057]:	Failed password for invalid user chen from 103.197.144.1 port 1427
+Sep 04 01:52:53	ADM	sshd[12369]:	Failed password for invalid user webmaster from 103.197.144.1 port 9395
+Sep 04 01:52:54	prod1	sshd[6968]:	Failed password for invalid user chen from 103.197.144.1 port 51765
+Sep 04 01:52:56	archive	sshd[7219]:	Failed password for ubuntu from 103.197.144.1 port 30926
+Sep 04 01:52:57	server	sshd[13463]:	Failed password for ubuntu from 103.197.144.1 port 17017
+Sep 04 01:52:58	testvm	sshd[19542]:	Failed password for ubuntu from 103.197.144.1 port 48189
+Sep 04 01:52:59	RUfus	sshd[12428]:	Accepted password for ubuntu from 103.197.144.1 port 38850
+Sep 04 01:53:22	LabSZ	sshd[27581]:	Did not receive identification string from 9.9.9.9
+Sep 04 01:53:25	LabSZ	sshd[28369]:	kernel: usb 1-93: USB disconnect, device number 2
+Sep 04 01:55:42	archive	sshd[25149]:	pam_unix(sshd:session): session closed for user matlab
+Sep 04 20:21:26	LabSZ	sshd[14513]:	pam_unix(sshd:session): session closed for user guest
+Sep 04 20:21:33	ADM	sshd[7545]:	pam_unix(sshd:session): session closed for user matlab
+Sep 04 20:22:01	LabSZ	sshd[22997]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 20:22:45	LabSZ	sudo[10854]:	chen : TTY=pts/2 ; PWD=/home/chen ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 04 20:23:05	prod1	sudo[13064]:	webmaster : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 04 20:23:59	archive	sshd[5118]:	Did not receive identification string from 1.1.1.1
+Sep 04 20:24:06	testvm	sshd[21286]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:01:53	server	sshd[22983]:	Received disconnect from 17.115.66.34: 19: Closed due to user request [preauth]
+Sep 05 00:02:31	LabSZ	sshd[22600]:	kernel: usb 1-73: USB disconnect, device number 2
+Sep 05 00:02:43	RUfus	sudo[5824]:	chen : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 00:03:44	archive	sshd[16649]:	Received disconnect from 135.40.7.254: 69: Closed due to user request [preauth]
+Sep 05 00:03:54	prod1	sshd[7059]:	Received disconnect from 225.176.70.80: 28: Bye Bye [preauth]
+Sep 05 00:04:04	archive	sudo[22609]:	pgadmin : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 00:04:20	ADM	sshd[22893]:	Failed password for invalid user pgadmin from 129.215.17.15 port 26074
+Sep 05 00:04:20	server	sshd[28574]:	Failed password for invalid user oracle from 129.215.17.15 port 9706
+Sep 05 00:04:21	archive	sshd[2391]:	Failed password for invalid user matlab from 129.215.17.15 port 6271
+Sep 05 00:04:21	ADM	sshd[13156]:	Failed password for invalid user pgadmin from 129.215.17.15 port 32669
+Sep 05 00:04:22	ADM	sshd[1037]:	Failed password for invalid user 123 from 129.215.17.15 port 49189
+Sep 05 00:04:23	prod1	sshd[25080]:	Failed password for invalid user matlab from 129.215.17.15 port 4534
+Sep 05 00:04:23	prod1	sshd[24688]:	Failed password for invalid user oracle from 129.215.17.15 port 47921
+Sep 05 00:04:24	server	sshd[21471]:	Failed password for invalid user fztu from 129.215.17.15 port 39891
+Sep 05 00:04:26	LabSZ	sshd[6905]:	Failed password for admin from 129.215.17.15 port 4889
+Sep 05 00:04:27	ADM	sshd[14941]:	Failed password for admin from 129.215.17.15 port 36884
+Sep 05 00:04:28	ADM	sshd[3115]:	Failed password for admin from 129.215.17.15 port 53987
+Sep 05 00:04:28	prod1	sshd[22950]:	Accepted password for admin from 129.215.17.15 port 46234
+Sep 05 00:04:41	LabSZ	sshd[25686]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:29:55	prod1	sshd[3067]:	Received disconnect from 23.9.219.183: 7: Closed due to user request [preauth]
+Sep 05 00:30:03	ADM	sshd[5662]:	kernel: usb 1-48: USB disconnect, device number 2
+Sep 05 00:30:21	RUfus	sshd[16733]:	event84  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 00:30:27	ADM	sudo[15280]:	matlab : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 00:30:46	prod1	sshd[9684]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 05 00:30:57	ADM	sshd[2440]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event60)
+Sep 05 00:31:17	prod1	sshd[6250]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:32:02	server	sshd[27311]:	Did not receive identification string from 9.9.9.9
+Sep 05 00:32:15	prod1	sshd[16024]:	Invalid user test from 193.42.109.42 port 31873
+Sep 05 00:32:16	prod1	sshd[25873]:	Invalid user guest from 193.42.109.42 port 47720
+Sep 05 00:32:17	prod1	sshd[20224]:	Invalid user oracle from 193.42.109.42 port 8718
+Sep 05 00:32:18	testvm	sshd[29312]:	Invalid user backup from 193.42.109.42 port 41316
+Sep 05 00:32:19	prod1	sshd[13851]:	Invalid user deploy from 193.42.109.42 port 4298
+Sep 05 00:32:21	archive	sshd[4888]:	Invalid user user1 from 193.42.109.42 port 62907
+Sep 05 00:32:21	testvm	sshd[18442]:	Invalid user api from 193.42.109.42 port 55675
+Sep 05 00:32:22	LabSZ	sshd[27402]:	Invalid user dbuser from 193.42.109.42 port 47881
+Sep 05 00:32:40	server	sshd[3691]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:32:57	prod1	sshd[25464]:	Invalid user test from 45.33.32.156 port 58759
+Sep 05 00:32:58	RUfus	sshd[23832]:	Invalid user guest from 45.33.32.156 port 12370
+Sep 05 00:33:00	ADM	sshd[18141]:	Invalid user oracle from 45.33.32.156 port 64344
+Sep 05 00:33:00	ADM	sshd[18185]:	Invalid user backup from 45.33.32.156 port 62777
+Sep 05 00:33:02	ADM	sshd[2109]:	Invalid user deploy from 45.33.32.156 port 22255
+Sep 05 00:33:02	server	sshd[17879]:	Invalid user user1 from 45.33.32.156 port 38199
+Sep 05 00:33:03	ADM	sshd[18931]:	Invalid user api from 45.33.32.156 port 2989
+Sep 05 00:33:04	server	sshd[20811]:	Invalid user dbuser from 45.33.32.156 port 60574
+Sep 05 00:33:29	archive	sshd[10321]:	Received disconnect from 1.0.0.1: 21: disconnected by user
+Sep 05 00:33:32	server	sshd[3170]:	Did not receive identification string from 1.0.0.1
+Sep 05 00:34:16	RUfus	sshd[25485]:	Received disconnect from 61.105.238.169: 32: Bye Bye [preauth]
+Sep 05 00:34:22	ADM	sshd[19382]:	Received disconnect from 39.184.87.39: 30: Closed due to user request [preauth]
+Sep 05 00:34:29	LabSZ	sshd[20520]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 00:34:42	ADM	sshd[24632]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 00:34:48	RUfus	sshd[7726]:	pam_unix(sshd:session): session opened for user admin by (uid=92)
+Sep 05 00:35:47	prod1	sshd[15350]:	Received disconnect from 1.0.0.1: 51: disconnected by user
+Sep 05 00:36:31	prod1	sshd[21753]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 00:36:50	ADM	sshd[5132]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:36:55	RUfus	sshd[19372]:	Received disconnect from 68.56.175.109: 19: Closed due to user request [preauth]
+Sep 05 00:37:20	RUfus	sudo[14434]:	fztu : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 00:37:59	archive	sshd[17114]:	Accepted password for test from 103.197.144.1 port 59161
+Sep 05 00:38:00	LabSZ	sudo[1925]:	test : TTY=pts/0 ; PWD=/home/test ; USER=root ; COMMAND=/bin/bash
+Sep 05 00:38:13	RUfus	sudo[27533]:	fatal: Write failed: Connection reset by peer [preauth]
+Sep 05 00:38:24	archive	sshd[4608]:	Received disconnect from 167.94.182.69: 80: Bye Bye [preauth]
+Sep 05 00:39:09	ADM	sshd[28205]:	Did not receive identification string from 8.8.8.8
+Sep 05 00:39:19	testvm	sshd[20368]:	systemd: Started User Session 21172 of user guest.
+Sep 05 00:39:40	testvm	sshd[20252]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:86.0/usb3/3-4/3-4:1.0/0003:1EA7:00866.0001/input/input86/event86
+Sep 05 00:40:59	ADM	sshd[25888]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event23)
+Sep 05 00:41:11	testvm	sshd[2774]:	systemd: Started User Session 3038 of user oracle.
+Sep 05 00:41:38	RUfus	sshd[3833]:	sudo: pam_unix(sudo:auth): authentication failure; logname=pgadmin3 uid=826827 euid=3 tty=/dev/pts/2 ruser=user1 rhost=  user=root
+Sep 05 00:41:47	RUfus	sshd[4681]:	Received disconnect from 134.132.203.170: 17: Bye Bye [preauth]
+Sep 05 00:41:58	server	sshd[3314]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 00:42:12	LabSZ	sshd[13324]:	Received disconnect from 195.104.161.187: 82: Closed due to user request [preauth]
+Sep 05 00:42:24	testvm	sshd[6749]:	pam_unix(sshd:session): session opened for user matlab by (uid=6)
+Sep 05 00:42:28	archive	sshd[10431]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event20)
+Sep 05 00:45:02	archive	sshd[11552]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 00:45:12	ADM	sshd[11571]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 00:45:39	RUfus	sshd[16101]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event96)
+Sep 05 00:45:42	archive	sshd[11733]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:54.0/usb3/3-4/3-4:1.0/0003:1EA7:00546.0001/input/input54/event54
+Sep 05 00:45:49	prod1	sshd[21539]:	Accepted password for matlab from 238.60.27.28 port 44457 ssh50
+Sep 05 00:45:59	archive	sudo[26877]:	pgadmin : TTY=pts/2 ; PWD=/home/pgadmin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 00:46:28	LabSZ	sshd[22926]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event6)
+Sep 05 00:46:43	prod1	sudo[14157]:	guest : TTY=pts/2 ; PWD=/home/guest ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 00:47:19	RUfus	sshd[19177]:	pam_unix(sshd:session): session opened for user root by (uid=33)
+Sep 05 00:47:37	ADM	sshd[2470]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event85)
+Sep 05 00:47:42	server	sshd[8552]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event15)
+Sep 05 00:47:45	RUfus	sshd[18737]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:60.0/usb3/3-4/3-4:1.0/0003:1EA7:00606.0001/input/input60/event60
+Sep 05 00:48:03	RUfus	sudo[23619]:	ubuntu : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 00:48:17	server	sshd[4202]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:3.0/usb3/3-4/3-4:1.0/0003:1EA7:0036.0001/input/input3/event3
+Sep 05 00:49:18	prod1	sshd[1320]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:40.0/usb3/3-4/3-4:1.0/0003:1EA7:00406.0001/input/input40/event40
+Sep 05 00:49:22	ADM	sshd[27413]:	Accepted password for 123 from 58.136.69.65 port 53447 ssh70
+Sep 05 00:50:00	RUfus	sshd[22179]:	Accepted password for fztu from 129.215.17.15 port 4125
+Sep 05 00:50:01	testvm	sudo[13708]:	fztu : TTY=pts/0 ; PWD=/home/fztu ; USER=root ; COMMAND=/bin/bash
+Sep 05 00:50:25	archive	sshd[13150]:	Did not receive identification string from 1.1.1.1
+Sep 05 00:50:28	testvm	sshd[27428]:	Received disconnect from 1.0.0.1: 97: disconnected by user
+Sep 05 00:50:33	testvm	sudo[8999]:	pgadmin : TTY=pts/2 ; PWD=/home/pgadmin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 00:50:43	archive	sshd[8383]:	Received disconnect from 9.9.9.9: 95: disconnected by user
+Sep 05 00:50:59	testvm	sshd[9916]:	Invalid user test from 129.215.17.15 port 3760
+Sep 05 00:51:00	prod1	sshd[19926]:	Invalid user guest from 129.215.17.15 port 61389
+Sep 05 00:51:01	prod1	sshd[29768]:	Invalid user oracle from 129.215.17.15 port 48605
+Sep 05 00:51:02	RUfus	sshd[16191]:	Invalid user backup from 129.215.17.15 port 56351
+Sep 05 00:51:03	ADM	sshd[8658]:	Invalid user deploy from 129.215.17.15 port 60359
+Sep 05 00:51:05	RUfus	sshd[19551]:	Invalid user user1 from 129.215.17.15 port 11624
+Sep 05 00:51:06	RUfus	sshd[26723]:	Invalid user api from 129.215.17.15 port 47686
+Sep 05 00:51:07	testvm	sshd[22751]:	Invalid user dbuser from 129.215.17.15 port 61519
+Sep 05 00:51:19	testvm	sshd[24079]:	pam_unix(sshd:session): session opened for user oracle by (uid=91)
+Sep 05 00:51:24	ADM	sshd[3090]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 00:51:28	prod1	sshd[27287]:	Received disconnect from 149.231.56.213: 21: Closed due to user request [preauth]
+Sep 05 00:51:36	LabSZ	sshd[7550]:	Did not receive identification string from 8.8.8.8
+Sep 05 00:52:02	LabSZ	sshd[22024]:	Did not receive identification string from 8.8.8.8
+Sep 05 00:52:41	archive	sshd[19058]:	Invalid user test from 131.103.24.238 port 58209
+Sep 05 00:52:42	ADM	sshd[5088]:	Invalid user guest from 131.103.24.238 port 63827
+Sep 05 00:52:43	prod1	sshd[22381]:	Invalid user oracle from 131.103.24.238 port 16036
+Sep 05 00:52:44	RUfus	sshd[8886]:	Invalid user backup from 131.103.24.238 port 61133
+Sep 05 00:52:45	RUfus	sshd[25331]:	Invalid user deploy from 131.103.24.238 port 7868
+Sep 05 00:52:46	server	sshd[23799]:	Invalid user user1 from 131.103.24.238 port 52975
+Sep 05 00:52:47	testvm	sshd[28224]:	Invalid user api from 131.103.24.238 port 57428
+Sep 05 00:52:49	LabSZ	sshd[22403]:	Invalid user dbuser from 131.103.24.238 port 57843
+Sep 05 00:52:58	ADM	sshd[27545]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 00:53:12	ADM	sshd[17691]:	kernel: usb 1-64: USB disconnect, device number 2
+Sep 05 00:53:18	server	sshd[27884]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 00:53:31	RUfus	sshd[8248]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 00:53:40	ADM	sshd[11479]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 00:53:47	archive	sshd[5529]:	pam_unix(sshd:session): session opened for user fztu by (uid=18)
+Sep 05 00:53:52	testvm	sshd[9994]:	Did not receive identification string from 1.0.0.1
+Sep 05 00:53:55	prod1	sshd[9118]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:55:21	LabSZ	sshd[27085]:	Accepted password for webmaster from 249.193.138.35 port 56396 ssh90
+Sep 05 00:55:36	prod1	sshd[10122]:	event34  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 00:55:45	server	sshd[28221]:	Received disconnect from 1.0.0.1: 75: disconnected by user
+Sep 05 00:56:11	prod1	sshd[16175]:	kernel: usb 1-19: USB disconnect, device number 2
+Sep 05 00:56:15	ADM	sshd[27963]:	Failed password for invalid user guest from 129.215.17.15 port 21620
+Sep 05 00:56:15	RUfus	sshd[11638]:	Failed password for invalid user ubuntu from 129.215.17.15 port 24704
+Sep 05 00:56:17	prod1	sshd[26310]:	Failed password for invalid user ubuntu from 129.215.17.15 port 21520
+Sep 05 00:56:17	archive	sshd[6255]:	Failed password for invalid user webmaster from 129.215.17.15 port 30683
+Sep 05 00:56:18	testvm	sshd[9828]:	Failed password for invalid user webmaster from 129.215.17.15 port 62474
+Sep 05 00:56:19	archive	sshd[18305]:	Failed password for invalid user webmaster from 129.215.17.15 port 4378
+Sep 05 00:56:19	LabSZ	sshd[15743]:	Failed password for invalid user 123 from 129.215.17.15 port 31327
+Sep 05 00:56:20	ADM	sshd[15246]:	Failed password for root from 129.215.17.15 port 9162
+Sep 05 00:56:22	testvm	sshd[7201]:	Failed password for root from 129.215.17.15 port 17414
+Sep 05 00:56:23	prod1	sshd[11893]:	Failed password for root from 129.215.17.15 port 47500
+Sep 05 00:56:24	testvm	sshd[8467]:	Accepted password for root from 129.215.17.15 port 9374
+Sep 05 00:57:02	LabSZ	sshd[19594]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 00:57:31	RUfus	sudo[26215]:	123 : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 00:57:44	archive	sshd[12214]:	pam_unix(sshd:session): session closed for user chen
+Sep 05 00:58:23	prod1	sshd[28657]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:58:46	prod1	sshd[17426]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 00:58:54	prod1	sshd[12544]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 00:59:10	RUfus	sshd[11082]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:21.0/usb3/3-4/3-4:1.0/0003:1EA7:00216.0001/input/input21/event21
+Sep 05 01:00:42	server	sshd[6346]:	Did not receive identification string from 1.0.0.1
+Sep 05 01:00:49	archive	sshd[11351]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:25.0/usb3/3-4/3-4:1.0/0003:1EA7:00256.0001/input/input25/event25
+Sep 05 01:01:34	prod1	sshd[17902]:	systemd: Started User Session 11891 of user pgadmin.
+Sep 05 01:01:40	testvm	useradd[18359]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 01:01:41	LabSZ	passwd[11714]:	password for user 'hacker' changed
+Sep 05 01:01:58	LabSZ	sshd[21221]:	Did not receive identification string from 8.8.8.8
+Sep 05 01:02:07	ADM	sshd[27595]:	systemd: Started User Session 4284 of user guest.
+Sep 05 01:02:08	ADM	sshd[21134]:	Received disconnect from 194.115.64.48: 75: Closed due to user request [preauth]
+Sep 05 01:02:12	ADM	sshd[17274]:	Failed password for admin from 129.215.17.15 port 60477
+Sep 05 01:02:14	LabSZ	sshd[8033]:	Failed password for jdoe from 129.215.17.15 port 62266
+Sep 05 01:02:16	server	sshd[3788]:	Failed password for support from 129.215.17.15 port 31182
+Sep 05 01:02:17	prod1	sshd[20648]:	Failed password for dev from 129.215.17.15 port 10775
+Sep 05 01:02:18	archive	sshd[28155]:	Failed password for test from 129.215.17.15 port 57072
+Sep 05 01:02:20	ADM	sshd[24290]:	Accepted password for support from 129.215.17.15 port 30674
+Sep 05 01:02:51	testvm	sshd[15941]:	Invalid user test from 197.210.64.133 port 50656
+Sep 05 01:02:52	testvm	sshd[17421]:	Invalid user guest from 197.210.64.133 port 57410
+Sep 05 01:02:53	LabSZ	sshd[8606]:	Invalid user oracle from 197.210.64.133 port 55298
+Sep 05 01:02:54	ADM	sshd[13404]:	Invalid user backup from 197.210.64.133 port 9573
+Sep 05 01:02:55	RUfus	sshd[13332]:	Invalid user deploy from 197.210.64.133 port 52443
+Sep 05 01:02:56	prod1	sshd[21555]:	Invalid user user1 from 197.210.64.133 port 45099
+Sep 05 01:02:57	RUfus	sshd[17997]:	Invalid user api from 197.210.64.133 port 13692
+Sep 05 01:02:58	prod1	sshd[1282]:	Invalid user dbuser from 197.210.64.133 port 3993
+Sep 05 01:03:06	prod1	sshd[25911]:	Received disconnect from 1.1.1.1: 60: disconnected by user
+Sep 05 01:03:09	LabSZ	sshd[2629]:	systemd: Started User Session 23110 of user test.
+Sep 05 01:03:15	prod1	sshd[14064]:	Received disconnect from 8.8.8.8: 61: disconnected by user
+Sep 05 01:03:27	prod1	sshd[5773]:	Failed password for admin from 103.197.144.1 port 47434
+Sep 05 01:03:28	LabSZ	sshd[3524]:	Failed password for jdoe from 103.197.144.1 port 13459
+Sep 05 01:03:29	ADM	sshd[3232]:	Failed password for support from 103.197.144.1 port 37426
+Sep 05 01:03:31	ADM	sshd[5626]:	Failed password for dev from 103.197.144.1 port 42097
+Sep 05 01:03:32	LabSZ	sshd[25719]:	Failed password for test from 103.197.144.1 port 40744
+Sep 05 01:03:34	LabSZ	sshd[14326]:	Accepted password for support from 103.197.144.1 port 22954
+Sep 05 01:03:48	LabSZ	sshd[19194]:	Failed password for invalid user admin from 131.103.24.238 port 13715
+Sep 05 01:03:49	testvm	sshd[22976]:	Failed password for invalid user root from 131.103.24.238 port 24823
+Sep 05 01:03:50	LabSZ	sshd[13029]:	Failed password for invalid user pgadmin from 131.103.24.238 port 27755
+Sep 05 01:03:52	prod1	sshd[7873]:	Failed password for invalid user test from 131.103.24.238 port 9232
+Sep 05 01:03:53	ADM	sshd[11993]:	Failed password for invalid user backup from 131.103.24.238 port 4665
+Sep 05 01:03:54	prod1	sshd[9072]:	Failed password for invalid user oracle from 131.103.24.238 port 59306
+Sep 05 01:03:55	RUfus	sshd[25119]:	Failed password for invalid user admin from 131.103.24.238 port 36552
+Sep 05 01:03:56	LabSZ	sshd[16468]:	Failed password for ubuntu from 131.103.24.238 port 61070
+Sep 05 01:03:57	prod1	sshd[13326]:	Failed password for ubuntu from 131.103.24.238 port 9115
+Sep 05 01:03:57	server	sshd[14054]:	Failed password for ubuntu from 131.103.24.238 port 11756
+Sep 05 01:03:59	testvm	sshd[16768]:	Failed password for ubuntu from 131.103.24.238 port 21496
+Sep 05 01:03:59	RUfus	sshd[9931]:	Accepted password for ubuntu from 131.103.24.238 port 2014
+Sep 05 01:04:22	ADM	sshd[20641]:	Accepted password for oracle from 45.33.32.156 port 56514
+Sep 05 01:04:23	archive	sudo[9379]:	oracle : TTY=pts/0 ; PWD=/home/oracle ; USER=root ; COMMAND=/bin/bash
+Sep 05 01:05:01	prod1	sshd[20943]:	Accepted password for webmaster from 46.85.207.134 port 3246 ssh21
+Sep 05 01:05:05	server	sshd[10744]:	Did not receive identification string from 8.8.8.8
+Sep 05 01:05:14	ADM	sshd[5969]:	event55  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:05:21	LabSZ	sshd[25640]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 01:05:54	server	sshd[27409]:	Received disconnect from 8.8.4.4: 84: disconnected by user
+Sep 05 01:05:57	LabSZ	sshd[2439]:	systemd: Started User Session 6636 of user 123.
+Sep 05 01:06:04	LabSZ	sshd[18687]:	Failed password for admin from 45.33.32.156 port 45797
+Sep 05 01:06:06	prod1	sshd[9225]:	Failed password for jdoe from 45.33.32.156 port 35651
+Sep 05 01:06:07	server	sshd[18939]:	Failed password for support from 45.33.32.156 port 10168
+Sep 05 01:06:09	ADM	sshd[14506]:	Failed password for dev from 45.33.32.156 port 53862
+Sep 05 01:06:11	testvm	sshd[8599]:	Failed password for test from 45.33.32.156 port 28103
+Sep 05 01:06:13	prod1	sshd[2025]:	Accepted password for support from 45.33.32.156 port 64629
+Sep 05 01:06:42	RUfus	sshd[1528]:	Did not receive identification string from 8.8.4.4
+Sep 05 01:06:54	RUfus	sshd[27711]:	Received disconnect from 72.8.106.243: 68: Closed due to user request [preauth]
+Sep 05 01:06:59	prod1	sshd[22439]:	Accepted password for webmaster from 117.200.42.165 port 33627 ssh60
+Sep 05 01:07:07	server	sshd[25355]:	kernel: usb 1-28: USB disconnect, device number 2
+Sep 05 01:07:09	server	useradd[11366]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 01:07:10	LabSZ	passwd[8620]:	password for user 'hacker' changed
+Sep 05 01:07:16	server	sshd[17498]:	Received disconnect from 130.105.174.155: 10: Closed due to user request [preauth]
+Sep 05 01:07:19	server	sshd[19055]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 01:07:55	LabSZ	sshd[13932]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:55.0/usb3/3-4/3-4:1.0/0003:1EA7:00556.0001/input/input55/event55
+Sep 05 01:08:03	ADM	sshd[29470]:	Failed password for admin from 197.210.64.133 port 47501
+Sep 05 01:08:04	prod1	sshd[29480]:	Failed password for jdoe from 197.210.64.133 port 9712
+Sep 05 01:08:06	prod1	sshd[21839]:	Failed password for support from 197.210.64.133 port 62866
+Sep 05 01:08:07	prod1	sshd[10950]:	Failed password for dev from 197.210.64.133 port 55570
+Sep 05 01:08:08	server	sshd[9405]:	Failed password for test from 197.210.64.133 port 6271
+Sep 05 01:08:09	RUfus	sshd[4525]:	Accepted password for support from 197.210.64.133 port 54521
+Sep 05 01:08:29	LabSZ	sshd[8929]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event92)
+Sep 05 01:17:16	RUfus	sshd[24520]:	systemd: Started User Session 10761 of user admin.
+Sep 05 01:17:19	LabSZ	sshd[19985]:	Invalid user test from 103.197.144.1 port 54835
+Sep 05 01:17:19	prod1	sshd[25225]:	Invalid user guest from 103.197.144.1 port 23889
+Sep 05 01:17:20	RUfus	sshd[18004]:	Invalid user oracle from 103.197.144.1 port 16826
+Sep 05 01:17:21	RUfus	sshd[2313]:	Invalid user backup from 103.197.144.1 port 2434
+Sep 05 01:17:22	server	sshd[16827]:	Invalid user deploy from 103.197.144.1 port 60958
+Sep 05 01:17:24	server	sshd[15721]:	Invalid user user1 from 103.197.144.1 port 17796
+Sep 05 01:17:25	RUfus	sshd[12633]:	Invalid user api from 103.197.144.1 port 15088
+Sep 05 01:17:26	server	sshd[4299]:	Invalid user dbuser from 103.197.144.1 port 50179
+Sep 05 01:17:33	LabSZ	sshd[17292]:	Invalid user test from 129.215.17.15 port 13226
+Sep 05 01:17:35	server	sshd[18969]:	Invalid user guest from 129.215.17.15 port 22409
+Sep 05 01:17:35	server	sshd[1997]:	Invalid user oracle from 129.215.17.15 port 45897
+Sep 05 01:17:37	prod1	sshd[8576]:	Invalid user backup from 129.215.17.15 port 40976
+Sep 05 01:17:38	ADM	sshd[28156]:	Invalid user deploy from 129.215.17.15 port 22748
+Sep 05 01:17:40	prod1	sshd[26308]:	Invalid user user1 from 129.215.17.15 port 41024
+Sep 05 01:17:41	server	sshd[24457]:	Invalid user api from 129.215.17.15 port 32199
+Sep 05 01:17:42	prod1	sshd[25460]:	Invalid user dbuser from 129.215.17.15 port 18551
+Sep 05 01:18:11	ADM	sshd[19378]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:18:15	testvm	sshd[24111]:	systemd: Started User Session 10965 of user root.
+Sep 05 01:18:17	testvm	sshd[12718]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 05 01:18:35	LabSZ	sshd[4800]:	Accepted password for 123 from 45.33.32.156 port 34340
+Sep 05 01:18:36	testvm	sudo[28321]:	123 : TTY=pts/0 ; PWD=/home/123 ; USER=root ; COMMAND=/bin/bash
+Sep 05 01:19:14	archive	sshd[19769]:	Invalid user test from 131.103.24.238 port 25916
+Sep 05 01:19:15	LabSZ	sshd[21676]:	Invalid user guest from 131.103.24.238 port 5772
+Sep 05 01:19:16	testvm	sshd[3284]:	Invalid user oracle from 131.103.24.238 port 33828
+Sep 05 01:19:17	LabSZ	sshd[14666]:	Invalid user backup from 131.103.24.238 port 4724
+Sep 05 01:19:18	server	sshd[28673]:	Invalid user deploy from 131.103.24.238 port 12507
+Sep 05 01:19:19	LabSZ	sshd[18953]:	Invalid user user1 from 131.103.24.238 port 63474
+Sep 05 01:19:20	LabSZ	sshd[16125]:	Invalid user api from 131.103.24.238 port 27290
+Sep 05 01:19:21	testvm	sshd[15959]:	Invalid user dbuser from 131.103.24.238 port 60840
+Sep 05 01:19:33	testvm	sshd[14994]:	Received disconnect from 112.220.60.71: 54: Closed due to user request [preauth]
+Sep 05 01:19:35	archive	sshd[7823]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 01:19:57	archive	sshd[4016]:	kernel: usb 1-44: USB disconnect, device number 2
+Sep 05 01:21:00	prod1	sshd[23098]:	systemd: Started User Session 10534 of user webmaster.
+Sep 05 01:21:21	testvm	sshd[7757]:	Invalid user test from 103.197.144.1 port 54644
+Sep 05 01:21:22	prod1	sshd[2759]:	Invalid user guest from 103.197.144.1 port 46929
+Sep 05 01:21:22	ADM	sshd[26152]:	Invalid user oracle from 103.197.144.1 port 24979
+Sep 05 01:21:23	LabSZ	sshd[18682]:	Invalid user backup from 103.197.144.1 port 39025
+Sep 05 01:21:24	server	sshd[24694]:	Invalid user deploy from 103.197.144.1 port 2146
+Sep 05 01:21:25	ADM	sshd[1414]:	Invalid user user1 from 103.197.144.1 port 23395
+Sep 05 01:21:26	prod1	sshd[8782]:	Invalid user api from 103.197.144.1 port 34557
+Sep 05 01:21:27	testvm	sshd[27851]:	Invalid user dbuser from 103.197.144.1 port 18351
+Sep 05 01:21:51	ADM	sshd[23834]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:21:54	archive	sshd[6299]:	kernel: usb 1-14: USB disconnect, device number 2
+Sep 05 01:22:26	LabSZ	sudo[23939]:	admin : TTY=pts/2 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 01:22:42	ADM	sshd[25595]:	Invalid user test from 129.215.17.15 port 57259
+Sep 05 01:22:43	archive	sshd[4987]:	Invalid user guest from 129.215.17.15 port 28537
+Sep 05 01:22:44	archive	sshd[23097]:	Invalid user oracle from 129.215.17.15 port 5154
+Sep 05 01:22:45	LabSZ	sshd[4993]:	Invalid user backup from 129.215.17.15 port 15874
+Sep 05 01:22:46	archive	sshd[18109]:	Invalid user deploy from 129.215.17.15 port 40523
+Sep 05 01:22:47	archive	sshd[8388]:	Invalid user user1 from 129.215.17.15 port 57608
+Sep 05 01:22:49	prod1	sshd[8019]:	Invalid user api from 129.215.17.15 port 41854
+Sep 05 01:22:50	prod1	sshd[21960]:	Invalid user dbuser from 129.215.17.15 port 26871
+Sep 05 01:23:06	server	sshd[27825]:	pam_unix(sshd:session): session opened for user fztu by (uid=1)
+Sep 05 01:23:15	ADM	sshd[11307]:	Accepted password for root from 45.33.32.156 port 52267
+Sep 05 01:23:16	prod1	sudo[3930]:	root : TTY=pts/0 ; PWD=/home/root ; USER=root ; COMMAND=/bin/bash
+Sep 05 01:23:28	RUfus	sudo[2784]:	chen : TTY=pts/2 ; PWD=/home/chen ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 01:23:44	archive	sshd[10022]:	Invalid user test from 193.42.109.42 port 64757
+Sep 05 01:23:44	RUfus	sshd[5604]:	Invalid user guest from 193.42.109.42 port 30981
+Sep 05 01:23:45	LabSZ	sshd[5266]:	Invalid user oracle from 193.42.109.42 port 7244
+Sep 05 01:23:46	ADM	sshd[15154]:	Invalid user backup from 193.42.109.42 port 15869
+Sep 05 01:23:47	ADM	sshd[18479]:	Invalid user deploy from 193.42.109.42 port 62768
+Sep 05 01:23:48	LabSZ	sshd[26461]:	Invalid user user1 from 193.42.109.42 port 47505
+Sep 05 01:23:49	ADM	sshd[22546]:	Invalid user api from 193.42.109.42 port 9883
+Sep 05 01:23:50	testvm	sshd[10015]:	Invalid user dbuser from 193.42.109.42 port 31466
+Sep 05 01:24:05	prod1	sshd[5050]:	Received disconnect from 117.37.240.183: 89: Closed due to user request [preauth]
+Sep 05 01:24:58	server	sshd[24040]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:25:11	prod1	sshd[12566]:	Did not receive identification string from 8.8.4.4
+Sep 05 01:25:17	server	sudo[29258]:	test : TTY=pts/2 ; PWD=/home/test ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 01:25:33	archive	sshd[16179]:	Received disconnect from 8.8.4.4: 78: disconnected by user
+Sep 05 01:25:46	archive	sshd[10047]:	pam_unix(sshd:session): session closed for user backup
+Sep 05 01:26:25	LabSZ	sshd[26261]:	Received disconnect from 8.8.8.8: 15: disconnected by user
+Sep 05 01:26:38	prod1	useradd[14300]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 01:26:39	ADM	passwd[12866]:	password for user 'hacker' changed
+Sep 05 01:27:01	testvm	sshd[25402]:	pam_unix(sshd:session): session opened for user webmaster by (uid=12)
+Sep 05 01:27:13	prod1	sshd[16470]:	pam_unix(sshd:session): session opened for user fztu by (uid=13)
+Sep 05 01:28:58	archive	sshd[1630]:	pam_unix(sshd:session): session closed for user backup
+Sep 05 01:32:06	server	sshd[18601]:	Received disconnect from 167.87.86.86: 93: Bye Bye [preauth]
+Sep 05 01:32:09	testvm	sshd[19100]:	systemd: Started User Session 7771 of user 123.
+Sep 05 01:32:51	prod1	sshd[9019]:	Accepted password for 123 from 85.96.17.81 port 45165 ssh53
+Sep 05 01:33:13	prod1	sshd[21675]:	event11  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:33:16	testvm	sshd[27470]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event53)
+Sep 05 01:33:28	LabSZ	sshd[14710]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=47)
+Sep 05 01:33:32	testvm	sshd[15595]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:21.0/usb3/3-4/3-4:1.0/0003:1EA7:00216.0001/input/input21/event21
+Sep 05 01:34:10	server	sshd[22295]:	systemd: Started User Session 25381 of user webmaster.
+Sep 05 01:34:31	RUfus	sshd[22883]:	Accepted password for backup from 81.75.48.131 port 31078 ssh71
+Sep 05 01:34:35	prod1	sshd[4693]:	Received disconnect from 8.8.4.4: 81: disconnected by user
+Sep 05 01:36:23	LabSZ	sshd[20065]:	Received disconnect from 239.237.34.147: 33: Closed due to user request [preauth]
+Sep 05 01:36:26	server	sshd[28880]:	Failed password for admin from 45.33.32.156 port 8174
+Sep 05 01:36:27	ADM	sshd[11033]:	Failed password for jdoe from 45.33.32.156 port 31147
+Sep 05 01:36:29	LabSZ	sshd[20513]:	Failed password for support from 45.33.32.156 port 16787
+Sep 05 01:36:31	testvm	sshd[4182]:	Failed password for dev from 45.33.32.156 port 9504
+Sep 05 01:36:33	testvm	sshd[18807]:	Failed password for test from 45.33.32.156 port 61383
+Sep 05 01:36:35	testvm	sshd[26328]:	Accepted password for support from 45.33.32.156 port 25973
+Sep 05 01:37:15	prod1	sshd[25851]:	Invalid user test from 131.103.24.238 port 63796
+Sep 05 01:37:15	archive	sshd[11721]:	Invalid user guest from 131.103.24.238 port 9113
+Sep 05 01:37:16	server	sshd[6947]:	Invalid user oracle from 131.103.24.238 port 23313
+Sep 05 01:37:18	prod1	sshd[23802]:	Invalid user backup from 131.103.24.238 port 58914
+Sep 05 01:37:19	LabSZ	sshd[5856]:	Invalid user deploy from 131.103.24.238 port 29584
+Sep 05 01:37:20	prod1	sshd[19975]:	Invalid user user1 from 131.103.24.238 port 51550
+Sep 05 01:37:20	LabSZ	sshd[25220]:	Invalid user api from 131.103.24.238 port 61789
+Sep 05 01:37:21	archive	sshd[5792]:	Invalid user dbuser from 131.103.24.238 port 27492
+Sep 05 01:38:08	RUfus	sshd[8632]:	Received disconnect from 8.8.8.8: 73: disconnected by user
+Sep 05 01:38:11	LabSZ	sshd[15861]:	Did not receive identification string from 8.8.4.4
+Sep 05 01:38:20	server	useradd[10256]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 01:38:21	testvm	passwd[23626]:	password for user 'hacker' changed
+Sep 05 01:38:51	archive	sshd[4997]:	kernel: usb 1-53: USB disconnect, device number 2
+Sep 05 01:38:53	testvm	sshd[23114]:	Received disconnect from 1.0.0.1: 71: disconnected by user
+Sep 05 01:39:09	RUfus	sshd[17282]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:43.0/usb3/3-4/3-4:1.0/0003:1EA7:00436.0001/input/input43/event43
+Sep 05 01:39:53	RUfus	sshd[9514]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:47.0/usb3/3-4/3-4:1.0/0003:1EA7:00476.0001/input/input47/event47
+Sep 05 01:41:03	server	sshd[27456]:	kernel: usb 1-98: USB disconnect, device number 2
+Sep 05 01:41:06	LabSZ	sshd[3894]:	Invalid user test from 129.215.17.15 port 55896
+Sep 05 01:41:07	prod1	sshd[11814]:	Invalid user guest from 129.215.17.15 port 19455
+Sep 05 01:41:08	ADM	sshd[12901]:	Invalid user oracle from 129.215.17.15 port 12714
+Sep 05 01:41:09	testvm	sshd[6110]:	Invalid user backup from 129.215.17.15 port 28920
+Sep 05 01:41:10	archive	sshd[23220]:	Invalid user deploy from 129.215.17.15 port 54517
+Sep 05 01:41:10	archive	sshd[10715]:	Invalid user user1 from 129.215.17.15 port 45212
+Sep 05 01:41:11	testvm	sshd[9747]:	Invalid user api from 129.215.17.15 port 55695
+Sep 05 01:41:13	prod1	sshd[15756]:	Invalid user dbuser from 129.215.17.15 port 54933
+Sep 05 01:42:25	RUfus	sshd[21275]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:42:56	archive	sshd[14458]:	pam_unix(sshd:session): session closed for user test
+Sep 05 01:43:06	testvm	sudo[13301]:	input_userauth_request: invalid user chen [preauth]
+Sep 05 01:43:22	archive	sshd[20252]:	Received disconnect from 134.103.53.211: 11: Bye Bye [preauth]
+Sep 05 01:43:32	server	sshd[14361]:	Failed password for invalid user root from 129.215.17.15 port 49551
+Sep 05 01:43:33	prod1	sshd[4867]:	Failed password for invalid user backup from 129.215.17.15 port 47839
+Sep 05 01:43:34	testvm	sshd[9180]:	Failed password for invalid user test from 129.215.17.15 port 4415
+Sep 05 01:43:35	archive	sshd[28709]:	Failed password for invalid user ubuntu from 129.215.17.15 port 59620
+Sep 05 01:43:36	LabSZ	sshd[28139]:	Failed password for invalid user fztu from 129.215.17.15 port 53929
+Sep 05 01:43:38	server	sshd[15422]:	Failed password for invalid user oracle from 129.215.17.15 port 2619
+Sep 05 01:43:39	LabSZ	sshd[4434]:	Failed password for invalid user matlab from 129.215.17.15 port 52685
+Sep 05 01:43:40	prod1	sshd[14836]:	Failed password for ubuntu from 129.215.17.15 port 13473
+Sep 05 01:43:42	prod1	sshd[13689]:	Failed password for ubuntu from 129.215.17.15 port 14529
+Sep 05 01:43:43	testvm	sshd[7418]:	Failed password for ubuntu from 129.215.17.15 port 9463
+Sep 05 01:43:44	archive	sshd[14106]:	Failed password for ubuntu from 129.215.17.15 port 48420
+Sep 05 01:43:44	testvm	sshd[20529]:	Failed password for ubuntu from 129.215.17.15 port 5067
+Sep 05 01:43:45	RUfus	sshd[24742]:	Accepted password for ubuntu from 129.215.17.15 port 14600
+Sep 05 01:43:51	RUfus	sshd[26443]:	pam_unix(sshd:session): session opened for user admin by (uid=7)
+Sep 05 01:44:08	prod1	sshd[25297]:	systemd: Started User Session 28321 of user 123.
+Sep 05 01:44:16	ADM	sshd[10668]:	kernel: usb 1-59: USB disconnect, device number 2
+Sep 05 01:44:22	RUfus	sshd[4312]:	Failed password for invalid user 123 from 193.42.109.42 port 30138
+Sep 05 01:44:23	ADM	sshd[6250]:	Failed password for invalid user 123 from 193.42.109.42 port 37762
+Sep 05 01:44:24	RUfus	sshd[1011]:	Failed password for invalid user root from 193.42.109.42 port 23365
+Sep 05 01:44:25	server	sshd[28763]:	Failed password for invalid user 123 from 193.42.109.42 port 17643
+Sep 05 01:44:26	archive	sshd[26943]:	Failed password for invalid user oracle from 193.42.109.42 port 47781
+Sep 05 01:44:27	server	sshd[20912]:	Failed password for invalid user pgadmin from 193.42.109.42 port 33515
+Sep 05 01:44:28	archive	sshd[20745]:	Failed password for invalid user guest from 193.42.109.42 port 45977
+Sep 05 01:44:29	prod1	sshd[23522]:	Failed password for ubuntu from 193.42.109.42 port 45850
+Sep 05 01:44:30	ADM	sshd[15638]:	Failed password for ubuntu from 193.42.109.42 port 4511
+Sep 05 01:44:31	testvm	sshd[15113]:	Failed password for ubuntu from 193.42.109.42 port 16838
+Sep 05 01:44:32	LabSZ	sshd[3306]:	Accepted password for ubuntu from 193.42.109.42 port 47847
+Sep 05 01:44:54	ADM	sshd[5427]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:13.0/usb3/3-4/3-4:1.0/0003:1EA7:00136.0001/input/input13/event13
+Sep 05 01:45:03	prod1	sshd[19354]:	Received disconnect from 114.136.2.189: 36: Bye Bye [preauth]
+Sep 05 01:45:15	archive	sshd[12796]:	Did not receive identification string from 1.0.0.1
+Sep 05 01:45:19	archive	sshd[20491]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 01:45:25	prod1	sudo[19627]:	backup : TTY=pts/2 ; PWD=/home/backup ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 01:45:42	server	sshd[7307]:	pam_unix(sshd:session): session opened for user fztu by (uid=21)
+Sep 05 01:47:28	testvm	sshd[9829]:	Did not receive identification string from 8.8.8.8
+Sep 05 01:48:35	LabSZ	sshd[15568]:	Received disconnect from 90.85.59.125: 15: Bye Bye [preauth]
+Sep 05 01:48:42	archive	sshd[3193]:	Received disconnect from 3.224.100.204: 22: Closed due to user request [preauth]
+Sep 05 01:48:45	prod1	sshd[27386]:	kernel: usb 1-79: USB disconnect, device number 2
+Sep 05 01:48:53	archive	sudo[3951]:	ubuntu : TTY=pts/2 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 01:50:31	testvm	sshd[3502]:	Received disconnect from 1.1.1.1: 32: disconnected by user
+Sep 05 01:51:01	server	sshd[23108]:	pam_unix(sshd:session): session closed for user backup
+Sep 05 01:51:49	prod1	sshd[18778]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:51:52	ADM	sshd[21244]:	Received disconnect from 8.8.8.8: 58: disconnected by user
+Sep 05 01:52:26	LabSZ	sshd[17379]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:72.0/usb3/3-4/3-4:1.0/0003:1EA7:00726.0001/input/input72/event72
+Sep 05 02:04:07	LabSZ	sshd[12087]:	Failed password for admin from 129.215.17.15 port 8523
+Sep 05 02:04:08	testvm	sshd[17867]:	Failed password for jdoe from 129.215.17.15 port 29497
+Sep 05 02:04:10	RUfus	sshd[7804]:	Failed password for support from 129.215.17.15 port 31554
+Sep 05 02:04:11	testvm	sshd[25938]:	Failed password for dev from 129.215.17.15 port 19850
+Sep 05 02:04:13	ADM	sshd[14618]:	Failed password for test from 129.215.17.15 port 48721
+Sep 05 02:04:14	ADM	sshd[15277]:	Accepted password for support from 129.215.17.15 port 18580
+Sep 05 02:04:26	LabSZ	sshd[24935]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 02:04:54	server	sshd[17212]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event78)
+Sep 05 02:05:36	RUfus	sshd[1995]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:27.0/usb3/3-4/3-4:1.0/0003:1EA7:00276.0001/input/input27/event27
+Sep 05 02:06:00	RUfus	sshd[18023]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:06:20	testvm	sshd[14068]:	kernel: usb 1-12: USB disconnect, device number 2
+Sep 05 02:06:33	server	sudo[14350]:	webmaster : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 02:06:42	server	sshd[25002]:	Received disconnect from 113.208.99.68: 42: Closed due to user request [preauth]
+Sep 05 02:07:19	RUfus	sshd[10753]:	Accepted password for oracle from 161.200.78.185 port 14069 ssh59
+Sep 05 02:07:41	prod1	sshd[7892]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 02:08:26	archive	sshd[19713]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event63)
+Sep 05 02:08:40	testvm	sshd[3519]:	Received disconnect from 1.1.1.1: 54: disconnected by user
+Sep 05 02:08:46	RUfus	sshd[17425]:	pam_unix(sshd:session): session opened for user backup by (uid=18)
+Sep 05 02:08:54	server	sshd[6313]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event53)
+Sep 05 02:09:06	prod1	sshd[15739]:	pam_unix(sshd:session): session closed for user oracle
+Sep 05 02:09:58	RUfus	sshd[4061]:	kernel: usb 1-70: USB disconnect, device number 2
+Sep 05 02:10:09	server	sshd[4572]:	Failed password for invalid user matlab from 129.215.17.15 port 58591
+Sep 05 02:10:10	ADM	sshd[20846]:	Failed password for invalid user root from 129.215.17.15 port 11425
+Sep 05 02:10:11	prod1	sshd[19656]:	Failed password for invalid user ubuntu from 129.215.17.15 port 13294
+Sep 05 02:10:12	ADM	sshd[15883]:	Failed password for invalid user pgadmin from 129.215.17.15 port 20327
+Sep 05 02:10:13	RUfus	sshd[14963]:	Failed password for invalid user matlab from 129.215.17.15 port 13132
+Sep 05 02:10:14	prod1	sshd[19421]:	Failed password for invalid user pgadmin from 129.215.17.15 port 22296
+Sep 05 02:10:15	prod1	sshd[22364]:	Failed password for invalid user webmaster from 129.215.17.15 port 12030
+Sep 05 02:10:15	archive	sshd[13449]:	Failed password for invalid user matlab from 129.215.17.15 port 49615
+Sep 05 02:10:16	ADM	sshd[26600]:	Failed password for invalid user root from 129.215.17.15 port 28135
+Sep 05 02:10:17	RUfus	sshd[28912]:	Failed password for invalid user matlab from 129.215.17.15 port 40949
+Sep 05 02:10:18	prod1	sshd[17014]:	Failed password for admin from 129.215.17.15 port 37671
+Sep 05 02:10:19	prod1	sshd[12186]:	Failed password for admin from 129.215.17.15 port 1531
+Sep 05 02:10:20	testvm	sshd[9353]:	Failed password for admin from 129.215.17.15 port 7495
+Sep 05 02:10:21	prod1	sshd[17836]:	Accepted password for admin from 129.215.17.15 port 2718
+Sep 05 02:10:41	archive	sshd[3985]:	systemd: Started User Session 22037 of user guest.
+Sep 05 02:10:50	LabSZ	sshd[25096]:	kernel: usb 1-83: USB disconnect, device number 2
+Sep 05 02:10:56	server	sshd[7764]:	Did not receive identification string from 1.0.0.1
+Sep 05 02:11:02	prod1	sshd[20155]:	Did not receive identification string from 1.0.0.1
+Sep 05 02:11:06	archive	sshd[1962]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:93.0/usb3/3-4/3-4:1.0/0003:1EA7:00936.0001/input/input93/event93
+Sep 05 02:11:21	RUfus	sshd[20436]:	Invalid user test from 197.210.64.133 port 56462
+Sep 05 02:11:22	prod1	sshd[7134]:	Invalid user guest from 197.210.64.133 port 23578
+Sep 05 02:11:24	testvm	sshd[10058]:	Invalid user oracle from 197.210.64.133 port 11881
+Sep 05 02:11:25	ADM	sshd[15277]:	Invalid user backup from 197.210.64.133 port 3269
+Sep 05 02:11:25	archive	sshd[26253]:	Invalid user deploy from 197.210.64.133 port 60266
+Sep 05 02:11:26	archive	sshd[3456]:	Invalid user user1 from 197.210.64.133 port 33121
+Sep 05 02:11:28	testvm	sshd[12010]:	Invalid user api from 197.210.64.133 port 45249
+Sep 05 02:11:29	testvm	sshd[19223]:	Invalid user dbuser from 197.210.64.133 port 60864
+Sep 05 02:11:41	ADM	sshd[14054]:	Received disconnect from 47.235.58.181: 6: Bye Bye [preauth]
+Sep 05 02:11:48	prod1	sshd[3791]:	kernel: usb 1-3: USB disconnect, device number 2
+Sep 05 02:12:01	archive	sudo[11448]:	chen : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 02:12:18	archive	sshd[4074]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:12:21	testvm	sshd[22128]:	pam_unix(sshd:session): session opened for user matlab by (uid=87)
+Sep 05 02:12:50	ADM	sshd[5297]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 02:12:55	prod1	sshd[7568]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:97.0/usb3/3-4/3-4:1.0/0003:1EA7:00976.0001/input/input97/event97
+Sep 05 02:13:30	server	sshd[18406]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 02:13:35	LabSZ	sshd[16890]:	Received disconnect from 65.252.224.11: 89: Bye Bye [preauth]
+Sep 05 02:14:02	RUfus	sshd[7190]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event58)
+Sep 05 02:14:08	archive	sshd[23902]:	Received disconnect from 95.155.140.6: 82: Closed due to user request [preauth]
+Sep 05 02:14:26	ADM	sshd[26299]:	systemd: Started User Session 29211 of user ubuntu.
+Sep 05 02:14:53	server	sudo[21016]:	123 : TTY=pts/2 ; PWD=/home/123 ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 02:16:33	prod1	sshd[1192]:	event42  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:16:39	testvm	sshd[2167]:	Did not receive identification string from 1.1.1.1
+Sep 05 02:16:42	RUfus	sshd[6886]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:94.0/usb3/3-4/3-4:1.0/0003:1EA7:00946.0001/input/input94/event94
+Sep 05 02:16:45	prod1	sshd[20619]:	Accepted password for ubuntu from 35.193.134.242 port 58787 ssh31
+Sep 05 02:16:53	RUfus	sudo[2027]:	ubuntu : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 02:17:02	LabSZ	sudo[20020]:	Failed none for invalid user 2 from 197.210.64.133 port 61741 ssh6
+Sep 05 02:18:33	testvm	sshd[19533]:	pam_unix(sshd:session): session closed for user oracle
+Sep 05 02:18:41	archive	sshd[12167]:	pam_unix(sshd:session): session opened for user chen by (uid=20)
+Sep 05 02:19:11	testvm	sshd[19616]:	Did not receive identification string from 1.1.1.1
+Sep 05 02:19:33	LabSZ	sshd[21994]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event6)
+Sep 05 02:19:41	server	sshd[27065]:	pam_unix(sshd:session): session opened for user root by (uid=57)
+Sep 05 02:20:13	RUfus	sshd[27063]:	Invalid user test from 129.215.17.15 port 60532
+Sep 05 02:20:14	archive	sshd[4057]:	Invalid user guest from 129.215.17.15 port 7044
+Sep 05 02:20:15	archive	sshd[25176]:	Invalid user oracle from 129.215.17.15 port 43304
+Sep 05 02:20:16	prod1	sshd[3622]:	Invalid user backup from 129.215.17.15 port 34844
+Sep 05 02:20:18	ADM	sshd[15930]:	Invalid user deploy from 129.215.17.15 port 32012
+Sep 05 02:20:18	ADM	sshd[20433]:	Invalid user user1 from 129.215.17.15 port 62884
+Sep 05 02:20:20	LabSZ	sshd[22243]:	Invalid user api from 129.215.17.15 port 50094
+Sep 05 02:20:21	RUfus	sshd[1986]:	Invalid user dbuser from 129.215.17.15 port 47322
+Sep 05 02:21:22	archive	sudo[12318]:	matlab : TTY=pts/2 ; PWD=/home/matlab ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 02:21:47	archive	sshd[6856]:	Did not receive identification string from 1.1.1.1
+Sep 05 02:21:50	RUfus	sshd[8813]:	Failed password for admin from 129.215.17.15 port 19771
+Sep 05 02:21:51	testvm	sshd[22754]:	Failed password for jdoe from 129.215.17.15 port 33194
+Sep 05 02:21:53	LabSZ	sshd[26362]:	Failed password for support from 129.215.17.15 port 36920
+Sep 05 02:21:55	RUfus	sshd[25442]:	Failed password for dev from 129.215.17.15 port 59389
+Sep 05 02:21:56	server	sshd[15235]:	Failed password for test from 129.215.17.15 port 4901
+Sep 05 02:21:57	archive	sshd[28630]:	Accepted password for support from 129.215.17.15 port 41598
+Sep 05 02:22:36	prod1	sshd[3870]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:24.0/usb3/3-4/3-4:1.0/0003:1EA7:00246.0001/input/input24/event24
+Sep 05 02:22:41	testvm	sshd[18592]:	systemd: Started User Session 11719 of user test.
+Sep 05 02:24:24	server	sshd[14846]:	Failed password for invalid user chen from 197.210.64.133 port 25894
+Sep 05 02:24:25	prod1	sshd[1890]:	Failed password for invalid user oracle from 197.210.64.133 port 3169
+Sep 05 02:24:26	LabSZ	sshd[1454]:	Failed password for invalid user ubuntu from 197.210.64.133 port 53023
+Sep 05 02:24:27	RUfus	sshd[29958]:	Failed password for invalid user webmaster from 197.210.64.133 port 15629
+Sep 05 02:24:28	testvm	sshd[8549]:	Failed password for invalid user ubuntu from 197.210.64.133 port 36566
+Sep 05 02:24:30	LabSZ	sshd[3368]:	Failed password for invalid user backup from 197.210.64.133 port 41451
+Sep 05 02:24:30	server	sshd[2222]:	Failed password for invalid user oracle from 197.210.64.133 port 62358
+Sep 05 02:24:31	server	sshd[16148]:	Failed password for invalid user webmaster from 197.210.64.133 port 22520
+Sep 05 02:24:32	prod1	sshd[28897]:	Failed password for invalid user 123 from 197.210.64.133 port 11325
+Sep 05 02:24:33	ADM	sshd[1393]:	Failed password for ubuntu from 197.210.64.133 port 2282
+Sep 05 02:24:35	LabSZ	sshd[17293]:	Failed password for ubuntu from 197.210.64.133 port 24240
+Sep 05 02:24:36	prod1	sshd[24554]:	Failed password for ubuntu from 197.210.64.133 port 37114
+Sep 05 02:24:37	RUfus	sshd[23207]:	Failed password for ubuntu from 197.210.64.133 port 58573
+Sep 05 02:24:37	server	sshd[14365]:	Failed password for ubuntu from 197.210.64.133 port 57631
+Sep 05 02:24:39	archive	sshd[26415]:	Accepted password for ubuntu from 197.210.64.133 port 49321
+Sep 05 02:25:01	RUfus	sshd[26298]:	Did not receive identification string from 1.0.0.1
+Sep 05 02:25:11	RUfus	sshd[20575]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:25:23	RUfus	sshd[24647]:	event62  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:25:33	server	sshd[15923]:	systemd: Started User Session 15512 of user test.
+Sep 05 02:25:50	prod1	sshd[15634]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:52.0/usb3/3-4/3-4:1.0/0003:1EA7:00526.0001/input/input52/event52
+Sep 05 02:26:28	server	sshd[27234]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event93)
+Sep 05 02:26:48	testvm	sshd[23483]:	event52  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:26:54	LabSZ	sshd[9423]:	systemd: Started User Session 18917 of user webmaster.
+Sep 05 02:27:11	server	sshd[10915]:	kernel: usb 1-59: USB disconnect, device number 2
+Sep 05 02:27:31	archive	sshd[10800]:	kernel: usb 1-57: USB disconnect, device number 2
+Sep 05 02:27:38	server	sshd[14925]:	fatal: Write failed: Connection reset by peer [preauth]
+Sep 05 02:27:54	prod1	sshd[23750]:	Accepted password for pgadmin from 158.66.48.200 port 26395 ssh4
+Sep 05 02:28:40	server	sshd[14867]:	systemd: Started User Session 24930 of user fztu.
+Sep 05 02:29:54	ADM	sshd[20204]:	Received disconnect from 102.159.233.92: 60: Closed due to user request [preauth]
+Sep 05 02:30:01	archive	sshd[7465]:	Failed password for invalid user 123 from 129.215.17.15 port 13881
+Sep 05 02:30:03	prod1	sshd[18909]:	Failed password for invalid user test from 129.215.17.15 port 49918
+Sep 05 02:30:04	LabSZ	sshd[14145]:	Failed password for invalid user matlab from 129.215.17.15 port 53418
+Sep 05 02:30:05	archive	sshd[7175]:	Failed password for invalid user ubuntu from 129.215.17.15 port 32015
+Sep 05 02:30:06	server	sshd[24101]:	Failed password for invalid user test from 129.215.17.15 port 40999
+Sep 05 02:30:07	RUfus	sshd[11628]:	Failed password for invalid user chen from 129.215.17.15 port 4694
+Sep 05 02:30:08	server	sshd[18950]:	Failed password for invalid user matlab from 129.215.17.15 port 51095
+Sep 05 02:30:10	prod1	sshd[2231]:	Failed password for invalid user fztu from 129.215.17.15 port 47834
+Sep 05 02:30:11	prod1	sshd[25905]:	Failed password for invalid user pgadmin from 129.215.17.15 port 32412
+Sep 05 02:30:12	LabSZ	sshd[7477]:	Failed password for invalid user matlab from 129.215.17.15 port 2818
+Sep 05 02:30:14	testvm	sshd[7951]:	Failed password for root from 129.215.17.15 port 4455
+Sep 05 02:30:14	testvm	sshd[14008]:	Failed password for root from 129.215.17.15 port 20272
+Sep 05 02:30:16	testvm	sshd[14204]:	Failed password for root from 129.215.17.15 port 26864
+Sep 05 02:30:17	LabSZ	sshd[29280]:	Failed password for root from 129.215.17.15 port 9034
+Sep 05 02:30:17	RUfus	sshd[18950]:	Accepted password for root from 129.215.17.15 port 38498
+Sep 05 02:31:34	ADM	sshd[3370]:	Received disconnect from 132.13.181.114: 42: Closed due to user request [preauth]
+Sep 05 02:32:30	testvm	sshd[12495]:	event45  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:32:39	prod1	sshd[27838]:	Received disconnect from 8.8.8.8: 75: disconnected by user
+Sep 05 02:32:42	RUfus	sshd[19580]:	Accepted password for guest from 27.241.95.251 port 55035 ssh96
+Sep 05 02:33:09	server	sshd[7748]:	event10  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:33:16	ADM	sshd[10970]:	Accepted password for matlab from 147.130.193.89 port 16398 ssh53
+Sep 05 02:33:33	archive	sshd[13434]:	pam_unix(sshd:session): session opened for user fztu by (uid=14)
+Sep 05 02:33:47	prod1	sshd[13850]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 05 02:33:51	server	sshd[20946]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:40.0/usb3/3-4/3-4:1.0/0003:1EA7:00406.0001/input/input40/event40
+Sep 05 02:34:07	archive	sshd[7591]:	event63  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:34:12	prod1	sshd[10530]:	Received disconnect from 118.73.53.12: 16: Bye Bye [preauth]
+Sep 05 02:34:17	archive	sshd[6038]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:52.0/usb3/3-4/3-4:1.0/0003:1EA7:00526.0001/input/input52/event52
+Sep 05 02:34:23	prod1	sshd[13415]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 02:34:48	ADM	sshd[26497]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event38)
+Sep 05 02:34:52	prod1	sshd[5279]:	systemd: Started User Session 29643 of user pgadmin.
+Sep 05 02:34:54	LabSZ	sshd[10360]:	Received disconnect from 1.1.1.1: 58: disconnected by user
+Sep 05 02:35:16	testvm	sshd[29299]:	kernel: usb 1-16: USB disconnect, device number 2
+Sep 05 02:35:23	RUfus	sshd[9734]:	Received disconnect from 165.71.81.105: 24: Bye Bye [preauth]
+Sep 05 02:36:00	LabSZ	sshd[27854]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:36:07	ADM	sshd[17882]:	Received disconnect from 29.139.108.34: 18: Closed due to user request [preauth]
+Sep 05 02:36:10	archive	sshd[10163]:	pam_unix(sshd:session): session closed for user test
+Sep 05 02:36:19	LabSZ	sshd[11698]:	Received disconnect from 1.1.1.1: 86: disconnected by user
+Sep 05 02:36:21	archive	sshd[24461]:	Received disconnect from 1.1.1.1: 87: disconnected by user
+Sep 05 02:37:08	LabSZ	sshd[17848]:	Did not receive identification string from 8.8.4.4
+Sep 05 02:37:54	archive	sshd[11215]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:37:57	testvm	sshd[17753]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:1.0/usb3/3-4/3-4:1.0/0003:1EA7:0016.0001/input/input1/event1
+Sep 05 02:38:20	LabSZ	sshd[17501]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:38:49	archive	sshd[3594]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 02:38:55	prod1	sshd[2421]:	systemd: Started User Session 23646 of user pgadmin.
+Sep 05 02:39:19	server	sshd[14735]:	Accepted password for pgadmin from 241.112.214.38 port 51912 ssh87
+Sep 05 02:39:36	prod1	sshd[28117]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 02:39:39	testvm	sudo[15790]:	pgadmin : TTY=pts/2 ; PWD=/home/pgadmin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 02:39:52	prod1	sshd[18958]:	Accepted password for backup from 236.104.21.19 port 40063 ssh28
+Sep 05 02:39:56	RUfus	sshd[2966]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 02:39:58	archive	sshd[29726]:	Received disconnect from 1.0.0.1: 22: disconnected by user
+Sep 05 02:40:12	prod1	sshd[3530]:	systemd: Started User Session 18099 of user guest.
+Sep 05 02:40:26	testvm	sshd[15538]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:40:30	prod1	useradd[2312]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 02:40:31	LabSZ	passwd[15142]:	password for user 'hacker' changed
+Sep 05 02:40:42	testvm	sshd[6294]:	Received disconnect from 40.99.59.191: 18: Bye Bye [preauth]
+Sep 05 02:41:26	server	sudo[26062]:	pgadmin : TTY=pts/2 ; PWD=/home/pgadmin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 02:41:42	archive	sshd[19432]:	Did not receive identification string from 8.8.4.4
+Sep 05 02:41:45	archive	sshd[7490]:	Failed password for invalid user 123 from 193.42.109.42 port 58834
+Sep 05 02:41:45	LabSZ	sshd[26627]:	Failed password for invalid user test from 193.42.109.42 port 58883
+Sep 05 02:41:46	archive	sshd[25712]:	Failed password for invalid user oracle from 193.42.109.42 port 56018
+Sep 05 02:41:47	RUfus	sshd[24457]:	Failed password for invalid user ubuntu from 193.42.109.42 port 3862
+Sep 05 02:41:48	LabSZ	sshd[10525]:	Failed password for invalid user ubuntu from 193.42.109.42 port 64670
+Sep 05 02:41:49	archive	sshd[9431]:	Failed password for invalid user backup from 193.42.109.42 port 35029
+Sep 05 02:41:50	server	sshd[5427]:	Failed password for invalid user ubuntu from 193.42.109.42 port 20177
+Sep 05 02:41:50	server	sshd[28511]:	Failed password for ubuntu from 193.42.109.42 port 46373
+Sep 05 02:41:51	prod1	sshd[7986]:	Failed password for ubuntu from 193.42.109.42 port 48444
+Sep 05 02:41:52	LabSZ	sshd[4694]:	Failed password for ubuntu from 193.42.109.42 port 19520
+Sep 05 02:41:53	RUfus	sshd[29103]:	Accepted password for ubuntu from 193.42.109.42 port 29551
+Sep 05 02:42:13	ADM	sshd[15144]:	event43  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:42:43	server	sshd[19842]:	kernel: usb 1-45: USB disconnect, device number 2
+Sep 05 02:42:47	archive	sshd[1766]:	Failed password for invalid user chen from 45.33.32.156 port 3606
+Sep 05 02:42:48	server	sshd[11499]:	Failed password for invalid user webmaster from 45.33.32.156 port 32371
+Sep 05 02:42:49	prod1	sshd[20840]:	Failed password for invalid user test from 45.33.32.156 port 3457
+Sep 05 02:42:50	testvm	sshd[19380]:	Failed password for invalid user admin from 45.33.32.156 port 4757
+Sep 05 02:42:51	server	sshd[17578]:	Failed password for invalid user backup from 45.33.32.156 port 10406
+Sep 05 02:42:52	RUfus	sshd[12729]:	Failed password for invalid user guest from 45.33.32.156 port 41653
+Sep 05 02:42:53	RUfus	sshd[27866]:	Failed password for invalid user guest from 45.33.32.156 port 26791
+Sep 05 02:42:53	server	sshd[29393]:	Failed password for admin from 45.33.32.156 port 11288
+Sep 05 02:42:54	RUfus	sshd[26628]:	Failed password for admin from 45.33.32.156 port 33345
+Sep 05 02:42:55	server	sshd[3011]:	Failed password for admin from 45.33.32.156 port 34238
+Sep 05 02:42:56	RUfus	sshd[28324]:	Failed password for admin from 45.33.32.156 port 59253
+Sep 05 02:42:57	archive	sshd[26856]:	Accepted password for admin from 45.33.32.156 port 48194
+Sep 05 02:43:18	server	sudo[28013]:	pgadmin : TTY=pts/2 ; PWD=/home/pgadmin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 02:43:42	ADM	sshd[16000]:	systemd: Started User Session 15623 of user ubuntu.
+Sep 05 02:44:03	ADM	sshd[25749]:	Received disconnect from 8.8.8.8: 85: disconnected by user
+Sep 05 02:44:58	archive	sshd[7671]:	Did not receive identification string from 8.8.8.8
+Sep 05 02:45:02	archive	sshd[14726]:	Accepted password for ubuntu from 248.192.231.112 port 34094 ssh78
+Sep 05 02:45:08	prod1	sshd[16369]:	systemd: Started User Session 29144 of user root.
+Sep 05 02:45:14	archive	sudo[18884]:	matlab : TTY=pts/2 ; PWD=/home/matlab ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 02:46:15	server	sshd[22104]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 02:46:22	RUfus	sudo[11856]:	backup : TTY=pts/2 ; PWD=/home/backup ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 02:46:52	LabSZ	sshd[28355]:	Invalid user test from 45.33.32.156 port 19933
+Sep 05 02:46:53	RUfus	sshd[13961]:	Invalid user guest from 45.33.32.156 port 55749
+Sep 05 02:46:54	ADM	sshd[15733]:	Invalid user oracle from 45.33.32.156 port 33196
+Sep 05 02:46:56	RUfus	sshd[28906]:	Invalid user backup from 45.33.32.156 port 52692
+Sep 05 02:46:56	ADM	sshd[8084]:	Invalid user deploy from 45.33.32.156 port 18181
+Sep 05 02:46:57	archive	sshd[11252]:	Invalid user user1 from 45.33.32.156 port 58515
+Sep 05 02:46:58	ADM	sshd[7362]:	Invalid user api from 45.33.32.156 port 12265
+Sep 05 02:46:59	LabSZ	sshd[29831]:	Invalid user dbuser from 45.33.32.156 port 60441
+Sep 05 02:47:27	testvm	sshd[11401]:	Invalid user test from 193.42.109.42 port 34789
+Sep 05 02:47:28	LabSZ	sshd[11799]:	Invalid user guest from 193.42.109.42 port 56549
+Sep 05 02:47:29	archive	sshd[6466]:	Invalid user oracle from 193.42.109.42 port 30061
+Sep 05 02:47:30	RUfus	sshd[3782]:	Invalid user backup from 193.42.109.42 port 48512
+Sep 05 02:47:31	RUfus	sshd[15742]:	Invalid user deploy from 193.42.109.42 port 28586
+Sep 05 02:47:32	ADM	sshd[28218]:	Invalid user user1 from 193.42.109.42 port 41591
+Sep 05 02:47:33	testvm	sshd[10747]:	Invalid user api from 193.42.109.42 port 43444
+Sep 05 02:47:34	testvm	sshd[27956]:	Invalid user dbuser from 193.42.109.42 port 48445
+Sep 05 02:47:43	prod1	sshd[17778]:	Received disconnect from 1.1.1.1: 44: disconnected by user
+Sep 05 02:48:21	ADM	sshd[10214]:	Failed password for invalid user root from 129.215.17.15 port 40519
+Sep 05 02:48:22	RUfus	sshd[18060]:	Failed password for invalid user backup from 129.215.17.15 port 45406
+Sep 05 02:48:23	RUfus	sshd[3966]:	Failed password for invalid user 123 from 129.215.17.15 port 13766
+Sep 05 02:48:24	prod1	sshd[26204]:	Failed password for invalid user chen from 129.215.17.15 port 9550
+Sep 05 02:48:24	ADM	sshd[17391]:	Failed password for invalid user matlab from 129.215.17.15 port 34292
+Sep 05 02:48:26	prod1	sshd[11890]:	Failed password for invalid user 123 from 129.215.17.15 port 8041
+Sep 05 02:48:27	server	sshd[9130]:	Failed password for invalid user backup from 129.215.17.15 port 30251
+Sep 05 02:48:28	prod1	sshd[29111]:	Failed password for invalid user ubuntu from 129.215.17.15 port 31678
+Sep 05 02:48:28	prod1	sshd[25053]:	Failed password for invalid user fztu from 129.215.17.15 port 10258
+Sep 05 02:48:29	testvm	sshd[5242]:	Failed password for invalid user backup from 129.215.17.15 port 6052
+Sep 05 02:48:30	archive	sshd[2457]:	Failed password for ubuntu from 129.215.17.15 port 20846
+Sep 05 02:48:31	RUfus	sshd[20309]:	Failed password for ubuntu from 129.215.17.15 port 58820
+Sep 05 02:48:32	prod1	sshd[4087]:	Failed password for ubuntu from 129.215.17.15 port 17758
+Sep 05 02:48:34	archive	sshd[3507]:	Failed password for ubuntu from 129.215.17.15 port 20564
+Sep 05 02:48:34	prod1	sshd[28700]:	Accepted password for ubuntu from 129.215.17.15 port 7474
+Sep 05 02:48:50	ADM	sshd[14757]:	pam_unix(sshd:session): session opened for user fztu by (uid=83)
+Sep 05 02:49:31	testvm	sshd[12976]:	pam_unix(sshd:session): session opened for user fztu by (uid=78)
+Sep 05 02:50:19	prod1	sshd[4142]:	Received disconnect from 85.27.211.1: 24: Bye Bye [preauth]
+Sep 05 02:50:23	LabSZ	sshd[7560]:	Failed password for admin from 45.146.165.111 port 61591
+Sep 05 02:50:24	ADM	sshd[6849]:	Failed password for jdoe from 45.146.165.111 port 33298
+Sep 05 02:50:25	archive	sshd[3036]:	Failed password for support from 45.146.165.111 port 35768
+Sep 05 02:50:27	prod1	sshd[7135]:	Failed password for dev from 45.146.165.111 port 20338
+Sep 05 02:50:28	server	sshd[27745]:	Failed password for test from 45.146.165.111 port 33466
+Sep 05 02:50:29	ADM	sshd[20563]:	Accepted password for support from 45.146.165.111 port 35337
+Sep 05 02:51:01	RUfus	sshd[15502]:	systemd: Started User Session 27664 of user ubuntu.
+Sep 05 02:51:04	testvm	sshd[20655]:	Accepted password for 123 from 11.244.149.108 port 50258 ssh85
+Sep 05 02:51:22	archive	sshd[16414]:	Failed password for invalid user pgadmin from 118.175.93.155 port 49387
+Sep 05 02:51:23	ADM	sshd[21529]:	Failed password for invalid user webmaster from 118.175.93.155 port 30381
+Sep 05 02:51:25	LabSZ	sshd[17346]:	Failed password for invalid user root from 118.175.93.155 port 40506
+Sep 05 02:51:26	LabSZ	sshd[26981]:	Failed password for invalid user webmaster from 118.175.93.155 port 6658
+Sep 05 02:51:27	archive	sshd[21532]:	Failed password for invalid user chen from 118.175.93.155 port 43091
+Sep 05 02:51:29	prod1	sshd[7826]:	Failed password for invalid user matlab from 118.175.93.155 port 62756
+Sep 05 02:51:30	testvm	sshd[12298]:	Failed password for ubuntu from 118.175.93.155 port 2828
+Sep 05 02:51:30	testvm	sshd[15477]:	Failed password for ubuntu from 118.175.93.155 port 27591
+Sep 05 02:51:31	ADM	sshd[17530]:	Failed password for ubuntu from 118.175.93.155 port 15968
+Sep 05 02:51:36	ADM	sshd[14743]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 02:51:51	testvm	sshd[25564]:	Failed password for invalid user test from 197.210.64.133 port 51885
+Sep 05 02:51:51	prod1	sshd[10284]:	Failed password for invalid user fztu from 197.210.64.133 port 7147
+Sep 05 02:51:52	server	sshd[11454]:	Failed password for invalid user webmaster from 197.210.64.133 port 47514
+Sep 05 02:51:53	LabSZ	sshd[12901]:	Failed password for invalid user pgadmin from 197.210.64.133 port 4979
+Sep 05 02:51:55	RUfus	sshd[29328]:	Failed password for invalid user fztu from 197.210.64.133 port 2337
+Sep 05 02:51:56	testvm	sshd[11082]:	Failed password for invalid user fztu from 197.210.64.133 port 54986
+Sep 05 02:51:57	server	sshd[27086]:	Failed password for invalid user ubuntu from 197.210.64.133 port 2460
+Sep 05 02:51:58	server	sshd[18795]:	Failed password for root from 197.210.64.133 port 27511
+Sep 05 02:52:00	ADM	sshd[16726]:	Failed password for root from 197.210.64.133 port 33816
+Sep 05 02:52:01	ADM	sshd[8386]:	Failed password for root from 197.210.64.133 port 43844
+Sep 05 02:52:02	server	sshd[25747]:	Failed password for root from 197.210.64.133 port 1154
+Sep 05 02:52:03	prod1	sshd[29144]:	Accepted password for root from 197.210.64.133 port 42873
+Sep 05 02:52:36	ADM	sshd[19766]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=81)
+Sep 05 02:52:39	testvm	sshd[3242]:	Failed password for invalid user test from 45.146.165.111 port 57936
+Sep 05 02:52:40	server	sshd[9242]:	Failed password for invalid user fztu from 45.146.165.111 port 33482
+Sep 05 02:52:41	RUfus	sshd[11073]:	Failed password for invalid user backup from 45.146.165.111 port 56875
+Sep 05 02:52:42	ADM	sshd[12796]:	Failed password for invalid user root from 45.146.165.111 port 29553
+Sep 05 02:52:43	testvm	sshd[1752]:	Failed password for invalid user backup from 45.146.165.111 port 21668
+Sep 05 02:52:43	archive	sshd[4332]:	Failed password for invalid user test from 45.146.165.111 port 17027
+Sep 05 02:52:44	ADM	sshd[4929]:	Failed password for root from 45.146.165.111 port 32089
+Sep 05 02:52:45	ADM	sshd[16552]:	Failed password for root from 45.146.165.111 port 51282
+Sep 05 02:52:47	prod1	sshd[11019]:	Failed password for root from 45.146.165.111 port 54255
+Sep 05 02:52:48	prod1	sshd[8256]:	Failed password for root from 45.146.165.111 port 65193
+Sep 05 02:52:49	prod1	sshd[9013]:	Accepted password for root from 45.146.165.111 port 5872
+Sep 05 02:53:01	RUfus	sshd[10693]:	pam_unix(sshd:session): session closed for user guest
+Sep 05 02:53:07	server	sshd[4854]:	pam_unix(sshd:session): session opened for user chen by (uid=28)
+Sep 05 02:53:50	prod1	sshd[24640]:	event77  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:53:53	testvm	sshd[6044]:	Did not receive identification string from 1.0.0.1
+Sep 05 02:53:57	testvm	sshd[1058]:	Accepted password for oracle from 193.42.109.42 port 57824
+Sep 05 02:53:57	archive	sudo[5344]:	oracle : TTY=pts/0 ; PWD=/home/oracle ; USER=root ; COMMAND=/bin/bash
+Sep 05 02:54:06	RUfus	sshd[11410]:	Failed password for invalid user backup from 131.103.24.238 port 61661
+Sep 05 02:54:07	prod1	sshd[4606]:	Failed password for invalid user 123 from 131.103.24.238 port 50800
+Sep 05 02:54:08	prod1	sshd[10940]:	Failed password for invalid user backup from 131.103.24.238 port 25118
+Sep 05 02:54:09	RUfus	sshd[6757]:	Failed password for invalid user fztu from 131.103.24.238 port 38459
+Sep 05 02:54:10	LabSZ	sshd[23147]:	Failed password for invalid user test from 131.103.24.238 port 13199
+Sep 05 02:54:11	server	sshd[3204]:	Failed password for invalid user fztu from 131.103.24.238 port 46954
+Sep 05 02:54:12	prod1	sshd[17173]:	Failed password for invalid user admin from 131.103.24.238 port 33418
+Sep 05 02:54:14	RUfus	sshd[3307]:	Failed password for invalid user test from 131.103.24.238 port 2062
+Sep 05 02:54:15	server	sshd[23271]:	Failed password for root from 131.103.24.238 port 18426
+Sep 05 02:54:17	ADM	sshd[8512]:	Failed password for root from 131.103.24.238 port 11689
+Sep 05 02:54:17	RUfus	sshd[5086]:	Failed password for root from 131.103.24.238 port 51848
+Sep 05 02:54:18	server	sshd[3668]:	Accepted password for root from 131.103.24.238 port 9740
+Sep 05 02:54:30	testvm	sshd[21542]:	Received disconnect from 197.149.255.145: 58: Closed due to user request [preauth]
+Sep 05 02:54:50	prod1	sudo[21416]:	admin : TTY=pts/2 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 02:55:03	LabSZ	useradd[17712]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 02:55:04	ADM	passwd[20979]:	password for user 'hacker' changed
+Sep 05 02:56:07	ADM	useradd[10602]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 02:56:08	server	passwd[29327]:	password for user 'hacker' changed
+Sep 05 02:56:24	LabSZ	sshd[14107]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 02:56:34	LabSZ	sshd[15316]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event11)
+Sep 05 02:56:44	LabSZ	sshd[29120]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:56:54	ADM	sshd[14647]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 02:56:57	testvm	sshd[24199]:	Received disconnect from 1.1.1.1: 30: disconnected by user
+Sep 05 02:57:05	archive	sshd[21445]:	Failed password for admin from 45.146.165.111 port 59626
+Sep 05 02:57:07	RUfus	sshd[28081]:	Failed password for jdoe from 45.146.165.111 port 60871
+Sep 05 02:57:09	server	sshd[3547]:	Failed password for support from 45.146.165.111 port 14304
+Sep 05 02:57:10	prod1	sshd[19967]:	Failed password for dev from 45.146.165.111 port 61525
+Sep 05 02:57:12	server	sshd[11500]:	Failed password for test from 45.146.165.111 port 18235
+Sep 05 02:57:13	server	sshd[21529]:	Accepted password for support from 45.146.165.111 port 22282
+Sep 05 02:57:37	testvm	sshd[17680]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event28)
+Sep 05 02:57:41	server	sudo[6986]:	admin : TTY=pts/2 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 02:57:58	testvm	sshd[3050]:	Invalid user test from 197.210.64.133 port 44031
+Sep 05 02:57:58	archive	sshd[26874]:	Invalid user guest from 197.210.64.133 port 48422
+Sep 05 02:57:59	RUfus	sshd[12711]:	Invalid user oracle from 197.210.64.133 port 38497
+Sep 05 02:58:00	prod1	sshd[8981]:	Invalid user backup from 197.210.64.133 port 20952
+Sep 05 02:58:01	archive	sshd[6055]:	Invalid user deploy from 197.210.64.133 port 62301
+Sep 05 02:58:02	testvm	sshd[2722]:	Invalid user user1 from 197.210.64.133 port 45569
+Sep 05 02:58:04	testvm	sshd[1510]:	Invalid user api from 197.210.64.133 port 3445
+Sep 05 02:58:04	prod1	sshd[12320]:	Invalid user dbuser from 197.210.64.133 port 46268
+Sep 05 02:58:35	LabSZ	sshd[23333]:	pam_unix(sshd:session): session opened for user test by (uid=91)
+Sep 05 02:58:45	LabSZ	sshd[11307]:	Received disconnect from 18.217.15.24: 18: Closed due to user request [preauth]
+Sep 05 02:58:47	LabSZ	sshd[25714]:	Received disconnect from 153.223.168.8: 45: Bye Bye [preauth]
+Sep 05 02:59:13	testvm	sshd[7673]:	Did not receive identification string from 8.8.8.8
+Sep 05 02:59:19	RUfus	sshd[2929]:	Failed password for invalid user guest from 118.175.93.155 port 33271
+Sep 05 02:59:20	prod1	sshd[15269]:	Failed password for invalid user backup from 118.175.93.155 port 56932
+Sep 05 02:59:21	testvm	sshd[21741]:	Failed password for invalid user ubuntu from 118.175.93.155 port 11807
+Sep 05 02:59:22	testvm	sshd[6106]:	Failed password for invalid user admin from 118.175.93.155 port 31148
+Sep 05 02:59:22	RUfus	sshd[18078]:	Failed password for invalid user chen from 118.175.93.155 port 16439
+Sep 05 02:59:23	prod1	sshd[15313]:	Failed password for invalid user test from 118.175.93.155 port 7194
+Sep 05 02:59:24	prod1	sshd[20276]:	Failed password for invalid user webmaster from 118.175.93.155 port 25789
+Sep 05 02:59:25	testvm	sshd[4429]:	Failed password for invalid user guest from 118.175.93.155 port 23877
+Sep 05 02:59:25	testvm	sshd[6457]:	Failed password for invalid user oracle from 118.175.93.155 port 30719
+Sep 05 02:59:26	RUfus	sshd[15141]:	Failed password for admin from 118.175.93.155 port 18414
+Sep 05 02:59:27	prod1	sshd[5040]:	Failed password for admin from 118.175.93.155 port 38671
+Sep 05 02:59:29	server	sshd[26054]:	Failed password for admin from 118.175.93.155 port 61245
+Sep 05 02:59:29	testvm	sshd[2087]:	Failed password for admin from 118.175.93.155 port 10243
+Sep 05 02:59:30	prod1	sshd[22447]:	Failed password for admin from 118.175.93.155 port 29625
+Sep 05 02:59:31	testvm	sshd[23426]:	Accepted password for admin from 118.175.93.155 port 56809
+Sep 05 02:59:38	LabSZ	sshd[21304]:	pam_unix(sshd:session): session opened for user guest by (uid=26)
+Sep 05 03:00:38	ADM	sshd[12864]:	Accepted password for 123 from 115.174.89.110 port 22409 ssh75
+Sep 05 03:00:51	testvm	sshd[2414]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 03:00:55	ADM	sshd[10877]:	Did not receive identification string from 1.1.1.1
+Sep 05 03:01:21	archive	sshd[10164]:	event70  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 03:01:26	archive	sshd[12833]:	Received disconnect from 225.134.205.33: 76: Closed due to user request [preauth]
+Sep 05 03:01:30	prod1	sshd[11456]:	Accepted password for pgadmin from 194.193.107.251 port 2426 ssh81
+Sep 05 03:01:33	ADM	sshd[21005]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event77)
+Sep 05 03:03:45	ADM	useradd[22689]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 03:03:46	server	passwd[29785]:	password for user 'hacker' changed
+Sep 05 03:03:57	server	sshd[9129]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 03:04:01	testvm	sshd[25229]:	Received disconnect from 8.8.4.4: 51: disconnected by user
+Sep 05 03:04:19	prod1	sshd[13586]:	Failed password for admin from 193.42.109.42 port 63505
+Sep 05 03:04:20	testvm	sshd[27964]:	Failed password for jdoe from 193.42.109.42 port 41098
+Sep 05 03:04:22	prod1	sshd[28880]:	Failed password for support from 193.42.109.42 port 27637
+Sep 05 03:04:24	ADM	sshd[16480]:	Failed password for dev from 193.42.109.42 port 21796
+Sep 05 03:04:25	ADM	sshd[25581]:	Failed password for test from 193.42.109.42 port 55851
+Sep 05 03:04:27	server	sshd[25026]:	Accepted password for support from 193.42.109.42 port 34529
+Sep 05 03:04:39	ADM	sshd[10442]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 03:05:30	LabSZ	sshd[26846]:	Failed password for invalid user backup from 45.33.32.156 port 1034
+Sep 05 03:05:31	testvm	sshd[2675]:	Failed password for invalid user guest from 45.33.32.156 port 32290
+Sep 05 03:05:32	LabSZ	sshd[5527]:	Failed password for invalid user test from 45.33.32.156 port 46267
+Sep 05 03:05:33	prod1	sshd[7811]:	Failed password for invalid user ubuntu from 45.33.32.156 port 10546
+Sep 05 03:05:34	prod1	sshd[28759]:	Failed password for invalid user chen from 45.33.32.156 port 57538
+Sep 05 03:05:35	server	sshd[14112]:	Failed password for invalid user ubuntu from 45.33.32.156 port 22436
+Sep 05 03:05:36	ADM	sshd[11716]:	Failed password for ubuntu from 45.33.32.156 port 26145
+Sep 05 03:05:37	RUfus	sshd[18841]:	Failed password for ubuntu from 45.33.32.156 port 17949
+Sep 05 03:05:38	prod1	sshd[15723]:	Failed password for ubuntu from 45.33.32.156 port 11790
+Sep 05 03:05:39	RUfus	sshd[27280]:	Failed password for ubuntu from 45.33.32.156 port 38305
+Sep 05 03:05:40	LabSZ	sshd[11327]:	Failed password for ubuntu from 45.33.32.156 port 10508
+Sep 05 03:05:41	prod1	sshd[15986]:	Accepted password for ubuntu from 45.33.32.156 port 46813
+Sep 05 03:32:52	LabSZ	sshd[2177]:	pam_unix(sshd:session): session opened for user guest by (uid=98)
+Sep 05 03:33:12	archive	sudo[14304]:	root : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 03:34:12	LabSZ	sshd[12326]:	Accepted password for chen from 38.211.193.130 port 32162
+Sep 05 03:34:13	LabSZ	sudo[20847]:	chen : TTY=pts/0 ; PWD=/home/chen ; USER=root ; COMMAND=/bin/bash
+Sep 05 03:34:37	RUfus	sshd[25805]:	Received disconnect from 1.1.1.1: 86: disconnected by user
+Sep 05 03:34:39	testvm	sshd[13384]:	event22  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 03:34:42	server	sshd[24436]:	Accepted password for root from 27.185.52.202 port 17120
+Sep 05 03:34:43	LabSZ	sudo[20002]:	root : TTY=pts/0 ; PWD=/home/root ; USER=root ; COMMAND=/bin/bash
+Sep 05 03:34:56	testvm	sshd[12732]:	systemd: Started User Session 2392 of user guest.
+Sep 05 03:35:00	ADM	sshd[20199]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 03:36:41	prod1	sshd[13577]:	Received disconnect from 145.144.183.235: 28: Bye Bye [preauth]
+Sep 05 03:36:56	archive	sshd[10144]:	pam_unix(sshd:session): session opened for user chen by (uid=15)
+Sep 05 03:36:59	LabSZ	sshd[9036]:	Did not receive identification string from 8.8.8.8
+Sep 05 03:37:18	server	sshd[17557]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:80.0/usb3/3-4/3-4:1.0/0003:1EA7:00806.0001/input/input80/event80
+Sep 05 03:37:22	testvm	sshd[11610]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 03:37:29	LabSZ	sshd[23542]:	pam_unix(sshd:session): session closed for user oracle
+Sep 05 03:38:02	testvm	sshd[11143]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:15.0/usb3/3-4/3-4:1.0/0003:1EA7:00156.0001/input/input15/event15
+Sep 05 03:38:09	prod1	sshd[22401]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event92)
+Sep 05 03:38:35	LabSZ	sshd[28977]:	Did not receive identification string from 1.1.1.1
+Sep 05 03:38:37	archive	sshd[9681]:	kernel: usb 1-98: USB disconnect, device number 2
+Sep 05 03:39:08	ADM	sshd[2473]:	Invalid user test from 197.210.64.133 port 23072
+Sep 05 03:39:09	LabSZ	sshd[12640]:	Invalid user guest from 197.210.64.133 port 52690
+Sep 05 03:39:09	archive	sshd[9716]:	Invalid user oracle from 197.210.64.133 port 38316
+Sep 05 03:39:10	archive	sshd[19077]:	Invalid user backup from 197.210.64.133 port 23500
+Sep 05 03:39:11	prod1	sshd[16641]:	Invalid user deploy from 197.210.64.133 port 61127
+Sep 05 03:39:13	RUfus	sshd[26896]:	Invalid user user1 from 197.210.64.133 port 19558
+Sep 05 03:39:14	server	sshd[10551]:	Invalid user api from 197.210.64.133 port 41732
+Sep 05 03:39:16	archive	sshd[27281]:	Invalid user dbuser from 197.210.64.133 port 50650
+Sep 05 08:58:31	LabSZ	sshd[4097]:	Accepted password for chen from 97.75.79.241 port 2352 ssh7
+Sep 05 08:59:45	RUfus	sshd[9255]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:49.0/usb3/3-4/3-4:1.0/0003:1EA7:00496.0001/input/input49/event49
+Sep 05 08:59:48	ADM	sudo[18947]:	123 : TTY=pts/2 ; PWD=/home/123 ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 09:00:01	LabSZ	sshd[29229]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 09:00:04	testvm	sshd[24007]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 09:00:07	RUfus	sshd[22602]:	kernel: usb 1-67: USB disconnect, device number 2
+Sep 05 09:00:09	server	sshd[17265]:	Received disconnect from 8.8.8.8: 48: disconnected by user
+Sep 05 09:18:51	server	sshd[7164]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:18:55	archive	sshd[9835]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:19:07	ADM	sshd[21327]:	kernel: usb 1-40: USB disconnect, device number 2
+Sep 05 09:19:29	ADM	sshd[1480]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:19:32	ADM	useradd[10913]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 09:19:33	server	passwd[22785]:	password for user 'hacker' changed
+Sep 05 09:19:45	LabSZ	sshd[23156]:	pam_unix(sshd:session): session opened for user 123 by (uid=38)
+Sep 05 09:19:55	testvm	sshd[29105]:	systemd: Started User Session 27121 of user ubuntu.
+Sep 05 09:21:40	server	sshd[6779]:	Did not receive identification string from 1.0.0.1
+Sep 05 09:21:54	prod1	sshd[20622]:	Received disconnect from 8.8.8.8: 32: disconnected by user
+Sep 05 09:21:58	ADM	sshd[1307]:	Accepted password for root from 42.77.248.215 port 49056 ssh48
+Sep 05 09:22:15	LabSZ	sshd[27399]:	Received disconnect from 226.171.240.69: 43: Bye Bye [preauth]
+Sep 05 09:22:22	server	sshd[7893]:	kernel: usb 1-63: USB disconnect, device number 2
+Sep 05 09:22:38	archive	sshd[17332]:	event28  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:22:41	archive	sshd[1351]:	Accepted password for backup from 46.73.186.98 port 53671 ssh46
+Sep 05 09:22:43	server	sshd[23106]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 09:22:50	server	sshd[8365]:	systemd: Started User Session 10959 of user matlab.
+Sep 05 09:23:14	ADM	sshd[23357]:	kernel: usb 1-70: USB disconnect, device number 2
+Sep 05 09:23:35	ADM	sshd[1490]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 09:23:37	server	sshd[19987]:	Received disconnect from 14.23.158.172: 44: Bye Bye [preauth]
+Sep 05 09:23:40	testvm	sshd[22951]:	Received disconnect from 22.224.39.21: 90: Bye Bye [preauth]
+Sep 05 09:24:23	archive	sshd[27738]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 09:24:43	prod1	sudo[27253]:	fztu : TTY=pts/2 ; PWD=/home/fztu ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 09:25:14	RUfus	sshd[1671]:	Accepted password for guest from 37.68.71.235 port 64632 ssh13
+Sep 05 09:25:54	ADM	sshd[12286]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:68.0/usb3/3-4/3-4:1.0/0003:1EA7:00686.0001/input/input68/event68
+Sep 05 09:26:00	RUfus	sshd[24245]:	Received disconnect from 208.5.70.87: 44: Closed due to user request [preauth]
+Sep 05 09:26:12	testvm	sshd[28855]:	event94  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:26:59	server	sshd[29877]:	Failed password for admin from 45.119.81.249 port 46875
+Sep 05 09:27:01	LabSZ	sshd[11623]:	Failed password for jdoe from 45.119.81.249 port 62721
+Sep 05 09:27:02	server	sshd[11115]:	Failed password for support from 45.119.81.249 port 48844
+Sep 05 09:27:04	testvm	sshd[16671]:	Failed password for dev from 45.119.81.249 port 31766
+Sep 05 09:27:05	prod1	sshd[26662]:	Failed password for test from 45.119.81.249 port 32438
+Sep 05 09:27:07	LabSZ	sshd[4279]:	Accepted password for support from 45.119.81.249 port 48299
+Sep 05 09:27:15	ADM	sshd[29797]:	Did not receive identification string from 8.8.4.4
+Sep 05 09:27:17	server	sshd[21824]:	event55  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:27:23	testvm	sshd[3551]:	Received disconnect from 4.198.143.31: 77: Bye Bye [preauth]
+Sep 05 09:27:38	archive	sshd[29899]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 09:27:41	archive	sshd[28092]:	pam_unix(sshd:session): session opened for user guest by (uid=56)
+Sep 05 09:27:55	prod1	sudo[16500]:	ubuntu : TTY=pts/2 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 09:28:46	archive	sshd[16488]:	Received disconnect from 8.50.185.152: 76: Bye Bye [preauth]
+Sep 05 09:29:13	RUfus	sudo[24189]:	test : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 09:29:50	prod1	sshd[14891]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:10.0/usb3/3-4/3-4:1.0/0003:1EA7:00106.0001/input/input10/event10
+Sep 05 09:29:57	testvm	sshd[3390]:	Received disconnect from 8.8.4.4: 60: disconnected by user
+Sep 05 09:30:14	RUfus	sshd[20129]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 09:30:16	prod1	sshd[15510]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:30:20	server	sshd[22230]:	Accepted password for ubuntu from 187.111.164.83 port 42882 ssh11
+Sep 05 09:30:32	RUfus	sshd[15465]:	Failed password for admin from 51.159.199.236 port 21597
+Sep 05 09:30:34	testvm	sshd[25402]:	Failed password for jdoe from 51.159.199.236 port 57083
+Sep 05 09:30:36	archive	sshd[6014]:	Failed password for support from 51.159.199.236 port 2506
+Sep 05 09:30:37	testvm	sshd[26355]:	Failed password for dev from 51.159.199.236 port 13244
+Sep 05 09:30:39	testvm	sshd[11060]:	Failed password for test from 51.159.199.236 port 29315
+Sep 05 09:30:40	LabSZ	sshd[18883]:	Accepted password for support from 51.159.199.236 port 45609
+Sep 05 09:31:00	prod1	sshd[13259]:	pam_unix(sshd:session): session opened for user 123 by (uid=93)
+Sep 05 09:31:02	testvm	sshd[3082]:	Did not receive identification string from 1.0.0.1
+Sep 05 09:31:39	RUfus	sshd[22295]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event86)
+Sep 05 09:31:45	RUfus	sshd[28875]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:31:47	prod1	useradd[15959]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 09:31:48	RUfus	passwd[21826]:	password for user 'hacker' changed
+Sep 05 09:32:15	testvm	sshd[13806]:	event86  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:32:22	LabSZ	sshd[29447]:	pam_unix(sshd:session): session opened for user webmaster by (uid=66)
+Sep 05 09:32:24	server	sshd[16710]:	systemd: Started User Session 9503 of user webmaster.
+Sep 05 09:32:28	archive	sshd[14680]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 09:32:54	prod1	sshd[16052]:	Received disconnect from 8.8.4.4: 31: disconnected by user
+Sep 05 09:33:01	RUfus	sshd[24269]:	event52  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:33:40	prod1	sshd[28124]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 09:33:42	RUfus	sshd[15643]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event39)
+Sep 05 09:33:52	ADM	sshd[27587]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:62.0/usb3/3-4/3-4:1.0/0003:1EA7:00626.0001/input/input62/event62
+Sep 05 09:33:56	RUfus	sshd[20867]:	kernel: usb 1-21: USB disconnect, device number 2
+Sep 05 09:34:15	server	useradd[27735]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 09:34:16	testvm	passwd[1135]:	password for user 'hacker' changed
+Sep 05 09:34:44	server	sshd[28803]:	Did not receive identification string from 8.8.8.8
+Sep 05 09:34:48	testvm	sshd[13671]:	Failed password for admin from 62.193.106.227 port 44091
+Sep 05 09:34:49	LabSZ	sshd[27628]:	Failed password for jdoe from 62.193.106.227 port 5494
+Sep 05 09:34:51	server	sshd[14375]:	Failed password for support from 62.193.106.227 port 35462
+Sep 05 09:34:53	archive	sshd[19608]:	Failed password for dev from 62.193.106.227 port 64153
+Sep 05 09:34:55	RUfus	sshd[25755]:	Failed password for test from 62.193.106.227 port 64237
+Sep 05 09:34:57	ADM	sshd[13377]:	Accepted password for support from 62.193.106.227 port 54166
+Sep 05 09:35:37	ADM	sshd[25777]:	Failed password for invalid user pgadmin from 193.32.162.157 port 56778
+Sep 05 09:35:39	archive	sshd[4458]:	Failed password for invalid user webmaster from 193.32.162.157 port 7376
+Sep 05 09:35:39	prod1	sshd[5818]:	Failed password for invalid user fztu from 193.32.162.157 port 59624
+Sep 05 09:35:40	RUfus	sshd[28325]:	Failed password for invalid user webmaster from 193.32.162.157 port 60331
+Sep 05 09:35:41	testvm	sshd[12573]:	Failed password for invalid user matlab from 193.32.162.157 port 18820
+Sep 05 09:35:42	LabSZ	sshd[5074]:	Failed password for invalid user admin from 193.32.162.157 port 49211
+Sep 05 09:35:43	RUfus	sshd[16669]:	Failed password for invalid user admin from 193.32.162.157 port 7685
+Sep 05 09:35:44	RUfus	sshd[13400]:	Failed password for invalid user backup from 193.32.162.157 port 38214
+Sep 05 09:35:45	testvm	sshd[10952]:	Failed password for admin from 193.32.162.157 port 41736
+Sep 05 09:35:47	archive	sshd[4814]:	Failed password for admin from 193.32.162.157 port 44060
+Sep 05 09:35:48	server	sshd[21857]:	Failed password for admin from 193.32.162.157 port 3811
+Sep 05 09:35:49	RUfus	sshd[15906]:	Failed password for admin from 193.32.162.157 port 49924
+Sep 05 09:35:50	RUfus	sshd[9741]:	Failed password for admin from 193.32.162.157 port 37382
+Sep 05 09:35:51	prod1	sshd[4051]:	Accepted password for admin from 193.32.162.157 port 14388
+Sep 05 09:36:19	archive	sudo[11141]:	myservice[700315]: segfault at 000000000000 ip 00007f0a4e4b623a sp 00007ffde1e08a50 error 3 in libc-8.80.so[700315]
+Sep 05 09:36:36	server	sshd[8744]:	pam_unix(sshd:session): session closed for user guest
+Sep 05 09:36:40	ADM	sshd[15855]:	kernel: usb 1-72: USB disconnect, device number 2
+Sep 05 09:37:10	server	sshd[17839]:	kernel: usb 1-15: USB disconnect, device number 2
+Sep 05 09:37:13	ADM	sshd[28836]:	systemd: Started User Session 9895 of user ubuntu.
+Sep 05 09:38:23	testvm	sshd[29494]:	pam_unix(sshd:session): session opened for user 123 by (uid=94)
+Sep 05 09:38:42	ADM	sshd[13521]:	pam_unix(sshd:session): session opened for user root by (uid=67)
+Sep 05 09:40:05	testvm	sshd[2072]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 09:40:14	prod1	sshd[21698]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event80)
+Sep 05 09:40:34	LabSZ	sshd[1314]:	pam_unix(sshd:session): session closed for user test
+Sep 05 09:40:37	LabSZ	sshd[13601]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:40:56	archive	sshd[21957]:	Received disconnect from 142.99.95.241: 79: Closed due to user request [preauth]
+Sep 05 09:40:58	ADM	sshd[18188]:	Received disconnect from 8.8.8.8: 6: disconnected by user
+Sep 05 09:41:10	RUfus	sshd[19482]:	Did not receive identification string from 8.8.4.4
+Sep 05 09:41:32	RUfus	sshd[2819]:	Failed password for admin from 45.176.12.6 port 21323
+Sep 05 09:41:34	testvm	sshd[15562]:	Failed password for jdoe from 45.176.12.6 port 7456
+Sep 05 09:41:36	prod1	sshd[8794]:	Failed password for support from 45.176.12.6 port 43087
+Sep 05 09:42:26	ADM	sshd[12385]:	Received disconnect from 193.99.170.226: 94: Closed due to user request [preauth]
+Sep 05 09:42:39	RUfus	sshd[9079]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:42:41	testvm	sshd[20986]:	Received disconnect from 31.217.53.202: 97: Closed due to user request [preauth]
+Sep 05 09:43:00	archive	sshd[10304]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:29.0/usb3/3-4/3-4:1.0/0003:1EA7:00296.0001/input/input29/event29
+Sep 05 09:43:06	ADM	sshd[21954]:	systemd: Started User Session 23065 of user test.
+Sep 05 09:43:09	archive	sshd[7572]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:43:45	LabSZ	sshd[5039]:	systemd: Started User Session 25029 of user ubuntu.
+Sep 05 09:43:54	testvm	sshd[29271]:	Did not receive identification string from 1.0.0.1
+Sep 05 09:43:59	ADM	sshd[17901]:	Received disconnect from 36.120.71.251: 70: Closed due to user request [preauth]
+Sep 05 09:44:02	archive	sshd[8210]:	pam_unix(sshd:session): session opened for user root by (uid=23)
+Sep 05 09:45:00	testvm	sshd[15205]:	kernel: usb 1-29: USB disconnect, device number 2
+Sep 05 09:45:09	server	sshd[8256]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 09:45:12	RUfus	sshd[17150]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:45:18	ADM	sshd[7306]:	pam_unix(sshd:session): session opened for user root by (uid=83)
+Sep 05 09:45:21	LabSZ	sshd[11099]:	Received disconnect from 91.184.60.108: 24: Bye Bye [preauth]
+Sep 05 09:45:24	prod1	sshd[7211]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:45:28	testvm	sshd[3029]:	Accepted password for pgadmin from 5.176.89.99 port 63256 ssh82
+Sep 05 09:46:00	testvm	sshd[7654]:	Received disconnect from 176.156.190.40: 50: Closed due to user request [preauth]
+Sep 05 09:46:16	LabSZ	sshd[27963]:	systemd: Started User Session 26359 of user test.
+Sep 05 09:46:43	server	sshd[28737]:	kernel: usb 1-3: USB disconnect, device number 2
+Sep 05 09:47:48	prod1	sshd[2844]:	Did not receive identification string from 9.9.9.9
+Sep 05 09:49:51	server	sshd[7491]:	Accepted password for test from 9.147.18.255 port 8662 ssh54
+Sep 05 09:49:57	RUfus	sshd[3953]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:50:03	LabSZ	sshd[17594]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:36.0/usb3/3-4/3-4:1.0/0003:1EA7:00366.0001/input/input36/event36
+Sep 05 09:50:09	testvm	sshd[20160]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:79.0/usb3/3-4/3-4:1.0/0003:1EA7:00796.0001/input/input79/event79
+Sep 05 09:50:18	LabSZ	sshd[14179]:	Received disconnect from 161.116.85.2: 62: Bye Bye [preauth]
+Sep 05 09:50:22	prod1	sudo[4642]:	ubuntu : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 09:50:51	LabSZ	sudo[14775]:	123 : TTY=pts/2 ; PWD=/home/123 ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 09:51:21	server	sshd[17509]:	event44  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:51:23	server	sshd[6965]:	Received disconnect from 105.138.26.88: 58: Closed due to user request [preauth]
+Sep 05 09:52:00	ADM	sshd[20720]:	pam_unix(sshd:session): session opened for user fztu by (uid=25)
+Sep 05 09:52:16	RUfus	sshd[5288]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:1.0/usb3/3-4/3-4:1.0/0003:1EA7:0016.0001/input/input1/event1
+Sep 05 09:52:19	server	sshd[1135]:	Invalid user test from 8.154.1.148 port 54764
+Sep 05 09:52:20	ADM	sshd[17564]:	Invalid user guest from 8.154.1.148 port 23601
+Sep 05 09:52:21	server	sshd[16303]:	Invalid user oracle from 8.154.1.148 port 50387
+Sep 05 09:52:23	prod1	sshd[25705]:	Invalid user backup from 8.154.1.148 port 55968
+Sep 05 09:52:24	ADM	sshd[16414]:	Invalid user deploy from 8.154.1.148 port 54962
+Sep 05 09:52:25	RUfus	sshd[12871]:	Invalid user user1 from 8.154.1.148 port 12369
+Sep 05 09:52:26	ADM	sshd[7886]:	Invalid user api from 8.154.1.148 port 14709
+Sep 05 09:52:27	testvm	sshd[16058]:	Invalid user dbuser from 8.154.1.148 port 1906
+Sep 05 09:52:34	LabSZ	useradd[29231]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 09:52:36	server	passwd[29150]:	password for user 'hacker' changed
+Sep 05 09:52:57	archive	sshd[3318]:	Received disconnect from 62.250.38.43: 73: Bye Bye [preauth]
+Sep 05 09:52:58	testvm	sshd[22965]:	Failed password for admin from 27.254.149.199 port 16933
+Sep 05 09:53:00	LabSZ	sshd[18970]:	Failed password for jdoe from 27.254.149.199 port 6006
+Sep 05 09:53:02	testvm	sshd[24183]:	Failed password for support from 27.254.149.199 port 57592
+Sep 05 09:53:03	archive	sshd[18694]:	Failed password for dev from 27.254.149.199 port 61487
+Sep 05 09:53:05	RUfus	sshd[9341]:	Failed password for test from 27.254.149.199 port 46011
+Sep 05 09:53:06	server	sshd[13993]:	Accepted password for support from 27.254.149.199 port 46089
+Sep 05 09:53:18	archive	sshd[15634]:	kernel: usb 1-47: USB disconnect, device number 2
+Sep 05 09:55:00	ADM	useradd[24750]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 09:55:01	RUfus	passwd[20245]:	password for user 'hacker' changed
+Sep 05 09:55:33	archive	sshd[12457]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:15.0/usb3/3-4/3-4:1.0/0003:1EA7:00156.0001/input/input15/event15
+Sep 05 09:55:40	ADM	sshd[12126]:	Received disconnect from 239.214.182.138: 24: Bye Bye [preauth]
+Sep 05 09:55:47	testvm	useradd[29491]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 09:55:48	ADM	passwd[28868]:	password for user 'hacker' changed
+Sep 05 09:55:57	testvm	sshd[11172]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:56:29	prod1	sshd[10233]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:79.0/usb3/3-4/3-4:1.0/0003:1EA7:00796.0001/input/input79/event79
+Sep 05 09:56:57	LabSZ	sshd[2195]:	Did not receive identification string from 9.9.9.9
+Sep 05 09:58:34	archive	sshd[12837]:	Accepted password for admin from 70.74.75.127 port 37129 ssh58
+Sep 05 09:58:39	LabSZ	sudo[1956]:	kernel: myapp[373436]: segfault at 7f0a00000000 ip 00007f0a4e4c0000 sp 00007ffde1e07000 error 7 in libpthread-3.98.so[7f0a4e480000+19000]
+Sep 05 09:58:58	prod1	sshd[8249]:	Failed password for admin from 45.172.152.74 port 44331
+Sep 05 09:58:59	RUfus	sshd[10078]:	Failed password for jdoe from 45.172.152.74 port 45414
+Sep 05 09:59:01	LabSZ	sshd[3075]:	Failed password for support from 45.172.152.74 port 33040
+Sep 05 09:59:02	LabSZ	sshd[1972]:	Failed password for dev from 45.172.152.74 port 55601
+Sep 05 09:59:04	server	sshd[14707]:	Failed password for test from 45.172.152.74 port 16533
+Sep 05 09:59:05	archive	sshd[19247]:	Accepted password for support from 45.172.152.74 port 57233
+Sep 05 09:59:20	server	sudo[1458]:	test : TTY=pts/2 ; PWD=/home/test ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 09:59:36	prod1	sshd[8080]:	Did not receive identification string from 9.9.9.9
+Sep 05 09:59:42	RUfus	sudo[17501]:	test : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 09:59:54	archive	sshd[10018]:	kernel: usb 1-83: USB disconnect, device number 2
+Sep 05 10:00:32	RUfus	sshd[2657]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:00:34	prod1	sshd[22571]:	systemd: Started User Session 28786 of user pgadmin.
+Sep 05 10:01:09	archive	sshd[29726]:	kernel: usb 1-61: USB disconnect, device number 2
+Sep 05 10:01:23	archive	sshd[4585]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:01:29	archive	sshd[8713]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:01:35	testvm	sshd[19754]:	pam_unix(sshd:session): session opened for user root by (uid=95)
+Sep 05 10:01:39	LabSZ	sshd[9606]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:02:33	archive	sshd[1610]:	Accepted password for fztu from 47.236.76.100 port 37760
+Sep 05 10:02:34	ADM	sudo[24805]:	fztu : TTY=pts/0 ; PWD=/home/fztu ; USER=root ; COMMAND=/bin/bash
+Sep 05 10:02:43	server	sshd[23509]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event36)
+Sep 05 10:02:50	archive	sshd[15021]:	Received disconnect from 231.106.254.33: 52: Closed due to user request [preauth]
+Sep 05 10:02:52	LabSZ	sshd[25893]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=84)
+Sep 05 10:03:19	server	sshd[7815]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:03:28	archive	sshd[20357]:	Received disconnect from 118.43.44.12: 1: Bye Bye [preauth]
+Sep 05 10:03:47	archive	sshd[12286]:	Received disconnect from 157.154.181.3: 77: Closed due to user request [preauth]
+Sep 05 10:04:09	archive	sshd[28783]:	Failed password for admin from 45.79.181.223 port 41817
+Sep 05 10:04:11	archive	sshd[20435]:	Failed password for jdoe from 45.79.181.223 port 53668
+Sep 05 10:04:12	server	sshd[19562]:	Failed password for support from 45.79.181.223 port 45650
+Sep 05 10:04:14	archive	sshd[7703]:	Failed password for dev from 45.79.181.223 port 23375
+Sep 05 10:04:15	ADM	sshd[11138]:	Failed password for test from 45.79.181.223 port 19259
+Sep 05 10:04:17	RUfus	sshd[29214]:	Accepted password for support from 45.79.181.223 port 12579
+Sep 05 10:04:32	prod1	sshd[12762]:	Did not receive identification string from 1.1.1.1
+Sep 05 10:05:02	server	sshd[20830]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:05:18	RUfus	sshd[17976]:	Did not receive identification string from 9.9.9.9
+Sep 05 10:05:24	server	sshd[19331]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:06:05	prod1	sshd[7425]:	Failed password for admin from 14.63.160.31 port 25082
+Sep 05 10:06:06	testvm	sshd[22571]:	Failed password for jdoe from 14.63.160.31 port 39405
+Sep 05 10:06:08	RUfus	sshd[18559]:	Failed password for support from 14.63.160.31 port 52172
+Sep 05 10:06:09	LabSZ	sshd[14740]:	Failed password for dev from 14.63.160.31 port 19583
+Sep 05 10:06:11	server	sshd[10478]:	Failed password for test from 14.63.160.31 port 19847
+Sep 05 10:06:13	prod1	sshd[17989]:	Accepted password for support from 14.63.160.31 port 50504
+Sep 05 10:06:37	prod1	sshd[26711]:	Invalid user test from 34.123.181.51 port 17498
+Sep 05 10:06:38	testvm	sshd[20877]:	Invalid user guest from 34.123.181.51 port 31628
+Sep 05 10:06:39	LabSZ	sshd[16944]:	Invalid user oracle from 34.123.181.51 port 9227
+Sep 05 10:06:40	archive	sshd[18327]:	Invalid user backup from 34.123.181.51 port 46738
+Sep 05 10:06:42	ADM	sshd[17773]:	Invalid user deploy from 34.123.181.51 port 1253
+Sep 05 10:06:42	server	sshd[12110]:	Invalid user user1 from 34.123.181.51 port 7266
+Sep 05 10:06:44	RUfus	sshd[20374]:	Invalid user api from 34.123.181.51 port 48547
+Sep 05 10:06:45	archive	sshd[15538]:	Invalid user dbuser from 34.123.181.51 port 10688
+Sep 05 10:06:57	testvm	sshd[2624]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:85.0/usb3/3-4/3-4:1.0/0003:1EA7:00856.0001/input/input85/event85
+Sep 05 10:07:15	ADM	sshd[25390]:	event57  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:07:39	testvm	sshd[6044]:	Invalid user test from 47.236.76.100 port 10781
+Sep 05 10:07:39	RUfus	sshd[20990]:	Invalid user guest from 47.236.76.100 port 63731
+Sep 05 10:07:40	testvm	sshd[24412]:	Invalid user oracle from 47.236.76.100 port 39920
+Sep 05 10:07:42	server	sshd[5366]:	Invalid user backup from 47.236.76.100 port 4409
+Sep 05 10:07:43	RUfus	sshd[10688]:	Invalid user deploy from 47.236.76.100 port 47923
+Sep 05 10:07:43	RUfus	sshd[9461]:	Invalid user user1 from 47.236.76.100 port 56434
+Sep 05 10:07:44	RUfus	sshd[9155]:	Invalid user api from 47.236.76.100 port 23040
+Sep 05 10:07:45	archive	sshd[13305]:	Invalid user dbuser from 47.236.76.100 port 35352
+Sep 05 10:08:22	ADM	sshd[25218]:	kernel: usb 1-45: USB disconnect, device number 2
+Sep 05 10:08:37	ADM	sshd[13206]:	Received disconnect from 8.56.50.196: 56: Bye Bye [preauth]
+Sep 05 10:08:42	testvm	sshd[2447]:	systemd: Started User Session 26142 of user fztu.
+Sep 05 10:09:18	ADM	sshd[13508]:	Received disconnect from 8.8.4.4: 89: disconnected by user
+Sep 05 10:10:25	LabSZ	sshd[28053]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event52)
+Sep 05 10:10:27	prod1	sshd[15416]:	Received disconnect from 9.9.9.9: 63: disconnected by user
+Sep 05 10:10:32	RUfus	sshd[21243]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 10:10:37	server	sshd[14488]:	pam_unix(sshd:session): session closed for user oracle
+Sep 05 10:10:41	archive	sshd[8971]:	Received disconnect from 199.103.105.35: 60: Bye Bye [preauth]
+Sep 05 10:10:47	testvm	sshd[29399]:	Failed password for admin from 31.58.87.34 port 13952
+Sep 05 10:10:49	RUfus	sshd[10208]:	Failed password for jdoe from 31.58.87.34 port 47705
+Sep 05 10:10:50	prod1	sshd[14591]:	Failed password for support from 31.58.87.34 port 24505
+Sep 05 10:10:51	RUfus	sshd[9520]:	Failed password for dev from 31.58.87.34 port 29748
+Sep 05 10:10:52	testvm	sshd[9600]:	Failed password for test from 31.58.87.34 port 1143
+Sep 05 10:10:54	server	sshd[3051]:	Accepted password for support from 31.58.87.34 port 60665
+Sep 05 10:11:01	ADM	sshd[4692]:	Received disconnect from 34.15.255.29: 91: Bye Bye [preauth]
+Sep 05 10:11:09	LabSZ	sshd[21932]:	Received disconnect from 1.1.1.1: 82: disconnected by user
+Sep 05 10:13:08	LabSZ	sshd[22756]:	Accepted password for test from 12.156.67.18 port 44153
+Sep 05 10:13:08	server	sudo[13836]:	test : TTY=pts/0 ; PWD=/home/test ; USER=root ; COMMAND=/bin/bash
+Sep 05 10:13:23	ADM	sshd[25822]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 10:13:29	server	sshd[15132]:	Received disconnect from 132.19.191.6: 99: Closed due to user request [preauth]
+Sep 05 10:13:32	prod1	sshd[6002]:	kernel: usb 1-54: USB disconnect, device number 2
+Sep 05 10:13:50	testvm	sshd[21480]:	Invalid user test from 86.54.31.42 port 37412
+Sep 05 10:13:51	testvm	sshd[7308]:	Invalid user guest from 86.54.31.42 port 63541
+Sep 05 10:13:53	prod1	sshd[9849]:	Invalid user oracle from 86.54.31.42 port 1219
+Sep 05 10:13:54	server	sshd[9891]:	Invalid user backup from 86.54.31.42 port 38533
+Sep 05 10:13:55	testvm	sshd[28185]:	Invalid user deploy from 86.54.31.42 port 27718
+Sep 05 10:13:56	server	sshd[3688]:	Invalid user user1 from 86.54.31.42 port 25090
+Sep 05 10:13:58	LabSZ	sshd[18530]:	Invalid user api from 86.54.31.42 port 32500
+Sep 05 10:13:59	prod1	sshd[19041]:	Invalid user dbuser from 86.54.31.42 port 52482
+Sep 05 10:14:48	ADM	sshd[10154]:	Failed password for invalid user test from 27.254.149.199 port 27212
+Sep 05 10:14:49	server	sshd[15494]:	Failed password for invalid user test from 27.254.149.199 port 50715
+Sep 05 10:14:50	RUfus	sshd[25305]:	Failed password for invalid user webmaster from 27.254.149.199 port 22654
+Sep 05 10:14:51	ADM	sshd[24344]:	Failed password for invalid user fztu from 27.254.149.199 port 53935
+Sep 05 10:14:52	prod1	sshd[25644]:	Failed password for invalid user pgadmin from 27.254.149.199 port 62095
+Sep 05 10:14:53	server	sshd[11263]:	Failed password for invalid user chen from 27.254.149.199 port 61505
+Sep 05 10:14:54	RUfus	sshd[7460]:	Failed password for invalid user guest from 27.254.149.199 port 2036
+Sep 05 10:14:55	archive	sshd[5089]:	Failed password for invalid user matlab from 27.254.149.199 port 64908
+Sep 05 10:14:56	RUfus	sshd[17785]:	Failed password for admin from 27.254.149.199 port 52860
+Sep 05 10:14:57	archive	sshd[29832]:	Failed password for admin from 27.254.149.199 port 46927
+Sep 05 10:14:58	archive	sshd[6704]:	Failed password for admin from 27.254.149.199 port 45668
+Sep 05 10:15:00	RUfus	sshd[22273]:	Accepted password for admin from 27.254.149.199 port 18228
+Sep 05 10:15:19	LabSZ	sshd[14858]:	pam_unix(sshd:session): session opened for user webmaster by (uid=62)
+Sep 05 10:15:28	ADM	sshd[15643]:	Accepted password for backup from 14.46.152.6 port 8709 ssh35
+Sep 05 10:15:32	testvm	sudo[3776]:	test : TTY=pts/2 ; PWD=/home/test ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 10:16:01	ADM	sudo[15470]:	sudo: pam_unix(sudo:auth): authentication failure; logname=ubuntu1 uid=867082 euid=4 tty=/dev/pts/2 ruser=user1 rhost=  user=root
+Sep 05 10:16:33	archive	sshd[29819]:	pam_unix(sshd:session): session opened for user backup by (uid=8)
+Sep 05 10:16:39	RUfus	sshd[7746]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 10:16:42	ADM	sshd[19765]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 10:16:49	RUfus	sshd[11350]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 10:17:15	RUfus	sshd[1403]:	Received disconnect from 21.189.180.161: 97: Closed due to user request [preauth]
+Sep 05 10:17:21	LabSZ	sshd[10331]:	Accepted password for oracle from 223.124.4.147 port 57018 ssh96
+Sep 05 10:17:27	archive	sshd[7977]:	event5  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:17:30	prod1	sshd[13371]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event46)
+Sep 05 10:17:50	prod1	sshd[16638]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=26)
+Sep 05 10:17:58	LabSZ	sshd[5682]:	Received disconnect from 160.18.41.146: 11: Closed due to user request [preauth]
+Sep 05 10:18:49	server	sshd[24045]:	Did not receive identification string from 1.0.0.1
+Sep 05 10:18:51	testvm	sshd[25024]:	Accepted password for guest from 200.195.13.47 port 1672 ssh88
+Sep 05 10:19:06	LabSZ	sshd[25429]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 05 10:19:36	LabSZ	sshd[19550]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:21.0/usb3/3-4/3-4:1.0/0003:1EA7:00216.0001/input/input21/event21
+Sep 05 10:20:15	ADM	sshd[10408]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=19)
+Sep 05 10:20:17	testvm	sshd[8590]:	Received disconnect from 8.8.4.4: 12: disconnected by user
+Sep 05 10:20:28	testvm	sshd[20779]:	Failed password for admin from 2.59.22.234 port 29959
+Sep 05 10:20:30	LabSZ	sshd[12927]:	Failed password for jdoe from 2.59.22.234 port 2792
+Sep 05 10:20:31	prod1	sshd[23847]:	Failed password for support from 2.59.22.234 port 35318
+Sep 05 10:20:33	RUfus	sshd[20182]:	Failed password for dev from 2.59.22.234 port 39849
+Sep 05 10:20:34	server	sshd[22482]:	Failed password for test from 2.59.22.234 port 54742
+Sep 05 10:20:36	testvm	sshd[26859]:	Accepted password for support from 2.59.22.234 port 56679
+Sep 05 10:21:05	archive	sshd[24363]:	Received disconnect from 8.8.4.4: 62: disconnected by user
+Sep 05 10:21:07	ADM	sudo[15797]:	admin : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 10:21:28	RUfus	sudo[3100]:	guest : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 10:21:49	prod1	sshd[17319]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=23)
+Sep 05 10:21:52	server	sshd[28542]:	systemd: Started User Session 1436 of user admin.
+Sep 05 10:21:57	ADM	sshd[16716]:	systemd: Started User Session 18659 of user fztu.
+Sep 05 10:22:01	server	useradd[23038]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 10:22:02	ADM	passwd[1793]:	password for user 'hacker' changed
+Sep 05 10:22:32	testvm	sshd[15424]:	kernel: usb 1-6: USB disconnect, device number 2
+Sep 05 10:23:16	testvm	sshd[4818]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:23:28	server	sshd[3386]:	pam_unix(sshd:session): session opened for user root by (uid=74)
+Sep 05 10:23:41	ADM	sshd[6677]:	Accepted password for pgadmin from 33.168.221.37 port 8334 ssh37
+Sep 05 10:23:54	archive	sshd[17341]:	pam_unix(sshd:session): session closed for user chen
+Sep 05 10:23:58	ADM	sshd[14200]:	Did not receive identification string from 8.8.8.8
+Sep 05 10:24:04	ADM	sshd[18244]:	pam_unix(sshd:session): session opened for user fztu by (uid=87)
+Sep 05 10:24:20	testvm	sshd[21399]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:30.0/usb3/3-4/3-4:1.0/0003:1EA7:00306.0001/input/input30/event30
+Sep 05 10:24:25	testvm	sshd[4267]:	Failed password for invalid user chen from 60.199.224.2 port 54593
+Sep 05 10:24:27	prod1	sshd[17705]:	Failed password for invalid user root from 60.199.224.2 port 6600
+Sep 05 10:24:28	archive	sshd[3271]:	Failed password for invalid user backup from 60.199.224.2 port 52100
+Sep 05 10:24:29	archive	sshd[11688]:	Failed password for invalid user root from 60.199.224.2 port 36502
+Sep 05 10:24:30	ADM	sshd[29378]:	Failed password for invalid user oracle from 60.199.224.2 port 37001
+Sep 05 10:24:31	ADM	sshd[21149]:	Failed password for admin from 60.199.224.2 port 56068
+Sep 05 10:24:32	ADM	sshd[5181]:	Failed password for admin from 60.199.224.2 port 24457
+Sep 05 10:24:32	LabSZ	sshd[2092]:	Failed password for admin from 60.199.224.2 port 55966
+Sep 05 10:24:34	ADM	sshd[17806]:	Accepted password for admin from 60.199.224.2 port 58310
+Sep 05 10:24:44	ADM	sshd[29104]:	Did not receive identification string from 9.9.9.9
+Sep 05 10:24:50	prod1	sshd[28079]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event12)
+Sep 05 10:25:01	LabSZ	sshd[23893]:	kernel: usb 1-64: USB disconnect, device number 2
+Sep 05 10:25:14	server	sshd[5096]:	Received disconnect from 8.8.4.4: 61: disconnected by user
+Sep 05 10:25:24	testvm	sshd[17650]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:64.0/usb3/3-4/3-4:1.0/0003:1EA7:00646.0001/input/input64/event64
+Sep 05 10:25:41	testvm	sshd[6985]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:38.0/usb3/3-4/3-4:1.0/0003:1EA7:00386.0001/input/input38/event38
+Sep 05 10:26:32	ADM	sshd[5682]:	event52  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:26:38	server	sshd[13020]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event76)
+Sep 05 10:26:48	archive	sshd[16474]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:59.0/usb3/3-4/3-4:1.0/0003:1EA7:00596.0001/input/input59/event59
+Sep 05 10:27:02	ADM	sshd[22847]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 05 10:27:41	LabSZ	sshd[18489]:	Received disconnect from 225.209.79.31: 11: Closed due to user request [preauth]
+Sep 05 10:28:05	ADM	sshd[29787]:	Accepted password for guest from 168.34.242.10 port 24536 ssh74
+Sep 05 10:28:14	LabSZ	sshd[6609]:	Failed password for invalid user backup from 14.29.198.130 port 53019
+Sep 05 10:28:15	testvm	sshd[16766]:	Failed password for invalid user oracle from 14.29.198.130 port 1451
+Sep 05 10:28:16	testvm	sshd[5864]:	Failed password for invalid user root from 14.29.198.130 port 15242
+Sep 05 10:28:17	RUfus	sshd[14906]:	Failed password for invalid user admin from 14.29.198.130 port 46362
+Sep 05 10:28:18	archive	sshd[29855]:	Failed password for invalid user backup from 14.29.198.130 port 48013
+Sep 05 10:28:18	LabSZ	sshd[28176]:	Failed password for invalid user webmaster from 14.29.198.130 port 13248
+Sep 05 10:28:19	server	sshd[19460]:	Failed password for invalid user oracle from 14.29.198.130 port 30226
+Sep 05 10:28:20	ADM	sshd[21511]:	Failed password for invalid user chen from 14.29.198.130 port 44773
+Sep 05 10:28:20	testvm	sshd[17801]:	Failed password for invalid user pgadmin from 14.29.198.130 port 8891
+Sep 05 10:28:22	LabSZ	sshd[28147]:	Failed password for root from 14.29.198.130 port 63665
+Sep 05 10:28:23	archive	sshd[27541]:	Failed password for root from 14.29.198.130 port 13524
+Sep 05 10:28:24	testvm	sshd[6514]:	Failed password for root from 14.29.198.130 port 36070
+Sep 05 10:28:25	RUfus	sshd[24292]:	Failed password for root from 14.29.198.130 port 57780
+Sep 05 10:28:26	testvm	sshd[9989]:	Accepted password for root from 14.29.198.130 port 62752
+Sep 05 10:28:37	testvm	sshd[25694]:	Received disconnect from 1.1.1.1: 74: disconnected by user
+Sep 05 10:28:57	ADM	sshd[14452]:	Received disconnect from 136.48.119.215: 27: Bye Bye [preauth]
+Sep 05 10:29:36	ADM	sshd[3193]:	Received disconnect from 248.138.232.234: 45: Closed due to user request [preauth]
+Sep 05 10:29:39	server	sshd[2333]:	Received disconnect from 215.108.161.129: 88: Closed due to user request [preauth]
+Sep 05 10:29:53	ADM	sshd[28339]:	systemd: Started User Session 29324 of user fztu.
+Sep 05 10:29:55	archive	sshd[19011]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 05 10:29:58	testvm	sudo[18725]:	pgadmin : TTY=pts/2 ; PWD=/home/pgadmin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 10:30:08	testvm	sshd[10670]:	Accepted password for fztu from 50.6.7.7 port 54012
+Sep 05 10:30:09	ADM	sudo[29673]:	fztu : TTY=pts/0 ; PWD=/home/fztu ; USER=root ; COMMAND=/bin/bash
+Sep 05 10:30:23	prod1	sshd[27923]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:30:26	ADM	sshd[14157]:	Failed password for invalid user oracle from 66.240.219.146 port 1155
+Sep 05 10:30:27	RUfus	sshd[4828]:	Failed password for invalid user pgadmin from 66.240.219.146 port 28774
+Sep 05 10:30:28	archive	sshd[18976]:	Failed password for invalid user matlab from 66.240.219.146 port 17146
+Sep 05 10:30:29	RUfus	sshd[25463]:	Failed password for invalid user chen from 66.240.219.146 port 34426
+Sep 05 10:30:30	RUfus	sshd[15728]:	Failed password for invalid user guest from 66.240.219.146 port 25804
+Sep 05 10:30:31	testvm	sshd[8056]:	Failed password for ubuntu from 66.240.219.146 port 31964
+Sep 05 10:30:32	RUfus	sshd[8352]:	Failed password for ubuntu from 66.240.219.146 port 48015
+Sep 05 10:30:33	LabSZ	sshd[9240]:	Failed password for ubuntu from 66.240.219.146 port 47231
+Sep 05 10:30:34	LabSZ	sshd[18816]:	Failed password for ubuntu from 66.240.219.146 port 3512
+Sep 05 10:30:34	archive	sshd[17311]:	Failed password for ubuntu from 66.240.219.146 port 3083
+Sep 05 10:30:36	testvm	sshd[24402]:	Accepted password for ubuntu from 66.240.219.146 port 57081
+Sep 05 10:30:46	server	sshd[29927]:	pam_unix(sshd:session): session closed for user backup
+Sep 05 10:31:06	testvm	sshd[1620]:	Invalid user test from 103.197.144.1 port 57448
+Sep 05 10:31:07	server	sshd[16830]:	Invalid user guest from 103.197.144.1 port 8416
+Sep 05 10:31:08	prod1	sshd[22594]:	Invalid user oracle from 103.197.144.1 port 12153
+Sep 05 10:31:08	prod1	sshd[2763]:	Invalid user backup from 103.197.144.1 port 40752
+Sep 05 10:31:09	archive	sshd[11508]:	Invalid user deploy from 103.197.144.1 port 33831
+Sep 05 10:31:10	server	sshd[26895]:	Invalid user user1 from 103.197.144.1 port 50787
+Sep 05 10:31:11	LabSZ	sshd[23756]:	Invalid user api from 103.197.144.1 port 49149
+Sep 05 10:31:12	prod1	sshd[3503]:	Invalid user dbuser from 103.197.144.1 port 63740
+Sep 05 10:31:50	server	sshd[8213]:	Did not receive identification string from 9.9.9.9
+Sep 05 10:32:10	archive	sshd[10726]:	Received disconnect from 2.43.148.85: 33: Bye Bye [preauth]
+Sep 05 10:32:18	prod1	sshd[7400]:	Received disconnect from 1.1.1.1: 56: disconnected by user
+Sep 05 10:32:21	testvm	sshd[7008]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event47)
+Sep 05 10:32:36	LabSZ	sshd[2415]:	Invalid user test from 80.94.93.119 port 38311
+Sep 05 10:32:37	RUfus	sshd[29065]:	Invalid user guest from 80.94.93.119 port 28686
+Sep 05 10:32:38	prod1	sshd[9249]:	Invalid user oracle from 80.94.93.119 port 19395
+Sep 05 10:32:39	server	sshd[1650]:	Invalid user backup from 80.94.93.119 port 4214
+Sep 05 10:32:40	LabSZ	sshd[15371]:	Invalid user deploy from 80.94.93.119 port 24767
+Sep 05 10:32:40	prod1	sshd[17903]:	Invalid user user1 from 80.94.93.119 port 48904
+Sep 05 10:32:41	ADM	sshd[2961]:	Invalid user api from 80.94.93.119 port 23572
+Sep 05 10:32:43	server	sshd[26852]:	Invalid user dbuser from 80.94.93.119 port 45747
+Sep 05 10:32:58	testvm	sshd[6455]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event81)
+Sep 05 10:33:22	testvm	sshd[14327]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event86)
+Sep 05 10:33:41	archive	sshd[25300]:	kernel: usb 1-24: USB disconnect, device number 2
+Sep 05 10:33:43	RUfus	sshd[8526]:	kernel: usb 1-58: USB disconnect, device number 2
+Sep 05 10:34:23	server	sudo[17912]:	root : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 10:34:38	ADM	sshd[16231]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:34:44	testvm	sshd[18081]:	Received disconnect from 9.9.9.9: 80: disconnected by user
+Sep 05 10:35:02	server	sshd[20020]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event45)
+Sep 05 10:35:44	testvm	useradd[3083]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 10:35:44	LabSZ	passwd[3238]:	password for user 'hacker' changed
+Sep 05 10:36:19	RUfus	sudo[18360]:	guest : TTY=pts/2 ; PWD=/home/guest ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 10:36:31	server	sshd[29376]:	Invalid user test from 80.82.77.33 port 50011
+Sep 05 10:36:32	server	sshd[4917]:	Invalid user guest from 80.82.77.33 port 41876
+Sep 05 10:36:32	testvm	sshd[27895]:	Invalid user oracle from 80.82.77.33 port 61303
+Sep 05 10:36:33	testvm	sshd[12644]:	Invalid user backup from 80.82.77.33 port 64844
+Sep 05 10:36:34	ADM	sshd[14431]:	Invalid user deploy from 80.82.77.33 port 3891
+Sep 05 10:36:35	archive	sshd[13135]:	Invalid user user1 from 80.82.77.33 port 30076
+Sep 05 10:36:36	prod1	sshd[19300]:	Invalid user api from 80.82.77.33 port 11102
+Sep 05 10:36:37	prod1	sshd[14566]:	Invalid user dbuser from 80.82.77.33 port 2371
+Sep 05 10:36:56	RUfus	sshd[9909]:	systemd: Started User Session 2317 of user oracle.
+Sep 05 10:37:02	archive	sshd[8059]:	Received disconnect from 148.190.2.227: 20: Closed due to user request [preauth]
+Sep 05 10:37:32	testvm	sshd[16835]:	systemd: Started User Session 16495 of user test.
+Sep 05 10:37:36	prod1	sshd[12962]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 10:37:56	prod1	sshd[4347]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event40)
+Sep 05 10:38:03	prod1	sshd[11102]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event63)
+Sep 05 10:38:06	testvm	useradd[26734]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 10:38:07	prod1	passwd[9977]:	password for user 'hacker' changed
+Sep 05 10:38:17	testvm	sudo[15594]:	oracle : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 10:38:42	server	sshd[5704]:	Did not receive identification string from 1.1.1.1
+Sep 05 10:39:00	RUfus	sshd[7358]:	Received disconnect from 124.120.154.202: 33: Bye Bye [preauth]
+Sep 05 10:39:15	archive	sshd[15405]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:39:39	testvm	sshd[14974]:	kernel: usb 1-64: USB disconnect, device number 2
+Sep 05 10:39:42	LabSZ	sshd[10541]:	Received disconnect from 143.70.37.61: 63: Closed due to user request [preauth]
+Sep 05 10:39:56	server	sshd[24792]:	event29  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:40:12	ADM	sshd[26100]:	systemd: Started User Session 24236 of user backup.
+Sep 05 10:40:56	prod1	sshd[19708]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:41:00	archive	sshd[4045]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:9.0/usb3/3-4/3-4:1.0/0003:1EA7:0096.0001/input/input9/event9
+Sep 05 10:42:27	ADM	sshd[2344]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:42:33	prod1	sshd[1700]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 10:45:06	prod1	sshd[24060]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event54)
+Sep 05 10:45:10	ADM	sudo[7677]:	123 : TTY=pts/2 ; PWD=/home/123 ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 10:45:36	prod1	sshd[25632]:	systemd: Started User Session 6270 of user pgadmin.
+Sep 05 10:45:41	RUfus	sshd[3634]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:45:44	LabSZ	sshd[22527]:	Received disconnect from 255.165.159.141: 72: Closed due to user request [preauth]
+Sep 05 10:46:22	RUfus	sshd[5996]:	Received disconnect from 8.8.8.8: 84: disconnected by user
+Sep 05 10:46:25	prod1	sshd[4421]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event24)
+Sep 05 10:46:59	archive	sshd[4670]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event42)
+Sep 05 10:47:06	RUfus	sshd[2960]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 10:47:11	RUfus	sshd[6764]:	Accepted password for pgadmin from 89.30.35.31 port 63716 ssh80
+Sep 05 10:48:12	server	sshd[18675]:	pam_unix(sshd:session): session opened for user guest by (uid=57)
+Sep 05 10:48:14	testvm	sshd[12378]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 10:48:37	archive	useradd[21424]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 10:48:38	archive	passwd[27556]:	password for user 'hacker' changed
+Sep 05 10:48:54	RUfus	sshd[4902]:	pam_unix(sshd:session): session opened for user guest by (uid=62)
+Sep 05 10:49:04	ADM	sshd[26290]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event25)
+Sep 05 10:49:07	LabSZ	sshd[20449]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 10:49:17	ADM	sshd[16283]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:92.0/usb3/3-4/3-4:1.0/0003:1EA7:00926.0001/input/input92/event92
+Sep 05 10:49:51	ADM	sudo[9135]:	webmaster : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 10:50:09	archive	sshd[15478]:	Received disconnect from 142.246.8.211: 38: Closed due to user request [preauth]
+Sep 05 10:50:12	ADM	sudo[22765]:	test : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 10:50:42	archive	sshd[8932]:	systemd: Started User Session 7869 of user admin.
+Sep 05 10:52:10	archive	sshd[20349]:	event13  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:52:13	ADM	sudo[21722]:	root : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 10:52:31	archive	sshd[17548]:	Accepted password for webmaster from 117.6.44.221 port 10595
+Sep 05 10:52:32	archive	sudo[11226]:	webmaster : TTY=pts/0 ; PWD=/home/webmaster ; USER=root ; COMMAND=/bin/bash
+Sep 05 10:52:54	server	sshd[6530]:	Accepted password for fztu from 45.146.165.111 port 32890
+Sep 05 10:52:55	prod1	sudo[13812]:	fztu : TTY=pts/0 ; PWD=/home/fztu ; USER=root ; COMMAND=/bin/bash
+Sep 05 10:53:30	RUfus	sshd[27317]:	systemd: Started User Session 2681 of user ubuntu.
+Sep 05 10:53:32	prod1	sshd[20235]:	pam_unix(sshd:session): session opened for user chen by (uid=50)
+Sep 05 10:53:35	server	sshd[9483]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:54:02	RUfus	sshd[7050]:	Did not receive identification string from 9.9.9.9
+Sep 05 10:54:17	LabSZ	sshd[12087]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:18.0/usb3/3-4/3-4:1.0/0003:1EA7:00186.0001/input/input18/event18
+Sep 05 10:54:37	LabSZ	sshd[8685]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:54:57	server	sshd[23227]:	event76  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:55:21	RUfus	sshd[15274]:	pam_unix(sshd:session): session opened for user root by (uid=83)
+Sep 05 10:55:55	RUfus	sshd[26050]:	Did not receive identification string from 8.8.4.4
+Sep 05 10:55:59	prod1	sshd[15685]:	kernel: usb 1-15: USB disconnect, device number 2
+Sep 05 10:56:20	RUfus	sshd[24119]:	Received disconnect from 1.1.1.1: 78: disconnected by user
+Sep 05 10:56:32	ADM	sshd[19479]:	pam_unix(sshd:session): session closed for user test
+Sep 05 10:57:25	prod1	sshd[18795]:	Received disconnect from 225.75.159.180: 39: Bye Bye [preauth]
+Sep 05 10:57:43	prod1	useradd[14637]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 10:57:44	LabSZ	passwd[19439]:	password for user 'hacker' changed
+Sep 05 10:58:18	archive	sshd[26039]:	Accepted password for root from 251.166.58.172 port 15323 ssh30
+Sep 05 10:58:23	ADM	sshd[16432]:	kernel: usb 1-99: USB disconnect, device number 2
+Sep 05 10:59:38	RUfus	sshd[19897]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event72)
+Sep 05 11:00:03	LabSZ	sudo[13060]:	guest : TTY=pts/2 ; PWD=/home/guest ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 11:00:12	LabSZ	sshd[22861]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:49.0/usb3/3-4/3-4:1.0/0003:1EA7:00496.0001/input/input49/event49
+Sep 05 11:00:15	ADM	sshd[4672]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:21.0/usb3/3-4/3-4:1.0/0003:1EA7:00216.0001/input/input21/event21
+Sep 05 11:00:18	testvm	sshd[10062]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:00:26	RUfus	sshd[29482]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:00:35	LabSZ	sshd[8507]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event18)
+Sep 05 11:01:00	testvm	sshd[8601]:	Did not receive identification string from 8.8.4.4
+Sep 05 11:01:24	server	sshd[25609]:	pam_unix(sshd:session): session closed for user backup
+Sep 05 11:01:28	ADM	useradd[1922]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 11:01:29	prod1	passwd[28317]:	password for user 'hacker' changed
+Sep 05 11:01:40	LabSZ	sshd[28238]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 11:01:44	LabSZ	sshd[23152]:	Received disconnect from 57.191.91.175: 33: Closed due to user request [preauth]
+Sep 05 11:02:47	archive	sudo[22951]:	oracle : TTY=pts/2 ; PWD=/home/oracle ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 11:02:55	LabSZ	sshd[21907]:	Received disconnect from 8.8.8.8: 37: disconnected by user
+Sep 05 11:04:14	archive	sshd[24817]:	systemd: Started User Session 8876 of user admin.
+Sep 05 11:04:24	archive	sshd[6310]:	Received disconnect from 149.101.14.222: 56: Bye Bye [preauth]
+Sep 05 11:04:27	server	sshd[7059]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:88.0/usb3/3-4/3-4:1.0/0003:1EA7:00886.0001/input/input88/event88
+Sep 05 11:04:29	prod1	sudo[29563]:	oracle : TTY=pts/2 ; PWD=/home/oracle ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 11:04:49	server	sshd[15078]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:05:00	archive	sshd[12780]:	kernel: usb 1-14: USB disconnect, device number 2
+Sep 05 11:05:16	archive	sshd[27302]:	Failed password for invalid user fztu from 12.156.67.18 port 14691
+Sep 05 11:05:17	prod1	sshd[17546]:	Failed password for invalid user backup from 12.156.67.18 port 4266
+Sep 05 11:05:18	LabSZ	sshd[29826]:	Failed password for invalid user test from 12.156.67.18 port 8469
+Sep 05 11:05:19	archive	sshd[11146]:	Failed password for invalid user fztu from 12.156.67.18 port 15966
+Sep 05 11:05:20	testvm	sshd[7876]:	Failed password for invalid user oracle from 12.156.67.18 port 38731
+Sep 05 11:05:21	ADM	sshd[22836]:	Failed password for invalid user fztu from 12.156.67.18 port 64588
+Sep 05 11:05:22	prod1	sshd[21329]:	Failed password for invalid user backup from 12.156.67.18 port 4687
+Sep 05 11:05:23	RUfus	sshd[22653]:	Failed password for invalid user oracle from 12.156.67.18 port 49598
+Sep 05 11:05:24	prod1	sshd[16344]:	Failed password for root from 12.156.67.18 port 22690
+Sep 05 11:05:25	prod1	sshd[19416]:	Failed password for root from 12.156.67.18 port 43764
+Sep 05 11:05:26	prod1	sshd[15361]:	Failed password for root from 12.156.67.18 port 11125
+Sep 05 11:05:26	LabSZ	sshd[29519]:	Failed password for root from 12.156.67.18 port 55257
+Sep 05 11:05:28	LabSZ	sshd[18732]:	Accepted password for root from 12.156.67.18 port 59894
+Sep 05 11:05:39	testvm	useradd[20053]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 11:05:40	testvm	passwd[2269]:	password for user 'hacker' changed
+Sep 05 11:05:54	prod1	sshd[21168]:	kernel: usb 1-83: USB disconnect, device number 2
+Sep 05 11:06:07	prod1	sshd[18944]:	Received disconnect from 222.243.221.105: 23: Closed due to user request [preauth]
+Sep 05 11:06:48	prod1	sshd[21616]:	Accepted password for webmaster from 56.220.111.89 port 44621 ssh2
+Sep 05 11:06:51	testvm	sshd[9260]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:64.0/usb3/3-4/3-4:1.0/0003:1EA7:00646.0001/input/input64/event64
+Sep 05 11:06:53	testvm	sshd[23691]:	Accepted password for admin from 193.46.255.217 port 36797
+Sep 05 11:06:54	ADM	sudo[28557]:	admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/bash
+Sep 05 11:07:09	RUfus	sshd[6667]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:48.0/usb3/3-4/3-4:1.0/0003:1EA7:00486.0001/input/input48/event48
+Sep 05 11:07:26	ADM	sshd[12277]:	Received disconnect from 1.0.0.1: 66: disconnected by user
+Sep 05 11:07:29	RUfus	sshd[8772]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:18.0/usb3/3-4/3-4:1.0/0003:1EA7:00186.0001/input/input18/event18
+Sep 05 11:08:20	testvm	sshd[28207]:	Accepted password for webmaster from 71.6.158.166 port 43427
+Sep 05 11:08:20	RUfus	sudo[5474]:	webmaster : TTY=pts/0 ; PWD=/home/webmaster ; USER=root ; COMMAND=/bin/bash
+Sep 05 11:10:03	prod1	sshd[2983]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:10:07	LabSZ	sshd[6501]:	Failed password for invalid user ubuntu from 62.193.106.227 port 3461
+Sep 05 11:10:08	testvm	sshd[22178]:	Failed password for invalid user guest from 62.193.106.227 port 58538
+Sep 05 11:10:09	server	sshd[18306]:	Failed password for invalid user chen from 62.193.106.227 port 39146
+Sep 05 11:10:10	ADM	sshd[19730]:	Failed password for invalid user root from 62.193.106.227 port 7396
+Sep 05 11:10:12	archive	sshd[16428]:	Failed password for invalid user webmaster from 62.193.106.227 port 20807
+Sep 05 11:10:13	server	sshd[16507]:	Failed password for ubuntu from 62.193.106.227 port 62032
+Sep 05 11:10:14	testvm	sshd[7274]:	Failed password for ubuntu from 62.193.106.227 port 15109
+Sep 05 11:10:15	ADM	sshd[10801]:	Failed password for ubuntu from 62.193.106.227 port 50209
+Sep 05 11:10:15	prod1	sshd[29135]:	Failed password for ubuntu from 62.193.106.227 port 59219
+Sep 05 11:10:16	testvm	sshd[11070]:	Failed password for ubuntu from 62.193.106.227 port 43962
+Sep 05 11:10:17	prod1	sshd[18832]:	Accepted password for ubuntu from 62.193.106.227 port 49471
+Sep 05 11:10:27	testvm	useradd[5467]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 11:10:28	LabSZ	passwd[4018]:	password for user 'hacker' changed
+Sep 05 11:10:54	ADM	sshd[5857]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:11:23	archive	sshd[16951]:	event73  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:11:29	prod1	useradd[14902]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 11:11:30	RUfus	passwd[14165]:	password for user 'hacker' changed
+Sep 05 11:11:47	RUfus	sshd[18895]:	systemd: Started User Session 4326 of user chen.
+Sep 05 11:12:59	prod1	sshd[8829]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 11:13:02	server	sshd[22993]:	pam_unix(sshd:session): session opened for user test by (uid=36)
+Sep 05 11:13:05	server	useradd[23362]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 11:13:06	archive	passwd[6874]:	password for user 'hacker' changed
+Sep 05 11:13:14	archive	sshd[12707]:	Failed password for invalid user test from 45.79.181.179 port 56735
+Sep 05 11:13:15	testvm	sshd[19702]:	Failed password for invalid user pgadmin from 45.79.181.179 port 46334
+Sep 05 11:13:16	ADM	sshd[3980]:	Failed password for invalid user root from 45.79.181.179 port 64195
+Sep 05 11:13:17	archive	sshd[16915]:	Failed password for invalid user chen from 45.79.181.179 port 44139
+Sep 05 11:13:18	prod1	sshd[17236]:	Failed password for invalid user pgadmin from 45.79.181.179 port 53740
+Sep 05 11:13:19	archive	sshd[19105]:	Failed password for invalid user fztu from 45.79.181.179 port 15751
+Sep 05 11:13:20	ADM	sshd[10307]:	Failed password for invalid user fztu from 45.79.181.179 port 32302
+Sep 05 11:13:21	ADM	sshd[21977]:	Failed password for ubuntu from 45.79.181.179 port 11055
+Sep 05 11:13:22	archive	sshd[20366]:	Failed password for ubuntu from 45.79.181.179 port 46676
+Sep 05 11:13:23	testvm	sshd[14262]:	Failed password for ubuntu from 45.79.181.179 port 19460
+Sep 05 11:13:24	prod1	sshd[9850]:	Failed password for ubuntu from 45.79.181.179 port 32154
+Sep 05 11:13:25	RUfus	sshd[10102]:	Accepted password for ubuntu from 45.79.181.179 port 54173
+Sep 05 11:13:36	archive	sshd[27752]:	systemd: Started User Session 3291 of user test.
+Sep 05 11:14:31	prod1	sshd[2174]:	error: maximum authentication attempts exceeded for admin from 45.148.10.240 port 39636
+Sep 05 11:15:12	RUfus	sshd[1035]:	Received disconnect from 185.68.6.47: 88: Closed due to user request [preauth]
+Sep 05 11:16:42	RUfus	sshd[2843]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:16:47	server	sshd[25457]:	kernel: usb 1-8: USB disconnect, device number 2
+Sep 05 11:17:18	RUfus	sshd[9446]:	pam_unix(sshd:session): session opened for user oracle by (uid=12)
+Sep 05 11:17:39	prod1	sshd[16004]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:44.0/usb3/3-4/3-4:1.0/0003:1EA7:00446.0001/input/input44/event44
+Sep 05 11:17:54	prod1	sshd[16950]:	Received disconnect from 9.9.9.9: 64: disconnected by user
+Sep 05 11:18:35	LabSZ	sshd[7143]:	Did not receive identification string from 8.8.8.8
+Sep 05 11:18:38	archive	sshd[17262]:	Accepted password for matlab from 243.195.41.26 port 41262 ssh84
+Sep 05 11:19:13	testvm	sudo[12728]:	admin : TTY=pts/2 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 11:19:25	RUfus	sshd[4403]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event92)
+Sep 05 11:19:31	prod1	sshd[27559]:	pam_unix(sshd:session): session opened for user webmaster by (uid=35)
+Sep 05 11:19:43	server	sshd[26800]:	pam_unix(sshd:session): session opened for user oracle by (uid=76)
+Sep 05 11:19:58	prod1	sshd[13915]:	event7  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:20:31	RUfus	sshd[25218]:	pam_unix(sshd:session): session opened for user 123 by (uid=32)
+Sep 05 11:20:33	ADM	sshd[10749]:	systemd: Started User Session 27922 of user root.
+Sep 05 11:20:40	prod1	sshd[26417]:	Failed password for admin from 103.197.144.1 port 44699
+Sep 05 11:20:41	LabSZ	sshd[21172]:	Failed password for jdoe from 103.197.144.1 port 29195
+Sep 05 11:20:43	RUfus	sshd[17105]:	Failed password for support from 103.197.144.1 port 9172
+Sep 05 11:20:45	LabSZ	sshd[2904]:	Failed password for dev from 103.197.144.1 port 24578
+Sep 05 11:20:46	prod1	sshd[22138]:	Failed password for test from 103.197.144.1 port 31154
+Sep 05 11:20:48	prod1	sshd[11700]:	Accepted password for support from 103.197.144.1 port 12383
+Sep 05 11:21:00	prod1	sudo[21976]:	oracle : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 11:21:09	prod1	sshd[7053]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 11:21:24	prod1	sudo[21133]:	guest : TTY=pts/2 ; PWD=/home/guest ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 11:21:32	server	sshd[22486]:	Received disconnect from 94.101.216.29: 62: Closed due to user request [preauth]
+Sep 05 11:21:38	ADM	sudo[4239]:	admin : TTY=pts/2 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 11:22:09	archive	sshd[26539]:	Accepted password for chen from 45.175.157.53 port 36147
+Sep 05 11:22:10	ADM	sudo[8617]:	chen : TTY=pts/0 ; PWD=/home/chen ; USER=root ; COMMAND=/bin/bash
+Sep 05 11:22:43	ADM	sshd[17074]:	Failed password for invalid user root from 68.233.116.124 port 1729
+Sep 05 11:22:44	server	sshd[5710]:	Failed password for invalid user root from 68.233.116.124 port 35263
+Sep 05 11:22:45	server	sshd[4172]:	Failed password for invalid user chen from 68.233.116.124 port 23538
+Sep 05 11:22:46	ADM	sshd[23313]:	Failed password for invalid user ubuntu from 68.233.116.124 port 57604
+Sep 05 11:22:47	prod1	sshd[27423]:	Failed password for invalid user pgadmin from 68.233.116.124 port 29042
+Sep 05 11:22:48	RUfus	sshd[11172]:	Failed password for invalid user root from 68.233.116.124 port 33855
+Sep 05 11:22:48	ADM	sshd[1289]:	Failed password for ubuntu from 68.233.116.124 port 41690
+Sep 05 11:22:49	prod1	sshd[7492]:	Failed password for ubuntu from 68.233.116.124 port 48455
+Sep 05 11:22:50	ADM	sshd[25482]:	Failed password for ubuntu from 68.233.116.124 port 65239
+Sep 05 11:22:51	prod1	sshd[15900]:	Accepted password for ubuntu from 68.233.116.124 port 7632
+Sep 05 11:23:45	testvm	sshd[29508]:	Invalid user test from 64.227.174.243 port 50470
+Sep 05 11:23:46	prod1	sshd[13043]:	Invalid user guest from 64.227.174.243 port 38506
+Sep 05 11:23:47	archive	sshd[25381]:	Invalid user oracle from 64.227.174.243 port 41776
+Sep 05 11:23:48	ADM	sshd[27675]:	Invalid user backup from 64.227.174.243 port 49735
+Sep 05 11:23:49	ADM	sshd[23983]:	Invalid user deploy from 64.227.174.243 port 27679
+Sep 05 11:23:51	RUfus	sshd[13509]:	Invalid user user1 from 64.227.174.243 port 12501
+Sep 05 11:23:51	LabSZ	sshd[6462]:	Invalid user api from 64.227.174.243 port 64879
+Sep 05 11:23:53	testvm	sshd[15475]:	Invalid user dbuser from 64.227.174.243 port 31733
+Sep 05 11:24:45	prod1	sshd[22816]:	Did not receive identification string from 8.8.8.8
+Sep 05 11:24:53	archive	useradd[24088]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 11:24:54	testvm	passwd[1940]:	password for user 'hacker' changed
+Sep 05 11:25:10	archive	sshd[26715]:	pam_unix(sshd:session): session opened for user chen by (uid=41)
+Sep 05 11:25:13	server	sshd[14496]:	Accepted password for oracle from 193.46.255.99 port 31318
+Sep 05 11:25:15	ADM	sudo[27855]:	oracle : TTY=pts/0 ; PWD=/home/oracle ; USER=root ; COMMAND=/bin/bash
+Sep 05 11:26:06	LabSZ	sudo[14716]:	webmaster : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 11:26:21	LabSZ	sshd[3093]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:26:54	ADM	sshd[8294]:	pam_unix(sshd:session): session closed for user backup
+Sep 05 11:27:02	LabSZ	sshd[6105]:	Received disconnect from 1.0.0.1: 51: disconnected by user
+Sep 05 11:27:20	archive	sshd[1955]:	pam_unix(sshd:session): session opened for user webmaster by (uid=94)
+Sep 05 11:27:25	archive	sshd[23763]:	systemd: Started User Session 24099 of user test.
+Sep 05 11:27:30	server	sshd[5760]:	systemd: Started User Session 2597 of user admin.
+Sep 05 11:28:09	server	sshd[18558]:	Failed password for invalid user 123 from 45.148.10.240 port 56407
+Sep 05 11:28:10	ADM	sshd[29047]:	Failed password for invalid user root from 45.148.10.240 port 48876
+Sep 05 11:28:11	ADM	sshd[29218]:	Failed password for invalid user guest from 45.148.10.240 port 34355
+Sep 05 11:28:12	RUfus	sshd[9926]:	Failed password for invalid user root from 45.148.10.240 port 54649
+Sep 05 11:28:12	testvm	sshd[2068]:	Failed password for invalid user webmaster from 45.148.10.240 port 16855
+Sep 05 11:28:14	server	sshd[17639]:	Failed password for invalid user backup from 45.148.10.240 port 53227
+Sep 05 11:28:14	ADM	sshd[22703]:	Failed password for invalid user chen from 45.148.10.240 port 33923
+Sep 05 11:28:16	ADM	sshd[7925]:	Failed password for invalid user root from 45.148.10.240 port 45496
+Sep 05 11:28:17	LabSZ	sshd[10393]:	Failed password for invalid user matlab from 45.148.10.240 port 45306
+Sep 05 11:28:18	prod1	sshd[3261]:	Failed password for admin from 45.148.10.240 port 42523
+Sep 05 11:28:19	server	sshd[5610]:	Failed password for admin from 45.148.10.240 port 6046
+Sep 05 11:28:20	LabSZ	sshd[2273]:	Failed password for admin from 45.148.10.240 port 59093
+Sep 05 11:28:21	ADM	sshd[1051]:	Failed password for admin from 45.148.10.240 port 9445
+Sep 05 11:28:22	LabSZ	sshd[18514]:	Accepted password for admin from 45.148.10.240 port 13480
+Sep 05 11:28:57	ADM	sshd[11136]:	Received disconnect from 238.181.109.98: 65: Closed due to user request [preauth]
+Sep 05 11:29:15	ADM	sshd[9379]:	Accepted password for ubuntu from 59.119.97.71 port 25876 ssh37
+Sep 05 11:30:00	ADM	sudo[5019]:	webmaster : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 11:30:13	RUfus	sshd[29412]:	pam_unix(sshd:session): session opened for user webmaster by (uid=32)
+Sep 05 11:30:16	archive	sshd[14301]:	Received disconnect from 253.172.221.159: 83: Closed due to user request [preauth]
+Sep 05 11:30:30	server	useradd[22778]:	new user: name=hacker, UID=1001, GID=1001, home=/hacker, shell=/bin/bash
+Sep 05 11:30:31	LabSZ	passwd[27914]:	password for user 'hacker' changed
+Sep 05 11:30:38	prod1	sshd[22505]:	Received disconnect from 241.178.242.233: 20: Closed due to user request [preauth]
+Sep 05 11:30:41	testvm	sshd[10135]:	Failed password for admin from 45.172.152.74 port 48536
+Sep 05 11:30:43	archive	sshd[21268]:	Failed password for jdoe from 45.172.152.74 port 2126
+Sep 05 11:30:44	prod1	sshd[3078]:	Failed password for support from 45.172.152.74 port 24111
+Sep 05 11:30:45	testvm	sshd[9070]:	Failed password for dev from 45.172.152.74 port 58303
+Sep 05 11:30:46	testvm	sshd[19848]:	Failed password for test from 45.172.152.74 port 24559
+Sep 05 11:30:48	server	sshd[24387]:	Accepted password for support from 45.172.152.74 port 4901
+Sep 05 11:31:01	ADM	sudo[28315]:	fztu : TTY=pts/2 ; PWD=/home/fztu ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 11:31:12	archive	sshd[5616]:	kernel: usb 1-99: USB disconnect, device number 2
+Sep 05 11:31:19	LabSZ	sshd[12756]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 05 11:31:25	RUfus	sshd[15014]:	Received disconnect from 1.1.1.1: 88: disconnected by user
+Sep 05 11:31:45	archive	sshd[23054]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:4.0/usb3/3-4/3-4:1.0/0003:1EA7:0046.0001/input/input4/event4
+Sep 05 12:06:40	ADM	sshd[3845]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event66)
+Sep 05 12:06:53	testvm	sshd[23170]:	event18  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:09:41	prod1	sshd[25763]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:15.0/usb3/3-4/3-4:1.0/0003:1EA7:00156.0001/input/input15/event15
+Sep 05 12:10:07	RUfus	sshd[18986]:	kernel: usb 1-49: USB disconnect, device number 2
+Sep 05 12:10:15	LabSZ	sudo[13481]:	matlab : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 12:10:30	RUfus	sshd[7985]:	Failed password for invalid user pgadmin from 12.156.67.18 port 37965
+Sep 05 12:10:31	LabSZ	sshd[23168]:	Failed password for invalid user pgadmin from 12.156.67.18 port 53145
+Sep 05 12:10:32	archive	sshd[1351]:	Failed password for invalid user oracle from 12.156.67.18 port 57640
+Sep 05 12:10:33	ADM	sshd[9616]:	Failed password for invalid user webmaster from 12.156.67.18 port 41606
+Sep 05 12:10:34	archive	sshd[8575]:	Failed password for invalid user pgadmin from 12.156.67.18 port 16205
+Sep 05 12:10:35	server	sshd[22095]:	Failed password for invalid user admin from 12.156.67.18 port 64228
+Sep 05 12:10:36	ADM	sshd[11375]:	Failed password for root from 12.156.67.18 port 48536
+Sep 05 12:10:37	server	sshd[19517]:	Failed password for root from 12.156.67.18 port 55404
+Sep 05 12:10:38	prod1	sshd[8803]:	Failed password for root from 12.156.67.18 port 13964
+Sep 05 12:10:38	LabSZ	sshd[2756]:	Failed password for root from 12.156.67.18 port 2179
+Sep 05 12:10:39	archive	sshd[16132]:	Failed password for root from 12.156.67.18 port 37058
+Sep 05 12:10:41	archive	sshd[14203]:	Accepted password for root from 12.156.67.18 port 17774
+Sep 05 12:11:46	prod1	sshd[28111]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 12:12:53	LabSZ	sshd[17190]:	Accepted password for 123 from 220.90.161.214 port 38048 ssh70
+Sep 05 12:12:58	ADM	sshd[13141]:	pam_unix(sshd:session): session opened for user chen by (uid=82)
+Sep 05 12:13:00	prod1	sshd[16982]:	kernel: usb 1-20: USB disconnect, device number 2
+Sep 05 12:13:03	ADM	sshd[24705]:	kernel: usb 1-80: USB disconnect, device number 2
+Sep 05 12:13:08	testvm	sshd[29873]:	Invalid user test from 198.12.114.232 port 16431
+Sep 05 12:13:08	server	sshd[1157]:	Invalid user guest from 198.12.114.232 port 26781
+Sep 05 12:13:10	RUfus	sshd[16178]:	Invalid user oracle from 198.12.114.232 port 38049
+Sep 05 12:13:11	LabSZ	sshd[21806]:	Invalid user backup from 198.12.114.232 port 4005
+Sep 05 12:13:12	server	sshd[15301]:	Invalid user deploy from 198.12.114.232 port 40493
+Sep 05 12:13:13	server	sshd[24668]:	Invalid user user1 from 198.12.114.232 port 11319
+Sep 05 12:13:14	RUfus	sshd[16248]:	Invalid user api from 198.12.114.232 port 32424
+Sep 05 12:13:16	archive	sshd[6945]:	Invalid user dbuser from 198.12.114.232 port 44054
+Sep 05 12:13:23	ADM	sshd[9907]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:13:26	ADM	sshd[6913]:	pam_unix(sshd:session): session closed for user root
+Sep 05 12:14:21	archive	sshd[25761]:	pam_unix(sshd:session): session opened for user matlab by (uid=20)
+Sep 05 12:14:29	archive	sshd[5469]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:14:40	prod1	sshd[16959]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event50)
+Sep 05 12:15:01	server	sudo[17537]:	fztu : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 12:15:25	RUfus	sshd[5599]:	pam_unix(sshd:session): session closed for user test
+Sep 05 12:15:29	server	sshd[3113]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:15:35	LabSZ	sshd[4708]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:15:41	prod1	sshd[19184]:	pam_unix(sshd:session): session closed for user root
+Sep 05 12:16:10	LabSZ	sshd[4501]:	Accepted password for 123 from 3.143.33.63 port 54861
+Sep 05 12:16:11	RUfus	sudo[23445]:	123 : TTY=pts/0 ; PWD=/home/123 ; USER=root ; COMMAND=/bin/bash
+Sep 05 12:16:55	RUfus	sshd[27083]:	Received disconnect from 20.167.48.69: 69: Bye Bye [preauth]
+Sep 05 12:17:25	RUfus	sudo[25859]:	webmaster : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 12:17:36	LabSZ	sudo[10954]:	pgadmin : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 12:17:55	LabSZ	sshd[22593]:	Accepted password for chen from 149.201.194.93 port 2482 ssh66
+Sep 05 12:20:00	server	sshd[28547]:	Received disconnect from 39.199.112.67: 29: Closed due to user request [preauth]
+Sep 05 12:20:40	LabSZ	sshd[12927]:	Failed password for invalid user chen from 85.18.236.229 port 4023
+Sep 05 12:20:41	ADM	sshd[21652]:	Failed password for invalid user pgadmin from 85.18.236.229 port 20273
+Sep 05 12:20:42	LabSZ	sshd[22457]:	Failed password for invalid user chen from 85.18.236.229 port 9309
+Sep 05 12:20:43	testvm	sshd[15216]:	Failed password for invalid user ubuntu from 85.18.236.229 port 63647
+Sep 05 12:20:44	prod1	sshd[20382]:	Failed password for invalid user admin from 85.18.236.229 port 15862
+Sep 05 12:20:44	server	sshd[25675]:	Failed password for root from 85.18.236.229 port 25675
+Sep 05 12:20:46	testvm	sshd[10379]:	Failed password for root from 85.18.236.229 port 62395
+Sep 05 12:20:47	RUfus	sshd[4521]:	Failed password for root from 85.18.236.229 port 60071
+Sep 05 12:20:48	RUfus	sshd[27715]:	Failed password for root from 85.18.236.229 port 32272
+Sep 05 12:20:50	archive	sshd[19846]:	Failed password for root from 85.18.236.229 port 29291
+Sep 05 12:20:50	LabSZ	sshd[17574]:	Accepted password for root from 85.18.236.229 port 38546
+Sep 05 12:21:02	ADM	sudo[1183]:	pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=36.251.194.42
+Sep 05 12:21:12	server	sudo[28097]:	Invalid user test from 45.121.147.47
+Sep 05 12:23:21	ADM	sudo[10004]:	oracle : TTY=pts/2 ; PWD=/home/oracle ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 12:23:35	server	sshd[12439]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event28)
+Sep 05 12:23:57	archive	sshd[7082]:	Accepted password for webmaster from 45.132.1.172 port 57269
+Sep 05 12:23:58	server	sudo[2156]:	webmaster : TTY=pts/0 ; PWD=/home/webmaster ; USER=root ; COMMAND=/bin/bash
+Sep 05 12:24:09	RUfus	sshd[4461]:	Accepted password for matlab from 233.216.88.131 port 60844 ssh38
+Sep 05 12:24:25	ADM	sshd[27303]:	Invalid user test from 129.215.17.15 port 22657
+Sep 05 12:24:26	LabSZ	sshd[17286]:	Invalid user guest from 129.215.17.15 port 44471
+Sep 05 12:24:27	archive	sshd[17032]:	Invalid user oracle from 129.215.17.15 port 29313
+Sep 05 12:24:28	LabSZ	sshd[21040]:	Invalid user backup from 129.215.17.15 port 13659
+Sep 05 12:24:29	testvm	sshd[20753]:	Invalid user deploy from 129.215.17.15 port 41993
+Sep 05 12:24:30	testvm	sshd[25547]:	Invalid user user1 from 129.215.17.15 port 25668
+Sep 05 12:24:32	LabSZ	sshd[27151]:	Invalid user api from 129.215.17.15 port 13834
+Sep 05 12:24:32	prod1	sshd[15775]:	Invalid user dbuser from 129.215.17.15 port 18936
+Sep 05 12:25:04	LabSZ	sudo[14499]:	ubuntu : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 12:25:30	testvm	sshd[27243]:	systemd: Started User Session 27871 of user fztu.
+Sep 05 12:25:33	testvm	sshd[22077]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 12:25:35	prod1	sshd[26506]:	Received disconnect from 189.215.91.90: 16: Bye Bye [preauth]
+Sep 05 12:25:38	RUfus	sudo[12204]:	backup : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 12:25:57	ADM	sshd[27004]:	Invalid user test from 193.46.255.103 port 32331
+Sep 05 12:25:57	ADM	sshd[3742]:	Invalid user guest from 193.46.255.103 port 47872
+Sep 05 12:25:58	archive	sshd[8948]:	Invalid user oracle from 193.46.255.103 port 20882
+Sep 05 12:26:00	testvm	sshd[14440]:	Invalid user backup from 193.46.255.103 port 2242
+Sep 05 12:26:00	archive	sshd[2308]:	Invalid user deploy from 193.46.255.103 port 20949
+Sep 05 12:26:01	ADM	sshd[14964]:	Invalid user user1 from 193.46.255.103 port 60128
+Sep 05 12:26:02	prod1	sshd[3813]:	Invalid user api from 193.46.255.103 port 19666
+Sep 05 12:26:03	server	sshd[21531]:	Invalid user dbuser from 193.46.255.103 port 11774
+Sep 05 12:26:10	RUfus	sshd[16687]:	Accepted password for fztu from 45.135.232.92 port 50562
+Sep 05 12:26:12	server	sudo[20011]:	fztu : TTY=pts/0 ; PWD=/home/fztu ; USER=root ; COMMAND=/bin/bash
+Sep 05 12:26:36	ADM	sshd[6250]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:26:53	RUfus	sudo[18812]:	ubuntu : TTY=pts/2 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 12:27:34	RUfus	sshd[4304]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:27:37	archive	sshd[15440]:	Received disconnect from 1.1.1.1: 22: disconnected by user
+Sep 05 12:27:41	testvm	sshd[16194]:	kernel: usb 1-88: USB disconnect, device number 2
+Sep 05 12:27:45	ADM	sshd[26524]:	kernel: usb 1-47: USB disconnect, device number 2
+Sep 05 12:27:52	testvm	sshd[7099]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 12:28:08	prod1	sshd[24225]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 05 12:28:17	archive	sshd[19691]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:57.0/usb3/3-4/3-4:1.0/0003:1EA7:00576.0001/input/input57/event57
+Sep 05 12:28:58	archive	sshd[14945]:	Accepted password for chen from 14.29.198.130 port 21041
+Sep 05 12:29:00	prod1	sudo[12767]:	chen : TTY=pts/0 ; PWD=/home/chen ; USER=root ; COMMAND=/bin/bash
+Sep 05 12:29:34	prod1	sudo[12294]:	webmaster : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar czf /tmp/backup.tar.gz .
+Sep 05 12:29:55	ADM	sshd[25313]:	pam_unix(sshd:session): session opened for user admin by (uid=22)
+Sep 05 12:30:19	LabSZ	sshd[23303]:	systemd: Started User Session 27902 of user root.
+Sep 05 12:30:22	ADM	sshd[3214]:	kernel: usb 1-99: USB disconnect, device number 2
+Sep 05 12:31:02	RUfus	sshd[1645]:	event10  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:31:10	testvm	sshd[8713]:	Received disconnect from 178.138.194.177: 76: Closed due to user request [preauth]
+Sep 05 12:31:35	RUfus	sshd[10108]:	Invalid user test from 176.65.148.27 port 32202
+Sep 05 12:31:36	LabSZ	sshd[3058]:	Invalid user guest from 176.65.148.27 port 31316
+Sep 05 12:31:38	archive	sshd[11358]:	Invalid user oracle from 176.65.148.27 port 46825
+Sep 05 12:31:39	ADM	sshd[7520]:	Invalid user backup from 176.65.148.27 port 6811
+Sep 05 12:31:40	LabSZ	sshd[26698]:	Invalid user deploy from 176.65.148.27 port 47879
+Sep 05 12:31:41	prod1	sshd[4479]:	Invalid user user1 from 176.65.148.27 port 43022
+Sep 05 12:31:42	testvm	sshd[10348]:	Invalid user api from 176.65.148.27 port 63729
+Sep 05 12:31:43	prod1	sshd[2272]:	Invalid user dbuser from 176.65.148.27 port 43705
+Sep 05 12:31:54	archive	sshd[6458]:	Did not receive identification string from 8.8.8.8
+Sep 05 12:32:15	prod1	sshd[2784]:	event90  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:33:01	testvm	sshd[29378]:	systemd: Started User Session 3275 of user pgadmin.
+Sep 05 12:33:23	RUfus	sshd[5732]:	Received disconnect from 219.36.30.220: 49: Bye Bye [preauth]
+Sep 05 12:33:54	RUfus	sudo[4645]:	pgadmin : TTY=pts/2 ; PWD=/home/pgadmin ; USER=root ; COMMAND=/usr/bin/rm /var/log/auth.log
+Sep 05 12:35:10	server	sshd[20199]:	Failed password for admin from 80.94.93.233 port 45554
+Sep 05 12:35:11	server	sshd[29937]:	Failed password for jdoe from 80.94.93.233 port 57180
+Sep 05 12:35:13	prod1	sshd[4377]:	Failed password for support from 80.94.93.233 port 35795
+Sep 05 12:35:14	server	sshd[15419]:	Failed password for dev from 80.94.93.233 port 40760
+Sep 05 12:35:15	RUfus	sshd[17257]:	Failed password for test from 80.94.93.233 port 51607
+Sep 05 12:35:17	LabSZ	sshd[20007]:	Accepted password for support from 80.94.93.233 port 23381
+Sep 05 12:35:37	RUfus	sshd[17255]:	Received disconnect from 1.1.1.1: 14: disconnected by user
+Sep 05 12:35:50	RUfus	sshd[10500]:	Failed password for admin from 60.199.224.2 port 61222
+Sep 05 12:35:51	archive	sshd[3504]:	Failed password for jdoe from 60.199.224.2 port 7594
+Sep 05 12:35:53	ADM	sshd[9999]:	Failed password for support from 60.199.224.2 port 35122
+Sep 05 12:35:55	RUfus	sshd[12227]:	Failed password for dev from 60.199.224.2 port 50263
+Sep 05 12:35:56	LabSZ	sshd[3059]:	Failed password for test from 60.199.224.2 port 35550
+Sep 05 12:35:58	prod1	sshd[4691]:	Accepted password for support from 60.199.224.2 port 25596
+Sep 05 12:36:28	testvm	sshd[16626]:	systemd: Started User Session 6952 of user admin.
+Sep 05 12:36:53	archive	sshd[9134]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:36:57	testvm	sshd[9147]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:37:23	ADM	sshd[18082]:	Did not receive identification string from 1.0.0.1
+Sep 05 12:39:04	ADM	sshd[8056]:	Failed password for admin from 45.132.1.172 port 20076
+Sep 05 12:39:05	server	sshd[25827]:	Failed password for jdoe from 45.132.1.172 port 20080
+Sep 05 12:39:07	prod1	sshd[6025]:	Failed password for support from 45.132.1.172 port 12035
+Sep 05 12:39:08	testvm	sshd[5381]:	Failed password for dev from 45.132.1.172 port 8338
+Sep 05 12:39:10	testvm	sshd[5868]:	Failed password for test from 45.132.1.172 port 50449
+Sep 05 12:39:11	RUfus	sshd[10519]:	Accepted password for support from 45.132.1.172 port 44140
+Sep 05 12:39:36	LabSZ	sshd[15898]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:91.0/usb3/3-4/3-4:1.0/0003:1EA7:00916.0001/input/input91/event91
+Sep 05 12:40:20	ADM	sshd[9799]:	Accepted password for 123 from 14.29.198.130 port 58066
+Sep 05 12:40:20	RUfus	sudo[1689]:	123 : TTY=pts/0 ; PWD=/home/123 ; USER=root ; COMMAND=/bin/bash
+Sep 05 12:40:43	LabSZ	sshd[26111]:	Invalid user test from 38.211.193.130 port 22706
+Sep 05 12:40:44	LabSZ	sshd[3177]:	Invalid user guest from 38.211.193.130 port 65164
+Sep 05 12:40:45	RUfus	sshd[29078]:	Invalid user oracle from 38.211.193.130 port 17213
+Sep 05 12:40:46	LabSZ	sshd[6343]:	Invalid user backup from 38.211.193.130 port 43802
+Sep 05 12:40:48	RUfus	sshd[29351]:	Invalid user deploy from 38.211.193.130 port 32948
+Sep 05 12:40:48	RUfus	sshd[25816]:	Invalid user user1 from 38.211.193.130 port 41844
+Sep 05 12:40:49	ADM	sshd[14229]:	Invalid user api from 38.211.193.130 port 8995
+Sep 05 12:40:50	ADM	sshd[14162]:	Invalid user dbuser from 38.211.193.130 port 51662
+Sep 05 12:41:05	server	sshd[11455]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 12:41:08	RUfus	sshd[7710]:	systemd: Started User Session 16331 of user admin.

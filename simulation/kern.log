@@ -1315,3 +1315,1695 @@ Sep 03 20:53:26	archive	kernel[12900]:	config/udev: Adding input device 2.4G Mou
 Sep 03 20:53:44	testvm	kernel[12522]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
 Sep 03 20:53:45	LabSZ	kernel[24310]:	Oops: 0000 [#1] SMP PTI
 Sep 03 20:53:46	RUfus	kernel[29466]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 04 00:47:16	ADM	kernel[27849]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 00:47:21	testvm	kernel[29815]:	systemd: Started User Session 24367 of user admin.
+Sep 04 00:47:24	ADM	kernel[1961]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 04 00:47:35	testvm	kernel[13070]:	kernel: usb 1-95: USB disconnect, device number 2
+Sep 04 00:47:42	RUfus	kernel[13660]:	Failed password for user webmaster from 131.103.24.238 port 26826 ssh6
+Sep 04 00:47:55	prod1	kernel[25114]:	Did not receive identification string from 8.8.4.4
+Sep 04 00:47:59	RUfus	kernel[6535]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 04 00:48:12	RUfus	kernel[10628]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event13)
+Sep 04 00:48:22	archive	kernel[15090]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 04 00:48:49	LabSZ	kernel[8734]:	process '/bin/bash' started by user 27
+Sep 04 00:48:57	server	kernel[9692]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 04 00:48:59	RUfus	kernel[12219]:	Oops: 0000 [#1] SMP PTI
+Sep 04 00:49:00	testvm	kernel[10624]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 04 00:49:07	testvm	kernel[9547]:	process '/usr/bin/curl' started by user 123
+Sep 04 00:49:08	server	kernel[24319]:	process '/bin/chmod' started by user test with args: +x payload.sh
+Sep 04 00:49:09	ADM	kernel[2904]:	process '/bin/sh' started by user webmaster with args: payload.sh
+Sep 04 01:08:56	LabSZ	kernel[10077]:	kernel: usb 1-79: USB disconnect, device number 2
+Sep 04 01:08:59	ADM	kernel[10515]:	Accepted password for guest from 205.17.160.203 port 42944 ssh36
+Sep 04 01:09:06	LabSZ	kernel[18941]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:09:09	LabSZ	kernel[15566]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event1)
+Sep 04 01:09:13	LabSZ	kernel[10182]:	process '/bin/java' started child '/bin/bash'
+Sep 04 01:09:36	archive	kernel[10149]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 04 01:09:46	LabSZ	kernel[6416]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:09:58	ADM	kernel[21910]:	myservice[689789]: segfault at 000000000000 ip 00007f0a4e4b623a sp 00007ffde1e08a50 error 2 in libc-5.23.so[689789]
+Sep 04 01:10:18	RUfus	kernel[27718]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 04 01:10:19	LabSZ	kernel[10185]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 04 01:10:41	RUfus	kernel[21875]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 04 01:11:06	server	kernel[8522]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:11:29	prod1	kernel[23752]:	pam_unix(sshd:session): session closed for user 123
+Sep 04 01:11:40	server	kernel[26150]:	Did not receive identification string from 8.8.8.8
+Sep 04 01:12:00	server	kernel[13098]:	Received disconnect from 165.179.99.24: 89: Bye Bye [preauth]
+Sep 04 01:12:06	prod1	kernel[29162]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 04 01:12:18	prod1	kernel[23794]:	event62  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:12:57	LabSZ	kernel[18390]:	process '/bin/bash' started by user 75
+Sep 04 01:13:06	server	kernel[25459]:	process '/usr/bin/curl' started by user ubuntu
+Sep 04 01:13:09	testvm	kernel[7287]:	process '/bin/chmod' started by user admin with args: +x payload.sh
+Sep 04 01:13:10	testvm	kernel[17988]:	process '/bin/sh' started by user webmaster with args: payload.sh
+Sep 04 01:13:34	archive	kernel[13982]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 04 01:13:54	testvm	kernel[20460]:	Loading kernel module 'evil_module.ko'
+Sep 04 01:13:55	RUfus	kernel[28764]:	Tainted kernel: a module has been loaded
+Sep 04 01:14:06	prod1	kernel[22806]:	process '/bin/bash' started by user 3
+Sep 04 01:14:20	RUfus	kernel[27663]:	kernel: usb 1-29: USB disconnect, device number 2
+Sep 04 01:14:24	RUfus	kernel[5728]:	event75  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:14:36	archive	kernel[1758]:	Received disconnect from 8.8.4.4: 84: disconnected by user
+Sep 04 01:14:39	prod1	kernel[15746]:	systemd: Started User Session 27813 of user pgadmin.
+Sep 04 01:14:50	prod1	kernel[7381]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:62.0/usb3/3-4/3-4:1.0/0003:1EA7:00626.0001/input/input62/event62
+Sep 04 01:14:58	server	kernel[7181]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 04 01:15:00	RUfus	kernel[6413]:	File 'document.pdf' deleted
+Sep 04 01:15:01	RUfus	kernel[16160]:	File 'document.pdf.ENCRYPTED' created
+Sep 04 01:15:27	testvm	kernel[3916]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 04 01:15:28	prod1	kernel[8707]:	File 'document.pdf' deleted
+Sep 04 01:15:30	archive	kernel[11409]:	File 'document.pdf.ENCRYPTED' created
+Sep 04 01:16:01	prod1	kernel[8304]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:93.0/usb3/3-4/3-4:1.0/0003:1EA7:00936.0001/input/input93/event93
+Sep 04 01:16:30	server	kernel[9293]:	kernel: usb 1-46: USB disconnect, device number 2
+Sep 04 01:16:34	prod1	kernel[16398]:	pam_unix(sshd:session): session opened for user test by (uid=21)
+Sep 04 01:17:23	RUfus	kernel[18153]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 04 01:17:36	RUfus	kernel[15888]:	kernel: usb 1-76: USB disconnect, device number 2
+Sep 04 01:17:41	prod1	kernel[7658]:	kernel: usb 1-54: USB disconnect, device number 2
+Sep 04 01:17:43	archive	kernel[14427]:	pam_unix(sshd:session): session opened for user backup by (uid=84)
+Sep 04 01:18:00	RUfus	kernel[27568]:	Did not receive identification string from 9.9.9.9
+Sep 04 01:18:09	testvm	kernel[3757]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:38.0/usb3/3-4/3-4:1.0/0003:1EA7:00386.0001/input/input38/event38
+Sep 04 01:18:12	archive	kernel[9917]:	Received disconnect from 37.93.251.220: 43: Closed due to user request [preauth]
+Sep 04 01:18:17	LabSZ	kernel[14533]:	process '/bin/bash' started by user 37
+Sep 04 01:18:45	LabSZ	kernel[10203]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 04 01:18:57	RUfus	kernel[8115]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event9)
+Sep 04 01:19:03	archive	kernel[29922]:	Loading kernel module 'evil_module.ko'
+Sep 04 01:19:03	archive	kernel[27639]:	Tainted kernel: a module has been loaded
+Sep 04 01:19:19	ADM	kernel[24696]:	Did not receive identification string from 8.8.8.8
+Sep 04 01:19:25	archive	kernel[23985]:	process '/bin/java' started child '/bin/bash'
+Sep 04 01:19:37	LabSZ	kernel[4118]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:92.0/usb3/3-4/3-4:1.0/0003:1EA7:00926.0001/input/input92/event92
+Sep 04 01:19:40	testvm	kernel[14981]:	Accepted password for pgadmin from 245.182.201.126 port 49659 ssh63
+Sep 04 01:19:50	ADM	kernel[22162]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 04 01:19:51	prod1	kernel[27517]:	Oops: 0000 [#1] SMP PTI
+Sep 04 01:19:52	archive	kernel[17986]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 04 01:19:59	ADM	kernel[24215]:	pam_unix(sshd:session): session opened for user chen by (uid=51)
+Sep 04 01:20:06	archive	kernel[3184]:	event76  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:20:40	archive	kernel[22277]:	Received disconnect from 163.144.7.97: 71: Closed due to user request [preauth]
+Sep 04 01:20:46	LabSZ	kernel[21927]:	pam_unix(sshd:session): session closed for user test
+Sep 04 01:21:13	prod1	kernel[11936]:	Accepted password for guest from 68.77.49.104 port 25865 ssh4
+Sep 04 01:21:22	archive	kernel[3883]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:21:25	server	kernel[20594]:	pam_unix(sshd:session): session opened for user oracle by (uid=37)
+Sep 04 01:21:56	prod1	kernel[23471]:	Received disconnect from 224.115.57.210: 54: Bye Bye [preauth]
+Sep 04 01:22:00	ADM	kernel[4467]:	pam_unix(sshd:session): session closed for user backup
+Sep 04 01:22:06	LabSZ	kernel[21253]:	systemd: Started User Session 24738 of user chen.
+Sep 04 01:22:11	ADM	kernel[20862]:	Outbound connection to 104.22.60.184:443 established
+Sep 04 01:22:19	prod1	kernel[19211]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=99)
+Sep 04 01:22:23	ADM	kernel[29158]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:72.0/usb3/3-4/3-4:1.0/0003:1EA7:00726.0001/input/input72/event72
+Sep 04 01:22:30	LabSZ	kernel[9083]:	Outbound connection to 104.22.60.184:443 established
+Sep 04 01:23:00	ADM	kernel[25282]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 04 01:23:01	ADM	kernel[10165]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 04 01:23:20	LabSZ	kernel[12318]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event42)
+Sep 04 01:23:27	testvm	kernel[12885]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=21895 DPT=21
+Sep 04 01:23:28	prod1	kernel[28087]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=27384 DPT=22
+Sep 04 01:23:29	archive	kernel[22293]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=30484 DPT=80
+Sep 04 01:23:30	testvm	kernel[21969]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=7229 DPT=443
+Sep 04 01:23:31	LabSZ	kernel[25842]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=14796 DPT=3306
+Sep 04 01:23:32	server	kernel[22109]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=62895 DPT=8080
+Sep 04 01:23:34	server	kernel[28567]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=49520 DPT=5432
+Sep 04 01:23:35	server	kernel[22806]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=40068 DPT=25
+Sep 04 01:24:08	RUfus	kernel[13647]:	Loading kernel module 'evil_module.ko'
+Sep 04 01:24:09	prod1	kernel[7988]:	Tainted kernel: a module has been loaded
+Sep 04 01:24:32	archive	kernel[25383]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:26:18	prod1	kernel[21816]:	pam_unix(sshd:session): session opened for user matlab by (uid=40)
+Sep 04 01:26:53	LabSZ	kernel[20538]:	Received disconnect from 90.101.215.45: 48: Closed due to user request [preauth]
+Sep 04 01:26:56	prod1	kernel[9602]:	Received disconnect from 174.159.185.253: 91: Closed due to user request [preauth]
+Sep 04 01:27:09	testvm	kernel[6017]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 04 01:27:10	RUfus	kernel[20931]:	Oops: 0000 [#1] SMP PTI
+Sep 04 01:27:12	RUfus	kernel[9215]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 04 01:27:38	RUfus	kernel[19642]:	kernel: usb 1-66: USB disconnect, device number 2
+Sep 04 01:28:00	testvm	kernel[25946]:	Accepted password for matlab from 178.133.60.144 port 39885 ssh66
+Sep 04 01:28:06	prod1	kernel[9839]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=4)
+Sep 04 01:28:17	archive	kernel[10389]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event31)
+Sep 04 01:28:28	LabSZ	kernel[24986]:	process '/usr/bin/curl' started by user ubuntu
+Sep 04 01:28:31	RUfus	kernel[13854]:	process '/bin/chmod' started by user oracle with args: +x payload.sh
+Sep 04 01:28:32	LabSZ	kernel[25637]:	process '/bin/sh' started by user root with args: payload.sh
+Sep 04 01:29:01	ADM	kernel[13752]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:29:03	ADM	kernel[23871]:	pam_unix(sshd:session): session opened for user fztu by (uid=90)
+Sep 04 01:29:15	prod1	kernel[4483]:	process '/bin/java' started child '/bin/bash'
+Sep 04 01:29:29	archive	kernel[13569]:	event56  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:29:32	archive	kernel[20820]:	Received disconnect from 198.100.147.88: 74: Closed due to user request [preauth]
+Sep 04 01:29:50	archive	kernel[19450]:	process '/bin/java' started child '/bin/bash'
+Sep 04 01:30:00	prod1	kernel[7773]:	pam_unix(sshd:session): session opened for user 123 by (uid=68)
+Sep 04 01:30:18	server	kernel[29314]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:30:23	server	kernel[12002]:	systemd: Started User Session 15014 of user backup.
+Sep 04 01:32:05	prod1	kernel[10338]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 04 01:32:06	server	kernel[3399]:	Oops: 0000 [#1] SMP PTI
+Sep 04 01:32:07	archive	kernel[25888]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 04 01:32:24	archive	kernel[16508]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 04 01:32:24	archive	kernel[24183]:	File 'document.pdf' deleted
+Sep 04 01:32:25	ADM	kernel[19130]:	File 'document.pdf.ENCRYPTED' created
+Sep 04 01:32:41	prod1	kernel[15509]:	Connection closed by 8.8.8.8 [preauth]
+Sep 04 01:32:47	prod1	kernel[9409]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event58)
+Sep 04 01:32:59	archive	kernel[12300]:	Loading kernel module 'evil_module.ko'
+Sep 04 01:33:00	RUfus	kernel[22582]:	Tainted kernel: a module has been loaded
+Sep 04 01:33:07	ADM	kernel[13615]:	Accepted password for admin from 94.4.125.228 port 29339 ssh92
+Sep 04 01:33:24	testvm	kernel[1184]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:74.0/usb3/3-4/3-4:1.0/0003:1EA7:00746.0001/input/input74/event74
+Sep 04 01:33:52	LabSZ	kernel[26526]:	event28  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:34:00	prod1	kernel[28415]:	Received disconnect from 37.11.241.218: 83: Closed due to user request [preauth]
+Sep 04 01:34:07	RUfus	kernel[7557]:	Connection closed by 8.8.8.8 [preauth]
+Sep 04 01:34:13	RUfus	kernel[16750]:	Received disconnect from 48.158.104.249: 76: Closed due to user request [preauth]
+Sep 04 01:34:16	testvm	kernel[4586]:	pam_unix(sshd:session): session opened for user chen by (uid=52)
+Sep 04 01:34:59	LabSZ	kernel[16139]:	Loading kernel module 'evil_module.ko'
+Sep 04 01:35:00	ADM	kernel[9017]:	Tainted kernel: a module has been loaded
+Sep 04 01:35:41	archive	kernel[25991]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 04 01:35:42	testvm	kernel[16913]:	Oops: 0000 [#1] SMP PTI
+Sep 04 01:35:43	archive	kernel[19072]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 04 01:35:55	prod1	kernel[18167]:	Received disconnect from 130.163.161.89: 71: Closed due to user request [preauth]
+Sep 04 01:36:04	server	kernel[26985]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:80.0/usb3/3-4/3-4:1.0/0003:1EA7:00806.0001/input/input80/event80
+Sep 04 01:36:07	server	kernel[16935]:	pam_unix(sshd:session): session opened for user backup by (uid=11)
+Sep 04 01:36:09	prod1	kernel[29380]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event38)
+Sep 04 01:36:18	LabSZ	kernel[6110]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:38:09	LabSZ	kernel[16549]:	Loading kernel module 'evil_module.ko'
+Sep 04 01:38:10	prod1	kernel[24548]:	Tainted kernel: a module has been loaded
+Sep 04 01:38:40	archive	kernel[12787]:	systemd: Started User Session 4846 of user ubuntu.
+Sep 04 01:39:43	LabSZ	kernel[16791]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 04 01:40:29	prod1	kernel[4271]:	Outbound connection to 104.22.60.184:443 established
+Sep 04 01:40:42	archive	kernel[11890]:	process '/bin/java' started child '/bin/bash'
+Sep 04 01:40:53	archive	kernel[4480]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:41:43	prod1	kernel[19858]:	process '/bin/java' started child '/bin/bash'
+Sep 04 01:42:32	server	kernel[15391]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 04 01:42:42	prod1	kernel[22249]:	Outbound connection to 104.22.60.184:443 established
+Sep 04 01:42:56	server	kernel[9642]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event79)
+Sep 04 01:43:18	LabSZ	kernel[17333]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:43:47	RUfus	kernel[13138]:	Connection closed by 8.8.8.8 [preauth]
+Sep 04 01:44:11	prod1	kernel[7165]:	Received disconnect from 8.8.8.8: 30: disconnected by user
+Sep 04 01:44:25	prod1	kernel[24561]:	systemd: Started User Session 23338 of user fztu.
+Sep 04 01:44:44	server	kernel[2247]:	pam_unix(sshd:session): session closed for user 123
+Sep 04 01:45:40	LabSZ	kernel[1513]:	pam_unix(sshd:session): session closed for user fztu
+Sep 04 01:46:06	ADM	kernel[10411]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=30393 DPT=21
+Sep 04 01:46:08	server	kernel[8032]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=56109 DPT=22
+Sep 04 01:46:09	LabSZ	kernel[6297]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=20663 DPT=80
+Sep 04 01:46:10	ADM	kernel[15575]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=14142 DPT=443
+Sep 04 01:46:11	RUfus	kernel[29744]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=3333 DPT=3306
+Sep 04 01:46:12	RUfus	kernel[29337]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=48841 DPT=8080
+Sep 04 01:46:13	ADM	kernel[24148]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=33939 DPT=5432
+Sep 04 01:46:14	RUfus	kernel[1099]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=1568 DPT=25
+Sep 04 01:46:45	ADM	kernel[5474]:	process '/bin/bash' started by user 94
+Sep 04 01:46:54	server	kernel[25687]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=16)
+Sep 04 01:47:02	ADM	kernel[21483]:	event88  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 01:47:10	LabSZ	kernel[19613]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event28)
+Sep 04 01:47:21	LabSZ	kernel[14190]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:47:27	archive	kernel[9624]:	Connection closed by 8.8.4.4 [preauth]
+Sep 04 01:47:31	server	kernel[28333]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event34)
+Sep 04 01:47:34	RUfus	kernel[2471]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 01:47:38	LabSZ	kernel[7649]:	pam_unix(sshd:session): session opened for user root by (uid=90)
+Sep 04 01:47:55	ADM	kernel[19922]:	Received disconnect from 152.186.229.81: 82: Bye Bye [preauth]
+Sep 04 01:48:02	ADM	kernel[23545]:	Loading kernel module 'evil_module.ko'
+Sep 04 01:48:03	archive	kernel[28716]:	Tainted kernel: a module has been loaded
+Sep 04 01:48:18	LabSZ	kernel[27391]:	Accepted password for test from 82.97.20.244 port 38622 ssh71
+Sep 04 01:48:20	server	kernel[6658]:	Received disconnect from 196.38.184.122: 4: Closed due to user request [preauth]
+Sep 04 01:48:24	ADM	kernel[18335]:	process '/bin/java' started child '/bin/bash'
+Sep 04 01:48:45	archive	kernel[24746]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:1.0/usb3/3-4/3-4:1.0/0003:1EA7:0016.0001/input/input1/event1
+Sep 04 01:48:50	LabSZ	kernel[24603]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event61)
+Sep 04 01:48:54	testvm	kernel[2831]:	pam_unix(sshd:session): session closed for user guest
+Sep 04 01:49:11	ADM	kernel[19337]:	Outbound connection to 104.22.60.184:443 established
+Sep 04 01:49:23	LabSZ	kernel[21583]:	pam_unix(sshd:session): session opened for user test by (uid=13)
+Sep 04 01:49:44	ADM	kernel[22769]:	Received disconnect from 9.9.9.9: 17: disconnected by user
+Sep 04 01:49:56	testvm	kernel[1239]:	Received disconnect from 1.1.1.1: 14: disconnected by user
+Sep 04 01:50:05	LabSZ	kernel[6881]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=60978 DPT=21
+Sep 04 01:50:07	archive	kernel[20531]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=46137 DPT=22
+Sep 04 01:50:07	server	kernel[3932]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=39640 DPT=80
+Sep 04 01:50:08	server	kernel[13801]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=31643 DPT=443
+Sep 04 01:50:09	prod1	kernel[25548]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=3414 DPT=3306
+Sep 04 01:50:10	LabSZ	kernel[23189]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=24655 DPT=8080
+Sep 04 01:50:11	RUfus	kernel[28055]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=31506 DPT=5432
+Sep 04 01:50:12	archive	kernel[6583]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=55959 DPT=25
+Sep 04 01:50:38	LabSZ	kernel[7233]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event92)
+Sep 04 01:50:41	RUfus	kernel[5089]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=50703 DPT=21
+Sep 04 01:50:42	LabSZ	kernel[4796]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=51759 DPT=22
+Sep 04 01:50:43	ADM	kernel[23748]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=35968 DPT=80
+Sep 04 01:50:45	archive	kernel[24050]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=25215 DPT=443
+Sep 04 01:50:46	LabSZ	kernel[24919]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=37424 DPT=3306
+Sep 04 01:50:47	LabSZ	kernel[23535]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=61440 DPT=8080
+Sep 04 01:50:48	prod1	kernel[7956]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=52953 DPT=5432
+Sep 04 01:50:49	testvm	kernel[15926]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=60744 DPT=25
+Sep 04 01:52:28	testvm	kernel[8665]:	pam_unix(sshd:session): session closed for user fztu
+Sep 04 01:52:42	server	kernel[25405]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:81.0/usb3/3-4/3-4:1.0/0003:1EA7:00816.0001/input/input81/event81
+Sep 04 01:53:11	server	kernel[11991]:	process '/usr/bin/curl' started by user ubuntu
+Sep 04 01:53:12	testvm	kernel[11863]:	process '/bin/chmod' started by user root with args: +x payload.sh
+Sep 04 01:53:14	prod1	kernel[20958]:	process '/bin/sh' started by user backup with args: payload.sh
+Sep 04 01:53:40	testvm	kernel[9766]:	Received disconnect from 114.239.98.116: 53: Closed due to user request [preauth]
+Sep 04 01:53:45	RUfus	kernel[16999]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 04 01:54:05	archive	kernel[3869]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 04 01:54:06	RUfus	kernel[8653]:	File 'document.pdf' deleted
+Sep 04 01:54:07	testvm	kernel[7219]:	File 'document.pdf.ENCRYPTED' created
+Sep 04 01:54:47	testvm	kernel[2501]:	pam_unix(sshd:session): session opened for user guest by (uid=30)
+Sep 04 01:54:57	testvm	kernel[29890]:	Received disconnect from 65.186.216.103: 89: Closed due to user request [preauth]
+Sep 04 01:55:53	RUfus	kernel[8590]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=46052 DPT=21
+Sep 04 01:55:54	testvm	kernel[22372]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=36270 DPT=22
+Sep 04 01:55:55	archive	kernel[1627]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=52968 DPT=80
+Sep 04 01:55:56	archive	kernel[28534]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=28024 DPT=443
+Sep 04 01:55:57	server	kernel[14244]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=44780 DPT=3306
+Sep 04 01:55:58	LabSZ	kernel[2478]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=9462 DPT=8080
+Sep 04 01:55:59	testvm	kernel[3856]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=23671 DPT=5432
+Sep 04 01:56:00	LabSZ	kernel[1796]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=129.215.17.15 DST=... PROTO=TCP SPT=39074 DPT=25
+Sep 04 19:51:46	prod1	kernel[24503]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 04 19:51:47	prod1	kernel[12856]:	Oops: 0000 [#1] SMP PTI
+Sep 04 19:51:49	RUfus	kernel[17522]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 04 19:51:58	prod1	kernel[20814]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:52.0/usb3/3-4/3-4:1.0/0003:1EA7:00526.0001/input/input52/event52
+Sep 04 20:21:45	archive	kernel[22699]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 04 20:21:51	testvm	kernel[10021]:	pam_unix(sshd:session): session closed for user guest
+Sep 04 20:21:55	testvm	kernel[13146]:	Did not receive identification string from 1.0.0.1
+Sep 04 20:22:13	LabSZ	kernel[15048]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:38.0/usb3/3-4/3-4:1.0/0003:1EA7:00386.0001/input/input38/event38
+Sep 04 20:22:31	testvm	kernel[19078]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=20103 DPT=21
+Sep 04 20:22:32	testvm	kernel[8253]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=17074 DPT=22
+Sep 04 20:22:33	RUfus	kernel[11091]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=24146 DPT=80
+Sep 04 20:22:35	prod1	kernel[25699]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=7916 DPT=443
+Sep 04 20:22:36	testvm	kernel[14298]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=40795 DPT=3306
+Sep 04 20:22:36	testvm	kernel[26093]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=20436 DPT=8080
+Sep 04 20:22:38	archive	kernel[25880]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=12234 DPT=5432
+Sep 04 20:22:38	prod1	kernel[17489]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=30623 DPT=25
+Sep 04 20:22:55	RUfus	kernel[12865]:	Did not receive identification string from 8.8.4.4
+Sep 04 20:23:03	archive	kernel[8647]:	pam_unix(sshd:session): session closed for user root
+Sep 04 20:23:06	archive	kernel[7242]:	Outbound connection to 104.22.60.184:443 established
+Sep 04 20:23:16	LabSZ	kernel[10920]:	Did not receive identification string from 8.8.4.4
+Sep 04 20:24:08	archive	kernel[18751]:	event66  - Sleep Button: is tagged by udev as: Keyboard
+Sep 04 20:24:11	server	kernel[8707]:	pam_unix(sshd:session): session closed for user chen
+Sep 05 00:01:55	testvm	kernel[7348]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 00:01:57	LabSZ	kernel[27820]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 00:02:10	server	kernel[13886]:	systemd: Started User Session 25283 of user webmaster.
+Sep 05 00:02:11	server	kernel[29090]:	kernel: usb 1-82: USB disconnect, device number 2
+Sep 05 00:02:24	ADM	kernel[20070]:	kernel: usb 1-55: USB disconnect, device number 2
+Sep 05 00:02:34	RUfus	kernel[14459]:	Received disconnect from 8.8.8.8: 83: disconnected by user
+Sep 05 00:02:36	RUfus	kernel[1106]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 00:02:44	archive	kernel[9041]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 00:03:09	ADM	kernel[22225]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 00:03:32	archive	kernel[20954]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 00:03:33	ADM	kernel[26249]:	Oops: 0000 [#1] SMP PTI
+Sep 05 00:03:34	ADM	kernel[2378]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 00:03:47	ADM	kernel[8107]:	Received disconnect from 8.8.8.8: 84: disconnected by user
+Sep 05 00:04:06	archive	kernel[1547]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 00:04:45	ADM	kernel[25337]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event60)
+Sep 05 00:04:54	LabSZ	kernel[3108]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:75.0/usb3/3-4/3-4:1.0/0003:1EA7:00756.0001/input/input75/event75
+Sep 05 00:04:59	server	kernel[19572]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=36511 DPT=21
+Sep 05 00:04:59	RUfus	kernel[6848]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=8490 DPT=22
+Sep 05 00:05:00	LabSZ	kernel[29116]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=63263 DPT=80
+Sep 05 00:05:01	LabSZ	kernel[15271]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=25709 DPT=443
+Sep 05 00:05:02	testvm	kernel[12082]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=52186 DPT=3306
+Sep 05 00:05:04	RUfus	kernel[21286]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=31761 DPT=8080
+Sep 05 00:05:04	server	kernel[8576]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=10569 DPT=5432
+Sep 05 00:05:05	prod1	kernel[7981]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=42906 DPT=25
+Sep 05 00:05:17	ADM	kernel[10108]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 00:05:24	testvm	kernel[6916]:	Received disconnect from 101.76.42.122: 31: Bye Bye [preauth]
+Sep 05 00:05:30	ADM	kernel[21740]:	Loading kernel module 'evil_module.ko'
+Sep 05 00:05:31	testvm	kernel[17233]:	Tainted kernel: a module has been loaded
+Sep 05 00:29:52	archive	kernel[23316]:	event66  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 00:29:58	server	kernel[16996]:	Received disconnect from 160.90.40.103: 89: Closed due to user request [preauth]
+Sep 05 00:30:00	RUfus	kernel[1775]:	Received disconnect from 240.73.81.65: 29: Bye Bye [preauth]
+Sep 05 00:30:07	RUfus	kernel[13846]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 00:30:08	RUfus	kernel[7548]:	Oops: 0000 [#1] SMP PTI
+Sep 05 00:30:10	archive	kernel[2111]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 00:30:23	ADM	kernel[5745]:	pam_unix(sshd:session): session closed for user oracle
+Sep 05 00:30:28	RUfus	kernel[24442]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 00:30:42	server	kernel[17386]:	Received disconnect from 98.104.162.66: 16: Bye Bye [preauth]
+Sep 05 00:30:44	prod1	kernel[8311]:	Received disconnect from 79.186.135.224: 65: Closed due to user request [preauth]
+Sep 05 00:30:49	testvm	kernel[15686]:	kernel: usb 1-86: USB disconnect, device number 2
+Sep 05 00:30:55	server	kernel[12813]:	Accepted password for root from 124.86.11.175 port 53641 ssh88
+Sep 05 00:31:00	prod1	kernel[25174]:	process '/bin/java' started child '/bin/bash'
+Sep 05 00:31:21	prod1	kernel[12151]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 00:31:22	archive	kernel[7025]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 00:31:31	archive	kernel[9072]:	process '/bin/java' started child '/bin/bash'
+Sep 05 00:31:46	archive	kernel[20603]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:11.0/usb3/3-4/3-4:1.0/0003:1EA7:00116.0001/input/input11/event11
+Sep 05 00:31:49	testvm	kernel[9240]:	pam_unix(sshd:session): session closed for user chen
+Sep 05 00:31:52	ADM	kernel[25748]:	Received disconnect from 72.134.123.189: 12: Bye Bye [preauth]
+Sep 05 00:32:43	server	kernel[28677]:	Received disconnect from 85.115.99.7: 88: Closed due to user request [preauth]
+Sep 05 00:33:20	prod1	kernel[17108]:	Did not receive identification string from 8.8.8.8
+Sep 05 00:33:34	ADM	kernel[16414]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 00:33:35	archive	kernel[7161]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 00:33:52	prod1	kernel[13021]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 00:33:53	testvm	kernel[14288]:	File 'document.pdf' deleted
+Sep 05 00:33:53	RUfus	kernel[13270]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 00:34:09	prod1	kernel[5791]:	process '/bin/java' started child '/bin/bash'
+Sep 05 00:34:25	ADM	kernel[13021]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 00:34:45	prod1	kernel[10083]:	event29  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 00:34:52	archive	kernel[17690]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:35:18	server	kernel[11209]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 00:35:27	prod1	kernel[6428]:	Accepted password for oracle from 73.207.103.214 port 41195 ssh22
+Sep 05 00:35:31	ADM	kernel[2744]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:35:35	prod1	kernel[9539]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 05 00:35:43	archive	kernel[9840]:	Received disconnect from 222.53.9.16: 16: Bye Bye [preauth]
+Sep 05 00:35:54	prod1	kernel[14843]:	process '/bin/java' started child '/bin/bash'
+Sep 05 00:36:21	archive	kernel[27039]:	pam_unix(sshd:session): session opened for user chen by (uid=98)
+Sep 05 00:36:27	server	kernel[10362]:	kernel: usb 1-65: USB disconnect, device number 2
+Sep 05 00:36:42	RUfus	kernel[10483]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 00:37:13	LabSZ	kernel[14672]:	event11  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 00:37:16	prod1	kernel[9601]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event38)
+Sep 05 00:37:22	LabSZ	kernel[11716]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 00:37:41	testvm	kernel[27341]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 05 00:37:49	testvm	kernel[17149]:	Received disconnect from 151.184.213.40: 33: Closed due to user request [preauth]
+Sep 05 00:37:55	RUfus	kernel[7385]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:37:57	testvm	kernel[28145]:	event60  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 00:38:01	testvm	kernel[25892]:	process '/bin/bash' started by user 59
+Sep 05 00:38:10	server	kernel[25560]:	Received disconnect from 30.56.156.130: 31: Closed due to user request [preauth]
+Sep 05 00:38:30	RUfus	kernel[21443]:	process '/usr/bin/curl' started by user oracle
+Sep 05 00:38:32	testvm	kernel[18753]:	process '/bin/chmod' started by user webmaster with args: +x payload.sh
+Sep 05 00:38:34	ADM	kernel[1596]:	process '/bin/sh' started by user oracle with args: payload.sh
+Sep 05 00:39:16	server	kernel[14400]:	Received disconnect from 101.110.232.175: 9: Bye Bye [preauth]
+Sep 05 00:39:55	testvm	kernel[1064]:	process '/usr/bin/curl' started by user admin
+Sep 05 00:39:57	LabSZ	kernel[21417]:	process '/bin/chmod' started by user ubuntu with args: +x payload.sh
+Sep 05 00:39:58	testvm	kernel[4652]:	process '/bin/sh' started by user pgadmin with args: payload.sh
+Sep 05 00:41:02	RUfus	kernel[15531]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:33.0/usb3/3-4/3-4:1.0/0003:1EA7:00336.0001/input/input33/event33
+Sep 05 00:41:19	prod1	kernel[9658]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 00:41:20	testvm	kernel[27165]:	File 'document.pdf' deleted
+Sep 05 00:41:21	ADM	kernel[7115]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 00:42:00	prod1	kernel[2578]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event98)
+Sep 05 00:42:05	LabSZ	kernel[24791]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 05 00:42:15	archive	kernel[8958]:	Loading kernel module 'evil_module.ko'
+Sep 05 00:42:16	LabSZ	kernel[4584]:	Tainted kernel: a module has been loaded
+Sep 05 00:42:31	ADM	kernel[25184]:	kernel: usb 1-70: USB disconnect, device number 2
+Sep 05 00:42:33	RUfus	kernel[22006]:	Loading kernel module 'evil_module.ko'
+Sep 05 00:42:34	ADM	kernel[21621]:	Tainted kernel: a module has been loaded
+Sep 05 00:42:46	testvm	kernel[19606]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=4948 DPT=21
+Sep 05 00:42:47	prod1	kernel[25897]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=51091 DPT=22
+Sep 05 00:42:48	ADM	kernel[24347]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=25986 DPT=80
+Sep 05 00:42:49	archive	kernel[12954]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=6810 DPT=443
+Sep 05 00:42:50	archive	kernel[25262]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=35081 DPT=3306
+Sep 05 00:42:50	ADM	kernel[13281]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=64367 DPT=8080
+Sep 05 00:42:51	archive	kernel[3445]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=27044 DPT=5432
+Sep 05 00:42:52	RUfus	kernel[4328]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.42.109.42 DST=... PROTO=TCP SPT=28087 DPT=25
+Sep 05 00:43:02	server	kernel[18927]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 00:43:03	testvm	kernel[18575]:	File 'document.pdf' deleted
+Sep 05 00:43:04	archive	kernel[16900]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 00:43:34	testvm	kernel[7838]:	Loading kernel module 'evil_module.ko'
+Sep 05 00:43:35	server	kernel[28592]:	Tainted kernel: a module has been loaded
+Sep 05 00:43:48	server	kernel[6819]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 00:43:50	RUfus	kernel[18238]:	Did not receive identification string from 8.8.4.4
+Sep 05 00:43:53	LabSZ	kernel[4074]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event91)
+Sep 05 00:43:55	ADM	kernel[20798]:	process '/usr/bin/curl' started by user chen
+Sep 05 00:43:58	archive	kernel[19497]:	process '/bin/chmod' started by user chen with args: +x payload.sh
+Sep 05 00:43:58	testvm	kernel[19116]:	process '/bin/sh' started by user backup with args: payload.sh
+Sep 05 00:44:07	prod1	kernel[14702]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event66)
+Sep 05 00:44:56	RUfus	kernel[29215]:	kernel: usb 1-54: USB disconnect, device number 2
+Sep 05 00:45:10	LabSZ	kernel[18140]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event72)
+Sep 05 00:45:20	RUfus	kernel[17223]:	process '/bin/java' started child '/bin/bash'
+Sep 05 00:45:30	archive	kernel[16027]:	Received disconnect from 8.8.4.4: 16: disconnected by user
+Sep 05 00:45:36	ADM	kernel[3970]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event73)
+Sep 05 00:46:16	server	kernel[11481]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event66)
+Sep 05 00:46:26	prod1	kernel[19655]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event53)
+Sep 05 00:46:32	server	kernel[24173]:	Received disconnect from 9.9.9.9: 80: disconnected by user
+Sep 05 00:46:39	prod1	kernel[1870]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event2)
+Sep 05 00:46:41	archive	kernel[21487]:	systemd: Started User Session 14364 of user guest.
+Sep 05 00:46:56	prod1	kernel[25941]:	Received disconnect from 217.218.29.187: 17: Bye Bye [preauth]
+Sep 05 00:47:23	archive	kernel[1402]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:47:26	testvm	kernel[14256]:	pam_unix(sshd:session): session opened for user matlab by (uid=14)
+Sep 05 00:47:30	ADM	kernel[10766]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 00:47:48	archive	kernel[23038]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 00:48:04	LabSZ	kernel[6889]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 00:48:19	ADM	kernel[10109]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 00:48:22	archive	kernel[26894]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:13.0/usb3/3-4/3-4:1.0/0003:1EA7:00136.0001/input/input13/event13
+Sep 05 00:48:25	prod1	kernel[11099]:	Did not receive identification string from 1.0.0.1
+Sep 05 00:48:27	RUfus	kernel[28611]:	event8  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 00:48:44	ADM	kernel[29897]:	Did not receive identification string from 8.8.4.4
+Sep 05 00:48:54	testvm	kernel[5453]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event83)
+Sep 05 00:48:57	testvm	kernel[18973]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:9.0/usb3/3-4/3-4:1.0/0003:1EA7:0096.0001/input/input9/event9
+Sep 05 00:49:12	RUfus	kernel[4327]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 00:49:25	archive	kernel[14002]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 00:49:26	ADM	kernel[14789]:	File 'document.pdf' deleted
+Sep 05 00:49:27	testvm	kernel[6205]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 00:49:44	RUfus	kernel[16874]:	process '/bin/java' started child '/bin/bash'
+Sep 05 00:49:57	prod1	kernel[6080]:	Received disconnect from 8.8.8.8: 1: disconnected by user
+Sep 05 00:50:03	server	kernel[24969]:	process '/bin/bash' started by user 96
+Sep 05 00:50:23	server	kernel[1985]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 00:51:50	prod1	kernel[6206]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event29)
+Sep 05 00:52:06	ADM	kernel[18663]:	Accepted password for webmaster from 146.10.1.194 port 26223 ssh28
+Sep 05 00:52:17	server	kernel[9895]:	pam_unix(sshd:session): session opened for user root by (uid=61)
+Sep 05 00:52:21	RUfus	kernel[1736]:	pam_unix(sshd:session): session opened for user guest by (uid=24)
+Sep 05 00:52:37	archive	kernel[18967]:	Received disconnect from 175.235.45.206: 85: Bye Bye [preauth]
+Sep 05 00:53:02	archive	kernel[3918]:	Received disconnect from 9.9.9.9: 32: disconnected by user
+Sep 05 00:55:26	prod1	kernel[22225]:	Accepted password for ubuntu from 80.230.246.167 port 62577 ssh3
+Sep 05 00:55:41	prod1	kernel[7155]:	pam_unix(sshd:session): session closed for user guest
+Sep 05 00:55:47	ADM	kernel[14379]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:55:53	ADM	kernel[5932]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=52374 DPT=21
+Sep 05 00:55:53	archive	kernel[24747]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=49086 DPT=22
+Sep 05 00:55:55	LabSZ	kernel[26733]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=25404 DPT=80
+Sep 05 00:55:56	ADM	kernel[7124]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=31349 DPT=443
+Sep 05 00:55:57	RUfus	kernel[19355]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=15699 DPT=3306
+Sep 05 00:55:57	prod1	kernel[24328]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=38991 DPT=8080
+Sep 05 00:55:58	RUfus	kernel[14955]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=49338 DPT=5432
+Sep 05 00:55:59	LabSZ	kernel[15327]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=19638 DPT=25
+Sep 05 00:57:06	server	kernel[29327]:	pam_unix(sshd:session): session opened for user chen by (uid=79)
+Sep 05 00:57:15	archive	kernel[5351]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 05 00:57:22	RUfus	kernel[28589]:	Received disconnect from 9.9.9.9: 95: disconnected by user
+Sep 05 00:57:33	RUfus	kernel[10771]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 00:57:55	ADM	kernel[2781]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:7.0/usb3/3-4/3-4:1.0/0003:1EA7:0076.0001/input/input7/event7
+Sep 05 00:57:57	RUfus	kernel[21607]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 00:57:58	LabSZ	kernel[25231]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 00:58:29	archive	kernel[9795]:	process '/bin/java' started child '/bin/bash'
+Sep 05 00:58:49	testvm	kernel[28938]:	kernel: usb 1-41: USB disconnect, device number 2
+Sep 05 00:58:52	RUfus	kernel[25202]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 00:59:00	LabSZ	kernel[3134]:	Received disconnect from 9.9.9.9: 86: disconnected by user
+Sep 05 00:59:14	LabSZ	kernel[14417]:	Received disconnect from 153.120.28.182: 47: Bye Bye [preauth]
+Sep 05 00:59:22	prod1	kernel[19924]:	Did not receive identification string from 1.0.0.1
+Sep 05 00:59:39	LabSZ	kernel[6518]:	Did not receive identification string from 1.1.1.1
+Sep 05 01:00:25	ADM	kernel[9165]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=10519 DPT=21
+Sep 05 01:00:26	prod1	kernel[9301]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=5797 DPT=22
+Sep 05 01:00:27	server	kernel[21099]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=53820 DPT=80
+Sep 05 01:00:28	prod1	kernel[24961]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=56269 DPT=443
+Sep 05 01:00:30	server	kernel[6642]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=54832 DPT=3306
+Sep 05 01:00:31	RUfus	kernel[18750]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=43358 DPT=8080
+Sep 05 01:00:32	server	kernel[21853]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=7366 DPT=5432
+Sep 05 01:00:33	LabSZ	kernel[12470]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=24458 DPT=25
+Sep 05 01:00:40	server	kernel[17214]:	systemd: Started User Session 8893 of user matlab.
+Sep 05 01:01:02	ADM	kernel[2093]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=20378 DPT=21
+Sep 05 01:01:03	LabSZ	kernel[12691]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=33526 DPT=22
+Sep 05 01:01:04	ADM	kernel[18895]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=4063 DPT=80
+Sep 05 01:01:05	LabSZ	kernel[25141]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=39094 DPT=443
+Sep 05 01:01:06	archive	kernel[4735]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=21130 DPT=3306
+Sep 05 01:01:07	LabSZ	kernel[24485]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=19899 DPT=8080
+Sep 05 01:01:08	archive	kernel[4013]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=5739 DPT=5432
+Sep 05 01:01:09	archive	kernel[6178]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=17137 DPT=25
+Sep 05 01:01:22	LabSZ	kernel[9083]:	Received disconnect from 82.102.142.116: 24: Bye Bye [preauth]
+Sep 05 01:01:37	ADM	kernel[17128]:	event87  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:02:02	server	kernel[8925]:	event32  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:02:32	server	kernel[15152]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=1855 DPT=21
+Sep 05 01:02:33	prod1	kernel[13255]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=23863 DPT=22
+Sep 05 01:02:34	server	kernel[29977]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=32470 DPT=80
+Sep 05 01:02:35	server	kernel[15351]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=54920 DPT=443
+Sep 05 01:02:37	testvm	kernel[1575]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=48349 DPT=3306
+Sep 05 01:02:38	archive	kernel[11654]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=2360 DPT=8080
+Sep 05 01:02:39	archive	kernel[13106]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=36819 DPT=5432
+Sep 05 01:02:40	server	kernel[28240]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=2667 DPT=25
+Sep 05 01:03:20	ADM	kernel[13993]:	Process 'kthreadd' (PID {pid}) opened a network socket to {ip}:{port}
+Sep 05 01:04:12	ADM	kernel[1245]:	process '/bin/java' started child '/bin/bash'
+Sep 05 01:04:24	server	kernel[5029]:	process '/bin/bash' started by user 42
+Sep 05 01:04:35	LabSZ	kernel[9201]:	Received disconnect from 216.203.175.3: 7: Closed due to user request [preauth]
+Sep 05 01:04:49	server	kernel[15405]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 01:05:03	ADM	kernel[20661]:	systemd: Started User Session 27771 of user oracle.
+Sep 05 01:05:28	testvm	kernel[23725]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 01:05:40	server	kernel[1505]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=49082 DPT=21
+Sep 05 01:05:41	prod1	kernel[25056]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=64682 DPT=22
+Sep 05 01:05:42	archive	kernel[24382]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=47688 DPT=80
+Sep 05 01:05:43	prod1	kernel[14864]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=29003 DPT=443
+Sep 05 01:05:44	testvm	kernel[8211]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=61211 DPT=3306
+Sep 05 01:05:45	testvm	kernel[20621]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=39763 DPT=8080
+Sep 05 01:05:46	prod1	kernel[9528]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=37730 DPT=5432
+Sep 05 01:05:46	testvm	kernel[24885]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=50798 DPT=25
+Sep 05 01:06:22	archive	kernel[22148]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=5405 DPT=21
+Sep 05 01:06:23	archive	kernel[24761]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=25382 DPT=22
+Sep 05 01:06:24	RUfus	kernel[11112]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=39150 DPT=80
+Sep 05 01:06:25	server	kernel[4325]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=6924 DPT=443
+Sep 05 01:06:27	prod1	kernel[9782]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=8699 DPT=3306
+Sep 05 01:06:28	ADM	kernel[19643]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=17924 DPT=8080
+Sep 05 01:06:29	testvm	kernel[15860]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=29809 DPT=5432
+Sep 05 01:06:30	LabSZ	kernel[28271]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=18780 DPT=25
+Sep 05 01:06:50	testvm	kernel[14830]:	pam_unix(sshd:session): session closed for user admin
+Sep 05 01:07:03	RUfus	kernel[24756]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 01:07:37	ADM	kernel[20986]:	Received disconnect from 176.141.246.203: 12: Closed due to user request [preauth]
+Sep 05 01:07:40	archive	kernel[29362]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 01:07:43	LabSZ	kernel[19898]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 01:07:44	prod1	kernel[8201]:	File 'document.pdf' deleted
+Sep 05 01:07:45	testvm	kernel[12220]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 01:08:32	server	kernel[10524]:	Loading kernel module 'evil_module.ko'
+Sep 05 01:08:33	archive	kernel[19858]:	Tainted kernel: a module has been loaded
+Sep 05 01:17:58	archive	kernel[27348]:	Accepted password for guest from 56.210.119.103 port 62694 ssh89
+Sep 05 01:18:01	LabSZ	kernel[22339]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:18:07	prod1	kernel[29468]:	pam_unix(sshd:session): session opened for user oracle by (uid=68)
+Sep 05 01:18:09	server	kernel[16890]:	systemd: Started User Session 21987 of user admin.
+Sep 05 01:18:25	ADM	kernel[28436]:	Accepted password for pgadmin from 164.5.96.90 port 36844 ssh7
+Sep 05 01:18:29	LabSZ	kernel[23826]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:83.0/usb3/3-4/3-4:1.0/0003:1EA7:00836.0001/input/input83/event83
+Sep 05 01:18:32	prod1	kernel[20909]:	kernel: usb 1-36: USB disconnect, device number 2
+Sep 05 01:18:37	server	kernel[28556]:	process '/bin/bash' started by user 73
+Sep 05 01:18:55	LabSZ	kernel[22498]:	pam_unix(sshd:session): session closed for user guest
+Sep 05 01:19:01	prod1	kernel[14153]:	Received disconnect from 206.139.189.77: 64: Bye Bye [preauth]
+Sep 05 01:19:37	server	kernel[27394]:	event58  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:19:52	archive	kernel[12700]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 01:19:55	RUfus	kernel[3575]:	Received disconnect from 255.79.182.176: 24: Closed due to user request [preauth]
+Sep 05 01:20:00	archive	kernel[4255]:	process '/usr/bin/curl' started by user pgadmin
+Sep 05 01:20:02	ADM	kernel[7599]:	process '/bin/chmod' started by user oracle with args: +x payload.sh
+Sep 05 01:20:03	archive	kernel[16868]:	process '/bin/sh' started by user matlab with args: payload.sh
+Sep 05 01:20:45	RUfus	kernel[24811]:	process '/usr/bin/curl' started by user backup
+Sep 05 01:20:48	archive	kernel[11814]:	process '/bin/chmod' started by user pgadmin with args: +x payload.sh
+Sep 05 01:20:48	prod1	kernel[5385]:	process '/bin/sh' started by user matlab with args: payload.sh
+Sep 05 01:21:09	ADM	kernel[9852]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event70)
+Sep 05 01:21:11	testvm	kernel[12996]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 05 01:21:39	LabSZ	kernel[12182]:	process '/usr/bin/curl' started by user webmaster
+Sep 05 01:21:40	archive	kernel[7979]:	process '/bin/chmod' started by user 123 with args: +x payload.sh
+Sep 05 01:21:41	RUfus	kernel[16986]:	process '/bin/sh' started by user test with args: payload.sh
+Sep 05 01:22:16	LabSZ	kernel[20459]:	Did not receive identification string from 1.0.0.1
+Sep 05 01:22:24	RUfus	kernel[29328]:	event33  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:22:36	archive	kernel[17055]:	event69  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:23:17	server	kernel[6335]:	process '/bin/bash' started by user 30
+Sep 05 01:23:42	server	kernel[28157]:	Accepted password for chen from 122.66.23.78 port 51619 ssh30
+Sep 05 01:24:02	ADM	kernel[6139]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:24:08	archive	kernel[20305]:	Received disconnect from 204.109.138.213: 14: Closed due to user request [preauth]
+Sep 05 01:24:53	RUfus	kernel[10014]:	Received disconnect from 211.25.205.63: 72: Closed due to user request [preauth]
+Sep 05 01:25:29	testvm	kernel[29993]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event94)
+Sep 05 01:25:52	testvm	kernel[20594]:	Accepted password for test from 113.8.106.57 port 18790 ssh11
+Sep 05 01:25:55	ADM	kernel[24809]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:25:59	archive	kernel[16433]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event11)
+Sep 05 01:26:02	archive	kernel[15390]:	process '/bin/java' started child '/bin/bash'
+Sep 05 01:26:09	ADM	kernel[15423]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 01:26:10	archive	kernel[14855]:	File 'document.pdf' deleted
+Sep 05 01:26:11	prod1	kernel[13541]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 01:26:36	server	kernel[20542]:	pam_unix(sshd:session): session opened for user webmaster by (uid=22)
+Sep 05 01:26:48	RUfus	kernel[28873]:	pam_unix(sshd:session): session opened for user test by (uid=53)
+Sep 05 01:26:54	testvm	kernel[19061]:	pam_unix(sshd:session): session closed for user admin
+Sep 05 01:27:04	testvm	kernel[13233]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 01:27:05	testvm	kernel[14200]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 01:27:30	testvm	kernel[27624]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 01:27:44	prod1	kernel[2886]:	pam_unix(sshd:session): session opened for user 123 by (uid=76)
+Sep 05 01:29:01	testvm	kernel[20073]:	Received disconnect from 123.138.7.7: 25: Closed due to user request [preauth]
+Sep 05 01:29:06	archive	kernel[23907]:	pam_unix(sshd:session): session opened for user fztu by (uid=47)
+Sep 05 01:32:20	LabSZ	kernel[12209]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:32:45	archive	kernel[3917]:	systemd: Started User Session 23800 of user pgadmin.
+Sep 05 01:32:55	server	kernel[6153]:	Did not receive identification string from 8.8.4.4
+Sep 05 01:33:21	server	kernel[3172]:	kernel: usb 1-29: USB disconnect, device number 2
+Sep 05 01:33:38	LabSZ	kernel[18543]:	Process 'kthreadd' (PID 19950) opened a network socket to 131.103.24.238:20313
+Sep 05 01:33:50	server	kernel[12583]:	Process 'kthreadd' (PID 23621) opened a network socket to 197.210.64.133:10612
+Sep 05 01:34:00	testvm	kernel[23860]:	Accepted password for guest from 62.121.234.138 port 19919 ssh29
+Sep 05 01:34:06	testvm	kernel[17670]:	event6  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:34:16	RUfus	kernel[10628]:	pam_unix(sshd:session): session opened for user webmaster by (uid=81)
+Sep 05 01:34:25	RUfus	kernel[5950]:	kernel: usb 1-82: USB disconnect, device number 2
+Sep 05 01:34:28	LabSZ	kernel[28885]:	Received disconnect from 100.111.130.193: 65: Closed due to user request [preauth]
+Sep 05 01:35:37	prod1	kernel[8101]:	process '/bin/java' started child '/bin/bash'
+Sep 05 01:35:46	server	kernel[16088]:	Accepted password for webmaster from 173.227.52.192 port 49041 ssh94
+Sep 05 01:36:03	testvm	kernel[26004]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 01:36:10	server	kernel[29402]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event79)
+Sep 05 01:36:44	LabSZ	kernel[25682]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event38)
+Sep 05 01:36:51	server	kernel[8644]:	Received disconnect from 146.66.199.25: 11: Closed due to user request [preauth]
+Sep 05 01:36:57	archive	kernel[13741]:	Received disconnect from 9.9.9.9: 85: disconnected by user
+Sep 05 01:36:59	LabSZ	kernel[1441]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event14)
+Sep 05 01:37:02	server	kernel[9040]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 01:37:04	archive	kernel[4381]:	File 'document.pdf' deleted
+Sep 05 01:37:04	prod1	kernel[25055]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 01:37:31	RUfus	kernel[3818]:	Received disconnect from 32.24.47.159: 26: Closed due to user request [preauth]
+Sep 05 01:37:39	prod1	kernel[2282]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 01:37:52	testvm	kernel[27991]:	Received disconnect from 27.209.46.174: 1: Closed due to user request [preauth]
+Sep 05 01:38:14	LabSZ	kernel[20350]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:13.0/usb3/3-4/3-4:1.0/0003:1EA7:00136.0001/input/input13/event13
+Sep 05 01:38:17	RUfus	kernel[16276]:	Received disconnect from 161.34.114.249: 10: Closed due to user request [preauth]
+Sep 05 01:38:36	ADM	kernel[17467]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 01:38:37	archive	kernel[29895]:	Oops: 0000 [#1] SMP PTI
+Sep 05 01:38:38	RUfus	kernel[24018]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 01:39:05	LabSZ	kernel[19940]:	Accepted password for pgadmin from 124.255.95.204 port 28929 ssh23
+Sep 05 01:41:01	LabSZ	kernel[10475]:	pam_unix(sshd:session): session opened for user root by (uid=41)
+Sep 05 01:41:35	server	kernel[2182]:	process '/bin/java' started child '/bin/bash'
+Sep 05 01:41:48	testvm	kernel[23251]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=35226 DPT=21
+Sep 05 01:41:48	RUfus	kernel[27709]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=2236 DPT=22
+Sep 05 01:41:49	server	kernel[7246]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=60764 DPT=80
+Sep 05 01:41:50	testvm	kernel[1397]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=41088 DPT=443
+Sep 05 01:41:51	ADM	kernel[24714]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=7731 DPT=3306
+Sep 05 01:41:52	RUfus	kernel[27296]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=51153 DPT=8080
+Sep 05 01:41:53	testvm	kernel[15966]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=45031 DPT=5432
+Sep 05 01:41:54	testvm	kernel[21064]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=131.103.24.238 DST=... PROTO=TCP SPT=9054 DPT=25
+Sep 05 01:42:02	RUfus	kernel[9289]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 01:42:03	ADM	kernel[6293]:	Oops: 0000 [#1] SMP PTI
+Sep 05 01:42:04	LabSZ	kernel[20424]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 01:42:17	RUfus	kernel[28293]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event80)
+Sep 05 01:42:28	server	kernel[11226]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 01:42:29	prod1	kernel[14624]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 01:42:40	testvm	kernel[20118]:	Loading kernel module 'evil_module.ko'
+Sep 05 01:42:41	prod1	kernel[1163]:	Tainted kernel: a module has been loaded
+Sep 05 01:43:15	testvm	kernel[28315]:	Did not receive identification string from 8.8.4.4
+Sep 05 01:43:54	archive	kernel[14589]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 01:43:55	archive	kernel[5726]:	Oops: 0000 [#1] SMP PTI
+Sep 05 01:43:56	archive	kernel[18033]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 01:44:12	server	kernel[2703]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 01:44:14	LabSZ	kernel[8802]:	Received disconnect from 60.106.239.113: 50: Bye Bye [preauth]
+Sep 05 01:44:52	server	kernel[1876]:	pam_unix(sshd:session): session opened for user guest by (uid=10)
+Sep 05 01:44:56	prod1	kernel[28268]:	pam_unix(sshd:session): session closed for user root
+Sep 05 01:45:00	testvm	kernel[4942]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:45:36	ADM	kernel[24438]:	kernel: usb 1-34: USB disconnect, device number 2
+Sep 05 01:45:39	testvm	kernel[13429]:	Received disconnect from 53.111.21.204: 92: Closed due to user request [preauth]
+Sep 05 01:46:10	server	kernel[22251]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:14.0/usb3/3-4/3-4:1.0/0003:1EA7:00146.0001/input/input14/event14
+Sep 05 01:46:12	LabSZ	kernel[9732]:	pam_unix(sshd:session): session opened for user chen by (uid=96)
+Sep 05 01:46:18	RUfus	kernel[2698]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 01:47:09	ADM	kernel[27494]:	process '/usr/bin/curl' started by user admin
+Sep 05 01:47:11	LabSZ	kernel[21196]:	process '/bin/chmod' started by user ubuntu with args: +x payload.sh
+Sep 05 01:47:12	prod1	kernel[25049]:	process '/bin/sh' started by user test with args: payload.sh
+Sep 05 01:47:59	LabSZ	kernel[17612]:	Loading kernel module 'evil_module.ko'
+Sep 05 01:48:00	LabSZ	kernel[7350]:	Tainted kernel: a module has been loaded
+Sep 05 01:48:13	server	kernel[26207]:	Did not receive identification string from 8.8.4.4
+Sep 05 01:48:19	server	kernel[15513]:	Accepted password for root from 53.114.238.129 port 5629 ssh67
+Sep 05 01:48:22	LabSZ	kernel[18272]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 01:48:51	RUfus	kernel[29041]:	pam_unix(sshd:session): session closed for user chen
+Sep 05 01:49:07	RUfus	kernel[26709]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:43.0/usb3/3-4/3-4:1.0/0003:1EA7:00436.0001/input/input43/event43
+Sep 05 01:49:11	server	kernel[25505]:	systemd: Started User Session 25063 of user test.
+Sep 05 01:50:23	ADM	kernel[16325]:	event74  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:50:26	prod1	kernel[20883]:	pam_unix(sshd:session): session opened for user test by (uid=67)
+Sep 05 01:50:33	prod1	kernel[7445]:	event58  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:50:39	ADM	kernel[18314]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event11)
+Sep 05 01:50:54	ADM	kernel[18081]:	Received disconnect from 46.112.166.21: 29: Closed due to user request [preauth]
+Sep 05 01:50:56	LabSZ	kernel[20124]:	Accepted password for webmaster from 30.187.233.213 port 24233 ssh89
+Sep 05 01:51:03	ADM	kernel[5309]:	kernel: usb 1-20: USB disconnect, device number 2
+Sep 05 01:51:18	prod1	kernel[23864]:	process '/usr/bin/curl' started by user root
+Sep 05 01:51:20	server	kernel[12134]:	process '/bin/chmod' started by user test with args: +x payload.sh
+Sep 05 01:51:21	prod1	kernel[18716]:	process '/bin/sh' started by user ubuntu with args: payload.sh
+Sep 05 01:51:29	archive	kernel[9648]:	Process 'kthreadd' (PID 7221) opened a network socket to 129.215.17.15:5018
+Sep 05 01:51:41	RUfus	kernel[22565]:	Accepted password for backup from 124.46.20.33 port 58034 ssh21
+Sep 05 01:51:45	server	kernel[20398]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 01:51:47	testvm	kernel[2444]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 01:52:23	server	kernel[11942]:	event65  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 01:52:29	RUfus	kernel[25548]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 01:52:30	prod1	kernel[10517]:	File 'document.pdf' deleted
+Sep 05 01:52:31	archive	kernel[25294]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 02:04:48	testvm	kernel[14028]:	Received disconnect from 137.235.37.234: 31: Closed due to user request [preauth]
+Sep 05 02:05:00	prod1	kernel[18750]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:05:02	ADM	kernel[15125]:	event10  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:05:22	archive	kernel[11768]:	pam_unix(sshd:session): session opened for user chen by (uid=51)
+Sep 05 02:05:32	archive	kernel[23572]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event22)
+Sep 05 02:05:45	RUfus	kernel[9987]:	kernel: usb 1-42: USB disconnect, device number 2
+Sep 05 02:05:51	testvm	kernel[28327]:	process '/bin/java' started child '/bin/bash'
+Sep 05 02:06:12	prod1	kernel[27860]:	Received disconnect from 8.8.4.4: 45: disconnected by user
+Sep 05 02:06:15	archive	kernel[24950]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 02:06:18	ADM	kernel[13172]:	event70  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:06:34	ADM	kernel[23811]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 02:06:44	prod1	kernel[24006]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=30260 DPT=21
+Sep 05 02:06:45	server	kernel[25761]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=45980 DPT=22
+Sep 05 02:06:46	testvm	kernel[4818]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=57299 DPT=80
+Sep 05 02:06:47	server	kernel[22603]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=53403 DPT=443
+Sep 05 02:06:48	testvm	kernel[3340]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=9448 DPT=3306
+Sep 05 02:06:49	server	kernel[12089]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=28101 DPT=8080
+Sep 05 02:06:50	LabSZ	kernel[22966]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=51426 DPT=5432
+Sep 05 02:06:51	prod1	kernel[14452]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=54670 DPT=25
+Sep 05 02:07:07	LabSZ	kernel[25330]:	process '/usr/bin/curl' started by user pgadmin
+Sep 05 02:07:09	testvm	kernel[7929]:	process '/bin/chmod' started by user admin with args: +x payload.sh
+Sep 05 02:07:10	ADM	kernel[15820]:	process '/bin/sh' started by user root with args: payload.sh
+Sep 05 02:07:22	server	kernel[3315]:	Received disconnect from 231.111.115.182: 61: Closed due to user request [preauth]
+Sep 05 02:07:47	ADM	kernel[12258]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event70)
+Sep 05 02:07:54	LabSZ	kernel[22072]:	Received disconnect from 8.8.4.4: 89: disconnected by user
+Sep 05 02:08:28	server	kernel[6378]:	event65  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:08:42	testvm	kernel[6679]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event90)
+Sep 05 02:08:51	server	kernel[16114]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:8.0/usb3/3-4/3-4:1.0/0003:1EA7:0086.0001/input/input8/event8
+Sep 05 02:10:07	RUfus	kernel[25019]:	event57  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:10:31	prod1	kernel[28910]:	Accepted password for 123 from 155.199.167.243 port 21428 ssh48
+Sep 05 02:10:34	LabSZ	kernel[25720]:	Did not receive identification string from 1.0.0.1
+Sep 05 02:10:44	ADM	kernel[25234]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event56)
+Sep 05 02:11:08	LabSZ	kernel[22371]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 02:11:09	server	kernel[21032]:	File 'document.pdf' deleted
+Sep 05 02:11:10	server	kernel[19357]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 02:11:44	server	kernel[10248]:	kernel: usb 1-16: USB disconnect, device number 2
+Sep 05 02:11:50	ADM	kernel[2232]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event73)
+Sep 05 02:11:54	archive	kernel[9815]:	event73  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:12:03	testvm	kernel[16695]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 02:12:11	RUfus	kernel[25146]:	Received disconnect from 49.164.25.8: 29: Closed due to user request [preauth]
+Sep 05 02:12:26	archive	kernel[26909]:	process '/usr/bin/curl' started by user root
+Sep 05 02:12:28	ADM	kernel[1052]:	process '/bin/chmod' started by user test with args: +x payload.sh
+Sep 05 02:12:28	prod1	kernel[24204]:	process '/bin/sh' started by user backup with args: payload.sh
+Sep 05 02:12:41	server	kernel[11406]:	Process 'kthreadd' (PID 23878) opened a network socket to 103.197.144.1:19852
+Sep 05 02:13:24	archive	kernel[5656]:	Accepted password for webmaster from 248.56.114.217 port 15542 ssh37
+Sep 05 02:13:37	server	kernel[12586]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 02:13:40	LabSZ	kernel[2135]:	Process 'kthreadd' (PID 24964) opened a network socket to 197.210.64.133:12461
+Sep 05 02:13:55	RUfus	kernel[9749]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 02:14:10	server	kernel[23567]:	systemd: Started User Session 7826 of user ubuntu.
+Sep 05 02:14:13	prod1	kernel[25293]:	process '/usr/bin/curl' started by user guest
+Sep 05 02:14:16	LabSZ	kernel[20951]:	process '/bin/chmod' started by user pgadmin with args: +x payload.sh
+Sep 05 02:14:16	server	kernel[7337]:	process '/bin/sh' started by user oracle with args: payload.sh
+Sep 05 02:14:30	RUfus	kernel[22891]:	event96  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:14:32	ADM	kernel[19744]:	pam_unix(sshd:session): session closed for user backup
+Sep 05 02:14:49	prod1	kernel[3485]:	Received disconnect from 215.22.38.60: 26: Bye Bye [preauth]
+Sep 05 02:16:06	testvm	kernel[21403]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event11)
+Sep 05 02:16:18	archive	kernel[9919]:	Received disconnect from 8.8.8.8: 49: disconnected by user
+Sep 05 02:16:24	server	kernel[21340]:	kernel: usb 1-51: USB disconnect, device number 2
+Sep 05 02:16:27	prod1	kernel[21812]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event31)
+Sep 05 02:16:50	LabSZ	kernel[9226]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event62)
+Sep 05 02:16:55	LabSZ	kernel[22651]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 02:17:16	server	kernel[20188]:	Received disconnect from 9.9.9.9: 10: disconnected by user
+Sep 05 02:18:27	server	kernel[6922]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:18:55	ADM	kernel[19933]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=13880 DPT=21
+Sep 05 02:18:56	server	kernel[10791]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=16543 DPT=22
+Sep 05 02:18:57	testvm	kernel[17199]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=39774 DPT=80
+Sep 05 02:18:58	archive	kernel[6942]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=33467 DPT=443
+Sep 05 02:18:59	LabSZ	kernel[7885]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=2561 DPT=3306
+Sep 05 02:19:01	RUfus	kernel[8275]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=30700 DPT=8080
+Sep 05 02:19:01	prod1	kernel[13922]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=18883 DPT=5432
+Sep 05 02:19:02	archive	kernel[23038]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=15292 DPT=25
+Sep 05 02:19:13	RUfus	kernel[17292]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 02:19:14	prod1	kernel[8973]:	File 'document.pdf' deleted
+Sep 05 02:19:15	archive	kernel[19160]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 02:20:35	testvm	kernel[20022]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 02:20:36	server	kernel[13102]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 02:20:47	RUfus	kernel[6981]:	systemd: Started User Session 15850 of user fztu.
+Sep 05 02:20:55	prod1	kernel[7470]:	Did not receive identification string from 9.9.9.9
+Sep 05 02:21:34	ADM	kernel[16075]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 02:22:24	RUfus	kernel[6112]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 02:22:25	prod1	kernel[1088]:	Oops: 0000 [#1] SMP PTI
+Sep 05 02:22:27	testvm	kernel[22359]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 02:22:47	archive	kernel[17113]:	Accepted password for backup from 178.139.165.212 port 24417 ssh13
+Sep 05 02:23:05	server	kernel[10579]:	kernel: usb 1-67: USB disconnect, device number 2
+Sep 05 02:24:58	ADM	kernel[28091]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:43.0/usb3/3-4/3-4:1.0/0003:1EA7:00436.0001/input/input43/event43
+Sep 05 02:25:04	prod1	kernel[5922]:	Received disconnect from 9.9.9.9: 23: disconnected by user
+Sep 05 02:25:08	server	kernel[26663]:	event40  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:25:26	RUfus	kernel[29358]:	Did not receive identification string from 1.0.0.1
+Sep 05 02:25:35	archive	kernel[24349]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 02:25:36	prod1	kernel[5980]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 02:25:52	LabSZ	kernel[27028]:	pam_unix(sshd:session): session opened for user webmaster by (uid=50)
+Sep 05 02:26:08	prod1	kernel[21594]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=56695 DPT=21
+Sep 05 02:26:09	archive	kernel[21834]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=10942 DPT=22
+Sep 05 02:26:09	testvm	kernel[21369]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=34751 DPT=80
+Sep 05 02:26:10	LabSZ	kernel[20043]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=13287 DPT=443
+Sep 05 02:26:11	prod1	kernel[12918]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=11164 DPT=3306
+Sep 05 02:26:12	LabSZ	kernel[27775]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=4131 DPT=8080
+Sep 05 02:26:13	LabSZ	kernel[16999]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=63550 DPT=5432
+Sep 05 02:26:14	server	kernel[7978]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=6808 DPT=25
+Sep 05 02:26:32	testvm	kernel[9132]:	Loading kernel module 'evil_module.ko'
+Sep 05 02:26:33	archive	kernel[23842]:	Tainted kernel: a module has been loaded
+Sep 05 02:27:14	server	kernel[9991]:	systemd: Started User Session 2255 of user chen.
+Sep 05 02:27:24	server	kernel[17550]:	pam_unix(sshd:session): session closed for user guest
+Sep 05 02:27:48	LabSZ	kernel[9869]:	Accepted password for webmaster from 182.60.46.219 port 49742 ssh89
+Sep 05 02:27:51	ADM	kernel[23944]:	Received disconnect from 9.9.9.9: 77: disconnected by user
+Sep 05 02:27:57	RUfus	kernel[28156]:	Received disconnect from 8.8.4.4: 93: disconnected by user
+Sep 05 02:28:00	prod1	kernel[5747]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 02:28:00	archive	kernel[11200]:	File 'document.pdf' deleted
+Sep 05 02:28:01	prod1	kernel[16134]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 02:28:13	ADM	kernel[4769]:	Accepted password for guest from 179.110.26.75 port 6760 ssh99
+Sep 05 02:28:43	testvm	kernel[15505]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 02:28:49	testvm	kernel[16599]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 02:29:07	LabSZ	kernel[2008]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 02:29:26	server	kernel[10618]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 02:29:36	archive	kernel[12734]:	Loading kernel module 'evil_module.ko'
+Sep 05 02:29:37	prod1	kernel[28800]:	Tainted kernel: a module has been loaded
+Sep 05 02:29:50	ADM	kernel[8281]:	Did not receive identification string from 8.8.8.8
+Sep 05 02:31:43	LabSZ	kernel[1147]:	Loading kernel module 'evil_module.ko'
+Sep 05 02:31:44	LabSZ	kernel[19885]:	Tainted kernel: a module has been loaded
+Sep 05 02:31:53	archive	kernel[2792]:	process '/bin/java' started child '/bin/bash'
+Sep 05 02:32:02	prod1	kernel[8408]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 02:32:04	testvm	kernel[14724]:	File 'document.pdf' deleted
+Sep 05 02:32:05	archive	kernel[25849]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 02:32:17	RUfus	kernel[24031]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 02:32:23	ADM	kernel[26474]:	Received disconnect from 72.25.84.183: 81: Bye Bye [preauth]
+Sep 05 02:32:48	LabSZ	kernel[23359]:	Received disconnect from 8.8.8.8: 83: disconnected by user
+Sep 05 02:32:55	ADM	kernel[16567]:	Received disconnect from 245.115.228.145: 9: Bye Bye [preauth]
+Sep 05 02:33:06	archive	kernel[1172]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 05 02:33:13	testvm	kernel[14887]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 02:33:38	prod1	kernel[15267]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 02:33:53	RUfus	kernel[2550]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:29.0/usb3/3-4/3-4:1.0/0003:1EA7:00296.0001/input/input29/event29
+Sep 05 02:33:56	testvm	kernel[21001]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event34)
+Sep 05 02:34:00	server	kernel[4221]:	event68  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:34:15	server	kernel[6738]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event63)
+Sep 05 02:34:58	RUfus	kernel[26726]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 02:34:59	archive	kernel[25231]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 02:35:11	ADM	kernel[11874]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:51.0/usb3/3-4/3-4:1.0/0003:1EA7:00516.0001/input/input51/event51
+Sep 05 02:35:13	ADM	kernel[19056]:	Received disconnect from 125.70.28.239: 52: Closed due to user request [preauth]
+Sep 05 02:35:26	testvm	kernel[11434]:	Received disconnect from 85.68.170.152: 63: Bye Bye [preauth]
+Sep 05 02:35:29	archive	kernel[11060]:	process '/bin/java' started child '/bin/bash'
+Sep 05 02:35:47	testvm	kernel[3970]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 02:35:53	ADM	kernel[23654]:	event51  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:36:03	testvm	kernel[24215]:	Received disconnect from 17.238.38.151: 3: Closed due to user request [preauth]
+Sep 05 02:36:13	LabSZ	kernel[3070]:	Received disconnect from 32.101.15.183: 32: Bye Bye [preauth]
+Sep 05 02:36:17	archive	kernel[28835]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 02:36:25	RUfus	kernel[5909]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=103.197.144.1 DST=... PROTO=TCP SPT=62259 DPT=21
+Sep 05 02:36:26	archive	kernel[19256]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=103.197.144.1 DST=... PROTO=TCP SPT=54495 DPT=22
+Sep 05 02:36:28	ADM	kernel[14626]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=103.197.144.1 DST=... PROTO=TCP SPT=31254 DPT=80
+Sep 05 02:36:28	testvm	kernel[20802]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=103.197.144.1 DST=... PROTO=TCP SPT=20056 DPT=443
+Sep 05 02:36:29	ADM	kernel[17542]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=103.197.144.1 DST=... PROTO=TCP SPT=4666 DPT=3306
+Sep 05 02:36:30	prod1	kernel[13518]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=103.197.144.1 DST=... PROTO=TCP SPT=53865 DPT=8080
+Sep 05 02:36:31	archive	kernel[6710]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=103.197.144.1 DST=... PROTO=TCP SPT=18085 DPT=5432
+Sep 05 02:36:32	RUfus	kernel[9820]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=103.197.144.1 DST=... PROTO=TCP SPT=23839 DPT=25
+Sep 05 02:36:48	RUfus	kernel[1644]:	systemd: Started User Session 14968 of user backup.
+Sep 05 02:37:26	server	kernel[7955]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event21)
+Sep 05 02:37:30	RUfus	kernel[18970]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=57326 DPT=21
+Sep 05 02:37:31	ADM	kernel[1149]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=36807 DPT=22
+Sep 05 02:37:32	testvm	kernel[18088]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=34578 DPT=80
+Sep 05 02:37:33	archive	kernel[15577]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=58631 DPT=443
+Sep 05 02:37:34	RUfus	kernel[4691]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=24272 DPT=3306
+Sep 05 02:37:35	LabSZ	kernel[5950]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=32171 DPT=8080
+Sep 05 02:37:36	server	kernel[17494]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=6960 DPT=5432
+Sep 05 02:37:37	ADM	kernel[15499]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.33.32.156 DST=... PROTO=TCP SPT=38665 DPT=25
+Sep 05 02:37:49	ADM	kernel[16687]:	event80  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:38:22	RUfus	kernel[4934]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:33.0/usb3/3-4/3-4:1.0/0003:1EA7:00336.0001/input/input33/event33
+Sep 05 02:38:25	testvm	kernel[8703]:	Did not receive identification string from 1.1.1.1
+Sep 05 02:39:22	LabSZ	kernel[27468]:	Process 'encryptor.exe' (PID {pid}) is rapidly reading and writing files in /home/user/documents
+Sep 05 02:39:23	LabSZ	kernel[3177]:	File 'document.pdf' deleted
+Sep 05 02:39:24	ADM	kernel[18548]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 02:39:33	RUfus	kernel[4524]:	systemd: Started User Session 22471 of user fztu.
+Sep 05 02:40:19	testvm	kernel[5373]:	Received disconnect from 75.78.163.78: 31: Bye Bye [preauth]
+Sep 05 02:40:23	server	kernel[2224]:	systemd: Started User Session 12571 of user test.
+Sep 05 02:40:48	prod1	kernel[18825]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 02:41:37	server	kernel[7312]:	kernel: usb 1-31: USB disconnect, device number 2
+Sep 05 02:42:29	RUfus	kernel[12952]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 02:43:09	RUfus	kernel[8777]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:43:12	archive	kernel[25918]:	event51  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:43:32	testvm	kernel[12382]:	Did not receive identification string from 9.9.9.9
+Sep 05 02:43:55	ADM	kernel[19699]:	Received disconnect from 207.193.152.83: 18: Closed due to user request [preauth]
+Sep 05 02:44:12	testvm	kernel[28520]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 02:44:15	RUfus	kernel[1444]:	Accepted password for admin from 126.236.168.190 port 40713 ssh72
+Sep 05 02:44:23	server	kernel[9951]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:45.0/usb3/3-4/3-4:1.0/0003:1EA7:00456.0001/input/input45/event45
+Sep 05 02:44:33	testvm	kernel[3437]:	event33  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:44:36	archive	kernel[9403]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:44:43	ADM	kernel[19527]:	kernel: usb 1-92: USB disconnect, device number 2
+Sep 05 02:45:11	testvm	kernel[23731]:	Did not receive identification string from 1.0.0.1
+Sep 05 02:45:48	prod1	kernel[19584]:	Received disconnect from 250.33.203.221: 57: Bye Bye [preauth]
+Sep 05 02:45:50	LabSZ	kernel[17898]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event73)
+Sep 05 02:45:54	LabSZ	kernel[28273]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 02:45:54	testvm	kernel[4966]:	Oops: 0000 [#1] SMP PTI
+Sep 05 02:45:55	archive	kernel[15427]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 02:46:32	RUfus	kernel[5871]:	systemd: Started User Session 18069 of user guest.
+Sep 05 02:46:35	LabSZ	kernel[4372]:	event74  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 02:47:16	RUfus	kernel[10684]:	systemd: Started User Session 7595 of user fztu.
+Sep 05 02:47:46	LabSZ	kernel[17877]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 02:47:59	RUfus	kernel[21304]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:48:07	RUfus	kernel[2312]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 02:48:17	archive	kernel[19049]:	systemd: Started User Session 29865 of user matlab.
+Sep 05 02:48:47	archive	kernel[2353]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 02:48:54	testvm	kernel[8287]:	Did not receive identification string from 8.8.4.4
+Sep 05 02:49:00	server	kernel[23554]:	process '/usr/bin/curl' started by user test
+Sep 05 02:49:03	ADM	kernel[5891]:	process '/bin/chmod' started by user guest with args: +x payload.sh
+Sep 05 02:49:03	archive	kernel[22311]:	process '/bin/sh' started by user webmaster with args: payload.sh
+Sep 05 02:49:19	server	kernel[19950]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 02:49:20	LabSZ	kernel[20929]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 02:49:28	server	kernel[23238]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event41)
+Sep 05 02:49:40	RUfus	kernel[25301]:	process '/bin/java' started child '/bin/bash'
+Sep 05 02:50:07	prod1	kernel[4614]:	Received disconnect from 234.118.79.158: 19: Closed due to user request [preauth]
+Sep 05 02:50:11	LabSZ	kernel[3223]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:86.0/usb3/3-4/3-4:1.0/0003:1EA7:00866.0001/input/input86/event86
+Sep 05 02:50:16	server	kernel[28251]:	Received disconnect from 8.8.8.8: 71: disconnected by user
+Sep 05 02:50:39	LabSZ	kernel[11925]:	Accepted password for pgadmin from 7.153.32.134 port 32127 ssh52
+Sep 05 02:50:50	LabSZ	kernel[21995]:	pam_unix(sshd:session): session opened for user backup by (uid=7)
+Sep 05 02:51:07	server	kernel[29634]:	Loading kernel module 'evil_module.ko'
+Sep 05 02:51:08	RUfus	kernel[1388]:	Tainted kernel: a module has been loaded
+Sep 05 02:52:27	testvm	kernel[4960]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 02:52:30	prod1	kernel[12513]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:5.0/usb3/3-4/3-4:1.0/0003:1EA7:0056.0001/input/input5/event5
+Sep 05 02:53:58	ADM	kernel[26253]:	process '/bin/bash' started by user 43
+Sep 05 02:54:33	testvm	kernel[27718]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.146.165.111 DST=... PROTO=TCP SPT=2992 DPT=21
+Sep 05 02:54:34	ADM	kernel[25825]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.146.165.111 DST=... PROTO=TCP SPT=13294 DPT=22
+Sep 05 02:54:35	ADM	kernel[3053]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.146.165.111 DST=... PROTO=TCP SPT=36533 DPT=80
+Sep 05 02:54:36	ADM	kernel[8678]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.146.165.111 DST=... PROTO=TCP SPT=5116 DPT=443
+Sep 05 02:54:37	LabSZ	kernel[23990]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.146.165.111 DST=... PROTO=TCP SPT=12197 DPT=3306
+Sep 05 02:54:38	LabSZ	kernel[15027]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.146.165.111 DST=... PROTO=TCP SPT=25368 DPT=8080
+Sep 05 02:54:40	ADM	kernel[17826]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.146.165.111 DST=... PROTO=TCP SPT=48167 DPT=5432
+Sep 05 02:54:41	archive	kernel[20833]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.146.165.111 DST=... PROTO=TCP SPT=26196 DPT=25
+Sep 05 02:56:20	LabSZ	kernel[12173]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event47)
+Sep 05 02:56:36	prod1	kernel[6617]:	kernel: usb 1-8: USB disconnect, device number 2
+Sep 05 02:56:40	ADM	kernel[8326]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 02:57:29	ADM	kernel[25506]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event36)
+Sep 05 02:58:22	LabSZ	kernel[12585]:	Loading kernel module 'evil_module.ko'
+Sep 05 02:58:23	LabSZ	kernel[28143]:	Tainted kernel: a module has been loaded
+Sep 05 02:58:37	server	kernel[25752]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 02:58:50	testvm	kernel[26611]:	kernel: usb 1-54: USB disconnect, device number 2
+Sep 05 02:58:55	testvm	kernel[1995]:	pam_unix(sshd:session): session opened for user oracle by (uid=92)
+Sep 05 03:00:45	server	kernel[5877]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 03:00:49	ADM	kernel[12366]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event32)
+Sep 05 03:00:57	prod1	kernel[25153]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=21802 DPT=21
+Sep 05 03:00:58	RUfus	kernel[25313]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=16479 DPT=22
+Sep 05 03:00:59	LabSZ	kernel[25515]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=62037 DPT=80
+Sep 05 03:01:00	ADM	kernel[4187]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=31896 DPT=443
+Sep 05 03:01:01	testvm	kernel[14382]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=39618 DPT=3306
+Sep 05 03:01:02	prod1	kernel[28633]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=56207 DPT=8080
+Sep 05 03:01:03	archive	kernel[25405]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=36612 DPT=5432
+Sep 05 03:01:04	LabSZ	kernel[19284]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=197.210.64.133 DST=... PROTO=TCP SPT=42645 DPT=25
+Sep 05 03:01:39	testvm	kernel[25545]:	Received disconnect from 1.0.0.1: 3: disconnected by user
+Sep 05 03:01:44	ADM	kernel[15718]:	Received disconnect from 161.178.180.72: 96: Closed due to user request [preauth]
+Sep 05 03:01:47	server	kernel[13783]:	Received disconnect from 194.4.58.138: 35: Closed due to user request [preauth]
+Sep 05 03:02:02	archive	kernel[7624]:	Did not receive identification string from 8.8.8.8
+Sep 05 03:02:15	LabSZ	kernel[6269]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 03:04:13	RUfus	kernel[11313]:	Received disconnect from 8.8.4.4: 54: disconnected by user
+Sep 05 03:04:17	archive	kernel[21117]:	event16  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 03:04:42	ADM	kernel[21810]:	event53  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 03:04:45	archive	kernel[6666]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 03:04:46	server	kernel[4605]:	Oops: 0000 [#1] SMP PTI
+Sep 05 03:04:47	ADM	kernel[28066]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 03:04:58	LabSZ	kernel[2757]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 03:05:00	ADM	kernel[4758]:	kernel: panic occurred, switching back to text console
+Sep 05 03:05:13	testvm	kernel[6009]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 03:05:17	archive	kernel[18625]:	process '/bin/java' started child '/bin/bash'
+Sep 05 03:05:26	RUfus	kernel[27298]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event27)
+Sep 05 03:05:51	testvm	kernel[15059]:	Did not receive identification string from 1.0.0.1
+Sep 05 03:05:57	archive	kernel[24805]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 03:06:00	testvm	kernel[9631]:	kernel: usb 1-35: USB disconnect, device number 2
+Sep 05 03:06:02	ADM	kernel[24517]:	event47  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 03:06:08	RUfus	kernel[21935]:	pam_unix(sshd:session): session opened for user root by (uid=43)
+Sep 05 03:06:14	LabSZ	kernel[24474]:	event19  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 03:32:39	testvm	kernel[12125]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 03:32:40	prod1	kernel[1567]:	Accepted password for chen from 125.115.43.219 port 21947 ssh94
+Sep 05 03:33:12	testvm	kernel[10673]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 03:33:23	RUfus	kernel[28935]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 03:33:28	LabSZ	kernel[26460]:	Accepted password for 123 from 101.2.182.187 port 40783 ssh11
+Sep 05 03:33:35	testvm	kernel[24910]:	Process 'kthreadd' (PID 7515) opened a network socket to 131.103.24.238:5837
+Sep 05 03:33:54	ADM	kernel[14353]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 03:33:55	testvm	kernel[11406]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 03:34:07	LabSZ	kernel[7387]:	Did not receive identification string from 8.8.8.8
+Sep 05 03:34:09	prod1	kernel[15237]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 03:34:14	RUfus	kernel[4166]:	process '/bin/bash' started by user 55
+Sep 05 03:34:25	ADM	kernel[23930]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 03:34:26	RUfus	kernel[12921]:	Oops: 0000 [#1] SMP PTI
+Sep 05 03:34:27	LabSZ	kernel[4157]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 03:34:44	RUfus	kernel[26704]:	process '/bin/bash' started by user 39
+Sep 05 03:36:23	testvm	kernel[9119]:	Accepted password for ubuntu from 204.145.83.231 port 59026 ssh73
+Sep 05 03:36:24	LabSZ	kernel[4676]:	Loading kernel module 'evil_module.ko'
+Sep 05 03:36:25	RUfus	kernel[21459]:	Tainted kernel: a module has been loaded
+Sep 05 03:36:43	RUfus	kernel[6722]:	Received disconnect from 67.168.27.100: 65: Closed due to user request [preauth]
+Sep 05 03:36:52	prod1	kernel[11198]:	Received disconnect from 225.230.68.120: 82: Bye Bye [preauth]
+Sep 05 03:37:03	testvm	kernel[27112]:	event86  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 03:37:31	LabSZ	kernel[20549]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 03:37:32	LabSZ	kernel[12694]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 03:37:45	ADM	kernel[25664]:	Process 'kthreadd' (PID 13960) opened a network socket to 66.240.219.146:3188
+Sep 05 03:37:58	prod1	kernel[3142]:	systemd: Started User Session 7685 of user 123.
+Sep 05 03:37:59	RUfus	kernel[19806]:	event49  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 03:38:05	RUfus	kernel[24499]:	systemd: Started User Session 19509 of user matlab.
+Sep 05 03:38:15	archive	kernel[8019]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=167.94.146.58 DST=... PROTO=TCP SPT=6100 DPT=21
+Sep 05 03:38:16	server	kernel[1047]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=167.94.146.58 DST=... PROTO=TCP SPT=1477 DPT=22
+Sep 05 03:38:17	testvm	kernel[9002]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=167.94.146.58 DST=... PROTO=TCP SPT=21722 DPT=80
+Sep 05 03:38:18	RUfus	kernel[4950]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=167.94.146.58 DST=... PROTO=TCP SPT=58013 DPT=443
+Sep 05 03:38:19	testvm	kernel[10523]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=167.94.146.58 DST=... PROTO=TCP SPT=37764 DPT=3306
+Sep 05 03:38:20	LabSZ	kernel[28951]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=167.94.146.58 DST=... PROTO=TCP SPT=53299 DPT=8080
+Sep 05 03:38:21	archive	kernel[18593]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=167.94.146.58 DST=... PROTO=TCP SPT=52590 DPT=5432
+Sep 05 03:38:22	testvm	kernel[3186]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=167.94.146.58 DST=... PROTO=TCP SPT=37400 DPT=25
+Sep 05 03:38:33	LabSZ	kernel[20127]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:11.0/usb3/3-4/3-4:1.0/0003:1EA7:00116.0001/input/input11/event11
+Sep 05 03:38:39	LabSZ	kernel[9229]:	Received disconnect from 233.143.123.141: 30: Bye Bye [preauth]
+Sep 05 03:38:51	server	kernel[4089]:	Process 'kthreadd' (PID 20807) opened a network socket to 80.94.95.15:45020
+Sep 05 03:39:24	prod1	kernel[10135]:	Received disconnect from 253.120.82.72: 93: Closed due to user request [preauth]
+Sep 05 08:58:28	server	kernel[6928]:	Received disconnect from 231.223.170.252: 55: Closed due to user request [preauth]
+Sep 05 09:00:13	archive	kernel[14831]:	Loading kernel module 'evil_module.ko'
+Sep 05 09:00:14	RUfus	kernel[11653]:	Tainted kernel: a module has been loaded
+Sep 05 09:00:28	server	kernel[22470]:	Received disconnect from 110.154.255.122: 27: Closed due to user request [preauth]
+Sep 05 09:00:32	RUfus	kernel[27821]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:62.0/usb3/3-4/3-4:1.0/0003:1EA7:00626.0001/input/input62/event62
+Sep 05 09:18:38	archive	kernel[16746]:	process '/bin/java' started child '/bin/bash'
+Sep 05 09:18:57	archive	kernel[3789]:	Loading kernel module 'evil_module.ko'
+Sep 05 09:18:58	archive	kernel[24384]:	Tainted kernel: a module has been loaded
+Sep 05 09:20:02	RUfus	kernel[22440]:	Process 'encryptor.exe' (PID 9870) is rapidly reading and writing files in /home/user/documents
+Sep 05 09:20:03	server	kernel[11720]:	File 'document.pdf' deleted
+Sep 05 09:20:04	server	kernel[14858]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 09:20:15	archive	kernel[14983]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 09:20:17	server	kernel[25454]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:20:21	server	kernel[10960]:	process '/bin/java' started child '/bin/bash'
+Sep 05 09:21:46	server	kernel[27613]:	Received disconnect from 8.8.4.4: 7: disconnected by user
+Sep 05 09:21:49	ADM	kernel[25591]:	Did not receive identification string from 1.0.0.1
+Sep 05 09:22:03	LabSZ	kernel[1125]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 09:22:04	ADM	kernel[17844]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 09:22:26	archive	kernel[17054]:	Process 'kthreadd' (PID 28764) opened a network socket to 64.62.156.52:24649
+Sep 05 09:22:58	testvm	kernel[8258]:	process '/bin/java' started child '/bin/bash'
+Sep 05 09:23:12	server	kernel[11476]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 09:23:32	RUfus	kernel[14673]:	pam_unix(sshd:session): session opened for user webmaster by (uid=17)
+Sep 05 09:23:45	archive	kernel[22140]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:23:48	RUfus	kernel[11006]:	Received disconnect from 251.107.145.56: 96: Bye Bye [preauth]
+Sep 05 09:24:17	server	kernel[7228]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event45)
+Sep 05 09:24:21	RUfus	kernel[13282]:	Did not receive identification string from 1.0.0.1
+Sep 05 09:24:36	ADM	kernel[23374]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=22)
+Sep 05 09:24:58	ADM	kernel[2567]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 09:24:59	testvm	kernel[22605]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 09:25:11	server	kernel[22227]:	kernel: usb 1-16: USB disconnect, device number 2
+Sep 05 09:25:18	testvm	kernel[20589]:	Loading kernel module 'evil_module.ko'
+Sep 05 09:25:19	ADM	kernel[4316]:	Tainted kernel: a module has been loaded
+Sep 05 09:25:43	RUfus	kernel[17346]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:25:49	LabSZ	kernel[21100]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:4.0/usb3/3-4/3-4:1.0/0003:1EA7:0046.0001/input/input4/event4
+Sep 05 09:26:05	archive	kernel[5326]:	process '/bin/java' started child '/bin/bash'
+Sep 05 09:26:22	LabSZ	kernel[23613]:	pam_unix(sshd:session): session closed for user admin
+Sep 05 09:26:32	ADM	kernel[22095]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:27:35	testvm	kernel[5049]:	Received disconnect from 9.9.9.9: 99: disconnected by user
+Sep 05 09:27:47	testvm	kernel[29073]:	event13  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:28:17	RUfus	kernel[23392]:	Loading kernel module 'evil_module.ko'
+Sep 05 09:28:18	prod1	kernel[29367]:	Tainted kernel: a module has been loaded
+Sep 05 09:28:31	LabSZ	kernel[29064]:	Received disconnect from 213.176.250.126: 22: Bye Bye [preauth]
+Sep 05 09:28:34	archive	kernel[27617]:	Process 'encryptor.exe' (PID 17845) is rapidly reading and writing files in /home/user/documents
+Sep 05 09:28:35	ADM	kernel[13042]:	File 'document.pdf' deleted
+Sep 05 09:28:36	LabSZ	kernel[20825]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 09:28:50	LabSZ	kernel[10174]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 09:28:54	testvm	kernel[10681]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 09:29:14	testvm	kernel[17338]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 09:29:23	ADM	kernel[10697]:	Did not receive identification string from 8.8.8.8
+Sep 05 09:29:47	server	kernel[18676]:	systemd: Started User Session 6448 of user webmaster.
+Sep 05 09:30:01	server	kernel[3346]:	event16  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:30:09	RUfus	kernel[9432]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 09:30:25	testvm	kernel[28710]:	pam_unix(sshd:session): session opened for user oracle by (uid=76)
+Sep 05 09:31:05	ADM	kernel[16824]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 09:31:06	testvm	kernel[28280]:	Oops: 0000 [#1] SMP PTI
+Sep 05 09:31:07	testvm	kernel[5091]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 09:31:29	RUfus	kernel[15497]:	systemd: Started User Session 23030 of user fztu.
+Sep 05 09:31:33	LabSZ	kernel[5008]:	systemd: Started User Session 16953 of user pgadmin.
+Sep 05 09:31:42	archive	kernel[18166]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event67)
+Sep 05 09:31:59	ADM	kernel[13630]:	Loading kernel module 'evil_module.ko'
+Sep 05 09:32:01	testvm	kernel[21235]:	Tainted kernel: a module has been loaded
+Sep 05 09:32:13	ADM	kernel[29851]:	pam_unix(sshd:session): session opened for user 123 by (uid=12)
+Sep 05 09:32:18	LabSZ	kernel[6901]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 09:32:30	prod1	kernel[11600]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event71)
+Sep 05 09:32:34	archive	kernel[14787]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:39.0/usb3/3-4/3-4:1.0/0003:1EA7:00396.0001/input/input39/event39
+Sep 05 09:32:36	archive	kernel[1079]:	Accepted password for backup from 1.120.214.7 port 24846 ssh85
+Sep 05 09:32:40	server	kernel[24604]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 09:32:41	LabSZ	kernel[15604]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 09:32:58	server	kernel[19767]:	pam_unix(sshd:session): session closed for user oracle
+Sep 05 09:33:05	archive	kernel[12268]:	pam_unix(sshd:session): session closed for user guest
+Sep 05 09:33:20	RUfus	kernel[23319]:	pam_unix(sshd:session): session closed for user admin
+Sep 05 09:33:36	LabSZ	kernel[13740]:	Accepted password for admin from 232.223.36.91 port 33055 ssh18
+Sep 05 09:33:50	RUfus	kernel[21277]:	systemd: Started User Session 27056 of user chen.
+Sep 05 09:34:04	archive	kernel[1033]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 09:34:29	prod1	kernel[14176]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 09:35:09	RUfus	kernel[5122]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 09:35:10	server	kernel[20395]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 09:35:27	ADM	kernel[10843]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 09:35:28	testvm	kernel[8403]:	Oops: 0000 [#1] SMP PTI
+Sep 05 09:35:28	RUfus	kernel[2006]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 09:36:04	prod1	kernel[3429]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event25)
+Sep 05 09:36:08	archive	kernel[5464]:	event91  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:36:10	ADM	kernel[10818]:	pam_unix(sshd:session): session opened for user root by (uid=50)
+Sep 05 09:36:16	testvm	kernel[22410]:	pam_unix(sshd:session): session opened for user oracle by (uid=68)
+Sep 05 09:36:31	archive	kernel[20681]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:36:52	prod1	kernel[10485]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 09:38:17	server	kernel[11342]:	systemd: Started User Session 8729 of user admin.
+Sep 05 09:38:20	testvm	kernel[7007]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event46)
+Sep 05 09:38:33	RUfus	kernel[1278]:	Invalid user 123 from 34.123.181.51
+Sep 05 09:38:54	ADM	kernel[14497]:	Process 'encryptor.exe' (PID 14184) is rapidly reading and writing files in /home/user/documents
+Sep 05 09:38:56	archive	kernel[11824]:	File 'document.pdf' deleted
+Sep 05 09:38:57	LabSZ	kernel[28800]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 09:40:08	LabSZ	kernel[8404]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 09:40:11	testvm	kernel[12039]:	kernel: usb 1-65: USB disconnect, device number 2
+Sep 05 09:40:17	LabSZ	kernel[15713]:	process '/usr/bin/curl' started by user chen
+Sep 05 09:40:18	testvm	kernel[4001]:	process '/bin/chmod' started by user pgadmin with args: +x payload.sh
+Sep 05 09:40:19	ADM	kernel[4423]:	process '/bin/sh' started by user matlab with args: payload.sh
+Sep 05 09:40:27	LabSZ	kernel[8473]:	Received disconnect from 101.207.90.94: 44: Bye Bye [preauth]
+Sep 05 09:40:32	testvm	kernel[18491]:	kernel: usb 1-96: USB disconnect, device number 2
+Sep 05 09:40:50	prod1	kernel[22930]:	kernel: myapp[636366]: segfault at 7f0a00000000 ip 00007f0a4e4c0000 sp 00007ffde1e07000 error 7 in libpthread-4.9.so[7f0a4e480000+19000]
+Sep 05 09:41:14	RUfus	kernel[16178]:	kernel: panic occurred, switching back to text console
+Sep 05 09:41:55	archive	kernel[6159]:	systemd: Started User Session 7022 of user fztu.
+Sep 05 09:42:04	server	kernel[7113]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=13620 DPT=21
+Sep 05 09:42:05	RUfus	kernel[1600]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=36740 DPT=22
+Sep 05 09:42:06	archive	kernel[25651]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=53532 DPT=80
+Sep 05 09:42:07	archive	kernel[28330]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=17686 DPT=443
+Sep 05 09:42:08	ADM	kernel[26162]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=27743 DPT=3306
+Sep 05 09:42:10	ADM	kernel[27811]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=61690 DPT=8080
+Sep 05 09:42:11	LabSZ	kernel[14243]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=33948 DPT=5432
+Sep 05 09:42:11	server	kernel[2168]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=6855 DPT=25
+Sep 05 09:42:36	testvm	kernel[29957]:	Received disconnect from 3.7.58.79: 22: Closed due to user request [preauth]
+Sep 05 09:43:10	testvm	kernel[10520]:	Received disconnect from 8.8.4.4: 31: disconnected by user
+Sep 05 09:43:19	archive	kernel[17957]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 09:43:28	RUfus	kernel[29502]:	Received disconnect from 207.249.88.179: 69: Closed due to user request [preauth]
+Sep 05 09:43:30	prod1	kernel[14693]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 09:43:32	testvm	kernel[17610]:	Oops: 0000 [#1] SMP PTI
+Sep 05 09:43:32	ADM	kernel[16198]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 09:44:05	server	kernel[25473]:	Received disconnect from 8.8.4.4: 15: disconnected by user
+Sep 05 09:44:08	testvm	kernel[25175]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 09:44:51	ADM	kernel[11499]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 09:44:52	archive	kernel[7033]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 09:45:07	testvm	kernel[18101]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:27.0/usb3/3-4/3-4:1.0/0003:1EA7:00276.0001/input/input27/event27
+Sep 05 09:45:14	testvm	kernel[23749]:	Did not receive identification string from 9.9.9.9
+Sep 05 09:45:33	ADM	kernel[24774]:	Loading kernel module 'evil_module.ko'
+Sep 05 09:45:34	prod1	kernel[20109]:	Tainted kernel: a module has been loaded
+Sep 05 09:45:46	LabSZ	kernel[12813]:	Received disconnect from 110.122.125.112: 46: Bye Bye [preauth]
+Sep 05 09:46:26	testvm	kernel[16240]:	Received disconnect from 1.1.1.1: 91: disconnected by user
+Sep 05 09:46:33	prod1	kernel[9780]:	Process 'encryptor.exe' (PID 8570) is rapidly reading and writing files in /home/user/documents
+Sep 05 09:46:34	RUfus	kernel[7765]:	File 'document.pdf' deleted
+Sep 05 09:46:36	prod1	kernel[6946]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 09:47:31	prod1	kernel[21102]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 09:47:43	ADM	kernel[12563]:	pam_unix(sshd:session): session opened for user guest by (uid=21)
+Sep 05 09:48:06	prod1	kernel[9277]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 09:49:39	testvm	kernel[23515]:	fatal: Read from socket failed: Connection reset by peer
+Sep 05 09:49:49	archive	kernel[9083]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 09:50:06	testvm	kernel[15269]:	Did not receive identification string from 9.9.9.9
+Sep 05 09:50:22	ADM	kernel[1263]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 09:50:31	server	kernel[8709]:	Did not receive identification string from 1.1.1.1
+Sep 05 09:50:34	testvm	kernel[26022]:	Received disconnect from 183.132.47.167: 51: Bye Bye [preauth]
+Sep 05 09:50:37	server	kernel[16824]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.143.33.63 DST=... PROTO=TCP SPT=49458 DPT=21
+Sep 05 09:50:38	prod1	kernel[24207]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.143.33.63 DST=... PROTO=TCP SPT=54456 DPT=22
+Sep 05 09:50:39	testvm	kernel[26199]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.143.33.63 DST=... PROTO=TCP SPT=49838 DPT=80
+Sep 05 09:50:40	archive	kernel[20772]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.143.33.63 DST=... PROTO=TCP SPT=18058 DPT=443
+Sep 05 09:50:41	prod1	kernel[6407]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.143.33.63 DST=... PROTO=TCP SPT=48012 DPT=3306
+Sep 05 09:50:42	testvm	kernel[15560]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.143.33.63 DST=... PROTO=TCP SPT=28119 DPT=8080
+Sep 05 09:50:43	LabSZ	kernel[28898]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.143.33.63 DST=... PROTO=TCP SPT=48344 DPT=5432
+Sep 05 09:50:44	RUfus	kernel[25973]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.143.33.63 DST=... PROTO=TCP SPT=15980 DPT=25
+Sep 05 09:51:15	archive	kernel[29626]:	Received disconnect from 18.164.157.166: 50: Bye Bye [preauth]
+Sep 05 09:51:39	testvm	kernel[17009]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event73)
+Sep 05 09:51:47	RUfus	kernel[27931]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 09:51:54	server	kernel[17152]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 05 09:51:56	server	kernel[4314]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=18)
+Sep 05 09:51:58	RUfus	kernel[14999]:	Accepted password for admin from 42.127.129.123 port 8337 ssh67
+Sep 05 09:52:04	LabSZ	kernel[10798]:	Process 'encryptor.exe' (PID 15427) is rapidly reading and writing files in /home/user/documents
+Sep 05 09:52:05	testvm	kernel[27990]:	File 'document.pdf' deleted
+Sep 05 09:52:06	prod1	kernel[2522]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 09:52:46	prod1	kernel[6075]:	Received disconnect from 8.8.4.4: 72: disconnected by user
+Sep 05 09:52:48	RUfus	kernel[3384]:	kernel: usb 1-40: USB disconnect, device number 2
+Sep 05 09:52:51	testvm	kernel[24371]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event7)
+Sep 05 09:53:20	server	kernel[6564]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 09:53:23	RUfus	kernel[3617]:	process '/usr/bin/curl' started by user 123
+Sep 05 09:53:26	LabSZ	kernel[27669]:	process '/bin/chmod' started by user 123 with args: +x payload.sh
+Sep 05 09:53:26	server	kernel[22352]:	process '/bin/sh' started by user guest with args: payload.sh
+Sep 05 09:54:13	archive	kernel[4193]:	kernel: usb 1-30: USB disconnect, device number 2
+Sep 05 09:54:26	LabSZ	kernel[10709]:	Process 'encryptor.exe' (PID 9917) is rapidly reading and writing files in /home/user/documents
+Sep 05 09:54:27	archive	kernel[7108]:	File 'document.pdf' deleted
+Sep 05 09:54:28	prod1	kernel[1451]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 09:54:43	LabSZ	kernel[29719]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:77.0/usb3/3-4/3-4:1.0/0003:1EA7:00776.0001/input/input77/event77
+Sep 05 09:54:45	testvm	kernel[17556]:	pam_unix(sshd:session): session opened for user chen by (uid=34)
+Sep 05 09:55:14	testvm	kernel[3587]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.135.232.92 DST=... PROTO=TCP SPT=60814 DPT=21
+Sep 05 09:55:14	prod1	kernel[29545]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.135.232.92 DST=... PROTO=TCP SPT=23280 DPT=22
+Sep 05 09:55:15	LabSZ	kernel[3055]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.135.232.92 DST=... PROTO=TCP SPT=41662 DPT=80
+Sep 05 09:55:16	prod1	kernel[15307]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.135.232.92 DST=... PROTO=TCP SPT=65411 DPT=443
+Sep 05 09:55:17	LabSZ	kernel[9639]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.135.232.92 DST=... PROTO=TCP SPT=37857 DPT=3306
+Sep 05 09:55:18	RUfus	kernel[21444]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.135.232.92 DST=... PROTO=TCP SPT=25760 DPT=8080
+Sep 05 09:55:19	testvm	kernel[29332]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.135.232.92 DST=... PROTO=TCP SPT=31660 DPT=5432
+Sep 05 09:55:20	server	kernel[10313]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.135.232.92 DST=... PROTO=TCP SPT=38515 DPT=25
+Sep 05 09:56:01	testvm	kernel[10233]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:81.0/usb3/3-4/3-4:1.0/0003:1EA7:00816.0001/input/input81/event81
+Sep 05 09:56:20	LabSZ	kernel[29837]:	event44  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:57:21	archive	kernel[18565]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 09:58:23	server	kernel[8338]:	Loading kernel module 'evil_module.ko'
+Sep 05 09:58:25	LabSZ	kernel[4035]:	Tainted kernel: a module has been loaded
+Sep 05 09:58:32	server	kernel[6747]:	event59  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 09:58:50	testvm	kernel[11198]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 09:59:34	RUfus	kernel[1863]:	pam_unix(sshd:session): session opened for user 123 by (uid=25)
+Sep 05 09:59:39	prod1	kernel[19437]:	pam_unix(sshd:session): session opened for user root by (uid=42)
+Sep 05 09:59:43	ADM	kernel[8149]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 09:59:56	archive	kernel[29702]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 09:59:59	testvm	kernel[15861]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 10:00:20	archive	kernel[19139]:	Process 'encryptor.exe' (PID 29671) is rapidly reading and writing files in /home/user/documents
+Sep 05 10:00:21	LabSZ	kernel[1452]:	File 'document.pdf' deleted
+Sep 05 10:00:21	ADM	kernel[3204]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 10:00:41	archive	kernel[17589]:	Loading kernel module 'evil_module.ko'
+Sep 05 10:00:42	ADM	kernel[14697]:	Tainted kernel: a module has been loaded
+Sep 05 10:00:50	prod1	kernel[26976]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:33.0/usb3/3-4/3-4:1.0/0003:1EA7:00336.0001/input/input33/event33
+Sep 05 10:00:56	testvm	kernel[9619]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 10:00:57	server	kernel[8282]:	Oops: 0000 [#1] SMP PTI
+Sep 05 10:00:58	prod1	kernel[11625]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 10:01:15	archive	kernel[11752]:	Received disconnect from 1.0.0.1: 36: disconnected by user
+Sep 05 10:01:42	RUfus	kernel[24637]:	Process 'encryptor.exe' (PID 21697) is rapidly reading and writing files in /home/user/documents
+Sep 05 10:01:43	ADM	kernel[25762]:	File 'document.pdf' deleted
+Sep 05 10:01:44	ADM	kernel[12920]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 10:01:58	archive	kernel[5999]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 10:01:58	prod1	kernel[2128]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 10:02:24	RUfus	kernel[23766]:	process '/usr/bin/curl' started by user admin
+Sep 05 10:02:26	RUfus	kernel[25911]:	process '/bin/chmod' started by user root with args: +x payload.sh
+Sep 05 10:02:27	ADM	kernel[16141]:	process '/bin/sh' started by user test with args: payload.sh
+Sep 05 10:02:35	ADM	kernel[18761]:	process '/bin/bash' started by user 93
+Sep 05 10:02:48	prod1	kernel[7866]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 10:03:08	ADM	kernel[17772]:	kernel: usb 1-48: USB disconnect, device number 2
+Sep 05 10:03:15	testvm	kernel[28155]:	Accepted password for admin from 237.212.229.195 port 50903 ssh1
+Sep 05 10:03:22	LabSZ	kernel[14923]:	Received disconnect from 77.76.243.31: 54: Bye Bye [preauth]
+Sep 05 10:03:26	archive	kernel[10402]:	pam_unix(sshd:session): session opened for user root by (uid=98)
+Sep 05 10:03:36	testvm	kernel[11994]:	process '/bin/java' started child '/bin/bash'
+Sep 05 10:03:55	prod1	kernel[17727]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:04:24	RUfus	kernel[13292]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:04:29	LabSZ	kernel[29768]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:25.0/usb3/3-4/3-4:1.0/0003:1EA7:00256.0001/input/input25/event25
+Sep 05 10:04:39	RUfus	kernel[5653]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event40)
+Sep 05 10:04:42	testvm	kernel[15480]:	Received disconnect from 207.63.253.6: 73: Closed due to user request [preauth]
+Sep 05 10:04:55	testvm	kernel[19502]:	systemd: Started User Session 24867 of user admin.
+Sep 05 10:05:28	archive	kernel[14439]:	Received disconnect from 146.16.253.173: 19: Bye Bye [preauth]
+Sep 05 10:05:32	LabSZ	kernel[21488]:	Loading kernel module 'evil_module.ko'
+Sep 05 10:05:33	server	kernel[18231]:	Tainted kernel: a module has been loaded
+Sep 05 10:05:44	archive	kernel[5897]:	process '/usr/bin/curl' started by user pgadmin
+Sep 05 10:05:46	prod1	kernel[16130]:	process '/bin/chmod' started by user backup with args: +x payload.sh
+Sep 05 10:05:47	RUfus	kernel[5877]:	process '/bin/sh' started by user 123 with args: payload.sh
+Sep 05 10:06:24	RUfus	kernel[8496]:	Loading kernel module 'evil_module.ko'
+Sep 05 10:06:25	server	kernel[3732]:	Tainted kernel: a module has been loaded
+Sep 05 10:06:55	prod1	kernel[17848]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:46.0/usb3/3-4/3-4:1.0/0003:1EA7:00466.0001/input/input46/event46
+Sep 05 10:07:05	prod1	kernel[26926]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 10:07:33	RUfus	kernel[25353]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:07:58	server	kernel[19359]:	process '/bin/java' started child '/bin/bash'
+Sep 05 10:08:33	RUfus	kernel[2062]:	Accepted password for ubuntu from 211.197.137.198 port 41579 ssh48
+Sep 05 10:08:46	archive	kernel[21112]:	Process 'kthreadd' (PID 3738) opened a network socket to 47.236.76.100:61899
+Sep 05 10:08:57	prod1	kernel[9706]:	systemd: Started User Session 14506 of user 123.
+Sep 05 10:09:06	testvm	kernel[16013]:	Received disconnect from 19.183.226.142: 92: Closed due to user request [preauth]
+Sep 05 10:10:21	archive	kernel[20684]:	pam_unix(sshd:session): session opened for user matlab by (uid=30)
+Sep 05 10:10:30	LabSZ	kernel[12756]:	systemd: Started User Session 2512 of user test.
+Sep 05 10:10:43	RUfus	kernel[12054]:	event22  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:11:04	prod1	kernel[12425]:	pam_unix(sshd:session): session closed for user root
+Sep 05 10:11:06	LabSZ	kernel[19407]:	event76  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:11:13	ADM	kernel[13139]:	Process 'encryptor.exe' (PID 23424) is rapidly reading and writing files in /home/user/documents
+Sep 05 10:11:14	archive	kernel[16270]:	File 'document.pdf' deleted
+Sep 05 10:11:15	testvm	kernel[19954]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 10:11:28	LabSZ	kernel[25155]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 10:11:29	testvm	kernel[17075]:	Oops: 0000 [#1] SMP PTI
+Sep 05 10:11:30	RUfus	kernel[5745]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 10:11:37	RUfus	kernel[22120]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 10:11:39	server	kernel[17331]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 10:12:10	server	kernel[13302]:	Received disconnect from 1.0.0.1: 76: disconnected by user
+Sep 05 10:12:14	archive	kernel[18803]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 10:12:21	testvm	kernel[18017]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:12:44	archive	kernel[15288]:	Connection closed by 8.8.4.4 [preauth]
+Sep 05 10:12:51	testvm	kernel[6746]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 10:12:52	LabSZ	kernel[19438]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 10:13:10	prod1	kernel[5799]:	process '/bin/bash' started by user 89
+Sep 05 10:14:17	RUfus	kernel[14769]:	kernel: usb 1-10: USB disconnect, device number 2
+Sep 05 10:14:20	ADM	kernel[25044]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event68)
+Sep 05 10:14:23	RUfus	kernel[29173]:	Accepted password for fztu from 27.73.251.66 port 42275 ssh56
+Sep 05 10:14:26	server	kernel[9732]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event75)
+Sep 05 10:15:13	RUfus	kernel[1073]:	Received disconnect from 233.184.206.143: 88: Closed due to user request [preauth]
+Sep 05 10:15:31	testvm	kernel[21186]:	systemd: Started User Session 29720 of user webmaster.
+Sep 05 10:15:45	prod1	kernel[28098]:	event78  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:16:15	ADM	kernel[12924]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 10:16:17	ADM	kernel[26671]:	Oops: 0000 [#1] SMP PTI
+Sep 05 10:16:18	prod1	kernel[4874]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 10:16:30	RUfus	kernel[7548]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event24)
+Sep 05 10:16:36	ADM	kernel[28645]:	Received disconnect from 36.156.125.57: 52: Closed due to user request [preauth]
+Sep 05 10:16:51	ADM	kernel[16895]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event96)
+Sep 05 10:17:05	ADM	kernel[10366]:	event87  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:17:24	LabSZ	kernel[21886]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:80.0/usb3/3-4/3-4:1.0/0003:1EA7:00806.0001/input/input80/event80
+Sep 05 10:17:34	RUfus	kernel[14160]:	Did not receive identification string from 1.0.0.1
+Sep 05 10:17:39	ADM	kernel[14125]:	Loading kernel module 'evil_module.ko'
+Sep 05 10:17:39	LabSZ	kernel[22418]:	Tainted kernel: a module has been loaded
+Sep 05 10:18:01	testvm	kernel[1181]:	Accepted password for guest from 185.45.96.167 port 61257 ssh93
+Sep 05 10:18:07	archive	kernel[2256]:	kernel: usb 1-60: USB disconnect, device number 2
+Sep 05 10:18:54	prod1	kernel[3531]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 10:19:09	prod1	kernel[24701]:	process '/usr/bin/curl' started by user fztu
+Sep 05 10:19:11	ADM	kernel[3912]:	process '/bin/chmod' started by user matlab with args: +x payload.sh
+Sep 05 10:19:12	server	kernel[14040]:	process '/bin/sh' started by user pgadmin with args: payload.sh
+Sep 05 10:19:20	LabSZ	kernel[23193]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:19:24	RUfus	kernel[25247]:	Received disconnect from 250.78.56.184: 29: Bye Bye [preauth]
+Sep 05 10:19:33	RUfus	kernel[17191]:	Received disconnect from 149.146.29.67: 88: Closed due to user request [preauth]
+Sep 05 10:19:39	ADM	kernel[24908]:	Received disconnect from 106.218.50.116: 60: Bye Bye [preauth]
+Sep 05 10:19:42	RUfus	kernel[3092]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 10:19:54	LabSZ	kernel[14638]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 10:19:56	ADM	kernel[6322]:	Oops: 0000 [#1] SMP PTI
+Sep 05 10:19:57	ADM	kernel[27003]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 10:20:21	ADM	kernel[9432]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 10:20:47	testvm	kernel[16689]:	Received disconnect from 110.72.204.243: 39: Closed due to user request [preauth]
+Sep 05 10:20:53	archive	kernel[19893]:	process '/bin/java' started child '/bin/bash'
+Sep 05 10:21:08	LabSZ	kernel[8796]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 10:21:26	server	kernel[3715]:	Received disconnect from 118.137.125.51: 68: Bye Bye [preauth]
+Sep 05 10:21:29	testvm	kernel[9478]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 10:21:42	RUfus	kernel[18834]:	Received disconnect from 83.235.70.144: 55: Closed due to user request [preauth]
+Sep 05 10:22:08	RUfus	kernel[28414]:	Received disconnect from 178.96.214.133: 10: Bye Bye [preauth]
+Sep 05 10:22:10	testvm	kernel[23230]:	Did not receive identification string from 9.9.9.9
+Sep 05 10:22:13	LabSZ	kernel[19034]:	Received disconnect from 132.179.234.100: 15: Closed due to user request [preauth]
+Sep 05 10:22:20	archive	kernel[1912]:	event79  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:22:37	archive	kernel[28310]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:14.0/usb3/3-4/3-4:1.0/0003:1EA7:00146.0001/input/input14/event14
+Sep 05 10:22:41	LabSZ	kernel[27564]:	Received disconnect from 66.104.37.135: 98: Closed due to user request [preauth]
+Sep 05 10:22:45	archive	kernel[6275]:	Process 'kthreadd' (PID 13974) opened a network socket to 80.94.95.214:18633
+Sep 05 10:22:58	archive	kernel[11712]:	Process 'encryptor.exe' (PID 21081) is rapidly reading and writing files in /home/user/documents
+Sep 05 10:22:58	LabSZ	kernel[9449]:	File 'document.pdf' deleted
+Sep 05 10:23:00	LabSZ	kernel[2578]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 10:23:19	LabSZ	kernel[6159]:	Accepted password for webmaster from 167.51.5.53 port 12033 ssh49
+Sep 05 10:23:21	archive	kernel[1223]:	event86  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:23:30	prod1	kernel[12051]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 10:23:35	prod1	kernel[29667]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event40)
+Sep 05 10:23:38	testvm	kernel[21824]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:23:45	prod1	kernel[5576]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 10:23:51	testvm	kernel[7054]:	pam_unix(sshd:session): session closed for user chen
+Sep 05 10:24:07	RUfus	kernel[3221]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 10:24:14	ADM	kernel[20136]:	Did not receive identification string from 8.8.4.4
+Sep 05 10:24:17	archive	kernel[21099]:	pam_unix(sshd:session): session opened for user guest by (uid=14)
+Sep 05 10:24:54	ADM	kernel[5460]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 10:24:58	RUfus	kernel[11724]:	Did not receive identification string from 8.8.4.4
+Sep 05 10:25:35	server	kernel[16053]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 10:25:47	server	kernel[23283]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:29.0/usb3/3-4/3-4:1.0/0003:1EA7:00296.0001/input/input29/event29
+Sep 05 10:25:49	ADM	kernel[9140]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event95)
+Sep 05 10:25:57	testvm	kernel[6773]:	systemd: Started User Session 17397 of user fztu.
+Sep 05 10:26:00	testvm	kernel[26661]:	Process 'encryptor.exe' (PID 19901) is rapidly reading and writing files in /home/user/documents
+Sep 05 10:26:01	testvm	kernel[20172]:	File 'document.pdf' deleted
+Sep 05 10:26:02	RUfus	kernel[26948]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 10:26:28	prod1	kernel[22018]:	systemd: Started User Session 26898 of user oracle.
+Sep 05 10:27:07	RUfus	kernel[17918]:	systemd: Started User Session 16641 of user chen.
+Sep 05 10:27:24	prod1	kernel[13944]:	pam_unix(sshd:session): session closed for user test
+Sep 05 10:27:31	LabSZ	kernel[26809]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 10:27:32	server	kernel[9353]:	Oops: 0000 [#1] SMP PTI
+Sep 05 10:27:33	prod1	kernel[21409]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 10:27:44	archive	kernel[25348]:	Received disconnect from 9.9.9.9: 55: disconnected by user
+Sep 05 10:27:47	RUfus	kernel[17600]:	Received disconnect from 145.224.39.234: 89: Bye Bye [preauth]
+Sep 05 10:28:46	ADM	kernel[7479]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 10:28:47	server	kernel[24390]:	Oops: 0000 [#1] SMP PTI
+Sep 05 10:28:48	testvm	kernel[8658]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 10:29:23	testvm	kernel[1291]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 10:30:10	RUfus	kernel[12627]:	process '/bin/bash' started by user 61
+Sep 05 10:31:26	archive	kernel[21117]:	Process 'encryptor.exe' (PID 29309) is rapidly reading and writing files in /home/user/documents
+Sep 05 10:31:27	archive	kernel[14443]:	File 'document.pdf' deleted
+Sep 05 10:31:28	server	kernel[2260]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 10:31:45	archive	kernel[27008]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event3)
+Sep 05 10:31:48	RUfus	kernel[10326]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 10:32:14	prod1	kernel[11332]:	systemd: Started User Session 8734 of user admin.
+Sep 05 10:32:25	RUfus	kernel[20967]:	Invalid user test from 45.79.181.223
+Sep 05 10:33:04	RUfus	kernel[17931]:	Did not receive identification string from 8.8.8.8
+Sep 05 10:33:08	server	kernel[25627]:	Process 'encryptor.exe' (PID 11370) is rapidly reading and writing files in /home/user/documents
+Sep 05 10:33:09	archive	kernel[9339]:	File 'document.pdf' deleted
+Sep 05 10:33:10	server	kernel[11618]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 10:33:34	archive	kernel[20261]:	event54  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:33:37	archive	kernel[23729]:	Did not receive identification string from 1.0.0.1
+Sep 05 10:34:00	RUfus	kernel[5250]:	Did not receive identification string from 8.8.8.8
+Sep 05 10:34:03	prod1	kernel[23125]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event92)
+Sep 05 10:34:12	testvm	kernel[8342]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 10:34:25	ADM	kernel[2213]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 10:34:41	LabSZ	kernel[2631]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:34:47	server	kernel[20587]:	Received disconnect from 141.176.89.133: 68: Bye Bye [preauth]
+Sep 05 10:35:05	LabSZ	kernel[6943]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:35:08	prod1	kernel[27799]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:35:12	ADM	kernel[27647]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:35:19	prod1	kernel[19844]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:35:29	testvm	kernel[29287]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:35:41	RUfus	kernel[11654]:	event68  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:35:55	testvm	kernel[27465]:	Process 'encryptor.exe' (PID 14887) is rapidly reading and writing files in /home/user/documents
+Sep 05 10:35:56	testvm	kernel[23948]:	File 'document.pdf' deleted
+Sep 05 10:35:57	archive	kernel[23569]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 10:36:09	prod1	kernel[2980]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 10:36:16	prod1	kernel[26458]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:36:52	LabSZ	kernel[23805]:	Received disconnect from 107.127.17.70: 27: Bye Bye [preauth]
+Sep 05 10:36:59	archive	kernel[7892]:	Received disconnect from 93.62.21.156: 43: Closed due to user request [preauth]
+Sep 05 10:37:03	archive	kernel[23721]:	pam_unix(sshd:session): session opened for user webmaster by (uid=17)
+Sep 05 10:37:07	testvm	kernel[25898]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=51.158.120.121 DST=... PROTO=TCP SPT=12360 DPT=21
+Sep 05 10:37:07	server	kernel[2553]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=51.158.120.121 DST=... PROTO=TCP SPT=36045 DPT=22
+Sep 05 10:37:08	archive	kernel[28286]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=51.158.120.121 DST=... PROTO=TCP SPT=23545 DPT=80
+Sep 05 10:37:09	LabSZ	kernel[8258]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=51.158.120.121 DST=... PROTO=TCP SPT=14547 DPT=443
+Sep 05 10:37:10	LabSZ	kernel[14849]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=51.158.120.121 DST=... PROTO=TCP SPT=12717 DPT=3306
+Sep 05 10:37:11	ADM	kernel[29773]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=51.158.120.121 DST=... PROTO=TCP SPT=64724 DPT=8080
+Sep 05 10:37:12	prod1	kernel[10101]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=51.158.120.121 DST=... PROTO=TCP SPT=45177 DPT=5432
+Sep 05 10:37:13	ADM	kernel[29399]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=51.158.120.121 DST=... PROTO=TCP SPT=10414 DPT=25
+Sep 05 10:37:29	RUfus	kernel[10355]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 10:38:18	testvm	kernel[18128]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 10:38:54	LabSZ	kernel[17321]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event71)
+Sep 05 10:39:07	ADM	kernel[16344]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:67.0/usb3/3-4/3-4:1.0/0003:1EA7:00676.0001/input/input67/event67
+Sep 05 10:39:10	LabSZ	kernel[20411]:	Accepted password for webmaster from 91.189.199.8 port 5028 ssh50
+Sep 05 10:39:21	testvm	kernel[3521]:	systemd: Started User Session 22801 of user pgadmin.
+Sep 05 10:39:24	ADM	kernel[8651]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:81.0/usb3/3-4/3-4:1.0/0003:1EA7:00816.0001/input/input81/event81
+Sep 05 10:39:27	RUfus	kernel[12481]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 10:39:27	ADM	kernel[11785]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 10:39:47	testvm	kernel[16236]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 10:40:36	LabSZ	kernel[10662]:	Received disconnect from 235.112.130.27: 78: Bye Bye [preauth]
+Sep 05 10:40:42	testvm	kernel[14295]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 10:40:43	server	kernel[13333]:	Oops: 0000 [#1] SMP PTI
+Sep 05 10:40:44	RUfus	kernel[21710]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 10:40:53	prod1	kernel[8966]:	Accepted password for test from 159.184.211.92 port 24715 ssh52
+Sep 05 10:41:34	LabSZ	kernel[17510]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event61)
+Sep 05 10:41:56	ADM	kernel[16061]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 10:42:09	ADM	kernel[7273]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:42:14	archive	kernel[3639]:	process '/usr/bin/curl' started by user guest
+Sep 05 10:42:16	testvm	kernel[26745]:	process '/bin/chmod' started by user pgadmin with args: +x payload.sh
+Sep 05 10:42:17	server	kernel[19331]:	process '/bin/sh' started by user 123 with args: payload.sh
+Sep 05 10:42:29	server	kernel[16851]:	Received disconnect from 45.120.147.147: 34: Bye Bye [preauth]
+Sep 05 10:43:06	LabSZ	kernel[10836]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 10:43:06	ADM	kernel[10391]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 10:43:22	LabSZ	kernel[9314]:	Received disconnect from 8.8.4.4: 22: disconnected by user
+Sep 05 10:43:39	RUfus	kernel[24895]:	Loading kernel module 'evil_module.ko'
+Sep 05 10:43:40	ADM	kernel[2593]:	Tainted kernel: a module has been loaded
+Sep 05 10:44:53	ADM	kernel[12081]:	process '/bin/java' started child '/bin/bash'
+Sep 05 10:45:33	server	kernel[2720]:	pam_unix(sshd:session): session opened for user 123 by (uid=15)
+Sep 05 10:45:39	ADM	kernel[15554]:	Received disconnect from 209.217.145.234: 45: Bye Bye [preauth]
+Sep 05 10:45:52	LabSZ	kernel[14673]:	kernel: usb 1-44: USB disconnect, device number 2
+Sep 05 10:45:56	LabSZ	kernel[23576]:	Loading kernel module 'evil_module.ko'
+Sep 05 10:45:57	server	kernel[27359]:	Tainted kernel: a module has been loaded
+Sep 05 10:46:41	server	kernel[17854]:	Loading kernel module 'evil_module.ko'
+Sep 05 10:46:42	LabSZ	kernel[27243]:	Tainted kernel: a module has been loaded
+Sep 05 10:46:55	LabSZ	kernel[13375]:	event38  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:47:01	LabSZ	kernel[25612]:	pam_unix(sshd:session): session closed for user pgadmin
+Sep 05 10:47:25	server	kernel[21996]:	Received disconnect from 8.8.8.8: 86: disconnected by user
+Sep 05 10:48:07	prod1	kernel[3483]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:91.0/usb3/3-4/3-4:1.0/0003:1EA7:00916.0001/input/input91/event91
+Sep 05 10:48:49	server	kernel[4921]:	systemd: Started User Session 7073 of user root.
+Sep 05 10:48:51	prod1	kernel[26602]:	pam_unix(sshd:session): session closed for user webmaster
+Sep 05 10:48:56	prod1	kernel[17180]:	systemd: Started User Session 14760 of user matlab.
+Sep 05 10:49:14	archive	kernel[27824]:	Received disconnect from 9.9.9.9: 53: disconnected by user
+Sep 05 10:49:19	testvm	kernel[11246]:	Accepted password for oracle from 103.35.98.99 port 19675 ssh31
+Sep 05 10:49:36	RUfus	kernel[16234]:	process '/usr/bin/curl' started by user pgadmin
+Sep 05 10:49:39	archive	kernel[8513]:	process '/bin/chmod' started by user oracle with args: +x payload.sh
+Sep 05 10:49:39	ADM	kernel[22602]:	process '/bin/sh' started by user test with args: payload.sh
+Sep 05 10:49:48	ADM	kernel[27938]:	Received disconnect from 152.87.172.47: 46: Bye Bye [preauth]
+Sep 05 10:49:52	prod1	kernel[6100]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 10:50:03	prod1	kernel[2985]:	event15  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 10:50:13	archive	kernel[14400]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 10:50:30	prod1	kernel[22808]:	Loading kernel module 'evil_module.ko'
+Sep 05 10:50:31	ADM	kernel[6312]:	Tainted kernel: a module has been loaded
+Sep 05 10:50:50	testvm	kernel[7811]:	process '/bin/java' started child '/bin/bash'
+Sep 05 10:52:14	ADM	kernel[24413]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 10:52:24	server	kernel[13705]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 10:52:33	server	kernel[7338]:	process '/bin/bash' started by user 63
+Sep 05 10:52:56	testvm	kernel[15558]:	process '/bin/bash' started by user 72
+Sep 05 10:53:02	testvm	kernel[7864]:	Received disconnect from 43.27.223.61: 94: Bye Bye [preauth]
+Sep 05 10:53:08	RUfus	kernel[20487]:	pam_unix(sshd:session): session opened for user 123 by (uid=60)
+Sep 05 10:53:17	server	kernel[25202]:	process '/bin/java' started child '/bin/bash'
+Sep 05 10:53:28	LabSZ	kernel[21610]:	Did not receive identification string from 8.8.8.8
+Sep 05 10:53:43	archive	kernel[20647]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 10:53:44	prod1	kernel[25897]:	Oops: 0000 [#1] SMP PTI
+Sep 05 10:53:45	archive	kernel[25858]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 10:53:58	LabSZ	kernel[13722]:	pam_unix(sshd:session): session opened for user fztu by (uid=87)
+Sep 05 10:54:34	prod1	kernel[23244]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event6)
+Sep 05 10:54:55	ADM	kernel[20174]:	kernel: usb 1-96: USB disconnect, device number 2
+Sep 05 10:55:26	server	kernel[26271]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event99)
+Sep 05 10:56:02	archive	kernel[24263]:	Received disconnect from 237.173.214.89: 81: Bye Bye [preauth]
+Sep 05 10:56:12	ADM	kernel[20138]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 10:56:22	prod1	kernel[20147]:	process '/usr/bin/curl' started by user test
+Sep 05 10:56:24	archive	kernel[9388]:	process '/bin/chmod' started by user fztu with args: +x payload.sh
+Sep 05 10:56:25	testvm	kernel[26436]:	process '/bin/sh' started by user fztu with args: payload.sh
+Sep 05 10:56:34	ADM	kernel[20121]:	pam_unix(sshd:session): session closed for user admin
+Sep 05 10:56:40	LabSZ	kernel[8627]:	Process 'encryptor.exe' (PID 11484) is rapidly reading and writing files in /home/user/documents
+Sep 05 10:56:41	testvm	kernel[14453]:	File 'document.pdf' deleted
+Sep 05 10:56:42	ADM	kernel[28023]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 10:56:56	archive	kernel[6217]:	systemd: Started User Session 20322 of user pgadmin.
+Sep 05 10:56:58	archive	kernel[4508]:	Received disconnect from 8.8.8.8: 26: disconnected by user
+Sep 05 10:57:01	testvm	kernel[22187]:	Received disconnect from 121.247.126.37: 19: Bye Bye [preauth]
+Sep 05 10:57:07	testvm	kernel[18767]:	pam_unix(sshd:session): session closed for user test
+Sep 05 10:57:11	LabSZ	kernel[6109]:	Received disconnect from 182.244.111.20: 74: Bye Bye [preauth]
+Sep 05 10:57:32	testvm	kernel[26234]:	Received disconnect from 1.1.1.1: 13: disconnected by user
+Sep 05 10:57:39	testvm	kernel[13052]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 10:58:20	ADM	kernel[20503]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event12)
+Sep 05 10:58:27	ADM	kernel[1843]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:52.0/usb3/3-4/3-4:1.0/0003:1EA7:00526.0001/input/input52/event52
+Sep 05 10:58:30	prod1	kernel[17378]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:14.0/usb3/3-4/3-4:1.0/0003:1EA7:00146.0001/input/input14/event14
+Sep 05 10:58:34	RUfus	kernel[14145]:	Received disconnect from 8.8.8.8: 68: disconnected by user
+Sep 05 10:58:54	RUfus	kernel[19025]:	Process 'encryptor.exe' (PID 21407) is rapidly reading and writing files in /home/user/documents
+Sep 05 10:58:55	archive	kernel[26786]:	File 'document.pdf' deleted
+Sep 05 10:58:56	archive	kernel[16552]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 10:59:06	server	kernel[7136]:	process '/bin/java' started child '/bin/bash'
+Sep 05 10:59:18	archive	kernel[6096]:	Accepted password for 123 from 241.90.182.150 port 29406 ssh68
+Sep 05 10:59:24	server	kernel[19715]:	kernel: usb 1-54: USB disconnect, device number 2
+Sep 05 10:59:31	archive	kernel[23528]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 10:59:56	RUfus	kernel[4955]:	Received disconnect from 19.116.43.89: 97: Bye Bye [preauth]
+Sep 05 11:00:29	prod1	kernel[10939]:	pam_unix(sshd:session): session closed for user ubuntu
+Sep 05 11:00:47	archive	kernel[21659]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 11:01:04	LabSZ	kernel[26586]:	Did not receive identification string from 1.1.1.1
+Sep 05 11:01:06	testvm	kernel[29309]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:32.0/usb3/3-4/3-4:1.0/0003:1EA7:00326.0001/input/input32/event32
+Sep 05 11:01:11	LabSZ	kernel[22645]:	Connection closed by 1.1.1.1 [preauth]
+Sep 05 11:01:17	testvm	kernel[13406]:	event98  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:01:45	archive	kernel[13355]:	Did not receive identification string from 1.1.1.1
+Sep 05 11:02:07	testvm	kernel[2448]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 11:02:34	prod1	kernel[24530]:	process '/usr/bin/curl' started by user webmaster
+Sep 05 11:02:36	RUfus	kernel[11790]:	process '/bin/chmod' started by user 123 with args: +x payload.sh
+Sep 05 11:02:37	server	kernel[8679]:	process '/bin/sh' started by user admin with args: payload.sh
+Sep 05 11:02:59	testvm	kernel[16952]:	Received disconnect from 9.9.9.9: 97: disconnected by user
+Sep 05 11:03:02	LabSZ	kernel[20816]:	event74  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:03:05	prod1	kernel[21680]:	Process 'encryptor.exe' (PID 6682) is rapidly reading and writing files in /home/user/documents
+Sep 05 11:03:05	testvm	kernel[22551]:	File 'document.pdf' deleted
+Sep 05 11:03:06	RUfus	kernel[1089]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 11:03:34	prod1	kernel[2148]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.46.255.33 DST=... PROTO=TCP SPT=19701 DPT=21
+Sep 05 11:03:35	ADM	kernel[26676]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.46.255.33 DST=... PROTO=TCP SPT=30381 DPT=22
+Sep 05 11:03:36	ADM	kernel[29217]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.46.255.33 DST=... PROTO=TCP SPT=59588 DPT=80
+Sep 05 11:03:38	ADM	kernel[23707]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.46.255.33 DST=... PROTO=TCP SPT=49760 DPT=443
+Sep 05 11:03:39	ADM	kernel[24243]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.46.255.33 DST=... PROTO=TCP SPT=55063 DPT=3306
+Sep 05 11:03:40	testvm	kernel[1215]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.46.255.33 DST=... PROTO=TCP SPT=62348 DPT=8080
+Sep 05 11:03:41	ADM	kernel[17769]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.46.255.33 DST=... PROTO=TCP SPT=65297 DPT=5432
+Sep 05 11:03:41	server	kernel[14468]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=193.46.255.33 DST=... PROTO=TCP SPT=14682 DPT=25
+Sep 05 11:03:56	archive	kernel[12632]:	kernel: usb 1-32: USB disconnect, device number 2
+Sep 05 11:04:00	server	kernel[8726]:	Did not receive identification string from 1.0.0.1
+Sep 05 11:04:04	ADM	kernel[29440]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 11:04:42	ADM	kernel[26498]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:12.0/usb3/3-4/3-4:1.0/0003:1EA7:00126.0001/input/input12/event12
+Sep 05 11:05:02	archive	kernel[9058]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.79.181.179 DST=... PROTO=TCP SPT=23359 DPT=21
+Sep 05 11:05:03	testvm	kernel[18631]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.79.181.179 DST=... PROTO=TCP SPT=63103 DPT=22
+Sep 05 11:05:05	archive	kernel[28135]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.79.181.179 DST=... PROTO=TCP SPT=64833 DPT=80
+Sep 05 11:05:05	RUfus	kernel[26231]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.79.181.179 DST=... PROTO=TCP SPT=35577 DPT=443
+Sep 05 11:05:06	prod1	kernel[23744]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.79.181.179 DST=... PROTO=TCP SPT=51003 DPT=3306
+Sep 05 11:05:07	archive	kernel[5958]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.79.181.179 DST=... PROTO=TCP SPT=15033 DPT=8080
+Sep 05 11:05:07	LabSZ	kernel[14980]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.79.181.179 DST=... PROTO=TCP SPT=20684 DPT=5432
+Sep 05 11:05:09	ADM	kernel[21836]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=45.79.181.179 DST=... PROTO=TCP SPT=44487 DPT=25
+Sep 05 11:05:36	prod1	kernel[20106]:	Received disconnect from 34.238.151.64: 16: Bye Bye [preauth]
+Sep 05 11:05:51	RUfus	kernel[15648]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event66)
+Sep 05 11:05:57	prod1	kernel[5516]:	Accepted password for test from 37.204.174.209 port 62278 ssh15
+Sep 05 11:06:04	archive	kernel[22907]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:98.0/usb3/3-4/3-4:1.0/0003:1EA7:00986.0001/input/input98/event98
+Sep 05 11:06:15	server	kernel[21800]:	Received disconnect from 138.32.83.136: 73: Closed due to user request [preauth]
+Sep 05 11:06:24	ADM	kernel[12505]:	Accepted password for root from 105.122.101.29 port 23920 ssh49
+Sep 05 11:06:42	archive	kernel[23079]:	event23  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:06:45	testvm	kernel[16621]:	kernel: usb 1-44: USB disconnect, device number 2
+Sep 05 11:06:55	LabSZ	kernel[11189]:	process '/bin/bash' started by user 70
+Sep 05 11:07:06	testvm	kernel[14863]:	Accepted password for guest from 16.98.229.165 port 47111 ssh77
+Sep 05 11:07:17	server	kernel[6894]:	event24  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:07:20	ADM	kernel[22069]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:63.0/usb3/3-4/3-4:1.0/0003:1EA7:00636.0001/input/input63/event63
+Sep 05 11:07:32	archive	kernel[17083]:	process '/usr/bin/curl' started by user backup
+Sep 05 11:07:34	testvm	kernel[25244]:	process '/bin/chmod' started by user matlab with args: +x payload.sh
+Sep 05 11:07:35	LabSZ	kernel[22211]:	process '/bin/sh' started by user admin with args: payload.sh
+Sep 05 11:07:57	testvm	kernel[16113]:	pam_unix(sshd:session): session closed for user matlab
+Sep 05 11:08:04	archive	kernel[24928]:	BUG: unable to handle kernel NULL pointer dereference at (nil)
+Sep 05 11:08:05	testvm	kernel[29283]:	Oops: 0000 [#1] SMP PTI
+Sep 05 11:08:05	RUfus	kernel[29605]:	Kernel panic - not syncing: Fatal exception in interrupt
+Sep 05 11:08:22	ADM	kernel[10299]:	process '/bin/bash' started by user 57
+Sep 05 11:08:34	testvm	kernel[26536]:	Process 'encryptor.exe' (PID 13785) is rapidly reading and writing files in /home/user/documents
+Sep 05 11:08:35	prod1	kernel[12072]:	File 'document.pdf' deleted
+Sep 05 11:08:35	LabSZ	kernel[20546]:	File 'document.pdf.ENCRYPTED' created
+Sep 05 11:09:49	RUfus	kernel[22369]:	Process 'kthreadd' (PID 14886) opened a network socket to 3.132.23.201:49308
+Sep 05 11:10:05	RUfus	kernel[11036]:	event47  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:10:56	prod1	kernel[26165]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.130.96.91 DST=... PROTO=TCP SPT=13639 DPT=21
+Sep 05 11:10:58	LabSZ	kernel[27926]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.130.96.91 DST=... PROTO=TCP SPT=63109 DPT=22
+Sep 05 11:10:59	ADM	kernel[9709]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.130.96.91 DST=... PROTO=TCP SPT=4113 DPT=80
+Sep 05 11:11:00	ADM	kernel[25642]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.130.96.91 DST=... PROTO=TCP SPT=45286 DPT=443
+Sep 05 11:11:00	ADM	kernel[26506]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.130.96.91 DST=... PROTO=TCP SPT=3871 DPT=3306
+Sep 05 11:11:01	prod1	kernel[19916]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.130.96.91 DST=... PROTO=TCP SPT=9630 DPT=8080
+Sep 05 11:11:03	server	kernel[20183]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.130.96.91 DST=... PROTO=TCP SPT=59602 DPT=5432
+Sep 05 11:11:03	RUfus	kernel[21350]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=3.130.96.91 DST=... PROTO=TCP SPT=28150 DPT=25
+Sep 05 11:11:16	server	kernel[6824]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:11:20	server	kernel[25137]:	pam_unix(sshd:session): session closed for user backup
+Sep 05 11:11:41	LabSZ	kernel[15099]:	systemd: Started User Session 24079 of user ubuntu.
+Sep 05 11:13:40	archive	kernel[5549]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 11:13:54	archive	kernel[18840]:	Accepted password for backup from 191.143.169.48 port 37256 ssh22
+Sep 05 11:14:10	archive	kernel[28278]:	pam_unix(sshd:session): session opened for user matlab by (uid=45)
+Sep 05 11:14:56	prod1	kernel[5253]:	systemd[1]: myapp.service: Main process exited, code=killed, status=53/SEGV
+Sep 05 11:15:19	LabSZ	kernel[18216]:	kernel: usb 1-97: USB disconnect, device number 2
+Sep 05 11:17:08	ADM	kernel[3233]:	systemd: Started User Session 21842 of user 123.
+Sep 05 11:17:11	server	kernel[27967]:	Received disconnect from 194.193.55.75: 26: Bye Bye [preauth]
+Sep 05 11:17:20	prod1	kernel[6095]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 11:17:26	server	kernel[19908]:	Loading kernel module 'evil_module.ko'
+Sep 05 11:17:27	archive	kernel[2614]:	Tainted kernel: a module has been loaded
+Sep 05 11:17:46	server	kernel[7979]:	Process 'kthreadd' (PID 5013) opened a network socket to 50.6.7.7:45598
+Sep 05 11:18:04	prod1	kernel[13028]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=162.142.125.122 DST=... PROTO=TCP SPT=19875 DPT=21
+Sep 05 11:18:05	server	kernel[22884]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=162.142.125.122 DST=... PROTO=TCP SPT=64004 DPT=22
+Sep 05 11:18:06	testvm	kernel[23022]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=162.142.125.122 DST=... PROTO=TCP SPT=47081 DPT=80
+Sep 05 11:18:07	testvm	kernel[22092]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=162.142.125.122 DST=... PROTO=TCP SPT=63694 DPT=443
+Sep 05 11:18:09	prod1	kernel[17680]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=162.142.125.122 DST=... PROTO=TCP SPT=1839 DPT=3306
+Sep 05 11:18:09	prod1	kernel[14479]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=162.142.125.122 DST=... PROTO=TCP SPT=63549 DPT=8080
+Sep 05 11:18:10	testvm	kernel[15072]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=162.142.125.122 DST=... PROTO=TCP SPT=36225 DPT=5432
+Sep 05 11:18:11	archive	kernel[9062]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=162.142.125.122 DST=... PROTO=TCP SPT=37561 DPT=25
+Sep 05 11:18:29	archive	kernel[4928]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event81)
+Sep 05 11:18:39	LabSZ	kernel[26533]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=2)
+Sep 05 11:18:53	prod1	kernel[13921]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 11:18:54	ADM	kernel[8043]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 11:19:04	testvm	kernel[5745]:	Accepted password for pgadmin from 152.222.242.204 port 25929 ssh78
+Sep 05 11:19:10	server	kernel[20652]:	Received disconnect from 99.164.33.186: 88: Closed due to user request [preauth]
+Sep 05 11:19:28	archive	kernel[6674]:	systemd: Started User Session 9106 of user admin.
+Sep 05 11:19:37	ADM	kernel[25025]:	pam_unix(sshd:session): session opened for user oracle by (uid=11)
+Sep 05 11:19:46	testvm	kernel[26804]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 11:20:02	testvm	kernel[4752]:	pam_unix(sshd:auth): authentication failure; logname= uid=8 euid=1 tty=ssh ruser= rhost=68.233.116.124
+Sep 05 11:20:10	archive	kernel[17119]:	process '/usr/bin/curl' started by user admin
+Sep 05 11:20:13	ADM	kernel[15414]:	process '/bin/chmod' started by user root with args: +x payload.sh
+Sep 05 11:20:14	server	kernel[18970]:	process '/bin/sh' started by user webmaster with args: payload.sh
+Sep 05 11:20:21	prod1	kernel[8127]:	process '/bin/java' started child '/bin/bash'
+Sep 05 11:21:01	LabSZ	kernel[2235]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 11:21:21	ADM	kernel[12993]:	Accepted password for ubuntu from 84.95.214.205 port 43367 ssh13
+Sep 05 11:21:36	ADM	kernel[8820]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event31)
+Sep 05 11:21:51	prod1	kernel[6118]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:21:57	testvm	kernel[15174]:	event25  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:22:01	testvm	kernel[13023]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 11:22:11	prod1	kernel[13627]:	process '/bin/bash' started by user 94
+Sep 05 11:22:21	prod1	kernel[18261]:	Received disconnect from 204.181.163.69: 79: Bye Bye [preauth]
+Sep 05 11:22:24	prod1	kernel[19348]:	process '/usr/bin/curl' started by user chen
+Sep 05 11:22:26	ADM	kernel[26713]:	process '/bin/chmod' started by user oracle with args: +x payload.sh
+Sep 05 11:22:26	testvm	kernel[9667]:	process '/bin/sh' started by user matlab with args: payload.sh
+Sep 05 11:23:00	RUfus	kernel[13156]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 11:23:01	server	kernel[3300]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 11:23:24	testvm	kernel[9800]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 11:23:31	server	kernel[23088]:	systemd: Started User Session 7145 of user 123.
+Sep 05 11:23:40	server	kernel[10589]:	pam_unix(sshd:session): session opened for user admin by (uid=65)
+Sep 05 11:24:03	RUfus	kernel[14540]:	event79  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 11:24:07	ADM	kernel[21561]:	process '/usr/bin/curl' started by user chen
+Sep 05 11:24:09	server	kernel[2302]:	process '/bin/chmod' started by user webmaster with args: +x payload.sh
+Sep 05 11:24:10	prod1	kernel[16052]:	process '/bin/sh' started by user pgadmin with args: payload.sh
+Sep 05 11:24:31	server	kernel[2316]:	systemd: Started User Session 19389 of user root.
+Sep 05 11:24:33	archive	kernel[9009]:	Loading kernel module 'evil_module.ko'
+Sep 05 11:24:34	RUfus	kernel[7394]:	Tainted kernel: a module has been loaded
+Sep 05 11:24:51	server	kernel[29509]:	pam_unix(sshd:session): session closed for user root
+Sep 05 11:25:07	ADM	kernel[21028]:	Did not receive identification string from 9.9.9.9
+Sep 05 11:25:16	LabSZ	kernel[16628]:	process '/bin/bash' started by user 5
+Sep 05 11:26:07	archive	kernel[11110]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 11:26:26	server	kernel[4315]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 11:26:44	LabSZ	kernel[27910]:	Received disconnect from 196.44.205.238: 14: Closed due to user request [preauth]
+Sep 05 11:26:48	prod1	kernel[2111]:	Process 'kthreadd' (PID 13182) opened a network socket to 36.134.79.140:41231
+Sep 05 11:27:27	testvm	kernel[20746]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event60)
+Sep 05 11:27:45	RUfus	kernel[17053]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 11:27:46	testvm	kernel[27724]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 11:28:41	ADM	kernel[20773]:	Received disconnect from 9.9.9.9: 12: disconnected by user
+Sep 05 11:28:43	archive	kernel[11802]:	input_userauth_request: invalid user pgadmin [preauth]
+Sep 05 11:28:55	prod1	kernel[7112]:	Accepted password for 123 from 116.207.201.225 port 11182 ssh61
+Sep 05 11:29:04	ADM	kernel[2296]:	Accepted password for ubuntu from 42.140.149.228 port 64312 ssh70
+Sep 05 11:30:01	prod1	kernel[20106]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 11:30:26	server	kernel[20556]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:30:58	testvm	kernel[6441]:	systemd: Started User Session 21067 of user test.
+Sep 05 11:31:16	RUfus	kernel[21777]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 11:31:29	testvm	kernel[17570]:	Loading kernel module 'evil_module.ko'
+Sep 05 11:31:30	prod1	kernel[1702]:	Tainted kernel: a module has been loaded
+Sep 05 11:31:47	testvm	kernel[16341]:	Received disconnect from 168.234.184.215: 95: Closed due to user request [preauth]
+Sep 05 12:06:19	ADM	kernel[6507]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 12:08:45	RUfus	kernel[15044]:	Accepted password for admin from 25.146.79.254 port 40246 ssh12
+Sep 05 12:09:08	ADM	kernel[2464]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 12:09:20	prod1	kernel[19407]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 12:09:21	testvm	kernel[9654]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 12:09:33	ADM	kernel[3723]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event92)
+Sep 05 12:09:58	archive	kernel[11865]:	Received disconnect from 9.9.9.9: 57: disconnected by user
+Sep 05 12:10:05	prod1	kernel[26957]:	Did not receive identification string from 1.0.0.1
+Sep 05 12:10:12	prod1	kernel[11596]:	Connection closed by 8.8.8.8 [preauth]
+Sep 05 12:10:16	archive	kernel[2477]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 12:10:24	testvm	kernel[20549]:	Received disconnect from 9.9.9.9: 64: disconnected by user
+Sep 05 12:10:28	archive	kernel[26343]:	Received disconnect from 1.0.0.1: 18: disconnected by user
+Sep 05 12:11:12	prod1	kernel[22890]:	kernel: usb 1-32: USB disconnect, device number 2
+Sep 05 12:11:26	archive	kernel[14379]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:11:29	ADM	kernel[5581]:	event97  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:12:16	server	kernel[6518]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 12:12:17	RUfus	kernel[18137]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 12:12:29	server	kernel[20659]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 12:13:05	LabSZ	kernel[15965]:	Received disconnect from 145.224.221.174: 88: Bye Bye [preauth]
+Sep 05 12:14:24	LabSZ	kernel[7988]:	pam_unix(sshd:session): session opened for user matlab by (uid=32)
+Sep 05 12:14:27	prod1	kernel[9466]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event81)
+Sep 05 12:14:33	RUfus	kernel[7549]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 12:15:02	archive	kernel[3781]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 12:15:38	server	kernel[24598]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event95)
+Sep 05 12:15:56	LabSZ	kernel[19651]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 12:15:56	RUfus	kernel[27456]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 12:16:08	archive	kernel[28746]:	Received disconnect from 1.1.1.1: 53: disconnected by user
+Sep 05 12:16:13	archive	kernel[27867]:	process '/bin/bash' started by user 85
+Sep 05 12:16:24	server	kernel[21685]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event40)
+Sep 05 12:16:38	prod1	kernel[2944]:	pam_unix(sshd:session): session closed for user fztu
+Sep 05 12:17:08	LabSZ	kernel[4426]:	kernel: usb 1-53: USB disconnect, device number 2
+Sep 05 12:17:10	prod1	kernel[26258]:	pam_unix(sshd:session): session opened for user ubuntu by (uid=56)
+Sep 05 12:17:14	LabSZ	kernel[6696]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 12:17:21	RUfus	kernel[26751]:	Connection closed by 9.9.9.9 [preauth]
+Sep 05 12:17:26	ADM	kernel[18239]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 12:17:37	ADM	kernel[15815]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 12:17:51	archive	kernel[16381]:	Received disconnect from 235.239.121.164: 11: Bye Bye [preauth]
+Sep 05 12:18:18	prod1	kernel[29727]:	Process 'kthreadd' (PID 1826) opened a network socket to 5.101.64.6:43281
+Sep 05 12:18:25	ADM	kernel[2836]:	kernel: usb 1-40: USB disconnect, device number 2
+Sep 05 12:19:56	prod1	kernel[23844]:	event24  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:20:24	LabSZ	kernel[14959]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 12:20:35	server	kernel[22691]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=52)
+Sep 05 12:20:38	archive	kernel[11065]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 12:20:57	testvm	kernel[21444]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:37.0/usb3/3-4/3-4:1.0/0003:1EA7:00376.0001/input/input37/event37
+Sep 05 12:21:00	server	kernel[26195]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:33.0/usb3/3-4/3-4:1.0/0003:1EA7:00336.0001/input/input33/event33
+Sep 05 12:21:19	archive	kernel[29503]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=2)
+Sep 05 12:21:30	testvm	kernel[29243]:	kernel: usb 1-6: USB disconnect, device number 2
+Sep 05 12:22:58	archive	kernel[12251]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:23:28	prod1	kernel[1069]:	pam_unix(sshd:session): session opened for user backup by (uid=29)
+Sep 05 12:23:33	LabSZ	kernel[8128]:	Received disconnect from 184.103.5.202: 13: Bye Bye [preauth]
+Sep 05 12:23:38	RUfus	kernel[9151]:	event49  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:23:41	ADM	kernel[14599]:	Loading kernel module 'evil_module.ko'
+Sep 05 12:23:41	ADM	kernel[21730]:	Tainted kernel: a module has been loaded
+Sep 05 12:23:59	prod1	kernel[5322]:	process '/bin/bash' started by user 11
+Sep 05 12:25:05	LabSZ	kernel[9166]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 12:25:39	testvm	kernel[15356]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 12:26:13	prod1	kernel[8722]:	process '/bin/bash' started by user 44
+Sep 05 12:26:39	RUfus	kernel[8414]:	Received disconnect from 87.221.26.114: 44: Closed due to user request [preauth]
+Sep 05 12:26:41	prod1	kernel[28304]:	Received disconnect from 212.211.96.213: 19: Closed due to user request [preauth]
+Sep 05 12:26:44	prod1	kernel[17897]:	event47  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:27:08	prod1	kernel[24783]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 12:27:18	ADM	kernel[1198]:	Received disconnect from 207.71.70.165: 16: Closed due to user request [preauth]
+Sep 05 12:27:57	RUfus	kernel[27772]:	Connection closed by 1.0.0.1 [preauth]
+Sep 05 12:28:04	server	kernel[18190]:	pam_unix(sshd:session): session closed for user root
+Sep 05 12:28:37	archive	kernel[13908]:	kernel: usb 1-25: USB disconnect, device number 2
+Sep 05 12:28:40	server	kernel[22488]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=195.178.110.133 DST=... PROTO=TCP SPT=35608 DPT=21
+Sep 05 12:28:41	testvm	kernel[22830]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=195.178.110.133 DST=... PROTO=TCP SPT=40777 DPT=22
+Sep 05 12:28:42	prod1	kernel[8051]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=195.178.110.133 DST=... PROTO=TCP SPT=37133 DPT=80
+Sep 05 12:28:43	archive	kernel[28666]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=195.178.110.133 DST=... PROTO=TCP SPT=29022 DPT=443
+Sep 05 12:28:44	RUfus	kernel[9258]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=195.178.110.133 DST=... PROTO=TCP SPT=21631 DPT=3306
+Sep 05 12:28:45	archive	kernel[27214]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=195.178.110.133 DST=... PROTO=TCP SPT=62620 DPT=8080
+Sep 05 12:28:46	LabSZ	kernel[8644]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=195.178.110.133 DST=... PROTO=TCP SPT=12480 DPT=5432
+Sep 05 12:28:47	LabSZ	kernel[5414]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=195.178.110.133 DST=... PROTO=TCP SPT=50613 DPT=25
+Sep 05 12:29:00	server	kernel[24930]:	process '/bin/bash' started by user 18
+Sep 05 12:29:15	server	kernel[25163]:	kernel: usb 1-61: USB disconnect, device number 2
+Sep 05 12:29:32	RUfus	kernel[21384]:	pam_unix(sshd:session): session closed for user test
+Sep 05 12:29:35	server	kernel[12560]:	Outbound connection to 104.22.60.184:443 established
+Sep 05 12:29:49	RUfus	kernel[18785]:	Did not receive identification string from 8.8.4.4
+Sep 05 12:29:59	server	kernel[1312]:	kernel: usb 1-48: USB disconnect, device number 2
+Sep 05 12:30:03	LabSZ	kernel[25212]:	process '/usr/bin/curl' started by user test
+Sep 05 12:30:05	archive	kernel[7760]:	process '/bin/chmod' started by user ubuntu with args: +x payload.sh
+Sep 05 12:30:06	server	kernel[2627]:	process '/bin/sh' started by user guest with args: payload.sh
+Sep 05 12:30:48	server	kernel[1262]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=28207 DPT=21
+Sep 05 12:30:48	LabSZ	kernel[5964]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=15023 DPT=22
+Sep 05 12:30:50	archive	kernel[16207]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=2764 DPT=80
+Sep 05 12:30:51	server	kernel[22821]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=7487 DPT=443
+Sep 05 12:30:52	server	kernel[4842]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=53555 DPT=3306
+Sep 05 12:30:53	ADM	kernel[26892]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=52442 DPT=8080
+Sep 05 12:30:54	RUfus	kernel[4082]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=7354 DPT=5432
+Sep 05 12:30:55	LabSZ	kernel[11388]:	Firewall: *TCP_IN Blocked* IN=eth0 OUT= MAC=... SRC=80.94.95.15 DST=... PROTO=TCP SPT=7691 DPT=25
+Sep 05 12:31:13	archive	kernel[17468]:	event42  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:31:56	LabSZ	kernel[1215]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:32:12	archive	kernel[22641]:	pam_unix(sshd:session): session closed for user oracle
+Sep 05 12:32:20	RUfus	kernel[16582]:	process '/usr/bin/php' spawned child '/bin/sh'
+Sep 05 12:32:55	testvm	kernel[2052]:	kernel: usb 1-73: USB disconnect, device number 2
+Sep 05 12:32:58	testvm	kernel[26418]:	Received disconnect from 226.161.53.221: 98: Bye Bye [preauth]
+Sep 05 12:33:18	server	kernel[17696]:	Received disconnect from 1.0.0.1: 15: disconnected by user
+Sep 05 12:33:25	testvm	kernel[21005]:	event4  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:33:27	LabSZ	kernel[17623]:	Received disconnect from 235.146.75.68: 94: Bye Bye [preauth]
+Sep 05 12:33:51	archive	kernel[19488]:	kernel: usb 1-40: USB disconnect, device number 2
+Sep 05 12:34:09	archive	kernel[12698]:	kernel: usb 1-23: USB disconnect, device number 2
+Sep 05 12:34:15	server	kernel[15945]:	Received disconnect from 1.0.0.1: 98: disconnected by user
+Sep 05 12:35:06	LabSZ	kernel[8215]:	Received disconnect from 224.140.83.107: 11: Bye Bye [preauth]
+Sep 05 12:35:23	server	kernel[26728]:	pam_unix(sshd:session): session opened for user root by (uid=69)
+Sep 05 12:35:25	prod1	kernel[4432]:	kernel: usb 1-41: USB disconnect, device number 2
+Sep 05 12:35:33	prod1	kernel[24308]:	Did not receive identification string from 8.8.4.4
+Sep 05 12:35:40	LabSZ	kernel[5116]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 12:36:06	LabSZ	kernel[18181]:	Process 'kthreadd' (PID 26110) opened a network socket to 3.143.33.63:28729
+Sep 05 12:36:12	archive	kernel[10646]:	process '/bin/chmod' started by user root with args: +x /tmp/backdoor.sh
+Sep 05 12:36:21	archive	kernel[14416]:	kernel: usb 1-93: USB disconnect, device number 2
+Sep 05 12:36:35	LabSZ	kernel[17036]:	event44  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:36:38	server	kernel[20388]:	Received disconnect from 1.1.1.1: 29: disconnected by user
+Sep 05 12:36:42	server	kernel[28000]:	ptrace attach to process 1234 (systemd) by process 5678 (malware)
+Sep 05 12:36:43	prod1	kernel[9974]:	Virtual memory modification detected in process 1234 by pid 5678
+Sep 05 12:36:59	LabSZ	kernel[8456]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event86)
+Sep 05 12:37:02	RUfus	kernel[20623]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:37:07	server	kernel[10539]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Sep 05 12:37:09	RUfus	kernel[9838]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:35.0/usb3/3-4/3-4:1.0/0003:1EA7:00356.0001/input/input35/event35
+Sep 05 12:37:26	LabSZ	kernel[25065]:	event34  - Sleep Button: is tagged by udev as: Keyboard
+Sep 05 12:38:37	archive	kernel[21335]:	systemd: Started User Session 17231 of user webmaster.
+Sep 05 12:38:41	LabSZ	kernel[14862]:	process '/usr/bin/curl' started by user backup
+Sep 05 12:38:43	server	kernel[18690]:	process '/bin/chmod' started by user oracle with args: +x payload.sh
+Sep 05 12:38:45	RUfus	kernel[2264]:	process '/bin/sh' started by user backup with args: payload.sh
+Sep 05 12:39:43	prod1	kernel[14616]:	Received disconnect from 191.45.150.28: 5: Closed due to user request [preauth]
+Sep 05 12:40:08	RUfus	kernel[11840]:	pam_unix(sshd:session): session closed for user 123
+Sep 05 12:40:10	ADM	kernel[12238]:	Received disconnect from 236.189.4.72: 60: Bye Bye [preauth]
+Sep 05 12:40:14	ADM	kernel[23191]:	Accepted password for test from 251.126.148.150 port 28366 ssh39
+Sep 05 12:40:21	prod1	kernel[29590]:	process '/bin/bash' started by user 60
+Sep 05 12:40:32	archive	kernel[10490]:	process '/bin/java' started child '/bin/bash'
