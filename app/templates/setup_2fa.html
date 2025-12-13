@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Setup 2FA | Log Shield</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        .setup-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px var(--box-shadow);
+        }
+
+        .step {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: var(--button-primary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .qr-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: fit-content;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <header class="dashboard-header">
+            <h1>Setup Two-Factor Authentication</h1>
+            <div class="header-actions">
+                <button id="backBtn" class="control-button">← Back to Security</button>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="setup-container">
+                <p style="text-align:center; color: var(--text-color-secondary); margin-bottom:40px; font-size:1.1em;">
+                    Protect your account by adding a second layer of security.
+                </p>
+
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <span class="step-title">Get the App</span>
+                    <p style="margin-left: 50px; color: var(--text-color-secondary);">
+                        Download <strong>Google Authenticator</strong> or <strong>Authy</strong> on your phone.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-title">Scan QR Code</span>
+                    <p style="margin-left: 50px; color: var(--text-color-secondary);">
+                        Open the app and scan this code:
+                    </p>
+                    <div class="qr-box">
+                        <img src="/security/2fa/qr-code" alt="2FA QR Code" width="200" height="200">
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-title">Verify Code</span>
+                    <p style="margin-left: 50px; color: var(--text-color-secondary);">
+                        Enter the 6-digit code from your app to confirm setup.
+                    </p>
+
+                    <form action="/security/2fa/enable" method="POST" style="margin-left: 50px; margin-top:20px;">
+                        <div style="display:flex; gap:10px; max-width:400px;">
+                            <input type="text" name="code" class="select-dropdown" placeholder="000 000"
+                                pattern="[0-9]{6}" maxlength="6" required
+                                style="width: 100%; text-align:center; letter-spacing: 4px; font-size:1.2em;">
+                            <button type="submit" class="control-button">Enable 2FA</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            // Apply theme from localStorage
+            (function () {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                }
+            })();
+
+            // Back button
+            document.getElementById('backBtn').addEventListener('click', function () {
+                window.location.href = '/security';
+            });
+        </script>
+    </div>
+</body>
+
+</html>

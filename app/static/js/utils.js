@@ -1,3 +1,5 @@
+import { pollTaskStatus } from './ui.js';
+
 export function animateCount(id, newCount) {
     let el = document.getElementById(id);
     if (!el) return;
@@ -26,7 +28,25 @@ export function escapeHTML(str) {
 
 export function formatRiskScore(score) {
     const finalScore = score || 0;
-    // The span no longer needs a class; the parent <tr>'s class will style it.
+    const percentage = Math.min(finalScore * 100, 100);
+    let riskClass = 'low';
+    if (finalScore > 0.8) riskClass = 'critical';
+    else if (finalScore >= 0.7) riskClass = 'high';
+    else if (finalScore >= 0.4) riskClass = 'medium';
+
+    return `
+        <div class="risk-score-bar" title="Risk: ${finalScore.toFixed(2)}">
+            <div class="risk-bar-track">
+                <div class="risk-bar-fill ${riskClass}" style="width: ${percentage}%"></div>
+            </div>
+            <span class="risk-score-value">${finalScore.toFixed(2)}</span>
+        </div>
+    `;
+}
+
+// Original simple format for backwards compatibility
+export function formatRiskScoreSimple(score) {
+    const finalScore = score || 0;
     return `<span>${finalScore.toFixed(2)}</span>`;
 }
 
@@ -35,7 +55,7 @@ export function getRiskRowClass(score) {
     if (score > 0.8) return 'risk-row-critical'; // Red background
     if (score >= 0.7) return 'risk-row-orange';  // Orange background
     // Any remaining anomaly will be yellow. The check for 'anomaly' is done in the calling function.
-    return 'risk-row-yellow';   
+    return 'risk-row-yellow';
 }
 
 export function formatSequenceRisk(score) {
@@ -65,4 +85,32 @@ export function formatStatusBadge(status) {
     }
     const statusClass = status.toLowerCase();
     return `<span class="status-badge status-${statusClass}">${status}</span>`;
+}
+
+export function showToast(message, type = 'info', taskId = null) {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+
+    let progressBarHTML = '';
+    if (taskId) {
+        progressBarHTML = `<div class="toast-progress-bar" id="progress-${taskId}"></div>`;
+    }
+
+    toast.innerHTML = `
+        <span id="toast-message-${taskId}">${message}</span>
+        ${progressBarHTML}
+    `;
+
+    container.appendChild(toast);
+
+    if (taskId) {
+        pollTaskStatus(taskId);
+    } else {
+        // Auto-dismiss non-progress toasts after 5 seconds
+        setTimeout(() => {
+            toast.style.animation = 'slideOutFadeOut 0.5s ease forwards';
+            setTimeout(() => toast.remove(), 500);
+        }, 5000);
+    }
 }

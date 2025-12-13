@@ -1,10 +1,11 @@
-import { animateCount, escapeHTML, formatRiskScore, getRiskRowClass, formatSequenceRisk, formatStatusBadge } from './utils.js';
+import { animateCount, escapeHTML, formatRiskScore, getRiskRowClass, formatSequenceRisk, formatStatusBadge, showToast } from './utils.js';
 import { initHistoricalChart, createTopNChart, updateAllChartColors, initLiveSparkline, updateLiveSparkline, createDetectionMethodChart, updateTopNChart, updateDetectionMethodChart } from './charts.js';
 import * as api from './api.js';
 import { initThreatMap } from './map.js';
 import { connectWebSocket } from './websocket.js';
-import { toggleDarkMode, autoScroll, handleStatusUpdate, handleAlertUpdate, renderAlertRow, updateStatsOnScreen, renderRestoredLogs, renderLogRow, showLogContext, renderAnomalyFeedRow, updateAlertStatus, showToast, updateMonitoringStatusUI } from './ui.js';
-import { setupReviewListeners, setupKeyboardShortcuts } from './review.js';
+import { autoScroll, handleStatusUpdate, handleAlertUpdate, renderAlertRow, updateStatsOnScreen, renderRestoredLogs, renderLogRow, showLogContext, renderAnomalyFeedRow, updateAlertStatus, updateMonitoringStatusUI, renderRestoredAnomalies, renderSigmaMatchRow } from './ui.js';
+// import { setupReviewListeners, setupKeyboardShortcuts } from './review.js';
+import { applyTheme, toggleDarkMode } from './theme.js';
 
 // --- GLOBAL STATE for the dashboard ---
 let totalCount = 0;
@@ -12,9 +13,11 @@ let normalCount = 0;
 let anomalyCount = 0;
 let sessionCount = 0;
 let liveLogsCache = [];
+let anomalyFeedCache = [];
 let criticalAlertsCache = {};
 
 window.onload = () => {
+    applyTheme();
     initializeMonitoringStatus();
     restoreSessionStats();
     restoreCriticalAlerts();
@@ -23,22 +26,27 @@ window.onload = () => {
     fetchTrainingStats();
     initHistoricalChart();
     loadInitialAnomalies();
-    setupKeyboardShortcuts();
+    // setupKeyboardShortcuts();
     initLiveSparkline();
-    
+
     createTopNChart('topVerdictsChart', 'verdict', 'Top Verdicts');
     createTopNChart('topAnomalousIpsChart', 'ip', 'Top IPs');
     createTopNChart('topSourcesChart', 'source', 'Top Sources');
 
-    createDetectionMethodChart(); 
+    createDetectionMethodChart();
     setInterval(refreshAllWidgets, 30000);
     initThreatMap();
 };
 
 function setupEventListeners() {
     const darkModeToggle = document.getElementById('darkModeToggle');
-    if (darkModeToggle) { darkModeToggle.addEventListener('click', toggleDarkMode); }
-    
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+            toggleDarkMode();
+            updateAllChartColors();
+        });
+    }
+
     // --- Search & Filter Listeners ---
     document.getElementById('searchBtn')?.addEventListener('click', searchLogs);
     document.getElementById('clearFiltersBtn')?.addEventListener('click', clearSearchFilters);
@@ -54,12 +62,18 @@ function setupEventListeners() {
         });
     });
 
-    // document.getElementById('openReviewPageBtn')?.addEventListener('click', openReviewInterface);
+    document.getElementById('openPlaybooksBtn')?.addEventListener('click', () => {
+        window.location.href = '/playbooks';
+    });
+
+    document.getElementById('openReviewPageBtn')?.addEventListener('click', () => {
+        window.location.href = '/review';
+    });
     document.getElementById('retrainBtn')?.addEventListener('click', handleRetrainClick);
     document.getElementById('refresh-alerts-btn')?.addEventListener('click', refreshCriticalAlerts);
     document.getElementById('monitoring-toggle-btn')?.addEventListener('click', handleMonitoringToggle);
     // document.getElementById('clusterSortBy')?.addEventListener('change', fetchAndRenderClusters);
-    
+
     const modal = document.getElementById('log-context-modal');
     const closeBtn = document.getElementById('modal-close-btn');
     if (modal && closeBtn) {
@@ -70,7 +84,36 @@ function setupEventListeners() {
             }
         });
     }
-    
+
+    // Modal Tab Switching
+    document.querySelectorAll('.modal-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.modal-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.modal-tab-content').forEach(c => c.classList.remove('active'));
+            tab.classList.add('active');
+            const tabId = tab.getAttribute('data-tab');
+            document.getElementById(`tab-${tabId}`)?.classList.add('active');
+        });
+    });
+
+    // Alert Side Panel Controls
+    const sidePanel = document.getElementById('alert-side-panel');
+    const sidePanelClose = document.getElementById('side-panel-close');
+    const sidePanelOverlay = document.getElementById('side-panel-overlay');
+
+    if (sidePanelClose) {
+        sidePanelClose.addEventListener('click', () => {
+            sidePanel?.classList.remove('open');
+            if (sidePanelOverlay) sidePanelOverlay.style.display = 'none';
+        });
+    }
+    if (sidePanelOverlay) {
+        sidePanelOverlay.addEventListener('click', () => {
+            sidePanel?.classList.remove('open');
+            sidePanelOverlay.style.display = 'none';
+        });
+    }
+
     const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {
         logoutBtn.addEventListener('click', (event) => {
@@ -78,14 +121,16 @@ function setupEventListeners() {
             window.location.href = '/logout'; // Force the browser to navigate to the logout page
         });
     }
-    
+
     document.getElementById('securityBtn')?.addEventListener('click', () => {
         window.location.href = '/security';
     });
-    setupReviewListeners();
+
+    // setupReviewListeners();
 }
 
 function handleWebSocketMessage(event) {
+    // console.log("RAW WEBSOCKET MESSAGE RECEIVED:", event.data);
     const msg = JSON.parse(event.data);
     switch (msg.type) {
         case "session_update":
@@ -94,11 +139,12 @@ function handleWebSocketMessage(event) {
             saveSessionState();
             break;
         case "log":
-            liveLogsCache.unshift(msg.data); 
+            liveLogsCache.unshift(msg.data);
             totalCount++;
             if (msg.data.label === 'anomaly') {
                 anomalyCount++;
                 if (msg.data.is_alert && msg.data.alert_info) {
+                    anomalyFeedCache.unshift(msg.data.alert_info);
                     renderAnomalyFeedRow(msg.data.alert_info, true);
                 }
             } else {
@@ -107,7 +153,7 @@ function handleWebSocketMessage(event) {
             renderLogRow(msg.data, true);
             updateLiveSparkline(msg.data.label); // <-- ADD THIS LINE
             updateStatsOnScreen(totalCount, normalCount, anomalyCount, sessionCount);
-            saveSessionState();
+            // saveSessionState();
             if (msg.data.play_sound) {
                 const audio = new Audio('/static/audio/alert.wav');
                 audio.play().catch(error => {
@@ -115,12 +161,13 @@ function handleWebSocketMessage(event) {
                 });
             }
             break;
-        case "new_actionable_alert":
-            // This handles adding new rows to our actionable anomaly feed
-            if (msg.data) {
-                renderAnomalyFeedRow(msg.data, true);
-            }
-            break;
+        // case "new_actionable_alert":
+        //     // This handles adding new rows to our actionable anomaly feed
+        //     if (msg.data) {
+        //         anomalyFeedCache.unshift(msg.data);
+        //         renderAnomalyFeedRow(msg.data, true);
+        //     }
+        //     break;
         case "new_alert":
             criticalAlertsCache[msg.data.id] = msg.data; // Add or update the alert
             sessionStorage.setItem('criticalAlerts', JSON.stringify(criticalAlertsCache)); // Save to session
@@ -143,6 +190,9 @@ function handleWebSocketMessage(event) {
         case "monitoring_status_update":
             // THE FIX: Call the correct function to update the button's visual state
             updateMonitoringStatusUI(msg.data.is_active);
+            break;
+        case "sigma_match":
+            renderSigmaMatchRow(msg.data);
             break;
     }
     // This call will now work correctly because of the fix in updateStatsUI.
@@ -175,7 +225,7 @@ async function handleMonitoringToggle() {
     const button = document.getElementById('monitoring-toggle-btn');
     // Determine the new state by checking if the 'active' class is currently present
     const newStatus = !button.classList.contains('active');
-    
+
     try {
         await api.postMonitoringToggle(newStatus);
         updateMonitoringStatusUI(newStatus);
@@ -267,7 +317,7 @@ async function handleMonitoringToggle() {
 //             row.insertCell(4).textContent = log.content;
 //             row.insertCell(5).innerHTML = formatRiskScore(log.risk_score);
 //             row.insertCell(6).innerHTML = formatSequenceRisk(log.sequence_risk);
-            
+
 //             if (log.final_label === 1 && !riskClass) {
 //                 row.classList.add('risk-row-yellow');
 //             }
@@ -315,13 +365,13 @@ async function searchLogs() {
     try {
         // 2. Send the complete searchCriteria object to the API
         const results = await api.searchLogs(searchCriteria);
-        
+
         resultsBody.innerHTML = ''; // Clear "Searching..." message
         if (results.length === 0) {
             resultsBody.innerHTML = '<tr><td colspan="7">No logs found matching your criteria.</td></tr>';
             return;
         }
-        
+
         // 3. Render the results (same logic as before, but now with 7 columns)
         results.forEach(log => {
             let row = resultsBody.insertRow();
@@ -358,7 +408,7 @@ function clearSearchFilters() {
     document.getElementById('searchStartTime').value = '';
     document.getElementById('searchEndTime').value = '';
     document.querySelector('input[name="filter_logic"][value="and"]').checked = true;
-    
+
     document.getElementById("searchResultsBody").innerHTML = '';
 }
 
@@ -406,6 +456,7 @@ function saveSessionState() {
         anomaly: anomalyCount,
     }));
     sessionStorage.setItem('liveLogs', JSON.stringify(liveLogsCache));
+    sessionStorage.setItem('anomalyFeed', JSON.stringify(anomalyFeedCache));
 }
 
 function restoreSessionStats() {
@@ -422,8 +473,14 @@ function restoreSessionStats() {
         liveLogsCache = logs;
     }
 
+    const anomalies = JSON.parse(sessionStorage.getItem('anomalyFeed'));
+    if (anomalies) {
+        anomalyFeedCache = anomalies;
+    }
+
     // Part 2: Tell the UI to render what we found
     renderRestoredLogs(liveLogsCache);
+    renderRestoredAnomalies(anomalyFeedCache);
     updateStatsOnScreen(totalCount, normalCount, anomalyCount, sessionCount);
     saveSessionState();
 }
@@ -443,50 +500,15 @@ async function loadInitialAnomalies() {
     const tableBody = document.getElementById('anomalyFeedTableBody');
     if (!tableBody) return;
     tableBody.innerHTML = '<tr><td colspan="6" class="no-alerts-row">Loading alerts...</td></tr>';
-    
+
     try {
         const alerts = await api.fetchInitialAnomalies();
 
         tableBody.innerHTML = '';
-        
+
+        // Render each alert using the existing renderAnomalyFeedRow function
+        // which handles row creation, click handlers, and action buttons
         alerts.forEach(alert => {
-            const row = tableBody.insertRow(); // Create a <tr> element
-            row.id = `alert-row-${alert.id}`;
-            row.className = `log-row-clickable ${getRiskRowClass(alert.risk_score)}`;
-
-            // 3. Add a proper event listener to the row for the context modal
-            row.addEventListener('click', (event) => {
-                // Make sure the click wasn't on a button inside the row
-                if (event.target.tagName !== 'BUTTON') {
-                    showLogContext(alert.timestamp, alert.content);
-                }
-            });
-
-            // Create and append the cells (<td>)
-            row.insertCell().innerHTML = `<span class="status-badge status-${alert.status.toLowerCase()}">${alert.status}</span>`;
-            row.insertCell().innerHTML = formatRiskScore(alert.risk_score);
-            row.insertCell().textContent = alert.content;
-            
-            const actionsCell = row.insertCell();
-            actionsCell.className = 'actions-cell';
-
-            // 4. Programmatically create buttons and add their listeners
-            if (alert.status !== 'Closed') {
-                if (alert.status === 'New') {
-                    const ackBtn = document.createElement('button');
-                    ackBtn.className = 'action-btn';
-                    ackBtn.textContent = 'Acknowledge';
-                    ackBtn.addEventListener('click', () => updateAlertStatus(alert.id, 'Acknowledged'));
-                    actionsCell.appendChild(ackBtn);
-                }
-                const closeBtn = document.createElement('button');
-                closeBtn.className = 'action-btn';
-                closeBtn.textContent = 'Close';
-                closeBtn.addEventListener('click', () => updateAlertStatus(alert.id, 'Closed'));
-                actionsCell.appendChild(closeBtn);
-            } else {
-                actionsCell.innerHTML = '<span class="status-closed-text">Closed</span>';
-            }
             renderAnomalyFeedRow(alert, false);
         });
 
@@ -560,9 +582,54 @@ async function refreshAllWidgets() {
         updateTopNChart('topAnomalousIpsChart', 'ip'),
         updateTopNChart('topSourcesChart', 'source'),
         updateDetectionMethodChart(),
-        fetchTrainingStats() // We can refresh the training stats too
+        fetchTrainingStats(),
+        updateStatWidgets() // Update Session Activity and Alert Breakdown widgets
     ]);
     console.log("Widget refresh complete.");
+}
+
+// Update Session Activity and Alert Breakdown stat widgets
+async function updateStatWidgets() {
+    try {
+        // Session Activity Widget - use existing data or fetch from stats
+        const sessionEl = document.getElementById('widget-active-sessions');
+        const uniqueIpsEl = document.getElementById('widget-unique-ips');
+        const avgRiskEl = document.getElementById('widget-avg-risk');
+
+        if (sessionEl) sessionEl.textContent = sessionCount || 0;
+
+        // Fetch unique IPs and avg risk from API
+        const response = await fetch('/api/stats/overview');
+        if (response.ok) {
+            const stats = await response.json();
+            if (uniqueIpsEl) uniqueIpsEl.textContent = stats.unique_ips_24h || '--';
+            if (avgRiskEl) avgRiskEl.textContent = (stats.avg_risk_score || 0).toFixed(2);
+
+            // Historical summary stats
+            const histTodayEl = document.getElementById('hist-today-anomalies');
+            const histPeakEl = document.getElementById('hist-peak-hour');
+            const histTrendEl = document.getElementById('hist-trend');
+
+            if (histTodayEl) histTodayEl.textContent = stats.today_anomalies || 0;
+            if (histPeakEl) histPeakEl.textContent = stats.peak_hour || '--';
+            if (histTrendEl) histTrendEl.textContent = stats.seven_day_trend || '--';
+        }
+
+        // Alert Breakdown Widget
+        const alertsResponse = await fetch('/api/stats/alert_breakdown');
+        if (alertsResponse.ok) {
+            const alertStats = await alertsResponse.json();
+            const newEl = document.getElementById('widget-alerts-new');
+            const ackEl = document.getElementById('widget-alerts-ack');
+            const closedEl = document.getElementById('widget-alerts-closed');
+
+            if (newEl) newEl.textContent = alertStats.new || 0;
+            if (ackEl) ackEl.textContent = alertStats.acknowledged || 0;
+            if (closedEl) closedEl.textContent = alertStats.closed || 0;
+        }
+    } catch (error) {
+        console.error("Error updating stat widgets:", error);
+    }
 }
 
 async function handlePdfExport() {
@@ -602,7 +669,7 @@ async function handlePdfExport() {
             chartImages[title] = chartCanvas.toDataURL('image/png');
         }
     }
-    
+
     // 3. Add images and clean up the payload
     searchCriteria.chart_images = chartImages;
     Object.keys(searchCriteria).forEach(key => {
@@ -631,7 +698,7 @@ async function handlePdfExport() {
         a.click();
         a.remove();
         window.URL.revokeObjectURL(url);
-        
+
         showToast("Comprehensive report downloaded.", "success");
 
     } catch (error) {

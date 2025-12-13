@@ -1,7 +1,7 @@
 # update.py (ULTIMATE HYBRID VERSION)
 import os, sys, joblib, json, pandas as pd, numpy as np, psycopg2, tensorflow as tf
 from datetime import datetime
-from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix, precision_recall_fscore_support
 from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import SGDClassifier
 from tensorflow.keras.models import Model
@@ -79,6 +79,7 @@ def trigger_model_update():
 
     engine = create_engine(settings.DATABASE_URL)
     query = f"SELECT id, content, final_label FROM logs WHERE is_reviewed = 1 AND id > {last_processed_id}"
+    from sqlalchemy import text
     new_logs_df = pd.read_sql_query(query, engine)
     # engine.close()
 
@@ -107,14 +108,41 @@ def trigger_model_update():
     if os.path.exists(active_supervised_path):
         log_info("Loading existing supervised model...")
         supervised_model = joblib.load(active_supervised_path)
+        is_new_model = False
     else:
         log_warn(f"No supervised model found at {active_supervised_path}. Creating a new one.")
         supervised_model = SGDClassifier(loss='log_loss', random_state=42)
+        is_new_model = True
         
     # Evaluate performance before updating
-    y_pred = supervised_model.predict(X_eval)
-    accuracy = accuracy_score(y_new, y_pred)
-    log_report(f"Accuracy of OLD supervised model on new data: {accuracy:.2%}")
+    # Evaluate performance before updating - ONLY if model is already fitted
+    if not is_new_model:
+        y_pred = supervised_model.predict(X_eval)
+        accuracy = accuracy_score(y_new, y_pred)
+        precision, recall, f1, _ = precision_recall_fscore_support(y_new, y_pred, average='binary', zero_division=0)
+        
+        log_report(f"Metrics on new data (Drift Check) - Acc: {accuracy:.2%}, Prec: {precision:.2f}, Rec: {recall:.2f}, F1: {f1:.2f}")
+
+        # Store metrics in DB
+        try:
+            with engine.connect() as connection:
+                with connection.begin():
+                    connection.execute(
+                        text("INSERT INTO model_metrics (timestamp, model_type, version, accuracy, precision, recall, f1_score) VALUES (:ts, :type, :ver, :acc, :prec, :rec, :f1)"),
+                        {
+                            "ts": datetime.now(),
+                            "type": "supervised_sgd",
+                            "ver": os.path.basename(active_supervised_path),
+                            "acc": float(accuracy),
+                            "prec": float(precision),
+                            "rec": float(recall),
+                            "f1": float(f1)
+                        }
+                    )
+        except Exception as e:
+            log_error(f"Failed to save model metrics: {e}")
+    else:
+        log_info("Skipping evaluation (Model is new and not yet fitted).")
 
     # Incrementally train the supervised model with all new logs
     supervised_model.partial_fit(X_eval, y_new, classes=np.array([0, 1]))

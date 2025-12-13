@@ -1,14 +1,17 @@
 import os, re, sys, dill, pika, json, time, redis, pickle, joblib, hashlib, requests
 import numpy as np
 import tensorflow as tf
-import logging
+import logging, keras
 from typing import Dict, Any
 from app.log_config import setup_logging
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+from scripts.playbooks import block_ip_ufw, send_slack_alert
+from keras.preprocessing.sequence import pad_sequences
 from datetime import datetime, timezone, timedelta
 from sklearn.pipeline import make_pipeline
 from sentence_transformers import SentenceTransformer
 from sqlalchemy import create_engine, text
+from scripts.sigma_engine import SigmaEngine
+from scripts.zeek_ml_engine import ZeekMLEngine
 
 logger = logging.getLogger(__name__)
 
@@ -24,6 +27,15 @@ IGNORED_PATTERNS = [
     "ACPI group/action undefined: video/",
 ]
 
+ACTION_MAP = {
+    "block_ip_ufw": block_ip_ufw,
+    "send_slack_alert": send_slack_alert
+}
+
+logger.info("Initializing Sigma Engine (this may take a moment)...")
+sigma_engine = SigmaEngine(rules_path=str(settings.PROJECT_ROOT / "sigma-rules"))
+logger.info("Sigma Engine is ready.")
+
 attack_mappings = []
 
 # logger.info("Worker starting up. Loading models...")
@@ -34,43 +46,83 @@ unsupervised_model = None
 lstm_model = None
 unsupervised_threshold = None
 explainer = None
+zeek_engine = None
+
+# def load_models():
+#     """Loads all ML models on first use and caches them in global variables."""
+#     global embedder, supervised_model, unsupervised_model, lstm_model, unsupervised_threshold, explainer
+    
+#     if embedder is None:
+#         logger.info("Loading ML models for the worker...")
+#         registry_path = os.path.join(settings.PROJECT_ROOT, "model_registry.json")
+#         with open(registry_path, 'r') as f:
+#             active_models = json.load(f)
+
+#         embedder = SentenceTransformer(str(settings.EMBEDDER_PATH))
+#         supervised_model = joblib.load(active_models["supervised_model"])
+#         unsupervised_model = keras.models.load_model(active_models["autoencoder_model"])
+#         lstm_model = keras.models.load_model(active_models["lstm_model"])
+        
+#         with open(settings.THRESHOLD_PATH, 'r') as f:
+#             unsupervised_threshold = json.load(f)['threshold']
+
+#         with open(settings.EXPLAINER_PATH, 'rb') as f:
+#             explainer = dill.load(f)
+
+#         logger.info("All worker models loaded successfully.")
 
 def load_models():
     """Loads all ML models on first use and caches them in global variables."""
-    global embedder, supervised_model, unsupervised_model, lstm_model, unsupervised_threshold, explainer
-    
-    if embedder is None:
-        logger.info("Loading ML models for the worker...")
-        registry_path = os.path.join(settings.PROJECT_ROOT, "model_registry.json")
-        with open(registry_path, 'r') as f:
-            active_models = json.load(f)
+    global embedder, supervised_model, unsupervised_model, lstm_model
+    global unsupervised_threshold, explainer
 
+    if embedder is not None:
+        return  # already loaded
+
+    logger.info("Loading ML models for the worker...")
+
+    registry_path = os.path.join(settings.PROJECT_ROOT, "model_registry.json")
+    if not os.path.exists(registry_path):
+        logger.error(f"model_registry.json not found at {registry_path}")
+        return
+
+    with open(registry_path, 'r') as f:
+        active_models = json.load(f)
+
+    try:
         embedder = SentenceTransformer(str(settings.EMBEDDER_PATH))
-        supervised_model = joblib.load(active_models["supervised_model"])
-        unsupervised_model = tf.keras.models.load_model(active_models["autoencoder_model"])
-        lstm_model = tf.keras.models.load_model(active_models["lstm_model"])
-        
+
+        supervised_model = joblib.load(
+            os.path.join(settings.PROJECT_ROOT, active_models["supervised_model"])
+        )
+
+        unsupervised_model = keras.models.load_model(
+            os.path.join(settings.PROJECT_ROOT, active_models["autoencoder_model"])
+        )
+
+        lstm_model = keras.models.load_model(
+            os.path.join(settings.PROJECT_ROOT, active_models["lstm_model"])
+        )
+
         with open(settings.THRESHOLD_PATH, 'r') as f:
-            unsupervised_threshold = json.load(f)['threshold']
+            unsupervised_threshold = float(json.load(f)["threshold"])
 
         with open(settings.EXPLAINER_PATH, 'rb') as f:
             explainer = dill.load(f)
 
-        logger.info("All worker models loaded successfully.")
+        logger.info("✅ All worker models loaded successfully.")
 
-# registry_path = os.path.join(settings.PROJECT_ROOT, "model_registry.json")
-# with open(registry_path, 'r') as f:
-#     active_models = json.load(f)
-# embedder = SentenceTransformer(str(settings.EMBEDDER_PATH))
-# supervised_model = joblib.load(active_models["supervised_model"])
-# unsupervised_model = tf.keras.models.load_model(active_models["autoencoder_model"])
-# lstm_model = tf.keras.models.load_model(active_models["lstm_model"])
-# with open(settings.THRESHOLD_PATH, 'r') as f:
-#     unsupervised_threshold = json.load(f)['threshold']
-# with open(settings.EXPLAINER_PATH, 'rb') as f:
-#     explainer = dill.load(f)
-# lstm_model = tf.keras.models.load_model(settings.LSTM_MODEL_PATH)
-# logger.info("✅ All models loaded successfully.")
+    except Exception as e:
+        logger.error(f"❌ Failed to load models: {e}", exc_info=True)
+
+        # hard fail – do NOT process logs in partial state
+        embedder = None
+        supervised_model = None
+        unsupervised_model = None
+        lstm_model = None
+        unsupervised_threshold = None
+        explainer = None
+
 
 if os.path.exists(settings.KNOWN_HASHES_FILE):
     with open(settings.KNOWN_HASHES_FILE, 'r') as f:
@@ -200,12 +252,36 @@ def is_new_log_and_save_hash(log_text):
         return True
     return False
 
+def load_zeek_engine():
+    """Load specialized Zeek ML engine"""
+    global zeek_engine
+    if zeek_engine is None:
+        try:
+            zeek_engine = ZeekMLEngine(settings.MODEL_DIR)
+            logger.info("Zeek ML engine loaded successfully")
+        except Exception as e:
+            logger.error(f"Failed to load Zeek ML engine: {e}", exc_info=True)
+            zeek_engine = None
+
+def is_zeek_source(source: str) -> bool:
+    if not source:
+        return False
+    name = os.path.basename(source).lower()
+    if name.endswith(".gz"):
+        name = name[:-3]
+    zeek_names = (
+        "conn.log", "dns.log", "http.log", "ssl.log", "x509.log",
+        "weird.log", "notice.log", "files.log"
+    )
+    return name in zeek_names
+
 def get_session_key(log_line: str) -> str | None:
     """
     Extracts a session key from a log line in a prioritized order.
     1. IP Address
     2. Username
     3. Process ID (PID)
+    4. Generic User
     """
     # 1. Try to find an IP address
     ip_match = re.search(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", log_line)
@@ -213,14 +289,27 @@ def get_session_key(log_line: str) -> str | None:
         return f"ip_{ip_match.group(0)}"
 
     # 2. If no IP, try to find a common username pattern
-    user_match = re.search(r"\b(?:user=|for user )\b(\w+)", log_line) # e.g., "user=root" or "user root"
-    if user_match:
-        return f"user_{user_match.group(1)}"
+    user_patterns = [
+        r'User session for (\w+)',          # NEW: "User session for testuser123"  
+        r'(?:user|for user) (\w+)',         # EXISTING: "user root" or "for user admin"
+        r'for user (\w+)',                  # "Failed password for user admin"
+        r'user (\w+) by',
+    ]
+    
+    for pattern in user_patterns:
+        user_match = re.search(pattern, log_line)
+        if user_match:
+            return f"user_{user_match.group(1)}"
         
     # 3. If no user, try to find a Process ID (PID)
     pid_match = re.search(r"\[(\d+)\]:", log_line) # e.g., "sshd[12345]:"
     if pid_match:
         return f"pid_{pid_match.group(1)}"
+    
+    # 4. Fallback: try to find generic user pattern (lowest priority)
+    generic_user_match = re.search(r'\buser\s+(\w+)', log_line)
+    if generic_user_match:
+        return f"user_{generic_user_match.group(1)}"
         
     return None
 
@@ -300,12 +389,69 @@ def map_log_to_attack(log_content: str) -> Dict[str, Any] | None:
     logger.warning(f"[-] FAILED: No MITRE rule matched for this log content.")
     return None
 
-def extract_ip_from_log(log_line: str) -> str | None:
+def extract_ip_from_log(log_content: str) -> str | None:
     """Extracts the first valid IPv4 address from a log line."""
-    if not isinstance(log_line, str):
+    if not isinstance(log_content, str):
         return None
-    match = re.search(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", log_line)
+    match = re.search(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", log_content)
     return match.group(0) if match else None
+
+def run_playbooks(alert_info: dict):
+    """
+    Checks an alert against all active playbooks and executes actions if triggers are met.
+    """
+    print(f"PLAYBOOK RUNNER: Checking playbooks for alert on log ID {alert_info['log_id']}")
+    engine = create_engine(settings.DATABASE_URL)
+    
+    try:
+        with engine.connect() as connection:
+            playbooks = connection.execute(text("SELECT * FROM playbooks WHERE is_active = TRUE")).fetchall()
+
+        for playbook in playbooks:
+            playbook_dict = dict(playbook._mapping)
+            conditions = playbook_dict['trigger_conditions']
+            actions = playbook_dict['actions']
+            
+            # Simple condition checker (can be made more robust)
+            match = True
+            # Loop through all conditions in the playbook's trigger
+            for key, condition in conditions.items():
+                alert_value = alert_info.get(key)
+                
+                # If the required key (e.g., 'risk_score') isn't in the alert, it's not a match.
+                if alert_value is None:
+                    match = False
+                    break
+                
+                # Check conditions based on operator
+                if condition.get('operator') == '>=' and not (alert_value >= condition.get('value')):
+                    match = False
+                    break
+                if condition.get('operator') == 'contains' and not (isinstance(alert_value, str) and condition.get('value', '').lower() in alert_value.lower()):
+                    match = False
+                    break
+            
+            if match:
+                print(f"PLAYBOOK MATCH: Alert matched playbook '{playbook_dict['name']}'. Executing actions...")
+                for action_item in actions:
+                    action_func_name = action_item.get("action")
+                    if action_func_name in ACTION_MAP:
+                        action_func = ACTION_MAP[action_func_name]
+                        
+                        # Dynamic parameter handling
+                        if 'param_source' in action_item and action_item['param_source'] == 'log_content.ip':
+                            ip = extract_ip_from_log(alert_info['content'])
+                            action_func(ip)
+                        elif 'message' in action_item:
+                            message = action_item['message'].format(log_content=alert_info['content'])
+                            action_func(message)
+                        else:
+                             action_func() # For actions with no params
+                    else:
+                        print(f"PLAYBOOK WARNING: Action '{action_func_name}' not found in ACTION_MAP.")
+
+    except Exception as e:
+        print(f"PLAYBOOK RUNNER ERROR: Could not run playbooks. Error: {e}")
 
 def check_ip_abuseipdb(ip_address: str) -> dict | None:
 
@@ -353,8 +499,13 @@ def check_ip_abuseipdb(ip_address: str) -> dict | None:
         logger.error(f"Error querying AbuseIPDB API: {e}")
         return None
 
-def process_log(source, line):
+def process_log(source, line, honeytoken=None):
     load_models()
+    if not embedder:
+        return
+    if any(x is None for x in [embedder, supervised_model, unsupervised_model, lstm_model, unsupervised_threshold]):
+        logger.error("Models are not ready; dropping message (check model_registry.json and artifacts).")
+        return
     if line.startswith("[LOG-WORKER]"):
         return
     
@@ -363,44 +514,110 @@ def process_log(source, line):
     if any(p in line for p in IGNORED_PATTERNS):
         return
     
-    h = hashlib.sha256(line.encode('utf-8')).hexdigest()
-    if h in known_hashes:
-        logger.info(f"Skipping duplicate log: {line}")
-        return # Exit the function early
-
-    # If it's new, add it to our known hashes and proceed with processing.
-    known_hashes.add(h)
-    with open(settings.KNOWN_HASHES_FILE, 'a') as f:
-        f.write(h + '\n')
-
-    # This is the full, final version of your processing logic
-    embedding = embedder.encode([line])
-    supervised_pred = supervised_model.predict(embedding)[0]
-    reconstruction = unsupervised_model.predict(embedding, verbose=0)
-    reconstruction_loss = tf.keras.losses.mae(reconstruction, embedding)[0].numpy()
-    risk_score = float(min(1.0, reconstruction_loss / unsupervised_threshold))
-    unsupervised_pred = 1 if reconstruction_loss > unsupervised_threshold else 0
-    sequence_risk = update_and_predict_sequence(line, embedding)
+    # Priority Check: Honeytoken
+    if honeytoken:
+        logger.warning(f"🚨 [HONEYTOKEN] Detected: {honeytoken} in {source}")
+        # Force anomaly parameters
+        is_anomaly = True
+        verdict = f"Honeytoken Triggered: {honeytoken}"
+        risk_score = 1.0
+        sequence_risk = 0.0
+        reconstruction_loss = 0.0
     
-    verdict = "Normal"
-    is_anomaly = False
-
-    if supervised_pred == 1:
-        is_anomaly = True
-        verdict = "Supervised"
-
-    elif sequence_risk > 0.9: # High-confidence sequence anomaly
-        is_anomaly = True
-        verdict = f"Malicious Sequence Detected (Score: {sequence_risk:.2f})"
-        risk_score = max(risk_score, sequence_risk) # Elevate the risk score
-
-    elif unsupervised_pred == 1:
-        is_anomaly = True
-        verdict = "Novelty Detected"
-
-    if not is_anomaly: 
+    elif zeek_engine and is_zeek_source(source):  # Use engine's method
+        load_zeek_engine()
+        is_anomaly, risk_score, verdict, details = zeek_engine.predict_zeek_log(line, source)
+        normalized_line = zeek_engine.normalize_zeek_for_analysis(line, source)
+        logger.info(f"🔄 [ZEEK] {source}: {normalized_line[:100]}...")
+        
+        # Skip duplicate check for Zeek (handled by engine)
+        h = hashlib.sha256(line.encode('utf-8')).hexdigest()
+        if h in known_hashes:
+            logger.info(f"Skipping duplicate log: {line[:50]}")
+            return
+        known_hashes.add(h)
+        with open(settings.KNOWN_HASHES_FILE, 'a') as f:
+            f.write(f"{h}\n")
+        
+        # Skip further ML processing - use engine's results
+        sequence_risk = 0.0  # Zeek engine handles this
+        return
+        
+    else:
+        # Standard processing for non-Zeek logs (existing logic unchanged)
+        h = hashlib.sha256(line.encode('utf-8')).hexdigest()
+        if h in known_hashes:
+            logger.info(f"Skipping duplicate log: {line[:50]}")
+            return
+        
+        if not is_monitoring_active():
+            return
+        
+        known_hashes.add(h)
+        with open(settings.KNOWN_HASHES_FILE, 'a') as f:
+            f.write(f"{h}\n")
+        
+        # Check Sigma rules first
+        sigma_match = sigma_engine.check_log(line)
+        
+        # ML Processing
+        embedding = embedder.encode([line], show_progress_bar=False)
+        supervised_pred = supervised_model.predict(embedding)[0]
+        ae_recon = unsupervised_model.predict(embedding, verbose=0)
+        reconstruction_loss = np.mean(np.abs(embedding - ae_recon))
+        
+        risk_score = float(min(1.0, reconstruction_loss / unsupervised_threshold))
+        unsupervised_pred = 1 if reconstruction_loss > unsupervised_threshold else 0
+        
+        # Sequence analysis
+        sequence_risk = update_and_predict_sequence(line, embedding)
+        
+        # Determine verdict
+        verdict = "Normal"
+        is_anomaly = False
+        
+        if sigma_match:
+            is_anomaly = True
+            verdict = f"Sigma Rule: {sigma_match['title']}"
+            risk_score = 0.90
+            
+            logger.info(f"🚨 [SIGMA] MATCH FOUND: {sigma_match['title']}")
+            try:
+                requests.post(f"{settings.DASHBOARD_URL}/api/new-sigma-match", json=sigma_match, timeout=1)
+            except Exception as e:
+                logger.warning(f"Failed to send Sigma match to dashboard: {e}")
+                
+        elif supervised_pred == 1:
+            is_anomaly = True
+            verdict = "Supervised"
+            
+        elif sequence_risk > 0.9:
+            is_anomaly = True
+            verdict = f"Malicious Sequence Detected (Score: {sequence_risk:.2f})"
+            risk_score = max(risk_score, sequence_risk)
+            
+        elif unsupervised_pred == 1:
+            is_anomaly = True
+            verdict = "Novelty Detected"
+    
+    if not is_anomaly:
         risk_score = 0.0
     
+    # Enhanced logging
+    status_emoji = "🚨" if is_anomaly else "✅"
+    is_zeek_flow = bool(zeek_engine and is_zeek_source(source))
+
+    if is_zeek_flow:
+        logger.info(f"{status_emoji} [ZEEK-ENHANCED] Verdict: [{verdict}] | RiskScore: {risk_score:.3f} | Source: {source}")
+    else:
+        # Only log reconstruction_loss for standard ML path where it's defined
+        try:
+            loss_val = float(reconstruction_loss)
+            logger.info(f"{status_emoji} [SYS] Verdict: [{verdict}] | RiskScore: {risk_score:.3f} | Loss: {loss_val:.4f} | Source: {source}")
+        except (NameError, UnboundLocalError):
+            logger.info(f"{status_emoji} [SYS] Verdict: [{verdict}] | RiskScore: {risk_score:.3f} | Source: {source}")
+
+
     label_str = 'anomaly' if is_anomaly else 'normal'
 
     threat_intel_data = None
@@ -415,7 +632,9 @@ def process_log(source, line):
             logger.info("Anomalous log detected, but no IP address found to enrich.")
 
     original_timestamp = parse_timestamp_from_log(line)
+    new_log_id, new_log_timestamp = insert_log_to_db(source, line, int(is_anomaly), risk_score, sequence_risk, verdict, 0, "", threat_intel=threat_intel_data)
     dashboard_payload = {
+        "id": new_log_id,
         "log": line,
         "label": label_str,
         "verdict": verdict,
@@ -429,11 +648,11 @@ def process_log(source, line):
     
     # is_unique_for_review = is_new_log_and_save_hash(line)
     # log_is_reviewed_status = 0 if is_unique_for_review else 1
-    new_log_id, new_log_timestamp = insert_log_to_db(source, line, int(is_anomaly), risk_score, sequence_risk, verdict, 0, "", threat_intel=threat_intel_data)
     
     if is_anomaly and new_log_id and new_log_timestamp:
         try:
             attack_info = map_log_to_attack(line)
+
             engine = create_engine(settings.DATABASE_URL)
             alert_query = text("""
                 INSERT INTO alerts (log_id, log_timestamp, timestamp, rule_name, status, mitre_tactic, mitre_technique, rule_description) 
@@ -450,14 +669,14 @@ def process_log(source, line):
                         "rule_name": verdict,
                         "tactic": attack_info.get("tactic") if attack_info else None,
                         "technique": attack_info.get("technique") if attack_info else None,
-                        "desc": attack_info.get("description") if attack_info else None
+                        "desc": attack_info.get("description") if attack_info else None,
                     }).scalar_one_or_none() # .scalar_one_or_none() is great for single-value returns
             
             alert_id = alert_result
 
             # Update the dashboard payload with the new alert info
             dashboard_payload["is_alert"] = True
-            dashboard_payload["alert_info"] = {
+            alert_info = {
                 "id": alert_id, "status": "New", "rule_name": verdict,
                 "timestamp": original_timestamp, "log_id": new_log_id,
                 "content": line, "risk_score": risk_score,
@@ -465,6 +684,8 @@ def process_log(source, line):
                 "mitre_tactic": attack_info.get("tactic") if attack_info else None,
                 "mitre_technique": attack_info.get("technique") if attack_info else None
             }
+            dashboard_payload["alert_info"] = alert_info
+            run_playbooks(alert_info)
 
             if risk_score >= 0.79:
                 advice = f"({verdict}) | Risk: {risk_score:.2f}"
@@ -473,7 +694,7 @@ def process_log(source, line):
                 dashboard_payload["play_sound"] = True
 
         except Exception as e:
-            logger.warning(f"Failed to create alert or send to dashboard: {e}")
+            logger.error(f"Failed to create alert or send to dashboard. Error: {e}", exc_info=True)
 
     logger.info(f" [LOG-WORKER] Verdict: [{verdict}] | RiskScore: {risk_score} | Loss: {reconstruction_loss:.4f} | Log: {line}")
     # send_to_dashboard(line, label_str, verdict, risk_score)
@@ -491,7 +712,7 @@ def main():
             def callback(ch, method, properties, body):
                 try:
                     message = json.loads(body)
-                    process_log(message.get('source'), message.get('content'))
+                    process_log(message.get('source'), message.get('content'), message.get('honeytoken'))
                 except Exception as e:
                     logger.warning(f"Error processing message: {e}")
                 finally:
@@ -539,5 +760,4 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         logger.info('Interrupted')
         sys.exit(0)
-
 

@@ -1,6 +1,12 @@
 # app/api/models.py
 from pydantic import BaseModel, Field
 from typing import Optional, Dict
+from enum import Enum
+
+class UserRole(str, Enum):
+    ADMIN = "admin"
+    ANALYST = "analyst"
+    VIEWER = "viewer"
 
 class SearchQuery(BaseModel):
     keyword: Optional[str] = None
@@ -27,3 +33,27 @@ class BulkLabelUpdate(BaseModel):
 class ManualLogsQuery(BaseModel):
     sort_by: str = "timestamp"
     sort_order: str = "desc"
+
+from datetime import datetime
+
+class HoneytokenType(str, Enum):
+    AWS_KEY = "AWS Access Key"
+    DB_CREDS = "Database Credentials"
+    GENERIC = "Generic Token"
+
+class HoneytokenCreate(BaseModel):
+    type: HoneytokenType
+    description: str
+
+class HoneytokenResponse(BaseModel):
+    id: int
+    token: str
+    type: str
+    description: str
+    created_at: datetime
+    created_by: Optional[str] = None
+    trigger_count: int
+    is_active: bool
+    
+    class Config:
+        from_attributes = True

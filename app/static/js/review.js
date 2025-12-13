@@ -1,20 +1,27 @@
 import * as api from './api.js';
-import * as utils from './utils.js';
+import { animateCount, escapeHTML, formatRiskScore, getRiskRowClass, formatSequenceRisk, formatStatusBadge, showToast } from './utils.js';
 import * as ui from './ui.js';
+import { applyTheme } from './theme.js';
 
-export function setupReviewListeners() {
+document.addEventListener('DOMContentLoaded', () =>{
     // Listener for the main button on the dashboard to open the page.
     // **Please check your HTML and use the correct ID here.**
-    const openBtn = document.getElementById('openReviewPageBtn') || document.getElementById('reviewLogsBtn');
-    if (openBtn) {
-        openBtn.addEventListener('click', openReviewInterface);
-    }
+    // const openBtn = document.getElementById('openReviewPageBtn') || document.getElementById('reviewLogsBtn');
+    // if (openBtn) {
+    //     openBtn.addEventListener('click', openReviewInterface);
+    // }
     
-    // Listener for the "Back to Dashboard" button inside the review page
-    const closeBtn = document.getElementById('close-review-btn');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeReviewInterface);
-    }
+    // // Listener for the "Back to Dashboard" button inside the review page
+    // const closeBtn = document.getElementById('close-review-btn');
+    // if (closeBtn) {
+    //     closeBtn.addEventListener('click', closeReviewInterface);
+    // }
+
+    applyTheme();
+
+    document.getElementById('close-review-btn').addEventListener('click', () => {
+        window.location.href = '/'; // Navigate back to the dashboard
+    });
 
     // Add listeners for the tab buttons inside the review page
     document.querySelectorAll('.tab-btn').forEach(button => {
@@ -28,12 +35,13 @@ export function setupReviewListeners() {
     }
 
     document.getElementById('clusterSortBy')?.addEventListener('change', fetchAndRenderClusters);
-}
+    fetchAndRenderClusters();
+    fetchAndRenderNoiseLogs();
+});
 
 function openReviewInterface() {
     document.querySelector('.dashboard-layout').style.display = 'none';
     document.getElementById('review-interface-container').style.display = 'block';
-    // Automatically load the default tab's content
     fetchAndRenderClusters();
     fetchAndRenderNoiseLogs();
 }
@@ -65,14 +73,14 @@ async function prepareClusters() {
     btn.innerHTML = `<div class="spinner" style="width: 18px; height: 18px; border-width: 2px;"></div> Preparing...`;
     btn.disabled = true;
 
-    ui.showToast('Starting log clustering process in the background...', 'info');
+    showToast('Starting log clustering process in the background...', 'info');
     try {
         const result = await api.postPrepareClusters();
-        ui.showToast(result.message, 'info');
+        showToast(result.message, 'info');
         // Start polling for the result
         pollPrepareStatus(); 
     } catch (error) {
-        ui.showToast('Failed to start clustering process.', 'error');
+        showToast('Failed to start clustering process.', 'error');
         btn.innerHTML = 'Prepare Clusters';
         btn.disabled = false;
     } finally {
@@ -94,17 +102,17 @@ function pollPrepareStatus() {
                 btn.disabled = false;
 
                 if (status.status === 'completed') {
-                    ui.showToast('Clustering complete! Refreshing view.', 'success');
+                    showToast('Clustering complete! Refreshing view.', 'success');
                     // Refresh the view with the new clusters
                     fetchAndRenderClusters();
                     fetchAndRenderNoiseLogs();
                 } else {
-                    ui.showToast(status.message, 'error');
+                    showToast(status.message, 'error');
                 }
             }
         } catch (error) {
             clearInterval(intervalId);
-            ui.showToast('Failed to get clustering status.', 'error');
+            showToast('Failed to get clustering status.', 'error');
         }
     }, 2000); // Check every 2 seconds
 }
@@ -126,26 +134,48 @@ async function fetchAndRenderClusters() {
             const card = document.createElement('div');
             card.className = 'cluster-card';
             card.id = `cluster-card-${cluster.cluster_id}`;
-            card.setAttribute('tabindex', '0');
+            // card.setAttribute('tabindex', '0');
+            // card.innerHTML = `
+            //     <div class="cluster-header">
+            //         <span class="cluster-title">
+            //             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            //             <span>${cluster.name || 'Unnamed Cluster'}</span>
+            //         </span>
+            //         <span class="cluster-log-count">${cluster.log_count} Logs</span>
+            //     </div>
+            //     <div class="cluster-body" data-cluster-id="${cluster.cluster_id}">
+            //         <p><strong>Representative Log:</strong> (Click to see all ${cluster.log_count} logs)</p>
+            //         <div class="cluster-representative-log">${escapeHTML(cluster.representative_log)}</div>
+            //     </div>
+            //     <div class="cluster-meta">
+            //         <span>First Seen: ${new Date(cluster.first_seen).toLocaleString()}</span> | 
+            //         <span>Confidence: <strong>${(cluster.confidence * 100).toFixed(0)}%</strong></span>
+            //     </div>
+            //     <div class="cluster-actions">
+            //         <div class="label-toggle-switch" data-label="0"></div>
+            //         <button class="save-cluster-btn">Save</button>
+            //     </div>
+            // `;
+            card.dataset.modelPrediction = cluster.model_prediction; 
+            
+            const modelPredictionText = cluster.model_prediction === 1 ? "Anomaly" : "Normal";
+
             card.innerHTML = `
                 <div class="cluster-header">
-                    <span class="cluster-title">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                        <span>${cluster.name || 'Unnamed Cluster'}</span>
-                    </span>
+                    <span class="cluster-title"><span>${cluster.name || 'Unnamed Cluster'}</span></span>
                     <span class="cluster-log-count">${cluster.log_count} Logs</span>
                 </div>
                 <div class="cluster-body" data-cluster-id="${cluster.cluster_id}">
-                    <p><strong>Representative Log:</strong> (Click to see all ${cluster.log_count} logs)</p>
-                    <div class="cluster-representative-log">${utils.escapeHTML(cluster.representative_log)}</div>
+                    <p><strong>Representative Log:</strong></p>
+                    <div class="cluster-representative-log">${escapeHTML(cluster.representative_log)}</div>
                 </div>
                 <div class="cluster-meta">
-                    <span>First Seen: ${new Date(cluster.first_seen).toLocaleString()}</span> | 
-                    <span>Confidence: <strong>${(cluster.confidence * 100).toFixed(0)}%</strong></span>
+                    <span>Model Prediction: <strong>${modelPredictionText}</strong> (Confidence: ${(cluster.confidence * 100).toFixed(0)}%)</span>
                 </div>
                 <div class="cluster-actions">
-                    <div class="label-toggle-switch" data-label="0"></div>
-                    <button class="save-cluster-btn">Save</button>
+                    <button class="action-btn mark-normal-btn">Mark as Normal</button>
+                    <button class="action-btn mark-anomaly-btn">Mark as Anomaly</button>
+                    <button class="submit-button save-cluster-btn">Accept & Save</button>
                 </div>
             `;
             clusterContainer.appendChild(card);
@@ -155,9 +185,11 @@ async function fetchAndRenderClusters() {
         document.querySelectorAll('#cluster-container .cluster-body').forEach(body => {
             body.addEventListener('click', () => openClusterDetailModal(body.dataset.clusterId));
         });
-        document.querySelectorAll('.label-toggle-switch').forEach(button => {
-            button.addEventListener('click', handleLabelToggleClick);
-        });
+        // document.querySelectorAll('.label-toggle-switch').forEach(button => {
+        //     button.addEventListener('click', handleLabelToggleClick);
+        // });
+        document.querySelectorAll('.mark-normal-btn').forEach(btn => btn.addEventListener('click', (e) => handleMarkClick(e, 0)));
+        document.querySelectorAll('.mark-anomaly-btn').forEach(btn => btn.addEventListener('click', (e) => handleMarkClick(e, 1)));
         document.querySelectorAll('.save-cluster-btn').forEach(button => {
             button.addEventListener('click', handleSaveClusterClick);
         });
@@ -165,6 +197,26 @@ async function fetchAndRenderClusters() {
     } catch (error) {
         console.error("Failed to fetch clusters:", error);
         clusterContainer.innerHTML = '<h4>Error loading clusters. Please try again.</h4>';
+    }
+}
+
+function handleMarkClick(event, newLabel) {
+    const card = event.target.closest('.cluster-card');
+    const normalBtn = card.querySelector('.mark-normal-btn');
+    const anomalyBtn = card.querySelector('.mark-anomaly-btn');
+    const saveBtn = card.querySelector('.save-cluster-btn');
+
+    // Store the user's choice in the card's dataset
+    card.dataset.userChoice = newLabel;
+
+    if (newLabel === 0) { // User clicked "Mark as Normal"
+        normalBtn.classList.add('selected-normal');
+        anomalyBtn.classList.remove('selected-anomaly');
+        saveBtn.textContent = 'Save as Normal';
+    } else { // User clicked "Mark as Anomaly"
+        anomalyBtn.classList.add('selected-anomaly');
+        normalBtn.classList.remove('selected-normal');
+        saveBtn.textContent = 'Save as Anomaly';
     }
 }
 
@@ -186,9 +238,9 @@ async function openClusterDetailModal(clusterId) {
     logs.forEach(log => {
         tableRows += `
             <tr>
-                <td class="log-content">${utils.escapeHTML(log.content)}</td>
+                <td class="log-content">${escapeHTML(log.content)}</td>
                 <td>${log.risk_score.toFixed(2)}</td>
-                <td>${utils.formatSequenceRisk(log.sequence_risk)}</td>
+                <td>${formatSequenceRisk(log.sequence_risk)}</td>
                 <td>
                     <div class="label-chooser" data-log-id="${log.id}">
                         <input type="radio" id="modal_normal_${log.id}" name="modal_label_${log.id}" value="0" ${log.predicted_label == 0 ? 'checked' : ''}>
@@ -238,12 +290,14 @@ async function fetchAndRenderNoiseLogs() {
                     <span class="cluster-title">${log.name}</span>
                     <span class="cluster-log-count">1 Log</span>
                 </div>
-                <div class="cluster-representative-log">${utils.escapeHTML(log.representative_log)}</div>
+                <div class="cluster-representative-log">${escapeHTML(log.representative_log)}</div>
                 <div class="cluster-actions">
-                    <div class="label-toggle-switch ${isAnomaly ? 'is-anomaly' : ''}" data-label="${isAnomaly ? 1 : 0}"></div>
+                    <div class="label-toggle-switch ${log.predicted_label === 1 ? 'is-anomaly' : ''}" 
+                        data-model-prediction="${log.predicted_label}"></div>
                     <button class="save-cluster-btn">Save</button>
                 </div>
             `;
+            card.dataset.modelPrediction = log.predicted_label;
             noiseContainer.appendChild(card);
         });
         // Re-use the same event listeners from the main cluster cards
@@ -307,7 +361,7 @@ function handleLabelToggleClick(event) {
 
     const newLabel = toggle.classList.contains('is-anomaly') ? '1' : '0';
 
-    card.dataset.selectedLabel = newLabel;
+    card.dataset.userChoice = newLabel;
 
     toggle.classList.add('active');
 }
@@ -316,31 +370,47 @@ async function handleSaveClusterClick(event) {
     const button = event.target;
     const card = button.closest('.cluster-card');
     const clusterId = card.id.replace('cluster-card-', '');
-    let newLabel = card.dataset.selectedLabel;
+    // let newLabel = card.dataset.selectedLabel;
 
-    if (newLabel === undefined) {
-        const toggle = card.querySelector('.label-toggle-switch');
-        if (toggle && toggle.dataset.label) {
-            newLabel = toggle.dataset.label;
-        } else {
-            // If we still can't find a label, show an error.
-            ui.showToast('Could not determine label.', 'error');
-            return;
-        }
+    // if (newLabel === undefined) {
+    //     const toggle = card.querySelector('.label-toggle-switch');
+    //     if (toggle && toggle.dataset.label) {
+    //         newLabel = toggle.dataset.label;
+    //     } else {
+    //         // If we still can't find a label, show an error.
+    //         showToast('Could not determine label.', 'error');
+    //         return;
+    //     }
+    // }
+
+    const labelAsString = card.dataset.userChoice !== undefined 
+        ? card.dataset.userChoice 
+        : card.dataset.modelPrediction;
+
+    console.log(`--- Saving Cluster ID: ${clusterId} ---`);
+    console.log("1. Label from card data:", labelAsString, `(Type: ${typeof labelAsString})`);
+    const finalLabel = parseInt(labelAsString, 10);
+    console.log("2. Final label after parseInt:", finalLabel, `(Type: ${typeof finalLabel})`);
+
+    // **CRITICAL FIX**: Validate the result before sending
+    if (isNaN(finalLabel) || (finalLabel !== 0 && finalLabel !== 1)) {
+        showToast('Could not determine a valid label (0 or 1).', 'error');
+        console.error("Stopping API call. Invalid label detected:", finalLabel);
+        return; // Exit the function to prevent the bad API call
     }
-
+    
     button.textContent = 'Saving...';
     button.disabled = true;
 
     try {
         // This is the same API call as before
-        const result = await api.postClusterLabel(clusterId, newLabel);
+        const result = await api.postClusterLabel(clusterId, finalLabel);
         if (result.status === 'ok') {
-            ui.showToast(`Cluster ${clusterId} labeled successfully (${result.updated_count} logs).`, 'success');
+            showToast(`Cluster ${clusterId} labeled successfully (${result.updated_count} logs).`, 'success');
             card.remove();
         } else { throw new Error(result.message); }
     } catch (error) {
-        ui.showToast(`Failed to label cluster ${clusterId}.`, 'error');
+        showToast(`Failed to label cluster ${clusterId}.`, 'error');
         button.textContent = 'Save';
         button.disabled = false;
     }
@@ -387,14 +457,14 @@ async function fetchAndRenderManualLogs(sortBy, sortOrder) {
 
         let tableRows = '';
         entries.forEach(entry => {
-            const riskClass = utils.getRiskRowClass(entry.risk_score);
+            const riskClass = getRiskRowClass(entry.risk_score);
             tableRows += `
                 <tr class="${riskClass}" data-log-id="${entry.id}">
                     <td>${new Date(entry.timestamp).toLocaleString()}</td>
                     <td>${entry.source}</td>
-                    <td class="log-content">${utils.escapeHTML(entry.content)}</td>
+                    <td class="log-content">${escapeHTML(entry.content)}</td>
                     <td>${entry.risk_score.toFixed(2)}</td>
-                    <td>${utils.formatSequenceRisk(entry.sequence_risk)}</td>
+                    <td>${formatSequenceRisk(entry.sequence_risk)}</td>
                     <td>
                         <div class="label-chooser" data-log-id="${entry.id}">
                             <input type="radio" id="normal_${entry.id}" name="label_${entry.id}" value="0" ${entry.predicted_label == 0 ? 'checked' : ''}>
@@ -453,7 +523,7 @@ async function saveReviews(selector, saveButtonElement) {
     });
 
     if (updates.length === 0) {
-        ui.showToast("No changes to save.", "info");
+        showToast("No changes to save.", "info");
         return;
     }
 
@@ -465,9 +535,9 @@ async function saveReviews(selector, saveButtonElement) {
     try {
         const result = await api.postReviewUpdates(updates);
         if (result.status === 'ok') {
-            ui.showToast(`Successfully updated ${result.updated_count} logs!`, 'success');
+            showToast(`Successfully updated ${result.updated_count} logs!`, 'success');
             
-            ui.showToast('Refreshing clusters with remaining logs...', 'info');
+            showToast('Refreshing clusters with remaining logs...', 'info');
             await prepareClusters();
             // Refresh the manual review table to show remaining logs
             loadManualReviewLogs();
@@ -475,7 +545,7 @@ async function saveReviews(selector, saveButtonElement) {
             throw new Error(result.message || "Unknown error saving reviews.");
         }
     } catch (error) {
-        ui.showToast("Failed to save reviews.", "error");
+        showToast("Failed to save reviews.", "error");
         if (saveButtonElement) {
             saveButtonElement.textContent = 'Save Changes';
             saveButtonElement.disabled = false;

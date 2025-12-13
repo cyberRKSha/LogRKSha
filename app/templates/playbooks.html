@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playbook Management - Log Anomaly Detector</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/pb_styles.css">
+    <link rel="stylesheet" href="/static/css/r_styles.css"> 
+</head>
+<body>
+    <div class="review-container">
+        <div class="review-header">
+            <h1>Playbook Management</h1>
+            <button id="back-to-dashboard-btn" class="control-button">Back to Dashboard</button>
+        </div>
+        <div class="section-header">
+            <h2 class="section-title">Automation Rules</h2>
+            <button id="create-playbook-btn" class="control-button">Create New Playbook</button>
+        </div>
+        <div class="scrollable-content" style="max-height: 60vh;">
+            <table class="review-table">
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Name</th>
+                        <th style="width: 20%;">Status (Active)</th>
+                        <th style="width: 40%;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="playbooks-table-body">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="playbook-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" style="max-width: 800px;">
+            <div class="modal-header">
+                <h2 id="modal-title">Create New Playbook</h2>
+                <button id="modal-close-btn" class="modal-close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="playbook-form">
+                    <input type="hidden" id="playbook-id">
+                    <div class="control-group">
+                        <label for="playbook-name">Playbook Name</label>
+                        <input type="text" id="playbook-name" class="select-dropdown" required>
+                    </div>
+                    <div class="control-group">
+                        <label for="playbook-triggers">Trigger Conditions (JSON)</label>
+                        <textarea id="playbook-triggers" rows="6" class="select-dropdown" style="font-family: monospace; border-radius: 8px;" required></textarea>
+                    </div>
+                    <div class="control-group">
+                        <label for="playbook-actions">Actions (JSON)</label>
+                        <textarea id="playbook-actions" rows="6" class="select-dropdown" style="font-family: monospace; border-radius: 8px;" required></textarea>
+                    </div>
+                    <div class="review-actions">
+                        <button type="submit" class="submit-button">Save Playbook</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="toast-container"></div>
+    <script src="/static/js/playbooks.js" type="module"></script>
+
+</body>
+</html>

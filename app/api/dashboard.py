@@ -21,8 +21,10 @@ import base64, logging
 from app.config import settings
 from app import auth_utils
 from app.websocket import broadcast
+from app.websocket import broadcast
 from scripts.update import trigger_model_update
 from .models import SearchQuery, AlertStatusUpdate
+from app.services.cache import cache
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["Dashboard"])
@@ -102,7 +104,7 @@ def get_search_results(query: SearchQuery):
     engine = create_engine(settings.DATABASE_URL)
     
     base_query = """
-        SELECT l.id, l.timestamp, l.source, l.content, l.final_label, l.risk_score, l.sequence_risk, a.status
+        SELECT l.id, l.timestamp, l.source, l.content, l.final_label, l.risk_score, l.sequence_risk, l.threat_intel, a.status
         FROM logs l LEFT JOIN alerts a ON l.id = a.log_id
     """
     
@@ -222,8 +224,8 @@ async def search_logs(query: SearchQuery, user: dict = Depends(auth_utils.get_cu
         logger.error(f"Error during log search: {e}")
         return []
 
-@router.get("/api/historical-trends")
-async def get_historical_trends(response: Response, interval: str = 'h', user: dict = Depends(auth_utils.get_current_user)):
+@router.get("/api/historical_trends")
+async def get_historical_trends(response: Response, interval: str = "h", user: dict = Depends(auth_utils.get_current_user)):
     if not user:
         return RedirectResponse(url="/login")
     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
@@ -265,18 +267,29 @@ async def get_historical_trends(response: Response, interval: str = 'h', user: d
 async def get_training_stats(user: dict = Depends(auth_utils.get_current_user)):
     if not user:
         return RedirectResponse(url="/login")
+    
+    # Check cache first
+    cached_stats = cache.get_json("stats:training")
+    if cached_stats:
+        return cached_stats
+
     try:
         engine = create_engine(settings.DATABASE_URL)
         query = "SELECT final_label FROM logs WHERE is_reviewed = 1"
         df = pd.read_sql_query(query, engine)
-        # engine.close()
-        if df.empty:
-            return {"total": 0, "normal": 0, "anomaly": 0}
-        return {
-            "total": len(df),
-            "normal": df[df['final_label'] == 0].shape[0],
-            "anomaly": df[df['final_label'] == 1].shape[0],
-        }
+        
+        result = {"total": 0, "normal": 0, "anomaly": 0}
+        if not df.empty:
+            result = {
+                "total": len(df),
+                "normal": df[df['final_label'] == 0].shape[0],
+                "anomaly": df[df['final_label'] == 1].shape[0],
+            }
+        
+        # Cache for 5 minutes
+        cache.set_json("stats:training", result, ttl=300)
+        return result
+        
     except Exception as e:
         logger.error(f"Error fetching training stats: {e}")
         return {"total": 0, "normal": 0, "anomaly": 0}
@@ -334,7 +347,7 @@ async def get_alerts(user: dict = Depends(auth_utils.get_current_user)):
         # 2. Create a cursor that returns dictionary-like rows
         # cursor = engine.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         query = """
-            SELECT a.id, a.status, a.rule_name, a.rule_description, a.mitre_tactic, a.mitre_technique, l.timestamp, l.content, l.risk_score, l.id as log_id
+            SELECT a.id, a.status, a.rule_name, a.rule_description, a.mitre_tactic, a.mitre_technique, l.timestamp, l.content, l.risk_score, l.threat_intel, l.id as log_id
             FROM alerts a JOIN logs l ON a.log_id = l.id
             WHERE a.status IN ('New', 'Acknowledged')
             ORDER BY l.timestamp DESC LIMIT 100
@@ -357,6 +370,10 @@ async def update_alert_status(alert_id: int, update: AlertStatusUpdate, user: di
     if not user:
         return RedirectResponse(url="/login")
     
+    VALID_STATUSES = {"New", "Acknowledged", "Closed", "Resolved"}
+    if update.status not in VALID_STATUSES:
+        raise HTTPException(status_code=422, detail="Invalid status provided.")
+
     def update_and_get_log_id():
         engine = create_engine(settings.DATABASE_URL)
         query = text("UPDATE alerts SET status = :status WHERE id = :alert_id RETURNING log_id")
@@ -394,7 +411,7 @@ async def get_all_anomalies(user: dict = Depends(auth_utils.get_current_user)):
     def get_anomalies_from_db():
         engine = create_engine(settings.DATABASE_URL)
         query = text("""
-            SELECT a.id, a.status, a.rule_name, a.rule_description, a.mitre_tactic, a.mitre_technique, l.timestamp, l.content, l.risk_score, l.id as log_id
+            SELECT a.id, a.status, a.rule_name, a.rule_description, a.mitre_tactic, a.mitre_technique, l.timestamp, l.content, l.risk_score, l.threat_intel, l.id as log_id
             FROM alerts a JOIN logs l ON a.log_id = l.id
             WHERE a.status IN ('New', 'Acknowledged') AND l.risk_score >= 0.79
             ORDER BY l.timestamp DESC LIMIT 100
@@ -416,25 +433,33 @@ async def get_explanation(log_id: int, user: dict = Depends(auth_utils.get_curre
         return RedirectResponse(url="/login")
 
     def get_explanation_from_db():
-        embedder, supervised_model, explainer = get_models()
+        # 1. Check Redis Cache
+        cache_key = f"lime:v1:{log_id}"
+        cached_html = cache.get_json(cache_key)
+        if cached_html:
+            return {"explanation_html": cached_html}
+
         engine = create_engine(settings.DATABASE_URL)
         line = None
         
-        # Step 1: Connect and get the log content first
+        # 2. Check Database (Column: explanation)
         try:
             with engine.connect() as connection:
-                result = connection.execute(text("SELECT content FROM logs WHERE id = :log_id"), {"log_id": log_id}).fetchone()
+                result = connection.execute(text("SELECT content, explanation FROM logs WHERE id = :log_id"), {"log_id": log_id}).fetchone()
                 if not result:
-                    return {"error": "Log not found"}
-                line = dict(result._mapping)['content']
-        except Exception as e:
-            logger.error(f"Error fetching log content for LIME: {e}")
-            return {"error": "Could not fetch log content."}
+                    raise HTTPException(status_code=404, detail="Log not found")
+                
+                row_dict = dict(result._mapping)
+                line = row_dict['content']
+                if row_dict.get('explanation'):
+                    # Found in DB! Cache it and return.
+                    cache.set_json(cache_key, row_dict['explanation'], ttl=86400) # 24h cache from DB
+                    return {"explanation_html": row_dict['explanation']}
         
-        try:
             logger.info(f"Generating LIME explanation for log ID: {log_id}")
+            embedder, supervised_model, explainer = get_models()
 
-            # Step 2: Generate the explanation on the fly
+            # Step 3: Generate the explanation on the fly
             def predictor_fn(text_list):
                 embeddings = embedder.encode(text_list)
                 return supervised_model.predict_proba(embeddings)
@@ -452,9 +477,13 @@ async def get_explanation(log_id: int, user: dict = Depends(auth_utils.get_curre
             traceback.print_exc()
             return {"error": f"Could not generate explanation: {e}"}
 
-            # Step 3: Save the new explanation to the database for future requests
+        # Step 4: Save to DB and Cache
         if html:
             try:
+                # Save to Redis
+                cache.set_json(cache_key, html, ttl=86400 * 7) # 7 days
+                
+                # Save to DB
                 with engine.connect() as connection:
                     with connection.begin() as transaction:
                         connection.execute(text("UPDATE logs SET explanation = :html WHERE id = :log_id"), {"html": html, "log_id": log_id})
@@ -466,7 +495,6 @@ async def get_explanation(log_id: int, user: dict = Depends(auth_utils.get_curre
             return {"explanation_html": html}
         else:
             return {"explanation_html": "<p class='explanation-error'>Explanation not available for this log.</p>"}
-
 
     return await run_in_threadpool(get_explanation_from_db)
 
@@ -504,6 +532,12 @@ async def get_top_n_stats(field: str = "verdict", limit: int = 5, user: dict = D
     if not user:
         return RedirectResponse(url="/login")
     def get_data():
+        # Check cache (include field and limit in key)
+        cache_key = f"stats:top_n:{field}:{limit}"
+        cached_val = cache.get_json(cache_key)
+        if cached_val:
+            return cached_val
+
         engine = create_engine(settings.DATABASE_URL)
         
         # Whitelist of allowed fields to query
@@ -513,9 +547,9 @@ async def get_top_n_stats(field: str = "verdict", limit: int = 5, user: dict = D
 
         query = f"SELECT content, verdict, source FROM logs WHERE final_label = 1"
         df = pd.read_sql_query(query, engine)
-        # engine.close()
 
         if df.empty:
+            cache.set_json(cache_key, [], ttl=300)
             return []
         
         # For IPs, we need to extract them from the content
@@ -529,13 +563,16 @@ async def get_top_n_stats(field: str = "verdict", limit: int = 5, user: dict = D
         df.dropna(subset=[target_column], inplace=True)
         
         if df.empty:
+            cache.set_json(cache_key, [], ttl=300)
             return []
 
         valid_items = [item for item in df[target_column] if pd.notna(item)]
         counts = Counter(valid_items).most_common(limit)
         
         # Format for Chart.js
-        return [{"item": item, "count": count} for item, count in counts]
+        result = [{"item": item, "count": count} for item, count in counts]
+        cache.set_json(cache_key, result, ttl=300)
+        return result
         
     return await run_in_threadpool(get_data)
 
@@ -582,6 +619,147 @@ async def get_detection_method_stats(user: dict = Depends(auth_utils.get_current
     return await run_in_threadpool(get_data_from_db)
 
 
+@router.get("/api/stats/overview")
+async def get_stats_overview(user: dict = Depends(auth_utils.get_current_user)):
+    """
+    Returns overview statistics for the Session Activity widget and Historical summary.
+    - unique_ips_24h: Count of unique IPs in the last 24 hours
+    - avg_risk_score: Average risk score of anomalies
+    - today_anomalies: Count of anomalies today
+    - peak_hour: Hour with most anomalies today
+    - seven_day_trend: Trend compared to last 7 days
+    """
+    def get_overview_data():
+        with psycopg2.connect(settings.DATABASE_URL) as conn:
+            with conn.cursor() as cur:
+                # Unique IPs in last 24 hours
+                cur.execute("""
+                    SELECT COUNT(DISTINCT 
+                        CASE 
+                            WHEN content ~ '\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}'
+                            THEN (regexp_match(content, '(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})'))[1]
+                            ELSE NULL
+                        END
+                    ) FROM logs 
+                    WHERE timestamp >= NOW() - INTERVAL '24 hours'
+                """)
+                unique_ips = cur.fetchone()[0] or 0
+
+                # Average risk score of anomalies
+                cur.execute("""
+                    SELECT AVG(risk_score) FROM logs 
+                    WHERE final_label = 1 AND risk_score IS NOT NULL
+                """)
+                avg_risk = cur.fetchone()[0] or 0
+
+                # Today's anomalies
+                cur.execute("""
+                    SELECT COUNT(*) FROM logs 
+                    WHERE final_label = 1 
+                    AND DATE(timestamp) = CURRENT_DATE
+                """)
+                today_anomalies = cur.fetchone()[0] or 0
+
+                # Peak hour today
+                cur.execute("""
+                    SELECT EXTRACT(HOUR FROM timestamp) as hour, COUNT(*) as cnt
+                    FROM logs 
+                    WHERE final_label = 1 AND DATE(timestamp) = CURRENT_DATE
+                    GROUP BY hour 
+                    ORDER BY cnt DESC 
+                    LIMIT 1
+                """)
+                peak_result = cur.fetchone()
+                peak_hour = f"{int(peak_result[0]):02d}:00" if peak_result else "--"
+
+                # 7-day trend (compare today vs avg of last 7 days)
+                cur.execute("""
+                    SELECT AVG(daily_count) FROM (
+                        SELECT DATE(timestamp) as day, COUNT(*) as daily_count
+                        FROM logs 
+                        WHERE final_label = 1 
+                        AND timestamp >= NOW() - INTERVAL '7 days'
+                        AND DATE(timestamp) < CURRENT_DATE
+                        GROUP BY day
+                    ) subq
+                """)
+                avg_7d = cur.fetchone()[0] or 0
+                
+                if avg_7d > 0:
+                    trend_pct = ((today_anomalies - avg_7d) / avg_7d) * 100
+                    if trend_pct > 0:
+                        seven_day_trend = f"+{trend_pct:.0f}%"
+                    else:
+                        seven_day_trend = f"{trend_pct:.0f}%"
+                else:
+                    seven_day_trend = "N/A"
+
+                return {
+                    "unique_ips_24h": unique_ips,
+                    "avg_risk_score": float(avg_risk) if avg_risk else 0,
+                    "today_anomalies": today_anomalies,
+                    "peak_hour": peak_hour,
+                    "seven_day_trend": seven_day_trend
+                }
+
+    return await run_in_threadpool(get_overview_data)
+
+
+@router.get("/api/stats/alert_breakdown")
+async def get_alert_breakdown(user: dict = Depends(auth_utils.get_current_user)):
+    """
+    Returns alert counts by status for the Alert Breakdown widget.
+    """
+    def get_breakdown_data():
+        with psycopg2.connect(settings.DATABASE_URL) as conn:
+            with conn.cursor() as cur:
+                cur.execute("""
+                    SELECT status, COUNT(*) as cnt
+                    FROM alerts
+                    GROUP BY status
+                """)
+                rows = cur.fetchall()
+                
+                result = {"new": 0, "acknowledged": 0, "closed": 0}
+                for row in rows:
+                    status = row[0].lower() if row[0] else "new"
+                    if status in result:
+                        result[status] = row[1]
+                
+                return result
+
+    return await run_in_threadpool(get_breakdown_data)
+
+
+@router.get("/api/stats/model_drift")
+async def get_model_drift_stats(user: dict = Depends(auth_utils.get_current_user)):
+    """Fetches historical model metrics for drift visualization."""
+    if not user:
+        return RedirectResponse(url="/login")
+    
+    def get_data():
+        engine = create_engine(settings.DATABASE_URL)
+        query = text("""
+            SELECT timestamp, accuracy, precision, recall, f1_score 
+            FROM model_metrics 
+            WHERE model_type = 'supervised_sgd' 
+            ORDER BY timestamp ASC LIMIT 50
+        """)
+        try:
+            with engine.connect() as connection:
+                result = connection.execute(query).fetchall()
+                data = []
+                for row in result:
+                    item = dict(row._mapping)
+                    # Convert timestamp to string
+                    item['timestamp'] = item['timestamp'].strftime('%Y-%m-%d %H:%M')
+                    data.append(item)
+                return data
+        except Exception as e:
+            logger.error(f"Error fetching drift stats: {e}")
+            return []
+
+    return await run_in_threadpool(get_data)
 
 @router.get("/api/stats/anomalous_ips_locations")
 async def get_anomalous_ips_locations(user: dict = Depends(auth_utils.get_current_user)):
@@ -617,18 +795,30 @@ async def get_anomalous_ips_locations(user: dict = Depends(auth_utils.get_curren
             ip = extract_ip_from_string(log_content)
             if ip and ip not in seen_ips:
                 seen_ips.add(ip)
+                
+                # Check Cache for IP Location
+                geo_cache_key = f"geo:{ip}"
+                cached_geo = cache.get_json(geo_cache_key)
+                if cached_geo:
+                    locations.append(cached_geo)
+                    continue
+
                 try:
                     response = geoip_reader.city(ip)
                     if response and response.location and response.location.latitude and response.location.longitude:
-                        locations.append({
+                        geo_data = {
                             "ip": ip,
                             "lat": response.location.latitude,
                             "lon": response.location.longitude,
                             "city": response.city.name if response.city else "Unknown City",
                             "country": response.country.name if response.country else "Unknown Country"
-                        })
+                        }
+                        locations.append(geo_data)
+                        cache.set_json(geo_cache_key, geo_data, ttl=86400) # Cache for 24 hours
                 except geoip2.errors.AddressNotFoundError:
                     # This happens for private IPs (e.g., 192.168.x.x), which is normal.
+                    # We can optionally cache the "not found" state to avoid re-querying private IPs
+                    cache.set_json(geo_cache_key, None, ttl=86400)
                     pass
                 except Exception as e:
                     logger.warning(f"Could not geolocate IP {ip}: {e}")
@@ -726,3 +916,17 @@ async def export_pdf_report(query: SearchQuery, user: dict = Depends(auth_utils.
         media_type='application/pdf',
         headers={'Content-Disposition': 'attachment; filename="dashboard_report.pdf"'}
     )
+
+@router.get("/playbooks", response_class=HTMLResponse)
+async def playbooks_page(request: Request, user: dict = Depends(auth_utils.get_current_user)):
+    """Serves the Playbooks management page."""
+    if not user:
+        return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+    return templates.TemplateResponse(request, "playbooks.html")
+
+@router.get("/review", response_class=HTMLResponse)
+async def review_page(request: Request, user: dict = Depends(auth_utils.get_current_user)):
+    """Serves the dedicated log review page."""
+    if not user:
+        return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+    return templates.TemplateResponse(request, "review.html")

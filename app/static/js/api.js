@@ -6,7 +6,7 @@ export async function fetchTrainingStats() {
 }
 
 export async function fetchHistoricalTrends() {
-    const response = await fetch('/api/historical-trends', { cache: 'no-store' });
+    const response = await fetch('/api/historical_trends', { cache: 'no-store' });
     return await response.json();
 }
 
@@ -125,7 +125,7 @@ export async function postClusterLabel(clusterId, newLabel) {
     const response = await fetch(`/api/review/clusters/${clusterId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ new_label: newLabel })
+        body: JSON.stringify({ new_label: parseInt(newLabel, 10)})
     });
     return await response.json();
 }

@@ -6,13 +6,13 @@
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/r_styles.css">
-    <link rel="stylesheet" href="/static/css/m_styles.css">
+    <link rel="stylesheet" href="/static/css/pb_styles.css"> 
 </head>
 <body>
     <div id="review-interface-container" class="review-container">
         <div class="review-header">
             <h1>Log Review</h1>
-            <a href="/" id="close-review-btn" class="control-button">Back to Dashboard</a>
+            <button id="close-review-btn" class="control-button">Back to Dashboard</button>
         </div>
 
         <div class="review-tabs">
@@ -66,7 +66,7 @@
                 <button id="applySortBtn" class="control-button">Apply</button>
             </div>
             <div id="manual-log-table-container">
-                </div>
+            </div>
         </div>
     </div>
 
@@ -76,11 +76,14 @@
                 <h2 id="cluster-modal-title">Cluster Details</h2>
                 <button id="cluster-modal-close-btn" class="modal-close-button">&times;</button>
             </div>
-            <div id="cluster-modal-body" class="modal-body"></div>
+            <div id="cluster-modal-body" class="modal-body">
+                </div>
         </div>
     </div>
+
     <div id="toast-container"></div>
 
-    <script src="/static/js/main.js" type="module"></script>
+    <script src="/static/js/theme.js" type="module"></script>
+    <script src="/static/js/review.js" type="module"></script>
 </body>
 </html>

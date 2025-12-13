@@ -16,6 +16,11 @@ export async function initThreatMap() {
         maxZoom: 19
     }).addTo(threatMap);
 
+    // Force map to recalculate size after DOM is fully ready
+    setTimeout(() => {
+        threatMap.invalidateSize();
+    }, 100);
+
     // Fetch data and plot points
     const locations = await api.fetchAnomalousIPLocations();
     locations.forEach(loc => {

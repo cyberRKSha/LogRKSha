@@ -2,8 +2,7 @@
 import os
 from pathlib import Path
 from typing import Optional
-from pydantic_settings import BaseSettings
-from pydantic import ConfigDict
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 PROJECT_ROOT = Path(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
@@ -40,6 +39,13 @@ class Settings(BaseSettings):
     TEMPLATES_PATH: Path = PROJECT_ROOT / "app" / "templates"
     GEOIP_PATH: Path = PROJECT_ROOT / "geoip" / "GeoLite2-City.mmdb"
     ABUSEIPDB_API_KEY: Optional[str] = None
+    SLACK_WEBHOOK_URL: Optional[str] = None
+    LOG_SHIPPER_API_KEY: Optional[str] = "dev_secret_key"  # Default for dev, should be in .env
+    ENVIRONMENT: str = "development"  # "development" or "production"
+    
+    @property
+    def IS_PRODUCTION(self) -> bool:
+        return self.ENVIRONMENT.lower() == "production"
 
     # --- Automatically constructed paths ---
     # This creates the full paths to your files from the settings above
@@ -73,6 +79,13 @@ class Settings(BaseSettings):
 
     @property
     def SUPERVISED_MODEL_PATH(self) -> Path:
+        # Load from model_registry.json to always use the latest compatible model
+        import json
+        registry_path = self.PROJECT_ROOT / "model_registry.json"
+        if registry_path.exists():
+            with open(registry_path, 'r') as f:
+                registry = json.load(f)
+            return self.PROJECT_ROOT / registry.get("supervised_model", "model/sgd_embedder.pkl")
         return self.MODEL_DIR / "sgd_embedder.pkl"
 
     @property
@@ -103,7 +116,7 @@ class Settings(BaseSettings):
     def STATUS_FILE(self) -> Path:
         return self.PROJECT_ROOT / "monitoring_status.json"
 
-    model_config = ConfigDict(env_file=str(PROJECT_ROOT / ".env"), extra='ignore')
+    model_config = SettingsConfigDict(env_file=str(PROJECT_ROOT / ".env"), env_file_encoding='utf-8', extra='ignore')
 
 # Create a single instance of the settings to be used by the whole app
 settings = Settings()

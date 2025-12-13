@@ -58,6 +58,8 @@ async def get_review_clusters(sort_by: str = "log_count", sort_order: str = "des
             clusters = []
             for row in db_rows:
                 row_dict = dict(row._mapping)
+                confidence = float(row_dict.get('confidence', 0.0))
+                model_pred = 1 if confidence > 0.5 else 0 # Simple inference
                 cluster_dict = {
                     'cluster_id': str(row_dict.get('cluster_id')),
                     'name': str(row_dict.get('name')),
@@ -68,7 +70,8 @@ async def get_review_clusters(sort_by: str = "log_count", sort_order: str = "des
                     'last_seen': str(row_dict.get('last_seen')),
                     'centroid': base64.b64encode(row_dict['centroid']).decode('ascii') if row_dict.get('centroid') and isinstance(row_dict['centroid'], bytes) else None,
                     'is_noise': int(row_dict.get('is_noise', 0)),
-                    'confidence': float(row_dict.get('confidence', 0.0))
+                    'confidence': confidence,
+                    'model_prediction': model_pred
                 }
                 clusters.append(cluster_dict)
             return clusters

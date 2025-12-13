@@ -1,7 +1,7 @@
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect, Request
 from fastapi.exceptions import RequestValidationError # <-- ADD THIS
 from fastapi.responses import JSONResponse # <-- ADD THIS
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional
 import asyncio
 import hashlib
@@ -13,6 +13,7 @@ clients = set()
 recent_alerts_cache = {}
 
 class LogData(BaseModel):
+    id: Optional[int] = None
     log: str
     label: str
     timestamp: str
@@ -38,6 +39,12 @@ class AlertEntryData(BaseModel):
     content: str
     risk_score: float
 
+class SigmaMatchData(BaseModel):
+    title: str
+    id: str
+    level: str
+    log: str
+
 async def broadcast(message: dict):
     disconnected_clients = set()
     for client in clients.copy():
@@ -61,7 +68,7 @@ async def websocket_endpoint(websocket: WebSocket):
 
 # @router.post("/api/new_log")
 # async def new_log(data: LogData):
-#     await broadcast({"type": "log", "data": data.dict()})
+#     await broadcast({"type": "log", "data": data.model_dump()})
 #     return {"status": "ok"}
 
 @router.post("/api/new_log")
@@ -72,7 +79,7 @@ async def new_log(request: Request):
         data = LogData(**data_dict)
         
         # If successful, broadcast and return ok
-        await broadcast({"type": "log", "data": data.dict()})
+        await broadcast({"type": "log", "data": data.model_dump()})
         return {"status": "ok"}
         
     except RequestValidationError as e:
@@ -89,10 +96,13 @@ async def new_alert(data: AlertData):
     """
     Receives a critical alert notification, aggregates it, and broadcasts intelligently.
     """
-    log_content = data.log
+    # log_content = data.log
     # Create a unique key for this type of alert (e.g., based on the first 50 chars)
-    alert_key = hashlib.sha256(log_content[:50].encode()).hexdigest()
+    alert_key = data.id
     current_time = time.time()
+
+    if not alert_key:
+        return {"status": "error", "message": "Alert data must include an ID."}
 
     if alert_key in recent_alerts_cache and (current_time - recent_alerts_cache[alert_key]['timestamp'] < 60):
         # --- This is a REPEATING alert ---
@@ -114,14 +124,14 @@ async def new_alert(data: AlertData):
         recent_alerts_cache[alert_key] = {
             'count': 1,
             'timestamp': current_time,
-            'log': log_content,
+            'log': data.log,
             'advice': data.advice
         }
         
         # Broadcast a 'new_alert' message with all the details
         await broadcast({
             "type": "new_alert",
-            "data": data.dict()
+            "data": data.model_dump()
         })
 
     return {"status": "ok"}
@@ -129,8 +139,12 @@ async def new_alert(data: AlertData):
 @router.post("/api/new_alert_entry")
 async def new_alert_entry(data: AlertEntryData):
     """Receives a new actionable alert and broadcasts it to the anomaly feed."""
-    await broadcast({"type": "new_actionable_alert", "data": data.dict()})
+    await broadcast({"type": "new_actionable_alert", "data": data.model_dump()})
     return {"status": "ok"}
 
-
+@router.post("/api/new-sigma-match")
+async def new_sigma_match(data: SigmaMatchData):
+    """Receives a new Sigma match and broadcasts it to the dashboard."""
+    await broadcast({"type": "sigma_match", "data": data.model_dump()})
+    return {"status": "ok"}
 

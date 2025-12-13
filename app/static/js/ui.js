@@ -1,8 +1,6 @@
 // static/js/ui.js
 import * as api from './api.js';
-import { animateCount, escapeHTML, formatRiskScore, getRiskRowClass, formatSequenceRisk, formatStatusBadge } from './utils.js';
-import * as charts from './charts.js';
-// import {} from './script.js'; 
+import { animateCount, escapeHTML, formatRiskScore, getRiskRowClass, formatSequenceRisk, formatStatusBadge, showToast } from './utils.js';
 
 
 export function updateStatsOnScreen(total, normal, anomaly, sessionCount) {
@@ -21,45 +19,61 @@ export function renderRestoredLogs(logs) {
     const tableBody = document.getElementById("logsTableBody");
     if (!logs || !tableBody) return;
 
-    tableBody.innerHTML = ''; 
+    tableBody.innerHTML = '';
     // Re-render each log from the cache, oldest first
-        logs.slice().reverse().forEach(logData => {
-            // This is a simplified render, you can expand it if needed
-             const row = tableBody.insertRow(0);
-             const labelText = (logData.label || 'unknown').toLowerCase().trim();
-             const escapedContent = (logData.log || '-').replace(/'/g, "\\'");
-             row.className = 'log-row-clickable';
-             row.setAttribute('onclick', `showLogContext('${logData.timestamp}', '${escapedContent}')`);
-             row.insertCell(0).textContent = new Date(logData.timestamp).toLocaleString();
-             row.insertCell(1).innerHTML = `<span class="label-${labelText}">${labelText}</span>`;
-             row.insertCell(2).textContent = logData.verdict || 'N/A';
-             row.insertCell(3).textContent = logData.log || '-';
-             row.insertCell(4).innerHTML = formatRiskScore(logData.risk_score);
-             row.insertCell(5).innerHTML = formatSequenceRisk(logData.sequence_risk);
-             if (labelText === 'anomaly') {
-                row.classList.add(getRiskRowClass(logData.risk_score));
-             }
-        });
+    logs.slice().reverse().forEach(logData => {
+        // This is a simplified render, you can expand it if needed
+        const row = tableBody.insertRow(0);
+        const labelText = (logData.label || 'unknown').toLowerCase().trim();
+        const escapedContent = (logData.log || '-').replace(/'/g, "\\'");
+        row.className = 'log-row-clickable';
+        row.addEventListener('click', () => showLogContext(logData.timestamp, logData.log, logData.id));
+        row.insertCell(0).textContent = new Date(logData.timestamp).toLocaleString();
+        row.insertCell(1).innerHTML = `<span class="label-${labelText}">${labelText}</span>`;
+        row.insertCell(2).textContent = logData.verdict || 'N/A';
+        row.insertCell(3).textContent = logData.log || '-';
+        row.insertCell(4).innerHTML = formatRiskScore(logData.risk_score);
+        row.insertCell(5).innerHTML = formatSequenceRisk(logData.sequence_risk);
+        if (labelText === 'anomaly') {
+            row.classList.add(getRiskRowClass(logData.risk_score));
+        }
+    });
 }
 
 export function renderLogRow(data, shouldUpdateState = true) {
     const tableBody = document.getElementById("logsTableBody");
     if (!tableBody) return;
-    
+
     if (tableBody) {
         const row = shouldUpdateState ? tableBody.insertRow(0) : tableBody.insertRow(-1);
         const labelText = (data.label || 'unknown').toLowerCase().trim();
         row.className = 'fade-in log-row-clickable';
-        const escapedContent = (data.log || '-').replace(/'/g, "\\'");
-        // row.setAttribute('onclick', `showLogContext('${data.timestamp}', '${escapedContent}')`);
+
         row.addEventListener('click', () => showLogContext(data.timestamp, data.log, data.id));
+
+        // Timestamp
         row.insertCell(0).textContent = new Date(data.timestamp).toLocaleString();
-        row.insertCell(1).innerHTML = `<span class="label-${labelText}">${labelText}</span>`;
+
+        // Enhanced Label Pill
+        const labelIcon = labelText === 'normal'
+            ? '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>'
+            : '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>';
+        row.insertCell(1).innerHTML = `<span class="label-pill ${labelText}">${labelIcon} ${labelText}</span>`;
+
+        // Verdict
         row.insertCell(2).textContent = data.verdict || 'N/A';
-        row.insertCell(3).textContent = data.log || '-';
+
+        // Content with cell styling
+        const contentCell = row.insertCell(3);
+        contentCell.className = 'content-cell';
+        contentCell.textContent = data.log || '-';
+
+        // Risk Score (now progress bar)
         row.insertCell(4).innerHTML = formatRiskScore(data.risk_score);
+
+        // Sequence Risk
         row.insertCell(5).innerHTML = formatSequenceRisk(data.sequence_risk);
-        
+
         if (data.label === 'anomaly') {
             row.classList.add(getRiskRowClass(data.risk_score) || 'log-anomaly');
         }
@@ -69,7 +83,7 @@ export function renderLogRow(data, shouldUpdateState = true) {
 export function renderAnomalyFeedRow(alert, isNew) {
     const tableBody = document.getElementById("anomalyFeedTableBody");
     if (!tableBody) return;
-    
+
     const noAlertsRow = tableBody.querySelector('.no-alerts-row');
     if (noAlertsRow) noAlertsRow.remove();
 
@@ -92,7 +106,23 @@ export function renderAnomalyFeedRow(alert, isNew) {
 
     row.insertCell(0).innerHTML = `<span class="status-badge status-${alert.status.toLowerCase()}">${alert.status}</span>`;
     row.insertCell(1).innerHTML = formatRiskScore(alert.risk_score);
-    row.insertCell(2).textContent = alert.content;
+
+    // Threat Intel Badge Logic
+    let intelBadge = '';
+    if (alert.threat_intel) {
+        let ti = alert.threat_intel;
+        if (typeof ti === 'string') {
+            try { ti = JSON.parse(ti); } catch (e) { }
+        }
+        if (ti && ti.abuseConfidenceScore !== undefined) {
+            const score = ti.abuseConfidenceScore;
+            const country = ti.countryCode || '?';
+            const colorClass = score > 50 ? 'text-critical' : 'text-warning'; // utilizing existing or simple classes
+            intelBadge = `<span class="ti-badge ${colorClass}" title="AbuseIPDB Score: ${score}% (${ti.isp})"> 🌐 ${country} ${score}%</span>`;
+        }
+    }
+
+    row.insertCell(2).innerHTML = escapeHTML(alert.content) + intelBadge;
     row.insertCell(3).textContent = alert.rule_description || 'N/A';
     row.insertCell(4).innerHTML = techniqueLink;
     // Cell for Actions
@@ -102,15 +132,15 @@ export function renderAnomalyFeedRow(alert, isNew) {
         // Create the "Acknowledge" button if the status is 'New'
         if (alert.status === 'New') {
             const ackBtn = document.createElement('button');
-            ackBtn.className = 'action-btn';
+            ackBtn.className = 'action-btn btn-acknowledge';
             ackBtn.textContent = 'Acknowledge';
             ackBtn.addEventListener('click', () => updateAlertStatus(alert.id, 'Acknowledged'));
             actionsCell.appendChild(ackBtn);
         }
-        
+
         // Create the "Close" button
         const closeBtn = document.createElement('button');
-        closeBtn.className = 'action-btn';
+        closeBtn.className = 'action-btn btn-close';
         closeBtn.textContent = 'Close';
         closeBtn.addEventListener('click', () => updateAlertStatus(alert.id, 'Closed'));
         actionsCell.appendChild(closeBtn);
@@ -124,39 +154,145 @@ export function renderAlertRow(data) {
     const container = document.getElementById("alertsContainer");
     if (!container) return;
 
-    // criticalAlertsCache[data.id] = data;
-
     const div = document.createElement('div');
-    div.className = 'alert-critical fade-in';
+    div.className = 'alert-card-enhanced fade-in';
     div.id = `critical-alert-${data.id}`;
-    // div.setAttribute('data-log-id', data.id);
-    
+
     const statusHTML = data.status ? formatStatusBadge(data.status) : '';
-    const advice = data.advice || `(${data.rule_name || 'Anomaly'}) | Risk: ${(data.risk_score || 0).toFixed(2)}` || "No advice.";
-    const log = data.log || data.content || "N/A";
-    
+    const advice = data.advice || `(${data.rule_name || 'Anomaly Detected'})`;
+    const log = escapeHTML(data.log || data.content || "N/A");
+    const riskScore = (data.risk_score || 0).toFixed(2);
+
+    // Threat intel badge
+    let threatBadge = '';
+    if (data.threat_intel) {
+        let ti = data.threat_intel;
+        if (typeof ti === 'string') try { ti = JSON.parse(ti); } catch (e) { }
+        if (ti && ti.abuseConfidenceScore) {
+            const scoreClass = ti.abuseConfidenceScore > 60 ? 'critical' : ti.abuseConfidenceScore > 30 ? 'high' : 'medium';
+            threatBadge = `<span class="sigma-severity-badge ${scoreClass}">${ti.abuseConfidenceScore}% Risk</span>`;
+        }
+    }
+
     div.innerHTML = `
-        <div class="alert-header">
-            <strong>Critical Alert</strong>
-            <div class="status-badge-cell id="critical-status-${data.id}">${statusHTML}</div>
+        <div class="alert-card-header">
+            <span class="alert-card-title">🚨 ${escapeHTML(advice)}</span>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                ${threatBadge}
+                ${statusHTML}
+            </div>
         </div>
-        ${advice}<br>
-        <small>Ref Log: ${log}</small>
-        <span class="alert-counter">(${data.count || 1}x)</span>
+        <div class="alert-card-content">${log}</div>
+        <div class="alert-card-meta">
+            <span>Risk Score: <strong>${riskScore}</strong></span>
+            <span>Count: <strong>${data.count || 1}x</strong></span>
+            <span style="margin-left: auto; color: var(--button-primary); cursor: pointer;" class="view-remediation-link" data-alert-id="${data.id}">View Remediation →</span>
+        </div>
     `;
+
+    // Click handler for "View Remediation" link
+    div.querySelector('.view-remediation-link')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openAlertSidePanel(data);
+    });
+
     container.prepend(div);
+}
+
+// Open side panel with mock remediation content
+export function openAlertSidePanel(alertData) {
+    const sidePanel = document.getElementById('alert-side-panel');
+    const sidePanelBody = document.getElementById('side-panel-body');
+    const sidePanelOverlay = document.getElementById('side-panel-overlay');
+
+    if (!sidePanel || !sidePanelBody) return;
+
+    const ruleName = alertData.rule_name || 'Security Anomaly';
+    const riskScore = (alertData.risk_score || 0).toFixed(2);
+
+    // Mock remediation content
+    sidePanelBody.innerHTML = `
+        <div class="remediation-section">
+            <h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+                Alert Summary
+            </h4>
+            <div style="background: var(--card-bg); padding: 15px; border-radius: 8px; border: 1px solid var(--border-color);">
+                <p style="margin: 0 0 10px 0;"><strong>Rule:</strong> ${escapeHTML(ruleName)}</p>
+                <p style="margin: 0 0 10px 0;"><strong>Risk Score:</strong> ${riskScore}</p>
+                <p style="margin: 0;"><strong>Log:</strong> <code style="font-size: 0.85em;">${escapeHTML(alertData.log || alertData.content || 'N/A')}</code></p>
+            </div>
+        </div>
+
+        <div class="remediation-section">
+            <h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Recommended Actions
+            </h4>
+            <ul class="remediation-steps">
+                <li>
+                    <span class="step-number">1</span>
+                    <span>Isolate the affected system from the network to prevent lateral movement.</span>
+                </li>
+                <li>
+                    <span class="step-number">2</span>
+                    <span>Review recent authentication logs for unusual login patterns.</span>
+                </li>
+                <li>
+                    <span class="step-number">3</span>
+                    <span>Check for persistence mechanisms (cron jobs, startup scripts).</span>
+                </li>
+                <li>
+                    <span class="step-number">4</span>
+                    <span>Scan for malware or unauthorized software installations.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="remediation-section">
+            <h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Mitigation Steps
+            </h4>
+            <ul class="remediation-steps">
+                <li>
+                    <span class="step-number">1</span>
+                    <span>Reset credentials for any affected accounts.</span>
+                </li>
+                <li>
+                    <span class="step-number">2</span>
+                    <span>Enable multi-factor authentication if not already active.</span>
+                </li>
+                <li>
+                    <span class="step-number">3</span>
+                    <span>Update firewall rules to block suspicious IP addresses.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="ai-coming-soon-banner">
+            <h5>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12a10 10 0 0 1 10-10z"></path><path d="M12 6v6l4 2"></path></svg>
+                AI-Powered Analysis Coming Soon
+            </h5>
+            <p>Intelligent remediation suggestions tailored to this specific alert will be available after LLM integration.</p>
+        </div>
+    `;
+
+    // Open panel
+    sidePanel.classList.add('open');
+    if (sidePanelOverlay) sidePanelOverlay.style.display = 'block';
 }
 
 export function handleStatusUpdate(data) {
     const { alert_id, log_id, new_status } = data;
-    // const newStatusLower = new_status.toLowerCase();
 
-    // Update the main anomaly feed row
+    // Update the main anomaly feed row (Flagged section)
     const anomalyRow = document.getElementById(`alert-row-${alert_id}`);
     if (anomalyRow) {
         const statusBadge = anomalyRow.querySelector('.status-badge');
         const actionsCell = anomalyRow.querySelector('.actions-cell');
-        
+
         statusBadge.className = `status-badge status-${new_status.toLowerCase()}`;
         statusBadge.textContent = new_status;
 
@@ -164,39 +300,34 @@ export function handleStatusUpdate(data) {
             anomalyRow.style.opacity = '0.5';
             actionsCell.innerHTML = '<span class="status-closed-text">Closed</span>';
         } else if (new_status === 'Acknowledged') {
-            // actionsCell.innerHTML = `<button class="action-btn" onclick="updateAlertStatus(${alert_id}, 'Closed')">Close</button>`;
-            // 1. Clear the cell
-            actionsCell.innerHTML = ''; 
-            
-            // 2. Create a new button element
+            actionsCell.innerHTML = '';
             const closeBtn = document.createElement('button');
-            closeBtn.className = 'action-btn';
+            closeBtn.className = 'action-btn btn-close';
             closeBtn.textContent = 'Close';
-            
-            // 3. Attach the click event using addEventListener
             closeBtn.addEventListener('click', () => updateAlertStatus(alert_id, 'Closed'));
-            
-            // 4. Add the new button to the cell
             actionsCell.appendChild(closeBtn);
         }
     }
 
+    // Sync status to Alerts panel (critical alerts)
     const criticalAlertDiv = document.getElementById(`critical-alert-${alert_id}`);
     if (criticalAlertDiv) {
-        const statusCell = criticalAlertDiv.querySelector('.status-badge-cell');
-        if (statusCell) {
-            statusCell.innerHTML = formatStatusBadge(new_status);
+        // Update status badge in alert card header
+        const statusBadgeCell = criticalAlertDiv.querySelector('.status-badge');
+        if (statusBadgeCell) {
+            statusBadgeCell.className = `status-badge status-${new_status.toLowerCase()}`;
+            statusBadgeCell.textContent = new_status;
         }
-        // // Also update the object in our session cache
-        // if (criticalAlertsCache[alert_id]) {
-        //     criticalAlertsCache[alert_id].status = new_status;
-        // }
+        // If closed, dim the alert card
+        if (new_status === 'Closed') {
+            criticalAlertDiv.style.opacity = '0.5';
+        }
     }
 
     // Find and update all other instances of this log (e.g., in search or review)
     const otherLogRows = document.querySelectorAll(`tr[data-log-id='${log_id}']`);
     otherLogRows.forEach(row => {
-        const statusCell = row.querySelector('.status-badge-cell'); // We will add this class
+        const statusCell = row.querySelector('.status-badge-cell');
         if (statusCell) {
             statusCell.innerHTML = formatStatusBadge(new_status);
         }
@@ -277,139 +408,182 @@ export function updateMonitoringStatusUI(isActive) {
 }
 
 export async function showLogContext(timestamp, originalLogContent, logId) {
-    const modal = document.getElementById('log-context-modal');
-    const modalBody = document.getElementById('modal-body');
-    if (!modal || !modalBody) return;
+    console.log('showLogContext called with', timestamp, originalLogContent, logId);
 
-    modalBody.innerHTML = '<p>Loading context...</p>';
+    const modal = document.getElementById('log-context-modal');
+    const tabTimeline = document.getElementById('tab-timeline');
+    const tabThreatIntel = document.getElementById('tab-threat-intel');
+    const tabLime = document.getElementById('tab-lime');
+    const modalSummary = document.getElementById('modal-log-summary');
+
+    if (!modal || !tabTimeline) return;
+
+    // Reset tabs to default state
+    document.querySelectorAll('.modal-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.modal-tab-content').forEach(c => c.classList.remove('active'));
+    document.querySelector('.modal-tab[data-tab="timeline"]').classList.add('active');
+    tabTimeline.classList.add('active');
+
+    // Show loading state
+    tabTimeline.innerHTML = '<p>Loading context...</p>';
+    tabThreatIntel.innerHTML = '<p>No threat intelligence data available.</p>';
+    tabLime.innerHTML = '<p>No model explanation available.</p>';
+    modalSummary.innerHTML = '';
     modal.style.display = 'flex';
 
     try {
         const contextLogs = await api.fetchLogContext(timestamp);
         const targetLog = contextLogs.find(log => log.id === logId);
-        
+
         if (contextLogs.length === 0) {
-            modalBody.innerHTML = '<p>No surrounding log entries found.</p>';
+            tabTimeline.innerHTML = '<p>No surrounding log entries found.</p>';
             return;
         }
 
         if (!targetLog) {
-             modalBody.innerHTML = '<p>Could not find the specific log entry.</p>';
-             return;
-        }
-        
-        let threatIntelHTML = '';
-        if (targetLog && targetLog.threat_intel) {
-            let intelObject = targetLog.threat_intel;
-
-            // If the data is a string, parse it. If it's already an object, use it directly.
-            if (typeof intelObject === 'string') {
-                intelObject = JSON.parse(intelObject);
-            }
-            console.log("Threat Intel Data:", intelObject); // For debugging
-            threatIntelHTML = createThreatIntelHTML(intelObject);
+            tabTimeline.innerHTML = '<p>Could not find the specific log entry.</p>';
+            return;
         }
 
-        let explanationHTML = '';
-        if (targetLog && targetLog.final_label === 1) { // Only explain anomalies
-            if (targetLog.explanation) {
-                // If it exists, display it immediately.
-                explanationHTML = `
-                    <div class="explanation-container">
-                        <h4>Model Explanation (LIME)</h4>
-                        ${targetLog.explanation}
-                    </div>
-                `;
-            } else {
-                explanationHTML = `
-                    <div class="explanation-container" id="explanation-for-${targetLog.id}">
-                        <h4>Model Explanation (LIME)</h4>
-                        <p class="explanation-status">Generating explanation, please wait...</p>
-                    </div>
-                `;
-                // Fetch the explanation asynchronously after the modal is visible
-                api.fetchLogExplanation(targetLog.id)
-                    .then(data => {
-                        const explanationContainer = document.getElementById(`explanation-for-${targetLog.id}`);
-                        if (data.explanation_html) {
-                            explanationContainer.innerHTML = `<h4>Model Explanation (LIME)</h4>${data.explanation_html}`;
-                        } else {
-                            explanationContainer.innerHTML = `<h4>Model Explanation (LIME)</h4><p class="explanation-error">Explanation not available for this log.</p>`;
-                        }
-                    })
-                    .catch(error => {
-                    // Handle errors if the explanation fails to load
-                    console.error("Failed to fetch LIME explanation:", error);
-                    const explanationContainer = document.getElementById(`explanation-for-${targetLog.id}`);
-                    if (explanationContainer) {
-                        explanationContainer.innerHTML = `<h4>Model Explanation (LIME)</h4><p class="explanation-error">Could not load explanation.</p>`;
-                    }
-                });
-            }
-        }
+        // Populate modal summary
+        const labelClass = targetLog.final_label === 1 ? 'anomaly' : 'normal';
+        modalSummary.innerHTML = `
+            <span class="badge">${labelClass.toUpperCase()}</span>
+            <span class="badge">Risk: ${(targetLog.risk_score || 0).toFixed(2)}</span>
+            <span class="badge">Source: ${targetLog.source || 'Unknown'}</span>
+        `;
 
-        let timelineHTML = '<div class="timeline">';
+        // === TAB 1: Timeline ===
+        let timelineHTML = '<div class="timeline-enhanced">';
         contextLogs.forEach(log => {
-            const isTarget = log.content === originalLogContent;
+            const isTarget = log.id === logId;
             const labelText = log.final_label === 1 ? 'anomaly' : 'normal';
             const time = new Date(log.timestamp).toLocaleTimeString('en-US', { hour12: false });
 
             timelineHTML += `
-                <div class="timeline-item ${isTarget ? 'target' : ''} label-${labelText}">
-                    <div class="timeline-time">${time}</div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <span class="label-${labelText}">${labelText}</span>
-                            <span class="timeline-risk">${formatRiskScore(log.risk_score)}</span>
-                            <span class="timeline-source">[${log.source}]</span>
-                        </div>
-                        <p class="log-content">${escapeHTML(log.content)}</p>
+                <div class="timeline-item-enhanced ${isTarget ? 'target' : ''} label-${labelText}">
+                    <div class="timeline-item-header">
+                        <span class="timeline-item-time">⏱️ ${time}</span>
+                        <span class="label-pill ${labelText}">${labelText}</span>
                     </div>
+                    <div class="timeline-item-content">${escapeHTML(log.content)}</div>
                 </div>
             `;
         });
         timelineHTML += '</div>';
-        modalBody.innerHTML = threatIntelHTML + explanationHTML + timelineHTML;
+        tabTimeline.innerHTML = timelineHTML;
+
+        // === TAB 2: Threat Intelligence ===
+        if (targetLog.threat_intel) {
+            let intel = targetLog.threat_intel;
+            if (typeof intel === 'string') try { intel = JSON.parse(intel); } catch (e) { }
+
+            const score = intel.abuseConfidenceScore || 0;
+            let scoreClass = 'low';
+            if (score > 80) scoreClass = 'critical';
+            else if (score > 60) scoreClass = 'high';
+            else if (score > 30) scoreClass = 'medium';
+
+            tabThreatIntel.innerHTML = `
+                <div class="threat-intel-card">
+                    <div class="threat-intel-header">
+                        <div class="threat-score-gauge ${scoreClass}">${score}%</div>
+                        <div>
+                            <h4 style="margin: 0 0 5px 0;">AbuseIPDB Report</h4>
+                            <p style="margin: 0; color: var(--text-color-secondary);">IP Reputation Score</p>
+                        </div>
+                    </div>
+                    <div class="threat-intel-details">
+                        <div class="threat-intel-detail">
+                            <label>Country</label>
+                            <span>${intel.countryCode || 'N/A'}</span>
+                        </div>
+                        <div class="threat-intel-detail">
+                            <label>ISP</label>
+                            <span>${escapeHTML(intel.isp || 'N/A')}</span>
+                        </div>
+                        <div class="threat-intel-detail">
+                            <label>Total Reports</label>
+                            <span>${intel.totalReports || 0}</span>
+                        </div>
+                        <div class="threat-intel-detail">
+                            <label>Last Reported</label>
+                            <span>${intel.lastReportedAt ? new Date(intel.lastReportedAt).toLocaleDateString() : 'N/A'}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else {
+            tabThreatIntel.innerHTML = `
+                <div class="threat-intel-card" style="text-align: center; padding: 40px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-color-secondary)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <h4 style="margin: 15px 0 5px 0;">No Threat Intelligence Available</h4>
+                    <p style="color: var(--text-color-secondary);">No IP address was extracted or no reputation data found.</p>
+                </div>
+            `;
+        }
+
+        // === TAB 3: LIME Explanation ===
+        if (targetLog.final_label === 1) {
+            if (targetLog.explanation) {
+                tabLime.innerHTML = `
+                    <div class="lime-explanation-card">
+                        <h4 style="margin: 0 0 20px 0; display: flex; align-items: center; gap: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--button-primary)" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                            LIME Feature Importance
+                        </h4>
+                        ${targetLog.explanation}
+                    </div>
+                `;
+            } else {
+                tabLime.innerHTML = `
+                    <div class="lime-explanation-card" id="explanation-for-${targetLog.id}">
+                        <h4 style="margin: 0 0 20px 0;">Generating Explanation...</h4>
+                        <p>Please wait while the model explanation is being generated.</p>
+                    </div>
+                `;
+                // Fetch asynchronously
+                api.fetchLogExplanation(targetLog.id)
+                    .then(data => {
+                        const container = document.getElementById(`explanation-for-${targetLog.id}`);
+                        if (container && data.explanation_html) {
+                            container.innerHTML = `
+                                <h4 style="margin: 0 0 20px 0; display: flex; align-items: center; gap: 10px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--button-primary)" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                                    LIME Feature Importance
+                                </h4>
+                                ${data.explanation_html}
+                            `;
+                        } else if (container) {
+                            container.innerHTML = '<p>Explanation not available for this log.</p>';
+                        }
+                    })
+                    .catch(err => {
+                        console.error('LIME fetch error:', err);
+                        const container = document.getElementById(`explanation-for-${targetLog.id}`);
+                        if (container) container.innerHTML = '<p>Could not load explanation.</p>';
+                    });
+            }
+        } else {
+            tabLime.innerHTML = `
+                <div class="lime-explanation-card" style="text-align: center; padding: 40px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-color-secondary)" stroke-width="1.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <h4 style="margin: 15px 0 5px 0;">No Explanation Needed</h4>
+                    <p style="color: var(--text-color-secondary);">This log was classified as normal. LIME explanations are only generated for anomalies.</p>
+                </div>
+            `;
+        }
 
     } catch (error) {
-        modalBody.innerHTML = '<p>Error loading log context.</p>';
+        tabTimeline.innerHTML = '<p>Error loading log context.</p>';
         console.error('Error in showLogContext:', error);
     }
 }
 
-export function showToast(message, type = 'info', taskId = null) {
-    const container = document.getElementById('toast-container');
-    const toast = document.createElement('div');
-    toast.className = `toast ${type}`;
-
-    let progressBarHTML = '';
-    if (taskId) {
-        progressBarHTML = `<div class="toast-progress-bar" id="progress-${taskId}"></div>`;
-    }
-
-    toast.innerHTML = `
-        <span id="toast-message-${taskId}">${message}</span>
-        ${progressBarHTML}
-    `;
-    
-    container.appendChild(toast);
-
-    if (taskId) {
-        pollTaskStatus(taskId);
-    } else {
-        // Auto-dismiss non-progress toasts after 5 seconds
-        setTimeout(() => {
-            toast.style.animation = 'slideOutFadeOut 0.5s ease forwards';
-            setTimeout(() => toast.remove(), 500);
-        }, 5000);
-    }
-}
-
-export function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    charts.updateAllChartColors();
-}
+// export function toggleDarkMode() {
+//     document.body.classList.toggle('dark-mode');
+//     charts.updateAllChartColors();
+// }
 
 export function autoScroll(containerId) {
     let container = document.getElementById(containerId);
@@ -418,11 +592,11 @@ export function autoScroll(containerId) {
     }
 }
 
-function pollTaskStatus(taskId) {
+export function pollTaskStatus(taskId) {
     const intervalId = setInterval(async () => {
         try {
             const data = await api.fetchRetrainStatus();
-            
+
             const progressBar = document.getElementById(`progress-${taskId}`);
             const toastMessage = document.getElementById(`toast-message-${taskId}`);
 
@@ -460,7 +634,7 @@ function createThreatIntelHTML(intel) {
     if (score > 80) { scoreClass = 'risk-critical'; scoreLabel = 'Critical'; }
     else if (score > 60) { scoreClass = 'risk-high'; scoreLabel = 'High'; }
     else if (score > 30) { scoreClass = 'risk-low-medium'; scoreLabel = 'Medium'; }
-    
+
     return `
         <div class="threat-intel-report">
             <h4>
@@ -475,4 +649,67 @@ function createThreatIntelHTML(intel) {
             </div>
         </div>
     `;
+}
+
+export function renderRestoredAnomalies(anomalies) {
+    const tableBody = document.getElementById("anomalyFeedTableBody");
+    if (!anomalies || !tableBody) return;
+
+    tableBody.innerHTML = '';
+    // Re-render each anomaly from the cache, oldest first
+    anomalies.slice().reverse().forEach(alertData => {
+        renderAnomalyFeedRow(alertData, false); // "false" because it's not a new, animated entry
+    });
+}
+
+export function renderSigmaMatchRow(data) {
+    const container = document.getElementById("sigmaDetectionsContainer");
+    if (!container) return;
+
+    // Remove the placeholder if it exists
+    const placeholder = container.querySelector('.no-alerts-placeholder');
+    if (placeholder) placeholder.remove();
+
+    const div = document.createElement('div');
+    const level = data.level.toLowerCase();
+
+    // Enhanced sigma detection card structure
+    div.className = `sigma-detection-card level-${level} fade-in`;
+
+    const timestamp = new Date().toLocaleTimeString('en-US', { hour12: false });
+
+    div.innerHTML = `
+        <div class="sigma-card-header">
+            <div class="sigma-card-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                ${escapeHTML(data.title)}
+            </div>
+            <span class="sigma-severity-badge ${level}">${escapeHTML(data.level)}</span>
+        </div>
+        <div class="sigma-card-body">
+            <div class="sigma-log-content">${escapeHTML(data.log)}</div>
+            <div class="sigma-cause-section">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span class="sigma-cause-text">${escapeHTML(data.description || data.title)} - Potential security incident detected by Sigma rule.</span>
+            </div>
+        </div>
+        <div class="sigma-card-footer">
+            <span>⏱️ ${timestamp}</span>
+            <span>Rule: ${escapeHTML(data.rule_id || 'N/A')}</span>
+        </div>
+    `;
+    container.prepend(div);
+
+    // Keep the panel from getting too long
+    while (container.children.length > 30) {
+        container.removeChild(container.lastChild);
+    }
 }

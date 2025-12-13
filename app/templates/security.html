@@ -1,47 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Security Settings - Log Anomaly Detector</title>
+    <title>Security Console | Log Shield</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <link rel="stylesheet" href="/static/css/a_styles.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/r_styles.css">
+    <link rel="stylesheet" href="/static/css/m_styles.css">
 </head>
-<body class="dark-mode">
-    <div class="background-shapes"></div>
-    <div class="auth-card">
-        <a href="/" class="control-button secondary back-to-dashboard">Back</a>
-        
-        <h1>Security Settings</h1>
-        <div class="security-content">
-            
-            <h2>Two-Factor Authentication (2FA)</h2>
 
-            {% if user.is_two_factor_enabled %}
-                <p class="success-message">2FA enabled.</p>
-                <form action="/security/2fa/disable" method="post">
-                    <button type="submit" class="control-button" style="background-color: #dc3545;">Disable 2FA</button>
-                </form>
-            {% else %}
-                <p>Scan the QR code with authenticator app, then enter the 6-digit code to verify.</p>
-                
-                <div class="qr-code">
-                    <img src="/security/2fa/qr-code" alt="2FA QR Code">
-                </div>
-                <p>Or enter this key manually: <strong>{{ secret_key }}</strong></p>
+<body>
+    <div class="dashboard-layout">
+        <!-- HEADER - Simplified -->
+        <header class="dashboard-header">
+            <h1>Security Console</h1>
+            <div class="header-actions">
+                <button id="dashboardBtn" class="control-button">← Dashboard</button>
+                <button id="darkModeToggle" class="control-button secondary-btn">🌙</button>
+            </div>
+        </header>
 
-                <form action="/security/2fa/enable" method="post">
-                    <input type="hidden" name="secret_key" value="{{ secret_key }}">
-                    <div class="input-group">
-                        <input type="text" name="code" id="code" placeholder=" " required autocomplete="off" inputmode="numeric" pattern="[0-9]{6}">
-                        <label for="code">6-Digit Code</label>
+        <main class="dashboard-main">
+
+            <!-- SECTION 1: Quick Stats -->
+            <section class="stats-section">
+                <h2 class="section-title">Security Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-label">Active Honeytokens</span>
+                        <span id="stat-tokens" class="stat-value">0</span>
                     </div>
-                    <button type="submit" class="control-button">Verify & Enable</button>
-                </form>
-                {% if error %}
-                <p class="error-message">{{ error }}</p>
-                {% endif %}
-            {% endif %}
+                    <div class="stat-card">
+                        <span class="stat-label">Triggers Detected</span>
+                        <span id="stat-triggers" class="stat-value anomaly-text">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">2FA Status</span>
+                        <span id="stat-2fa"
+                            class="stat-value {% if user.two_factor_secret %}normal-text{% else %}anomaly-text{% endif %}">
+                            {% if user.two_factor_secret %}Enabled{% else %}Disabled{% endif %}
+                        </span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Threat Intel</span>
+                        <span class="stat-value normal-text">Active</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: Honeytokens Management -->
+            <section class="log-section">
+                <div class="section-header">
+                    <h2>🕷️ Honeytokens (Canary Credentials)</h2>
+                    <button id="generateTokenBtn" class="control-button">+ Generate Token</button>
+                </div>
+                <p style="color: var(--text-color-secondary); margin-bottom: 20px;">
+                    <strong>What are Honeytokens?</strong> Fake credentials (AWS keys, DB passwords) you place in your
+                    environment.
+                    If anyone uses them, you <em>instantly</em> know you've been compromised.
+                </p>
+                <div id="tokensContainer" class="scrollable-content" style="height: auto; min-height: 200px;">
+                    <table id="tokensTable" class="log-table">
+                        <thead>
+                            <tr>
+                                <th>Token (Masked)</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th>Triggers</th>
+                                <th>Created</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tokensTableBody">
+                            <!-- JS will populate -->
+                        </tbody>
+                    </table>
+                    <div id="noTokensMsg"
+                        style="text-align:center; padding:40px; color: var(--text-color-secondary); display:none;">
+                        <p>No honeytokens yet. Generate your first one to start catching intruders!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: Account Security (2FA) -->
+            <section class="log-section">
+                <h2>🔐 Account Security</h2>
+                <p style="color: var(--text-color-secondary); margin-bottom: 20px;">
+                    <strong>Two-Factor Authentication (2FA)</strong> adds an extra layer of security.
+                    Even if your password is stolen, attackers can't access your account without the code from your
+                    phone.
+                </p>
+                <div class="stats-grid-small">
+                    <div class="stat-card-small">
+                        <span class="stat-label">Current Status</span>
+                        <span
+                            class="stat-value {% if user.two_factor_secret %}normal-text{% else %}anomaly-text{% endif %}">
+                            {% if user.two_factor_secret %}✓ Protected{% else %}⚠ Not Protected{% endif %}
+                        </span>
+                    </div>
+                    <div class="stat-card-small" style="display:flex; flex-direction:column; justify-content:center;">
+                        <span class="stat-label">Action</span>
+                        {% if user.two_factor_secret %}
+                        <form action="/security/2fa/disable" method="POST" style="margin:0;">
+                            <button type="submit" class="control-button"
+                                onclick="return confirm('Disable 2FA? This will make your account less secure.')"
+                                style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">Disable 2FA</button>
+                        </form>
+                        {% else %}
+                        <button id="setup2faBtn" class="control-button">Setup 2FA →</button>
+                        {% endif %}
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: Threat Intelligence -->
+            <section class="log-section">
+                <h2>🌐 Threat Intelligence</h2>
+                <p style="color: var(--text-color-secondary); margin-bottom: 20px;">
+                    <strong>AbuseIPDB Integration</strong> automatically checks IPs in suspicious logs against a global
+                    threat database.
+                    High-risk IPs are flagged with reputation scores.
+                </p>
+                <div class="stats-grid-small">
+                    <div class="stat-card-small">
+                        <span class="stat-label">API Status</span>
+                        <span class="stat-value normal-text">✓ Connected</span>
+                    </div>
+                    <div class="stat-card-small">
+                        <span class="stat-label">Cache TTL</span>
+                        <span class="stat-value">24 Hours</span>
+                    </div>
+                    <div class="stat-card-small">
+                        <span class="stat-label">Auto-Enrich</span>
+                        <span class="stat-value normal-text">Enabled</span>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </main>
+
+        <footer class="dashboard-footer">
+            <span>Security Console | Powered by cyberRKSha | &copy; 2025</span>
+        </footer>
+    </div>
+
+    <!-- Generate Token Modal -->
+    <div id="tokenModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" style="max-width: 500px;">
+            <div class="modal-header">
+                <h2>Generate Honeytoken</h2>
+                <button id="closeModalBtn" class="modal-close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="margin-bottom: 20px;">
+                    <label style="display:block; margin-bottom:8px; font-weight:600;">Description</label>
+                    <input type="text" id="tokenDesc" class="select-dropdown" style="width:100%;"
+                        placeholder="e.g., AWS key in production .env">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display:block; margin-bottom:8px; font-weight:600;">Token Type</label>
+                    <select id="tokenType" class="select-dropdown" style="width:100%;">
+                        <option value="AWS Access Key">AWS Access Key (AKIA...)</option>
+                        <option value="Database Credentials">Database Credentials</option>
+                        <option value="Generic Token">Generic Secret</option>
+                    </select>
+                </div>
+                <button id="createTokenBtn" class="control-button" style="width:100%;">Generate Token</button>
+
+                <div id="generatedTokenBox"
+                    style="display:none; margin-top:20px; padding:15px; background:#000; border-radius:8px;">
+                    <p style="color:#0f0; margin:0 0 10px 0; font-size:0.9em;">✓ Token Generated! Copy it now:</p>
+                    <code id="generatedTokenText"
+                        style="color:#0f0; font-size:1.1em; word-break:break-all; user-select:all;"></code>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="/static/js/security.js"></script>
+    <script>
+        // Apply theme from localStorage (same as dashboard)
+        function applyTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const toggleBtn = document.getElementById('darkModeToggle');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                if (toggleBtn) toggleBtn.textContent = '☀️';
+            } else {
+                if (toggleBtn) toggleBtn.textContent = '🌙';
+            }
+        }
+
+        function toggleDarkMode() {
+            const toggleBtn = document.getElementById('darkModeToggle');
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                if (toggleBtn) toggleBtn.textContent = '☀️';
+            } else {
+                localStorage.setItem('theme', 'light');
+                if (toggleBtn) toggleBtn.textContent = '🌙';
+            }
+        }
+
+        // Apply theme on load
+        applyTheme();
+
+        // Event listeners
+        document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+        
+        document.getElementById('dashboardBtn').addEventListener('click', function() {
+            window.location.href = '/';
+        });
+
+        // Setup 2FA button (if exists)
+        const setup2faBtn = document.getElementById('setup2faBtn');
+        if (setup2faBtn) {
+            setup2faBtn.addEventListener('click', function() {
+                window.location.href = '/security/setup-2fa';
+            });
+        }
+    </script>
 </body>
+
 </html>

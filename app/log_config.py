@@ -25,6 +25,10 @@ def setup_logging():
     # Set the desired level
     root_logger.setLevel(logging.INFO)
 
+    # Silence noisy libraries
+    logging.getLogger("pika").setLevel(logging.WARNING)
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
+
     # Define our desired format
     log_format = logging.Formatter(
         '%(asctime)s - %(name)s - %(levelname)s - %(message)s'

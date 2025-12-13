@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Log Anomaly Dashboard</title>
@@ -7,11 +8,15 @@
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/r_styles.css">
     <link rel="stylesheet" href="/static/css/m_styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> -->
+    <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> -->
+    <script src="/node_modules/chart.js/dist/chart.umd.js"></script>
+    <link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css" />
+    <script src="/node_modules/leaflet/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 </head>
+
 <body>
     <div class="dashboard-layout">
         <header class="dashboard-header">
@@ -19,142 +24,161 @@
             <div>
                 <button id="retrainBtn" class="control-button">Train Model</button>
                 <button id="openReviewPageBtn" class="control-button">Review Logs</button>
+                <button id="openPlaybooksBtn" class="control-button">PlayBooks</button>
                 <button id="darkModeToggle" class="control-button">Toggle Mode</button>
                 <button id="securityBtn" class="control-button">Security</button>
                 <button id="logoutBtn" class="control-button">Logout</button>
                 <!-- <a href="/logout" id="logoutBtn" class="control-button">Logout</a> -->
             </div>
         </header>
-        <main class="dashboard-main"> 
-        <!-- Live Session Statistics -->
-        <section class="stats-section">
-            <div class="section-header">
-                <h2 class="section-title">Live Session Statistics</h2>
-                <button id="monitoring-toggle-btn" class="monitoring-button">
-                    <span class="icon"></span>
-                    <span class="text">Loading Status...</span>
-                </button>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-label">Total Logs (Session)</span>
-                    <span id="totalLogs" class="stat-value">0</span>
+        <main class="dashboard-main">
+            <!-- Live Session Statistics -->
+            <section class="stats-section">
+                <div class="section-header">
+                    <h2 class="section-title">Live Session Statistics</h2>
+                    <button id="monitoring-toggle-btn" class="monitoring-button">
+                        <span class="icon"></span>
+                        <span class="text">Loading Status...</span>
+                    </button>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-label">Normal (Session)</span>
-                    <span id="normalCount" class="stat-value normal-text">0</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">Anomalies (Session)</span>
-                    <span id="anomalyCount" class="stat-value anomaly-text">0</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">Active Connections</span>
-                    <span id="sessionCount" class="stat-value">0</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="live-activity-section">
-            <div class="sparkline-widget">
-                <div class="sparkline-header">
-                    <span class="widget-title">Live Activity Feed</span>
-                    <div class="sparkline-legend">
-                        <span class="legend-item normal"></span> Normal
-                        <span class="legend-item anomaly"></span> Anomaly
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-label">Total Logs (Session)</span>
+                        <span id="totalLogs" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Normal (Session)</span>
+                        <span id="normalCount" class="stat-value normal-text">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Anomalies (Session)</span>
+                        <span id="anomalyCount" class="stat-value anomaly-text">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Active Connections</span>
+                        <span id="sessionCount" class="stat-value">0</span>
                     </div>
                 </div>
-                <div class="sparkline-chart-container">
-                    <canvas id="liveSparklineChart"></canvas>
-                
-                    <div class="sparkline-stats-overlay">
-                        <div class="footer-stat">
-                            <span class="footer-stat-value" id="normal-lps">0.0</span>
-                            <span class="footer-stat-label">Normal Logs/Sec</span>
+            </section>
+
+            <section class="live-activity-section">
+                <div class="sparkline-widget">
+                    <div class="sparkline-header">
+                        <span class="widget-title">Live Activity Feed</span>
+                        <div class="sparkline-legend">
+                            <span class="legend-item normal"></span> Normal
+                            <span class="legend-item anomaly"></span> Anomaly
                         </div>
-                        <div class="footer-stat">
-                            <span class="footer-stat-value" id="anomaly-lps">0.0</span>
-                            <span class="footer-stat-label">Anomaly Logs/Sec</span>
+                    </div>
+                    <div class="sparkline-chart-container">
+                        <canvas id="liveSparklineChart"></canvas>
+
+                        <div class="sparkline-stats-overlay">
+                            <div class="footer-stat">
+                                <span class="footer-stat-value" id="normal-lps">0.0</span>
+                                <span class="footer-stat-label">Normal Logs/Sec</span>
+                            </div>
+                            <div class="footer-stat">
+                                <span class="footer-stat-value" id="anomaly-lps">0.0</span>
+                                <span class="footer-stat-label">Anomaly Logs/Sec</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Model Training Statistics -->
-        <section class="stats-section">
-            <h2 class="section-title">Model Training Statistics</h2>
-            <div class="stats-grid-small">
-                <div class="stat-card-small">
-                    <span class="stat-label">Total Trained Logs</span>
-                    <span id="trainedTotal" class="stat-value">0</span>
+            <!-- Model Training Statistics -->
+            <section class="stats-section">
+                <h2 class="section-title">Model Training Statistics</h2>
+                <div class="stats-grid-small">
+                    <div class="stat-card-small">
+                        <span class="stat-label">Total Trained Logs</span>
+                        <span id="trainedTotal" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-card-small">
+                        <span class="stat-label">Trained Normal</span>
+                        <span id="trainedNormal" class="stat-value normal-text">0</span>
+                    </div>
+                    <div class="stat-card-small">
+                        <span class="stat-label">Trained Anomalies</span>
+                        <span id="trainedAnomaly" class="stat-value anomaly-text">0</span>
+                    </div>
                 </div>
-                <div class="stat-card-small">
-                    <span class="stat-label">Trained Normal</span>
-                    <span id="trainedNormal" class="stat-value normal-text">0</span>
-                </div>
-                <div class="stat-card-small">
-                    <span class="stat-label">Trained Anomalies</span>
-                    <span id="trainedAnomaly" class="stat-value anomaly-text">0</span>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Live Feeds Section -->
-        <div class="log-section">
-            <h2>Live Session</h2>
-            <div id="logsContainer" class="scrollable-content">
-                <table id="logsTable" class="log-table">
-                    <thead>
-                        <tr>
-                            <th>Timestamp</th>
-                            <th>Label</th>
-                            <th>Verdict</th>
-                            <th>Content</th>
-                            <th>Risk</th>
-                            <th>Sequence Risk</th>
-                        </tr>
-                    </thead>
-                    <tbody id="logsTableBody"></tbody>
-                </table>
-            </div>
-        </div>
-        <div class="log-section">
-            <h2>Flagged</h2>
-            <div id="anomalyFeedContainer" class="scrollable-content">
-                <table id="anomalyFeedTable" class="log-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 120px;">Status</th>
-                            <th style="width: 80px;">Risk</th>
-                            <th>Log Content</th>
-                            <th>Description</th>
-                            <th>ATT&CK TTP</th>
-                            <th style="width: 200px;">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="anomalyFeedTableBody"></tbody>
-                </table>
-            </div>
-        </div>
-        
-        <section class="alerts-section">
-            <div class="alerts-header">
-                <h2>Alerts</h2>
-                <button id="refresh-alerts-btn" class="control-button" title="Refresh Alerts">🔄</button>
-            </div>
-            <div id="alertsContainer" class="scrollable-content" style="max-height: 250px;"></div>
-        </section>
+            <section class="log-section">
+                <h2 class="section-title">Live Sigma Detections</h2>
+                <div id="sigmaDetectionsContainer" class="sigma-detections-grid">
+                    <div class="no-alerts-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-shield">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <p>Waiting for high-confidence detections...</p>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Threat Hunting Section (as before) -->
-        <section class="investigation-section">
-            <div class="investigation-header">
-                <h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    Threat Hunting & Investigation
-                </h2>
+            <!-- Live Feeds Section -->
+            <div class="log-section">
+                <h2>Live Session</h2>
+                <div id="logsContainer" class="scrollable-content">
+                    <table id="logsTable" class="log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Label</th>
+                                <th>Verdict</th>
+                                <th>Content</th>
+                                <th>Risk</th>
+                                <th>Sequence Risk</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logsTableBody"></tbody>
+                    </table>
+                </div>
             </div>
-            <!-- <div class="investigation-panel">
+            <div class="log-section">
+                <h2>Flagged</h2>
+                <div id="anomalyFeedContainer" class="scrollable-content">
+                    <table id="anomalyFeedTable" class="log-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 120px;">Status</th>
+                                <th style="width: 80px;">Risk</th>
+                                <th>Log Content</th>
+                                <th>Description</th>
+                                <th>ATT&CK TTP</th>
+                                <th style="width: 200px;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="anomalyFeedTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <section class="alerts-section">
+                <div class="alerts-header">
+                    <h2>Alerts</h2>
+                    <button id="refresh-alerts-btn" class="control-button" title="Refresh Alerts">🔄</button>
+                </div>
+                <div id="alertsContainer" class="scrollable-content" style="max-height: 250px;"></div>
+            </section>
+
+            <!-- Threat Hunting Section (as before) -->
+            <section class="investigation-section">
+                <div class="investigation-header">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        Threat Hunting & Investigation
+                    </h2>
+                </div>
+                <!-- <div class="investigation-panel">
                  <div class="quick-searches">
                     <span class="quick-search-label">Quick Searches:</span>
                     <button class="quick-search-btn" data-label="1" data-hours="1">Anomalies (Last Hour)</button>
@@ -202,130 +226,260 @@
                 </div>
             </div> -->
 
-            <div class="investigation-panel">
-                <div class="filter-logic-selector">
-                    <label><input type="radio" name="filter_logic" value="and" checked> Match ALL filters (AND)</label>
-                    <label><input type="radio" name="filter_logic" value="or"> Match ANY filter (OR)</label>
-                </div>
-            
-                <div class="investigation-controls">
-                    <div class="control-group">
-                        <label for="searchKeyword">Keyword(s)</label>
-                        <input type="text" id="searchKeyword" class="select-dropdown" placeholder="e.g., failed sshd">
-                    </div>
-                    <div class="control-group">
-                        <label for="searchIpAddress">IP Address</label>
-                        <input type="text" id="searchIpAddress" class="select-dropdown" placeholder="e.g., 193.42.109.42">
-                    </div>
-                
-                    <div class="control-group">
-                        <label for="searchSource">Log Source</label>
-                        <input type="text" id="searchSource" class="select-dropdown" placeholder="e.g., auth.log">
-                    </div>
-                    <div class="control-group">
-                        <label for="searchDetectionMethod">Detection Method</label>
-                        <select id="searchDetectionMethod" class="select-dropdown">
-                            <option value="">Any Method</option>
-                            <option value="Supervised">Supervised</option>
-                            <option value="Novelty Detected">Unsupervised</option>
-                            <option value="Malicious Sequence">Sequential (LSTM)</option>
-                        </select>
+                <div class="investigation-panel">
+                    <div class="filter-logic-selector">
+                        <label><input type="radio" name="filter_logic" value="and" checked> Match ALL filters
+                            (AND)</label>
+                        <label><input type="radio" name="filter_logic" value="or"> Match ANY filter (OR)</label>
                     </div>
 
-                    <div class="control-group">
-                        <label for="searchRiskScore">Risk Score (Greater Than)</label>
-                        <input type="number" id="searchRiskScore" class="select-dropdown" placeholder="e.g., 0.7" step="0.1" min="0" max="1">
-                    </div>
-                    <div class="control-group time-range-group">
-                        <label>Time Range</label>
-                        <div class="time-inputs">
-                            <input type="datetime-local" id="searchStartTime" class="select-dropdown" title="Start Time">
-                            <span>to</span>
-                            <input type="datetime-local" id="searchEndTime" class="select-dropdown" title="End Time">
+                    <div class="investigation-controls">
+                        <div class="control-group">
+                            <label for="searchKeyword">Keyword(s)</label>
+                            <input type="text" id="searchKeyword" class="select-dropdown"
+                                placeholder="e.g., failed sshd">
+                        </div>
+                        <div class="control-group">
+                            <label for="searchIpAddress">IP Address</label>
+                            <input type="text" id="searchIpAddress" class="select-dropdown"
+                                placeholder="e.g., 193.42.109.42">
+                        </div>
+
+                        <div class="control-group">
+                            <label for="searchSource">Log Source</label>
+                            <input type="text" id="searchSource" class="select-dropdown" placeholder="e.g., auth.log">
+                        </div>
+                        <div class="control-group">
+                            <label for="searchDetectionMethod">Detection Method</label>
+                            <select id="searchDetectionMethod" class="select-dropdown">
+                                <option value="">Any Method</option>
+                                <option value="Supervised">Supervised</option>
+                                <option value="Novelty Detected">Unsupervised</option>
+                                <option value="Malicious Sequence">Sequential (LSTM)</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="searchRiskScore">Risk Score (> X)</label>
+                            <input type="number" id="searchRiskScore" class="select-dropdown" placeholder="e.g., 0.7"
+                                step="0.1" min="0" max="1">
+                        </div>
+                        <div class="control-group time-range-group">
+                            <label>Time Range</label>
+                            <div class="time-inputs">
+                                <input type="datetime-local" id="searchStartTime" class="select-dropdown"
+                                    title="Start Time">
+                                <span>to</span>
+                                <input type="datetime-local" id="searchEndTime" class="select-dropdown"
+                                    title="End Time">
+                            </div>
+                        </div>
+
+                        <!-- Full-width Action Row -->
+                        <div class="investigation-action-row">
+                            <button id="searchBtn" class="control-button primary-btn">
+                                <span class="search-text">Search Logs</span>
+                                <div class="spinner" style="display: none;"></div>
+                            </button>
+
+                            <button id="exportCsvBtn" class="control-button secondary-btn">Export CSV</button>
+
+                            <button id="exportPdfBtn" class="control-button secondary-btn export-pdf-btn">
+                                <span class="btn-text">Export PDF</span>
+                                <div class="spinner"></div>
+                            </button>
+
+                            <button id="clearFiltersBtn" class="control-button clear-btn" title="Clear Filters">Clear
+                                Filters</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="action-buttons-container">
-                    <div class="button-group">
-                        <button id="searchBtn" class="control-button">
-                            <span class="search-text">Search Logs</span>
-                            <div class="spinner" style="display: none;"></div>
-                        </button>
-                        <button id="clearFiltersBtn" class="control-button clear-btn">Clear Filters</button>
+
+                <div id="searchResultsContainer" class="scrollable-content"
+                    style="max-height: 400px; margin-top: 20px;">
+                    <table id="searchResultsTable" class="log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Status</th>
+                                <th>Label</th>
+                                <th>Source</th>
+                                <th>Content</th>
+                                <th>Risk</th>
+                                <th>Sequence Risk</th>
+                            </tr>
+                        </thead>
+                        <tbody id="searchResultsBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <h2 class="section-title">Widgets</h2>
+            <section class="activity-grid">
+                <div class="top-n-widget">
+                    <div class="widget-header">Top Anomaly Verdicts</div>
+                    <div class="widget-chart-container">
+                        <canvas id="topVerdictsChart"></canvas>
                     </div>
-                    <div class="button-group">
-                        <button id="exportCsvBtn" class="control-button secondary-btn">Export to CSV</button>
-                        <button id="exportPdfBtn" class="control-button export-pdf-btn">
-                            <span class="btn-text">Export PDF</span>
-                            <div class="spinner"></div>
-                        </button>
+                </div>
+                <div class="top-n-widget">
+                    <div class="widget-header">Top Anomalous IPs</div>
+                    <div class="widget-chart-container">
+                        <canvas id="topAnomalousIpsChart"></canvas>
                     </div>
                 </div>
-            </div>
-
-            <div id="searchResultsContainer" class="scrollable-content" style="max-height: 400px; margin-top: 20px;">
-                <table id="searchResultsTable" class="log-table">
-                    <thead>
-                        <tr>
-                            <th>Timestamp</th>
-                            <th>Status</th>
-                            <th>Label</th>
-                            <th>Source</th>
-                            <th>Content</th>
-                            <th>Risk</th>
-                            <th>Sequence Risk</th>
-                        </tr>
-                    </thead>
-                    <tbody id="searchResultsBody"></tbody>
-                </table>
-            </div>
-        </section>
-
-        <h2 class="section-title">Widgets</h2>
-        <section class="activity-grid">
-            <div class="top-n-widget">
-                <div class="widget-header">Top Anomaly Verdicts</div>
-                <div class="widget-chart-container">
-                    <canvas id="topVerdictsChart"></canvas>
-                </div>
-            </div>
-            <div class="top-n-widget">
-                <div class="widget-header">Top Anomalous IPs</div>
-                <div class="widget-chart-container">
-                    <canvas id="topAnomalousIpsChart"></canvas>
-                </div>
-            </div>
-            <div class="top-n-widget">
-                <div class="widget-header">Top Anomaly Sources</div>
-                <div class="widget-chart-container">
-                    <canvas id="topSourcesChart"></canvas>
-                </div>
-            </div>
-            <div class="top-n-widget">
-                <div class="widget-header">Detection Method Breakdown</div>
-                <div class="widget-chart-container">
-                    <canvas id="detectionMethodChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <section class="full-width-widget">
-            <div class="widget-header">Geographic Threat Map</div>
-            <div id="threatMap" style="flex-grow: 1; border-radius: 8px;"></div>
-        </section>
-
-        <!-- Historical Trends Section (as before) -->
-        <section class="log-section">
-            <h2>Historical Trends</h2>
-            <div class="horizontal-scroll-wrapper">
-                <div class="chart-container-full">
-                    <div id="historicalChartMessage" style="display: none;">
+                <div class="top-n-widget">
+                    <div class="widget-header">Top Anomaly Sources</div>
+                    <div class="widget-chart-container">
+                        <canvas id="topSourcesChart"></canvas>
                     </div>
-                    <canvas id="historicalChart"></canvas>
                 </div>
-            </div>
-        </section>
+                <div class="top-n-widget">
+                    <div class="widget-header">Detection Methods</div>
+                    <div class="widget-chart-container">
+                        <canvas id="detectionMethodChart"></canvas>
+                    </div>
+                </div>
+                <!-- NEW: Session Activity Widget -->
+                <div class="top-n-widget stat-widget">
+                    <div class="widget-header"> Session Activity</div>
+                    <div class="stat-widget-content">
+                        <div class="stat-item">
+                            <span class="stat-value" id="widget-active-sessions">--</span>
+                            <span class="stat-label">Active Sessions</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="widget-unique-ips">--</span>
+                            <span class="stat-label">Unique IPs (24h)</span>
+                        </div>
+                        <div class="stat-item trend-up">
+                            <span class="stat-value" id="widget-avg-risk">--</span>
+                            <span class="stat-label">Avg. Risk Score</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- NEW: Alert Breakdown Widget -->
+                <div class="top-n-widget stat-widget">
+                    <div class="widget-header"> Alert Breakdown</div>
+                    <div class="stat-widget-content">
+                        <div class="stat-item status-new">
+                            <span class="stat-value" id="widget-alerts-new">--</span>
+                            <span class="stat-label">New</span>
+                        </div>
+                        <div class="stat-item status-ack">
+                            <span class="stat-value" id="widget-alerts-ack">--</span>
+                            <span class="stat-label">Acknowledged</span>
+                        </div>
+                        <div class="stat-item status-closed">
+                            <span class="stat-value" id="widget-alerts-closed">--</span>
+                            <span class="stat-label">Closed</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Model Performance Section (Full Width) -->
+            <section class="log-section">
+                <div class="chart-container-overlay" style="display: flex; flex-direction: column;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <h3 style="margin:0; font-size: 1.25rem;">Model Performance (Drift)</h3>
+                        <span id="modelLastUpdated" style="font-size: 0.9rem; color: var(--text-muted);"></span>
+                    </div>
+
+                    <!-- Metrics Stats Grid -->
+                    <div class="model-metrics-grid" style="margin-bottom: 2rem;">
+                        <div class="metric-card metric-accuracy">
+                            <span class="metric-label">Accuracy</span>
+                            <span class="metric-value" id="metric-acc">--</span>
+                        </div>
+                        <div class="metric-card metric-precision">
+                            <span class="metric-label">Precision</span>
+                            <span class="metric-value" id="metric-prec">--</span>
+                        </div>
+                        <div class="metric-card metric-recall">
+                            <span class="metric-label">Recall</span>
+                            <span class="metric-value" id="metric-rec">--</span>
+                        </div>
+                        <div class="metric-card metric-f1">
+                            <span class="metric-label">F1 Score</span>
+                            <span class="metric-value" id="metric-f1">--</span>
+                        </div>
+                    </div>
+
+                    <div class="chart-wrapper"
+                        style="flex-grow: 1; min-height: 400px; max-height: 500px; max-width: 100%; overflow: hidden;">
+                        <canvas id="modelPerformanceChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="full-width-widget">
+                <div class="widget-header">Geographic Threat Map</div>
+                <div id="threatMap" style="flex-grow: 1; border-radius: 8px;"></div>
+
+            </section>
+
+            <!-- Historical Trends Section (Enhanced) -->
+            <section class="log-section historical-section-enhanced">
+                <div class="historical-header">
+                    <h2> Historical Trends</h2>
+                    <div class="historical-summary" id="historical-summary">
+                        <span class="summary-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            Today's Anomalies: <strong id="hist-today-anomalies">--</strong>
+                        </span>
+                        <span class="summary-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                            Peak Hour: <strong id="hist-peak-hour">--</strong>
+                        </span>
+                        <span class="summary-item trend-up">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                            7-Day Trend: <strong id="hist-trend">--</strong>
+                        </span>
+                    </div>
+                </div>
+                <div class="horizontal-scroll-wrapper">
+                    <div class="chart-container-full">
+                        <div id="historicalChartMessage" style="display: none;"></div>
+                        <canvas id="historicalChart"></canvas>
+                    </div>
+                </div>
+                <!-- AI Insights Panel (Placeholder) -->
+                <div class="ai-insights-panel" id="ai-insights-panel">
+                    <div class="ai-insights-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12a10 10 0 0 1 10-10z">
+                            </path>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                        <span>AI-Powered Insights (Soon)</span>
+                    </div>
+                    <div class="ai-insights-content">
+                        <p>Intelligent analysis will explain anomaly spikes:</p>
+                        <ul>
+                            <li>🔐 <strong>Authentication Surge</strong>: Unusual login attempts detected</li>
+                            <li>🌐 <strong>Network Outburst</strong>: DDoS-like traffic patterns</li>
+                            <li>👥 <strong>User Activity Spike</strong>: More users logged in than usual</li>
+                            <li>⚠️ <strong>System Alerts</strong>: Critical service failures</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="dashboard-footer">
             <div class="last-updated">Last Updated: <span id="lastUpdated">{{ last_updated }}</span></div>
@@ -333,94 +487,83 @@
         </footer>
     </div>
 
-
-    <div id="review-interface-container" class="review-container" style="display: none;">
-        <div class="review-header">
-            <h1>Log Review</h1>
-            <button id="close-review-btn" class="control-button">Back to Dashboard</button>
-        </div>
-
-        <div class="review-tabs">
-            <button class="tab-btn active" data-tab="smart-review">Smart Review</button>
-            <button class="tab-btn" data-tab="manual-review">Manual Review</button>
-        </div>
-
-        <div id="smart-review" class="tab-content active">
-            <div class="review-header">
-                <h2>Review by Cluster</h2>
-                <button id="prepare-clusters-btn" class="control-button">Prepare Clusters</button>
-            </div>
-            <div class="smart-review-controls">
-                <div>
-                    <label for="clusterSortBy">Sort Clusters By:</label>
-                    <select id="clusterSortBy" class="select-dropdown">
-                        <option value="log_count">Quantity</option>
-                        <option value="confidence">Lowest Confidence</option>
-                        <option value="last_seen">Most Recent</option>
-                        <option value="name">Name</option>
-                    </select>
-                </div>
-            </div>
-            <div id="cluster-container" class="clusters-grid">
-                </div>
-            <div class="review-header" style="margin-top: 40px;">
-                <h2>Unclustered Logs (Noise Bin)</h2>
-            </div>
-            <div id="noise-container" class="clusters-grid">
-                </div>
-        </div>
-
-        <div id="manual-review" class="tab-content">
-            <div class="manual-review-controls">
-                <div>
-                    <label for="sortBySelect">Sort By:</label>
-                    <select id="sortBySelect" class="select-dropdown">
-                        <option value="timestamp">Timestamp</option>
-                        <option value="risk_score">Risk Score</option>
-                        <option value="source">Log Source</option>
-                        <option value="predicted_label">Model Prediction</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="sortOrderSelect">Order:</label>
-                    <select id="sortOrderSelect" class="select-dropdown">
-                        <option value="desc">Descending</option>
-                        <option value="asc">Ascending</option>
-                    </select>
-                </div>
-                <button id="applySortBtn" class="control-button">Apply</button>
-            </div>
-            <div id="manual-log-table-container">
-            </div>
-        </div>
-    </div>
-
-    <div id="review-interface-container" class="review-container" style="display: none;"></div>
-
     <div id="log-context-modal" class="modal-overlay" style="display: none;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Log Context Timeline</h2>
+        <div class="modal-content modal-content-enhanced">
+            <div class="modal-header modal-header-enhanced">
+                <div>
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        Log Context Analysis
+                    </h2>
+                    <div class="modal-log-summary" id="modal-log-summary"></div>
+                </div>
                 <button id="modal-close-btn" class="modal-close-button">&times;</button>
             </div>
+            <div class="modal-tabs">
+                <button class="modal-tab active" data-tab="timeline">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Timeline
+                </button>
+                <button class="modal-tab" data-tab="threat-intel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    Threat Intel
+                </button>
+                <button class="modal-tab" data-tab="lime">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                        </path>
+                    </svg>
+                    Model Explanation
+                </button>
+            </div>
             <div id="modal-body" class="modal-body">
-                </div>
+                <div id="tab-timeline" class="modal-tab-content active"></div>
+                <div id="tab-threat-intel" class="modal-tab-content"></div>
+                <div id="tab-lime" class="modal-tab-content"></div>
+            </div>
         </div>
     </div>
 
-    <div id="cluster-detail-modal" class="modal-overlay" style="display: none;">
-        <div class="modal-content" style="max-width: 1200px;">
-            <div class="modal-header">
-                <h2 id="cluster-modal-title">Cluster Details</h2>
-                <button id="cluster-modal-close-btn" class="modal-close-button">&times;</button>
-            </div>
-            <div id="cluster-modal-body" class="modal-body">
-                </div>
+    <!-- Alert Remediation Side Panel -->
+    <div id="alert-side-panel" class="alert-side-panel">
+        <div class="side-panel-header">
+            <h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+                Alert Details & Remediation
+            </h3>
+            <button class="side-panel-close" id="side-panel-close">&times;</button>
+        </div>
+        <div class="side-panel-body" id="side-panel-body">
+            <!-- Content dynamically loaded -->
         </div>
     </div>
+    <div id="side-panel-overlay" class="modal-overlay" style="display: none; z-index: 1000;"></div>
 
     <div id="toast-container"></div>
 
+    <script src="/static/js/chart-top-n.js"></script>
+    <script src="/static/js/chart-drift.js"></script>
     <script src="/static/js/main.js" type="module"></script>
 </body>
+
 </html>

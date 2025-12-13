@@ -1,0 +1,430 @@
+.
+├── alembic
+│   ├── env.py
+│   ├── __pycache__
+│   │   └── env.cpython-311.pyc
+│   ├── README
+│   ├── script.py.mako
+│   └── versions
+│       ├── 2a265a20dd6e_establish_initial_schema_baseline.py
+│       ├── 62ef1322ef18_remove_test_column_from_alerts.py
+│       ├── bdacded27c40_add_playbooks_table.py
+│       ├── fb78200f2cf6_add_test_column_to_alerts.py
+│       └── __pycache__
+├── alembic.ini
+├── app
+│   ├── api
+│   │   ├── auth.py
+│   │   ├── dashboard.py
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── playbooks.py
+│   │   ├── __pycache__
+│   │   └── review.py
+│   ├── auth_utils.py
+│   ├── config.py
+│   ├── db_models.py
+│   ├── __init__.py
+│   ├── log_config.py
+│   ├── main.py
+│   ├── __pycache__
+│   │   ├── auth_utils.cpython-311.pyc
+│   │   ├── config.cpython-311.pyc
+│   │   ├── db_models.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── __init__.cpython-313.pyc
+│   │   ├── log_config.cpython-311.pyc
+│   │   ├── main.cpython-311.pyc
+│   │   └── websocket.cpython-311.pyc
+│   ├── static
+│   │   ├── audio
+│   │   ├── css
+│   │   ├── favicon.ico
+│   │   └── js
+│   ├── templates
+│   │   ├── dashboard.html
+│   │   ├── login.html
+│   │   ├── playbooks.html
+│   │   ├── review.html
+│   │   ├── security.html
+│   │   └── verify_2fa.html
+│   └── websocket.py
+├── app.log
+├── attack_mapping.json
+├── data
+│   └── training_sequences.pkl
+├── dir.txt
+├── docs
+│   └── sigma-integration-report.md
+├── drain3.ini
+├── geoip
+│   └── GeoLite2-City.mmdb
+├── logs
+│   ├── kwnhashes.txt
+│   └── log_database.db
+├── model
+│   ├── autoencoder_model_20250825_220424.keras
+│   ├── autoencoder_model_20250829_023303.keras
+│   ├── autoencoder_model_20250901_001025.keras
+│   ├── autoencoder_model_20250905_130213.keras
+│   ├── autoencoder_model_20250914_171130.keras
+│   ├── autoencoder_model_20250929_161713.keras
+│   ├── autoencoder_model.keras
+│   ├── autoencoder_threshold.json
+│   ├── drain_miner.pkl
+│   ├── last_processed_log_id.txt
+│   ├── last_update_checkpoint.txt
+│   ├── lime_explainer.pkl
+│   ├── lstm_classifier_model.keras
+│   ├── sentence_transformer_model
+│   │   ├── 1_Pooling
+│   │   ├── 2_Normalize
+│   │   ├── config.json
+│   │   ├── config_sentence_transformers.json
+│   │   ├── model.safetensors
+│   │   ├── modules.json
+│   │   ├── README.md
+│   │   ├── sentence_bert_config.json
+│   │   ├── special_tokens_map.json
+│   │   ├── tokenizer_config.json
+│   │   ├── tokenizer.json
+│   │   └── vocab.txt
+│   ├── sgd_embedder_20250825_220424.pkl
+│   ├── sgd_embedder_20250829_023303.pkl
+│   ├── sgd_embedder_20250901_001025.pkl
+│   ├── sgd_embedder_20250905_130213.pkl
+│   ├── sgd_embedder_20250914_171130.pkl
+│   ├── sgd_embedder_20250929_161713.pkl
+│   ├── sgd_embedder.pkl
+│   └── template_miner.pkl
+├── model_registry.json
+├── monitoring_status.json
+├── node_modules
+│   ├── chart.js
+│   │   ├── auto
+│   │   ├── dist
+│   │   ├── helpers
+│   │   ├── LICENSE.md
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── @kurkle
+│   │   └── color
+│   └── leaflet
+│       ├── CHANGELOG.md
+│       ├── dist
+│       ├── LICENSE
+│       ├── package.json
+│       ├── README.md
+│       └── src
+├── package.json
+├── package-lock.json
+├── Procfile
+├── pytest.ini
+├── README.md
+├── requirements.txt
+├── Roadmap.docx
+├── run.py
+├── run.sh
+├── scripts
+│   ├── alerts_config.json
+│   ├── att_sim.py
+│   ├── auto_trainer.py
+│   ├── debug.py
+│   ├── generate_sigma_rules.py
+│   ├── __init__.py
+│   ├── model_reporter.py
+│   ├── monitor.py
+│   ├── playbooks.py
+│   ├── play_sound.sh
+│   ├── __pycache__
+│   │   ├── att_sim.cpython-311.pyc
+│   │   ├── debug.cpython-311.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── __init__.cpython-313.pyc
+│   │   ├── monitor.cpython-311.pyc
+│   │   ├── monitor.cpython-313.pyc
+│   │   ├── playbooks.cpython-311.pyc
+│   │   ├── review_manager.cpython-311.pyc
+│   │   ├── sigma_engine.cpython-311.pyc
+│   │   ├── update.cpython-311.pyc
+│   │   ├── worker.cpython-311.pyc
+│   │   ├── worker.cpython-313.pyc
+│   │   └── zeek_ml_engine.cpython-311.pyc
+│   ├── review_manager.py
+│   ├── run_monitor.sh
+│   ├── run_worker.sh
+│   ├── sequences.py
+│   ├── sigma_engine.py
+│   ├── sim_ana.py
+│   ├── update_ips.py
+│   ├── update.py
+│   ├── validate_detection.py
+│   ├── worker.py
+│   ├── zeek_integration.py
+│   └── zeek_ml_engine.py
+├── sigma-rules
+│   ├── CONTRIBUTING.md
+│   ├── custom
+│   │   ├── att-sim-detection.yml
+│   │   ├── complete-attack-coverage.yml
+│   │   ├── custom-generated-rules.yml
+│   │   ├── linux
+│   │   ├── network
+│   │   ├── targeted-fixes.yml
+│   │   └── web
+│   ├── deprecated
+│   │   ├── cloud
+│   │   ├── deprecated.csv
+│   │   ├── deprecated.json
+│   │   ├── linux
+│   │   ├── macos
+│   │   ├── other
+│   │   ├── README.md
+│   │   ├── web
+│   │   └── windows
+│   ├── documentation
+│   │   ├── logsource-guides
+│   │   ├── README.md
+│   │   └── tools
+│   ├── images
+│   │   ├── Problem_OSI_v01.png
+│   │   ├── Sigma_0.3_inverted_title_wiki.png
+│   │   ├── Sigma_0.3.png
+│   │   ├── sigma2attack.png
+│   │   ├── Sigma_Coverage.png
+│   │   ├── Sigmac-win_susp_rc4_kerberos.png
+│   │   ├── Sigma_description_dark.png
+│   │   ├── Sigma_description_light.png
+│   │   ├── sigma_infographic_hq.png
+│   │   ├── sigma_infographic_lq.png
+│   │   ├── sigma_logo_dark.png
+│   │   ├── sigma_logo_light.png
+│   │   ├── Sigma_rule_example1.png
+│   │   ├── Sigma_rule_example2.png
+│   │   ├── Sigma_rule_example3.png
+│   │   ├── Sigma_rule_example4.png
+│   │   ├── Sigma_rule_example5.png
+│   │   └── Sigma_Schema.png
+│   ├── LICENSE
+│   ├── other
+│   │   ├── godmode_sigma_rule.yml
+│   │   ├── sigma_attack_nav_coverage.json
+│   │   └── sigma_attack_nav_coverage.svg
+│   ├── README.md
+│   ├── Releases.md
+│   ├── rules
+│   │   ├── application
+│   │   ├── category
+│   │   ├── cloud
+│   │   ├── compliance
+│   │   ├── linux
+│   │   ├── macos
+│   │   ├── network
+│   │   ├── README.md
+│   │   ├── web
+│   │   └── windows
+│   ├── rules-compliance
+│   │   └── README.md
+│   ├── rules-dfir
+│   │   └── README.md
+│   ├── rules-emerging-threats
+│   │   ├── 2010
+│   │   ├── 2014
+│   │   ├── 2015
+│   │   ├── 2017
+│   │   ├── 2018
+│   │   ├── 2019
+│   │   ├── 2020
+│   │   ├── 2021
+│   │   ├── 2022
+│   │   ├── 2023
+│   │   ├── 2024
+│   │   ├── 2025
+│   │   └── README.md
+│   ├── rules-placeholder
+│   │   ├── cloud
+│   │   ├── README.md
+│   │   └── windows
+│   ├── rules-threat-hunting
+│   │   ├── cloud
+│   │   ├── linux
+│   │   ├── macos
+│   │   ├── README.md
+│   │   ├── web
+│   │   └── windows
+│   ├── tests
+│   │   ├── check-baseline-local.sh
+│   │   ├── deprecated_rules.py
+│   │   ├── logsource.json
+│   │   ├── promote_rules_status.py
+│   │   ├── __pycache__
+│   │   ├── reference-archiver.py
+│   │   ├── rule-references.txt
+│   │   ├── sigma_cli_conf.yml
+│   │   ├── sigma-package-release.py
+│   │   ├── test_logsource.py
+│   │   ├── test_rules.py
+│   │   ├── thor.yml
+│   │   └── validate-sigma-schema
+│   └── unsupported
+│       ├── cloud
+│       ├── linux
+│       ├── network
+│       ├── other
+│       ├── README.md
+│       ├── web
+│       ├── windows
+│       └── zeek
+├── simulation
+│   ├── app.log
+│   ├── auth.log
+│   ├── firewall.log
+│   ├── kern.log
+│   ├── nginx.log
+│   ├── pacman.log
+│   ├── system.log
+│   └── Xorg.0.log
+├── tests
+│   ├── conftest.py
+│   ├── __pycache__
+│   │   ├── conftest.cpython-311-pytest-8.4.1.pyc
+│   │   ├── test_api.cpython-311-pytest-8.4.1.pyc
+│   │   ├── test_dashboard_integration.cpython-311-pytest-8.4.1.pyc
+│   │   ├── test_review_api.cpython-311-pytest-8.4.1.pyc
+│   │   ├── test_security.cpython-311-pytest-8.4.1.pyc
+│   │   ├── test_utils.cpython-311-pytest-8.4.1.pyc
+│   │   ├── test_worker.cpython-311-pytest-8.4.1.pyc
+│   │   └── test_worker_utils.cpython-311-pytest-8.4.1.pyc
+│   ├── run_comprehensive_tests.py
+│   ├── test_api.py
+│   ├── test_dashboard_integration.py
+│   ├── test_review_api.py
+│   ├── test_security.py
+│   ├── test_utils.py
+│   ├── test_worker.py
+│   └── test_worker_utils.py
+├── to-dos.txt
+├── venv-s
+│   ├── bin
+│   │   ├── activate
+│   │   ├── activate.csh
+│   │   ├── activate.fish
+│   │   ├── Activate.ps1
+│   │   ├── alembic
+│   │   ├── coverage
+│   │   ├── coverage3
+│   │   ├── coverage-3.11
+│   │   ├── dotenv
+│   │   ├── f2py
+│   │   ├── fastapi
+│   │   ├── flask
+│   │   ├── fonttools
+│   │   ├── get_gprof
+│   │   ├── get_objgraph
+│   │   ├── google-oauthlib-tool
+│   │   ├── hf
+│   │   ├── honcho
+│   │   ├── httpx
+│   │   ├── huggingface-cli
+│   │   ├── imageio_download_bin
+│   │   ├── imageio_remove_bin
+│   │   ├── import_pb_to_tensorboard
+│   │   ├── isympy
+│   │   ├── lsm2bin
+│   │   ├── mako-render
+│   │   ├── markdown-it
+│   │   ├── markdown_py
+│   │   ├── nltk
+│   │   ├── normalizer
+│   │   ├── pip
+│   │   ├── pip3
+│   │   ├── pip3.11
+│   │   ├── playwright
+│   │   ├── proton
+│   │   ├── proton-viewer
+│   │   ├── pyftmerge
+│   │   ├── pyftsubset
+│   │   ├── pygmentize
+│   │   ├── pyrsa-decrypt
+│   │   ├── pyrsa-encrypt
+│   │   ├── pyrsa-keygen
+│   │   ├── pyrsa-priv2pub
+│   │   ├── pyrsa-sign
+│   │   ├── pyrsa-verify
+│   │   ├── py.test
+│   │   ├── pytest
+│   │   ├── python -> /home/rksha/.pyenv/versions/3.11.9/bin/python
+│   │   ├── python3 -> python
+│   │   ├── python3.11 -> python
+│   │   ├── qr
+│   │   ├── saved_model_cli
+│   │   ├── tensorboard
+│   │   ├── tflite_convert
+│   │   ├── tf_upgrade_v2
+│   │   ├── tiff2fsspec
+│   │   ├── tiffcomment
+│   │   ├── tifffile
+│   │   ├── tiny-agents
+│   │   ├── toco
+│   │   ├── torchfrtrace
+│   │   ├── torchrun
+│   │   ├── tqdm
+│   │   ├── transformers
+│   │   ├── transformers-cli
+│   │   ├── ttx
+│   │   ├── undill
+│   │   ├── uvicorn
+│   │   ├── watchfiles
+│   │   ├── watchmedo
+│   │   ├── websockets
+│   │   └── wheel
+│   ├── include
+│   │   ├── python3.11
+│   │   └── site
+│   ├── lib
+│   │   └── python3.11
+│   ├── lib64 -> lib
+│   ├── pyvenv.cfg
+│   └── share
+│       └── man
+├── webapp.lock
+└── xtar
+    ├── clean_timestamp.py
+    ├── clear_cluster.py
+    ├── copy.txt
+    ├── create_admin.py
+    ├── debug.py
+    ├── dump.sql
+    ├── epr.py
+    ├── fix_dump.py
+    ├── folder1.txt
+    ├── folder2.txt
+    ├── folder (2).txt
+    ├── folder.txt
+    ├── init_db.py
+    ├── label_change.py
+    ├── merge.py
+    ├── migrate.py
+    ├── old_riskScores.py
+    ├── req.txt
+    ├── requirements.txt
+    ├── review.html
+    ├── review.py
+    ├── routes.py
+    ├── script.js
+    ├── train_autoencoder.py
+    ├── train_drain.py
+    ├── train_explainer.py
+    ├── train_lstm.py
+    ├── train.py
+    ├── tune_clusters.py
+    ├── update_db (2).py
+    ├── update_db.py
+    └── utils.py
+
+110 directories, 317 files
+
+In the flagged section make the buttons of acknowlage and the close more good colored accordingly and good spacing and padding.
+Top anomalu sources widget graph is very narrowed from top bottom make it as all are others.
+The search, csv, pdf, clear button of the threat hunting section should be in same line with proper spacing.
+In the drift detection section make the grapgh more stecthed top bottom rather left right, make the model date to be more visual appeared rathered just a text.

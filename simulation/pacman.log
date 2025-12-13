@@ -166,3 +166,429 @@ Sep 05 12:28:29	server	pacman[18448]:	Installed netcat (1.10-7)
 Sep 05 12:33:03	RUfus	pacman[23632]:	Running transaction
 Sep 05 12:33:04	ADM	pacman[15044]:	Installed nmap (7.91-1)
 Sep 05 12:33:05	testvm	pacman[16605]:	Installed netcat (1.10-7)
+Sep 06 01:45:07	RUfus	pacman[14490]:	Running transaction
+Sep 06 01:45:08	archive	pacman[20061]:	Installed nmap (7.91-1)
+Sep 06 01:45:09	prod1	pacman[3345]:	Installed netcat (1.10-7)
+Sep 07 02:44:18	archive	pacman[28850]:	Running transaction
+Sep 07 02:44:19	server	pacman[18436]:	Installed nmap (7.91-1)
+Sep 07 02:44:20	server	pacman[11715]:	Installed netcat (1.10-7)
+Sep 07 02:49:31	prod1	pacman[12863]:	Running transaction
+Sep 07 02:49:32	ADM	pacman[23476]:	Installed nmap (7.91-1)
+Sep 07 02:49:33	archive	pacman[25147]:	Installed netcat (1.10-7)
+Sep 07 02:56:04	testvm	pacman[28393]:	Running transaction
+Sep 07 02:56:05	archive	pacman[10348]:	Installed nmap (7.91-1)
+Sep 07 02:56:07	ADM	pacman[19287]:	Installed netcat (1.10-7)
+Sep 07 02:57:28	ADM	pacman[12903]:	Running transaction
+Sep 07 02:57:29	ADM	pacman[5993]:	Installed nmap (7.91-1)
+Sep 07 02:57:30	archive	pacman[5054]:	Installed netcat (1.10-7)
+Sep 10 19:34:51	prod1	pacman[26563]:	Running transaction
+Sep 10 19:34:51	archive	pacman[1096]:	Installed nmap (7.91-1)
+Sep 10 19:34:53	server	pacman[20965]:	Installed netcat (1.10-7)
+Sep 10 19:46:55	RUfus	pacman[28877]:	Running transaction
+Sep 10 19:46:56	testvm	pacman[25841]:	Installed nmap (7.91-1)
+Sep 10 19:46:57	prod1	pacman[5508]:	Installed netcat (1.10-7)
+Sep 10 19:53:29	testvm	pacman[24750]:	Running transaction
+Sep 10 19:53:29	testvm	pacman[29703]:	Installed nmap (7.91-1)
+Sep 10 19:53:30	testvm	pacman[22506]:	Installed netcat (1.10-7)
+Sep 10 20:28:59	testvm	pacman[8288]:	Running transaction
+Sep 10 20:29:00	LabSZ	pacman[27958]:	Installed nmap (7.91-1)
+Sep 10 20:29:01	testvm	pacman[29331]:	Installed netcat (1.10-7)
+Sep 10 20:33:38	prod1	pacman[7318]:	Running transaction
+Sep 10 20:33:40	LabSZ	pacman[7660]:	Installed nmap (7.91-1)
+Sep 10 20:33:40	ADM	pacman[23034]:	Installed netcat (1.10-7)
+Sep 10 20:40:47	testvm	pacman[26166]:	Running transaction
+Sep 10 20:40:48	RUfus	pacman[18738]:	Installed nmap (7.91-1)
+Sep 10 20:40:50	ADM	pacman[29702]:	Installed netcat (1.10-7)
+Sep 10 20:44:50	ADM	pacman[20257]:	Running transaction
+Sep 10 20:44:51	LabSZ	pacman[23934]:	Installed nmap (7.91-1)
+Sep 10 20:44:52	testvm	pacman[18414]:	Installed netcat (1.10-7)
+Sep 10 20:54:58	ADM	pacman[4081]:	Running transaction
+Sep 10 20:54:59	archive	pacman[7298]:	Installed nmap (7.91-1)
+Sep 10 20:55:00	prod1	pacman[8969]:	Installed netcat (1.10-7)
+Sep 10 21:03:52	prod1	pacman[10403]:	Running transaction
+Sep 10 21:03:53	LabSZ	pacman[25377]:	Installed nmap (7.91-1)
+Sep 10 21:03:54	LabSZ	pacman[23152]:	Installed netcat (1.10-7)
+Sep 10 21:07:58	prod1	pacman[27517]:	Running transaction
+Sep 10 21:07:59	RUfus	pacman[20884]:	Installed nmap (7.91-1)
+Sep 10 21:08:00	RUfus	pacman[9966]:	Installed netcat (1.10-7)
+Sep 10 21:14:50	prod1	pacman[5815]:	Running transaction
+Sep 10 21:14:51	ADM	pacman[6142]:	Installed nmap (7.91-1)
+Sep 10 21:14:52	LabSZ	pacman[26820]:	Installed netcat (1.10-7)
+Sep 10 21:15:29	LabSZ	pacman[5626]:	Running transaction
+Sep 10 21:15:30	server	pacman[24297]:	Installed nmap (7.91-1)
+Sep 10 21:15:32	LabSZ	pacman[26808]:	Installed netcat (1.10-7)
+Sep 10 21:23:12	ADM	pacman[18521]:	Running transaction
+Sep 10 21:23:13	testvm	pacman[13188]:	Installed nmap (7.91-1)
+Sep 10 21:23:14	testvm	pacman[9738]:	Installed netcat (1.10-7)
+Sep 10 21:26:15	prod1	pacman[20863]:	Running transaction
+Sep 10 21:26:17	server	pacman[4056]:	Installed nmap (7.91-1)
+Sep 10 21:26:18	testvm	pacman[3059]:	Installed netcat (1.10-7)
+Sep 12 20:34:36	archive	pacman[27286]:	Running transaction
+Sep 12 20:34:36	server	pacman[26955]:	Installed nmap (7.91-1)
+Sep 12 20:34:37	RUfus	pacman[24866]:	Installed netcat (1.10-7)
+Sep 12 20:39:50	testvm	pacman[29180]:	Running transaction
+Sep 12 20:39:51	RUfus	pacman[4660]:	Installed nmap (7.91-1)
+Sep 12 20:39:52	LabSZ	pacman[4018]:	Installed netcat (1.10-7)
+Sep 12 20:46:58	ADM	pacman[15914]:	Running transaction
+Sep 12 20:46:59	ADM	pacman[23691]:	Installed nmap (7.91-1)
+Sep 12 20:47:00	prod1	pacman[21398]:	Installed netcat (1.10-7)
+Sep 12 21:00:03	ADM	pacman[9690]:	Running transaction
+Sep 12 21:00:04	testvm	pacman[5695]:	Installed nmap (7.91-1)
+Sep 12 21:00:05	ADM	pacman[18810]:	Installed netcat (1.10-7)
+Sep 12 21:00:38	archive	pacman[14648]:	Running transaction
+Sep 12 21:00:38	testvm	pacman[11245]:	Installed nmap (7.91-1)
+Sep 12 21:00:39	LabSZ	pacman[22651]:	Installed netcat (1.10-7)
+Sep 12 21:17:45	RUfus	pacman[28438]:	Running transaction
+Sep 12 21:17:46	testvm	pacman[13619]:	Installed nmap (7.91-1)
+Sep 12 21:17:48	archive	pacman[5628]:	Installed netcat (1.10-7)
+Sep 12 21:29:43	LabSZ	pacman[24860]:	Running transaction
+Sep 12 21:29:44	testvm	pacman[10704]:	Installed nmap (7.91-1)
+Sep 12 21:29:45	RUfus	pacman[6859]:	Installed netcat (1.10-7)
+Sep 12 21:47:10	archive	pacman[26065]:	Running transaction
+Sep 12 21:47:11	RUfus	pacman[10721]:	Installed nmap (7.91-1)
+Sep 12 21:47:12	archive	pacman[1555]:	Installed netcat (1.10-7)
+Sep 12 21:48:21	testvm	pacman[19965]:	Running transaction
+Sep 12 21:48:22	ADM	pacman[27848]:	Installed nmap (7.91-1)
+Sep 12 21:48:22	ADM	pacman[27065]:	Installed netcat (1.10-7)
+Sep 12 21:51:19	testvm	pacman[7059]:	Running transaction
+Sep 12 21:51:20	prod1	pacman[18584]:	Installed nmap (7.91-1)
+Sep 12 21:51:21	prod1	pacman[9100]:	Installed netcat (1.10-7)
+Sep 16 17:41:40	archive	pacman[27189]:	Running transaction
+Sep 16 17:41:41	LabSZ	pacman[1970]:	Installed nmap (7.91-1)
+Sep 16 17:41:42	RUfus	pacman[26072]:	Installed netcat (1.10-7)
+Sep 16 17:42:43	prod1	pacman[27906]:	Running transaction
+Sep 16 17:42:44	LabSZ	pacman[18572]:	Installed nmap (7.91-1)
+Sep 16 17:42:45	LabSZ	pacman[6193]:	Installed netcat (1.10-7)
+Sep 16 19:12:32	RUfus	pacman[28225]:	Running transaction
+Sep 16 19:12:33	ADM	pacman[20892]:	Installed nmap (7.91-1)
+Sep 16 19:12:34	RUfus	pacman[29702]:	Installed netcat (1.10-7)
+Sep 16 19:30:29	archive	pacman[24808]:	Running transaction
+Sep 16 19:30:30	LabSZ	pacman[27323]:	Installed nmap (7.91-1)
+Sep 16 19:30:31	server	pacman[15663]:	Installed netcat (1.10-7)
+Sep 16 20:10:35	RUfus	pacman[2598]:	Running transaction
+Sep 16 20:10:36	server	pacman[20546]:	Installed nmap (7.91-1)
+Sep 16 20:10:37	LabSZ	pacman[24125]:	Installed netcat (1.10-7)
+Sep 16 20:18:33	prod1	pacman[24088]:	Running transaction
+Sep 16 20:18:34	archive	pacman[6644]:	Installed nmap (7.91-1)
+Sep 16 20:18:35	testvm	pacman[19353]:	Installed netcat (1.10-7)
+Sep 16 20:46:09	LabSZ	pacman[24903]:	Running transaction
+Sep 16 20:46:10	archive	pacman[13678]:	Installed nmap (7.91-1)
+Sep 16 20:46:11	LabSZ	pacman[8121]:	Installed netcat (1.10-7)
+Sep 16 21:19:15	prod1	pacman[4019]:	Running transaction
+Sep 16 21:19:16	LabSZ	pacman[21966]:	Installed nmap (7.91-1)
+Sep 16 21:19:17	testvm	pacman[10572]:	Installed netcat (1.10-7)
+Sep 16 21:37:03	RUfus	pacman[1097]:	Running transaction
+Sep 16 21:37:05	ADM	pacman[9072]:	Installed nmap (7.91-1)
+Sep 16 21:37:06	archive	pacman[9015]:	Installed netcat (1.10-7)
+Sep 16 21:39:30	server	pacman[7294]:	Running transaction
+Sep 16 21:39:31	LabSZ	pacman[24974]:	Installed nmap (7.91-1)
+Sep 16 21:39:31	ADM	pacman[27634]:	Installed netcat (1.10-7)
+Sep 16 21:45:57	ADM	pacman[27791]:	Running transaction
+Sep 16 21:45:58	LabSZ	pacman[9836]:	Installed nmap (7.91-1)
+Sep 16 21:45:59	ADM	pacman[2175]:	Installed netcat (1.10-7)
+Sep 16 21:49:32	testvm	pacman[21004]:	Running transaction
+Sep 16 21:49:33	RUfus	pacman[26120]:	Installed nmap (7.91-1)
+Sep 16 21:49:35	prod1	pacman[2956]:	Installed netcat (1.10-7)
+Sep 16 22:03:28	prod1	pacman[1760]:	Running transaction
+Sep 16 22:03:29	RUfus	pacman[15075]:	Installed nmap (7.91-1)
+Sep 16 22:03:30	server	pacman[11640]:	Installed netcat (1.10-7)
+Sep 16 22:25:46	testvm	pacman[26057]:	Running transaction
+Sep 16 22:25:46	testvm	pacman[7564]:	Installed nmap (7.91-1)
+Sep 16 22:25:48	LabSZ	pacman[13239]:	Installed netcat (1.10-7)
+Sep 16 22:32:38	testvm	pacman[24990]:	Running transaction
+Sep 16 22:32:39	RUfus	pacman[5136]:	Installed nmap (7.91-1)
+Sep 16 22:32:40	LabSZ	pacman[27187]:	Installed netcat (1.10-7)
+Sep 16 22:35:26	testvm	pacman[26881]:	Running transaction
+Sep 16 22:35:27	RUfus	pacman[6189]:	Installed nmap (7.91-1)
+Sep 16 22:35:27	LabSZ	pacman[19927]:	Installed netcat (1.10-7)
+Sep 16 22:41:50	testvm	pacman[7349]:	Running transaction
+Sep 16 22:41:51	archive	pacman[10053]:	Installed nmap (7.91-1)
+Sep 16 22:41:52	testvm	pacman[2098]:	Installed netcat (1.10-7)
+Sep 16 22:55:16	LabSZ	pacman[4884]:	Running transaction
+Sep 16 22:55:17	server	pacman[24236]:	Installed nmap (7.91-1)
+Sep 16 22:55:18	RUfus	pacman[24088]:	Installed netcat (1.10-7)
+Sep 16 23:00:26	archive	pacman[15562]:	Running transaction
+Sep 16 23:00:27	server	pacman[25099]:	Installed nmap (7.91-1)
+Sep 16 23:00:28	server	pacman[24581]:	Installed netcat (1.10-7)
+Sep 16 23:46:21	testvm	pacman[6848]:	Running transaction
+Sep 16 23:46:22	testvm	pacman[14853]:	Installed nmap (7.91-1)
+Sep 16 23:46:23	server	pacman[13557]:	Installed netcat (1.10-7)
+Sep 17 00:06:21	server	pacman[1334]:	Running transaction
+Sep 17 00:06:23	prod1	pacman[20041]:	Installed nmap (7.91-1)
+Sep 17 00:06:24	RUfus	pacman[19954]:	Installed netcat (1.10-7)
+Sep 17 23:18:11	archive	pacman[26702]:	Running transaction
+Sep 17 23:18:12	ADM	pacman[8947]:	Installed nmap (7.91-1)
+Sep 17 23:18:13	LabSZ	pacman[11330]:	Installed netcat (1.10-7)
+Sep 17 23:25:20	RUfus	pacman[5806]:	Running transaction
+Sep 17 23:25:21	prod1	pacman[8119]:	Installed nmap (7.91-1)
+Sep 17 23:25:22	archive	pacman[18086]:	Installed netcat (1.10-7)
+Sep 18 21:07:31	archive	pacman[23381]:	Running transaction
+Sep 18 21:07:33	prod1	pacman[3586]:	Installed nmap (7.91-1)
+Sep 18 21:07:34	LabSZ	pacman[12832]:	Installed netcat (1.10-7)
+Sep 18 21:15:50	archive	pacman[18946]:	Running transaction
+Sep 18 21:15:51	server	pacman[4091]:	Installed nmap (7.91-1)
+Sep 18 21:15:51	prod1	pacman[11414]:	Installed netcat (1.10-7)
+Sep 18 21:22:00	LabSZ	pacman[8344]:	Running transaction
+Sep 18 21:22:01	testvm	pacman[3743]:	Installed nmap (7.91-1)
+Sep 18 21:22:02	RUfus	pacman[14319]:	Installed netcat (1.10-7)
+Sep 18 21:23:54	LabSZ	pacman[8060]:	Running transaction
+Sep 18 21:23:55	archive	pacman[12761]:	Installed nmap (7.91-1)
+Sep 18 21:23:56	testvm	pacman[24783]:	Installed netcat (1.10-7)
+Sep 18 21:24:53	LabSZ	pacman[26602]:	Running transaction
+Sep 18 21:24:54	ADM	pacman[25239]:	Installed nmap (7.91-1)
+Sep 18 21:24:55	archive	pacman[11136]:	Installed netcat (1.10-7)
+Sep 18 21:28:55	RUfus	pacman[15977]:	Running transaction
+Sep 18 21:28:56	testvm	pacman[3238]:	Installed nmap (7.91-1)
+Sep 18 21:28:57	LabSZ	pacman[22257]:	Installed netcat (1.10-7)
+Sep 18 21:29:59	RUfus	pacman[21955]:	Running transaction
+Sep 18 21:30:00	archive	pacman[9956]:	Installed nmap (7.91-1)
+Sep 18 21:30:02	server	pacman[18239]:	Installed netcat (1.10-7)
+Sep 18 21:45:06	ADM	pacman[26415]:	Running transaction
+Sep 18 21:45:07	server	pacman[1593]:	Installed nmap (7.91-1)
+Sep 18 21:45:08	server	pacman[2636]:	Installed netcat (1.10-7)
+Sep 18 21:45:49	archive	pacman[6139]:	Running transaction
+Sep 18 21:45:50	ADM	pacman[26387]:	Installed nmap (7.91-1)
+Sep 18 21:45:52	archive	pacman[8927]:	Installed netcat (1.10-7)
+Sep 18 21:47:31	ADM	pacman[20526]:	Running transaction
+Sep 18 21:47:32	prod1	pacman[27248]:	Installed nmap (7.91-1)
+Sep 18 21:47:32	server	pacman[10964]:	Installed netcat (1.10-7)
+Sep 18 21:51:53	server	pacman[25443]:	Running transaction
+Sep 18 21:51:54	server	pacman[14766]:	Installed nmap (7.91-1)
+Sep 18 21:51:55	prod1	pacman[8694]:	Installed netcat (1.10-7)
+Sep 18 21:53:11	prod1	pacman[2960]:	Running transaction
+Sep 18 21:53:13	ADM	pacman[16571]:	Installed nmap (7.91-1)
+Sep 18 21:53:13	server	pacman[3340]:	Installed netcat (1.10-7)
+Sep 18 22:12:47	RUfus	pacman[24802]:	Running transaction
+Sep 18 22:12:48	testvm	pacman[18491]:	Installed nmap (7.91-1)
+Sep 18 22:12:49	server	pacman[1105]:	Installed netcat (1.10-7)
+Sep 18 22:13:39	RUfus	pacman[19517]:	Running transaction
+Sep 18 22:13:40	archive	pacman[20681]:	Installed nmap (7.91-1)
+Sep 18 22:13:41	ADM	pacman[25460]:	Installed netcat (1.10-7)
+Sep 18 22:34:10	prod1	pacman[28575]:	Running transaction
+Sep 18 22:34:10	RUfus	pacman[12036]:	Installed nmap (7.91-1)
+Sep 18 22:34:12	prod1	pacman[10867]:	Installed netcat (1.10-7)
+Sep 18 22:39:42	RUfus	pacman[27741]:	Running transaction
+Sep 18 22:39:42	testvm	pacman[2876]:	Installed nmap (7.91-1)
+Sep 18 22:39:43	LabSZ	pacman[29141]:	Installed netcat (1.10-7)
+Sep 18 22:50:40	testvm	pacman[1336]:	Running transaction
+Sep 18 22:50:41	archive	pacman[8505]:	Installed nmap (7.91-1)
+Sep 18 22:50:41	ADM	pacman[25344]:	Installed netcat (1.10-7)
+Sep 18 23:27:43	ADM	pacman[13312]:	Running transaction
+Sep 18 23:27:45	testvm	pacman[19595]:	Installed nmap (7.91-1)
+Sep 18 23:27:45	RUfus	pacman[18196]:	Installed netcat (1.10-7)
+Sep 18 23:31:18	prod1	pacman[18883]:	Running transaction
+Sep 18 23:31:18	archive	pacman[23469]:	Installed nmap (7.91-1)
+Sep 18 23:31:20	RUfus	pacman[27485]:	Installed netcat (1.10-7)
+Sep 18 23:39:16	archive	pacman[22559]:	Running transaction
+Sep 18 23:39:17	archive	pacman[8885]:	Installed nmap (7.91-1)
+Sep 18 23:39:18	archive	pacman[23259]:	Installed netcat (1.10-7)
+Sep 18 23:47:05	ADM	pacman[3707]:	Running transaction
+Sep 18 23:47:06	server	pacman[20659]:	Installed nmap (7.91-1)
+Sep 18 23:47:08	server	pacman[20191]:	Installed netcat (1.10-7)
+Sep 18 23:53:10	LabSZ	pacman[16594]:	Running transaction
+Sep 18 23:53:11	testvm	pacman[13010]:	Installed nmap (7.91-1)
+Sep 18 23:53:11	testvm	pacman[19666]:	Installed netcat (1.10-7)
+Sep 18 23:58:58	ADM	pacman[10977]:	Running transaction
+Sep 18 23:58:59	RUfus	pacman[3140]:	Installed nmap (7.91-1)
+Sep 18 23:59:00	server	pacman[22209]:	Installed netcat (1.10-7)
+Sep 19 00:00:32	RUfus	pacman[15495]:	Running transaction
+Sep 19 00:00:33	RUfus	pacman[24756]:	Installed nmap (7.91-1)
+Sep 19 00:00:34	testvm	pacman[8975]:	Installed netcat (1.10-7)
+Sep 19 00:02:36	RUfus	pacman[7862]:	Running transaction
+Sep 19 00:02:37	RUfus	pacman[27218]:	Installed nmap (7.91-1)
+Sep 19 00:02:38	prod1	pacman[13744]:	Installed netcat (1.10-7)
+Sep 19 00:07:36	prod1	pacman[26626]:	Running transaction
+Sep 19 00:07:37	prod1	pacman[14581]:	Installed nmap (7.91-1)
+Sep 19 00:07:38	archive	pacman[5884]:	Installed netcat (1.10-7)
+Sep 19 20:00:42	archive	pacman[25647]:	Running transaction
+Sep 19 20:00:43	prod1	pacman[14171]:	Installed nmap (7.91-1)
+Sep 19 20:00:44	server	pacman[5355]:	Installed netcat (1.10-7)
+Sep 19 20:20:54	RUfus	pacman[17382]:	Running transaction
+Sep 19 20:20:55	ADM	pacman[18217]:	Installed nmap (7.91-1)
+Sep 19 20:20:56	prod1	pacman[1798]:	Installed netcat (1.10-7)
+Sep 19 20:25:35	LabSZ	pacman[14288]:	Running transaction
+Sep 19 20:25:36	ADM	pacman[8664]:	Installed nmap (7.91-1)
+Sep 19 20:25:37	LabSZ	pacman[4989]:	Installed netcat (1.10-7)
+Sep 19 20:27:55	archive	pacman[25593]:	Running transaction
+Sep 19 20:27:57	prod1	pacman[4445]:	Installed nmap (7.91-1)
+Sep 19 20:27:58	RUfus	pacman[17194]:	Installed netcat (1.10-7)
+Sep 23 18:34:24	server	pacman[1557]:	Running transaction
+Sep 23 18:34:25	RUfus	pacman[5616]:	Installed nmap (7.91-1)
+Sep 23 18:34:26	prod1	pacman[13386]:	Installed netcat (1.10-7)
+Sep 23 18:42:05	archive	pacman[23306]:	Running transaction
+Sep 23 18:42:06	server	pacman[21316]:	Installed nmap (7.91-1)
+Sep 23 18:42:08	RUfus	pacman[7049]:	Installed netcat (1.10-7)
+Sep 23 18:58:26	ADM	pacman[23544]:	Running transaction
+Sep 23 18:58:28	RUfus	pacman[22155]:	Installed nmap (7.91-1)
+Sep 23 18:58:28	LabSZ	pacman[3565]:	Installed netcat (1.10-7)
+Sep 23 19:01:33	ADM	pacman[23273]:	Running transaction
+Sep 23 19:01:33	RUfus	pacman[23117]:	Installed nmap (7.91-1)
+Sep 23 19:01:34	RUfus	pacman[16518]:	Installed netcat (1.10-7)
+Sep 23 19:02:29	LabSZ	pacman[9268]:	Running transaction
+Sep 23 19:02:30	archive	pacman[2369]:	Installed nmap (7.91-1)
+Sep 23 19:02:31	prod1	pacman[25860]:	Installed netcat (1.10-7)
+Sep 23 19:06:17	LabSZ	pacman[19494]:	Running transaction
+Sep 23 19:06:18	prod1	pacman[6809]:	Installed nmap (7.91-1)
+Sep 23 19:06:19	LabSZ	pacman[16861]:	Installed netcat (1.10-7)
+Sep 23 20:43:23	testvm	pacman[22351]:	Running transaction
+Sep 23 20:43:24	LabSZ	pacman[4947]:	Installed nmap (7.91-1)
+Sep 23 20:43:25	ADM	pacman[13863]:	Installed netcat (1.10-7)
+Sep 23 20:52:00	ADM	pacman[10288]:	Running transaction
+Sep 23 20:52:01	prod1	pacman[15178]:	Installed nmap (7.91-1)
+Sep 23 20:52:02	RUfus	pacman[19367]:	Installed netcat (1.10-7)
+Sep 23 21:11:32	server	pacman[23488]:	Running transaction
+Sep 23 21:11:33	prod1	pacman[3840]:	Installed nmap (7.91-1)
+Sep 23 21:11:34	server	pacman[23865]:	Installed netcat (1.10-7)
+Sep 27 23:46:38	LabSZ	pacman[19422]:	Running transaction
+Sep 27 23:46:40	LabSZ	pacman[18852]:	Installed nmap (7.91-1)
+Sep 27 23:46:41	archive	pacman[28550]:	Installed netcat (1.10-7)
+Sep 28 00:22:18	RUfus	pacman[28772]:	Running transaction
+Sep 28 00:22:19	testvm	pacman[25925]:	Installed nmap (7.91-1)
+Sep 28 00:22:20	archive	pacman[24288]:	Installed netcat (1.10-7)
+Sep 28 00:35:02	LabSZ	pacman[2559]:	Running transaction
+Sep 28 00:35:04	LabSZ	pacman[24227]:	Installed nmap (7.91-1)
+Sep 28 00:35:05	prod1	pacman[20331]:	Installed netcat (1.10-7)
+Sep 28 00:35:58	archive	pacman[1035]:	Running transaction
+Sep 28 00:35:58	server	pacman[19809]:	Installed nmap (7.91-1)
+Sep 28 00:35:59	server	pacman[25514]:	Installed netcat (1.10-7)
+Sep 28 00:40:07	RUfus	pacman[18865]:	Running transaction
+Sep 28 00:40:08	server	pacman[2113]:	Installed nmap (7.91-1)
+Sep 28 00:40:08	prod1	pacman[21042]:	Installed netcat (1.10-7)
+Sep 28 00:58:57	archive	pacman[23156]:	Running transaction
+Sep 28 00:58:58	archive	pacman[13944]:	Installed nmap (7.91-1)
+Sep 28 00:58:59	LabSZ	pacman[22044]:	Installed netcat (1.10-7)
+Sep 28 00:59:45	LabSZ	pacman[9905]:	Running transaction
+Sep 28 00:59:46	ADM	pacman[8442]:	Installed nmap (7.91-1)
+Sep 28 00:59:47	RUfus	pacman[23934]:	Installed netcat (1.10-7)
+Sep 28 01:06:28	archive	pacman[6844]:	Running transaction
+Sep 28 01:06:29	server	pacman[20127]:	Installed nmap (7.91-1)
+Sep 28 01:06:30	ADM	pacman[14783]:	Installed netcat (1.10-7)
+Sep 28 01:25:14	archive	pacman[13762]:	Running transaction
+Sep 28 01:25:15	LabSZ	pacman[10264]:	Installed nmap (7.91-1)
+Sep 28 01:25:16	testvm	pacman[25523]:	Installed netcat (1.10-7)
+Sep 28 01:27:25	prod1	pacman[26918]:	Running transaction
+Sep 28 01:27:26	ADM	pacman[20722]:	Installed nmap (7.91-1)
+Sep 28 01:27:26	ADM	pacman[3855]:	Installed netcat (1.10-7)
+Sep 28 01:44:11	LabSZ	pacman[25267]:	Running transaction
+Sep 28 01:44:12	server	pacman[19463]:	Installed nmap (7.91-1)
+Sep 28 01:44:13	archive	pacman[11655]:	Installed netcat (1.10-7)
+Sep 28 02:06:42	server	pacman[4050]:	Running transaction
+Sep 28 02:06:43	LabSZ	pacman[11493]:	Installed nmap (7.91-1)
+Sep 28 02:06:44	server	pacman[7721]:	Installed netcat (1.10-7)
+Sep 28 14:57:26	LabSZ	pacman[7453]:	Running transaction
+Sep 28 14:57:28	server	pacman[3939]:	Installed nmap (7.91-1)
+Sep 28 14:57:28	archive	pacman[24613]:	Installed netcat (1.10-7)
+Sep 28 15:07:01	archive	pacman[11456]:	Running transaction
+Sep 28 15:07:01	ADM	pacman[26611]:	Installed nmap (7.91-1)
+Sep 28 15:07:02	server	pacman[28031]:	Installed netcat (1.10-7)
+Sep 28 15:24:04	testvm	pacman[22590]:	Running transaction
+Sep 28 15:24:04	testvm	pacman[6817]:	Installed nmap (7.91-1)
+Sep 28 15:24:05	prod1	pacman[23976]:	Installed netcat (1.10-7)
+Sep 28 15:24:56	ADM	pacman[15070]:	Running transaction
+Sep 28 15:24:57	RUfus	pacman[19092]:	Installed nmap (7.91-1)
+Sep 28 15:24:58	archive	pacman[16564]:	Installed netcat (1.10-7)
+Sep 28 15:25:34	RUfus	pacman[13268]:	Running transaction
+Sep 28 15:25:35	testvm	pacman[22983]:	Installed nmap (7.91-1)
+Sep 28 15:25:36	RUfus	pacman[18168]:	Installed netcat (1.10-7)
+Sep 28 15:29:12	LabSZ	pacman[29721]:	Running transaction
+Sep 28 15:29:13	testvm	pacman[12457]:	Installed nmap (7.91-1)
+Sep 28 15:29:14	archive	pacman[25764]:	Installed netcat (1.10-7)
+Sep 28 15:40:23	RUfus	pacman[25578]:	Running transaction
+Sep 28 15:40:24	testvm	pacman[21161]:	Installed nmap (7.91-1)
+Sep 28 15:40:25	archive	pacman[22520]:	Installed netcat (1.10-7)
+Sep 28 15:44:10	ADM	pacman[21013]:	Running transaction
+Sep 28 15:44:11	archive	pacman[18665]:	Installed nmap (7.91-1)
+Sep 28 15:44:12	prod1	pacman[29857]:	Installed netcat (1.10-7)
+Sep 28 15:47:12	RUfus	pacman[21099]:	Running transaction
+Sep 28 15:47:14	RUfus	pacman[8562]:	Installed nmap (7.91-1)
+Sep 28 15:47:15	testvm	pacman[26267]:	Installed netcat (1.10-7)
+Sep 28 15:48:09	LabSZ	pacman[22708]:	Running transaction
+Sep 28 15:48:10	LabSZ	pacman[13725]:	Installed nmap (7.91-1)
+Sep 28 15:48:11	LabSZ	pacman[29218]:	Installed netcat (1.10-7)
+Sep 28 15:58:54	LabSZ	pacman[10559]:	Running transaction
+Sep 28 15:58:56	ADM	pacman[29446]:	Installed nmap (7.91-1)
+Sep 28 15:58:57	server	pacman[6027]:	Installed netcat (1.10-7)
+Sep 28 15:59:04	ADM	pacman[24654]:	Running transaction
+Sep 28 15:59:04	LabSZ	pacman[25495]:	Installed nmap (7.91-1)
+Sep 28 15:59:06	testvm	pacman[19374]:	Installed netcat (1.10-7)
+Sep 28 16:01:25	archive	pacman[25885]:	Running transaction
+Sep 28 16:01:26	archive	pacman[22034]:	Installed nmap (7.91-1)
+Sep 28 16:01:27	testvm	pacman[24280]:	Installed netcat (1.10-7)
+Oct 01 18:00:06	RUfus	pacman[12244]:	Running transaction
+Oct 01 18:00:06	archive	pacman[17668]:	Installed nmap (7.91-1)
+Oct 01 18:00:07	LabSZ	pacman[12664]:	Installed netcat (1.10-7)
+Oct 01 18:01:58	archive	pacman[5794]:	Running transaction
+Oct 01 18:01:59	ADM	pacman[2101]:	Installed nmap (7.91-1)
+Oct 01 18:02:00	prod1	pacman[11579]:	Installed netcat (1.10-7)
+Oct 01 18:03:48	LabSZ	pacman[10001]:	Running transaction
+Oct 01 18:03:48	testvm	pacman[26612]:	Installed nmap (7.91-1)
+Oct 01 18:03:50	RUfus	pacman[27234]:	Installed netcat (1.10-7)
+Oct 01 18:09:14	archive	pacman[15594]:	Running transaction
+Oct 01 18:09:15	server	pacman[21252]:	Installed nmap (7.91-1)
+Oct 01 18:09:16	ADM	pacman[20662]:	Installed netcat (1.10-7)
+Oct 01 18:23:05	ADM	pacman[28010]:	Running transaction
+Oct 01 18:23:06	ADM	pacman[14869]:	Installed nmap (7.91-1)
+Oct 01 18:23:06	ADM	pacman[6789]:	Installed netcat (1.10-7)
+Oct 01 18:29:19	ADM	pacman[16591]:	Running transaction
+Oct 01 18:29:20	server	pacman[23753]:	Installed nmap (7.91-1)
+Oct 01 18:29:21	RUfus	pacman[14376]:	Installed netcat (1.10-7)
+Oct 01 18:30:33	prod1	pacman[9042]:	Running transaction
+Oct 01 18:30:34	RUfus	pacman[15961]:	Installed nmap (7.91-1)
+Oct 01 18:30:35	server	pacman[7975]:	Installed netcat (1.10-7)
+Oct 01 18:33:19	ADM	pacman[12480]:	Running transaction
+Oct 01 18:33:19	archive	pacman[25454]:	Installed nmap (7.91-1)
+Oct 01 18:33:21	prod1	pacman[9439]:	Installed netcat (1.10-7)
+Oct 18 21:19:08	server	pacman[19195]:	Running transaction
+Oct 18 21:19:09	testvm	pacman[20368]:	Installed nmap (7.91-1)
+Oct 18 21:19:10	testvm	pacman[16171]:	Installed netcat (1.10-7)
+Dec 11 13:53:14	RUfus	pacman[27535]:	Running transaction
+Dec 11 13:53:16	LabSZ	pacman[27761]:	Installed nmap (7.91-1)
+Dec 11 13:53:17	RUfus	pacman[24043]:	Installed netcat (1.10-7)
+Dec 11 14:15:50	LabSZ	pacman[6563]:	Running transaction
+Dec 11 14:15:51	ADM	pacman[21895]:	Installed nmap (7.91-1)
+Dec 11 14:15:52	archive	pacman[2637]:	Installed netcat (1.10-7)
+Dec 11 14:19:30	RUfus	pacman[26987]:	Running transaction
+Dec 11 14:19:31	RUfus	pacman[18866]:	Installed nmap (7.91-1)
+Dec 11 14:19:32	LabSZ	pacman[3702]:	Installed netcat (1.10-7)
+Dec 12 09:56:58	server	pacman[3927]:	Running transaction
+Dec 12 09:56:59	prod1	pacman[13176]:	Installed nmap (7.91-1)
+Dec 12 09:57:00	testvm	pacman[13463]:	Installed netcat (1.10-7)
+Dec 12 10:02:30	server	pacman[6711]:	Running transaction
+Dec 12 10:02:31	archive	pacman[13802]:	Installed nmap (7.91-1)
+Dec 12 10:02:32	testvm	pacman[15504]:	Installed netcat (1.10-7)
+Dec 13 02:49:06	testvm	pacman[19306]:	Running transaction
+Dec 13 02:49:07	testvm	pacman[28832]:	Installed nmap (7.91-1)
+Dec 13 02:49:08	ADM	pacman[23873]:	Installed netcat (1.10-7)
+Dec 13 10:26:04	ADM	pacman[11425]:	Running transaction
+Dec 13 10:26:04	testvm	pacman[4063]:	Installed nmap (7.91-1)
+Dec 13 10:26:06	prod1	pacman[9513]:	Installed netcat (1.10-7)
+Dec 13 10:32:31	prod1	pacman[4938]:	Running transaction
+Dec 13 10:32:32	archive	pacman[14044]:	Installed nmap (7.91-1)
+Dec 13 10:32:33	RUfus	pacman[4978]:	Installed netcat (1.10-7)
+Dec 13 10:56:46	testvm	pacman[22723]:	Running transaction
+Dec 13 10:56:47	ADM	pacman[4736]:	Installed nmap (7.91-1)
+Dec 13 10:56:48	RUfus	pacman[21067]:	Installed netcat (1.10-7)
+Dec 13 11:32:40	RUfus	pacman[27902]:	Running transaction
+Dec 13 11:32:41	prod1	pacman[23647]:	Installed nmap (7.91-1)
+Dec 13 11:32:42	testvm	pacman[26632]:	Installed netcat (1.10-7)
+Dec 13 11:39:14	LabSZ	pacman[2491]:	Running transaction
+Dec 13 11:39:15	archive	pacman[6211]:	Installed nmap (7.91-1)
+Dec 13 11:39:15	LabSZ	pacman[29634]:	Installed netcat (1.10-7)
+Dec 13 11:42:49	ADM	pacman[17453]:	Running transaction
+Dec 13 11:42:50	server	pacman[10202]:	Installed nmap (7.91-1)
+Dec 13 11:42:51	prod1	pacman[28861]:	Installed netcat (1.10-7)
+Dec 13 11:46:58	testvm	pacman[18284]:	Running transaction
+Dec 13 11:46:59	testvm	pacman[23825]:	Installed nmap (7.91-1)
+Dec 13 11:47:00	LabSZ	pacman[28659]:	Installed netcat (1.10-7)
+Dec 13 11:57:51	RUfus	pacman[22017]:	Running transaction
+Dec 13 11:57:52	testvm	pacman[15751]:	Installed nmap (7.91-1)
+Dec 13 11:57:53	testvm	pacman[20399]:	Installed netcat (1.10-7)
+Dec 13 11:58:55	RUfus	pacman[7904]:	Running transaction
+Dec 13 11:58:56	archive	pacman[29735]:	Installed nmap (7.91-1)
+Dec 13 11:58:57	prod1	pacman[10016]:	Installed netcat (1.10-7)
+Dec 13 12:25:11	testvm	pacman[4015]:	Running transaction
+Dec 13 12:25:12	archive	pacman[2724]:	Installed nmap (7.91-1)
+Dec 13 12:25:13	ADM	pacman[17777]:	Installed netcat (1.10-7)
+Dec 13 12:31:00	ADM	pacman[1045]:	Running transaction
+Dec 13 12:31:01	RUfus	pacman[26953]:	Installed nmap (7.91-1)
+Dec 13 12:31:02	prod1	pacman[6661]:	Installed netcat (1.10-7)

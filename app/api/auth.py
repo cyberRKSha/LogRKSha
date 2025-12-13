@@ -1,5 +1,5 @@
 # app/api/auth.py
-from fastapi import APIRouter, Request, Form, status, HTTPException, Response
+from fastapi import APIRouter, Request, Form, status, HTTPException, Response, BackgroundTasks
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.security import OAuth2PasswordRequestForm
@@ -7,12 +7,16 @@ from jose import JWTError, jwt
 from datetime import timedelta
 from starlette.responses import StreamingResponse
 import sqlite3, io, qrcode
+from sqlalchemy import create_engine, text
 
 from app import auth_utils
 from app.config import settings
+from app.rate_limiter import limiter
+from app.audit import audit
 
 router = APIRouter(tags=["Authentication"])
 templates = Jinja2Templates(directory=settings.TEMPLATES_PATH)
+COOKIE_MAX_AGE = auth_utils.settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60
 
 @router.get("/login", response_class=HTMLResponse)
 async def login_page(request: Request):
@@ -27,23 +31,31 @@ async def login_page(request: Request):
     return response
 
 @router.post("/login", response_class=HTMLResponse)
-async def login_form_post(request: Request, username: str = Form(...), password: str = Form(...)):
+@limiter.limit("5/minute")
+async def login_form_post(request: Request, background_tasks: BackgroundTasks, username: str = Form(...), password: str = Form(...)):
+    client_ip = request.client.host if request.client else "unknown"
     user = auth_utils.get_user(username)
+    
     if not user or not auth_utils.verify_password(password, user["hashed_password"]):
+        background_tasks.add_task(audit.log, username, audit.ACTION_LOGIN_FAILED, "/login", client_ip, "failure")
         return templates.TemplateResponse("login.html", {"request": request, "error": "Incorrect username or password"})
 
+    # Use secure cookies in production
+    secure_cookie = settings.IS_PRODUCTION
+    
     if user.get("is_two_factor_enabled"):
         temp_token = auth_utils.create_access_token(
             data={"sub": user["username"], "type": "pre-2fa"}, 
             expires_delta=timedelta(minutes=5)
         )
         response = RedirectResponse(url="/login/verify-2fa", status_code=status.HTTP_303_SEE_OTHER)
-        response.set_cookie(key="temp_token", value=f"Bearer {temp_token}", httponly=True, samesite="strict", path="/")
+        response.set_cookie(key="temp_token", value=f"Bearer {temp_token}", httponly=True, secure=secure_cookie, samesite="strict", path="/", max_age=5 * 60)
         return response
     else:
         access_token = auth_utils.create_access_token(data={"sub": user["username"]}, expires_delta=timedelta(minutes=auth_utils.settings.ACCESS_TOKEN_EXPIRE_MINUTES))
+        background_tasks.add_task(audit.log, username, audit.ACTION_LOGIN_SUCCESS, "/login", client_ip, "success")
         response = RedirectResponse(url="/", status_code=status.HTTP_303_SEE_OTHER)
-        response.set_cookie(key="access_token", value=f"Bearer {access_token}", httponly=True, samesite="strict", path="/")
+        response.set_cookie(key="access_token", value=f"Bearer {access_token}", httponly=True, secure=secure_cookie, samesite="strict", path="/", max_age=COOKIE_MAX_AGE)
         return response
 
 @router.get("/login/verify-2fa", response_class=HTMLResponse)
@@ -55,7 +67,7 @@ async def get_verify_2fa_page(request: Request):
     return response
 
 @router.post("/login/verify-2fa", response_class=HTMLResponse)
-async def post_verify_2fa_page(request: Request, code: str = Form(...)):
+async def post_verify_2fa_page(request: Request, background_tasks: BackgroundTasks, code: str = Form(...)):
     temp_token = request.cookies.get("temp_token")
     if not temp_token:
         return RedirectResponse(url="/login")
@@ -74,8 +86,10 @@ async def post_verify_2fa_page(request: Request, code: str = Form(...)):
         return templates.TemplateResponse("verify_2fa.html", {"request": request, "error": "Invalid code. Please try again."})
 
     access_token = auth_utils.create_access_token(data={"sub": user["username"]}, expires_delta=timedelta(minutes=auth_utils.settings.ACCESS_TOKEN_EXPIRE_MINUTES))
+    client_ip = request.client.host if request.client else "unknown"
+    background_tasks.add_task(audit.log, user["username"], audit.ACTION_LOGIN_SUCCESS, "/login/verify-2fa", client_ip, "success")
     response = RedirectResponse(url="/", status_code=status.HTTP_303_SEE_OTHER)
-    response.set_cookie(key="access_token", value=f"Bearer {access_token}", httponly=True, samesite="strict", path="/")
+    response.set_cookie(key="access_token", value=f"Bearer {access_token}", httponly=True, secure=settings.IS_PRODUCTION, samesite="Lax", path="/", max_age=COOKIE_MAX_AGE)
     response.delete_cookie(key="temp_token", path="/")
     return response
 
@@ -118,10 +132,14 @@ async def enable_2fa(request: Request, code: str = Form(...)):
         return RedirectResponse(url="/login")
 
     if auth_utils.verify_2fa_code(secret_key, code):
-        conn = sqlite3.connect(settings.DATABASE_URL, timeout=10)
-        conn.execute("UPDATE users SET two_factor_secret = ?, is_two_factor_enabled = 1 WHERE id = ?", (secret_key, user["id"]))
-        conn.commit()
-        conn.close()
+        engine = create_engine(settings.DATABASE_URL)
+        query = text("""
+            UPDATE users SET two_factor_secret = :secret, is_two_factor_enabled = 1 
+            WHERE id = :user_id
+        """)
+        with engine.connect() as connection:
+            with connection.begin() as transaction:
+                connection.execute(query, {"secret": secret_key, "user_id": user["id"]})
         return RedirectResponse(url="/security", status_code=status.HTTP_303_SEE_OTHER)
     else:
         context = {"request": request, "user": user, "secret_key": secret_key, "error": "Invalid code. Please try again."}
@@ -138,10 +156,14 @@ async def disable_2fa(request: Request):
     if not user:
         return RedirectResponse(url="/login")
         
-    conn = sqlite3.connect(settings.DATABASE_URL, timeout=10)
-    conn.execute("UPDATE users SET two_factor_secret = NULL, is_two_factor_enabled = 0 WHERE id = ?", (user["id"],))
-    conn.commit()
-    conn.close()
+    engine = create_engine(settings.DATABASE_URL)
+    query = text("""
+        UPDATE users SET two_factor_secret = NULL, is_two_factor_enabled = 0 
+        WHERE id = :user_id
+    """)
+    with engine.connect() as connection:
+        with connection.begin() as transaction:
+            connection.execute(query, {"user_id": user["id"]})
     return RedirectResponse(url="/security", status_code=status.HTTP_303_SEE_OTHER)
 
 @router.get("/logout")

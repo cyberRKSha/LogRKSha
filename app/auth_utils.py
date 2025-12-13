@@ -29,11 +29,14 @@ def get_token_from_cookie(request: Request) -> Optional[str]:
     return None
 
 async def get_current_user(request: Request):
-    token = request.cookies.get("access_token")
-    if not token or not token.startswith("Bearer "):
-        return None
+    # token = request.cookies.get("access_token")
+    # if not token or not token.startswith("Bearer "):
+    #     return None
     
-    token = token.split("Bearer ")[1]
+    # token = token.split("Bearer ")[1]
+    token = get_token_from_cookie(request)
+    if not token:
+        return None
     try:
         payload = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])
         username = payload.get("sub")

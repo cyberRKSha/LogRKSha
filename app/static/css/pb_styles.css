@@ -1,0 +1,184 @@
+/* static/css/playbooks_styles.css */
+
+/* Advanced Toggle Switch */
+/* .switch { position: relative; display: inline-block; width: 50px; height: 28px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; }
+.slider:before { position: absolute; content: ""; height: 20px; width: 20px; left: 4px; bottom: 4px; background-color: white; transition: .4s; }
+input:checked + .slider { background-color: var(--button-primary); }
+input:focus + .slider { box-shadow: 0 0 1px var(--button-primary); }
+input:checked + .slider:before { transform: translateX(22px); }
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
+
+.modal-overlay { transition: opacity 0.3s ease; }
+.modal-content { transition: transform 0.3s ease; transform: translateY(-50px); }
+.modal-overlay:not([style*="display: none"]) .modal-content { transform: translateY(0); }
+
+.review-table tbody tr:hover { background-color: rgba(0, 123, 255, 0.1) !important; }
+
+#playbook-form .control-group { margin-bottom: 20px; }
+#playbook-form label { font-weight: 600; color: var(--text-color-secondary); margin-bottom: 8px; display: block; }
+#playbook-form textarea { min-height: 120px; resize: vertical; } */
+
+
+
+
+/* --- Page Layout --- */
+.review-container {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Table Styling --- */
+.review-table {
+    border-collapse: collapse;
+    /* Ensures borders are clean */
+}
+
+.review-table thead th {
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-color-secondary);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.review-table tbody tr {
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.review-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.review-table tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.05) !important;
+}
+
+/* --- Modern Toggle Switch --- */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked+.slider {
+    background-color: var(--button-primary);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--button-primary);
+}
+
+input:checked+.slider:before {
+    transform: translateX(22px);
+}
+
+.slider.round {
+    border-radius: 28px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* --- Action Buttons in Table --- */
+.action-btn {
+    padding: 6px 14px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color-primary);
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--card-box-shadow);
+    border-color: var(--button-primary);
+    color: var(--button-primary);
+}
+
+.delete-btn:hover {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+/* --- Modal Animation & Styling --- */
+.modal-overlay {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.modal-overlay[style*="display: flex"] .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#playbook-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#playbook-form .control-group {
+    margin-bottom: 20px;
+}
+
+#playbook-form label {
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    margin-bottom: 8px;
+    display: block;
+}
