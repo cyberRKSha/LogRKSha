@@ -26,3 +26,12 @@ geoip/
 simulation/
 monitoring_status.json
 app.log
+node_modules/
+app/__*
+sigma-rules/
+xtar/
+*.db
+docs/
+*.docx
+*.json
+*.log
