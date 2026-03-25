@@ -40,7 +40,7 @@ geoip/
 
 # Runtime state
 monitoring_status.json
-model_registry.json
+# model_registry.json is NOT ignored -- it's a config file needed at runtime
 
 # Node
 node_modules/
