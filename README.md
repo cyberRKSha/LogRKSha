@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤖 Log Anomaly Detection System with AI-Powered SOC Assistance
+# Log Anomaly Detection System with AI-Powered SOC Assistance
 
 **A real-time, hybrid machine learning SIEM designed to detect known and unknown threats, enriched with explainable AI and automated response capabilities.**
 
@@ -22,28 +22,28 @@
 
 ---
 
-## ✨ Overview
+## Overview
 
 This project is a comprehensive, real-time log anomaly detection system designed to function as the core of a modern Security Operations Center (SOC). It ingests and analyzes system logs to identify known and unknown security threats using a sophisticated **hybrid machine learning approach**. The system is coupled with a dynamic web-based dashboard for live monitoring, threat hunting, and in-depth log analysis, turning raw data into actionable intelligence.
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
 | Feature | Description |
 | :--- | :--- |
-| 🧠 **Hybrid ML Engine** | Combines **supervised**, **unsupervised (Autoencoder)**, and **sequential (LSTM)** models to detect a wide range of threats, from known patterns to novel and behavioral anomalies. |
-| ⚡ **Real-Time Processing** | A decoupled architecture using **RabbitMQ** as a high-throughput message queue ensures resilient and scalable log ingestion without data loss. |
-| 📊 **Interactive Dashboard** | A modern web UI built with **FastAPI** and vanilla JavaScript for live log streaming, alert management, interactive charting, and a geographic threat map. |
-| 🤖 **Explainable AI (XAI)** | Integrated **LIME** to provide human-readable explanations for *why* a specific log was flagged as anomalous, building trust and aiding analyst investigations. |
-| 🌍 **Threat Intelligence** | Automatically enriches logs containing IP addresses with real-time data from **AbuseIPDB**, providing immediate context on malicious actors. |
-| 🗺️ **MITRE ATT&CK Mapping** | Automatically maps detected anomalies to the corresponding **MITRE ATT&CK** tactics and techniques, standardizing alert data. |
-| 🔄 **Automated Model Retraining** | Implements an MLOps feedback loop where an analyst's reviewed logs are used to automatically retrain and improve the ML models over time. |
-| 🔐 **Robust Security** | Features a secure login system with password hashing and end-to-end **Two-Factor Authentication (2FA)**. |
+| **Hybrid ML Engine** | Combines **supervised**, **unsupervised (Autoencoder)**, and **sequential (LSTM)** models to detect a wide range of threats, from known patterns to novel and behavioral anomalies. |
+| **Real-Time Processing** | A decoupled architecture using **RabbitMQ** as a high-throughput message queue ensures resilient and scalable log ingestion without data loss. |
+| **Interactive Dashboard** | A modern web UI built with **FastAPI** and vanilla JavaScript for live log streaming, alert management, interactive charting, and a geographic threat map. |
+| **Explainable AI (XAI)** | Integrated **LIME** to provide human-readable explanations for *why* a specific log was flagged as anomalous, building trust and aiding analyst investigations. |
+| **Threat Intelligence** | Automatically enriches logs containing IP addresses with real-time data from **AbuseIPDB**, providing immediate context on malicious actors. |
+| **MITRE ATT&CK Mapping** | Automatically maps detected anomalies to the corresponding **MITRE ATT&CK** tactics and techniques, standardizing alert data. |
+| **Automated Model Retraining** | Implements an MLOps feedback loop where an analyst's reviewed logs are used to automatically retrain and improve the ML models over time. |
+| **Robust Security** | Features a secure login system with password hashing and end-to-end **Two-Factor Authentication (2FA)**. |
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 The system is designed with a decoupled, asynchronous architecture to ensure scalability and resilience. The diagram below illustrates the flow of data from ingestion to presentation.
 
@@ -171,7 +171,7 @@ Download the free GeoLite2 City database from MaxMind and place the `GeoLite2-Ci
 
 ---
 
-## ▶️ Running the Application
+## Running the Application
 
 Use the provided shell script to start all services (Web App, Worker, and Monitor) using Honcho. The script requires `sudo` access for the monitor to read system log files.
 
@@ -182,7 +182,7 @@ Access the dashboard at **http://127.0.0.1:8000**.
 
 ---
 
-## 🖼️ Gallery
+## Gallery
 
 <p align="center">
   <img src="path/to/screenshot1.png" alt="Main Dashboard" width="45%"/>
