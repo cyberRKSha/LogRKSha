@@ -51,20 +51,20 @@ class RedisCache:
         except Exception as e:
             logger.warning(f"Cache SET error for {key}: {e}")
 
-    def memoize(self, ttl: int = 300, key_prefix: str = ""):
-        """Decorator to cache function results."""
+    def memoize(self, ttl: int = 300, key_prefix: str = "", exclude_types: tuple = ()):
+        """
+        Decorator to cache function results. 
+        exclude_types: Tuple of types to ignore in key generation (e.g., (Request, BackgroundTasks, Session))
+        """
         def decorator(func):
             @functools.wraps(func)
             async def wrapper(*args, **kwargs):
-                # Construct a cache key
-                # Note: This is a simple key generation and might not handle complex args well
-                arg_str = ":".join([str(a) for a in args])
-                kwarg_str = ":".join([f"{k}={v}" for k, v in kwargs.items()])
+                # Filter args and kwargs for key generation
+                filtered_args = [a for a in args if not isinstance(a, exclude_types)]
+                filtered_kwargs = {k: v for k, v in kwargs.items() if not isinstance(v, exclude_types)}
                 
-                # If the function is an endpoint, 'user' dependency effectively randomizes the key 
-                # if included in args. Since we usually don't want to cache per-user for GLOBAL stats,
-                # we might need to filter 'user' out of the key generation if implicit.
-                # For now, let's assume manual key usage or careful argument passing.
+                arg_str = ":".join([str(a) for a in filtered_args])
+                kwarg_str = ":".join([f"{k}={v}" for k, v in filtered_kwargs.items()])
                 
                 cache_key = f"{key_prefix}:{func.__name__}:{arg_str}:{kwarg_str}"
                 
@@ -82,5 +82,11 @@ class RedisCache:
                 return result
             return wrapper
         return decorator
+
+    def get_cached_ip_intel(self, ip: str) -> Optional[dict]:
+        return self.get_json(f"intel:{ip}")
+
+    def set_cached_ip_intel(self, ip: str, data: dict, ttl: int = 86400): # 24 hour TTL for IP intel
+        self.set_json(f"intel:{ip}", data, ttl)
 
 cache = RedisCache()

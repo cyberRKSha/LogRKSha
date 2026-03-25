@@ -155,7 +155,7 @@ async function handleStatusToggle(event) {
         showToast('Error: Could not find playbook to update.', 'error');
         return;
     }
-    
+
     // Update only the is_active field
     playbookToUpdate.is_active = is_active;
 
@@ -184,6 +184,46 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = '/';
     });
     form.addEventListener('submit', handleFormSubmit);
+
+    // AI Generation Handler
+    document.getElementById('generate-btn')?.addEventListener('click', async () => {
+        const promptInput = document.getElementById('ai-prompt');
+        const generateBtn = document.getElementById('generate-btn');
+        const prompt = promptInput.value.trim();
+
+        if (!prompt) {
+            showToast('Please enter a description for the playbook.', 'info');
+            return;
+        }
+
+        const originalText = generateBtn.textContent;
+        generateBtn.innerHTML = '<span class="spinner" style="width: 12px; height: 12px; border: 2px solid white; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite; display: inline-block;"></span> Generating...';
+        generateBtn.disabled = true;
+
+        try {
+            const response = await fetch('/api/playbooks/generate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ description: prompt })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById('playbook-triggers').value = JSON.stringify(data.trigger_conditions, null, 2);
+                document.getElementById('playbook-actions').value = JSON.stringify(data.actions, null, 2);
+                showToast('Playbook configuration generated!', 'success');
+            } else {
+                const error = await response.json();
+                showToast(error.detail || 'Failed to generate playbook', 'error');
+            }
+        } catch (err) {
+            console.error('Generation error:', err);
+            showToast('Failed to connect to AI service', 'error');
+        } finally {
+            generateBtn.innerHTML = originalText;
+            generateBtn.disabled = false;
+        }
+    });
 
     loadAndRenderPlaybooks();
 });

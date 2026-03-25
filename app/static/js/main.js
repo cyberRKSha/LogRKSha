@@ -36,6 +36,10 @@ window.onload = () => {
     createDetectionMethodChart();
     setInterval(refreshAllWidgets, 30000);
     initThreatMap();
+
+    // Phase 5: SOC Features
+    loadCases();
+    loadMitreHeatmap();
 };
 
 function setupEventListeners() {
@@ -54,6 +58,7 @@ function setupEventListeners() {
     document.getElementById('exportPdfBtn')?.addEventListener('click', handlePdfExport);
     const quickSearchContainer = document.querySelector('.quick-searches');
     if (quickSearchContainer) { quickSearchContainer.addEventListener('click', handleQuickSearch); }
+
     const manualSearchInputs = document.querySelectorAll('.investigation-controls input, .investigation-controls select');
     manualSearchInputs.forEach(input => {
         input.addEventListener('input', () => {
@@ -61,6 +66,15 @@ function setupEventListeners() {
             document.querySelector('.investigation-controls').classList.add('manual-search-active');
         });
     });
+
+    // Live refresh every 30 seconds
+    setInterval(() => {
+        loadDashboardStats();
+        loadRecentLogs();
+        loadAlerts();
+        loadCases(); // Refresh cases list
+        loadMitreHeatmap(); // Refresh heatmap
+    }, 30000);
 
     document.getElementById('openPlaybooksBtn')?.addEventListener('click', () => {
         window.location.href = '/playbooks';
@@ -709,5 +723,504 @@ async function handlePdfExport() {
         btnText.textContent = 'Export PDF';
         spinner.style.display = 'none';
         pdfBtn.disabled = false;
+    }
+}
+
+// --- Phase 5: Cases and MITRE Functions ---
+
+async function loadCases() {
+    const container = document.getElementById('casesContainer');
+    if (!container) return;
+
+    // Status icons using folder metaphor
+    const statusIcons = {
+        'Open': `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2v11z"></path><path d="M2 10h20"></path></svg>`,
+        'In Progress': `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>`,
+        'Resolved': `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`,
+        'Closed': `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>`
+    };
+
+    const priorityColors = {
+        'Low': { border: '#22c55e', bg: 'rgba(34, 197, 94, 0.1)' },
+        'Medium': { border: '#eab308', bg: 'rgba(234, 179, 8, 0.1)' },
+        'High': { border: '#f97316', bg: 'rgba(249, 115, 22, 0.1)' },
+        'Critical': { border: '#ef4444', bg: 'rgba(239, 68, 68, 0.15)' }
+    };
+
+    const statusColors = {
+        'Open': '#3b82f6',
+        'In Progress': '#eab308',
+        'Resolved': '#22c55e',
+        'Closed': '#6b7280'
+    };
+
+    try {
+        const response = await fetch('/api/cases');
+        const cases = await response.json();
+
+        if (!cases || cases.length === 0) {
+            container.innerHTML = `
+                <div style="grid-column: 1/-1; text-align: center; padding: 60px 40px; color: var(--text-color-secondary);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity: 0.4;">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                        <line x1="12" y1="11" x2="12" y2="17"></line>
+                        <line x1="9" y1="14" x2="15" y2="14"></line>
+                    </svg>
+                    <h4 style="margin: 16px 0 8px 0; color: var(--text-color);">No Investigation Cases</h4>
+                    <p style="margin: 0; font-size: 14px;">Click "+ New Case" to create your first investigation.</p>
+                </div>
+            `;
+            return;
+        }
+
+        container.innerHTML = cases.map(c => {
+            const priority = priorityColors[c.priority] || priorityColors['Medium'];
+            const statusColor = statusColors[c.status] || statusColors['Open'];
+            const statusIcon = statusIcons[c.status] || statusIcons['Open'];
+            const isClosed = c.status === 'Closed' || c.status === 'Resolved';
+
+            return `
+                <div class="case-card" data-case-id="${c.id}" style="
+                    background: ${priority.bg};
+                    border-radius: 12px;
+                    border-left: 4px solid ${priority.border};
+                    padding: 0;
+                    overflow: hidden;
+                    transition: all 0.2s;
+                    ${isClosed ? 'opacity: 0.7;' : ''}
+                ">
+                    <!-- Header with status icon and priority -->
+                    <div style="padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border);">
+                        <div style="display: flex; align-items: center; gap: 8px; color: ${statusColor};">
+                            ${statusIcon}
+                            <span style="font-weight: 600; font-size: 12px; text-transform: uppercase;">${c.status}</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <span style="background: ${priority.border}; color: white; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;">${c.priority}</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Body -->
+                    <div style="padding: 16px;">
+                        <h4 style="margin: 0 0 8px 0; color: var(--text-color); font-size: 15px; font-weight: 600;">${escapeHTML(c.title)}</h4>
+                        <p style="margin: 0 0 12px 0; color: var(--text-color-secondary); font-size: 13px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            ${escapeHTML(c.description || 'No description provided')}
+                        </p>
+                        
+                        <!-- Stats row -->
+                        <div style="display: flex; gap: 16px; margin-bottom: 12px; font-size: 12px; color: var(--text-color-secondary);">
+                            <span style="display: flex; align-items: center; gap: 4px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+                                ${c.alert_count || 0} alerts
+                            </span>
+                            <span style="display: flex; align-items: center; gap: 4px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                ${new Date(c.created_at).toLocaleDateString()}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Actions footer -->
+                    <div style="padding: 12px 16px; background: var(--card-bg); border-top: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; gap: 8px;">
+                            <button onclick="event.stopPropagation(); openAddAlertModal(${c.id})" class="case-action-btn" style="background: var(--button-primary); color: white; border: none; padding: 6px 12px; border-radius: 6px; font-size: 11px; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                Add Alert
+                            </button>
+                            <select onchange="updateCaseStatus(${c.id}, this.value)" onclick="event.stopPropagation()" style="background: var(--card-dark-bg); color: var(--text-color); border: 1px solid var(--card-border); padding: 6px 8px; border-radius: 6px; font-size: 11px; cursor: pointer;">
+                                <option value="Open" ${c.status === 'Open' ? 'selected' : ''}>📂 Open</option>
+                                <option value="In Progress" ${c.status === 'In Progress' ? 'selected' : ''}>🔄 In Progress</option>
+                                <option value="Resolved" ${c.status === 'Resolved' ? 'selected' : ''}>✅ Resolved</option>
+                                <option value="Closed" ${c.status === 'Closed' ? 'selected' : ''}>📁 Closed</option>
+                            </select>
+                        </div>
+                        <button onclick="event.stopPropagation(); deleteCase(${c.id})" class="case-action-btn" style="background: transparent; color: var(--danger-color); border: 1px solid var(--danger-color); padding: 6px 10px; border-radius: 6px; font-size: 11px; cursor: pointer;" title="Delete Case">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    } catch (err) {
+        console.error('Failed to load cases:', err);
+        container.innerHTML = '<p style="color: var(--danger-color);">Failed to load cases.</p>';
+    }
+}
+
+
+async function loadMitreHeatmap() {
+    const container = document.getElementById('mitreHeatmapContainer');
+    if (!container) return;
+
+    // Tactic-specific colors based on kill chain progression
+    const tacticColors = {
+        'Reconnaissance': '#94a3b8',
+        'Resource Development': '#a78bfa',
+        'Initial Access': '#f472b6',
+        'Execution': '#fb923c',
+        'Persistence': '#f87171',
+        'Privilege Escalation': '#ef4444',
+        'Defense Evasion': '#eab308',
+        'Credential Access': '#22c55e',
+        'Discovery': '#06b6d4',
+        'Lateral Movement': '#3b82f6',
+        'Collection': '#8b5cf6',
+        'Command and Control': '#ec4899',
+        'Exfiltration': '#dc2626',
+        'Impact': '#b91c1c',
+        'Unknown': '#64748b'
+    };
+
+    // MITRE ID mapping to tactic slug for URLs
+    const tacticSlugs = {
+        'Reconnaissance': 'reconnaissance',
+        'Resource Development': 'resource-development',
+        'Initial Access': 'initial-access',
+        'Execution': 'execution',
+        'Persistence': 'persistence',
+        'Privilege Escalation': 'privilege-escalation',
+        'Defense Evasion': 'defense-evasion',
+        'Credential Access': 'credential-access',
+        'Discovery': 'discovery',
+        'Lateral Movement': 'lateral-movement',
+        'Collection': 'collection',
+        'Command and Control': 'command-and-control',
+        'Exfiltration': 'exfiltration',
+        'Impact': 'impact'
+    };
+
+    try {
+        const response = await fetch('/api/stats/mitre_heatmap');
+        const data = await response.json();
+
+        if (!data || data.length === 0) {
+            container.innerHTML = `
+                <div style="text-align: center; padding: 60px 40px; color: var(--text-color-secondary);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity: 0.5;">
+                        <rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    <h4 style="margin: 16px 0 8px 0; color: var(--text-color);">No Techniques Detected yet</h4>
+                    <p style="margin: 0; font-size: 14px;">MITRE ATT&CK techniques will appear here live when alerts are triggered.</p>
+                </div>
+            `;
+            return;
+        }
+
+        // Group by tactic
+        const tactics = {};
+        let totalCount = 0;
+        data.forEach(item => {
+            const tactic = item.mitre_tactic || 'Unknown';
+            if (!tactics[tactic]) tactics[tactic] = [];
+            tactics[tactic].push(item);
+            totalCount += item.count;
+        });
+
+        const maxCount = Math.max(...data.map(d => d.count));
+
+        // Render improved heatmap
+        let html = `
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--card-border);">
+                <div><span style="font-size: 24px; font-weight: 700; color: var(--text-color);">${data.length}</span><span style="color: var(--text-color-secondary); margin-left: 8px;">Unique Techniques</span></div>
+                <div><span style="font-size: 24px; font-weight: 700; color: var(--danger-color);">${totalCount}</span><span style="color: var(--text-color-secondary); margin-left: 8px;">Total Detections</span></div>
+                <div><span style="font-size: 24px; font-weight: 700; color: var(--accent-purple);">${Object.keys(tactics).length}</span><span style="color: var(--text-color-secondary); margin-left: 8px;">Tactics Covered</span></div>
+            </div>
+            <div class="mitre-tactics" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+        `;
+
+        for (const [tactic, techniques] of Object.entries(tactics)) {
+            const tacticColor = tacticColors[tactic] || tacticColors['Unknown'];
+            const tacticTotal = techniques.reduce((sum, t) => sum + t.count, 0);
+            const tacticUrl = `https://attack.mitre.org/tactics/${tacticSlugs[tactic] || ''}/`;
+
+            html += `
+                <div class="mitre-tactic-card" style="background: var(--card-dark-bg); border-radius: 12px; padding: 16px; border-left: 4px solid ${tacticColor}; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                        <a href="${tacticUrl}" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 6px;">
+                            <h4 style="margin: 0; color: var(--text-color); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">${tactic}</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--text-color-secondary)" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                        <span style="background: ${tacticColor}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600;">${tacticTotal}</span>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        ${techniques.sort((a, b) => b.count - a.count).map(t => {
+                const intensity = t.count / maxCount;
+                const opacity = 0.3 + intensity * 0.7;
+                const techIdMatch = t.mitre_technique.match(/(T\d+(\.\d+)?)/);
+                const techId = techIdMatch ? techIdMatch[0] : '';
+                const techUrl = techId ? `https://attack.mitre.org/techniques/${techId.replace('.', '/')}/` : '#';
+
+                return `
+                                <a href="${techUrl}" target="_blank" class="mitre-technique" style="text-decoration: none; background: ${tacticColor}${Math.round(opacity * 255).toString(16).padStart(2, '0')}; padding: 6px 10px; border-radius: 6px; font-size: 11px; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s;" title="${t.mitre_technique}: ${t.count} occurrences">
+                                    <span style="color: white; text-shadow: 0 1px 2px rgba(0,0,0,0.5); font-weight: 500;">${t.mitre_technique}</span>
+                                    <span style="background: rgba(0,0,0,0.4); color: white; padding: 1px 5px; border-radius: 4px; font-size: 10px; font-weight: 600;">${t.count}</span>
+                                </a>
+                            `;
+            }).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        html += '</div>';
+
+        container.innerHTML = html;
+    } catch (err) {
+        console.error('Failed to load MITRE heatmap:', err);
+        container.innerHTML = '<p style="color: var(--danger-color); text-align: center; padding: 40px;">Failed to load MITRE data.</p>';
+    }
+}
+
+// --- Phase 5: Case Modal Handlers ---
+const caseModal = document.getElementById('case-modal');
+const caseForm = document.getElementById('case-form');
+const deleteModal = document.getElementById('delete-modal');
+
+// Open case modal and load alerts
+document.getElementById('create-case-btn')?.addEventListener('click', () => {
+    if (caseModal) {
+        caseModal.style.display = 'flex';
+        document.getElementById('case-title')?.focus();
+        loadAlertsForSelection();
+    }
+});
+
+async function loadAlertsForSelection() {
+    const listContainer = document.getElementById('alert-selection-list');
+    const countSpan = document.getElementById('selected-alert-count');
+    if (!listContainer) return;
+
+    listContainer.innerHTML = '<div style="text-align: center; color: var(--text-color-secondary); padding: 20px;">Loading alerts...</div>';
+
+    try {
+        const response = await fetch('/api/alerts');
+        const alerts = await response.json();
+
+        if (!alerts || alerts.length === 0) {
+            listContainer.innerHTML = '<div style="text-align: center; color: var(--text-color-secondary); padding: 20px;">No open alerts available to link.</div>';
+            return;
+        }
+
+        listContainer.innerHTML = alerts.map(alert => `
+            <div class="alert-select-item" onclick="toggleAlertSelection(this, ${alert.id})" style="padding: 10px; margin-bottom: 8px; border: 1px solid var(--card-border); border-radius: 6px; cursor: pointer; transition: all 0.2s; background: var(--card-bg);">
+                <div style="display: flex; justify-content: space-between; align-items: start;">
+                    <span style="font-weight: 600; font-size: 13px; color: var(--text-color);">${escapeHTML(alert.rule_name)}</span>
+                    <span class="badge" style="background: ${getRiskColor(alert.risk_score)}; font-size: 10px;">Risk ${alert.risk_score}</span>
+                </div>
+                <div style="font-size: 11px; color: var(--text-color-secondary); margin-top: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${escapeHTML(alert.content)}</div>
+                <div style="font-size: 10px; color: var(--text-color-secondary); margin-top: 6px; display: flex; justify-content: space-between;">
+                    <span>${new Date(alert.timestamp).toLocaleString()}</span>
+                    <span>${alert.mitre_technique || 'No Technique'}</span>
+                </div>
+            </div>
+        `).join('');
+
+        // Reset selected count
+        countSpan.textContent = '(0 selected)';
+        countSpan.dataset.selectedIds = '[]';
+
+    } catch (err) {
+        console.error('Failed to load alerts for selection:', err);
+        listContainer.innerHTML = '<div style="color: var(--danger-color); text-align: center; padding: 20px;">Failed to load alerts</div>';
+    }
+}
+
+window.toggleAlertSelection = function (element, alertId) {
+    const isSelected = element.style.borderColor === 'var(--button-primary)';
+
+    // Toggle styles
+    if (isSelected) {
+        element.style.borderColor = 'var(--card-border)';
+        element.style.background = 'var(--card-bg)';
+    } else {
+        element.style.borderColor = 'var(--button-primary)';
+        element.style.background = 'rgba(59, 130, 246, 0.1)';
+    }
+
+    // Update selected IDs list
+    const countSpan = document.getElementById('selected-alert-count');
+    let selectedIds = JSON.parse(countSpan.dataset.selectedIds || '[]');
+
+    if (isSelected) {
+        selectedIds = selectedIds.filter(id => id !== alertId);
+    } else {
+        selectedIds.push(alertId);
+    }
+
+    countSpan.dataset.selectedIds = JSON.stringify(selectedIds);
+    countSpan.textContent = `(${selectedIds.length} selected)`;
+};
+
+function getRiskColor(score) {
+    if (score >= 80) return '#ef4444';
+    if (score >= 40) return '#f97316';
+    return '#22c55e';
+}
+
+// Close case modal
+document.getElementById('case-modal-close')?.addEventListener('click', () => {
+    if (caseModal) caseModal.style.display = 'none';
+});
+document.getElementById('case-cancel-btn')?.addEventListener('click', () => {
+    if (caseModal) caseModal.style.display = 'none';
+});
+
+// Close on overlay click
+caseModal?.addEventListener('click', (e) => {
+    if (e.target === caseModal) caseModal.style.display = 'none';
+});
+
+// Handle case form submission
+caseForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('case-submit-btn');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<span class="spinner" style="width: 16px; height: 16px; border: 2px solid white; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite; display: inline-block;"></span> Creating...';
+    submitBtn.disabled = true;
+
+    const countSpan = document.getElementById('selected-alert-count');
+    const selectedIds = JSON.parse(countSpan.dataset.selectedIds || '[]');
+
+    const caseData = {
+        title: document.getElementById('case-title').value,
+        description: document.getElementById('case-description').value,
+        priority: document.getElementById('case-priority').value
+    };
+
+    try {
+        // 1. Create Case
+        const response = await fetch('/api/cases', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(caseData)
+        });
+
+        if (response.ok) {
+            const result = await response.json();
+            const caseId = result.id;
+
+            // 2. Link Selected Alerts (if any)
+            if (selectedIds.length > 0) {
+                await fetch(`/api/cases/${caseId}/alerts`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ alert_ids: selectedIds })
+                });
+            }
+
+            showToast('Investigation case created successfully!', 'success');
+            caseModal.style.display = 'none';
+            caseForm.reset();
+            loadCases();
+        } else {
+            const error = await response.json();
+            showToast(error.detail || 'Failed to create case', 'error');
+        }
+    } catch (err) {
+        console.error('Failed to create case:', err);
+        showToast('Failed to create case', 'error');
+    } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    }
+});
+
+// --- Case Action Functions (exposed globally) ---
+
+// Update case status
+window.updateCaseStatus = async function (caseId, newStatus) {
+    try {
+        const response = await fetch(`/api/cases/${caseId}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: newStatus })
+        });
+
+        if (response.ok) {
+            showToast(`Case status updated to "${newStatus}"`, 'success');
+            loadCases();
+        } else {
+            showToast('Failed to update status', 'error');
+        }
+    } catch (err) {
+        console.error('Failed to update case status:', err);
+        showToast('Failed to update status', 'error');
+    }
+};
+
+// Custom Modal Delete Case
+window.deleteCase = function (caseId) {
+    if (!deleteModal) return;
+
+    deleteModal.style.display = 'flex';
+
+    // Cleanup old event listeners
+    const confirmBtn = document.getElementById('delete-confirm-btn');
+    const cancelBtn = document.getElementById('delete-cancel-btn');
+
+    const newConfirm = confirmBtn.cloneNode(true);
+    const newCancel = cancelBtn.cloneNode(true);
+    confirmBtn.parentNode.replaceChild(newConfirm, confirmBtn);
+    cancelBtn.parentNode.replaceChild(newCancel, cancelBtn);
+
+    // Add new listeners
+    newCancel.addEventListener('click', () => {
+        deleteModal.style.display = 'none';
+    });
+
+    // Close on overlay click
+    deleteModal.onclick = (e) => {
+        if (e.target === deleteModal) deleteModal.style.display = 'none';
+    };
+
+    newConfirm.addEventListener('click', async () => {
+        try {
+            const response = await fetch(`/api/cases/${caseId}`, {
+                method: 'DELETE'
+            });
+
+            if (response.ok) {
+                showToast('Case deleted successfully', 'success');
+                loadCases();
+            } else {
+                showToast('Failed to delete case', 'error');
+            }
+        } catch (err) {
+            console.error('Failed to delete case:', err);
+            showToast('Failed to delete case', 'error');
+        } finally {
+            deleteModal.style.display = 'none';
+        }
+    });
+};
+
+// Open Add Alert modal
+window.openAddAlertModal = function (caseId) {
+    const alertId = prompt('Enter Alert ID to link:');
+    if (!alertId || isNaN(alertId)) {
+        if (alertId !== null) showToast('Please enter a valid alert ID', 'error');
+        return;
+    }
+
+    linkAlertToCase(caseId, parseInt(alertId));
+};
+
+// Link alert to case
+async function linkAlertToCase(caseId, alertId) {
+    try {
+        const response = await fetch(`/api/cases/${caseId}/alerts`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ alert_ids: [alertId] })
+        });
+
+        if (response.ok) {
+            showToast('Alert linked to case successfully!', 'success');
+            loadCases();
+        } else {
+        }
+    } catch (err) {
+        console.error('Failed to link alert:', err);
+        showToast('Failed to link alert', 'error');
     }
 }

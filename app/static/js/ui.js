@@ -270,18 +270,168 @@ export function openAlertSidePanel(alertData) {
             </ul>
         </div>
 
-        <div class="ai-coming-soon-banner">
-            <h5>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12a10 10 0 0 1 10-10z"></path><path d="M12 6v6l4 2"></path></svg>
-                AI-Powered Analysis Coming Soon
-            </h5>
-            <p>Intelligent remediation suggestions tailored to this specific alert will be available after LLM integration.</p>
+        <div class="side-panel-ai-section">
+            <div class="side-panel-ai-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12a10 10 0 0 1 10-10z"></path>
+                    <path d="M12 6v6l4 2"></path>
+                </svg>
+                <h4>AI-Powered Analysis</h4>
+            </div>
+            <div class="side-panel-ai-buttons">
+                <button class="side-panel-ai-btn summary-btn" id="ai-summary-btn" data-alert-id="${alertData.id}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                    </svg>
+                    Generate Summary
+                </button>
+                <button class="side-panel-ai-btn remediation-btn" id="ai-remediation-btn" data-alert-id="${alertData.id}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Get AI Remediation
+                </button>
+            </div>
+            <div id="ai-result-container"></div>
         </div>
     `;
 
     // Open panel
     sidePanel.classList.add('open');
     if (sidePanelOverlay) sidePanelOverlay.style.display = 'block';
+
+    // AI Button Event Handlers
+    const summaryBtn = document.getElementById('ai-summary-btn');
+    const remediationBtn = document.getElementById('ai-remediation-btn');
+    const resultContainer = document.getElementById('ai-result-container');
+
+    if (summaryBtn) {
+        summaryBtn.addEventListener('click', async () => {
+            summaryBtn.classList.add('loading');
+            summaryBtn.innerHTML = '<span class="btn-spinner"></span> Generating...';
+
+            try {
+                const response = await fetch(`/api/ai/summarize/${alertData.id}`);
+                const data = await response.json();
+
+                if (response.ok) {
+                    resultContainer.innerHTML = renderAIResult('AI Summary', data.content, data.provider);
+                } else {
+                    resultContainer.innerHTML = renderAIError(data.detail || 'Failed to generate summary');
+                }
+            } catch (err) {
+                console.error('AI Summary error:', err);
+                resultContainer.innerHTML = renderAIError('Failed to connect to AI service');
+            } finally {
+                summaryBtn.classList.remove('loading');
+                summaryBtn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                    </svg>
+                    Generate Summary
+                `;
+            }
+        });
+    }
+
+    if (remediationBtn) {
+        remediationBtn.addEventListener('click', async () => {
+            remediationBtn.classList.add('loading');
+            remediationBtn.innerHTML = '<span class="btn-spinner"></span> Generating...';
+
+            try {
+                const response = await fetch(`/api/ai/remediation/${alertData.id}`);
+                const data = await response.json();
+
+                if (response.ok) {
+                    resultContainer.innerHTML = renderAIResult('AI Remediation Steps', data.content, data.provider);
+                } else {
+                    resultContainer.innerHTML = renderAIError(data.detail || 'Failed to generate remediation');
+                }
+            } catch (err) {
+                console.error('AI Remediation error:', err);
+                resultContainer.innerHTML = renderAIError('Failed to connect to AI service');
+            } finally {
+                remediationBtn.classList.remove('loading');
+                remediationBtn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Get AI Remediation
+                `;
+            }
+        });
+    }
+}
+
+// Helper function to render AI results with markdown support
+function renderAIResult(title, content, provider) {
+    const renderedContent = renderAIMarkdown(content);
+    return `
+        <div class="side-panel-ai-result">
+            <div class="side-panel-ai-result-header">
+                <span class="side-panel-ai-result-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12a10 10 0 0 1 10-10z"></path>
+                    </svg>
+                    ${title}
+                </span>
+                <span class="side-panel-ai-result-provider">via ${provider || 'AI'}</span>
+            </div>
+            <div class="side-panel-ai-result-content ai-content-wrapper">
+                ${renderedContent}
+            </div>
+        </div>
+    `;
+}
+
+function renderAIError(message) {
+    return `
+        <div class="side-panel-ai-result" style="border-color: var(--text-red);">
+            <p style="color: var(--text-red); margin: 0;">⚠️ ${message}</p>
+        </div>
+    `;
+}
+
+function renderAIMarkdown(content) {
+    let html = content;
+
+    // Escape HTML
+    html = html.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+    // Headers
+    html = html.replace(/^### (.+)$/gm, '<h4 class="ai-section-title ai-h4"><span class="ai-title-icon">▸</span>$1</h4>');
+    html = html.replace(/^## (.+)$/gm, '<h3 class="ai-section-title ai-h3"><span class="ai-title-icon">◆</span>$1</h3>');
+    html = html.replace(/^# (.+)$/gm, '<h2 class="ai-section-title ai-h2"><span class="ai-title-icon">★</span>$1</h2>');
+
+    // Bold
+    html = html.replace(/\*\*(.+?)\*\*/g, '<strong class="ai-highlight">$1</strong>');
+
+    // Inline code
+    html = html.replace(/`([^`]+)`/g, '<code class="ai-inline-code">$1</code>');
+
+    // Bullet points
+    html = html.replace(/^[\-\*•] (.+)$/gm, '<li class="ai-list-item"><span class="ai-bullet">●</span><span class="ai-list-content">$1</span></li>');
+
+    // Numbered lists
+    html = html.replace(/^(\d+)\. (.+)$/gm, '<li class="ai-list-item ai-numbered"><span class="ai-number">$1</span><span class="ai-list-content">$2</span></li>');
+
+    // Wrap lists
+    html = html.replace(/(<li class="ai-list-item[^"]*">[\s\S]*?<\/li>\n?)+/g, (match) => `<ul class="ai-list">${match}</ul>`);
+
+    // Paragraphs
+    html = html.replace(/\n\n+/g, '</p><p class="ai-paragraph">');
+    html = html.replace(/\n/g, '<br>');
+
+    return `<p class="ai-paragraph">${html}</p>`;
 }
 
 export function handleStatusUpdate(data) {
@@ -574,9 +724,159 @@ export async function showLogContext(timestamp, originalLogContent, logId) {
             `;
         }
 
+        // === TAB 4: Notes (Phase 5) ===
+        const tabNotes = document.getElementById('tab-notes');
+        if (tabNotes) {
+            tabNotes.innerHTML = `
+                <div class="notes-section">
+                    <div class="notes-input-area">
+                        <textarea id="new-note-input" placeholder="Add investigation note..." rows="3" 
+                            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); background: var(--card-dark-bg); color: var(--text-color); resize: vertical;"></textarea>
+                        <button id="add-note-btn" class="btn-primary" style="margin-top: 8px;" data-log-id="${logId}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            Add Note
+                        </button>
+                    </div>
+                    <div id="notes-list" class="notes-list" style="margin-top: 20px;">
+                        <p style="color: var(--text-color-secondary);">Loading notes...</p>
+                    </div>
+                </div>
+            `;
+            // Fetch existing notes for this alert
+            loadAlertNotes(logId);
+
+            // Add note button handler
+            document.getElementById('add-note-btn')?.addEventListener('click', async () => {
+                const noteInput = document.getElementById('new-note-input');
+                const noteText = noteInput?.value?.trim();
+                if (!noteText) return;
+
+                try {
+                    const response = await fetch(`/api/alerts/${logId}/notes`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ note: noteText })
+                    });
+                    if (response.ok) {
+                        noteInput.value = '';
+                        loadAlertNotes(logId);
+                        showToast('Note added successfully', 'success');
+                    }
+                } catch (err) {
+                    console.error('Failed to add note:', err);
+                    showToast('Failed to add note', 'error');
+                }
+            });
+        }
+
+        // === TAB 5: Session Replay (Phase 5) ===
+        const tabSession = document.getElementById('tab-session');
+        if (tabSession) {
+            // Extract IP from log content for session lookup
+            const ipMatch = originalLogContent?.match(/\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/);
+            const sessionKey = ipMatch ? ipMatch[0] : null;
+
+            if (sessionKey) {
+                tabSession.innerHTML = `
+                    <div class="session-replay-header" style="margin-bottom: 16px;">
+                        <h4 style="margin: 0; display: flex; align-items: center; gap: 8px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--button-primary)" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            Session Timeline: ${sessionKey}
+                        </h4>
+                    </div>
+                    <div id="session-timeline-content" style="max-height: 400px; overflow-y: auto;">
+                        <p>Loading session data...</p>
+                    </div>
+                `;
+                loadSessionTimeline(sessionKey);
+            } else {
+                tabSession.innerHTML = `
+                    <div style="text-align: center; padding: 40px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-color-secondary)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                        <h4 style="margin: 15px 0 5px 0;">No Session Data</h4>
+                        <p style="color: var(--text-color-secondary);">Could not extract IP address from this log for session replay.</p>
+                    </div>
+                `;
+            }
+        }
+
     } catch (error) {
         tabTimeline.innerHTML = '<p>Error loading log context.</p>';
         console.error('Error in showLogContext:', error);
+    }
+}
+
+// Helper function to load alert notes
+async function loadAlertNotes(alertId) {
+    const notesList = document.getElementById('notes-list');
+    if (!notesList) return;
+
+    try {
+        const response = await fetch(`/api/alerts/${alertId}/notes`);
+        const notes = await response.json();
+
+        if (!notes || notes.length === 0) {
+            notesList.innerHTML = '<p style="color: var(--text-color-secondary); text-align: center;">No notes yet. Add the first note above.</p>';
+            return;
+        }
+
+        notesList.innerHTML = notes.map(note => `
+            <div class="note-item" style="background: var(--card-dark-bg); padding: 12px; border-radius: 8px; margin-bottom: 8px; border-left: 3px solid var(--button-primary);">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-weight: 600; color: var(--text-color);">${escapeHTML(note.username || 'Unknown')}</span>
+                    <span style="color: var(--text-color-secondary); font-size: 12px;">${new Date(note.created_at).toLocaleString()}</span>
+                </div>
+                <p style="margin: 0; color: var(--text-color);">${escapeHTML(note.note)}</p>
+            </div>
+        `).join('');
+    } catch (err) {
+        console.error('Failed to load notes:', err);
+        notesList.innerHTML = '<p style="color: var(--danger-color);">Failed to load notes.</p>';
+    }
+}
+
+// Helper function to load session timeline
+async function loadSessionTimeline(sessionKey) {
+    const container = document.getElementById('session-timeline-content');
+    if (!container) return;
+
+    try {
+        const response = await fetch(`/api/sessions/${encodeURIComponent(sessionKey)}/timeline`);
+        const logs = await response.json();
+
+        if (!logs || logs.length === 0) {
+            container.innerHTML = '<p style="color: var(--text-color-secondary); text-align: center;">No session data found for this IP.</p>';
+            return;
+        }
+
+        container.innerHTML = `
+            <div class="session-chain" style="display: flex; flex-direction: column; gap: 8px;">
+                ${logs.map((log, i) => {
+            const isAnomaly = log.verdict !== 'Normal';
+            const time = new Date(log.timestamp).toLocaleTimeString('en-US', { hour12: false });
+            const mitre = log.mitre_technique ? `<span class="badge" style="background: var(--accent-purple); font-size: 10px;">${log.mitre_technique}</span>` : '';
+
+            return `
+                        <div class="session-event" style="display: flex; align-items: flex-start; gap: 12px; ${isAnomaly ? 'background: rgba(239, 68, 68, 0.1); padding: 8px; border-radius: 8px;' : ''}">
+                            <div style="display: flex; flex-direction: column; align-items: center; width: 60px; flex-shrink: 0;">
+                                <span style="font-size: 11px; color: var(--text-color-secondary);">${time}</span>
+                                <div style="width: 2px; height: 20px; background: var(--card-border); margin-top: 4px;"></div>
+                            </div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+                                    <span class="badge" style="background: ${isAnomaly ? 'var(--danger-color)' : 'var(--success-color)'}; font-size: 10px;">${log.verdict || 'Normal'}</span>
+                                    ${mitre}
+                                </div>
+                                <p style="margin: 0; font-family: monospace; font-size: 12px; color: var(--text-color); word-break: break-all;">${escapeHTML(log.content?.substring(0, 200) || '-')}${log.content?.length > 200 ? '...' : ''}</p>
+                            </div>
+                        </div>
+                    `;
+        }).join('')}
+            </div>
+        `;
+    } catch (err) {
+        console.error('Failed to load session timeline:', err);
+        container.innerHTML = '<p style="color: var(--danger-color);">Failed to load session data.</p>';
     }
 }
 

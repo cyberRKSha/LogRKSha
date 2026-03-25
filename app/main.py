@@ -35,7 +35,7 @@ class SecureHeadersMiddleware(BaseHTTPMiddleware):
             resp.headers['Permissions-Policy'] = 'geolocation=()'
             # Add HSTS in production only (only when you serve over HTTPS)
             # resp.headers['Strict-Transport-Security'] = 'max-age=63072000; includeSubDomains; preload'
-            resp.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; connect-src 'self' ws:; img-src 'self' data: https://*.basemaps.cartocdn.com https://*.tile.openstreetmap.org;"
+            resp.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' ws:; img-src 'self' data: https://*.basemaps.cartocdn.com https://*.tile.openstreetmap.org;"
         return resp
 
 app.add_middleware(SecureHeadersMiddleware)
@@ -57,3 +57,15 @@ app.include_router(ingest.router)
 
 from app.api import security
 app.include_router(security.router)
+
+from app.api import benchmark
+app.include_router(benchmark.router)
+
+from app.api import ai
+app.include_router(ai.router)
+
+from app.api import users
+app.include_router(users.router)
+
+from app.api import cases
+app.include_router(cases.router)

@@ -23,7 +23,17 @@ async function initDriftChart() {
 
         // --- Populate Metrics Stats (Latest) ---
         const latest = data[data.length - 1]; // Get last entry
-        document.getElementById('modelLastUpdated').textContent = `Use: ${latest.timestamp}`;
+
+        // Visual Date Formatting
+        const dateObj = new Date(latest.timestamp);
+        const visualDate = dateObj.toLocaleDateString(undefined, {
+            month: 'short',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+
+        document.getElementById('modelLastUpdated').innerHTML = `<span class="date-badge">${visualDate}</span>`;
 
         const fmt = val => (val * 100).toFixed(1) + '%';
 
@@ -80,7 +90,7 @@ async function initDriftChart() {
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
-                aspectRatio: 3, // Width to height ratio (3:1) - prevents stretching
+                aspectRatio: 1.8, // Reduced from 3 to make it "stretched top-bottom"
                 interaction: {
                     mode: 'index',
                     intersect: false,

@@ -32,13 +32,25 @@ async def login_page(request: Request):
 
 @router.post("/login", response_class=HTMLResponse)
 @limiter.limit("5/minute")
-async def login_form_post(request: Request, background_tasks: BackgroundTasks, username: str = Form(...), password: str = Form(...)):
+async def login_form_post(request: Request, background_tasks: BackgroundTasks, username: str = Form(...), password: str = Form(...), portal: str = Form(default="")):
     client_ip = request.client.host if request.client else "unknown"
     user = auth_utils.get_user(username)
     
     if not user or not auth_utils.verify_password(password, user["hashed_password"]):
         background_tasks.add_task(audit.log, username, audit.ACTION_LOGIN_FAILED, "/login", client_ip, "failure")
         return templates.TemplateResponse("login.html", {"request": request, "error": "Incorrect username or password"})
+
+    user_role = user.get("role", "analyst")
+    
+    # Admin users MUST use the admin portal (portal=admin)
+    if user_role == "admin" and portal != "admin":
+        background_tasks.add_task(audit.log, username, audit.ACTION_LOGIN_FAILED, "/login", client_ip, "failure", "Admin tried default login")
+        return templates.TemplateResponse("login.html", {"request": request, "error": "Admin users must use the Admin Portal to login"})
+    
+    # Non-admin users cannot use admin portal
+    if user_role != "admin" and portal == "admin":
+        background_tasks.add_task(audit.log, username, audit.ACTION_LOGIN_FAILED, "/login", client_ip, "failure", "Non-admin tried admin portal")
+        return templates.TemplateResponse("login.html", {"request": request, "error": "Only admin users can access the Admin Portal"})
 
     # Use secure cookies in production
     secure_cookie = settings.IS_PRODUCTION
@@ -93,22 +105,7 @@ async def post_verify_2fa_page(request: Request, background_tasks: BackgroundTas
     response.delete_cookie(key="temp_token", path="/")
     return response
 
-@router.get("/security", response_class=HTMLResponse)
-async def security_page(request: Request):
-    user = await auth_utils.get_current_user(request)
-    if not user:
-        return RedirectResponse(url="/login")
-    
-    context = {"request": request, "user": user}
-    if not user.get("is_two_factor_enabled"):
-        secret = auth_utils.generate_2fa_secret()
-        request.session['2fa_secret'] = secret
-        context["secret_key"] = secret
-    response = templates.TemplateResponse("security.html", context)
-    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    response.headers["Pragma"] = "no-cache"
-    response.headers["Expires"] = "0"
-    return response
+
 
 @router.get("/security/2fa/qr-code", response_class=StreamingResponse)
 async def get_2fa_qr_code(request: Request):

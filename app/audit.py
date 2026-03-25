@@ -23,6 +23,11 @@ class AuditLogger:
     ACTION_PLAYBOOK_DELETED = "PLAYBOOK_DELETED"
     ACTION_USER_CREATED = "USER_CREATED"
     ACTION_RATE_LIMITED = "RATE_LIMITED"
+    # New security-relevant actions
+    ACTION_SEARCH_QUERY = "SEARCH_QUERY"
+    ACTION_ALERT_STATUS_CHANGED = "ALERT_STATUS_CHANGED"
+    ACTION_AI_QUERY = "AI_QUERY"
+    ACTION_SETTINGS_CHANGED = "SETTINGS_CHANGED"
 
     @staticmethod
     def log(user: str | None, action: str, resource: str | None, ip_address: str, result: str = "success", details: str = None):

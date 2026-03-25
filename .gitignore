@@ -1,0 +1,71 @@
+# Environment variables (contains secrets)
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv-s/
+venv/
+.venv/
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs (runtime generated)
+*.log
+logs/
+
+# Trained models and data (large binary files)
+model/
+data/
+results/
+
+# Database dumps and local databases
+*.sql
+*.db
+
+# GeoIP databases (large, download separately)
+geoip/
+
+# Runtime state
+monitoring_status.json
+model_registry.json
+
+# Node
+node_modules/
+package-lock.json
+
+# Next.js build output
+frontend/.next/
+
+# Test cache
+.pytest_cache/
+
+# Docker (optional, not actively used)
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Personal / scratch files
+to-dos.txt
+req.txt
+dir.txt
+folder*.txt
+*.docx
+.trash/
+xtar/
+Chapter*.md
+
+# Deprecated
+app/__*

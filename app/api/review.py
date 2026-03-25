@@ -1,5 +1,5 @@
 # app/api/review.py
-from fastapi import APIRouter, BackgroundTasks
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
 from fastapi.concurrency import run_in_threadpool
 import psycopg2, psycopg2.extras
 import base64
@@ -7,8 +7,12 @@ from typing import Optional, List, Dict, Any
 
 from app.config import settings
 from scripts.review_manager import prepare_review_session
-from .models import ReviewUpdateItem, BulkLabelUpdate, ManualLogsQuery
+from .models import ReviewUpdateItem, BulkLabelUpdate, ManualLogsQuery, UserRole
 from sqlalchemy import create_engine, text
+from app.dependencies import RoleChecker
+
+# Role checker - only analyst and admin can access review
+analyst_or_admin = RoleChecker([UserRole.ADMIN, UserRole.ANALYST])
 
 task_status = {
     "prepare_clusters": {"status": "idle", "message": "No active task."}

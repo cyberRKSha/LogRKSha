@@ -25,6 +25,15 @@ from app.websocket import broadcast
 from scripts.update import trigger_model_update
 from .models import SearchQuery, AlertStatusUpdate
 from app.services.cache import cache
+from app.rate_limiter import limiter
+from app.audit import audit
+from app.dependencies import RoleChecker
+from app.services.es_client import async_es_client
+from app.api.models import UserRole
+
+# Role checkers for page access
+analyst_or_admin = RoleChecker([UserRole.ADMIN, UserRole.ANALYST])
+admin_only = RoleChecker([UserRole.ADMIN])
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["Dashboard"])
@@ -173,7 +182,108 @@ def get_search_results(query: SearchQuery):
     except Exception as error:
         print(f"Database error in get_search_results: {error}")
         # Re-raising helps FastAPI show a proper server error during development
+        # Re-raising helps FastAPI show a proper server error during development
         raise error
+
+async def search_logs_es(query: SearchQuery):
+    """
+    Search logs using Elasticsearch.
+    """
+    must = []
+    
+    if query.keyword:
+        # Multi-match on content and source
+        must.append({
+            "multi_match": {
+                "query": query.keyword,
+                "fields": ["content", "source"],
+                "type": "best_fields"
+            }
+        })
+        
+    if query.ip_address:
+        must.append({"match_phrase": {"content": query.ip_address}})
+        
+    if query.source:
+        must.append({"match": {"source": query.source}})
+        
+    if query.detection_method:
+        must.append({"term": {"verdict": query.detection_method}})
+        
+    range_filter = {}
+    if query.risk_score_min is not None:
+        range_filter["risk_score"] = {"gte": query.risk_score_min}
+        
+    if query.start_time:
+        range_filter["timestamp"] = {"gte": query.start_time}
+        
+    if query.end_time:
+        range_filter["timestamp"] = {"lte": query.start_time}
+        
+    if range_filter:
+        must.append({"range": range_filter})
+        
+    # Construct Bool Query
+    es_query = {
+        "query": {
+            "bool": {
+                "must": must
+            }
+        }
+    }
+    
+    # Execute Async Search
+    resp = await async_es_client.search(
+        index=settings.ES_INDEX_LOGS,
+        body=es_query,
+        size=500,
+        sort=[{"timestamp": "desc"}]
+    )
+    
+    hits = resp['hits']['hits']
+    
+    if not hits:
+        return []
+        
+    # Hydrate Alert Status from PostgreSQL
+    # ES doesn't strictly have the alert status unless we dual-wrote it to the log doc (which we didn't)
+    log_ids = [int(h['_id']) for h in hits]
+    
+    alert_status_map = {}
+    if log_ids:
+        try:
+            # Helper function to run sync DB call
+            def get_statuses(ids):
+                engine = create_engine(settings.DATABASE_URL)
+                t = text("SELECT log_id, status FROM alerts WHERE log_id IN :ids")
+                with engine.connect() as conn:
+                    # distinct log_ids in case of multiple alerts? Usually 1:1 or 1:Many. 
+                    # If multiple, take latest? For now just take one.
+                    # We pass tuple(ids)
+                    res = conn.execute(t, {"ids": tuple(ids)}).fetchall()
+                    return {row.log_id: row.status for row in res}
+
+            alert_status_map = await run_in_threadpool(get_statuses, log_ids)
+        except Exception as e:
+            logger.warning(f"Failed to hydrate valert statuses: {e}")
+
+    results = []
+    for h in hits:
+        src = h['_source']
+        lid = int(h['_id'])
+        results.append({
+            "id": lid,
+            "timestamp": src.get('timestamp'),
+            "source": src.get('source'),
+            "content": src.get('content'),
+            "final_label": src.get('final_label'),
+            "risk_score": src.get('risk_score'),
+            "sequence_risk": src.get('sequence_risk'),
+            "threat_intel": src.get('threat_intel'),
+            "status": alert_status_map.get(lid) # Hydrated status
+        })
+        
+    return results
 
 def flexible_date_parser(date_string):
     if not date_string:
@@ -203,23 +313,59 @@ async def dashboard(request: Request, user: dict = Depends(auth_utils.get_curren
     except Exception as e:
         logger.error(f"Could not read from database to get stats: {e}")
     last_updated = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    user_role = user.get("role", "analyst")  # Default to analyst for backward compatibility
     response = templates.TemplateResponse(request, "dashboard.html", {
         # "request": request,
         "total_logs": total_logs,
         "normal_count": normal_count,
         "anomaly_count": anomaly_count,
-        "last_updated": last_updated
+        "last_updated": last_updated,
+        "user": user,
+        "user_role": user_role
     })
     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
     return response
 
 @router.post("/api/search_logs", response_model=List[dict])
-async def search_logs(query: SearchQuery, user: dict = Depends(auth_utils.get_current_user)):
-
+@limiter.limit("30/minute")
+async def search_logs(request: Request, query: SearchQuery, background_tasks: BackgroundTasks, user: dict = Depends(auth_utils.get_current_user)):
     if not user:
         return RedirectResponse(url="/login")
     try:
-        return await run_in_threadpool(get_search_results, query)
+        # Audit log the search query
+        client_ip = request.client.host if request.client else "unknown"
+        background_tasks.add_task(
+            audit.log, 
+            user.get("username"), 
+            audit.ACTION_SEARCH_QUERY, 
+            f"keyword={query.keyword}, source={query.source}", 
+            client_ip, 
+            "success"
+        )
+        
+        # Check Cache
+        # Use model_dump_json for consistent key generation (Pydantic v2)
+        cache_key = f"search:{query.model_dump_json()}"
+        cached_results = cache.get_json(cache_key)
+        if cached_results is not None:
+            return cached_results
+
+        # Try Elasticsearch first
+        if settings.ES_ENABLED:
+            try:
+                logger.info("Performing Search via Elasticsearch...")
+                results = await search_logs_es(query)
+                cache.set_json(cache_key, results, ttl=60)
+                return results
+            except Exception as e:
+                logger.error(f"⚠️ Elasticsearch search failed: {e}. Falling back to PostgreSQL.")
+
+        results = await run_in_threadpool(get_search_results, query)
+        
+        # Cache results (short TTL for search)
+        cache.set_json(cache_key, results, ttl=60)
+        
+        return results
     except Exception as e:
         logger.error(f"Error during log search: {e}")
         return []
@@ -318,9 +464,8 @@ async def get_log_context(timestamp: str, user: dict = Depends(auth_utils.get_cu
     return await run_in_threadpool(get_context_from_db)
 
 @router.post("/api/model/retrain")
-async def retrain_model(background_tasks: BackgroundTasks, user: dict = Depends(auth_utils.get_current_user)):
-    if not user:
-        return RedirectResponse(url="/login")
+async def retrain_model(background_tasks: BackgroundTasks, user: dict = Depends(admin_only)):
+    """Retrain model. Admin only."""
     if task_status["retrain"]["status"] == "running":
         return {"message": "Retraining is already in progress."}
     
@@ -401,6 +546,57 @@ async def update_alert_status(alert_id: int, update: AlertStatusUpdate, user: di
         return {"message": "Alert status updated successfully"}
     else:
         return {"message": "Failed to update alert status or find log ID"}
+
+
+# --- Alert Notes (Phase 5: SOC Features) ---
+
+@router.get("/api/alerts/{alert_id}/notes")
+async def get_alert_notes(alert_id: int, user: dict = Depends(auth_utils.get_current_user)):
+    """Get all notes for an alert"""
+    if not user:
+        raise HTTPException(status_code=401, detail="Not authenticated")
+    
+    def fetch_notes():
+        engine = create_engine(settings.DATABASE_URL)
+        query = text("""
+            SELECT id, alert_id, username, note, created_at
+            FROM alert_notes
+            WHERE alert_id = :alert_id
+            ORDER BY created_at DESC
+        """)
+        with engine.connect() as conn:
+            result = conn.execute(query, {"alert_id": alert_id})
+            return [dict(row._mapping) for row in result]
+    
+    return await run_in_threadpool(fetch_notes)
+
+
+@router.post("/api/alerts/{alert_id}/notes", status_code=201)
+async def add_alert_note(alert_id: int, note_data: dict, user: dict = Depends(analyst_or_admin)):
+    """Add a note to an alert"""
+    note_text = note_data.get("note", "").strip()
+    if not note_text:
+        raise HTTPException(status_code=400, detail="Note cannot be empty")
+    
+    def insert_note():
+        engine = create_engine(settings.DATABASE_URL)
+        query = text("""
+            INSERT INTO alert_notes (alert_id, user_id, username, note)
+            VALUES (:alert_id, :user_id, :username, :note)
+            RETURNING id, created_at
+        """)
+        with engine.connect() as conn:
+            with conn.begin():
+                result = conn.execute(query, {
+                    "alert_id": alert_id,
+                    "user_id": user.get("id"),
+                    "username": user.get("username"),
+                    "note": note_text
+                })
+                row = result.fetchone()
+                return {"id": row.id, "created_at": row.created_at}
+    
+    return await run_in_threadpool(insert_note)
 
 @router.get("/api/anomalies/all")
 async def get_all_anomalies(user: dict = Depends(auth_utils.get_current_user)):
@@ -509,10 +705,8 @@ async def get_monitoring_status(user: dict = Depends(auth_utils.get_current_user
         return json.load(f)
 
 @router.post("/api/monitoring/toggle")
-async def toggle_monitoring_status(request: Request, user: dict = Depends(auth_utils.get_current_user)):
-    """Toggles the monitoring status between active and paused."""
-    if not user:
-        return RedirectResponse(url="/login")
+async def toggle_monitoring_status(request: Request, user: dict = Depends(analyst_or_admin)):
+    """Toggles the monitoring status between active and paused. Analyst and Admin only."""
     body = await request.json()
     new_status = body.get("is_active")
     with open(settings.STATUS_FILE, 'w') as f:
@@ -761,6 +955,109 @@ async def get_model_drift_stats(user: dict = Depends(auth_utils.get_current_user
 
     return await run_in_threadpool(get_data)
 
+
+# --- Phase 5: MITRE Visualization & Session Replay ---
+
+@router.get("/api/stats/mitre_heatmap")
+async def get_mitre_heatmap(user: dict = Depends(auth_utils.get_current_user)):
+    """Returns MITRE technique frequency for heatmap visualization."""
+    if not user:
+        return RedirectResponse(url="/login")
+    
+    def get_data():
+        engine = create_engine(settings.DATABASE_URL)
+        query = text("""
+            SELECT mitre_tactic, mitre_technique, COUNT(*) as count
+            FROM alerts
+            WHERE mitre_technique IS NOT NULL AND mitre_technique != ''
+            GROUP BY mitre_tactic, mitre_technique
+            ORDER BY count DESC
+        """)
+        try:
+            with engine.connect() as conn:
+                result = conn.execute(query)
+                data = [dict(row._mapping) for row in result]
+                return data
+        except Exception as e:
+            logger.error(f"Error fetching MITRE heatmap: {e}")
+            return []
+    
+    return await run_in_threadpool(get_data)
+
+
+@router.get("/api/sessions/{session_key}/timeline")
+async def get_session_timeline(session_key: str, user: dict = Depends(auth_utils.get_current_user)):
+    """
+    Get session timeline for interactive replay.
+    session_key can be an IP address or session identifier.
+    Returns logs ordered by timestamp for that session.
+    """
+    if not user:
+        return RedirectResponse(url="/login")
+    
+    def get_data():
+        engine = create_engine(settings.DATABASE_URL)
+        # Search for session_key in log content (could be IP or session ID)
+        query = text("""
+            SELECT l.id, l.timestamp, l.source, l.content, l.risk_score, l.verdict,
+                   a.rule_name, a.mitre_tactic, a.mitre_technique
+            FROM logs l
+            LEFT JOIN alerts a ON l.id = a.log_id
+            WHERE l.content ILIKE :pattern
+            ORDER BY l.timestamp ASC
+            LIMIT 200
+        """)
+        try:
+            with engine.connect() as conn:
+                result = conn.execute(query, {"pattern": f"%{session_key}%"})
+                logs = []
+                for row in result:
+                    item = dict(row._mapping)
+                    item['timestamp'] = item['timestamp'].isoformat() if item['timestamp'] else None
+                    logs.append(item)
+                return logs
+        except Exception as e:
+            logger.error(f"Error fetching session timeline: {e}")
+            return []
+    
+    return await run_in_threadpool(get_data)
+
+
+@router.get("/api/sessions/{session_key}/chain")
+async def get_attack_chain(session_key: str, user: dict = Depends(auth_utils.get_current_user)):
+    """
+    Reconstructs MITRE attack chain from session logs.
+    Returns sequence of MITRE techniques detected in order.
+    """
+    if not user:
+        return RedirectResponse(url="/login")
+    
+    def get_data():
+        engine = create_engine(settings.DATABASE_URL)
+        query = text("""
+            SELECT DISTINCT a.mitre_tactic, a.mitre_technique, MIN(l.timestamp) as first_seen
+            FROM alerts a
+            JOIN logs l ON a.log_id = l.id
+            WHERE l.content ILIKE :pattern
+              AND a.mitre_technique IS NOT NULL
+            GROUP BY a.mitre_tactic, a.mitre_technique
+            ORDER BY first_seen ASC
+        """)
+        try:
+            with engine.connect() as conn:
+                result = conn.execute(query, {"pattern": f"%{session_key}%"})
+                chain = []
+                for row in result:
+                    item = dict(row._mapping)
+                    item['first_seen'] = item['first_seen'].isoformat() if item['first_seen'] else None
+                    chain.append(item)
+                return {"session_key": session_key, "chain": chain}
+        except Exception as e:
+            logger.error(f"Error fetching attack chain: {e}")
+            return {"session_key": session_key, "chain": []}
+    
+    return await run_in_threadpool(get_data)
+
 @router.get("/api/stats/anomalous_ips_locations")
 async def get_anomalous_ips_locations(user: dict = Depends(auth_utils.get_current_user)):
     """
@@ -797,8 +1094,7 @@ async def get_anomalous_ips_locations(user: dict = Depends(auth_utils.get_curren
                 seen_ips.add(ip)
                 
                 # Check Cache for IP Location
-                geo_cache_key = f"geo:{ip}"
-                cached_geo = cache.get_json(geo_cache_key)
+                cached_geo = cache.get_cached_ip_intel(ip)
                 if cached_geo:
                     locations.append(cached_geo)
                     continue
@@ -814,11 +1110,11 @@ async def get_anomalous_ips_locations(user: dict = Depends(auth_utils.get_curren
                             "country": response.country.name if response.country else "Unknown Country"
                         }
                         locations.append(geo_data)
-                        cache.set_json(geo_cache_key, geo_data, ttl=86400) # Cache for 24 hours
+                        cache.set_cached_ip_intel(ip, geo_data)
                 except geoip2.errors.AddressNotFoundError:
                     # This happens for private IPs (e.g., 192.168.x.x), which is normal.
                     # We can optionally cache the "not found" state to avoid re-querying private IPs
-                    cache.set_json(geo_cache_key, None, ttl=86400)
+                    cache.set_cached_ip_intel(ip, None)
                     pass
                 except Exception as e:
                     logger.warning(f"Could not geolocate IP {ip}: {e}")
@@ -918,15 +1214,11 @@ async def export_pdf_report(query: SearchQuery, user: dict = Depends(auth_utils.
     )
 
 @router.get("/playbooks", response_class=HTMLResponse)
-async def playbooks_page(request: Request, user: dict = Depends(auth_utils.get_current_user)):
-    """Serves the Playbooks management page."""
-    if not user:
-        return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+async def playbooks_page(request: Request, user: dict = Depends(analyst_or_admin)):
+    """Serves the Playbooks management page. Analyst and Admin only."""
     return templates.TemplateResponse(request, "playbooks.html")
 
 @router.get("/review", response_class=HTMLResponse)
-async def review_page(request: Request, user: dict = Depends(auth_utils.get_current_user)):
-    """Serves the dedicated log review page."""
-    if not user:
-        return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+async def review_page(request: Request, user: dict = Depends(analyst_or_admin)):
+    """Serves the dedicated log review page. Analyst and Admin only."""
     return templates.TemplateResponse(request, "review.html")

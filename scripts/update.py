@@ -203,14 +203,40 @@ def trigger_model_update():
 
     # --- 5. Update the Model Registry ---
     log_info("Updating model registry...")
+    
+    # Calculate metadata
+    training_metadata = {
+        "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "batch_sample_count": len(new_logs_df),
+        "supervised_metrics": {
+            "accuracy": float(accuracy) if 'accuracy' in locals() else None,
+            "f1": float(f1) if 'f1' in locals() else None
+        } if not is_new_model else "Initial Training"
+    }
+
     with open(registry_path, 'r+') as f:
         registry = json.load(f)
         registry["supervised_model"] = new_supervised_path_str
         registry["autoencoder_model"] = new_autoencoder_path_str
+        registry["metadata"] = training_metadata
+        
+        # Keep version history (last 5)
+        if "history" not in registry:
+            registry["history"] = []
+        
+        history_entry = {
+            "timestamp": timestamp,
+            "supervised": new_supervised_path_str,
+            "autoencoder": new_autoencoder_path_str,
+            "metrics": training_metadata["supervised_metrics"]
+        }
+        registry["history"].insert(0, history_entry)
+        registry["history"] = registry["history"][:5]
+        
         f.seek(0)
         json.dump(registry, f, indent=4)
         f.truncate()
-    log_success("Model registry updated to point to new models.")
+    log_success("Model registry updated with metadata and version history.")
 
     # --- 6. Update Checkpoint ---
     with open(settings.CHECKPOINT_FILE, "w") as f:

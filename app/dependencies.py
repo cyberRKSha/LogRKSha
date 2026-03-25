@@ -18,8 +18,9 @@ def get_db():
         db.close()
 
 class RoleChecker:
-    def __init__(self, allowed_roles: List[str]):
-        self.allowed_roles = allowed_roles
+    def __init__(self, allowed_roles: List):
+        # Convert enum values to strings for comparison
+        self.allowed_roles = [str(role.value) if hasattr(role, 'value') else str(role) for role in allowed_roles]
 
     async def __call__(self, request: Request):
         user = await auth_utils.get_current_user(request)

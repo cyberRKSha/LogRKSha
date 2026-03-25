@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Playbook Management - Log Anomaly Detector</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/pb_styles.css">
-    <link rel="stylesheet" href="/static/css/r_styles.css"> 
+    <link rel="stylesheet" href="/static/css/r_styles.css">
 </head>
+
 <body>
     <div class="review-container">
         <div class="review-header">
@@ -28,7 +30,7 @@
                     </tr>
                 </thead>
                 <tbody id="playbooks-table-body">
-                    </tbody>
+                </tbody>
             </table>
         </div>
     </div>
@@ -44,15 +46,43 @@
                     <input type="hidden" id="playbook-id">
                     <div class="control-group">
                         <label for="playbook-name">Playbook Name</label>
-                        <input type="text" id="playbook-name" class="select-dropdown" required>
+                        <input type="text" id="playbook-name" class="select-dropdown" required
+                            placeholder="e.g. SSH Brute Force Mitigation">
+                    </div>
+
+                    <!-- AI Assistant Section -->
+                    <div
+                        style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <label style="color: #c4b5fd; font-weight: 600; font-size: 14px; margin: 0;">✨ AI
+                                Assistant</label>
+                            <span
+                                style="font-size: 11px; color: #a78bfa; background: rgba(139, 92, 246, 0.2); padding: 2px 8px; border-radius: 10px;">Powered
+                                by Gemini</span>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="ai-prompt"
+                                placeholder="Describe what you want (e.g. 'Block IP if risk score > 80 and source is external')"
+                                style="flex: 1; padding: 10px; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-darker); color: var(--text-color); font-size: 13px;">
+                            <button type="button" id="generate-btn"
+                                style="background: linear-gradient(135deg, #8b5cf6, #d946ef); color: white; border: none; padding: 0 16px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 13px; white-space: nowrap; transition: opacity 0.2s;">
+                                Generate
+                            </button>
+                        </div>
+                        <p style="margin: 8px 0 0 0; font-size: 11px; color: var(--text-muted);">
+                            The AI will automatically generate the Trigger and Action JSON configurations below.
+                        </p>
                     </div>
                     <div class="control-group">
                         <label for="playbook-triggers">Trigger Conditions (JSON)</label>
-                        <textarea id="playbook-triggers" rows="6" class="select-dropdown" style="font-family: monospace; border-radius: 8px;" required></textarea>
+                        <textarea id="playbook-triggers" rows="6" class="select-dropdown"
+                            style="font-family: monospace; border-radius: 8px;" required></textarea>
                     </div>
                     <div class="control-group">
                         <label for="playbook-actions">Actions (JSON)</label>
-                        <textarea id="playbook-actions" rows="6" class="select-dropdown" style="font-family: monospace; border-radius: 8px;" required></textarea>
+                        <textarea id="playbook-actions" rows="6" class="select-dropdown"
+                            style="font-family: monospace; border-radius: 8px;" required></textarea>
                     </div>
                     <div class="review-actions">
                         <button type="submit" class="submit-button">Save Playbook</button>
@@ -65,4 +95,5 @@
     <script src="/static/js/playbooks.js" type="module"></script>
 
 </body>
+
 </html>

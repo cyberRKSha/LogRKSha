@@ -1,0 +1,135 @@
+/* Model Arena Styles */
+
+.arena-section {
+    margin-bottom: 40px;
+}
+
+.arena-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    /* Table, Delta, Chart */
+    gap: 25px;
+    align-items: stretch;
+}
+
+@media (max-width: 1400px) {
+    .arena-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .chart-card {
+        grid-column: span 2;
+    }
+}
+
+.arena-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 15px var(--card-box-shadow);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.arena-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: var(--text-color-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+/* Table Styles */
+.arena-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.arena-table th,
+.arena-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.arena-table th {
+    color: var(--text-color-secondary);
+    font-weight: 600;
+}
+
+.highlight-model {
+    color: var(--button-primary);
+    font-weight: 700;
+    position: relative;
+}
+
+.highlight-model::before {
+    content: '★';
+    margin-right: 5px;
+    color: var(--accent-yellow);
+}
+
+/* Delta Styles */
+.delta-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.delta-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: var(--primary-bg);
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.delta-item:hover {
+    transform: translateX(5px);
+}
+
+.delta-val {
+    font-size: 2em;
+    font-weight: 700;
+    min-width: 100px;
+}
+
+.delta-label {
+    font-size: 1em;
+    color: var(--text-color-secondary);
+    font-weight: 500;
+}
+
+.positive .delta-val {
+    color: var(--green);
+    /* Fallback */
+    color: var(--text-green);
+}
+
+.negative .delta-val {
+    color: var(--red);
+    /* Fallback */
+    color: var(--text-red);
+}
+
+.delta-explainer {
+    font-size: 0.8em;
+    color: var(--text-color-secondary);
+    margin-top: 15px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Chart Container */
+.chart-container-arena {
+    position: relative;
+    height: 100%;
+    min-height: 250px;
+    width: 100%;
+}

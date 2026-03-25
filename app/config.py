@@ -23,6 +23,13 @@ class Settings(BaseSettings):
     REDIS_HOST: str
     REDIS_PORT: int
     REDIS_DB: int
+    
+    # Elasticsearch settings
+    ELASTICSEARCH_URL: str = "http://localhost:9200"
+    ES_ENABLED: bool = False
+    ES_INDEX_LOGS: str = "logs"
+    ES_INDEX_ALERTS: str = "alerts"
+
     SESSION_TIMEOUT_SECONDS: int
     SEQUENCE_LEN: int
     
@@ -42,6 +49,16 @@ class Settings(BaseSettings):
     SLACK_WEBHOOK_URL: Optional[str] = None
     LOG_SHIPPER_API_KEY: Optional[str] = "dev_secret_key"  # Default for dev, should be in .env
     ENVIRONMENT: str = "development"  # "development" or "production"
+    
+    # LLM Multi-Provider Configuration
+    LLM_DEFAULT_PROVIDER: str = "gemini"
+    GEMINI_API_KEY: Optional[str] = None
+    GROQ_API_KEY: Optional[str] = None
+    MISTRAL_API_KEY: Optional[str] = None
+    OPENROUTER_API_KEY: Optional[str] = None
+    TOGETHER_API_KEY: Optional[str] = None
+    OLLAMA_HOST: str = "http://localhost:11434"
+    LLM_CACHE_TTL: int = 3600  # 1 hour default cache
     
     @property
     def IS_PRODUCTION(self) -> bool:

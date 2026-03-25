@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Request
+import pyotp
 from sqlalchemy.orm import Session
 from typing import List
 from app.dependencies import get_db, RoleChecker
@@ -13,13 +14,18 @@ templates = Jinja2Templates(directory=settings.TEMPLATES_PATH)
 router = APIRouter(tags=["Security Operations"])
 
 allow_analyst_write = RoleChecker([UserRole.ADMIN, UserRole.ANALYST])
+admin_only = RoleChecker([UserRole.ADMIN])
 
 @router.get("/security/setup-2fa", include_in_schema=False)
-async def setup_2fa_page(request: Request, current_user = Depends(get_current_user)):
+async def setup_2fa_page(request: Request, current_user = Depends(admin_only)):
+    # Generate a new random secret
+    secret = pyotp.random_base32()
+    # Store in session so the QR code endpoint can retrieve it
+    request.session['2fa_secret'] = secret
     return templates.TemplateResponse("setup_2fa.html", {"request": request, "user": current_user})
 
 @router.get("/security", include_in_schema=False)
-async def security_page(request: Request, current_user = Depends(get_current_user)):
+async def security_page(request: Request, current_user = Depends(admin_only)):
     return templates.TemplateResponse("security.html", {"request": request, "user": current_user})
 
 @router.get("/api/security/honeytokens", response_model=List[HoneytokenResponse])

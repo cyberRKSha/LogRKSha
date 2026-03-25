@@ -12,6 +12,7 @@ from sentence_transformers import SentenceTransformer
 from sqlalchemy import create_engine, text
 from scripts.sigma_engine import SigmaEngine
 from scripts.zeek_ml_engine import ZeekMLEngine
+from app.services.es_client import es_client, init_indexes
 
 logger = logging.getLogger(__name__)
 
@@ -217,7 +218,28 @@ def insert_log_to_db(source, content, p_label, risk, seq_risk, verdict_str, revi
 
             if result:
                 # The result object can be accessed by index
-                return result[0], result[1]
+                log_id, log_ts = result[0], result[1]
+                
+                # --- Elasticsearch Dual-Write ---
+                if settings.ES_ENABLED:
+                    try:
+                        doc = {
+                            "timestamp": log_ts, # Use DB timestamp for consistency
+                            "source": source,
+                            "content": content,
+                            "predicted_label": int(p_label),
+                            "final_label": int(p_label),
+                            "risk_score": float(risk),
+                            "verdict": verdict_str,
+                            "explanation": explanation,
+                            "threat_intel": threat_intel
+                        }
+                        es_client.index(index=settings.ES_INDEX_LOGS, id=log_id, body=doc)
+                        # logger.info(f"indexed log {log_id} to ES")
+                    except Exception as e:
+                        logger.error(f"❌ Failed to index log {log_id} to Elasticsearch: {e}")
+
+                return log_id, log_ts
             else:
                 logger.error("Database insert did not return the new log ID and timestamp.")
                 return None, None
@@ -703,6 +725,7 @@ def process_log(source, line, honeytoken=None):
 # --- Main Worker Loop ---
 def main():
     get_redis_client()
+    init_indexes() # Ensure ES indexes exist
     while True:
         try:
             connection = pika.BlockingConnection(pika.ConnectionParameters(host=settings.RABBITMQ_HOST))

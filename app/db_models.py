@@ -109,3 +109,51 @@ class Honeytoken(Base):
     created_by = Column(String)
     trigger_count = Column(Integer, default=0)
     is_active = Column(Boolean, default=True)
+
+
+# --- Phase 5: SOC Features ---
+
+class Case(Base):
+    """Investigation case for grouping related alerts"""
+    __tablename__ = 'cases'
+    id = Column(Integer, primary_key=True)
+    title = Column(String, nullable=False)
+    description = Column(String)
+    status = Column(String, default='Open')  # Open, In Progress, Resolved, Closed
+    priority = Column(String, default='Medium')  # Low, Medium, High, Critical
+    assigned_to = Column(Integer)  # User ID
+    created_by = Column(Integer)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+
+
+class CaseAlert(Base):
+    """Links alerts to investigation cases"""
+    __tablename__ = 'case_alerts'
+    case_id = Column(Integer, primary_key=True)
+    alert_id = Column(Integer, primary_key=True)
+    added_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class AlertNote(Base):
+    """Analyst notes on alerts"""
+    __tablename__ = 'alert_notes'
+    id = Column(Integer, primary_key=True)
+    alert_id = Column(Integer, nullable=False, index=True)
+    user_id = Column(Integer)
+    username = Column(String)
+    note = Column(String, nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class PlaybookExecution(Base):
+    """Logs of playbook executions"""
+    __tablename__ = 'playbook_executions'
+    id = Column(Integer, primary_key=True)
+    playbook_id = Column(Integer, nullable=False, index=True)
+    playbook_name = Column(String)
+    triggered_by_log_id = Column(Integer)
+    triggered_at = Column(DateTime(timezone=True), server_default=func.now())
+    actions_executed = Column(JSON)
+    status = Column(String, default='success')  # success, failed, partial
+    error_message = Column(String)
