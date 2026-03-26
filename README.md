@@ -270,11 +270,43 @@ Provider health is tracked with rate-limit cooldowns, and responses are cached i
 
 ### Authentication and Access Control
 
-- **JWT-based authentication** with HTTP-only secure cookies
-- **Two-factor authentication (TOTP)** with QR code enrollment (compatible with Google Authenticator, Authy, etc.)
-- **Role-based access control**: Admin and Analyst roles with endpoint-level permission enforcement
-- **Rate limiting** on authentication endpoints and sensitive operations
-- **Audit logging**: Every user action (login, alert update, case creation, playbook modification) is recorded in the `audit_logs` table with timestamps, IP addresses, and outcome
+LogRKSha implements a multi-layered authentication and authorization system designed for SOC team hierarchies.
+
+#### User Roles
+
+The system enforces three distinct privilege levels, each with scoped access to platform features:
+
+| Role | Dashboard | Review Logs | Cases & Alerts | User Management | Model Retraining | How to Create |
+|:--|:--:|:--:|:--:|:--:|:--:|:--|
+| **Admin** | ✅ | ✅ | ✅ | ✅ | ✅ | Initial setup / Admin API |
+| **Analyst** | ✅ | ✅ | ✅ | ❌ | ❌ | Created by Admin |
+| **Viewer** | ✅ (read-only) | ❌ | ❌ | ❌ | ❌ | Self-signup on login page |
+
+- **Admin**: Full system access including user CRUD operations (create, update, delete users), model retraining triggers, playbook management, and system configuration. Admins **must** authenticate through the dedicated Admin Portal — standard login is blocked for admin accounts.
+- **Analyst**: The primary SOC operator role. Analysts can view the dashboard, review and label logs, manage investigation cases, triage alerts, and use AI-assisted analysis. Created exclusively by an admin user.
+- **Viewer**: A read-only observer role designed for stakeholders or trainees. Viewers can browse the dashboard and observe system activity but cannot modify any data. New users can self-register as viewers through the signup modal on the login page.
+
+#### Dual-Portal Login
+
+The login page features two distinct authentication entry points:
+
+- **Standard Login** — Used by Analyst and Viewer accounts. Submits credentials through the main login form.
+- **Admin Portal** — A separate modal (accessible via the "Admin Portal" button on the login page) with a distinct red-themed UI. Only admin-role users can authenticate here; non-admin credentials are rejected. Admin accounts are also blocked from using the standard login form, enforcing portal-level separation.
+
+#### Two-Factor Authentication (2FA)
+
+- **TOTP-based** (Time-based One-Time Password) using the `pyotp` library
+- **QR code enrollment**: Users can enable 2FA from the Security settings page. The system generates a TOTP secret and displays a scannable QR code compatible with Google Authenticator, Authy, Microsoft Authenticator, and any TOTP app
+- **Verification flow**: When 2FA is enabled, login generates a temporary `pre-2fa` JWT token (5-minute expiry) and redirects to a code verification page. Only after successful TOTP validation is the full session token issued
+- **Enable/Disable**: Users can toggle 2FA on or off from the Security dashboard
+
+#### Security Features
+
+- **JWT tokens** stored in HTTP-only, SameSite-strict cookies (secure flag enabled in production)
+- **Rate limiting**: Login endpoints are limited to 5 requests per minute per IP to prevent brute-force attacks
+- **Password hashing**: bcrypt via `passlib` with automatic salt generation
+- **Audit logging**: Every authentication event (login success/failure, user creation, role changes, 2FA enable/disable) is recorded in the `audit_logs` table with timestamps, client IP addresses, usernames, and outcomes
+- **Self-deletion prevention**: Admins cannot delete their own account through the API
 
 ---
 
