@@ -53,8 +53,9 @@ Traditional SIEMs rely on static rule sets -- they catch what you already know t
 
 Every detection result is enriched with MITRE ATT&CK mapping, threat intelligence lookups, and explainable AI output (LIME), giving analysts the context they need to make fast decisions.
 
-<!-- Screenshot: Dashboard overview -->
-<!-- ![Dashboard Overview](docs/screenshots/dashboard.png) -->
+<img width="1919" height="1080" alt="swappy-20260326-234912" src="https://github.com/user-attachments/assets/0fea9130-e9d8-42b4-8f18-bca8d6ff5ffd" />
+<img width="1832" height="1010" alt="swappy-20260326-233936" src="https://github.com/user-attachments/assets/690ba889-4b57-4256-96c7-3b0e257e0877" />
+
 
 ---
 
@@ -163,8 +164,10 @@ Every detected anomaly is automatically mapped against MITRE ATT&CK tactics and 
 **Explainable AI (LIME)**
 Integrated LIME (Local Interpretable Model-agnostic Explanations) generates per-log feature importance breakdowns, rendered as visual bar charts in the dashboard. Analysts can see exactly which tokens in a log line contributed to the anomaly classification.
 
-<!-- Screenshot: Alert detail with LIME explanation -->
-<!-- ![LIME Explanation](docs/screenshots/lime_explanation.png) -->
+<img width="1841" height="922" alt="swappy-20260326-234022" src="https://github.com/user-attachments/assets/1cd6e6df-be0d-4e3b-9b9a-f75b0cff73de" />
+<img width="1065" height="1043" alt="swappy-20260326-235256" src="https://github.com/user-attachments/assets/adad4eff-6bae-49d2-93d4-c0b28c6f4ae1" />
+<img width="911" height="379" alt="swappy-20260326-235349" src="https://github.com/user-attachments/assets/11cb541b-38ec-4139-a0b1-61ab1ca48239" />
+
 
 ---
 
@@ -180,8 +183,11 @@ The analyst dashboard is a single-page application built with vanilla JavaScript
 - **Training statistics** display showing model performance metrics over time
 - **Model retraining** trigger directly from the dashboard (admin only)
 
-<!-- Screenshot: Dashboard with charts and live feed -->
-<!-- ![Dashboard](docs/screenshots/dashboard_full.png) -->
+<img width="1835" height="933" alt="swappy-20260326-233958" src="https://github.com/user-attachments/assets/5d8ea4d1-4192-44e1-b0f6-0a2d92a5709a" />
+<img width="1912" height="903" alt="swappy-20260326-233749" src="https://github.com/user-attachments/assets/28111978-e850-4f12-961e-56c93367abd0" />
+<img width="1908" height="806" alt="swappy-20260326-233728" src="https://github.com/user-attachments/assets/a8ab295f-901a-44e5-aec3-34cbd6228df2" />
+<img width="1914" height="1012" alt="swappy-20260326-233653" src="https://github.com/user-attachments/assets/119828ac-34df-476c-bbbe-6e93f62549ff" />
+
 
 ---
 
@@ -216,8 +222,12 @@ Automated response playbooks execute defensive actions when alert conditions are
 
 Playbook execution history is logged with timestamps, actions taken, and success/failure status.
 
-<!-- Screenshot: Playbook management UI -->
-<!-- ![Playbooks](docs/screenshots/playbooks.png) -->
+<img width="1734" height="949" alt="swappy-20260326-234324" src="https://github.com/user-attachments/assets/eb125454-e40d-4e6c-baa8-d5a394df0099" />
+<img width="1737" height="823" alt="swappy-20260326-234344" src="https://github.com/user-attachments/assets/1f17ccc9-79ff-46a7-94d6-c68e0ed5e475" />
+<img width="1735" height="502" alt="swappy-20260326-234410" src="https://github.com/user-attachments/assets/d8309fdb-4aa8-49e1-ba81-7e1a770bc747" />
+<img width="1832" height="942" alt="swappy-20260326-234506" src="https://github.com/user-attachments/assets/b0663ed9-8352-46db-94fe-359d307ce9bf" />
+<img width="351" height="995" alt="swappy-20260326-235527" src="https://github.com/user-attachments/assets/66f38077-854a-45ce-b063-935b47a81344" />
+
 
 ---
 
