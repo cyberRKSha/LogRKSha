@@ -1,9 +1,28 @@
 {
-    "supervised_model": "model/sgd_embedder_20260106_234049.pkl",
-    "autoencoder_model": "model/autoencoder_model_20260106_234049.keras",
+    "supervised_model": "model/sgd_embedder_20260326_215205.pkl",
+    "autoencoder_model": "model/autoencoder_model_20260326_215205.keras",
     "lstm_model": "model/lstm_classifier_model.keras",
     "threshold_file": "model/autoencoder_threshold.json",
     "explainer_file": "model/lime_explainer.pkl",
     "drain_miner": "model/drain_miner.pkl",
-    "template_miner": "model/template_miner.pkl"
+    "template_miner": "model/template_miner.pkl",
+    "metadata": {
+        "last_updated": "2026-03-26 21:54:55",
+        "batch_sample_count": 194843,
+        "supervised_metrics": {
+            "accuracy": 0.3665771929194274,
+            "f1": 0.3447620463377859
+        }
+    },
+    "history": [
+        {
+            "timestamp": "20260326_215205",
+            "supervised": "model/sgd_embedder_20260326_215205.pkl",
+            "autoencoder": "model/autoencoder_model_20260326_215205.keras",
+            "metrics": {
+                "accuracy": 0.3665771929194274,
+                "f1": 0.3447620463377859
+            }
+        }
+    ]
 }

@@ -69,3 +69,16 @@ Chapter*.md
 
 # Deprecated
 app/__*
+
+# Runtime engine logs
+app.log
+server.log
+*.log
+
+# Simulation outputs
+simulation/*.log
+
+# Environment dumps
+dump_postgres.sql
+xtar/
+frontend/

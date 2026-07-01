@@ -588,8 +588,9 @@ def process_log(source, line, honeytoken=None):
         ae_recon = unsupervised_model.predict(embedding, verbose=0)
         reconstruction_loss = np.mean(np.abs(embedding - ae_recon))
         
-        risk_score = float(min(1.0, reconstruction_loss / unsupervised_threshold))
-        unsupervised_pred = 1 if reconstruction_loss > unsupervised_threshold else 0
+        eff_threshold = unsupervised_threshold
+        risk_score = float(min(1.0, reconstruction_loss / eff_threshold))
+        unsupervised_pred = 1 if reconstruction_loss > eff_threshold else 0
         
         # Sequence analysis
         sequence_risk = update_and_predict_sequence(line, embedding)
