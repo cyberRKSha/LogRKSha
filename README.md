@@ -18,31 +18,7 @@ A production-grade, hybrid machine learning SIEM that detects **known threats** 
 ---
 
 <details>
-  <summary><b>📑 Table of Contents</b></summary>
-
-  - [Core Features](#-core-features)
-    - [Ingestion & Brokering](#domain-1-ingestion--brokering)
-    - [Hybrid Detection Engine](#domain-2-hybrid-detection-engine)
-    - [Real-Time Backend](#domain-3-real-time-backend)
-    - [Automated Response](#domain-4-automated-response)
-  - [Architecture & Data Flow](#-architecture--data-flow)
-  - [Quick Start & Installation](#-quick-start--installation)
-  - [Configuration Reference](#-configuration-reference)
-  - [Dashboard & Visualization](#-dashboard--visualization)
-  - [Authentication & Access Control](#-authentication--access-control)
-  - [Research & Baselines](#-research--baselines)
-  - [Technology Stack](#-technology-stack)
-  - [Project Structure](#-project-structure)
-  - [Testing & Simulation](#-testing--simulation)
-  - [Contributing](#-contributing)
-  - [License](#-license)
-
-</details>
-
----
-
-<details>
-  <summary><b>⚡ Core Features</b></summary>
+  <summary><b> Core Features</b></summary>
 
   ### Domain 1: Ingestion & Brokering
 
@@ -188,7 +164,7 @@ A production-grade, hybrid machine learning SIEM that detects **known threats** 
 ---
 
 <details>
-  <summary><b>🏗️ Architecture & Data Flow</b></summary>
+  <summary><b> Architecture & Data Flow</b></summary>
 
   ![Architecture Diagram](./docs/architecture.png)
 
@@ -262,7 +238,7 @@ A production-grade, hybrid machine learning SIEM that detects **known threats** 
 ---
 
 <details>
-  <summary><b>🚀 Quick Start & Installation</b></summary>
+  <summary><b> Quick Start & Installation</b></summary>
 
   ### Prerequisites
 
@@ -334,7 +310,7 @@ A production-grade, hybrid machine learning SIEM that detects **known threats** 
 ---
 
 <details>
-  <summary><b>⚙️ Configuration Reference</b></summary>
+  <summary><b> Configuration Reference</b></summary>
 
   All configuration is managed through `.env` and loaded via Pydantic Settings (`app/config.py`).
 
@@ -364,7 +340,7 @@ A production-grade, hybrid machine learning SIEM that detects **known threats** 
 ---
 
 <details>
-  <summary><b>📊 Dashboard & Visualization</b></summary>
+  <summary><b> Dashboard & Visualization</b></summary>
 
   The analyst dashboard is a single-page application built with vanilla JavaScript (ES6 modules) and served by FastAPI via Jinja2 templates.
 
@@ -387,7 +363,7 @@ A production-grade, hybrid machine learning SIEM that detects **known threats** 
 ---
 
 <details>
-  <summary><b>🔐 Authentication & Access Control</b></summary>
+  <summary><b> Authentication & Access Control</b></summary>
 
   ### User Roles
 
@@ -421,7 +397,7 @@ A production-grade, hybrid machine learning SIEM that detects **known threats** 
 ---
 
 <details>
-  <summary><b>🔬 Research & Baselines</b></summary>
+  <summary><b> Research & Baselines</b></summary>
 
   The `experiments/` directory contains reference implementations of established log anomaly detection papers, used to benchmark LogRKSha's hybrid approach:
 
@@ -439,7 +415,7 @@ A production-grade, hybrid machine learning SIEM that detects **known threats** 
 ---
 
 <details>
-  <summary><b>🛠️ Technology Stack</b></summary>
+  <summary><b> Technology Stack</b></summary>
 
   | Component | Technology |
   |:--|:--|
@@ -524,7 +500,7 @@ A production-grade, hybrid machine learning SIEM that detects **known threats** 
 ---
 
 <details>
-  <summary><b>🧪 Testing & Simulation</b></summary>
+  <summary><b> Testing & Simulation</b></summary>
 
   ### Running the Test Suite
 
@@ -552,8 +528,7 @@ A production-grade, hybrid machine learning SIEM that detects **known threats** 
 
 ---
 
-<details>
-  <summary><b>🤝 Contributing</b></summary>
+> Contributing
 
   Contributions are welcome. Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on submitting issues and pull requests.
 
@@ -561,9 +536,7 @@ A production-grade, hybrid machine learning SIEM that detects **known threats** 
 
 ---
 
-<details>
-  <summary><b>📄 License</b></summary>
+>📄 License
 
   This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
-</details>
