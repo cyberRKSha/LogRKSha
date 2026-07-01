@@ -45,6 +45,7 @@ monitoring_status.json
 # Node
 node_modules/
 package-lock.json
+package.json
 
 # Next.js build output
 frontend/.next/
@@ -82,3 +83,4 @@ simulation/*.log
 dump_postgres.sql
 xtar/
 frontend/
+webapp.lock

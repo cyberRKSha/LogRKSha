@@ -21,7 +21,7 @@ app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, rate_limit_exceeded_handler)
 
 # Mount the static files directory using the absolute path
-app.add_middleware(SessionMiddleware, secret_key="settings.SECRET_KEY") 
+app.add_middleware(SessionMiddleware, secret_key=settings.SECRET_KEY) 
 
 # Secure headers middleware (small, safe-by-default headers)
 class SecureHeadersMiddleware(BaseHTTPMiddleware):
@@ -35,13 +35,12 @@ class SecureHeadersMiddleware(BaseHTTPMiddleware):
             resp.headers['Permissions-Policy'] = 'geolocation=()'
             # Add HSTS in production only (only when you serve over HTTPS)
             # resp.headers['Strict-Transport-Security'] = 'max-age=63072000; includeSubDomains; preload'
-            resp.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' ws:; img-src 'self' data: https://*.basemaps.cartocdn.com https://*.tile.openstreetmap.org;"
+            resp.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' ws:; img-src 'self' data: https://*.basemaps.cartocdn.com https://*.tile.openstreetmap.org;"
         return resp
 
 app.add_middleware(SecureHeadersMiddleware)
 
 app.mount("/static", StaticFiles(directory=settings.STATIC_PATH), name="static")
-app.mount("/node_modules", StaticFiles(directory=settings.PROJECT_ROOT / "node_modules"), name="node_modules")
 # Include the routers from your other files
 # app.include_router(routes.router)
 # app.include_router(websocket.router)

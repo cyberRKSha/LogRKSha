@@ -1546,3 +1546,8 @@ Jan 09 02:32:55	archive	firewall[14234]:	Outbound connection allowed to 197.210.
 Jan 09 02:33:02	RUfus	firewall[2868]:	Outbound connection allowed to 197.210.64.133:443 from internal host
 Jan 09 02:33:14	prod1	firewall[3572]:	Outbound connection allowed to 197.210.64.133:443 from internal host
 Jan 09 02:33:24	RUfus	firewall[4785]:	Outbound connection allowed to 197.210.64.133:443 from internal host
+Mar 26 23:33:02	prod1	firewall[23264]:	Outbound connection allowed to 87.120.191.13:443 from internal host
+Mar 26 23:33:13	archive	firewall[6593]:	Outbound connection allowed to 87.120.191.13:443 from internal host
+Mar 26 23:33:20	testvm	firewall[10363]:	Outbound connection allowed to 87.120.191.13:443 from internal host
+Mar 26 23:33:36	RUfus	firewall[11020]:	Outbound connection allowed to 87.120.191.13:443 from internal host
+Mar 26 23:33:50	server	firewall[29282]:	Outbound connection allowed to 87.120.191.13:443 from internal host

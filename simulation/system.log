@@ -8175,3 +8175,33 @@ Jan 09 02:32:28	prod1	systemd[18132]:	config/udev: Adding input device 2.4G Mous
 Jan 09 02:32:35	RUfus	systemd[6260]:	Received disconnect from 131.213.128.183: 65: Bye Bye [preauth]
 Jan 09 02:34:10	RUfus	systemd[20118]:	pam_unix(sshd:session): session opened for user pgadmin by (uid=1)
 Jan 09 02:34:13	RUfus	systemd[26028]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event99)
+Mar 26 22:52:53	archive	systemd[23672]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event28)
+Mar 26 22:53:01	server	systemd[14726]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:9.0/usb3/3-4/3-4:1.0/0003:1EA7:0096.0001/input/input9/event9
+Mar 26 22:53:54	server	systemd[16555]:	Starting process /usr/bin/kthreadd but it is not the real kthreadd
+Mar 26 22:54:06	server	systemd[16368]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Mar 26 23:32:21	prod1	systemd[29372]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event8)
+Mar 26 23:32:57	server	bash[26814]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Mar 26 23:34:40	LabSZ	systemd[5280]:	Shadow copies deleted by process 'encryptor.exe'
+Mar 26 23:34:51	archive	systemd[12342]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event62)
+Mar 26 23:34:55	archive	systemd[26442]:	config/udev: Adding input device 2.4G Mouse (/dev/input/event95)
+Mar 26 23:35:14	testvm	systemd[29340]:	Received disconnect from 8.8.4.4: 74: disconnected by user
+Mar 26 23:35:18	testvm	systemd[25267]:	DNS query for long-base64-string-of-data.exfil.hacker-domain.com from 127.0.0.1
+Mar 26 23:35:19	RUfus	systemd[18075]:	DNS query for another-long-base64-string.exfil.hacker-domain.com from 127.0.0.1
+Mar 26 23:35:33	server	systemd[23083]:	User 123 added a new cron job: /tmp/backdoor.sh
+Mar 26 23:35:43	prod1	bash[23342]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Mar 26 23:36:12	server	bash[13127]:	history -c
+Mar 26 23:36:21	archive	bash[16830]:	system command 'ls' replaced with '/tmp/.hidden_ls'
+Mar 26 23:36:36	ADM	systemd[4524]:	event42  - Sleep Button: is tagged by udev as: Keyboard
+Mar 26 23:36:41	LabSZ	systemd[21421]:	Option-'config_info' 'udev:/sys/devices/pci0000:00/0000:00:64.0/usb3/3-4/3-4:1.0/0003:1EA7:00646.0001/input/input64/event64
+Mar 26 23:36:44	testvm	systemd[19810]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Mar 26 23:36:57	prod1	systemd[4961]:	Received disconnect from 8.8.8.8: 8: disconnected by user
+Mar 26 23:37:16	RUfus	systemd[16110]:	myapp.service: Main process exited, code=killed, status=11/SEGV
+Mar 26 23:37:35	LabSZ	systemd[7061]:	pam_unix(sshd:session): session opened for user test by (uid=99)
+Mar 26 23:38:03	RUfus	systemd[17078]:	Shadow copies deleted by process 'encryptor.exe'
+Mar 26 23:38:19	testvm	systemd[6231]:	Did not receive identification string from 1.1.1.1
+Mar 26 23:38:35	LabSZ	systemd[11817]:	GXT7863:00 27C6:01E0 Touchpad: (accel) acceleration factor: 2.000
+Mar 26 23:38:38	archive	systemd[10164]:	Received disconnect from 13.138.182.53: 37: Bye Bye [preauth]
+Mar 26 23:39:03	prod1	bash[13596]:	history -c
+Mar 26 23:40:22	RUfus	systemd[23775]:	pam_unix(sshd:session): session closed for user oracle
+Mar 26 23:40:50	LabSZ	systemd[13393]:	Received disconnect from 138.240.28.20: 69: Bye Bye [preauth]
+Mar 26 23:40:57	RUfus	systemd[7218]:	myapp.service: Main process exited, code=killed, status=11/SEGV

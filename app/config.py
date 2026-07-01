@@ -47,7 +47,7 @@ class Settings(BaseSettings):
     GEOIP_PATH: Path = PROJECT_ROOT / "geoip" / "GeoLite2-City.mmdb"
     ABUSEIPDB_API_KEY: Optional[str] = None
     SLACK_WEBHOOK_URL: Optional[str] = None
-    LOG_SHIPPER_API_KEY: Optional[str] = "dev_secret_key"  # Default for dev, should be in .env
+    LOG_SHIPPER_API_KEY: Optional[str] = None  # Default for dev, should be in .env
     ENVIRONMENT: str = "development"  # "development" or "production"
     
     # LLM Multi-Provider Configuration

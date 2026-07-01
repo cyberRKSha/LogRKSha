@@ -751,3 +751,9 @@ Jan 08 01:20:11	testvm	pacman[17348]:	Installed netcat (1.10-7)
 Jan 09 02:31:25	testvm	pacman[15417]:	Running transaction
 Jan 09 02:31:26	RUfus	pacman[2344]:	Installed nmap (7.91-1)
 Jan 09 02:31:28	server	pacman[23984]:	Installed netcat (1.10-7)
+Mar 26 23:38:26	ADM	pacman[9222]:	Running transaction
+Mar 26 23:38:26	prod1	pacman[23337]:	Installed nmap (7.91-1)
+Mar 26 23:38:28	prod1	pacman[4644]:	Installed netcat (1.10-7)
+Mar 26 23:38:44	testvm	pacman[18596]:	Running transaction
+Mar 26 23:38:45	testvm	pacman[2970]:	Installed nmap (7.91-1)
+Mar 26 23:38:46	server	pacman[23502]:	Installed netcat (1.10-7)
